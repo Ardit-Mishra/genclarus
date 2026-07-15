@@ -1,0 +1,156 @@
+// GeneLens — gene lookup API.
+// Flow: validate symbol -> MyGene.info (facts) -> NVIDIA NIM (grounded synthesis) -> JSON.
+// Runs server-side only; the NIM key never reaches the client.
+
+export const dynamic = "force-dynamic";
+
+const NIM_URL = "https://integrate.api.nvidia.com/v1/chat/completions";
+const NIM_MODEL =
+  process.env.NIM_MODEL || "nvidia/llama-3.3-nemotron-super-49b-v1.5";
+
+const DISCLAIMER =
+  "Educational information only — not medical advice, diagnosis, or a substitute for a healthcare professional or genetic counselor.";
+
+type Source = { label: string; url: string };
+
+function first<T>(v: T | T[] | undefined | null): T | undefined {
+  return Array.isArray(v) ? v[0] : v ?? undefined;
+}
+
+export async function POST(request: Request) {
+  let body: unknown;
+  try {
+    body = await request.json();
+  } catch {
+    return Response.json({ error: "Invalid request." }, { status: 400 });
+  }
+
+  const raw =
+    body && typeof body === "object" && "gene" in body
+      ? (body as { gene: unknown }).gene
+      : undefined;
+
+  if (typeof raw !== "string" || !/^[A-Za-z0-9][A-Za-z0-9\-]{0,19}$/.test(raw.trim())) {
+    return Response.json(
+      { error: "Enter a valid gene symbol — letters, numbers, or hyphens (e.g. BRCA1)." },
+      { status: 400 },
+    );
+  }
+  const symbol = raw.trim().toUpperCase();
+
+  // 1) MyGene.info — free, no key.
+  const fields =
+    "symbol,name,summary,alias,type_of_gene,entrezgene,ensembl.gene,genomic_pos,MIM,uniprot.Swiss-Prot";
+  let hit: Record<string, unknown> | undefined;
+  try {
+    const res = await fetch(
+      `https://mygene.info/v3/query?q=symbol:${encodeURIComponent(symbol)}&species=human&fields=${fields}&size=1`,
+      { headers: { Accept: "application/json" }, signal: AbortSignal.timeout(12000) },
+    );
+    if (!res.ok) throw new Error(`MyGene ${res.status}`);
+    const data = (await res.json()) as { hits?: Record<string, unknown>[] };
+    hit = data.hits?.[0];
+  } catch {
+    return Response.json(
+      { error: "Gene database is unreachable right now. Please try again in a moment." },
+      { status: 502 },
+    );
+  }
+
+  if (!hit) {
+    return Response.json(
+      { error: `No human gene found for “${symbol}”. Try an official symbol like BRCA1, TP53, or CFTR.` },
+      { status: 404 },
+    );
+  }
+
+  const name = (hit.name as string) || "";
+  const summary = (hit.summary as string) || "";
+  const aliases = Array.isArray(hit.alias)
+    ? (hit.alias as string[]).slice(0, 8)
+    : hit.alias
+      ? [String(hit.alias)]
+      : [];
+  const type = (hit.type_of_gene as string) || "";
+  const pos = first(hit.genomic_pos as Record<string, unknown> | Record<string, unknown>[]);
+  const location = pos
+    ? `chr${pos.chr}:${Number(pos.start).toLocaleString()}–${Number(pos.end).toLocaleString()}${
+        pos.strand === -1 || pos.strand === "-1" ? " (−)" : " (+)"
+      }`
+    : "";
+
+  const entrez = hit.entrezgene as number | string | undefined;
+  const ensembl = first(hit.ensembl as { gene?: string } | { gene?: string }[])?.gene;
+  const uniprot = first(hit.uniprot ? (hit.uniprot as { "Swiss-Prot"?: string | string[] })["Swiss-Prot"] : undefined);
+  const mim = hit.MIM as string | number | undefined;
+
+  const sources: Source[] = [];
+  if (entrez) sources.push({ label: "NCBI Gene", url: `https://www.ncbi.nlm.nih.gov/gene/${entrez}` });
+  if (ensembl) sources.push({ label: "Ensembl", url: `https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=${ensembl}` });
+  if (uniprot) sources.push({ label: "UniProt", url: `https://www.uniprot.org/uniprotkb/${uniprot}` });
+  if (mim) sources.push({ label: "OMIM", url: `https://www.omim.org/entry/${mim}` });
+  sources.push({ label: "GeneCards", url: `https://www.genecards.org/cgi-bin/carddisp.pl?gene=${symbol}` });
+
+  // 2) NIM synthesis — grounded strictly in the facts above.
+  const key = process.env.NVIDIA_API_KEY;
+  let explanation: string | null = null;
+  let aiUnavailable = false;
+
+  if (!key) {
+    aiUnavailable = true;
+  } else {
+    const facts = JSON.stringify({ symbol, name, type, summary, aliases, location });
+    try {
+      const res = await fetch(NIM_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Authorization: `Bearer ${key}` },
+        body: JSON.stringify({
+          model: NIM_MODEL,
+          temperature: 0.2,
+          max_tokens: 500,
+          messages: [
+            {
+              role: "system",
+              content:
+                "You are a careful science communicator explaining human genes to curious non-specialists. Use ONLY the provided facts. Never invent gene functions, disease associations, numbers, or clinical claims. Do not give medical advice or diagnostic interpretation. detailed thinking off",
+            },
+            {
+              role: "user",
+              content:
+                `Explain the human gene ${symbol}${name ? ` (${name})` : ""} for a curious non-specialist, using only these facts:\n\n${facts}\n\n` +
+                "Write exactly three short markdown sections with these headers:\n## What it does\n## Why it matters\n## Key facts\n" +
+                "Keep it under ~170 words total. If the summary is empty, say only what the name and gene type support, and note that detailed curated summary data is limited for this gene.",
+            },
+          ],
+        }),
+        signal: AbortSignal.timeout(30000),
+      });
+      if (res.ok) {
+        const data = (await res.json()) as {
+          choices?: { message?: { content?: string } }[];
+        };
+        const text = data.choices?.[0]?.message?.content?.trim();
+        explanation = text
+          ? text.replace(/<think>[\s\S]*?<\/think>/gi, "").trim() || null
+          : null;
+      } else {
+        aiUnavailable = true;
+      }
+    } catch {
+      aiUnavailable = true;
+    }
+  }
+
+  return Response.json({
+    symbol,
+    name,
+    type,
+    summary,
+    aliases,
+    location,
+    explanation,
+    aiUnavailable,
+    sources,
+    disclaimer: DISCLAIMER,
+  });
+}
