@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# GeneLens
 
-## Getting Started
+**AI gene explainer.** Type a human gene (`BRCA1`, `TP53`, `CFTR`) and get a clear, **cited**,
+plain-language explanation grounded in real biology — pulled from public bioinformatics data and
+synthesized by an LLM, with source links you can verify.
 
-First, run the development server:
+> Educational, not medical advice.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Why
+
+Gene databases are dense and jargon-heavy. GeneLens turns a gene symbol into an explanation a
+non-specialist can actually read — *what it does, why it matters, key facts* — while staying
+grounded in authoritative sources (so it doesn't hallucinate).
+
+## How it works
+
+```
+gene symbol  →  MyGene.info (facts)  →  LLM synthesis  →  grounded explanation + sources
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Data:** [MyGene.info](https://mygene.info) — free, no key.
+- **AI:** NVIDIA NIM free tier (OpenAI-compatible), called server-side.
+- **App:** Next.js (App Router) + TypeScript + Tailwind, deployed on Vercel.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Runs at **$0** (free data API + free model tier).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Status
 
-## Learn More
+Gene-only MVP, in active development. Roadmap: rsID/variant lookup + ClinVar clinical significance,
+shareable result links, per-gene SEO pages.
 
-To learn more about Next.js, take a look at the following resources:
+## Run locally
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm install
+npm run dev        # http://localhost:3000
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Set `NVIDIA_API_KEY` in your environment (and in Vercel project settings for deploys).
 
-## Deploy on Vercel
+## Author
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Ardit Mishra — Bioinformatics + AI/ML · [github.com/Ardit-Mishra](https://github.com/Ardit-Mishra)
