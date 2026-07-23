@@ -1,4 +1,4 @@
-// GeneLens — variant (rsID) lookup API.
+// Genclarus — variant (rsID) lookup API.
 // Flow: validate rsID -> MyVariant.info (ClinVar/dbSNP/gnomAD facts) -> NVIDIA NIM
 // (grounded synthesis) -> JSON. Runs server-side only; the NIM key never reaches the client.
 

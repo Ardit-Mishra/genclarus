@@ -127,7 +127,7 @@ export default function Home() {
           Bioinformatics · AI
         </span>
         <h1 className="mt-3 text-4xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 sm:text-5xl">
-          GeneLens
+          Genclarus
         </h1>
         <p className="mx-auto mt-4 max-w-md text-lg leading-relaxed text-zinc-600 dark:text-zinc-400">
           Look up a human gene or a genetic variant (rsID) and get a clear, cited explanation

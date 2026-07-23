@@ -1,6 +1,6 @@
-# GeneLens
+# Genclarus
 
-**AI gene explainer.** Type a human gene (`BRCA1`, `TP53`, `CFTR`) and get a clear, **cited**,
+**AI gene & variant explainer.** Type a human gene (`BRCA1`, `TP53`, `CFTR`) or a variant rsID (`rs6025`) and get a clear, **cited**,
 plain-language explanation grounded in real biology — pulled from public bioinformatics data and
 synthesized by an LLM, with source links you can verify.
 
@@ -8,7 +8,7 @@ synthesized by an LLM, with source links you can verify.
 
 ## Why
 
-Gene databases are dense and jargon-heavy. GeneLens turns a gene symbol into an explanation a
+Gene databases are dense and jargon-heavy. Genclarus turns a gene symbol into an explanation a
 non-specialist can actually read — *what it does, why it matters, key facts* — while staying
 grounded in authoritative sources (so it doesn't hallucinate).
 

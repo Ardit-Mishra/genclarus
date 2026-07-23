@@ -15,9 +15,9 @@ const plexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "GeneLens — AI Gene Explainer",
+  title: "Genclarus — AI Gene & Variant Explainer",
   description:
-    "Type a human gene and get a clear, cited, plain-language explanation grounded in real biology. Educational, not medical advice.",
+    "Look up a human gene or a genetic variant (rsID) and get a clear, cited, plain-language explanation grounded in real biology. Educational, not medical advice.",
 };
 
 export default function RootLayout({
