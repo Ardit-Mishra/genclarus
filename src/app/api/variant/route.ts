@@ -3,6 +3,9 @@
 // (grounded synthesis) -> JSON. Runs server-side only; the NIM key never reaches the client.
 
 import { synthesize } from "@/lib/nim";
+import { safeFetch, readJsonBounded } from "@/lib/http";
+import { readJsonBody, extractSingleField, RequestValidationError, jsonError } from "@/lib/request";
+import { PROMPT_VERSION, MODEL_ID, OUTPUT_SCHEMA_VERSION } from "@/lib/version";
 
 export const dynamic = "force-dynamic";
 
@@ -68,12 +71,13 @@ function consequenceFromProtein(p: string): string {
 }
 
 async function queryMyVariant(q: string): Promise<Record<string, unknown>[]> {
-  const res = await fetch(
+  const res = await safeFetch(
     `https://myvariant.info/v1/query?q=${encodeURIComponent(q)}&fields=${FIELDS}&size=10`,
-    { headers: { Accept: "application/json" }, signal: AbortSignal.timeout(12000) },
+    { headers: { Accept: "application/json" } },
+    12000,
   );
   if (!res.ok) throw new Error(`MyVariant ${res.status}`);
-  const data = (await res.json()) as { hits?: Record<string, unknown>[] };
+  const data = await readJsonBounded<{ hits?: Record<string, unknown>[] }>(res);
   return data.hits ?? [];
 }
 
@@ -86,23 +90,17 @@ function docSeverity(hit: Record<string, unknown>): number {
 }
 
 export async function POST(request: Request) {
-  let body: unknown;
+  let raw: string;
   try {
-    body = await request.json();
-  } catch {
-    return Response.json({ error: "Invalid request." }, { status: 400 });
+    const body = await readJsonBody(request);
+    raw = extractSingleField(body, "rsid");
+  } catch (err) {
+    if (err instanceof RequestValidationError) return jsonError(err.status, err.message);
+    return jsonError(400, "Invalid request.");
   }
 
-  const raw =
-    body && typeof body === "object" && "rsid" in body
-      ? (body as { rsid: unknown }).rsid
-      : undefined;
-
-  if (typeof raw !== "string" || !/^rs\d{1,12}$/i.test(raw.trim())) {
-    return Response.json(
-      { error: "Enter a valid dbSNP rsID — 'rs' followed by digits (e.g. rs6025, rs334)." },
-      { status: 400 },
-    );
+  if (!/^rs\d{1,12}$/i.test(raw.trim())) {
+    return jsonError(400, "Enter a valid dbSNP rsID — 'rs' followed by digits (e.g. rs6025, rs334).");
   }
   const rsid = raw.trim().toLowerCase();
 
@@ -119,17 +117,11 @@ export async function POST(request: Request) {
       hit = dbHits[0];
     }
   } catch {
-    return Response.json(
-      { error: "Variant database is unreachable right now. Please try again in a moment." },
-      { status: 502 },
-    );
+    return jsonError(502, "Variant database is unreachable right now. Please try again in a moment.");
   }
 
   if (!hit) {
-    return Response.json(
-      { error: `No variant found for “${rsid}”. Check the rsID (e.g. rs6025) and try again.` },
-      { status: 404 },
-    );
+    return jsonError(404, `No variant found for “${rsid}”. Check the rsID (e.g. rs6025) and try again.`);
   }
 
   const cv = (hit.clinvar as Record<string, unknown>) || {};
@@ -257,5 +249,6 @@ export async function POST(request: Request) {
     aiUnavailable,
     sources,
     disclaimer: DISCLAIMER,
+    meta: { promptVersion: PROMPT_VERSION, modelId: MODEL_ID, schemaVersion: OUTPUT_SCHEMA_VERSION },
   });
 }

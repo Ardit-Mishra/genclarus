@@ -3,6 +3,9 @@
 // Runs server-side only; the NIM key never reaches the client.
 
 import { synthesize } from "@/lib/nim";
+import { safeFetch, readJsonBounded } from "@/lib/http";
+import { readJsonBody, extractSingleField, RequestValidationError, jsonError } from "@/lib/request";
+import { PROMPT_VERSION, MODEL_ID, OUTPUT_SCHEMA_VERSION } from "@/lib/version";
 
 export const dynamic = "force-dynamic";
 
@@ -16,23 +19,17 @@ function first<T>(v: T | T[] | undefined | null): T | undefined {
 }
 
 export async function POST(request: Request) {
-  let body: unknown;
+  let raw: string;
   try {
-    body = await request.json();
-  } catch {
-    return Response.json({ error: "Invalid request." }, { status: 400 });
+    const body = await readJsonBody(request);
+    raw = extractSingleField(body, "gene");
+  } catch (err) {
+    if (err instanceof RequestValidationError) return jsonError(err.status, err.message);
+    return jsonError(400, "Invalid request.");
   }
 
-  const raw =
-    body && typeof body === "object" && "gene" in body
-      ? (body as { gene: unknown }).gene
-      : undefined;
-
-  if (typeof raw !== "string" || !/^[A-Za-z0-9][A-Za-z0-9\-]{0,19}$/.test(raw.trim())) {
-    return Response.json(
-      { error: "Enter a valid gene symbol — letters, numbers, or hyphens (e.g. BRCA1)." },
-      { status: 400 },
-    );
+  if (!/^[A-Za-z0-9][A-Za-z0-9\-]{0,19}$/.test(raw.trim())) {
+    return jsonError(400, "Enter a valid gene symbol — letters, numbers, or hyphens (e.g. BRCA1).");
   }
   const symbol = raw.trim().toUpperCase();
 
@@ -41,25 +38,20 @@ export async function POST(request: Request) {
     "symbol,name,summary,alias,type_of_gene,entrezgene,ensembl.gene,genomic_pos,MIM,uniprot.Swiss-Prot";
   let hit: Record<string, unknown> | undefined;
   try {
-    const res = await fetch(
+    const res = await safeFetch(
       `https://mygene.info/v3/query?q=symbol:${encodeURIComponent(symbol)}&species=human&fields=${fields}&size=1`,
-      { headers: { Accept: "application/json" }, signal: AbortSignal.timeout(12000) },
+      { headers: { Accept: "application/json" } },
+      12000,
     );
     if (!res.ok) throw new Error(`MyGene ${res.status}`);
-    const data = (await res.json()) as { hits?: Record<string, unknown>[] };
+    const data = await readJsonBounded<{ hits?: Record<string, unknown>[] }>(res);
     hit = data.hits?.[0];
   } catch {
-    return Response.json(
-      { error: "Gene database is unreachable right now. Please try again in a moment." },
-      { status: 502 },
-    );
+    return jsonError(502, "Gene database is unreachable right now. Please try again in a moment.");
   }
 
   if (!hit) {
-    return Response.json(
-      { error: `No human gene found for “${symbol}”. Try an official symbol like BRCA1, TP53, or CFTR.` },
-      { status: 404 },
-    );
+    return jsonError(404, `No human gene found for “${symbol}”. Try an official symbol like BRCA1, TP53, or CFTR.`);
   }
 
   const name = (hit.name as string) || "";
@@ -118,5 +110,6 @@ export async function POST(request: Request) {
     aiUnavailable,
     sources,
     disclaimer: DISCLAIMER,
+    meta: { promptVersion: PROMPT_VERSION, modelId: MODEL_ID, schemaVersion: OUTPUT_SCHEMA_VERSION },
   });
 }
