@@ -2,11 +2,9 @@
 // Flow: validate symbol -> MyGene.info (facts) -> NVIDIA NIM (grounded synthesis) -> JSON.
 // Runs server-side only; the NIM key never reaches the client.
 
-export const dynamic = "force-dynamic";
+import { synthesize } from "@/lib/nim";
 
-const NIM_URL = "https://integrate.api.nvidia.com/v1/chat/completions";
-const NIM_MODEL =
-  process.env.NIM_MODEL || "nvidia/llama-3.3-nemotron-super-49b-v1.5";
+export const dynamic = "force-dynamic";
 
 const DISCLAIMER =
   "Educational information only — not medical advice, diagnosis, or a substitute for a healthcare professional or genetic counselor.";
@@ -92,54 +90,21 @@ export async function POST(request: Request) {
   sources.push({ label: "GeneCards", url: `https://www.genecards.org/cgi-bin/carddisp.pl?gene=${symbol}` });
 
   // 2) NIM synthesis — grounded strictly in the facts above.
-  const key = process.env.NVIDIA_API_KEY;
-  let explanation: string | null = null;
-  let aiUnavailable = false;
-
-  if (!key) {
-    aiUnavailable = true;
-  } else {
-    const facts = JSON.stringify({ symbol, name, type, summary, aliases, location });
-    try {
-      const res = await fetch(NIM_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Authorization: `Bearer ${key}` },
-        body: JSON.stringify({
-          model: NIM_MODEL,
-          temperature: 0.2,
-          max_tokens: 500,
-          messages: [
-            {
-              role: "system",
-              content:
-                "You are a careful science communicator explaining human genes to curious non-specialists. Use ONLY the provided facts. Never invent gene functions, disease associations, numbers, or clinical claims. Do not give medical advice or diagnostic interpretation. detailed thinking off",
-            },
-            {
-              role: "user",
-              content:
-                `Explain the human gene ${symbol}${name ? ` (${name})` : ""} for a curious non-specialist, using only these facts:\n\n${facts}\n\n` +
-                "Write exactly three short markdown sections with these headers:\n## What it does\n## Why it matters\n## Key facts\n" +
-                "Keep it under ~170 words total. If the summary is empty, say only what the name and gene type support, and note that detailed curated summary data is limited for this gene.",
-            },
-          ],
-        }),
-        signal: AbortSignal.timeout(30000),
-      });
-      if (res.ok) {
-        const data = (await res.json()) as {
-          choices?: { message?: { content?: string } }[];
-        };
-        const text = data.choices?.[0]?.message?.content?.trim();
-        explanation = text
-          ? text.replace(/<think>[\s\S]*?<\/think>/gi, "").trim() || null
-          : null;
-      } else {
-        aiUnavailable = true;
-      }
-    } catch {
-      aiUnavailable = true;
-    }
-  }
+  const facts = JSON.stringify({ symbol, name, type, summary, aliases, location });
+  const { explanation, aiUnavailable } = await synthesize([
+    {
+      role: "system",
+      content:
+        "You are a careful science communicator explaining human genes to curious non-specialists. Use ONLY the provided facts. Never invent gene functions, disease associations, numbers, or clinical claims. Do not give medical advice or diagnostic interpretation. detailed thinking off",
+    },
+    {
+      role: "user",
+      content:
+        `Explain the human gene ${symbol}${name ? ` (${name})` : ""} for a curious non-specialist, using only these facts:\n\n${facts}\n\n` +
+        "Write exactly three short markdown sections with these headers:\n## What it does\n## Why it matters\n## Key facts\n" +
+        "Keep it under ~170 words total. If the summary is empty, say only what the name and gene type support, and note that detailed curated summary data is limited for this gene.",
+    },
+  ]);
 
   return Response.json({
     symbol,
@@ -148,6 +113,7 @@ export async function POST(request: Request) {
     summary,
     aliases,
     location,
+    uniprot: uniprot ?? null,
     explanation,
     aiUnavailable,
     sources,

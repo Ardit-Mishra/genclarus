@@ -2,11 +2,9 @@
 // Flow: validate rsID -> MyVariant.info (ClinVar/dbSNP/gnomAD facts) -> NVIDIA NIM
 // (grounded synthesis) -> JSON. Runs server-side only; the NIM key never reaches the client.
 
-export const dynamic = "force-dynamic";
+import { synthesize } from "@/lib/nim";
 
-const NIM_URL = "https://integrate.api.nvidia.com/v1/chat/completions";
-const NIM_MODEL =
-  process.env.NIM_MODEL || "nvidia/llama-3.3-nemotron-super-49b-v1.5";
+export const dynamic = "force-dynamic";
 
 // Variants carry clinical weight — the disclaimer is deliberately stronger than the gene one.
 const DISCLAIMER =
@@ -210,65 +208,32 @@ export async function POST(request: Request) {
     });
 
   // 2) NIM synthesis — grounded strictly in the facts above.
-  const key = process.env.NVIDIA_API_KEY;
-  let explanation: string | null = null;
-  let aiUnavailable = false;
-
-  if (!key) {
-    aiUnavailable = true;
-  } else {
-    const facts = JSON.stringify({
-      rsid,
-      gene,
-      variantType,
-      consequence,
-      proteinChange,
-      significances,
-      conditions: conditionList,
-      gnomadAlleleFrequency: gnomadAf,
-      hasClinvar,
-    });
-    try {
-      const res = await fetch(NIM_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Authorization: `Bearer ${key}` },
-        body: JSON.stringify({
-          model: NIM_MODEL,
-          temperature: 0.2,
-          max_tokens: 500,
-          messages: [
-            {
-              role: "system",
-              content:
-                "You are a careful science communicator explaining human genetic variants to curious non-specialists. Use ONLY the provided facts. Never invent conditions, significance classifications, frequencies, or clinical claims. Never give personal medical advice, diagnosis, or risk interpretation for an individual. When multiple or conflicting classifications exist, say so plainly and explain that significance depends on context. detailed thinking off",
-            },
-            {
-              role: "user",
-              content:
-                `Explain the human variant ${rsid}${gene ? ` in the ${gene} gene` : ""} for a curious non-specialist, using only these facts:\n\n${facts}\n\n` +
-                "Write exactly three short markdown sections with these headers:\n## What this variant is\n## Clinical significance\n## Key facts\n" +
-                "In 'Clinical significance', explain what the ClinVar classification(s) mean in general educational terms, note if interpretations vary or are uncertain, and do NOT tell the reader what it means for them personally. " +
-                "Keep it under ~180 words total. If clinical data is limited, say so.",
-            },
-          ],
-        }),
-        signal: AbortSignal.timeout(30000),
-      });
-      if (res.ok) {
-        const data = (await res.json()) as {
-          choices?: { message?: { content?: string } }[];
-        };
-        const text = data.choices?.[0]?.message?.content?.trim();
-        explanation = text
-          ? text.replace(/<think>[\s\S]*?<\/think>/gi, "").trim() || null
-          : null;
-      } else {
-        aiUnavailable = true;
-      }
-    } catch {
-      aiUnavailable = true;
-    }
-  }
+  const facts = JSON.stringify({
+    rsid,
+    gene,
+    variantType,
+    consequence,
+    proteinChange,
+    significances,
+    conditions: conditionList,
+    gnomadAlleleFrequency: gnomadAf,
+    hasClinvar,
+  });
+  const { explanation, aiUnavailable } = await synthesize([
+    {
+      role: "system",
+      content:
+        "You are a careful science communicator explaining human genetic variants to curious non-specialists. Use ONLY the provided facts. Never invent conditions, significance classifications, frequencies, or clinical claims. Never give personal medical advice, diagnosis, or risk interpretation for an individual. When multiple or conflicting classifications exist, say so plainly and explain that significance depends on context. detailed thinking off",
+    },
+    {
+      role: "user",
+      content:
+        `Explain the human variant ${rsid}${gene ? ` in the ${gene} gene` : ""} for a curious non-specialist, using only these facts:\n\n${facts}\n\n` +
+        "Write exactly three short markdown sections with these headers:\n## What this variant is\n## Clinical significance\n## Key facts\n" +
+        "In 'Clinical significance', explain what the ClinVar classification(s) mean in general educational terms, note if interpretations vary or are uncertain, and do NOT tell the reader what it means for them personally. " +
+        "Keep it under ~180 words total. If clinical data is limited, say so.",
+    },
+  ]);
 
   return Response.json({
     kind: "variant",
