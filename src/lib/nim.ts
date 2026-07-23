@@ -3,9 +3,11 @@
 // off"; we retry once on an empty (but otherwise successful) response. Hard failures (non-OK
 // status, timeout, network) are NOT retried — the graceful "source data only" fallback applies.
 
+import { safeFetch, readJsonBounded } from "./http";
+import { MODEL_ID } from "./version";
+
 const NIM_URL = "https://integrate.api.nvidia.com/v1/chat/completions";
-const NIM_MODEL =
-  process.env.NIM_MODEL || "nvidia/llama-3.3-nemotron-super-49b-v1.5";
+const NIM_MODEL = MODEL_ID;
 
 export type NimMessage = { role: "system" | "user"; content: string };
 
@@ -22,21 +24,24 @@ export async function synthesize(messages: NimMessage[]): Promise<NimResult> {
 
   for (let attempt = 0; attempt < 2; attempt++) {
     try {
-      const res = await fetch(NIM_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Authorization: `Bearer ${key}` },
-        body: JSON.stringify({
-          model: NIM_MODEL,
-          temperature: 0.2,
-          max_tokens: 500,
-          messages,
-        }),
-        signal: AbortSignal.timeout(30000),
-      });
+      const res = await safeFetch(
+        NIM_URL,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Authorization: `Bearer ${key}` },
+          body: JSON.stringify({
+            model: NIM_MODEL,
+            temperature: 0.2,
+            max_tokens: 500,
+            messages,
+          }),
+        },
+        30000,
+      );
       if (!res.ok) return { explanation: null, aiUnavailable: true };
-      const data = (await res.json()) as {
+      const data = await readJsonBounded<{
         choices?: { message?: { content?: string } }[];
-      };
+      }>(res, 256 * 1024);
       const text = data.choices?.[0]?.message?.content?.trim();
       const cleaned = text
         ? text.replace(/<think>[\s\S]*?<\/think>/gi, "").trim() || null
