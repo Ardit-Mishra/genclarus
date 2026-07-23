@@ -1,4 +1,4 @@
-# GeneLens — project context
+# Genclarus — project context
 
 > Read at the start of every session in this repo. Also read `@AGENTS.md` — this is a newer
 > Next.js with breaking changes; check `node_modules/next/dist/docs/` before writing framework code.
@@ -6,7 +6,7 @@
 @AGENTS.md
 
 ## What this is
-GeneLens is an **AI gene explainer**. Type a human gene (`BRCA1`, `TP53`, `CFTR`) → a clear,
+Genclarus is an **AI gene explainer**. Type a human gene (`BRCA1`, `TP53`, `CFTR`) → a clear,
 **cited**, plain-language explanation grounded in real biology. Not a chatbot — a focused,
 credible lookup tool. Explicitly **educational, not medical advice**.
 

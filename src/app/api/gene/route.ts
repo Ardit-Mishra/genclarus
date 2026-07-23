@@ -1,4 +1,4 @@
-// GeneLens — gene lookup API.
+// Genclarus — gene lookup API.
 // Flow: validate symbol -> MyGene.info (facts) -> NVIDIA NIM (grounded synthesis) -> JSON.
 // Runs server-side only; the NIM key never reaches the client.
 
