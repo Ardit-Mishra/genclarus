@@ -4,6 +4,7 @@ import {
   reviewStars,
   buildConditionClassifications,
 } from "./clinvar";
+import { rs6025Clinvar } from "@/test/fixtures/sources";
 
 describe("classifySignificance", () => {
   it("does not misread 'conflicting...pathogenicity' as Pathogenic", () => {
@@ -80,5 +81,31 @@ describe("buildConditionClassifications", () => {
     const rows = buildConditionClassifications(rcvs);
     expect(rows[0].condition).toContain("NSCLC");
     expect(rows[rows.length - 1].condition).toBe("not specified");
+  });
+});
+
+// Regression guard against the real record that exposed the defect: ClinVar returns `conditions`
+// as an object for single-condition RCVs and an ARRAY for multi-condition ones. Reading only the
+// first name silently discarded classifications — the exact distortion this module prevents.
+describe("buildConditionClassifications — real rs6025 record", () => {
+  const rcvs = (rs6025Clinvar[1] as { clinvar: { rcv: unknown } }).clinvar.rcv;
+
+  it("keeps every condition from an RCV that asserts several", () => {
+    const names = buildConditionClassifications(rcvs).map((r) => r.condition);
+    // All five conditions of RCV005049305; only the first survived before the fix.
+    expect(names).toContain("Ischemic stroke");
+    expect(names).toContain("Thrombophilia due to activated protein C resistance (THPH2)");
+    expect(names).toContain("Budd-Chiari syndrome (BDCHS)");
+    expect(names).toContain("Pregnancy loss, recurrent, susceptibility to, 1 (RPRGL1)");
+    expect(names).toContain("Congenital factor V deficiency");
+  });
+
+  it("preserves genuinely different verdicts for different conditions", () => {
+    const rows = buildConditionClassifications(rcvs);
+    const sig = (name: string) => rows.find((r) => r.condition === name)?.significance;
+    expect(sig("Thrombophilia due to activated protein C resistance (THPH2)")).toBe("Pathogenic");
+    expect(sig("Budd-Chiari syndrome, susceptibility to")).toBe("Risk factor");
+    expect(sig("hormonal contraceptives for systemic use response - Toxicity")).toBe("Drug response");
+    expect(new Set(rows.map((r) => r.significance)).size).toBeGreaterThan(2);
   });
 });
