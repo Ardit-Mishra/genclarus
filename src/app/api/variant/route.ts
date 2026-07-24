@@ -6,6 +6,7 @@ import { synthesize } from "@/lib/nim";
 import { safeFetch, readJsonBounded } from "@/lib/http";
 import { readJsonBody, extractSingleField, RequestValidationError, jsonError } from "@/lib/request";
 import { PROMPT_VERSION, MODEL_ID, OUTPUT_SCHEMA_VERSION } from "@/lib/version";
+import { classifySignificance, buildConditionClassifications } from "@/lib/clinvar";
 
 export const dynamic = "force-dynamic";
 
@@ -17,24 +18,6 @@ type Source = { label: string; url: string };
 
 function asList<T>(v: T | T[] | undefined | null): T[] {
   return Array.isArray(v) ? v : v == null ? [] : [v];
-}
-
-// Normalise ClinVar's messy composite significance strings into a label + severity rank.
-// Order matters: "conflicting" and "likely pathogenic" are checked before "pathogenic"
-// so the substring "pathogenic" inside them is not misread as top severity.
-function classify(raw: string | undefined): { label: string; rank: number } {
-  const s = (raw || "").toLowerCase();
-  if (!s) return { label: "Not provided", rank: 9 };
-  if (s.includes("conflicting")) return { label: "Conflicting interpretations", rank: 5 };
-  if (s.includes("likely pathogenic")) return { label: "Likely pathogenic", rank: 1 };
-  if (s.includes("pathogenic")) return { label: "Pathogenic", rank: 0 };
-  if (s.includes("risk factor")) return { label: "Risk factor", rank: 3 };
-  if (s.includes("drug response")) return { label: "Drug response", rank: 4 };
-  if (s.includes("uncertain")) return { label: "Uncertain significance", rank: 6 };
-  if (s.includes("likely benign")) return { label: "Likely benign", rank: 7 };
-  if (s.includes("benign")) return { label: "Benign", rank: 8 };
-  if (s.includes("protective")) return { label: "Protective", rank: 4 };
-  return { label: raw!.slice(0, 40), rank: 9 };
 }
 
 const CONSEQUENTIAL = new Set([
@@ -81,10 +64,12 @@ async function queryMyVariant(q: string): Promise<Record<string, unknown>[]> {
   return data.hits ?? [];
 }
 
+// Rank a candidate MyVariant document by its most-severe RCV — used only to PICK which document
+// to display when an rsID maps to several (per alt allele), NOT to collapse the final result.
 function docSeverity(hit: Record<string, unknown>): number {
   const cv = (hit.clinvar as Record<string, unknown>) || {};
   const ranks = asList(cv.rcv as unknown).map(
-    (r) => classify((r as { clinical_significance?: string })?.clinical_significance).rank,
+    (r) => classifySignificance((r as { clinical_significance?: string })?.clinical_significance).rank,
   );
   return ranks.length ? Math.min(...ranks) : 99;
 }
@@ -127,25 +112,19 @@ export async function POST(request: Request) {
   const cv = (hit.clinvar as Record<string, unknown>) || {};
   const dbsnp = (hit.dbsnp as Record<string, unknown>) || {};
 
-  // Aggregate unique significances (most severe first) and associated conditions.
-  const labelRank = new Map<string, number>();
-  const conditions = new Set<string>();
-  for (const r of asList(cv.rcv as unknown)) {
-    const rec = r as { clinical_significance?: string; conditions?: unknown };
-    const { label, rank } = classify(rec.clinical_significance);
-    labelRank.set(label, Math.min(rank, labelRank.get(label) ?? 99));
-    for (const c of asList(rec.conditions)) {
-      const name = (c as { name?: string })?.name;
-      if (name && !["not provided", "not specified", "see cases"].includes(name.toLowerCase())) {
-        conditions.add(name);
-      }
-    }
-  }
-  const ranked = [...labelRank.entries()].sort((a, b) => a[1] - b[1]);
-  const significances = ranked.map(([l]) => l);
-  const primarySignificance = ranked[0]?.[0] ?? null;
-  const significanceRank = ranked[0]?.[1] ?? null;
-  const conditionList = [...conditions].sort().slice(0, 6);
+  // Per-condition, per-origin ClinVar classifications — NO single "most severe" verdict.
+  const conditionClassifications = buildConditionClassifications(cv.rcv);
+  // The distinct significance labels present (severity-sorted) — for an honest "varies by
+  // condition" summary line, never presented as one overall verdict.
+  const distinctSignificances = [
+    ...new Map(
+      conditionClassifications.map((c) => [c.significance, c.significanceRank]),
+    ).entries(),
+  ]
+    .sort((a, b) => a[1] - b[1])
+    .map(([label]) => label);
+  const hasSomatic = conditionClassifications.some((c) => c.origin === "somatic");
+  const hasGermline = conditionClassifications.some((c) => c.origin === "germline");
 
   // snpEff annotation — used only as a fallback; ClinVar's own HGVS is preferred below.
   const anns = asList((hit.snpeff as { ann?: unknown })?.ann) as {
@@ -173,11 +152,18 @@ export async function POST(request: Request) {
     .find(Boolean) as string | undefined;
   const variantId = cv.variant_id as number | string | undefined;
 
-  // Parse genomic coordinates from the MyVariant _id (e.g. "chr1:g.169519049C>T").
+  // The MyVariant _id is GRCh37/hg19 (e.g. "chr1:g.169519049C>T"); ClinVar carries the hg38
+  // coordinates separately. Prefer hg38 (current standard) and label the assembly honestly.
   const hgvsId = (hit._id as string) || "";
   const snv = /^chr([\dXYM]+):g\.(\d+)([ACGT]+)>([ACGT]+)$/i.exec(hgvsId);
-  const chrom = snv?.[1] || String((dbsnp.chrom as string | number) ?? "");
-  const refAlt = snv ? `${snv[3]}>${snv[4]}` : "";
+  const ref = snv?.[3] || "";
+  const alt = snv?.[4] || ""; // SNV alleles are assembly-independent
+  const refAlt = snv ? `${ref}>${alt}` : "";
+  const hg38 = cv.hg38 as { start?: number } | undefined;
+  const chrom = String((cv.chrom as string) || snv?.[1] || (dbsnp.chrom as string | number) || "");
+  const position =
+    typeof hg38?.start === "number" ? hg38.start : snv?.[2] ? Number(snv[2]) : null;
+  const assembly = typeof hg38?.start === "number" ? "GRCh38" : snv ? "GRCh37" : "";
   const gnomad = hit.gnomad_genome as { af?: { af?: number } } | undefined;
   const gnomadAf = typeof gnomad?.af?.af === "number" ? gnomad.af.af : null;
 
@@ -193,21 +179,27 @@ export async function POST(request: Request) {
     label: "Ensembl",
     url: `https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=${rsid}`,
   });
-  if (snv)
+  // gnomAD v4 is GRCh38, so only link when we have hg38 coordinates to avoid pointing at the
+  // wrong position.
+  if (assembly === "GRCh38" && chrom && position && ref && alt)
     sources.push({
       label: "gnomAD",
-      url: `https://gnomad.broadinstitute.org/variant/${snv[1]}-${snv[2]}-${snv[3]}-${snv[4]}?dataset=gnomad_r4`,
+      url: `https://gnomad.broadinstitute.org/variant/${chrom}-${position}-${ref}-${alt}?dataset=gnomad_r4`,
     });
 
-  // 2) NIM synthesis — grounded strictly in the facts above.
+  // 2) NIM synthesis — grounded strictly in the facts above (classifications kept PER CONDITION).
   const facts = JSON.stringify({
     rsid,
     gene,
     variantType,
     consequence,
     proteinChange,
-    significances,
-    conditions: conditionList,
+    clinvarByCondition: conditionClassifications.slice(0, 8).map((c) => ({
+      condition: c.condition,
+      significance: c.significance,
+      reviewStars: c.reviewStars,
+      origin: c.origin,
+    })),
     gnomadAlleleFrequency: gnomadAf,
     hasClinvar,
   });
@@ -215,15 +207,15 @@ export async function POST(request: Request) {
     {
       role: "system",
       content:
-        "You are a careful science communicator explaining human genetic variants to curious non-specialists. Use ONLY the provided facts. Never invent conditions, significance classifications, frequencies, or clinical claims. Never give personal medical advice, diagnosis, or risk interpretation for an individual. When multiple or conflicting classifications exist, say so plainly and explain that significance depends on context. detailed thinking off",
+        "You are a careful science communicator explaining human genetic variants to curious non-specialists. Use ONLY the provided facts. Never invent conditions, significance classifications, frequencies, or clinical claims. Never give personal medical advice, diagnosis, or risk interpretation for an individual. ClinVar classifications are PER CONDITION — a variant can be pathogenic for one condition and benign or uncertain for another, and germline vs somatic differ; never merge them into a single overall verdict. When interpretations vary or conflict, say so plainly. detailed thinking off",
     },
     {
       role: "user",
       content:
         `Explain the human variant ${rsid}${gene ? ` in the ${gene} gene` : ""} for a curious non-specialist, using only these facts:\n\n${facts}\n\n` +
         "Write exactly three short markdown sections with these headers:\n## What this variant is\n## Clinical significance\n## Key facts\n" +
-        "In 'Clinical significance', explain what the ClinVar classification(s) mean in general educational terms, note if interpretations vary or are uncertain, and do NOT tell the reader what it means for them personally. " +
-        "Keep it under ~180 words total. If clinical data is limited, say so.",
+        "In 'Clinical significance', explain that ClinVar classifications are given per condition, summarize how they vary across the listed conditions in general educational terms, note review confidence and any conflict/uncertainty, and do NOT tell the reader what it means for them personally. " +
+        "Keep it under ~190 words total. If clinical data is limited, say so.",
     },
   ]);
 
@@ -236,11 +228,14 @@ export async function POST(request: Request) {
     variantType,
     preferredName: preferredName ?? null,
     chrom,
+    position,
     refAlt,
-    primarySignificance,
-    significanceRank,
-    significances,
-    conditions: conditionList,
+    assembly,
+    // Per-condition classifications — the honest replacement for a single "most severe" badge.
+    conditionClassifications,
+    distinctSignificances,
+    hasSomatic,
+    hasGermline,
     gnomadAf,
     hasClinvar,
     hgvsId,
@@ -249,6 +244,7 @@ export async function POST(request: Request) {
     aiUnavailable,
     sources,
     disclaimer: DISCLAIMER,
+    retrievedAt: new Date().toISOString(),
     meta: { promptVersion: PROMPT_VERSION, modelId: MODEL_ID, schemaVersion: OUTPUT_SCHEMA_VERSION },
   });
 }

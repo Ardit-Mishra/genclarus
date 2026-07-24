@@ -18,6 +18,17 @@ type GeneResult = {
   disclaimer: string;
 };
 
+type ConditionClassification = {
+  condition: string;
+  significance: string;
+  rawSignificance: string;
+  significanceRank: number;
+  reviewStatus: string;
+  reviewStars: number;
+  origin: string;
+  lastEvaluated: string | null;
+};
+
 type VariantResult = {
   kind: "variant";
   rsid: string;
@@ -27,11 +38,13 @@ type VariantResult = {
   variantType: string;
   preferredName: string | null;
   chrom: string;
+  position: number | null;
   refAlt: string;
-  primarySignificance: string | null;
-  significanceRank: number | null;
-  significances: string[];
-  conditions: string[];
+  assembly: string;
+  conditionClassifications: ConditionClassification[];
+  distinctSignificances: string[];
+  hasSomatic: boolean;
+  hasGermline: boolean;
   gnomadAf: number | null;
   hasClinvar: boolean;
   hgvsId: string;
@@ -40,6 +53,7 @@ type VariantResult = {
   aiUnavailable: boolean;
   sources: Source[];
   disclaimer: string;
+  retrievedAt: string;
 };
 
 type Result = GeneResult | VariantResult;
@@ -63,6 +77,42 @@ function formatAf(af: number): string {
   if (pct >= 1) return `${pct.toFixed(1)}%`;
   if (pct >= 0.01) return `${pct.toFixed(2)}%`;
   return `${af.toExponential(1)}`;
+}
+
+// ClinVar's 0-4 gold-star review-confidence scale, rendered accessibly.
+function ReviewStars({ n, label }: { n: number; label: string }) {
+  return (
+    <span
+      className="inline-flex items-center gap-px align-middle"
+      title={`ClinVar review: ${label} (${n}/4)`}
+      aria-label={`ClinVar review confidence ${n} of 4 stars`}
+    >
+      {[0, 1, 2, 3].map((i) => (
+        <svg key={i} viewBox="0 0 20 20" className="h-3 w-3" aria-hidden="true">
+          <path
+            d="M10 1.6l2.47 5.01 5.53.8-4 3.9.94 5.5L10 14.2l-4.94 2.6.94-5.5-4-3.9 5.53-.8L10 1.6z"
+            className={i < n ? "fill-amber-500 dark:fill-amber-400" : "fill-zinc-200 dark:fill-zinc-700"}
+          />
+        </svg>
+      ))}
+    </span>
+  );
+}
+
+function OriginTag({ origin }: { origin: string }) {
+  if (!origin || origin === "unknown") return null;
+  const somatic = origin === "somatic";
+  return (
+    <span
+      className={`rounded px-1.5 py-px font-mono text-[10px] uppercase tracking-wide ${
+        somatic
+          ? "bg-violet-100 text-violet-700 dark:bg-violet-500/15 dark:text-violet-300"
+          : "bg-sky-100 text-sky-700 dark:bg-sky-500/15 dark:text-sky-300"
+      }`}
+    >
+      {origin}
+    </span>
+  );
 }
 
 function Explanation({ md }: { md: string }) {
@@ -193,16 +243,7 @@ export default function Home() {
 
       {result && result.kind === "variant" && (
         <article className="mt-8 rounded-xl border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-zinc-900 sm:p-8">
-          <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
-            <h2 className="text-2xl font-bold text-zinc-900 dark:text-zinc-50">{result.rsid}</h2>
-            {result.primarySignificance && (
-              <span
-                className={`rounded-md px-2.5 py-0.5 text-sm font-medium ${sigBadgeClass(result.significanceRank)}`}
-              >
-                {result.primarySignificance}
-              </span>
-            )}
-          </div>
+          <h2 className="text-2xl font-bold text-zinc-900 dark:text-zinc-50">{result.rsid}</h2>
           {result.preferredName && (
             <p className="mt-1 break-words font-mono text-xs text-zinc-500 dark:text-zinc-400">
               {result.preferredName}
@@ -241,61 +282,85 @@ export default function Home() {
             )}
           </div>
 
+          <p className="mt-4 rounded-lg bg-zinc-50 px-3 py-2 text-xs leading-relaxed text-zinc-500 dark:bg-zinc-800/50 dark:text-zinc-400">
+            Looking up an rsID explains the public ClinVar/dbSNP record — it does{" "}
+            <strong className="font-semibold text-zinc-700 dark:text-zinc-200">not</strong> determine
+            whether you carry this variant.
+          </p>
+
           <div className="mt-6">
             {result.explanation ? (
               <Explanation md={result.explanation} />
+            ) : result.hasClinvar ? (
+              <p className="leading-relaxed text-zinc-700 dark:text-zinc-300">
+                {result.distinctSignificances.length > 0
+                  ? `In ClinVar this variant is classified differently across conditions (${result.distinctSignificances.join(", ")}). See the per-condition breakdown below.`
+                  : "This variant is recorded in ClinVar."}
+              </p>
             ) : (
-              <>
-                {result.hasClinvar ? (
-                  <p className="leading-relaxed text-zinc-700 dark:text-zinc-300">
-                    {result.primarySignificance
-                      ? `ClinVar reports this variant as: ${result.significances.join(", ")}.`
-                      : "This variant is recorded in ClinVar."}
-                  </p>
-                ) : (
-                  <p className="text-zinc-500 dark:text-zinc-400">
-                    No ClinVar clinical classification is available for this variant. Basic variant
-                    data is shown below.
-                  </p>
-                )}
-                {result.aiUnavailable && (
-                  <p className="mt-4 font-mono text-xs text-zinc-400">
-                    Showing source data. AI synthesis activates once the model key is configured.
-                  </p>
-                )}
-              </>
+              <p className="text-zinc-500 dark:text-zinc-400">
+                No ClinVar clinical classification is available for this variant. Basic variant data
+                is shown below.
+              </p>
+            )}
+            {result.aiUnavailable && result.explanation === null && (
+              <p className="mt-4 font-mono text-xs text-zinc-400">
+                AI synthesis is temporarily unavailable — showing the source data directly.
+              </p>
             )}
           </div>
 
-          {result.significances.length > 1 && (
-            <p className="mt-6 text-sm text-zinc-500 dark:text-zinc-400">
-              <span className="font-mono text-xs uppercase tracking-wide text-zinc-400">
-                Reported classifications
-              </span>{" "}
-              {result.significances.join(" · ")}
-            </p>
-          )}
+          {result.conditionClassifications.length > 0 && (
+            <section className="mt-7">
+              <div className="flex items-baseline justify-between gap-3">
+                <h3 className="font-mono text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500 dark:text-zinc-400">
+                  ClinVar by condition
+                </h3>
+                <span className="font-mono text-[11px] text-zinc-400">
+                  {result.conditionClassifications.length}
+                  {result.conditionClassifications.length === 1 ? " condition" : " conditions"}
+                  {result.distinctSignificances.length > 1 && " · varies"}
+                </span>
+              </div>
 
-          {result.conditions.length > 0 && (
-            <div className="mt-4">
-              <span className="font-mono text-xs uppercase tracking-wide text-zinc-400">
-                Associated conditions
-              </span>
-              <ul className="mt-2 flex flex-wrap gap-2">
-                {result.conditions.map((c) => (
+              <ul className="mt-2 divide-y divide-zinc-100 dark:divide-zinc-800">
+                {result.conditionClassifications.slice(0, 12).map((c, i) => (
                   <li
-                    key={c}
-                    className="rounded-md border border-zinc-200 px-2 py-0.5 text-xs text-zinc-600 dark:border-zinc-800 dark:text-zinc-400"
+                    key={`${c.condition}-${c.origin}-${i}`}
+                    className="flex flex-col gap-1.5 py-3 sm:flex-row sm:items-start sm:justify-between sm:gap-4"
                   >
-                    {c}
+                    <div className="min-w-0">
+                      <p className="text-sm leading-snug text-zinc-800 dark:text-zinc-200">
+                        {c.condition}
+                      </p>
+                      <div className="mt-1 flex flex-wrap items-center gap-x-2.5 gap-y-1">
+                        <ReviewStars n={c.reviewStars} label={c.reviewStatus || "no assertion"} />
+                        <OriginTag origin={c.origin} />
+                        {c.lastEvaluated && (
+                          <span className="font-mono text-[10px] text-zinc-400">
+                            eval. {c.lastEvaluated}
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                    <span
+                      className={`shrink-0 self-start rounded-md px-2 py-0.5 text-xs font-medium ${sigBadgeClass(c.significanceRank)}`}
+                    >
+                      {c.significance}
+                    </span>
                   </li>
                 ))}
               </ul>
-            </div>
+              {result.conditionClassifications.length > 12 && (
+                <p className="mt-2 font-mono text-[11px] text-zinc-400">
+                  +{result.conditionClassifications.length - 12} more on ClinVar ↓
+                </p>
+              )}
+            </section>
           )}
 
           {result.sources.length > 0 && (
-            <div className="mt-6 border-t border-zinc-100 pt-5 dark:border-zinc-800">
+            <div className="mt-7 border-t border-zinc-100 pt-5 dark:border-zinc-800">
               <span className="font-mono text-xs uppercase tracking-[0.14em] text-zinc-400">Sources</span>
               <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1">
                 {result.sources.map((s) => (
@@ -313,7 +378,19 @@ export default function Home() {
             </div>
           )}
 
-          <p className="mt-6 text-xs leading-relaxed text-zinc-400">{result.disclaimer}</p>
+          <p className="mt-4 font-mono text-[10px] leading-relaxed text-zinc-400">
+            {[
+              result.variantId != null && `ClinVar Variation ${result.variantId}`,
+              result.assembly && result.chrom && result.position
+                ? `${result.assembly} chr${result.chrom}:${result.position.toLocaleString()}`
+                : null,
+              `retrieved ${result.retrievedAt.slice(0, 10)}`,
+            ]
+              .filter(Boolean)
+              .join(" · ")}
+          </p>
+
+          <p className="mt-4 text-xs leading-relaxed text-zinc-400">{result.disclaimer}</p>
         </article>
       )}
 
