@@ -77,7 +77,8 @@ describe("POST /api/gene — BRCA1", () => {
 
   it("falls back to source-only output when the model is unavailable", async () => {
     const body = await (await POST(post({ gene: "BRCA1" }))).json();
-    expect(body.aiUnavailable).toBe(true);
+    expect(body.aiAvailable).toBe(false);
+    expect(body.fallbackReason).toBe("not_configured");
     expect(body.explanation).toBeNull();
     expect(body.summary.length).toBeGreaterThan(0); // page still has something true to show
   });

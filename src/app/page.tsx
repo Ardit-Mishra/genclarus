@@ -4,6 +4,10 @@ import { useState } from "react";
 
 type Source = { label: string; url: string };
 
+// Why the AI narrative is missing. The source data is always complete either way — the notice
+// exists so an absent explanation reads as a known, bounded condition rather than a broken page.
+type FallbackReason = "not_configured" | "provider_unavailable" | "provider_no_content";
+
 type GeneResult = {
   kind?: "gene";
   symbol: string;
@@ -13,7 +17,8 @@ type GeneResult = {
   aliases: string[];
   location: string;
   explanation: string | null;
-  aiUnavailable: boolean;
+  aiAvailable: boolean;
+  fallbackReason: FallbackReason | null;
   sources: Source[];
   disclaimer: string;
 };
@@ -50,7 +55,8 @@ type VariantResult = {
   hgvsId: string;
   variantId: number | string | null;
   explanation: string | null;
-  aiUnavailable: boolean;
+  aiAvailable: boolean;
+  fallbackReason: FallbackReason | null;
   sources: Source[];
   disclaimer: string;
   retrievedAt: string;
@@ -112,6 +118,23 @@ function OriginTag({ origin }: { origin: string }) {
     >
       {origin}
     </span>
+  );
+}
+
+const FALLBACK_COPY: Record<FallbackReason, string> = {
+  not_configured: "AI synthesis activates once the model key is configured.",
+  provider_unavailable:
+    "The AI explanation is temporarily unavailable. Everything below comes straight from the source databases and is unaffected.",
+  provider_no_content:
+    "The model returned no explanation this time. Everything below comes straight from the source databases and is unaffected.",
+};
+
+function FallbackNotice({ reason }: { reason: FallbackReason | null }) {
+  if (!reason) return null;
+  return (
+    <p className="mt-4 border-l-2 border-zinc-200 pl-3 text-xs leading-relaxed text-zinc-500 dark:border-zinc-700 dark:text-zinc-400">
+      {FALLBACK_COPY[reason]}
+    </p>
   );
 }
 
@@ -303,11 +326,7 @@ export default function Home() {
                 is shown below.
               </p>
             )}
-            {result.aiUnavailable && result.explanation === null && (
-              <p className="mt-4 font-mono text-xs text-zinc-400">
-                AI synthesis is temporarily unavailable — showing the source data directly.
-              </p>
-            )}
+            {result.explanation === null && <FallbackNotice reason={result.fallbackReason} />}
           </div>
 
           {result.conditionClassifications.length > 0 && (
@@ -428,11 +447,7 @@ export default function Home() {
                     No curated summary is available for this gene yet.
                   </p>
                 )}
-                {result.aiUnavailable && (
-                  <p className="mt-4 font-mono text-xs text-zinc-400">
-                    Showing source data. AI synthesis activates once the model key is configured.
-                  </p>
-                )}
+                <FallbackNotice reason={result.fallbackReason} />
               </>
             )}
           </div>

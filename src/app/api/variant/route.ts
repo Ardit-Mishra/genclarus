@@ -203,7 +203,7 @@ export async function POST(request: Request) {
     gnomadAlleleFrequency: gnomadAf,
     hasClinvar,
   });
-  const { explanation, aiUnavailable } = await synthesize([
+  const { explanation, aiAvailable, fallbackReason } = await synthesize([
     {
       role: "system",
       content:
@@ -241,7 +241,9 @@ export async function POST(request: Request) {
     hgvsId,
     variantId: variantId ?? null,
     explanation,
-    aiUnavailable,
+    aiAvailable,
+    // Coarse, non-internal reason the narrative is missing — drives honest UI copy.
+    fallbackReason,
     sources,
     disclaimer: DISCLAIMER,
     retrievedAt: new Date().toISOString(),
