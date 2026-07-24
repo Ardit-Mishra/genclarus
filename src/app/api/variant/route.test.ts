@@ -4,6 +4,7 @@
 
 import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
 import { POST } from "./route";
+import { clearFactCaches } from "@/lib/facts";
 import { rs6025Clinvar, rs1000000Dbsnp } from "@/test/fixtures/sources";
 
 const realFetch = globalThis.fetch;
@@ -34,8 +35,9 @@ function post(body: unknown, contentType = "application/json"): Request {
 }
 
 beforeEach(() => {
-  // Unset so synthesize() short-circuits: these tests assert the deterministic data layer,
-  // not model output. The NIM path gets its own test below.
+  // This route is now facts-only; the model is never involved. Clear the fact cache so one
+  // test's lookup cannot satisfy the next test's request.
+  clearFactCaches();
   delete process.env.NVIDIA_API_KEY;
 });
 
@@ -149,13 +151,24 @@ describe("POST /api/variant — rs6025 (F5 Leiden)", () => {
     expect(body.sources.map((s: { label: string }) => s.label)).toContain("ClinVar");
   });
 
-  it("falls back to source-only output when the model is unavailable", async () => {
+  it("never blocks on the model — no narrative fields, and no call to it", async () => {
+    process.env.NVIDIA_API_KEY = "test-key";
     const body = await (await POST(post({ rsid: "rs6025" }))).json();
-    expect(body.aiAvailable).toBe(false);
-    expect(body.fallbackReason).toBe("not_configured");
-    expect(body.explanation).toBeNull();
-    // The classifications still stand on their own — the page stays useful without the LLM.
+    expect(body).not.toHaveProperty("explanation");
+    expect(body).not.toHaveProperty("aiAvailable");
+    // The classifications stand on their own — this page is useful with or without the model.
     expect(body.conditionClassifications.length).toBeGreaterThan(0);
+    for (const call of (globalThis.fetch as ReturnType<typeof vi.fn>).mock.calls) {
+      expect(String(call[0])).not.toContain("nvidia");
+    }
+    delete process.env.NVIDIA_API_KEY;
+  });
+
+  it("serves a repeat lookup from cache without hitting the upstream again", async () => {
+    await POST(post({ rsid: "rs6025" }));
+    const callsAfterFirst = (globalThis.fetch as ReturnType<typeof vi.fn>).mock.calls.length;
+    await POST(post({ rsid: "rs6025" }));
+    expect((globalThis.fetch as ReturnType<typeof vi.fn>).mock.calls.length).toBe(callsAfterFirst);
   });
 
   it("normalizes the rsID case before lookup", async () => {
@@ -193,29 +206,5 @@ describe("POST /api/variant — variants without a ClinVar record", () => {
       async () => new Response("<html>maintenance</html>", { headers: { "content-type": "text/html" } }),
     ) as typeof fetch;
     expect((await POST(post({ rsid: "rs6025" }))).status).toBe(502);
-  });
-});
-
-describe("POST /api/variant — model synthesis", () => {
-  it("attaches the explanation and hands the model per-condition facts only", async () => {
-    process.env.NVIDIA_API_KEY = "test-key";
-    let nimBody: { messages: { content: string }[] } | undefined;
-    globalThis.fetch = vi.fn(async (input: RequestInfo | URL, init?: RequestInit) => {
-      const url = String(input);
-      if (url.includes("myvariant.info")) return jsonResponse({ hits: rs6025Clinvar });
-      nimBody = JSON.parse(String(init?.body));
-      return jsonResponse({ choices: [{ message: { content: "## What this variant is\nFactor V." } }] });
-    }) as typeof fetch;
-
-    const body = await (await POST(post({ rsid: "rs6025" }))).json();
-    expect(body.aiAvailable).toBe(true);
-    expect(body.fallbackReason).toBeNull();
-    expect(body.explanation).toContain("Factor V");
-
-    const facts = nimBody!.messages.map((m) => m.content).join("\n");
-    expect(facts).toContain("clinvarByCondition");
-    // The model is never handed a pre-collapsed verdict to parrot back.
-    expect(facts).not.toContain("primarySignificance");
-    expect(nimBody!.messages[0].content).toMatch(/PER CONDITION/);
   });
 });

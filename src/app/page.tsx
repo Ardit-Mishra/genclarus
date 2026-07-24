@@ -1,12 +1,20 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 type Source = { label: string; url: string };
 
 // Why the AI narrative is missing. The source data is always complete either way — the notice
 // exists so an absent explanation reads as a known, bounded condition rather than a broken page.
 type FallbackReason = "not_configured" | "provider_unavailable" | "provider_no_content";
+
+// The narrative is requested separately from the facts, so it has its own lifecycle. The page is
+// fully usable in every one of these states — that is the point of splitting them.
+type NarrativeState =
+  | { status: "idle" }
+  | { status: "loading" }
+  | { status: "ready"; text: string }
+  | { status: "failed"; reason: FallbackReason };
 
 type GeneResult = {
   kind?: "gene";
@@ -16,9 +24,6 @@ type GeneResult = {
   summary: string;
   aliases: string[];
   location: string;
-  explanation: string | null;
-  aiAvailable: boolean;
-  fallbackReason: FallbackReason | null;
   sources: Source[];
   disclaimer: string;
 };
@@ -54,9 +59,6 @@ type VariantResult = {
   hasClinvar: boolean;
   hgvsId: string;
   variantId: number | string | null;
-  explanation: string | null;
-  aiAvailable: boolean;
-  fallbackReason: FallbackReason | null;
   sources: Source[];
   disclaimer: string;
   retrievedAt: string;
@@ -138,6 +140,44 @@ function FallbackNotice({ reason }: { reason: FallbackReason | null }) {
   );
 }
 
+// How long the narrative may take before we say so. A free-tier model regularly needs 15s+, and
+// silence that long reads as breakage.
+const SLOW_NARRATIVE_MS = 10_000;
+
+function NarrativePending() {
+  const [slow, setSlow] = useState(false);
+  useEffect(() => {
+    const t = setTimeout(() => setSlow(true), SLOW_NARRATIVE_MS);
+    return () => clearTimeout(t);
+  }, []);
+  return (
+    <p className="mt-4 flex items-start gap-2 border-l-2 border-teal-500/40 pl-3 text-xs leading-relaxed text-zinc-500 dark:text-zinc-400">
+      <span
+        className="mt-1 h-1.5 w-1.5 shrink-0 animate-pulse rounded-full bg-teal-600 dark:bg-teal-400"
+        aria-hidden="true"
+      />
+      <span>
+        {slow
+          ? "The plain-language explanation is taking longer than usual. The verified source information below is complete and stays available."
+          : "Generating a plain-language explanation… the verified source data below is already complete."}
+      </span>
+    </p>
+  );
+}
+
+// Renders the narrative once it exists; until then (or if it never arrives) the verified source
+// data stands on its own. The page is never blocked on the model.
+function Narrative({ state, children }: { state: NarrativeState; children: React.ReactNode }) {
+  if (state.status === "ready") return <Explanation md={state.text} />;
+  return (
+    <>
+      {children}
+      {state.status === "loading" && <NarrativePending />}
+      {state.status === "failed" && <FallbackNotice reason={state.reason} />}
+    </>
+  );
+}
+
 function Explanation({ md }: { md: string }) {
   return (
     <>
@@ -168,6 +208,7 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<Result | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [narrative, setNarrative] = useState<NarrativeState>({ status: "idle" });
 
   async function lookup(term?: string) {
     const t = (term ?? q).trim();
@@ -176,20 +217,50 @@ export default function Home() {
     setLoading(true);
     setError(null);
     setResult(null);
+    setNarrative({ status: "idle" });
+
+    const variant = isRsId(t);
     try {
-      const variant = isRsId(t);
+      // Stage 1 — verified facts. Fast, and everything the page needs to be useful.
       const res = await fetch(variant ? "/api/variant" : "/api/gene", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(variant ? { rsid: t } : { gene: t }),
       });
       const data = await res.json();
-      if (!res.ok) setError(data.error ?? "Something went wrong. Please try again.");
-      else setResult(data as Result);
+      if (!res.ok) {
+        setError(data.error ?? "Something went wrong. Please try again.");
+        return;
+      }
+      setResult(data as Result);
+      // Stage 2 — the narrative, which may take many seconds on a free model tier. It arrives
+      // when it arrives; the verified result above never waits for it.
+      void loadNarrative(variant ? "variant" : "gene", t);
     } catch {
       setError("Network error. Please try again.");
     } finally {
       setLoading(false);
+    }
+  }
+
+  async function loadNarrative(type: "gene" | "variant", identifier: string) {
+    setNarrative({ status: "loading" });
+    try {
+      const res = await fetch("/api/explain", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ type, identifier }),
+      });
+      const data = await res.json();
+      if (!res.ok || (!data.explanation && !data.fallbackReason)) {
+        setNarrative({ status: "failed", reason: "provider_unavailable" });
+      } else if (data.explanation) {
+        setNarrative({ status: "ready", text: data.explanation });
+      } else {
+        setNarrative({ status: "failed", reason: data.fallbackReason });
+      }
+    } catch {
+      setNarrative({ status: "failed", reason: "provider_unavailable" });
     }
   }
 
@@ -312,21 +383,20 @@ export default function Home() {
           </p>
 
           <div className="mt-6">
-            {result.explanation ? (
-              <Explanation md={result.explanation} />
-            ) : result.hasClinvar ? (
-              <p className="leading-relaxed text-zinc-700 dark:text-zinc-300">
-                {result.distinctSignificances.length > 0
-                  ? `In ClinVar this variant is classified differently across conditions (${result.distinctSignificances.join(", ")}). See the per-condition breakdown below.`
-                  : "This variant is recorded in ClinVar."}
-              </p>
-            ) : (
-              <p className="text-zinc-500 dark:text-zinc-400">
-                No ClinVar clinical classification is available for this variant. Basic variant data
-                is shown below.
-              </p>
-            )}
-            {result.explanation === null && <FallbackNotice reason={result.fallbackReason} />}
+            <Narrative state={narrative}>
+              {result.hasClinvar ? (
+                <p className="leading-relaxed text-zinc-700 dark:text-zinc-300">
+                  {result.distinctSignificances.length > 0
+                    ? `In ClinVar this variant is classified differently across conditions (${result.distinctSignificances.join(", ")}). See the per-condition breakdown below.`
+                    : "This variant is recorded in ClinVar."}
+                </p>
+              ) : (
+                <p className="text-zinc-500 dark:text-zinc-400">
+                  No ClinVar clinical classification is available for this variant. Basic variant
+                  data is shown below.
+                </p>
+              )}
+            </Narrative>
           </div>
 
           {result.conditionClassifications.length > 0 && (
@@ -436,20 +506,15 @@ export default function Home() {
           )}
 
           <div className="mt-6">
-            {result.explanation ? (
-              <Explanation md={result.explanation} />
-            ) : (
-              <>
-                {result.summary ? (
-                  <p className="leading-relaxed text-zinc-700 dark:text-zinc-300">{result.summary}</p>
-                ) : (
-                  <p className="text-zinc-500 dark:text-zinc-400">
-                    No curated summary is available for this gene yet.
-                  </p>
-                )}
-                <FallbackNotice reason={result.fallbackReason} />
-              </>
-            )}
+            <Narrative state={narrative}>
+              {result.summary ? (
+                <p className="leading-relaxed text-zinc-700 dark:text-zinc-300">{result.summary}</p>
+              ) : (
+                <p className="text-zinc-500 dark:text-zinc-400">
+                  No curated summary is available for this gene yet.
+                </p>
+              )}
+            </Narrative>
           </div>
 
           {result.aliases.length > 0 && (

@@ -1,8 +1,10 @@
 // Route-integration tests for /api/gene against a fixed real MyGene.info record.
 // Only the network boundary is stubbed; validation, parsing and response shape run for real.
+// This route returns FACTS ONLY — the narrative lives behind /api/explain.
 
 import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
 import { POST } from "./route";
+import { clearFactCaches } from "@/lib/facts";
 import { brca1MyGene } from "@/test/fixtures/sources";
 
 const realFetch = globalThis.fetch;
@@ -23,7 +25,7 @@ function post(body: unknown, contentType = "application/json"): Request {
 }
 
 beforeEach(() => {
-  delete process.env.NVIDIA_API_KEY; // assert the deterministic layer, not model output
+  clearFactCaches(); // otherwise one test's facts satisfy the next test's request
   globalThis.fetch = vi.fn(async () => jsonResponse({ hits: brca1MyGene })) as typeof fetch;
 });
 
@@ -75,12 +77,23 @@ describe("POST /api/gene — BRCA1", () => {
     expect(body.meta.schemaVersion).toBeTruthy();
   });
 
-  it("falls back to source-only output when the model is unavailable", async () => {
+  it("never blocks on the model — no narrative fields, and no call to it", async () => {
+    process.env.NVIDIA_API_KEY = "test-key";
     const body = await (await POST(post({ gene: "BRCA1" }))).json();
-    expect(body.aiAvailable).toBe(false);
-    expect(body.fallbackReason).toBe("not_configured");
-    expect(body.explanation).toBeNull();
-    expect(body.summary.length).toBeGreaterThan(0); // page still has something true to show
+    expect(body).not.toHaveProperty("explanation");
+    expect(body).not.toHaveProperty("aiAvailable");
+    // One upstream call, to MyGene. The model is never contacted on the facts path.
+    expect(globalThis.fetch).toHaveBeenCalledTimes(1);
+    expect(String((globalThis.fetch as ReturnType<typeof vi.fn>).mock.calls[0][0])).toContain(
+      "mygene.info",
+    );
+    delete process.env.NVIDIA_API_KEY;
+  });
+
+  it("serves a repeat lookup from cache without hitting the upstream again", async () => {
+    await POST(post({ gene: "BRCA1" }));
+    await POST(post({ gene: "BRCA1" }));
+    expect(globalThis.fetch).toHaveBeenCalledTimes(1);
   });
 });
 
@@ -100,5 +113,13 @@ describe("POST /api/gene — upstream failures", () => {
   it("returns 502 when MyGene answers with an error status", async () => {
     globalThis.fetch = vi.fn(async () => jsonResponse({ error: "nope" }, 503)) as typeof fetch;
     expect((await POST(post({ gene: "BRCA1" }))).status).toBe(502);
+  });
+
+  it("does not cache a failure", async () => {
+    globalThis.fetch = vi.fn(async () => jsonResponse({ hits: [] })) as typeof fetch;
+    await POST(post({ gene: "NOTAGENE" }));
+    globalThis.fetch = vi.fn(async () => jsonResponse({ hits: brca1MyGene })) as typeof fetch;
+    // A gene that 404s must be looked up again next time, not remembered as missing forever.
+    expect((await POST(post({ gene: "NOTAGENE" }))).status).toBe(200);
   });
 });
