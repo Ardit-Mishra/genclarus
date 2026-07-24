@@ -34,6 +34,9 @@ export type NimMessage = { role: "system" | "user"; content: string };
 export type NimFailureCategory =
   | "no_api_key"
   | "empty_response"
+  // The model spent its whole token budget reasoning and was cut off before writing an answer.
+  // Distinct from empty_response because the cause is our max_tokens, not the provider.
+  | "truncated_before_answer"
   | "rate_limited"
   | "upstream_5xx"
   | "upstream_4xx"
@@ -58,6 +61,7 @@ export type NimResult = {
 const CLIENT_REASON: Record<NimFailureCategory, FallbackReason> = {
   no_api_key: "not_configured",
   empty_response: "provider_no_content",
+  truncated_before_answer: "provider_no_content",
   rate_limited: "provider_unavailable",
   upstream_5xx: "provider_unavailable",
   upstream_4xx: "provider_unavailable",
@@ -73,6 +77,27 @@ const RETRYABLE = new Set<NimFailureCategory>([
   "timeout",
   "invalid_json",
 ]);
+
+// Retries exist for TRANSIENT failures. A failure that took a long time to arrive is not
+// transient — it is the provider working normally and producing a bad result, and repeating it
+// just multiplies the wait (three ~13s truncations became a 40s request in production). So a
+// failure only earns another attempt if it came back quickly.
+const RETRY_IF_FASTER_THAN_MS = 8_000;
+
+// `nemotron` is a REASONING model: it writes a <think> block before the answer, and that block is
+// billed against max_tokens. Stripping it is correct — users must never see the scratchpad — but
+// it means a token budget sized for the answer alone gets consumed by reasoning and leaves nothing
+// behind. That was the real cause of production's "empty response" runs: BRCA1, with the longest
+// source summary, reasoned longest and was truncated every single time, while shorter genes
+// (TP53, CFTR) fit and succeeded. Hence the headroom: reasoning AND a ~200-word answer.
+const MAX_TOKENS = 1400;
+
+export function stripReasoning(text: string | undefined): string | null {
+  if (!text) return null;
+  // Also drop an UNCLOSED <think> — a truncated response has no closing tag, and leaking raw
+  // model reasoning into the page would be worse than showing no narrative at all.
+  return text.replace(/<think>[\s\S]*?<\/think>/gi, "").replace(/<think>[\s\S]*$/i, "").trim() || null;
+}
 
 export function backoffMs(attempt: number, random: () => number = Math.random): number {
   const i = Math.min(attempt, BACKOFF_BASE_MS.length - 1);
@@ -112,8 +137,10 @@ export async function synthesize(messages: NimMessage[]): Promise<NimResult> {
       if (Date.now() - startedAt + wait >= TOTAL_BUDGET_MS) break;
       await sleep(wait);
     }
-    if (Date.now() - startedAt >= TOTAL_BUDGET_MS) break;
+    const remaining = TOTAL_BUDGET_MS - (Date.now() - startedAt);
+    if (remaining <= 0) break;
     attempt++;
+    const attemptStartedAt = Date.now();
 
     try {
       const res = await safeFetch(
@@ -124,11 +151,13 @@ export async function synthesize(messages: NimMessage[]): Promise<NimResult> {
           body: JSON.stringify({
             model: NIM_MODEL,
             temperature: 0.2,
-            max_tokens: 500,
+            max_tokens: MAX_TOKENS,
             messages,
           }),
         },
-        PER_ATTEMPT_TIMEOUT_MS,
+        // The attempt may not outlive the budget — otherwise the "total budget" bounds only when
+        // an attempt STARTS, and total latency silently becomes budget + one full attempt.
+        Math.min(PER_ATTEMPT_TIMEOUT_MS, remaining),
       );
 
       if (!res.ok) {
@@ -141,7 +170,9 @@ export async function synthesize(messages: NimMessage[]): Promise<NimResult> {
         continue;
       }
 
-      let data: { choices?: { message?: { content?: string } }[] };
+      let data: {
+        choices?: { message?: { content?: string }; finish_reason?: string }[];
+      };
       try {
         data = await readJsonBounded(res, 256 * 1024);
       } catch {
@@ -149,8 +180,9 @@ export async function synthesize(messages: NimMessage[]): Promise<NimResult> {
         continue;
       }
 
-      const text = data.choices?.[0]?.message?.content?.trim();
-      const cleaned = text ? text.replace(/<think>[\s\S]*?<\/think>/gi, "").trim() || null : null;
+      const choice = data.choices?.[0];
+      const text = choice?.message?.content?.trim();
+      const cleaned = stripReasoning(text);
       if (cleaned) {
         return {
           explanation: cleaned,
@@ -160,17 +192,21 @@ export async function synthesize(messages: NimMessage[]): Promise<NimResult> {
           attempts: attempt,
         };
       }
-      last = "empty_response";
+      // Nothing left after removing the reasoning block. If the model was cut off at the token
+      // limit, it never got to the answer — that is our budget being too small, not the provider
+      // misbehaving, and retrying identical inputs will truncate identically.
+      last = choice?.finish_reason === "length" ? "truncated_before_answer" : "empty_response";
     } catch {
       // Abort (per-attempt timeout), DNS, connection reset — all transient.
       last = "timeout";
     }
 
     if (!RETRYABLE.has(last)) break;
+    if (Date.now() - attemptStartedAt >= RETRY_IF_FASTER_THAN_MS) break;
   }
 
   // Budget or attempts exhausted. Available means we actually got a successful response — which
   // for "empty_response" we did: the provider answered every time and simply had nothing to say.
   // A 429/5xx/timeout is an outage from the product's point of view, whatever the socket did.
-  return result(last, attempt, last === "empty_response");
+  return result(last, attempt, last === "empty_response" || last === "truncated_before_answer");
 }

@@ -3,7 +3,7 @@
 // from being visible to users without hammering a provider that has already said no.
 
 import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
-import { synthesize, backoffMs } from "./nim";
+import { synthesize, backoffMs, stripReasoning } from "./nim";
 
 const realFetch = globalThis.fetch;
 const messages = [{ role: "user" as const, content: "explain BRCA1" }];
@@ -13,6 +13,14 @@ function completion(content: string): Response {
     status: 200,
     headers: { "content-type": "application/json" },
   });
+}
+
+// A response that ran out of tokens mid-thought — what production was actually returning.
+function truncated(content: string): Response {
+  return new Response(
+    JSON.stringify({ choices: [{ message: { content }, finish_reason: "length" }] }),
+    { status: 200, headers: { "content-type": "application/json" } },
+  );
 }
 
 function status(code: number): Response {
@@ -160,6 +168,54 @@ describe("synthesize — reporting the failure honestly", () => {
     // The client learns the narrative is missing, not that we were rate limited.
     expect(r.fallbackReason).toBe("provider_unavailable");
     expect(r.failureCategory).toBe("rate_limited");
+  });
+});
+
+// The defect that made production look "randomly flaky": nemotron reasons inside <think> before
+// answering, that reasoning is billed against max_tokens, and a budget sized for the answer alone
+// left nothing once the reasoning was stripped.
+describe("stripReasoning", () => {
+  it("removes a complete reasoning block and keeps the answer", () => {
+    expect(stripReasoning("<think>weighing options</think>\n## What it does\nDNA repair.")).toBe(
+      "## What it does\nDNA repair.",
+    );
+  });
+
+  it("returns null when the response is nothing but reasoning", () => {
+    expect(stripReasoning("<think>weighing options</think>")).toBeNull();
+  });
+
+  it("never leaks an UNCLOSED reasoning block into the page", () => {
+    // A truncated response has no closing tag. Showing the raw scratchpad to a user would be
+    // worse than showing no narrative at all.
+    expect(stripReasoning("<think>the user asked about BRCA1, so I should")).toBeNull();
+  });
+
+  it("leaves ordinary prose untouched", () => {
+    expect(stripReasoning("## What it does\nDNA repair.")).toBe("## What it does\nDNA repair.");
+  });
+});
+
+describe("synthesize — truncation is diagnosed as our budget, not their fault", () => {
+  it("reports finish_reason=length with no answer as truncated_before_answer", async () => {
+    stubSequence([truncated("<think>still reasoning about BRCA1 and")]);
+    const r = await synthesize(messages);
+    expect(r.failureCategory).toBe("truncated_before_answer");
+    expect(r.explanation).toBeNull();
+    // Still "available" — the provider answered fine; we asked for too little room.
+    expect(r.aiAvailable).toBe(true);
+    expect(r.fallbackReason).toBe("provider_no_content");
+  });
+
+  it("does not retry a truncation, which would truncate identically", async () => {
+    const fetchMock = stubSequence([truncated("<think>reasoning")]);
+    await synthesize(messages);
+    expect(fetchMock).toHaveBeenCalledTimes(1);
+  });
+
+  it("keeps the answer when the model finished inside its budget", async () => {
+    stubSequence([completion("<think>brief</think>## What it does\nDNA repair.")]);
+    expect((await synthesize(messages)).explanation).toContain("DNA repair");
   });
 });
 
