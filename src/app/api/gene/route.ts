@@ -110,6 +110,9 @@ export async function POST(request: Request) {
     aiUnavailable,
     sources,
     disclaimer: DISCLAIMER,
+    // Source-record provenance: what was retrieved, when — so a result can be reproduced and
+    // stale facts are visible rather than implied to be current.
+    retrievedAt: new Date().toISOString(),
     meta: { promptVersion: PROMPT_VERSION, modelId: MODEL_ID, schemaVersion: OUTPUT_SCHEMA_VERSION },
   });
 }

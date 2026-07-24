@@ -60,9 +60,14 @@ function asList<T>(v: T | T[] | undefined | null): T[] {
   return Array.isArray(v) ? v : v == null ? [] : [v];
 }
 
-function conditionName(conditions: unknown): string {
-  const c = asList(conditions)[0] as { name?: string } | undefined;
-  return c?.name?.trim() || "";
+// One RCV can cover SEVERAL conditions (ClinVar returns `conditions` as an object or an array).
+// Return every name so a multi-condition record contributes one row per condition — taking only
+// the first would silently drop real classifications, the exact distortion this module exists to
+// prevent. e.g. rs6025 RCV005049305 asserts Pathogenic across five separate conditions.
+function conditionNames(conditions: unknown): string[] {
+  return asList(conditions)
+    .map((c) => (c as { name?: string } | undefined)?.name?.trim() || "")
+    .filter(Boolean);
 }
 
 type Rcv = {
@@ -81,28 +86,28 @@ export function buildConditionClassifications(rcvs: unknown): ConditionClassific
   const byKey = new Map<string, ConditionClassification>();
 
   for (const rcv of asList(rcvs) as Rcv[]) {
-    const condition = conditionName(rcv.conditions);
-    if (!condition) continue;
     const { label, rank } = classifySignificance(rcv.clinical_significance);
-    const row: ConditionClassification = {
-      condition,
-      significance: label,
-      rawSignificance: rcv.clinical_significance || "",
-      significanceRank: rank,
-      reviewStatus: rcv.review_status || "",
-      reviewStars: reviewStars(rcv.review_status),
-      origin: (rcv.origin || "unknown").toLowerCase(),
-      lastEvaluated: rcv.last_evaluated || null,
-    };
-    const key = `${condition.toLowerCase()}|${row.origin}|${label}`;
-    const existing = byKey.get(key);
-    if (
-      !existing ||
-      row.reviewStars > existing.reviewStars ||
-      (row.reviewStars === existing.reviewStars &&
-        (row.lastEvaluated || "") > (existing.lastEvaluated || ""))
-    ) {
-      byKey.set(key, row);
+    for (const condition of conditionNames(rcv.conditions)) {
+      const row: ConditionClassification = {
+        condition,
+        significance: label,
+        rawSignificance: rcv.clinical_significance || "",
+        significanceRank: rank,
+        reviewStatus: rcv.review_status || "",
+        reviewStars: reviewStars(rcv.review_status),
+        origin: (rcv.origin || "unknown").toLowerCase(),
+        lastEvaluated: rcv.last_evaluated || null,
+      };
+      const key = `${condition.toLowerCase()}|${row.origin}|${label}`;
+      const existing = byKey.get(key);
+      if (
+        !existing ||
+        row.reviewStars > existing.reviewStars ||
+        (row.reviewStars === existing.reviewStars &&
+          (row.lastEvaluated || "") > (existing.lastEvaluated || ""))
+      ) {
+        byKey.set(key, row);
+      }
     }
   }
 
