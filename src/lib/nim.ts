@@ -15,10 +15,13 @@ const NIM_URL = "https://integrate.api.nvidia.com/v1/chat/completions";
 const NIM_MODEL = MODEL_ID;
 
 const MAX_ATTEMPTS = 3;
-const PER_ATTEMPT_TIMEOUT_MS = 12_000;
-// Total wall-clock ceiling for synthesis. Once exceeded we stop retrying and fall back, so a
-// struggling provider can never hold the user on a spinner.
-const TOTAL_BUDGET_MS = 24_000;
+// Measured on production: this provider's failure mode is LATENCY, not random error. A 49B model
+// on a free tier generating a few hundred tokens routinely needs 15-25s, so a short per-attempt
+// timeout does not "retry past" a bad roll — it guarantees failure and makes the user wait longer
+// to get nothing. The per-attempt cap must therefore sit above normal generation time; the total
+// budget is what actually bounds the wait, and it stays under the platform's request ceiling.
+const PER_ATTEMPT_TIMEOUT_MS = 24_000;
+const TOTAL_BUDGET_MS = 26_000;
 // Backoff before attempts 2 and 3: a base delay plus jitter, so retries from concurrent requests
 // don't align into a thundering herd against the same rate-limited endpoint.
 const BACKOFF_BASE_MS = [0, 400, 1000];
