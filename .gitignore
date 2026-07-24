@@ -43,3 +43,6 @@ next-env.d.ts
 
 .vercel
 .env*.local
+
+# internal planning/strategy docs — kept out of the public repo
+docs/
