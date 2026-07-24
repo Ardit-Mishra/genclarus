@@ -151,7 +151,8 @@ describe("POST /api/variant — rs6025 (F5 Leiden)", () => {
 
   it("falls back to source-only output when the model is unavailable", async () => {
     const body = await (await POST(post({ rsid: "rs6025" }))).json();
-    expect(body.aiUnavailable).toBe(true);
+    expect(body.aiAvailable).toBe(false);
+    expect(body.fallbackReason).toBe("not_configured");
     expect(body.explanation).toBeNull();
     // The classifications still stand on their own — the page stays useful without the LLM.
     expect(body.conditionClassifications.length).toBeGreaterThan(0);
@@ -207,7 +208,8 @@ describe("POST /api/variant — model synthesis", () => {
     }) as typeof fetch;
 
     const body = await (await POST(post({ rsid: "rs6025" }))).json();
-    expect(body.aiUnavailable).toBe(false);
+    expect(body.aiAvailable).toBe(true);
+    expect(body.fallbackReason).toBeNull();
     expect(body.explanation).toContain("Factor V");
 
     const facts = nimBody!.messages.map((m) => m.content).join("\n");

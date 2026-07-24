@@ -83,7 +83,7 @@ export async function POST(request: Request) {
 
   // 2) NIM synthesis — grounded strictly in the facts above.
   const facts = JSON.stringify({ symbol, name, type, summary, aliases, location });
-  const { explanation, aiUnavailable } = await synthesize([
+  const { explanation, aiAvailable, fallbackReason } = await synthesize([
     {
       role: "system",
       content:
@@ -107,7 +107,9 @@ export async function POST(request: Request) {
     location,
     uniprot: uniprot ?? null,
     explanation,
-    aiUnavailable,
+    aiAvailable,
+    // Coarse, non-internal reason the narrative is missing — drives honest UI copy.
+    fallbackReason,
     sources,
     disclaimer: DISCLAIMER,
     // Source-record provenance: what was retrieved, when — so a result can be reproduced and
