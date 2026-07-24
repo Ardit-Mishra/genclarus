@@ -15,13 +15,17 @@ const NIM_URL = "https://integrate.api.nvidia.com/v1/chat/completions";
 const NIM_MODEL = MODEL_ID;
 
 const MAX_ATTEMPTS = 3;
-// Measured on production: this provider's failure mode is LATENCY, not random error. A 49B model
-// on a free tier generating a few hundred tokens routinely needs 15-25s, so a short per-attempt
-// timeout does not "retry past" a bad roll — it guarantees failure and makes the user wait longer
-// to get nothing. The per-attempt cap must therefore sit above normal generation time; the total
-// budget is what actually bounds the wait, and it stays under the platform's request ceiling.
-const PER_ATTEMPT_TIMEOUT_MS = 24_000;
-const TOTAL_BUDGET_MS = 26_000;
+// Sized from measured throughput, not guesswork: this model emits ~38 tokens/s on the free tier
+// (500 tokens in ~13s, observed in production), and MAX_TOKENS below allows 1400 — so a full
+// generation needs ~36s. Any cap under that does not "retry past" a slow roll, it guarantees
+// failure. Two earlier cuts of this hotfix each made production worse by capping too low: 12s
+// turned success into timeout, 24s turned truncation into timeout.
+//
+// Waiting this long is only acceptable because NOTHING USER-FACING BLOCKS ON IT — the verified
+// facts have already rendered, and this runs behind /api/explain. If synthesis ever moves back
+// onto the critical path, these numbers are wrong again.
+const PER_ATTEMPT_TIMEOUT_MS = 45_000;
+const TOTAL_BUDGET_MS = 50_000;
 // Backoff before attempts 2 and 3: a base delay plus jitter, so retries from concurrent requests
 // don't align into a thundering herd against the same rate-limited endpoint.
 const BACKOFF_BASE_MS = [0, 400, 1000];
