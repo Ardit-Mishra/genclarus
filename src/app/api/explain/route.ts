@@ -18,6 +18,10 @@ import { explain } from "@/lib/explain";
 import { PROMPT_VERSION, MODEL_ID, OUTPUT_SCHEMA_VERSION } from "@/lib/version";
 
 export const dynamic = "force-dynamic";
+// Generation genuinely needs ~36s on this model, and the platform's default function ceiling is
+// shorter than that. Nothing user-facing waits on this route, so give it room to finish rather
+// than killing it just short of an answer.
+export const maxDuration = 60;
 
 type ExplainRequest = { type: "gene" | "variant"; identifier: string };
 
