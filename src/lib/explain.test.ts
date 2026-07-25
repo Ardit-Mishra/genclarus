@@ -24,6 +24,15 @@ const variant: VariantFacts = {
   gene: "F5",
   consequence: "missense variant",
   proteinChange: "p.Arg534Gln",
+  alleleCount: 2,
+  otherAlleles: [
+    {
+      proteinChange: "",
+      refAlt: "C>C",
+      variantId: 226007,
+      significance: "Conflicting interpretations",
+    },
+  ],
   variantType: "single nucleotide variant",
   preferredName: "NM_000130.4(F5):c.1601G>A (p.Arg534Gln)",
   chrom: "1",

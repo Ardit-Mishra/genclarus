@@ -185,6 +185,8 @@ describe("POST /api/variant — variants without a ClinVar record", () => {
     expect(body.conditionClassifications).toEqual([]);
     expect(body.distinctSignificances).toEqual([]);
     expect(body.variantId).toBeNull();
+    expect(body.alleleCount).toBe(1);
+    expect(body.otherAlleles).toEqual([]);
     // No hg38 record, so no gnomAD link — better absent than pointing at the wrong coordinate.
     expect((body.sources as { label: string }[]).some((s) => s.label === "gnomAD")).toBe(false);
   });
