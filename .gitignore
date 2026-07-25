@@ -46,3 +46,7 @@ next-env.d.ts
 
 # internal planning/strategy docs — kept out of the public repo
 docs/
+
+# AI-agent instruction docs — kept local, not published in the public repo
+CLAUDE.md
+AGENTS.md
