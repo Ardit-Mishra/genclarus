@@ -1,25 +1,28 @@
-// Narrative generation, kept strictly downstream of the fact layer.
+// Narrative generation, kept strictly downstream of the fact layer and now GROUNDED (Phase 3).
 //
-// The model is handed a hand-picked subset of server-derived facts serialized as inert JSON —
-// never raw upstream text, never anything the browser sent. Clinical classifications stay
-// per-condition all the way into the prompt, because a model given a collapsed verdict will
-// faithfully repeat it.
+// The model no longer writes prose. It is handed the deterministic EvidenceFact list — the same
+// list the validator checks against — and must return claim-level structured JSON: each claim one
+// sentence, citing 1-3 fact ids. The output passes through the grounding gate (parse + deterministic
+// validation, one repair retry) before anything is cached or shown. Any failure returns null and
+// the page renders the verified facts alone. Clinical data never comes from the LLM.
 
 import { createHash } from "node:crypto";
-import { synthesize, type FallbackReason } from "./nim";
+import { synthesize, type FallbackReason, type NimMessage } from "./nim";
 import { PROMPT_VERSION, MODEL_ID, OUTPUT_SCHEMA_VERSION } from "./version";
 import { TtlCache } from "./cache";
+import { buildEvidence, type EvidenceFact } from "./evidence";
+import { ground, type GroundedClaim } from "./grounding";
 import type { Facts, GeneFacts, VariantFacts } from "./facts";
 
 export type Explanation = {
-  explanation: string | null;
+  claims: GroundedClaim[] | null;
   aiAvailable: boolean;
   fallbackReason: FallbackReason | null;
   cached: boolean;
 };
 
 const EXPLANATION_TTL_MS = 24 * 60 * 60 * 1000;
-const explanationCache = new TtlCache<string>(EXPLANATION_TTL_MS, 500);
+const explanationCache = new TtlCache<GroundedClaim[]>(EXPLANATION_TTL_MS, 500);
 
 export function clearExplanationCache(): void {
   explanationCache.clear();
@@ -77,53 +80,107 @@ export function cacheKey(facts: Facts): string {
   ].join("|");
 }
 
-function genePrompt(g: GeneFacts) {
-  const facts = JSON.stringify(modelFacts(g));
-  return [
-    {
-      role: "system" as const,
-      content:
-        "You are a careful science communicator explaining human genes to curious non-specialists. Use ONLY the provided facts. Never invent gene functions, disease associations, numbers, or clinical claims. Do not give medical advice or diagnostic interpretation. detailed thinking off",
-    },
-    {
-      role: "user" as const,
-      content:
-        `Explain the human gene ${g.symbol}${g.name ? ` (${g.name})` : ""} for a curious non-specialist, using only these facts:\n\n${facts}\n\n` +
-        "Write exactly three short markdown sections with these headers:\n## What it does\n## Why it matters\n## Key facts\n" +
-        "Keep it under ~170 words total. If the summary is empty, say only what the name and gene type support, and note that detailed curated summary data is limited for this gene.",
-    },
-  ];
+// Serialize the evidence as terse numbered lines the model cites by id. The ids are the ONLY thing
+// a claim may reference, so they are the most prominent token on each line.
+function serializeEvidence(evidence: EvidenceFact[]): string {
+  return evidence
+    .map((f) => {
+      const q = f.qualifiers && Object.keys(f.qualifiers).length
+        ? " [" + Object.entries(f.qualifiers).map(([k, v]) => `${k}: ${v}`).join("; ") + "]"
+        : "";
+      return `id "${f.id}" (${f.source} · ${f.field}): ${f.value}${q}`;
+    })
+    .join("\n");
 }
 
-function variantPrompt(v: VariantFacts) {
-  const facts = JSON.stringify(modelFacts(v));
-  return [
+// Shared, compact rules. The schema is stated here AND enforced by the validator — the prompt is a
+// request, the validator is the guarantee.
+const SYSTEM = [
+  "You turn verified biomedical facts into short, grounded claims for curious non-specialists.",
+  "Return ONLY a JSON object of this exact shape, with no markdown, no code fences and no text outside it:",
+  '{"claims":[{"text":string,"supportingFactIds":string[],"claimType":string}]}',
+  "Rules — follow every one:",
+  "- 1 to 4 claims. Each claim is exactly ONE sentence of at most 35 words.",
+  "- Each claim cites 1 to 3 supportingFactIds, using ONLY ids from the facts given.",
+  "- Every number, gene symbol, protein change, classification label and condition name in a claim MUST appear in the facts it cites. Invent nothing.",
+  "- Do not address the reader ('you'/'your'). No diagnosis, prognosis, treatment, dosage, personal risk, or causal/actionable claims.",
+  "- Classifications are PER CONDITION — never merge them. If a cited fact is uncertain or conflicting, the claim must say so.",
+  "- claimType is one of: identity, function, classification_context, condition_context, frequency_context, uncertainty.",
+  "detailed thinking off",
+].join("\n");
+
+const REPAIR =
+  "Your previous reply was not valid JSON for the schema. Return ONLY the JSON object {\"claims\":[...]}, nothing else.";
+
+function messagesFor(facts: Facts, evidence: EvidenceFact[], repair: boolean): NimMessage[] {
+  const subject =
+    facts.kind === "gene"
+      ? `the human gene ${facts.symbol}${facts.name ? ` (${facts.name})` : ""}`
+      : `the human variant ${facts.rsid}${facts.gene ? ` in the ${facts.gene} gene` : ""}`;
+  const messages: NimMessage[] = [
+    { role: "system", content: SYSTEM },
     {
-      role: "system" as const,
+      role: "user",
       content:
-        "You are a careful science communicator explaining human genetic variants to curious non-specialists. Use ONLY the provided facts. Never invent conditions, significance classifications, frequencies, or clinical claims. Never give personal medical advice, diagnosis, or risk interpretation for an individual. ClinVar classifications are PER CONDITION — a variant can be pathogenic for one condition and benign or uncertain for another, and germline vs somatic differ; never merge them into a single overall verdict. When interpretations vary or conflict, say so plainly. detailed thinking off",
-    },
-    {
-      role: "user" as const,
-      content:
-        `Explain the human variant ${v.rsid}${v.gene ? ` in the ${v.gene} gene` : ""} for a curious non-specialist, using only these facts:\n\n${facts}\n\n` +
-        "Write exactly three short markdown sections with these headers:\n## What this variant is\n## Clinical significance\n## Key facts\n" +
-        "In 'Clinical significance', explain that ClinVar classifications are given per condition, summarize how they vary across the listed conditions in general educational terms, note review confidence and any conflict/uncertainty, and do NOT tell the reader what it means for them personally. " +
-        "Keep it under ~190 words total. If clinical data is limited, say so.",
+        `Facts about ${subject}:\n${serializeEvidence(evidence)}\n\n` +
+        "Write the grounded claims JSON now, citing only the ids above.",
     },
   ];
+  if (repair) messages.push({ role: "system", content: REPAIR });
+  return messages;
+}
+
+// Pull the JSON object out of the model's reply: strip any code fence, then slice to the outermost
+// braces. Keeps the grounding parser strict while tolerating the wrapping a free-tier model adds.
+function extractJson(text: string): string {
+  let t = text.trim();
+  const fence = /```(?:json)?\s*([\s\S]*?)```/i.exec(t);
+  if (fence) t = fence[1].trim();
+  const start = t.indexOf("{");
+  const end = t.lastIndexOf("}");
+  return start >= 0 && end > start ? t.slice(start, end + 1) : t;
 }
 
 export async function explain(facts: Facts): Promise<Explanation> {
   const key = cacheKey(facts);
   const hit = explanationCache.get(key);
-  if (hit) return { explanation: hit, aiAvailable: true, fallbackReason: null, cached: true };
+  if (hit) return { claims: hit, aiAvailable: true, fallbackReason: null, cached: true };
 
-  const messages = facts.kind === "gene" ? genePrompt(facts) : variantPrompt(facts);
-  const { explanation, aiAvailable, fallbackReason } = await synthesize(messages);
+  const evidence = buildEvidence(facts);
+  // Nothing citable (e.g. a gene with only a bare symbol) — there is no honest claim to generate.
+  if (evidence.length === 0) {
+    return { claims: null, aiAvailable: true, fallbackReason: "provider_no_content", cached: false };
+  }
 
-  // Only successes are cached. Caching a failure would turn one bad roll into a day of them.
-  if (explanation) explanationCache.set(key, explanation);
+  // The generation thunk the grounding orchestrator drives. It records the provider's own fallback
+  // reason so a genuine outage stays distinguishable from a grounding rejection.
+  let providerReason: FallbackReason | null = null;
+  let providerAvailable = false;
+  const generate = async (repair: boolean): Promise<string | null> => {
+    const res = await synthesize(messagesFor(facts, evidence, repair));
+    providerAvailable = res.aiAvailable;
+    if (!res.explanation) {
+      providerReason = res.fallbackReason;
+      return null;
+    }
+    return extractJson(res.explanation);
+  };
 
-  return { explanation, aiAvailable, fallbackReason, cached: false };
+  const result = await ground(evidence, generate);
+  if (result.ok) {
+    explanationCache.set(key, result.explanation.claims);
+    return { claims: result.explanation.claims, aiAvailable: true, fallbackReason: null, cached: false };
+  }
+
+  // The provider never produced usable text → surface its reason. It produced text we could not
+  // verify → `failed_grounding`, stated honestly so the UI can explain why there's no narrative.
+  if (result.reason === "no_output") {
+    return {
+      claims: null,
+      aiAvailable: providerAvailable,
+      fallbackReason: providerReason ?? "provider_unavailable",
+      cached: false,
+    };
+  }
+  return { claims: null, aiAvailable: true, fallbackReason: "failed_grounding", cached: false };
 }

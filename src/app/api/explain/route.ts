@@ -15,6 +15,7 @@ import {
   FactsError,
 } from "@/lib/facts";
 import { explain } from "@/lib/explain";
+import { buildEvidence, claimCitations, type EvidenceFact } from "@/lib/evidence";
 import { PROMPT_VERSION, MODEL_ID, OUTPUT_SCHEMA_VERSION } from "@/lib/version";
 
 export const dynamic = "force-dynamic";
@@ -57,15 +58,25 @@ export async function POST(request: Request) {
         ? await getGeneFacts(normalizeGeneSymbol(parsed.identifier))
         : await getVariantFacts(normalizeRsid(parsed.identifier));
 
-    const { explanation, aiAvailable, fallbackReason, cached } = await explain(facts);
+    const { claims, aiAvailable, fallbackReason, cached } = await explain(facts);
+
+    // Resolve each claim's cited ids to display chips (source · field). The evidence is re-derived
+    // deterministically from the same facts, so this never depends on anything the browser sent.
+    const byId = new Map(buildEvidence(facts).map((f) => [f.id, f] as [string, EvidenceFact]));
+    const displayClaims =
+      claims?.map((c) => ({
+        text: c.text,
+        claimType: c.claimType,
+        citations: claimCitations(byId, c.supportingFactIds),
+      })) ?? null;
 
     return Response.json({
       kind: parsed.type,
-      explanation,
+      claims: displayClaims,
       aiAvailable,
       fallbackReason,
       cached,
-      // Which prompt/model/schema produced this text — so a narrative can always be traced back
+      // Which prompt/model/schema produced these claims — so a narrative can always be traced back
       // to the exact configuration that generated it.
       meta: {
         promptVersion: PROMPT_VERSION,

@@ -5,7 +5,7 @@
 // fact the model may cite, so the validator can enforce qualifier preservation.
 
 import { describe, it, expect } from "vitest";
-import { buildEvidence } from "./evidence";
+import { buildEvidence, claimCitations, type EvidenceFact } from "./evidence";
 import type { GeneFacts, VariantFacts } from "./facts";
 
 const gene: GeneFacts = {
@@ -128,6 +128,29 @@ describe("buildEvidence — variant", () => {
     const facts = buildEvidence({ ...variant, conditionClassifications: many });
     const sigIds = facts.filter((f) => /^var\.cond\.\d+\.significance$/.test(f.id));
     expect(sigIds).toHaveLength(8);
+  });
+});
+
+describe("claimCitations", () => {
+  const byId = new Map(buildEvidence(variant).map((f) => [f.id, f] as [string, EvidenceFact]));
+
+  it("deduplicates cited facts that share a source and field into one chip", () => {
+    // Two facts from the same source+field (both ClinVar classifications) → a single chip.
+    const chips = claimCitations(byId, ["var.cond.0.significance", "var.cond.1.significance"]);
+    expect(chips).toEqual([{ source: "clinvar", field: "classification" }]);
+  });
+
+  it("keeps facts of the same source but different fields as separate chips", () => {
+    const chips = claimCitations(byId, ["var.cond.0.significance", "var.cond.0.reviewStars", "var.gene"]);
+    expect(chips).toEqual([
+      { source: "clinvar", field: "classification" },
+      { source: "clinvar", field: "review confidence" },
+      { source: "dbsnp", field: "gene" },
+    ]);
+  });
+
+  it("drops ids that resolve to no fact", () => {
+    expect(claimCitations(byId, ["var.ghost"])).toEqual([]);
   });
 });
 

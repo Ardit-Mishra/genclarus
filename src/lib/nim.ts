@@ -48,8 +48,13 @@ export type NimFailureCategory =
   | "invalid_json";
 
 // The coarse reason the client is allowed to see: enough to write honest UI copy, not enough to
-// describe our infrastructure.
-export type FallbackReason = "not_configured" | "provider_unavailable" | "provider_no_content";
+// describe our infrastructure. `failed_grounding` is set by the grounding layer, not NIM itself:
+// the model answered, but the output could not be verified against the evidence and was withheld.
+export type FallbackReason =
+  | "not_configured"
+  | "provider_unavailable"
+  | "provider_no_content"
+  | "failed_grounding";
 
 export type NimResult = {
   explanation: string | null;
