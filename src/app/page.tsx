@@ -45,6 +45,13 @@ type VariantResult = {
   gene: string;
   consequence: string;
   proteinChange: string;
+  alleleCount: number;
+  otherAlleles: {
+    proteinChange: string;
+    refAlt: string;
+    variantId: number | string | null;
+    significance: string;
+  }[];
   variantType: string;
   preferredName: string | null;
   chrom: string;
@@ -375,6 +382,17 @@ export default function Home() {
               </span>
             )}
           </div>
+
+          {result.alleleCount > 1 ? (
+            <p className="mt-4 border-l-2 border-teal-600/40 pl-3 text-xs leading-relaxed text-zinc-600 dark:border-teal-400/40 dark:text-zinc-300">
+              This rsID covers {result.alleleCount} alleles at this position:{" "}
+              {result.proteinChange || result.refAlt} (shown),{" "}
+              {result.otherAlleles
+                .map((allele) => allele.proteinChange || allele.refAlt)
+                .join(", ")}{" "}
+              — each is classified separately in ClinVar.
+            </p>
+          ) : null}
 
           <p className="mt-4 rounded-lg bg-zinc-50 px-3 py-2 text-xs leading-relaxed text-zinc-500 dark:bg-zinc-800/50 dark:text-zinc-400">
             Looking up an rsID explains the public ClinVar/dbSNP record — it does{" "}

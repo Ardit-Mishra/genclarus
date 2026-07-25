@@ -5,7 +5,12 @@
 // Everything here is deterministic: parsing, normalisation and classification. No LLM involved.
 
 import { safeFetch, readJsonBounded } from "./http";
-import { classifySignificance, buildConditionClassifications, type ConditionClassification } from "./clinvar";
+import {
+  classifySignificance,
+  buildConditionClassifications,
+  reviewStars,
+  type ConditionClassification,
+} from "./clinvar";
 import { TtlCache } from "./cache";
 
 export type Source = { label: string; url: string };
@@ -29,6 +34,13 @@ export type VariantFacts = {
   gene: string;
   consequence: string;
   proteinChange: string;
+  alleleCount: number;
+  otherAlleles: {
+    proteinChange: string;
+    refAlt: string;
+    variantId: number | string | null;
+    significance: string;
+  }[];
   variantType: string;
   preferredName: string | null;
   chrom: string;
@@ -239,17 +251,98 @@ function docSeverity(hit: Record<string, unknown>): number {
   return ranks.length ? Math.min(...ranks) : 99;
 }
 
+function docRcvCount(hit: Record<string, unknown>): number {
+  const cv = (hit.clinvar as Record<string, unknown>) || {};
+  return asList(cv.rcv as unknown).length;
+}
+
+function docMaxReviewStars(hit: Record<string, unknown>): number {
+  const cv = (hit.clinvar as Record<string, unknown>) || {};
+  const stars = asList(cv.rcv as unknown).map((r) =>
+    reviewStars((r as { review_status?: string })?.review_status),
+  );
+  return stars.length ? Math.max(...stars) : 0;
+}
+
+function docGnomadAf(hit: Record<string, unknown>): number | null {
+  const af = (hit.gnomad_genome as { af?: { af?: unknown } } | undefined)?.af?.af;
+  return typeof af === "number" && Number.isFinite(af) ? af : null;
+}
+
+function compareVariantIds(a: Record<string, unknown>, b: Record<string, unknown>): number {
+  const aId = ((a.clinvar as Record<string, unknown>) || {}).variant_id;
+  const bId = ((b.clinvar as Record<string, unknown>) || {}).variant_id;
+  if (aId == null && bId == null) return 0;
+  if (aId == null) return 1;
+  if (bId == null) return -1;
+  return String(aId).localeCompare(String(bId), "en", { numeric: true });
+}
+
+function compareClinvarDocs(a: Record<string, unknown>, b: Record<string, unknown>): number {
+  const severity = docSeverity(a) - docSeverity(b);
+  if (severity) return severity;
+  const rcvCount = docRcvCount(b) - docRcvCount(a);
+  if (rcvCount) return rcvCount;
+  const stars = docMaxReviewStars(b) - docMaxReviewStars(a);
+  if (stars) return stars;
+  const aAf = docGnomadAf(a);
+  const bAf = docGnomadAf(b);
+  if (aAf !== bAf) {
+    if (aAf == null) return 1;
+    if (bAf == null) return -1;
+    return bAf - aAf;
+  }
+  return compareVariantIds(a, b);
+}
+
+function parseRefAlt(hit: Record<string, unknown>): string {
+  const match = /^chr[\dXYM]+:g\.\d+([ACGT]+)>([ACGT]+)$/i.exec(String(hit._id || ""));
+  return match ? `${match[1]}>${match[2]}` : "";
+}
+
+function docProteinChange(hit: Record<string, unknown>): string {
+  const cv = (hit.clinvar as Record<string, unknown>) || {};
+  return pickProtein(asList((cv.hgvs as { protein?: unknown })?.protein) as string[]);
+}
+
+function docSignificance(hit: Record<string, unknown>): string {
+  const cv = (hit.clinvar as Record<string, unknown>) || {};
+  const significances = asList(cv.rcv as unknown)
+    .map((r) =>
+      classifySignificance((r as { clinical_significance?: string })?.clinical_significance),
+    )
+    .sort((a, b) => a.rank - b.rank || a.label.localeCompare(b.label));
+  return significances[0]?.label || "Not provided";
+}
+
+function distinctClinvarAlleles(hits: Record<string, unknown>[]): Record<string, unknown>[] {
+  const seen = new Set<string>();
+  return hits.filter((hit, index) => {
+    const cv = (hit.clinvar as Record<string, unknown>) || {};
+    const key = hit._id
+      ? `hgvs:${String(hit._id).toLowerCase()}`
+      : cv.variant_id != null
+        ? `variant:${String(cv.variant_id)}`
+        : `document:${index}`;
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
+
 export async function getVariantFacts(rsid: string): Promise<VariantFacts> {
   const cached = variantCache.get(rsid);
   if (cached) return cached;
 
   // Prefer ClinVar-annotated documents; fall back to dbSNP for basic facts.
   let hit: Record<string, unknown> | undefined;
+  let clinvarAlleles: Record<string, unknown>[] = [];
   let hasClinvar = false;
   try {
     const clinHits = await queryMyVariant(`clinvar.rsid:${rsid}`);
     if (clinHits.length) {
-      hit = [...clinHits].sort((a, b) => docSeverity(a) - docSeverity(b))[0];
+      clinvarAlleles = distinctClinvarAlleles([...clinHits].sort(compareClinvarDocs));
+      hit = clinvarAlleles[0];
       hasClinvar = true;
     } else {
       const dbHits = await queryMyVariant(`dbsnp.rsid:${rsid}`);
@@ -299,6 +392,15 @@ export async function getVariantFacts(rsid: string): Promise<VariantFacts> {
   // Prefer ClinVar's authoritative HGVS/type over snpEff (which can be transcript-skewed).
   const clinvarProtein = pickProtein(asList((cv.hgvs as { protein?: unknown })?.protein) as string[]);
   const proteinChange = clinvarProtein || snpeffAnn?.hgvs_p || "";
+  const otherAlleles = clinvarAlleles.slice(1).map((allele) => {
+    const alleleCv = (allele.clinvar as Record<string, unknown>) || {};
+    return {
+      proteinChange: docProteinChange(allele),
+      refAlt: parseRefAlt(allele),
+      variantId: (alleleCv.variant_id as number | string | undefined) ?? null,
+      significance: docSignificance(allele),
+    };
+  });
   const consequence =
     consequenceFromProtein(proteinChange) ||
     (snpeffAnn?.effect ? snpeffAnn.effect.replace(/_/g, " ") : "");
@@ -343,6 +445,8 @@ export async function getVariantFacts(rsid: string): Promise<VariantFacts> {
     gene,
     consequence,
     proteinChange,
+    alleleCount: clinvarAlleles.length || 1,
+    otherAlleles,
     variantType: (cv.type as string) || (dbsnp.vartype as string) || "",
     preferredName: preferredName ?? null,
     chrom,
