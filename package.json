@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "test": "vitest run",
-    "validate": "vitest run --config scripts/validation/vitest.config.ts"
+    "validate": "vitest run --config scripts/validation/vitest.config.ts",
+    "measure:grounding": "vitest run --config scripts/validation/grounding.config.ts"
   },
   "dependencies": {
     "3dmol": "^2.5.5",
