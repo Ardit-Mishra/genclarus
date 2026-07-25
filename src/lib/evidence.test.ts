@@ -86,6 +86,12 @@ describe("buildEvidence — gene", () => {
     expect(m.get("gene.alias.1")?.value).toBe("RNF53");
   });
 
+  it("emits the gene symbol as its own citable fact", () => {
+    // The symbol is the subject of nearly every claim, so it must be groundable on its own.
+    const m = byId(buildEvidence(gene));
+    expect(m.get("gene.symbol")).toMatchObject({ source: "mygene", field: "gene", value: "BRCA1" });
+  });
+
   it("omits a fact entirely when its underlying value is empty", () => {
     const m = byId(buildEvidence({ ...gene, summary: "", location: "", aliases: [] }));
     expect(m.has("gene.summary")).toBe(false);

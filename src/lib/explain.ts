@@ -100,17 +100,18 @@ const SYSTEM = [
   "Return ONLY a JSON object of this exact shape, with no markdown, no code fences and no text outside it:",
   '{"claims":[{"text":string,"supportingFactIds":string[],"claimType":string}]}',
   "Rules — follow every one:",
-  "- 1 to 4 claims. Each claim is exactly ONE sentence of at most 35 words.",
-  "- Each claim cites 1 to 3 supportingFactIds, using ONLY ids from the facts given.",
-  "- Every number, gene symbol, protein change, classification label and condition name in a claim MUST appear in the facts it cites. Invent nothing.",
+  "- Write NO MORE THAN 4 claims total. This is a hard limit. Do NOT write one claim per condition.",
+  "- Classifications are PER CONDITION and must not be merged into a single overall verdict; but when a variant has many conditions, SUMMARIZE how the classifications vary in one or two claims (e.g. name the most severe classification and note that others differ) rather than listing every condition.",
+  "- Each claim is exactly ONE sentence of at most 35 words, citing 1 to 3 supportingFactIds, using ONLY ids from the facts given.",
+  "- State each condition's classification using the EXACT classification value given for it. Never upgrade a benign, risk-factor, uncertain, drug-response or protective classification to 'pathogenic'.",
+  "- Every number, gene symbol, protein change, classification label and condition name in a claim MUST appear verbatim in the facts it cites. Invent nothing.",
   "- Do not address the reader ('you'/'your'). No diagnosis, prognosis, treatment, dosage, personal risk, or causal/actionable claims.",
-  "- Classifications are PER CONDITION — never merge them. If a cited fact is uncertain or conflicting, the claim must say so.",
+  "- If a cited classification is uncertain or conflicting, the claim must say so.",
   "- claimType is one of: identity, function, classification_context, condition_context, frequency_context, uncertainty.",
-  "detailed thinking off",
 ].join("\n");
 
 const REPAIR =
-  "Your previous reply was not valid JSON for the schema. Return ONLY the JSON object {\"claims\":[...]}, nothing else.";
+  "Your previous reply did not match the schema. Return ONLY a JSON object {\"claims\":[...]} with AT MOST 4 claims, each exactly one sentence citing 1-3 of the given ids, and no text outside the JSON.";
 
 function messagesFor(facts: Facts, evidence: EvidenceFact[], repair: boolean): NimMessage[] {
   const subject =
@@ -166,7 +167,10 @@ export async function explain(facts: Facts): Promise<Explanation> {
     return extractJson(res.explanation);
   };
 
-  const result = await ground(evidence, generate);
+  // The grounded-by-construction identifiers for this lookup: for a variant that is the rsID AND
+  // the gene it sits in (both are the subject of nearly every claim and cannot be "invented").
+  const subject = facts.kind === "gene" ? facts.symbol : `${facts.rsid} ${facts.gene}`;
+  const result = await ground(evidence, generate, subject);
   if (result.ok) {
     explanationCache.set(key, result.explanation.claims);
     return { claims: result.explanation.claims, aiAvailable: true, fallbackReason: null, cached: false };

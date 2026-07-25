@@ -132,10 +132,11 @@ const PROHIBITED: RegExp[] = [
 const NUMBER_RE = /\d+(?:\.\d+)?/g;
 const PROTEIN_RE = /p\.[A-Za-z0-9]+/gi;
 const GENE_CAPS_RE = /\b[A-Z][A-Z0-9]{1,9}\b/g;
-// A run of >=2 Title-Case words, optionally bridged by lowercase connectors (condition names).
-const TITLECASE_RUN_RE =
-  /\b[A-Z][a-z]+(?:\s+(?:of|due|to|and|the|in|for|with|or|a|an|type|[A-Z][a-z]+))*\b/g;
-const CONNECTORS = new Set(["of", "due", "to", "and", "the", "in", "for", "with", "or", "a", "an", "type"]);
+// A run of >=2 CONSECUTIVE Title-Case words — the shape of an invented condition name like
+// "Cystic Fibrosis". Deliberately not bridged by lowercase connectors: bridging turned
+// "Pathogenic for Beta-thalassemia" into a spurious "Pathogenic for Beta" run and rejected sound
+// claims. Real single-capital condition names ("Ischemic stroke") are grounded by other checks.
+const TITLECASE_RUN_RE = /\b[A-Z][a-z]+(?:\s+[A-Z][a-z]+)+\b/g;
 
 function numbers(s: string): Set<string> {
   return new Set(s.match(NUMBER_RE) ?? []);
@@ -151,7 +152,13 @@ function citedCorpus(cited: EvidenceFact[]): string {
 }
 
 // Returns a rejection reason string, or null if the claim is sound. (Reason is diagnostic only.)
-function claimViolation(claim: GroundedClaim, byId: Map<string, EvidenceFact>): string | null {
+// `subject` is the looked-up identifier (gene symbol or rsID). It is grounded by construction —
+// the user asked about it and every fact describes it — so naming it is never an invented entity.
+function claimViolation(
+  claim: GroundedClaim,
+  byId: Map<string, EvidenceFact>,
+  subject: string,
+): string | null {
   // Citation: every id must resolve to a real fact.
   const cited = claim.supportingFactIds.map((id) => byId.get(id));
   if (cited.some((f) => !f)) return "unknown_fact_id";
@@ -164,11 +171,15 @@ function claimViolation(claim: GroundedClaim, byId: Map<string, EvidenceFact>): 
   if (PROHIBITED.some((re) => re.test(text))) return "prohibited_language";
 
   const corpus = citedCorpus(facts);
-  const corpusNumbers = numbers(corpus);
+  // The subject identifier is grounded by construction, so its own tokens — including the digits
+  // inside an rsID like "rs6025" — count as grounded for entity and number checks. Classifications
+  // still never draw on the subject; those must always trace to a cited classification fact.
+  const entityCorpus = `${corpus} ${subject.toLowerCase()}`;
+  const allowedNumbers = numbers(entityCorpus);
 
-  // Numbers: every number in the claim must appear among the cited facts' numbers.
+  // Numbers: every number in the claim must appear among the cited facts' (or subject's) numbers.
   for (const n of numbers(text)) {
-    if (!corpusNumbers.has(n)) return "unsupported_number";
+    if (!allowedNumbers.has(n)) return "unsupported_number";
   }
 
   // Protein-change tokens (p.Xxx###Yyy): must appear verbatim in the cited corpus.
@@ -176,17 +187,15 @@ function claimViolation(claim: GroundedClaim, byId: Map<string, EvidenceFact>): 
     if (!corpus.includes(p.toLowerCase())) return "unsupported_protein";
   }
 
-  // Gene-like ALL-CAPS tokens: must be grounded unless explicitly safe.
+  // Gene-like ALL-CAPS tokens: must be grounded (cited facts or the subject) unless explicitly safe.
   for (const g of text.match(GENE_CAPS_RE) ?? []) {
     if (SAFE_CAPS.has(g.toUpperCase())) continue;
-    if (!corpus.includes(g.toLowerCase())) return "unsupported_entity";
+    if (!entityCorpus.includes(g.toLowerCase())) return "unsupported_entity";
   }
 
-  // Multi-word Title-Case runs (condition names): must be grounded in the cited corpus.
+  // Multi-word Title-Case runs (condition names): must be grounded in the cited corpus or subject.
   for (const run of text.match(TITLECASE_RUN_RE) ?? []) {
-    const titleWords = run.split(/\s+/).filter((w) => /^[A-Z][a-z]+$/.test(w) && !CONNECTORS.has(w.toLowerCase()));
-    if (titleWords.length < 2) continue; // single proper-ish word is not treated as a condition
-    if (!corpus.includes(run.toLowerCase())) return "unsupported_condition";
+    if (!entityCorpus.includes(run.toLowerCase())) return "unsupported_condition";
   }
 
   // Classification labels: any classification word in the claim must be backed by a cited
@@ -213,17 +222,30 @@ function claimViolation(claim: GroundedClaim, byId: Map<string, EvidenceFact>): 
   return null;
 }
 
-function validateClaims(evidence: EvidenceFact[], explanation: GroundedExplanation): boolean {
+// Keep only the claims that pass every check. Filtering, not all-or-nothing: one ungroundable
+// sentence must not suppress the sound ones (the guarantee is that what's DISPLAYED is grounded,
+// §1/§7). A claim that fails is simply not shown; the deterministic facts UI still stands alone.
+function keepValidClaims(
+  evidence: EvidenceFact[],
+  explanation: GroundedExplanation,
+  subject: string,
+): GroundedClaim[] {
   const byId = new Map(evidence.map((f) => [f.id, f]));
-  return explanation.claims.every((c) => claimViolation(c, byId) === null);
+  return explanation.claims.filter((c) => claimViolation(c, byId, subject) === null);
 }
 
-// Single-shot pure validation: parse structurally, then check semantics. Null → source-only
-// fallback. Exposed for tests and reuse.
-export function validateGrounding(evidence: EvidenceFact[], rawText: string): GroundedExplanation | null {
+// Single-shot pure validation: parse structurally, then drop ungrounded claims. Returns the
+// surviving claims, or null when NONE survive (→ source-only fallback). `subject` is the looked-up
+// identifier (grounded by construction). Exposed for tests.
+export function validateGrounding(
+  evidence: EvidenceFact[],
+  rawText: string,
+  subject = "",
+): GroundedExplanation | null {
   const parsed = parseGrounded(rawText);
   if (!parsed) return null;
-  return validateClaims(evidence, parsed) ? parsed : null;
+  const claims = keepValidClaims(evidence, parsed, subject);
+  return claims.length ? { claims } : null;
 }
 
 // ---------------------------------------------------------------- orchestration
@@ -239,6 +261,7 @@ export type GroundResult =
 export async function ground(
   evidence: EvidenceFact[],
   generate: (repair: boolean) => Promise<string | null>,
+  subject = "",
 ): Promise<GroundResult> {
   const first = await generate(false);
   if (first === null) return { ok: false, reason: "no_output" };
@@ -250,6 +273,7 @@ export async function ground(
     if (!parsed) return { ok: false, reason: "parse" };
   }
 
-  if (!validateClaims(evidence, parsed)) return { ok: false, reason: "policy" };
-  return { ok: true, explanation: parsed };
+  const claims = keepValidClaims(evidence, parsed, subject);
+  if (claims.length === 0) return { ok: false, reason: "policy" };
+  return { ok: true, explanation: { claims } };
 }
