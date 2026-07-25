@@ -208,6 +208,67 @@ describe("validateGrounding — semantic rejection → fallback", () => {
   });
 });
 
+describe("validateGrounding — the looked-up subject is grounded by construction", () => {
+  it("allows the subject gene symbol even when the cited fact's value omits it", () => {
+    const ev: EvidenceFact[] = [
+      { id: "gene.location", source: "mygene", field: "location", value: "chr17:43,044,292-43,170,245" },
+    ];
+    const claim: Claim = {
+      text: "BRCA1 is located on chromosome 17.",
+      supportingFactIds: ["gene.location"],
+      claimType: "identity",
+    };
+    expect(validateGrounding(ev, raw([claim]), "BRCA1")).not.toBeNull();
+    // Without the subject, "BRCA1" is an ungrounded entity and the claim is dropped.
+    expect(validateGrounding(ev, raw([claim]), "")).toBeNull();
+  });
+
+  it("grounds the rsID's own digits through the subject", () => {
+    const claim: Claim = {
+      text: "The variant rs6025 alters the F5 gene.",
+      supportingFactIds: ["var.gene"],
+      claimType: "identity",
+    };
+    // "rs6025" contributes the number 6025, which no cited fact carries — the subject supplies it.
+    expect(validateGrounding(evidence, raw([claim]), "rs6025 F5")).not.toBeNull();
+    expect(validateGrounding(evidence, raw([claim]), "")).toBeNull();
+  });
+
+  it("does not treat 'Pathogenic for <Condition>' as an invented condition name", () => {
+    // Regression: a lowercase connector must NOT bridge a classification word and a capitalized
+    // condition into a bogus multi-word run.
+    const claim: Claim = {
+      text: "Classified as Pathogenic for Thrombophilia due to activated protein C resistance.",
+      supportingFactIds: ["var.cond.0.significance"],
+      claimType: "classification_context",
+    };
+    expect(validateGrounding(evidence, raw([claim]), "rs6025 F5")).not.toBeNull();
+  });
+});
+
+describe("validateGrounding — filters rather than rejecting wholesale", () => {
+  it("keeps the sound claims and drops only the ungrounded ones", () => {
+    const good: Claim = {
+      text: "The F5 gene carries the p.Arg534Gln protein change.",
+      supportingFactIds: ["var.gene", "var.protein"],
+      claimType: "identity",
+    };
+    const bad: Claim = {
+      text: "The allele frequency is 9.9% in the population.",
+      supportingFactIds: ["var.gnomadAf"],
+      claimType: "frequency_context",
+    };
+    const out = validateGrounding(evidence, raw([good, bad]), "rs6025 F5");
+    expect(out?.claims).toHaveLength(1);
+    expect(out?.claims[0].text).toContain("protein change");
+  });
+
+  it("returns null only when NO claim survives", () => {
+    const bad: Claim = { ...identity, supportingFactIds: ["var.nonexistent"] };
+    expect(validateGrounding(evidence, raw([bad]))).toBeNull();
+  });
+});
+
 describe("ground — orchestration with one repair retry", () => {
   it("recovers when a structural failure is fixed by the single repair retry", async () => {
     const generate = vi

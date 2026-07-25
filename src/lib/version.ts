@@ -7,9 +7,13 @@
 export const PROMPT_VERSION = "2.0.0";
 
 // The NIM model id actually called — mirrors src/lib/nim.ts, which imports this constant so the
-// two can never drift apart.
+// two can never drift apart. Phase 3 uses a fast NON-reasoning instruct model: claim-level JSON
+// extraction wants no chain-of-thought (the grounding validator supplies the rigor), and the
+// previous reasoning model reasoned past the free-tier latency budget on every structured request.
+// Overridable via NIM_MODEL. The model is deliberately replaceable — losing it degrades to
+// source-only output, it does not take the product down.
 export const MODEL_ID =
-  process.env.NIM_MODEL || "nvidia/llama-3.3-nemotron-super-49b-v1.5";
+  process.env.NIM_MODEL || "meta/llama-3.1-8b-instruct";
 
 // Bump when the shape of the JSON returned by /api/gene, /api/variant or /api/explain changes.
 // 2.0.0 — Phase 3: /api/explain returns grounded `claims` (with citations) instead of `explanation`.
