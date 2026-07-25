@@ -1,6 +1,7 @@
-// Route-integration tests for /api/explain.
+// Route-integration tests for /api/explain (Phase 3: grounded claims).
 // The security property under test is the important one: this endpoint accepts an IDENTIFIER
-// only and re-derives facts server-side, so the browser can never put words into the prompt.
+// only and re-derives facts server-side, so the browser can never put words into the prompt. The
+// model now returns claim-level JSON that must pass the grounding gate before it is returned.
 
 import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
 import { POST } from "./route";
@@ -9,6 +10,23 @@ import { clearExplanationCache } from "@/lib/explain";
 import { brca1MyGene, rs6025Clinvar } from "@/test/fixtures/sources";
 
 const realFetch = globalThis.fetch;
+
+// Valid grounded output for each subject: every cited id exists, and every capitalized entity in
+// the text (BRCA1 / F5) is present in the value of a fact the claim cites.
+const GENE_CLAIMS = JSON.stringify({
+  claims: [
+    {
+      text: "The BRCA1 gene encodes a nuclear phosphoprotein that helps maintain genomic stability.",
+      supportingFactIds: ["gene.name", "gene.summary"],
+      claimType: "function",
+    },
+  ],
+});
+const VARIANT_CLAIMS = JSON.stringify({
+  claims: [
+    { text: "The F5 gene harbors this variant.", supportingFactIds: ["var.gene"], claimType: "identity" },
+  ],
+});
 
 function jsonResponse(body: unknown, status = 200): Response {
   return new Response(JSON.stringify(body), {
@@ -27,7 +45,7 @@ function post(body: unknown, contentType = "application/json"): Request {
 
 // Serves the fact upstreams from fixtures and the model with a canned completion, recording
 // exactly what was sent to the model.
-function stubAll(completion = "## What it does\nDNA repair.") {
+function stubAll(completion = GENE_CLAIMS) {
   const nimBodies: { messages: { role: string; content: string }[] }[] = [];
   globalThis.fetch = vi.fn(async (input: RequestInfo | URL, init?: RequestInit) => {
     const url = String(input);
@@ -86,11 +104,15 @@ describe("POST /api/explain — request validation", () => {
 });
 
 describe("POST /api/explain — the model only ever sees server-derived facts", () => {
-  it("builds the prompt from the upstream record, not from the request", async () => {
+  it("builds the prompt from the upstream record and returns grounded, cited claims", async () => {
     const nim = stubAll();
     const body = await (await POST(post({ type: "gene", identifier: "BRCA1" }))).json();
-    expect(body.explanation).toContain("DNA repair");
+
     expect(body.aiAvailable).toBe(true);
+    expect(Array.isArray(body.claims)).toBe(true);
+    expect(body.claims[0].text).toContain("nuclear phosphoprotein");
+    // Each grounded claim carries its provenance chips.
+    expect(body.claims[0].citations).toContainEqual({ source: "mygene", field: "summary" });
 
     const sent = nim[0].messages.map((m) => m.content).join("\n");
     // Straight out of the MyGene fixture — proof the facts were re-derived server-side.
@@ -99,13 +121,31 @@ describe("POST /api/explain — the model only ever sees server-derived facts", 
   });
 
   it("hands variant classifications to the model per condition", async () => {
-    const nim = stubAll("## What this variant is\nFactor V.");
+    const nim = stubAll(VARIANT_CLAIMS);
     await POST(post({ type: "variant", identifier: "rs6025" }));
     const sent = nim[0].messages.map((m) => m.content).join("\n");
-    expect(sent).toContain("clinvarByCondition");
+    expect(sent).toContain("F5");
+    expect(sent).toMatch(/classification/i);
     expect(nim[0].messages[0].content).toMatch(/PER CONDITION/);
     // Never a pre-collapsed verdict for the model to parrot back.
     expect(sent).not.toContain("primarySignificance");
+  });
+
+  it("withholds an ungrounded model answer — clinical claims never come from the LLM", async () => {
+    // The model tries to assert a classification for an invented condition, citing the gene fact.
+    const invented = JSON.stringify({
+      claims: [
+        {
+          text: "The F5 gene is pathogenic for Cystic Fibrosis.",
+          supportingFactIds: ["var.gene"],
+          claimType: "classification_context",
+        },
+      ],
+    });
+    stubAll(invented);
+    const body = await (await POST(post({ type: "variant", identifier: "rs6025" }))).json();
+    expect(body.claims).toBeNull();
+    expect(body.fallbackReason).toBe("failed_grounding");
   });
 
   it("propagates a lookup failure rather than explaining a gene that does not exist", async () => {
@@ -124,7 +164,7 @@ describe("POST /api/explain — caching", () => {
     const second = await (await POST(post({ type: "gene", identifier: "BRCA1" }))).json();
     expect(first.cached).toBe(false);
     expect(second.cached).toBe(true);
-    expect(second.explanation).toBe(first.explanation);
+    expect(second.claims).toEqual(first.claims);
     expect(nim).toHaveLength(1);
   });
 
@@ -137,13 +177,13 @@ describe("POST /api/explain — caching", () => {
       // Fail first, succeed after — a cached failure would make this permanent.
       return call === 1
         ? jsonResponse({ error: "bad request" }, 400)
-        : jsonResponse({ choices: [{ message: { content: "recovered" } }] });
+        : jsonResponse({ choices: [{ message: { content: GENE_CLAIMS } }] });
     }) as typeof fetch;
 
     const first = await (await POST(post({ type: "gene", identifier: "BRCA1" }))).json();
-    expect(first.explanation).toBeNull();
+    expect(first.claims).toBeNull();
     const second = await (await POST(post({ type: "gene", identifier: "BRCA1" }))).json();
-    expect(second.explanation).toBe("recovered");
+    expect(second.claims[0].text).toContain("nuclear phosphoprotein");
   });
 
   it("reports the fallback reason without exposing internals", async () => {
@@ -152,7 +192,7 @@ describe("POST /api/explain — caching", () => {
       return jsonResponse({ error: "rate limited" }, 429);
     }) as typeof fetch;
     const body = await (await POST(post({ type: "gene", identifier: "BRCA1" }))).json();
-    expect(body.explanation).toBeNull();
+    expect(body.claims).toBeNull();
     expect(body.fallbackReason).toBe("provider_unavailable");
     // The client learns the narrative is missing — not that we were rate limited, nor anything
     // else about how we talk to the provider. (meta.modelId is deliberate provenance: it says
