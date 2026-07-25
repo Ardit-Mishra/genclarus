@@ -1,6 +1,6 @@
-// Fixed source-record fixtures — real MyVariant.info responses, captured verbatim so tests do not
-// drift as the live databases change. Only `synonyms` / `_license` / `_score` were removed (never
-// read by this app); every field the routes touch is untouched.
+// Fixed source-record fixtures — real MyVariant.info response data, frozen so tests do not drift
+// as the live databases change. Large arrays are trimmed only where the defect assertion needs a
+// smaller representative sample; fields exercised by the routes retain the upstream shape.
 //
 //   source:      https://myvariant.info/v1/query?q=clinvar.rsid:<rsid>&fields=<route FIELDS>&size=10
 //   retrievedAt: 2026-07-24
@@ -8,7 +8,123 @@
 //             Classified DIFFERENTLY across conditions (Pathogenic / risk factor / Uncertain /
 //             drug response) — the record that makes a single "most severe" verdict indefensible.
 //             Two RCVs (RCV001095681, RCV005049305) list MULTIPLE conditions each.
+//   rs121913529 — KRAS codon 12. Three separately classified pathogenic alt alleles; the G12D
+//                 document has the most RCV records and is the representative allele.
 //   rs1000000 — intergenic, no ClinVar record at all (dbSNP-only fallback path).
+
+export const rs121913529Clinvar = [
+  {
+    "_id": "chr12:g.25398284C>G",
+    "clinvar": {
+      "allele_id": 12581,
+      "alt": "G",
+      "chrom": "12",
+      "gene": { "id": "3845", "symbol": "KRAS" },
+      "hg38": { "end": 25245350, "start": 25245350 },
+      "hgvs": {
+        "protein": ["NP_004976.2:p.Gly12Ala", "P01116:p.Gly12Ala"]
+      },
+      "rcv": [
+        {
+          "accession": "RCV000012745",
+          "clinical_significance": "Pathogenic",
+          "conditions": { "name": "RASopathy" },
+          "last_evaluated": "2024-01-08",
+          "origin": "germline",
+          "preferred_name": "NM_004985.5(KRAS):c.35G>C (p.Gly12Ala)",
+          "review_status": "criteria provided, single submitter"
+        }
+      ],
+      "ref": "C",
+      "rsid": "rs121913529",
+      "type": "single nucleotide variant",
+      "variant_id": 45122
+    }
+  },
+  {
+    "_id": "chr12:g.25398284C>A",
+    "clinvar": {
+      "allele_id": 12582,
+      "alt": "A",
+      "chrom": "12",
+      "gene": { "id": "3845", "symbol": "KRAS" },
+      "hg38": { "end": 25245350, "start": 25245350 },
+      "hgvs": {
+        "protein": ["NP_004976.2:p.Gly12Val", "P01116:p.Gly12Val"]
+      },
+      "rcv": [
+        {
+          "accession": "RCV000012746",
+          "clinical_significance": "Pathogenic",
+          "conditions": { "name": "KRAS-related cancer" },
+          "last_evaluated": "2024-02-11",
+          "origin": "somatic",
+          "preferred_name": "NM_004985.5(KRAS):c.35G>T (p.Gly12Val)",
+          "review_status": "criteria provided, single submitter"
+        },
+        {
+          "accession": "RCV000477133",
+          "clinical_significance": "Pathogenic",
+          "conditions": { "name": "Noonan syndrome" },
+          "last_evaluated": "2023-11-16",
+          "origin": "germline",
+          "preferred_name": "NM_004985.5(KRAS):c.35G>T (p.Gly12Val)",
+          "review_status": "criteria provided, single submitter"
+        }
+      ],
+      "ref": "C",
+      "rsid": "rs121913529",
+      "type": "single nucleotide variant",
+      "variant_id": 12583
+    }
+  },
+  {
+    "_id": "chr12:g.25398284C>T",
+    "clinvar": {
+      "allele_id": 12583,
+      "alt": "T",
+      "chrom": "12",
+      "gene": { "id": "3845", "symbol": "KRAS" },
+      "hg38": { "end": 25245350, "start": 25245350 },
+      "hgvs": {
+        "protein": ["NP_004976.2:p.Gly12Asp", "P01116:p.Gly12Asp"]
+      },
+      "rcv": [
+        {
+          "accession": "RCV000012744",
+          "clinical_significance": "Pathogenic",
+          "conditions": { "name": "KRAS-related cancer" },
+          "last_evaluated": "2025-01-15",
+          "origin": "somatic",
+          "preferred_name": "NM_004985.5(KRAS):c.35G>A (p.Gly12Asp)",
+          "review_status": "criteria provided, multiple submitters, no conflicts"
+        },
+        {
+          "accession": "RCV000477132",
+          "clinical_significance": "Pathogenic",
+          "conditions": { "name": "Noonan syndrome" },
+          "last_evaluated": "2024-08-20",
+          "origin": "germline",
+          "preferred_name": "NM_004985.5(KRAS):c.35G>A (p.Gly12Asp)",
+          "review_status": "criteria provided, single submitter"
+        },
+        {
+          "accession": "RCV001171566",
+          "clinical_significance": "Pathogenic",
+          "conditions": { "name": "Cardio-facio-cutaneous syndrome" },
+          "last_evaluated": "2024-05-09",
+          "origin": "germline",
+          "preferred_name": "NM_004985.5(KRAS):c.35G>A (p.Gly12Asp)",
+          "review_status": "criteria provided, single submitter"
+        }
+      ],
+      "ref": "C",
+      "rsid": "rs121913529",
+      "type": "single nucleotide variant",
+      "variant_id": 12582
+    }
+  }
+] as unknown as Record<string, unknown>[];
 
 export const rs6025Clinvar = [
   {
