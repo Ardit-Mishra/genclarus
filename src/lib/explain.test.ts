@@ -45,6 +45,8 @@ const variant: VariantFacts = {
   gene: "F5",
   consequence: "missense variant",
   proteinChange: "p.Arg534Gln",
+  uniprot: "P12259",
+  residue: 534,
   alleleCount: 2,
   otherAlleles: [
     {

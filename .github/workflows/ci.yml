@@ -28,6 +28,7 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - run: npm run typecheck # full tsc --noEmit — catches type errors in test files that next build/vitest skip
       - run: npm test
       - run: npx next build
 
