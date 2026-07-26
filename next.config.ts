@@ -1,9 +1,21 @@
 import type { NextConfig } from "next";
 
-// Phase 0 "live containment" security headers. CSP is deliberately Report-Only — the future 3D
-// viewer's WebGL/worker requirements aren't known yet, so we observe violations without
-// breaking anything. Enforce it once those requirements are settled (Phase 4).
-const CSP_REPORT_ONLY = [
+// Security headers. Phase 0 shipped these as containment; Phase 4 promotes the CSP from
+// Report-Only to ENFORCED now that the app's real needs are settled.
+//
+// The app is same-origin by construction: the browser only ever talks to our own /api/* routes,
+// which fetch the biomedical upstreams server-side behind an allowlist (src/lib/http.ts). So
+// `connect-src 'self'` is exact — including the Phase 5 3D viewer, which loads structures through a
+// same-origin proxy (/api/structure) rather than hitting AlphaFold/RCSB from the browser. 3Dmol.js
+// renders to a WebGL canvas (not restricted by CSP) and, for cartoon/stick rendering, needs no Web
+// Worker, blob: URL or eval — so no extra directives are required. If a later viewer phase adds
+// molecular SURFACES (3Dmol spins up a worker via a blob: URL for those), add `worker-src blob:`.
+//
+// `'unsafe-inline'` remains in script-src/style-src because Next's App Router injects inline
+// hydration scripts and inlines critical CSS; a nonce-based policy is the stricter future upgrade,
+// deliberately deferred to avoid breaking hydration for a marginal gain. object-src/base-uri/
+// frame-ancestors are the high-value clickjacking/injection locks and are fully enforced.
+const CSP = [
   "default-src 'self'",
   "script-src 'self' 'unsafe-inline'",
   "style-src 'self' 'unsafe-inline'",
@@ -28,7 +40,7 @@ const nextConfig: NextConfig = {
             key: "Permissions-Policy",
             value: "camera=(), microphone=(), geolocation=(), browsing-topics=()",
           },
-          { key: "Content-Security-Policy-Report-Only", value: CSP_REPORT_ONLY },
+          { key: "Content-Security-Policy", value: CSP },
         ],
       },
     ];
