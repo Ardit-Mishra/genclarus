@@ -9,7 +9,8 @@
     "lint": "eslint",
     "test": "vitest run",
     "validate": "vitest run --config scripts/validation/vitest.config.ts",
-    "measure:grounding": "vitest run --config scripts/validation/grounding.config.ts"
+    "measure:grounding": "vitest run --config scripts/validation/grounding.config.ts",
+    "warm": "node scripts/warm-cache.mjs"
   },
   "dependencies": {
     "3dmol": "^2.5.5",
