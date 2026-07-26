@@ -25,8 +25,6 @@ export default function StructureViewer({
 
   useEffect(() => {
     let cancelled = false;
-    setState("loading");
-    setInfo(null);
 
     (async () => {
       const s = await resolveStructure(uniprot);
