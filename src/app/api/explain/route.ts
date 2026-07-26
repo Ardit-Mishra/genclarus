@@ -14,7 +14,7 @@ import {
   normalizeRsid,
   FactsError,
 } from "@/lib/facts";
-import { explain } from "@/lib/explain";
+import { cachedExplain } from "@/lib/cached-explain";
 import { buildEvidence, claimCitations, type EvidenceFact } from "@/lib/evidence";
 import { PROMPT_VERSION, MODEL_ID, OUTPUT_SCHEMA_VERSION } from "@/lib/version";
 
@@ -58,7 +58,7 @@ export async function POST(request: Request) {
         ? await getGeneFacts(normalizeGeneSymbol(parsed.identifier))
         : await getVariantFacts(normalizeRsid(parsed.identifier));
 
-    const { claims, aiAvailable, fallbackReason, cached } = await explain(facts);
+    const { claims, aiAvailable, fallbackReason, cached } = await cachedExplain(facts);
 
     // Resolve each claim's cited ids to display chips (source · field). The evidence is re-derived
     // deterministically from the same facts, so this never depends on anything the browser sent.
