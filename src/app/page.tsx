@@ -1,6 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import dynamic from "next/dynamic";
+
+// Large WebGL library — only fetched once a user opens the toggle, never on initial page load.
+const StructureViewer = dynamic(() => import("@/components/StructureViewer"), { ssr: false });
 
 type Source = { label: string; url: string };
 
@@ -33,6 +37,7 @@ type GeneResult = {
   summary: string;
   aliases: string[];
   location: string;
+  uniprot: string | null;
   sources: Source[];
   disclaimer: string;
 };
@@ -75,6 +80,8 @@ type VariantResult = {
   hasClinvar: boolean;
   hgvsId: string;
   variantId: number | string | null;
+  uniprot: string | null;
+  residue: number | null;
   sources: Source[];
   disclaimer: string;
   retrievedAt: string;
@@ -268,6 +275,7 @@ export default function Home() {
   const [result, setResult] = useState<Result | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [narrative, setNarrative] = useState<NarrativeState>({ status: "idle" });
+  const [show3d, setShow3d] = useState(false);
 
   async function lookup(term?: string) {
     const t = (term ?? q).trim();
@@ -277,6 +285,7 @@ export default function Home() {
     setError(null);
     setResult(null);
     setNarrative({ status: "idle" });
+    setShow3d(false);
 
     const variant = isRsId(t);
     try {
@@ -519,6 +528,24 @@ export default function Home() {
             </section>
           )}
 
+          {result.uniprot && (
+            <div className="mt-6">
+              <button
+                onClick={() => setShow3d((v) => !v)}
+                className="rounded-lg border border-zinc-200 px-3 py-1.5 font-mono text-xs text-zinc-600 transition hover:border-teal-600 hover:text-teal-700 dark:border-zinc-800 dark:text-zinc-400 dark:hover:border-teal-400 dark:hover:text-teal-400"
+              >
+                {show3d ? "Hide 3D structure" : "View 3D structure"}
+              </button>
+              {show3d && (
+                <StructureViewer
+                  uniprot={result.uniprot}
+                  residue={result.residue}
+                  residueLabel={result.proteinChange || undefined}
+                />
+              )}
+            </div>
+          )}
+
           {result.sources.length > 0 && (
             <div className="mt-7 border-t border-zinc-100 pt-5 dark:border-zinc-800">
               <span className="font-mono text-xs uppercase tracking-[0.14em] text-zinc-400">Sources</span>
@@ -593,6 +620,18 @@ export default function Home() {
               <span className="font-mono text-xs uppercase tracking-wide text-zinc-400">Also known as</span>{" "}
               {result.aliases.join(", ")}
             </p>
+          )}
+
+          {result.uniprot && (
+            <div className="mt-6">
+              <button
+                onClick={() => setShow3d((v) => !v)}
+                className="rounded-lg border border-zinc-200 px-3 py-1.5 font-mono text-xs text-zinc-600 transition hover:border-teal-600 hover:text-teal-700 dark:border-zinc-800 dark:text-zinc-400 dark:hover:border-teal-400 dark:hover:text-teal-400"
+              >
+                {show3d ? "Hide 3D structure" : "View 3D structure"}
+              </button>
+              {show3d && <StructureViewer uniprot={result.uniprot} />}
+            </div>
           )}
 
           {result.sources.length > 0 && (
