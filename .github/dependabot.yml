@@ -1,0 +1,17 @@
+# Dependency update automation. Weekly PRs for npm packages and the GitHub Actions used in CI, so
+# security patches land as reviewable PRs rather than silently rotting. Free on public repos.
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    # One grouped PR keeps the review surface small; security updates still open on their own.
+    groups:
+      npm-dependencies:
+        patterns: ["*"]
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"

@@ -75,5 +75,12 @@ export function extractSingleField(body: unknown, field: string): string {
 // short request id so a report from a user can be correlated with server-side logs.
 export function jsonError(status: number, message: string): Response {
   const requestId = crypto.randomUUID().slice(0, 8);
+  // Privacy-preserving observability: emit ONLY the id and status — never the request body, the
+  // looked-up identifier, the prompt, or any biomedical payload. That is enough to correlate a
+  // user-reported requestId with a server log line, without turning logs into a data-exposure
+  // surface. 5xx is our fault (error); 4xx is a rejected request (warn).
+  const line = `[genclarus] requestId=${requestId} status=${status}`;
+  if (status >= 500) console.error(line);
+  else console.warn(line);
   return Response.json({ error: message, requestId }, { status });
 }

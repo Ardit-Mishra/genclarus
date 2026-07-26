@@ -53,3 +53,6 @@ AGENTS.md
 
 # local knowledge-graph tooling output (graphify) — not part of the app
 graphify-out/
+
+# local Claude Code state + agent worktrees — never published to the public repo
+.claude/
