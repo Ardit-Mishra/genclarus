@@ -7,7 +7,14 @@
 // the page renders the verified facts alone. Clinical data never comes from the LLM.
 
 import { createHash } from "node:crypto";
-import { synthesize, type FallbackReason, type NimMessage } from "./nim";
+import {
+  synthesize,
+  primaryBackend,
+  escalationBackend,
+  type Backend,
+  type FallbackReason,
+  type NimMessage,
+} from "./nim";
 import { PROMPT_VERSION, MODEL_ID, OUTPUT_SCHEMA_VERSION } from "./version";
 import { TtlCache } from "./cache";
 import { buildEvidence, type EvidenceFact } from "./evidence";
@@ -153,12 +160,19 @@ export async function explain(facts: Facts): Promise<Explanation> {
     return { claims: null, aiAvailable: true, fallbackReason: "provider_no_content", cached: false };
   }
 
-  // The generation thunk the grounding orchestrator drives. It records the provider's own fallback
-  // reason so a genuine outage stays distinguishable from a grounding rejection.
+  const primary = primaryBackend();
+  // Nothing configured at all → no synthesis is possible; report it honestly, don't pretend outage.
+  if (!primary) {
+    return { claims: null, aiAvailable: false, fallbackReason: "not_configured", cached: false };
+  }
+
+  // The generation thunk the grounding orchestrator drives, bound to one backend. It records the
+  // provider's own fallback reason so a genuine outage stays distinguishable from a grounding
+  // rejection.
   let providerReason: FallbackReason | null = null;
   let providerAvailable = false;
-  const generate = async (repair: boolean): Promise<string | null> => {
-    const res = await synthesize(messagesFor(facts, evidence, repair));
+  const generateWith = (backend: Backend) => async (repair: boolean): Promise<string | null> => {
+    const res = await synthesize(messagesFor(facts, evidence, repair), backend);
     providerAvailable = res.aiAvailable;
     if (!res.explanation) {
       providerReason = res.fallbackReason;
@@ -170,7 +184,15 @@ export async function explain(facts: Facts): Promise<Explanation> {
   // The grounded-by-construction identifiers for this lookup: for a variant that is the rsID AND
   // the gene it sits in (both are the subject of nearly every claim and cannot be "invented").
   const subject = facts.kind === "gene" ? facts.symbol : `${facts.rsid} ${facts.gene}`;
-  const result = await ground(evidence, generate, subject);
+
+  // Primary (fast, free) first. Escalate to the stronger free model ONLY when the primary produced
+  // nothing groundable — a provider outage OR output the validator rejected wholesale. This spends
+  // the scarce escalation quota exactly on the hard cases; ~83% never escalate.
+  let result = await ground(evidence, generateWith(primary), subject);
+  const escalation = escalationBackend();
+  if (!result.ok && escalation) {
+    result = await ground(evidence, generateWith(escalation), subject);
+  }
   if (result.ok) {
     explanationCache.set(key, result.explanation.claims);
     return { claims: result.explanation.claims, aiAvailable: true, fallbackReason: null, cached: false };
