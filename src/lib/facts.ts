@@ -12,6 +12,7 @@ import {
   type ConditionClassification,
 } from "./clinvar";
 import { TtlCache } from "./cache";
+import { parseResidue } from "./protein";
 
 export type Source = { label: string; url: string };
 
@@ -55,6 +56,8 @@ export type VariantFacts = {
   hasClinvar: boolean;
   hgvsId: string;
   variantId: number | string | null;
+  uniprot: string | null;
+  residue: number | null;
   sources: Source[];
   retrievedAt: string;
 };
@@ -230,6 +233,28 @@ function consequenceFromProtein(p: string): string {
   return m[1].toLowerCase() === m[2].toLowerCase() ? "synonymous variant" : "missense variant";
 }
 
+// UniProt Swiss-Prot accession for a gene symbol, via MyGene.info (already allowlisted for the
+// gene-facts lookup above). Powers the optional 3D structure viewer on the variant card; a miss
+// here just means the viewer is omitted, never a lookup failure — so this never throws.
+async function fetchUniprotForSymbol(symbol: string): Promise<string | null> {
+  if (!symbol) return null;
+  try {
+    const res = await safeFetch(
+      `https://mygene.info/v3/query?q=symbol:${encodeURIComponent(symbol)}&species=human&fields=uniprot.Swiss-Prot&size=1`,
+      { headers: { Accept: "application/json" } },
+      8000,
+    );
+    if (!res.ok) return null;
+    const data = await readJsonBounded<{ hits?: Record<string, unknown>[] }>(res);
+    const sp = data.hits?.[0]?.uniprot
+      ? (data.hits[0].uniprot as { "Swiss-Prot"?: string | string[] })["Swiss-Prot"]
+      : undefined;
+    return first(sp) ?? null;
+  } catch {
+    return null;
+  }
+}
+
 async function queryMyVariant(q: string): Promise<Record<string, unknown>[]> {
   const res = await safeFetch(
     `https://myvariant.info/v1/query?q=${encodeURIComponent(q)}&fields=${VARIANT_FIELDS}&size=10`,
@@ -388,6 +413,9 @@ export async function getVariantFacts(rsid: string): Promise<VariantFacts> {
     (cv.gene as { symbol?: string })?.symbol ||
     anns[0]?.genename ||
     "";
+  // Kicked off alongside the synchronous parsing below (not awaited yet) so it overlaps with
+  // that work instead of adding its own latency on top.
+  const uniprotPromise = fetchUniprotForSymbol(gene);
 
   // Prefer ClinVar's authoritative HGVS/type over snpEff (which can be transcript-skewed).
   const clinvarProtein = pickProtein(asList((cv.hgvs as { protein?: unknown })?.protein) as string[]);
@@ -439,6 +467,11 @@ export async function getVariantFacts(rsid: string): Promise<VariantFacts> {
       url: `https://gnomad.broadinstitute.org/variant/${chrom}-${position}-${ref}-${alt}?dataset=gnomad_r4`,
     });
 
+  // Resolved via the gene symbol; feeds the optional 3D structure viewer. Never blocks or fails
+  // the variant lookup — a miss just means the viewer doesn't render.
+  const uniprot = await uniprotPromise;
+  const residue = parseResidue(proteinChange);
+
   const facts: VariantFacts = {
     kind: "variant",
     rsid,
@@ -461,6 +494,8 @@ export async function getVariantFacts(rsid: string): Promise<VariantFacts> {
     hasClinvar,
     hgvsId,
     variantId: variantId ?? null,
+    uniprot,
+    residue,
     sources,
     retrievedAt: new Date().toISOString(),
   };
