@@ -6,14 +6,23 @@ type Source = { label: string; url: string };
 
 // Why the AI narrative is missing. The source data is always complete either way — the notice
 // exists so an absent explanation reads as a known, bounded condition rather than a broken page.
-type FallbackReason = "not_configured" | "provider_unavailable" | "provider_no_content";
+type FallbackReason =
+  | "not_configured"
+  | "provider_unavailable"
+  | "provider_no_content"
+  | "failed_grounding";
+
+type EvidenceSource = "mygene" | "clinvar" | "dbsnp" | "gnomad";
+type Citation = { source: EvidenceSource; field: string };
+// A grounded claim as the API returns it: one sentence plus the source chips it cites.
+type DisplayClaim = { text: string; claimType: string; citations: Citation[] };
 
 // The narrative is requested separately from the facts, so it has its own lifecycle. The page is
 // fully usable in every one of these states — that is the point of splitting them.
 type NarrativeState =
   | { status: "idle" }
   | { status: "loading" }
-  | { status: "ready"; text: string }
+  | { status: "ready"; claims: DisplayClaim[] }
   | { status: "failed"; reason: FallbackReason };
 
 type GeneResult = {
@@ -136,7 +145,34 @@ const FALLBACK_COPY: Record<FallbackReason, string> = {
     "The AI explanation is temporarily unavailable. Everything below comes straight from the source databases and is unaffected.",
   provider_no_content:
     "The model returned no explanation this time. Everything below comes straight from the source databases and is unaffected.",
+  failed_grounding:
+    "The AI summary was withheld because it could not be fully verified against the source records. Everything below comes straight from the source databases and is unaffected.",
 };
+
+// A claim's cited source maps to the canonical human-readable record among the sources the API
+// returned — the most specific one available, never a database homepage. A chip is always a link:
+// every cited fact must be inspectable at its origin.
+const SOURCE_LABEL: Record<EvidenceSource, string> = {
+  mygene: "MyGene",
+  clinvar: "ClinVar",
+  dbsnp: "dbSNP",
+  gnomad: "gnomAD",
+};
+
+const SOURCE_URL_PREF: Record<EvidenceSource, string[]> = {
+  mygene: ["NCBI Gene", "GeneCards", "UniProt", "Ensembl"],
+  clinvar: ["ClinVar", "dbSNP"],
+  dbsnp: ["dbSNP", "Ensembl"],
+  gnomad: ["gnomAD", "dbSNP", "Ensembl"],
+};
+
+function chipUrl(source: EvidenceSource, sources: Source[]): string | undefined {
+  for (const label of SOURCE_URL_PREF[source]) {
+    const match = sources.find((s) => s.label === label);
+    if (match) return match.url;
+  }
+  return sources[0]?.url;
+}
 
 function FallbackNotice({ reason }: { reason: FallbackReason | null }) {
   if (!reason) return null;
@@ -172,10 +208,18 @@ function NarrativePending() {
   );
 }
 
-// Renders the narrative once it exists; until then (or if it never arrives) the verified source
-// data stands on its own. The page is never blocked on the model.
-function Narrative({ state, children }: { state: NarrativeState; children: React.ReactNode }) {
-  if (state.status === "ready") return <Explanation md={state.text} />;
+// Renders the grounded claims once they exist; until then (or if they never arrive) the verified
+// source data stands on its own. The page is never blocked on the model.
+function Narrative({
+  state,
+  sources,
+  children,
+}: {
+  state: NarrativeState;
+  sources: Source[];
+  children: React.ReactNode;
+}) {
+  if (state.status === "ready") return <Explanation claims={state.claims} sources={sources} />;
   return (
     <>
       {children}
@@ -185,28 +229,36 @@ function Narrative({ state, children }: { state: NarrativeState; children: React
   );
 }
 
-function Explanation({ md }: { md: string }) {
+// Each claim is one grounded sentence followed by the source chips it cites. There are no section
+// headers — the claims ARE the explanation, and every sentence carries its own provenance so a
+// reader can trace any statement to the exact record behind it.
+function Explanation({ claims, sources }: { claims: DisplayClaim[]; sources: Source[] }) {
   return (
-    <>
-      {md
-        .split("\n")
-        .map((l) => l.trim())
-        .filter(Boolean)
-        .map((line, i) =>
-          line.startsWith("##") ? (
-            <h3
-              key={i}
-              className="mt-5 font-mono text-xs font-semibold uppercase tracking-[0.14em] text-teal-700 first:mt-0 dark:text-teal-400"
-            >
-              {line.replace(/^#+\s*/, "")}
-            </h3>
-          ) : (
-            <p key={i} className="mt-2 leading-relaxed text-zinc-700 dark:text-zinc-300">
-              {line}
-            </p>
-          ),
-        )}
-    </>
+    <ul className="space-y-3">
+      {claims.map((claim, i) => (
+        <li key={i} className="leading-relaxed text-zinc-700 dark:text-zinc-300">
+          {claim.text}{" "}
+          <span className="inline-flex flex-wrap gap-1 align-middle">
+            {claim.citations.map((cit, j) => {
+              const url = chipUrl(cit.source, sources);
+              const label = `${SOURCE_LABEL[cit.source]} · ${cit.field}`;
+              return (
+                <a
+                  key={j}
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`${SOURCE_LABEL[cit.source]} ${cit.field} evidence — opens the source record`}
+                  className="rounded bg-teal-50 px-1.5 py-px font-mono text-[10px] text-teal-700 transition hover:bg-teal-100 dark:bg-teal-500/10 dark:text-teal-300 dark:hover:bg-teal-500/20"
+                >
+                  {label}
+                </a>
+              );
+            })}
+          </span>
+        </li>
+      ))}
+    </ul>
   );
 }
 
@@ -259,10 +311,11 @@ export default function Home() {
         body: JSON.stringify({ type, identifier }),
       });
       const data = await res.json();
-      if (!res.ok || (!data.explanation && !data.fallbackReason)) {
+      const claims: DisplayClaim[] | null = data.claims ?? null;
+      if (!res.ok || (!claims && !data.fallbackReason)) {
         setNarrative({ status: "failed", reason: "provider_unavailable" });
-      } else if (data.explanation) {
-        setNarrative({ status: "ready", text: data.explanation });
+      } else if (claims && claims.length > 0) {
+        setNarrative({ status: "ready", claims });
       } else {
         setNarrative({ status: "failed", reason: data.fallbackReason });
       }
@@ -401,7 +454,7 @@ export default function Home() {
           </p>
 
           <div className="mt-6">
-            <Narrative state={narrative}>
+            <Narrative state={narrative} sources={result.sources}>
               {result.hasClinvar ? (
                 <p className="leading-relaxed text-zinc-700 dark:text-zinc-300">
                   {result.distinctSignificances.length > 0
@@ -524,7 +577,7 @@ export default function Home() {
           )}
 
           <div className="mt-6">
-            <Narrative state={narrative}>
+            <Narrative state={narrative} sources={result.sources}>
               {result.summary ? (
                 <p className="leading-relaxed text-zinc-700 dark:text-zinc-300">{result.summary}</p>
               ) : (
