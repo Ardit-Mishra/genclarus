@@ -104,33 +104,41 @@ export async function explain(facts: Facts): Promise<Explanation> {
     return { claims: null, aiAvailable: false, fallbackReason: "not_configured", cached: false };
   }
 
-  // The generation thunk the grounding orchestrator drives, bound to one backend. It records the
-  // provider's own fallback reason so a genuine outage stays distinguishable from a grounding
-  // rejection.
-  let providerReason: FallbackReason | null = null;
-  let providerAvailable = false;
-  const generateWith = (backend: Backend) => async (repair: boolean): Promise<string | null> => {
-    const res = await synthesize(messagesFor(facts, evidence, repair), backend);
-    providerAvailable = res.aiAvailable;
-    if (!res.explanation) {
-      providerReason = res.fallbackReason;
-      return null;
-    }
-    return extractJson(res.explanation);
-  };
-
   // The grounded-by-construction identifiers for this lookup: for a variant that is the rsID AND
   // the gene it sits in (both are the subject of nearly every claim and cannot be "invented").
   const subject = facts.kind === "gene" ? facts.symbol : `${facts.rsid} ${facts.gene}`;
 
+  // Run ONE backend through the grounding gate, capturing THAT backend's own provider state so a
+  // later backend's failure can never overwrite it. `generate(repair)` returns the model's raw text,
+  // or null if the provider produced nothing; ground() drives the parse/validate/repair loop.
+  const runBackend = async (backend: Backend) => {
+    let providerReason: FallbackReason | null = null;
+    let providerAvailable = false;
+    const generate = async (repair: boolean): Promise<string | null> => {
+      const res = await synthesize(messagesFor(facts, evidence, repair), backend);
+      providerAvailable = res.aiAvailable;
+      if (!res.explanation) {
+        providerReason = res.fallbackReason;
+        return null;
+      }
+      return extractJson(res.explanation);
+    };
+    const result = await ground(evidence, generate, subject);
+    return { result, providerReason, providerAvailable };
+  };
+
   // Primary (fast, free) first. Escalate to the stronger free model ONLY when the primary produced
-  // nothing groundable — a provider outage OR output the validator rejected wholesale. This spends
-  // the scarce escalation quota exactly on the hard cases; ~83% never escalate.
-  let result = await ground(evidence, generateWith(primary), subject);
+  // nothing groundable. Escalation is a BONUS, never a downgrade: its outcome is adopted only if it
+  // ACTUALLY grounds. A failed escalation is discarded so the primary's honest outcome stands — a
+  // flaky free escalation must never turn the primary's `failed_grounding` into `provider_unavailable`.
+  let outcome = await runBackend(primary);
   const escalation = escalationBackend();
-  if (!result.ok && escalation) {
-    result = await ground(evidence, generateWith(escalation), subject);
+  if (!outcome.result.ok && escalation) {
+    const escalated = await runBackend(escalation);
+    if (escalated.result.ok) outcome = escalated;
   }
+
+  const { result, providerReason, providerAvailable } = outcome;
   if (result.ok) {
     explanationCache.set(key, result.explanation.claims);
     return { claims: result.explanation.claims, aiAvailable: true, fallbackReason: null, cached: false };

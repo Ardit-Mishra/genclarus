@@ -1,9 +1,30 @@
 // The cache key is a correctness feature, not a performance one: a cached narrative must never
 // outlive the facts, prompt, model or schema that produced it.
 
-import { describe, it, expect } from "vitest";
-import { cacheKey, factsHash } from "./explain";
+import { describe, it, expect, beforeEach, vi } from "vitest";
+import { cacheKey, factsHash, explain, clearExplanationCache } from "./explain";
 import type { GeneFacts, VariantFacts } from "./facts";
+import type { NimResult } from "./nim";
+
+// The synthesis I/O boundary is mocked so explain()'s ORCHESTRATION can be tested with the real
+// grounding validator. primaryBackend = nim, escalationBackend = openrouter; synthesize answers per
+// backend so a test states "primary did X, escalation did Y" and asserts the combined outcome.
+const { synthesizeMock } = vi.hoisted(() => ({ synthesizeMock: vi.fn() }));
+vi.mock("./nim", () => ({
+  synthesize: synthesizeMock,
+  primaryBackend: () => ({ label: "nim", url: "n", model: "m", apiKey: "k" }),
+  escalationBackend: () => ({ label: "openrouter", url: "o", model: "m:free", apiKey: "k" }),
+}));
+
+function ok(explanation: string): NimResult {
+  return { explanation, aiAvailable: true, fallbackReason: null, failureCategory: null, attempts: 1 };
+}
+// The model answered but the text is unusable — ground() will fail to parse/validate it.
+const UNGROUNDABLE = "not json, just prose the validator cannot verify";
+// The provider never produced text (outage / rate-limit) — ground() reports no_output.
+function down(): NimResult {
+  return { explanation: null, aiAvailable: false, fallbackReason: "provider_unavailable", failureCategory: "rate_limited", attempts: 3 };
+}
 
 const gene: GeneFacts = {
   kind: "gene",
@@ -103,5 +124,58 @@ describe("cacheKey", () => {
 
   it("separates genes from variants that share a name", () => {
     expect(cacheKey(gene)).not.toBe(cacheKey(variant));
+  });
+});
+
+// The production regression that motivated this: adding a flaky free escalation made variant
+// lookups WORSE. When the primary produced ungroundable text (failed_grounding) and the escalation
+// call then errored, the escalation's provider_unavailable overwrote the primary's honest outcome.
+// Escalation must be a bonus, never a downgrade.
+describe("explain — escalation must never worsen the primary's outcome", () => {
+  beforeEach(() => {
+    clearExplanationCache();
+    synthesizeMock.mockReset();
+  });
+
+  it("keeps the primary's failed_grounding when the escalation fails to produce text", async () => {
+    // Primary answers but the text can't be grounded; escalation is down.
+    synthesizeMock.mockImplementation((_msgs: unknown, backend: { label: string }) =>
+      Promise.resolve(backend.label === "openrouter" ? down() : ok(UNGROUNDABLE)),
+    );
+    const r = await explain(variant);
+    expect(r.claims).toBeNull();
+    // The honest report is that we could not GROUND the answer — not that the provider was down.
+    expect(r.fallbackReason).toBe("failed_grounding");
+    expect(r.aiAvailable).toBe(true);
+  });
+
+  it("adopts the escalation only when it actually grounds", async () => {
+    // Primary ungroundable, escalation returns text that DOES ground → claims are served.
+    synthesizeMock.mockImplementation((_msgs: unknown, backend: { label: string }) => {
+      if (backend.label === "openrouter") {
+        const good = JSON.stringify({
+          claims: [{
+            text: `The variant ${variant.rsid} in the ${variant.gene} gene is a missense variant.`,
+            supportingFactIds: ["var.consequence"],
+            claimType: "classification_context",
+          }],
+        });
+        return Promise.resolve(ok(good));
+      }
+      return Promise.resolve(ok(UNGROUNDABLE));
+    });
+    const r = await explain(variant);
+    expect(r.fallbackReason).toBeNull();
+    expect(r.claims).not.toBeNull();
+    expect(r.claims!.length).toBeGreaterThan(0);
+  });
+
+  it("still reports a genuine primary outage honestly (no escalation rescue)", async () => {
+    // Both backends down → the outage IS the truth; the fix must not mask it as failed_grounding.
+    synthesizeMock.mockResolvedValue(down());
+    const r = await explain(variant);
+    expect(r.claims).toBeNull();
+    expect(r.fallbackReason).toBe("provider_unavailable");
+    expect(r.aiAvailable).toBe(false);
   });
 });
