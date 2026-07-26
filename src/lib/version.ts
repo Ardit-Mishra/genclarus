@@ -15,6 +15,12 @@ export const PROMPT_VERSION = "2.0.0";
 export const MODEL_ID =
   process.env.NIM_MODEL || "meta/llama-3.1-8b-instruct";
 
+// The stronger free model the grounding orchestrator escalates to (via OpenRouter) ONLY when the
+// primary's output cannot be grounded. MUST be a ":free" id — the $0 guard in nim.ts rejects any
+// paid model outright. Overridable via OPENROUTER_MODEL (used for benchmarking candidates).
+export const OPENROUTER_MODEL =
+  process.env.OPENROUTER_MODEL || "openai/gpt-oss-20b:free";
+
 // Bump when the shape of the JSON returned by /api/gene, /api/variant or /api/explain changes.
 // 2.0.0 — Phase 3: /api/explain returns grounded `claims` (with citations) instead of `explanation`.
 export const OUTPUT_SCHEMA_VERSION = "2.0.0";

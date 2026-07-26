@@ -46,6 +46,10 @@ function stubSequence(responses: (Response | Error)[]) {
 
 beforeEach(() => {
   process.env.NVIDIA_API_KEY = "test-key";
+  // These tests exercise the NIM backend in isolation; make sure no OpenRouter escalation backend
+  // leaks in from the ambient environment and turns a "no key" case into a live second attempt.
+  delete process.env.OPENROUTER_API_KEY;
+  delete process.env.SYNTH_PRIMARY;
   // Backoff is real time; collapse it so the suite stays fast without faking the clock the
   // budget check depends on.
   vi.spyOn(globalThis, "setTimeout").mockImplementation(((fn: () => void) => {

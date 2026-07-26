@@ -9,10 +9,48 @@
 // errors; ordinary 4xx (bad request, bad key) is a real answer and is never retried.
 
 import { safeFetch, readJsonBounded } from "./http";
-import { MODEL_ID } from "./version";
+import { MODEL_ID, OPENROUTER_MODEL } from "./version";
+
+// Synthesis backends. Both are OpenAI-compatible chat/completions endpoints, so one call path
+// serves both. The grounding orchestrator (explain.ts) uses them as a chain: a fast, reliable
+// PRIMARY, then ESCALATION to a stronger free model only when the primary's output cannot be
+// grounded — so scarce free-tier quota is spent only on the hard cases.
+//
+// $0 GUARD: OpenRouter exposes paid models too. Only ":free" model ids are ever permitted there;
+// a non-free id yields no backend rather than a silent charge. NIM's tier is inherently free.
+export type Backend = { label: "nim" | "openrouter"; url: string; model: string; apiKey: string };
 
 const NIM_URL = "https://integrate.api.nvidia.com/v1/chat/completions";
-const NIM_MODEL = MODEL_ID;
+const OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions";
+
+function nimBackend(): Backend | null {
+  const apiKey = process.env.NVIDIA_API_KEY;
+  if (!apiKey) return null;
+  return { label: "nim", url: NIM_URL, model: process.env.NIM_MODEL || MODEL_ID, apiKey };
+}
+
+function openrouterBackend(): Backend | null {
+  const apiKey = process.env.OPENROUTER_API_KEY;
+  if (!apiKey) return null;
+  const model = process.env.OPENROUTER_MODEL || OPENROUTER_MODEL;
+  if (!model.endsWith(":free")) return null; // $0 guard — never call a paid model
+  return { label: "openrouter", url: OPENROUTER_URL, model, apiKey };
+}
+
+// The fast primary and the stronger escalation. SYNTH_PRIMARY=openrouter flips them (benchmarking).
+// Escalation is whichever configured backend is not the primary — null when only one is configured.
+export function primaryBackend(): Backend | null {
+  return process.env.SYNTH_PRIMARY === "openrouter"
+    ? openrouterBackend() || nimBackend()
+    : nimBackend() || openrouterBackend();
+}
+
+export function escalationBackend(): Backend | null {
+  const primary = primaryBackend();
+  if (!primary) return null;
+  const other = primary.label === "nim" ? openrouterBackend() : nimBackend();
+  return other && other.label !== primary.label ? other : null;
+}
 
 const MAX_ATTEMPTS = 3;
 // Sized from measured throughput, not guesswork: this model emits ~38 tokens/s on the free tier
@@ -131,9 +169,15 @@ function result(
   };
 }
 
-export async function synthesize(messages: NimMessage[]): Promise<NimResult> {
-  const key = process.env.NVIDIA_API_KEY;
-  if (!key) return result("no_api_key", 0, false);
+// Call ONE backend with the full reliability loop (bounded attempts, backoff, per-attempt and total
+// timeouts, reasoning-strip). The grounding orchestrator chains two of these — primary, then
+// escalation — so a single call stays single-backend and the chain logic lives in explain.ts.
+export async function synthesize(
+  messages: NimMessage[],
+  backend: Backend | null = primaryBackend(),
+): Promise<NimResult> {
+  if (!backend) return result("no_api_key", 0, false);
+  const key = backend.apiKey;
 
   const startedAt = Date.now();
   let last: NimFailureCategory = "timeout";
@@ -153,12 +197,12 @@ export async function synthesize(messages: NimMessage[]): Promise<NimResult> {
 
     try {
       const res = await safeFetch(
-        NIM_URL,
+        backend.url,
         {
           method: "POST",
           headers: { "Content-Type": "application/json", Authorization: `Bearer ${key}` },
           body: JSON.stringify({
-            model: NIM_MODEL,
+            model: backend.model,
             temperature: 0.2,
             max_tokens: MAX_TOKENS,
             messages,
