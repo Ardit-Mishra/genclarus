@@ -16,7 +16,7 @@ import {
 } from "./nim";
 import { PROMPT_VERSION, MODEL_ID, OUTPUT_SCHEMA_VERSION } from "./version";
 import { TtlCache } from "./cache";
-import { buildEvidence } from "./evidence";
+import { buildEvidence, MAX_MODEL_CONDITIONS } from "./evidence";
 import { messagesFor, extractJson } from "./prompt";
 import { ground, type GroundedClaim } from "./grounding";
 import type { Facts, GeneFacts, VariantFacts } from "./facts";
@@ -57,7 +57,7 @@ function modelFacts(facts: Facts): Record<string, unknown> {
     variantType: v.variantType,
     consequence: v.consequence,
     proteinChange: v.proteinChange,
-    clinvarByCondition: v.conditionClassifications.slice(0, 8).map((c) => ({
+    clinvarByCondition: v.conditionClassifications.slice(0, MAX_MODEL_CONDITIONS).map((c) => ({
       condition: c.condition,
       significance: c.significance,
       reviewStars: c.reviewStars,
