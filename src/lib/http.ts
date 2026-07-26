@@ -5,10 +5,16 @@
 // UniProt (rest.uniprot.org) is intentionally omitted: nothing in this app currently calls the
 // UniProt API server-side (only a client-facing link to uniprot.org). Add it here first if that
 // changes.
+//
+// alphafold.ebi.ac.uk is reached only via the /api/structure proxy route — never directly from
+// the browser, since CSP enforces connect-src 'self'. That route validates the request's target
+// host itself before ever reaching safeFetch, so this allowlist entry is defense in depth, not
+// the only guard.
 const ALLOWED_HOSTS = new Set([
   "mygene.info",
   "myvariant.info",
   "integrate.api.nvidia.com",
+  "alphafold.ebi.ac.uk",
 ]);
 
 const DEFAULT_TIMEOUT_MS = 12000;
