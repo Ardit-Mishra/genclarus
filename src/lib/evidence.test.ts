@@ -126,14 +126,23 @@ describe("buildEvidence — variant", () => {
     expect(m.get("var.cond.0.reviewStars")?.value).toContain("2");
   });
 
-  it("caps condition facts at eight regardless of how many ClinVar returns", () => {
-    const many = Array.from({ length: 12 }, (_, i) => ({
+  // Regression: rs6025 (Factor V Leiden) has up to 15 ClinVar conditions. Offering them all made the
+  // model enumerate every one in a single sentence that overran max_tokens, truncating the JSON so it
+  // never parsed → deterministic failed_grounding. The grounding schema allows at most MAX_CLAIMS (4)
+  // claims, one of them the identity claim, so at most 3 condition claims are ever usable — the
+  // evidence must not offer more than that. Conditions arrive pre-sorted by review confidence, so the
+  // cap keeps the best-evidenced ones; the rest still appear in the deterministic facts UI.
+  it("caps condition facts at three regardless of how many ClinVar returns (rs6025 truncation fix)", () => {
+    const many = Array.from({ length: 15 }, (_, i) => ({
       ...variant.conditionClassifications[0],
       condition: `Condition ${i}`,
     }));
     const facts = buildEvidence({ ...variant, conditionClassifications: many });
     const sigIds = facts.filter((f) => /^var\.cond\.\d+\.significance$/.test(f.id));
-    expect(sigIds).toHaveLength(8);
+    expect(sigIds).toHaveLength(3);
+    // And it keeps the FIRST three (highest review confidence), not an arbitrary subset.
+    expect(facts.find((f) => f.id === "var.cond.0.significance")?.qualifiers?.condition).toBe("Condition 0");
+    expect(facts.some((f) => f.id === "var.cond.3.significance")).toBe(false);
   });
 });
 
