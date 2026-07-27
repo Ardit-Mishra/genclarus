@@ -22,6 +22,28 @@ export function pickBestPdb(pdbs: UniprotEntry["pdbIds"]): string | null {
   return pdbs[0]?.id ?? null;
 }
 
+const DOMAIN_PALETTE = ["#14b8a6", "#f59e0b", "#8b5cf6", "#ec4899", "#3b82f6", "#84cc16"];
+
+// Maps UniProt Domain/Active site/Binding site features to colored residue ranges for the
+// structure viewer's domain-coloring mode. Colors cycle through a fixed qualitative palette so
+// adjacent regions stay visually distinct regardless of how many features a protein has.
+export function domainRegions(
+  features: UniprotFeature[],
+): { start: number; end: number; label: string; color: string }[] {
+  let i = 0;
+  return features.map((f) => ({
+    start: f.start,
+    end: f.end,
+    label:
+      f.type === "Active site"
+        ? `Active site ${f.start}`
+        : f.type === "Binding site"
+          ? `Binding site ${f.start}`
+          : f.description || f.type,
+    color: DOMAIN_PALETTE[i++ % DOMAIN_PALETTE.length],
+  }));
+}
+
 // UniProt REST — domain/site features and PDB cross-references for one accession. Returns null
 // on any failure (bad accession, network error, non-OK response) so callers can silently omit the
 // experimental-structure switch and domain coloring rather than show an error.

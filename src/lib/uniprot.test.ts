@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { pickBestPdb } from "./uniprot";
+import { pickBestPdb, domainRegions } from "./uniprot";
 
 describe("pickBestPdb", () => {
   it("prefers lowest-resolution X-ray", () => {
@@ -23,5 +23,18 @@ describe("pickBestPdb", () => {
 
   it("returns null for empty", () => {
     expect(pickBestPdb([])).toBeNull();
+  });
+});
+
+describe("domainRegions", () => {
+  it("colors domains and active sites distinctly and cycles colors", () => {
+    const r = domainRegions([
+      { type: "Domain", start: 10, end: 50, description: "Kinase" },
+      { type: "Domain", start: 60, end: 90, description: "SH2" },
+      { type: "Active site", start: 45, end: 45, description: "" },
+    ]);
+    expect(r).toHaveLength(3);
+    expect(r[0].color).not.toBe(r[1].color);
+    expect(r[2].label).toMatch(/active site/i);
   });
 });
