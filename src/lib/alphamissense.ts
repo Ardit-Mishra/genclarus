@@ -61,3 +61,36 @@ export async function lookupAlphaMissense(
     return null;
   }
 }
+
+// End-to-end resolver for a substitution: AlphaFold prediction API (to get the protein's
+// AlphaMissense CSV URL) → CSV row lookup. Runs entirely server-side and off the /api/variant
+// critical path — the page fetches this progressively via /api/alphamissense (like the AI
+// narrative), so the ~megabyte CSV never delays the verified facts, and only the small
+// {score, class} crosses the wire. Degrades to null on any miss so the chip simply doesn't appear.
+export async function resolveAlphaMissense(
+  uniprot: string | null | undefined,
+  proteinChange: string | null | undefined,
+): Promise<AmResult | null> {
+  if (!uniprot || !proteinChange) return null;
+  if (!/^[A-Z0-9]{6,10}$/.test(uniprot)) return null;
+  if (!parseSubstitution(proteinChange)) return null; // skip the network hop for non-missense
+  try {
+    const res = await safeFetch(
+      `https://alphafold.ebi.ac.uk/api/prediction/${uniprot}`,
+      {
+        headers: {
+          Accept: "application/json",
+          "User-Agent": "Genclarus/1.0 (https://genclarus.com; alphamissense lookup)",
+        },
+      },
+      8000,
+    );
+    if (!res.ok) return null;
+    const arr = (await res.json()) as Record<string, unknown>[];
+    const amUrl = arr?.[0]?.amAnnotationsUrl;
+    if (typeof amUrl !== "string") return null;
+    return lookupAlphaMissense(amUrl, proteinChange);
+  } catch {
+    return null;
+  }
+}

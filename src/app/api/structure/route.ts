@@ -11,7 +11,15 @@ import { jsonError } from "@/lib/request";
 
 export const dynamic = "force-dynamic";
 
-const ALLOWED_STRUCTURE_HOST = "alphafold.ebi.ac.uk";
+// Exact-host allowlist for the structure viewer's data sources: AlphaFold (predicted models +
+// metadata), UniProt (domain/feature + PDB cross-refs), RCSB (experimental PDB files). Every one
+// is a well-known public read-only host; the browser can only reach them through this proxy
+// because CSP enforces connect-src 'self'.
+const ALLOWED_STRUCTURE_HOSTS = new Set([
+  "alphafold.ebi.ac.uk",
+  "rest.uniprot.org",
+  "files.rcsb.org",
+]);
 const MAX_STRUCTURE_BYTES = 8 * 1024 * 1024; // 8 MB — generous for a single predicted-model PDB file
 
 export async function GET(request: Request) {
@@ -25,7 +33,7 @@ export async function GET(request: Request) {
     return jsonError(400, "Invalid url parameter.");
   }
   // Exact match only — no subdomain, lookalike, or open-redirect target is accepted.
-  if (host !== ALLOWED_STRUCTURE_HOST) {
+  if (!ALLOWED_STRUCTURE_HOSTS.has(host)) {
     return jsonError(400, "Host not allowed.");
   }
 
