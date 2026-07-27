@@ -1,0 +1,114 @@
+{
+  "kind": "gene",
+  "id": "RET",
+  "facts": {
+    "kind": "gene",
+    "symbol": "RET",
+    "name": "ret proto-oncogene",
+    "type": "protein-coding",
+    "summary": "This gene encodes a transmembrane receptor and member of the tyrosine protein kinase family of proteins. Binding of ligands such as GDNF (glial cell-line derived neurotrophic factor) and other related proteins to the encoded receptor stimulates receptor dimerization and activation of downstream signaling pathways that play a role in cell differentiation, growth, migration and survival. The encoded receptor is important in development of the nervous system, and the development of organs and tissues derived from the neural crest. This proto-oncogene can undergo oncogenic activation through both cytogenetic rearrangement and activating point mutations. Mutations in this gene are associated with Hirschsprung disease and central hypoventilation syndrome and have been identified in patients with renal agenesis. [provided by RefSeq, Sep 2017].",
+    "aliases": [
+      "CDHF12",
+      "CDHR16",
+      "HSCR1",
+      "MEN2A",
+      "MEN2B",
+      "MTC1",
+      "PTC",
+      "RET-ELE1"
+    ],
+    "location": "chr10:43,077,026–43,130,351 (+)",
+    "uniprot": "P07949",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/5979"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000165731"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P07949"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/164761"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=RET"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:25:22.310Z"
+  },
+  "claims": [
+    {
+      "text": "The RET gene encodes a transmembrane receptor and member of the tyrosine protein kinase family of proteins.",
+      "supportingFactIds": [
+        "gene.symbol",
+        "gene.summary"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The RET proto-oncogene is a protein-coding gene located on chromosome 10.",
+      "supportingFactIds": [
+        "gene.name",
+        "gene.type",
+        "gene.location"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "Mutations in the RET proto-oncogene are associated with Hirschsprung disease and central hypoventilation syndrome.",
+      "supportingFactIds": [
+        "gene.name",
+        "gene.summary"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The RET proto-oncogene can undergo oncogenic activation through both cytogenetic rearrangement and activating point mutations.",
+      "supportingFactIds": [
+        "gene.name",
+        "gene.summary"
+      ],
+      "claimType": "function"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "d4435e80f1dc76cf",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:25:30.573Z",
+    "retrievedAt": "2026-07-27T10:25:22.310Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/5979"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000165731"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P07949"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/164761"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=RET"
+      }
+    ]
+  }
+}

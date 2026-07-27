@@ -1,0 +1,209 @@
+{
+  "kind": "variant",
+  "id": "rs1800629",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs1800629",
+    "gene": "TNF",
+    "consequence": "",
+    "proteinChange": "",
+    "alleleCount": 1,
+    "otherAlleles": [],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NC_000006.12:g.31575254G>A",
+    "chrom": "6",
+    "position": 31575254,
+    "refAlt": "G>A",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "etanercept response - Efficacy",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "reviewed by expert panel",
+        "reviewStars": 3,
+        "origin": "germline",
+        "lastEvaluated": "2021-03-24"
+      },
+      {
+        "condition": "Systemic lupus erythematosus, susceptibility to",
+        "significance": "Risk factor",
+        "rawSignificance": "risk factor",
+        "significanceRank": 3,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2006-03-01"
+      },
+      {
+        "condition": "Inherited susceptibility to asthma",
+        "significance": "Risk factor",
+        "rawSignificance": "risk factor",
+        "significanceRank": 3,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2006-03-01"
+      },
+      {
+        "condition": "Malaria, cerebral, susceptibility to",
+        "significance": "Risk factor",
+        "rawSignificance": "risk factor",
+        "significanceRank": 3,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2006-03-01"
+      },
+      {
+        "condition": "HUMAN IMMUNODEFICIENCY VIRUS DEMENTIA, SUSCEPTIBILITY TO",
+        "significance": "Risk factor",
+        "rawSignificance": "risk factor",
+        "significanceRank": 3,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2006-03-01"
+      },
+      {
+        "condition": "Psoriatic arthritis, susceptibility to",
+        "significance": "Risk factor",
+        "rawSignificance": "risk factor",
+        "significanceRank": 3,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2006-03-01"
+      },
+      {
+        "condition": "Susceptibility to severe coronavirus disease (COVID-19) due to high plasma levels of TNF, TNFR, and/or TNFR4",
+        "significance": "Uncertain significance",
+        "rawSignificance": "Uncertain significance",
+        "significanceRank": 6,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2021-08-07"
+      },
+      {
+        "condition": "Susceptibility to severe coronavirus disease (COVID-19)",
+        "significance": "Uncertain significance",
+        "rawSignificance": "Uncertain significance",
+        "significanceRank": 6,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2021-02-09"
+      },
+      {
+        "condition": "Endometriosis",
+        "significance": "Affects",
+        "rawSignificance": "Affects",
+        "significanceRank": 9,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "somatic",
+        "lastEvaluated": "2021-10-20"
+      }
+    ],
+    "distinctSignificances": [
+      "Risk factor",
+      "Drug response",
+      "Uncertain significance",
+      "Affects"
+    ],
+    "hasSomatic": true,
+    "hasGermline": true,
+    "gnomadAf": 0.146834,
+    "hasClinvar": true,
+    "hgvsId": "chr6:g.31543031G>A",
+    "variantId": 225964,
+    "uniprot": "P01375",
+    "residue": null,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs1800629"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/225964/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1800629"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/6-31575254-G-A?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:15:12.070Z"
+  },
+  "claims": [
+    {
+      "text": "The TNF gene variant rs1800629 is associated with drug response to etanercept, with a review confidence of 3 of 4 stars.",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The TNF gene variant rs1800629 is a risk factor for Systemic lupus erythematosus, with a review confidence of 0 of 4 stars.",
+      "supportingFactIds": [
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars",
+        "var.cond.1.origin"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The TNF gene variant rs1800629 is a risk factor for Inherited susceptibility to asthma, with a review confidence of 0 of 4 stars.",
+      "supportingFactIds": [
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars",
+        "var.cond.2.origin"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The TNF gene variant rs1800629 has a frequency of 15% in the gnomAD population.",
+      "supportingFactIds": [
+        "var.gnomadAf"
+      ],
+      "claimType": "frequency_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "73186b6ebc69f287",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:15:16.817Z",
+    "retrievedAt": "2026-07-27T10:15:12.070Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs1800629"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/225964/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1800629"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/6-31575254-G-A?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

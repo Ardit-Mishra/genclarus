@@ -1,0 +1,139 @@
+{
+  "kind": "variant",
+  "id": "rs11045819",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs11045819",
+    "gene": "SLCO1B1",
+    "consequence": "missense variant",
+    "proteinChange": "p.Pro155Thr",
+    "alleleCount": 1,
+    "otherAlleles": [],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NM_006446.5(SLCO1B1):c.463C>A (p.Pro155Thr)",
+    "chrom": "12",
+    "position": 21176879,
+    "refAlt": "C>A",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "Rotor syndrome (HBLRR)",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2024-11-29"
+      },
+      {
+        "condition": "SLCO1B1-related disorder",
+        "significance": "Likely benign",
+        "rawSignificance": "Likely benign",
+        "significanceRank": 7,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2021-07-21"
+      },
+      {
+        "condition": "not provided",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": null
+      },
+      {
+        "condition": "not specified",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": null
+      }
+    ],
+    "distinctSignificances": [
+      "Likely benign",
+      "Benign"
+    ],
+    "hasSomatic": false,
+    "hasGermline": true,
+    "gnomadAf": 0.11104,
+    "hasClinvar": true,
+    "hgvsId": "chr12:g.21329813C>A",
+    "variantId": 307937,
+    "uniprot": "Q9Y6L6",
+    "residue": 155,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs11045819"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/307937/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs11045819"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/12-21176879-C-A?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:17:43.917Z"
+  },
+  "claims": [
+    {
+      "text": "The human variant rs11045819 in the SLCO1B1 gene is a missense variant resulting in the protein change p.Pro155Thr.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.consequence",
+        "var.protein"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The frequency of the SLCO1B1 variant rs11045819 in the general population is approximately 11%.",
+      "supportingFactIds": [
+        "var.gnomadAf"
+      ],
+      "claimType": "frequency_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "37093178d97f0c39",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:17:47.256Z",
+    "retrievedAt": "2026-07-27T10:17:43.917Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs11045819"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/307937/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs11045819"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/12-21176879-C-A?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

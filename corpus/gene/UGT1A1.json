@@ -1,0 +1,109 @@
+{
+  "kind": "gene",
+  "id": "UGT1A1",
+  "facts": {
+    "kind": "gene",
+    "symbol": "UGT1A1",
+    "name": "UDP glucuronosyltransferase family 1 member A1",
+    "type": "protein-coding",
+    "summary": "This gene encodes a UDP-glucuronosyltransferase, an enzyme of the glucuronidation pathway that transforms small lipophilic molecules, such as steroids, bilirubin, hormones, and drugs, into water-soluble, excretable metabolites. This gene is part of a complex locus that encodes several UDP-glucuronosyltransferases. The locus includes thirteen unique alternate first exons followed by four common exons. Four of the alternate first exons are considered pseudogenes. Each of the remaining nine 5' exons may be spliced to the four common exons, resulting in nine proteins with different N-termini and identical C-termini. Each first exon encodes the substrate binding site, and is regulated by its own promoter. The preferred substrate of this enzyme is bilirubin, although it also has moderate activity with simple phenols, flavones, and C18 steroids. Mutations in this gene result in Crigler-Najjar syndromes types I and II and in Gilbert syndrome. [provided by RefSeq, Jul 2008].",
+    "aliases": [
+      "BILIQTL1",
+      "GNT1",
+      "HUG-BR1",
+      "UDPGT",
+      "UDPGT 1-1",
+      "UGT1",
+      "UGT1A"
+    ],
+    "location": "chr2:233,760,262–233,773,313 (+)",
+    "uniprot": "P22309",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/54658"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000241635"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P22309"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/191740"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=UGT1A1"
+      }
+    ],
+    "retrievedAt": "2026-07-27T09:49:40.133Z"
+  },
+  "claims": [
+    {
+      "text": "The UGT1A1 gene encodes a UDP-glucuronosyltransferase enzyme involved in the glucuronidation pathway.",
+      "supportingFactIds": [
+        "gene.symbol",
+        "gene.summary"
+      ],
+      "claimType": "function"
+    },
+    {
+      "text": "The UGT1A1 gene is part of a complex locus that includes thirteen unique alternate first exons and four common exons.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "Mutations in the UGT1A1 gene result in Crigler-Najjar syndromes types I and II and in Gilbert syndrome.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The UGT1A1 gene is located on the plus strand of chromosome 2 between positions 233,760,262 and 233,773,313.",
+      "supportingFactIds": [
+        "gene.location"
+      ],
+      "claimType": "identity"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "c93acdcf98a232bd",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T09:49:43.919Z",
+    "retrievedAt": "2026-07-27T09:49:40.133Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/54658"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000241635"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P22309"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/191740"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=UGT1A1"
+      }
+    ]
+  }
+}

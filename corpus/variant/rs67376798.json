@@ -1,0 +1,193 @@
+{
+  "kind": "variant",
+  "id": "rs67376798",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs67376798",
+    "gene": "DPYD",
+    "consequence": "missense variant",
+    "proteinChange": "p.Asp949Val",
+    "alleleCount": 1,
+    "otherAlleles": [],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NM_000110.4(DPYD):c.2846A>T (p.Asp949Val)",
+    "chrom": "1",
+    "position": 97082391,
+    "refAlt": "T>A",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "fluorouracil response - Toxicity",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "reviewed by expert panel",
+        "reviewStars": 3,
+        "origin": "germline",
+        "lastEvaluated": "2021-05-24"
+      },
+      {
+        "condition": "fluorouracil response - Other",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "reviewed by expert panel",
+        "reviewStars": 3,
+        "origin": "germline",
+        "lastEvaluated": "2021-05-24"
+      },
+      {
+        "condition": "capecitabine response - Toxicity",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "reviewed by expert panel",
+        "reviewStars": 3,
+        "origin": "germline",
+        "lastEvaluated": "2021-05-24"
+      },
+      {
+        "condition": "tegafur response - Toxicity",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "reviewed by expert panel",
+        "reviewStars": 3,
+        "origin": "germline",
+        "lastEvaluated": "2021-05-24"
+      },
+      {
+        "condition": "Dihydropyrimidine dehydrogenase deficiency (DPYDD)",
+        "significance": "Likely pathogenic",
+        "rawSignificance": "Pathogenic/Likely pathogenic",
+        "significanceRank": 1,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "unknown",
+        "lastEvaluated": "2024-07-11"
+      },
+      {
+        "condition": "DPYD-related disorder",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "paternal",
+        "lastEvaluated": "2024-01-01"
+      },
+      {
+        "condition": "Inborn genetic diseases",
+        "significance": "Uncertain significance",
+        "rawSignificance": "Uncertain significance",
+        "significanceRank": 6,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2016-11-08"
+      },
+      {
+        "condition": "Fluorouracil response",
+        "significance": "other",
+        "rawSignificance": "other",
+        "significanceRank": 9,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2016-02-29"
+      },
+      {
+        "condition": "not provided",
+        "significance": "Conflicting interpretations",
+        "rawSignificance": "Conflicting interpretations of pathogenicity",
+        "significanceRank": 5,
+        "reviewStatus": "criteria provided, conflicting interpretations",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2024-08-01"
+      }
+    ],
+    "distinctSignificances": [
+      "Pathogenic",
+      "Likely pathogenic",
+      "Drug response",
+      "Conflicting interpretations",
+      "Uncertain significance",
+      "other"
+    ],
+    "hasSomatic": false,
+    "hasGermline": true,
+    "gnomadAf": 0.00324903,
+    "hasClinvar": true,
+    "hgvsId": "chr1:g.97547947T>A",
+    "variantId": 88974,
+    "uniprot": "Q12882",
+    "residue": 949,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs67376798"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/88974/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs67376798"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/1-97082391-T-A?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:11:14.889Z"
+  },
+  "claims": [
+    {
+      "text": "The DPYD gene variant rs67376798 is a missense variant with the protein change p.Asp949Val.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.consequence",
+        "var.protein"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The DPYD gene variant rs67376798 is a single nucleotide variant.",
+      "supportingFactIds": [
+        "var.type"
+      ],
+      "claimType": "identity"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "c32aaf521c54dceb",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:11:19.617Z",
+    "retrievedAt": "2026-07-27T10:11:14.889Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs67376798"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/88974/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs67376798"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/1-97082391-T-A?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

@@ -1,0 +1,463 @@
+{
+  "kind": "variant",
+  "id": "rs121913529",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs121913529",
+    "gene": "KRAS",
+    "consequence": "missense variant",
+    "proteinChange": "p.Gly12Asp",
+    "alleleCount": 3,
+    "otherAlleles": [
+      {
+        "proteinChange": "p.Gly12Val",
+        "refAlt": "C>A",
+        "variantId": 12583,
+        "significance": "Pathogenic"
+      },
+      {
+        "proteinChange": "p.Gly12Ala",
+        "refAlt": "C>G",
+        "variantId": 45122,
+        "significance": "Pathogenic"
+      }
+    ],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NM_004985.5(KRAS):c.35G>A (p.Gly12Asp)",
+    "chrom": "12",
+    "position": 25245350,
+    "refAlt": "C>T",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "RASopathy",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2024-10-07"
+      },
+      {
+        "condition": "Linear nevus sebaceous syndrome",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "somatic",
+        "lastEvaluated": null
+      },
+      {
+        "condition": "KRAS-related overgrowth",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "somatic",
+        "lastEvaluated": "2024-12-27"
+      },
+      {
+        "condition": "Familial cancer of breast",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2024-02-23"
+      },
+      {
+        "condition": "Noonan syndrome 3 (NS3)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2024-02-23"
+      },
+      {
+        "condition": "Linear nevus sebaceous syndrome",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2024-02-23"
+      },
+      {
+        "condition": "Toriello-Lacassie-Droste syndrome",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2024-02-23"
+      },
+      {
+        "condition": "Cerebral arteriovenous malformation (BAVM)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2024-02-23"
+      },
+      {
+        "condition": "Malignant tumor of urinary bladder",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2024-02-23"
+      },
+      {
+        "condition": "Autoimmune lymphoproliferative syndrome type 4",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2024-02-23"
+      },
+      {
+        "condition": "Acute myeloid leukemia (AML)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2024-02-23"
+      },
+      {
+        "condition": "Cardiofaciocutaneous syndrome 2 (CFC2)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2024-02-23"
+      },
+      {
+        "condition": "Familial pancreatic carcinoma",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2024-02-23"
+      },
+      {
+        "condition": "Gastric cancer",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2024-02-23"
+      },
+      {
+        "condition": "Lung cancer",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2024-02-23"
+      },
+      {
+        "condition": "Autoimmune lymphoproliferative syndrome type 4",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "somatic",
+        "lastEvaluated": "2024-01-05"
+      },
+      {
+        "condition": "Cerebral arteriovenous malformation (BAVM)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "somatic",
+        "lastEvaluated": "2023-11-03"
+      },
+      {
+        "condition": "Congenital Pulmonary Airway Malformations",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "de novo",
+        "lastEvaluated": "2022-07-19"
+      },
+      {
+        "condition": "Cardiovascular phenotype",
+        "significance": "Likely pathogenic",
+        "rawSignificance": "Likely pathogenic",
+        "significanceRank": 1,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2022-08-22"
+      },
+      {
+        "condition": "Capillary malformation-arteriovenous malformation 1 (CMAVM1)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "somatic",
+        "lastEvaluated": "2021-05-01"
+      },
+      {
+        "condition": "Primary low grade serous adenocarcinoma of ovary",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "somatic",
+        "lastEvaluated": "2019-11-04"
+      },
+      {
+        "condition": "Carcinoma of pancreas",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "somatic",
+        "lastEvaluated": "2019-02-07"
+      },
+      {
+        "condition": "Acute myeloid leukemia (AML)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "somatic",
+        "lastEvaluated": "2018-03-30"
+      },
+      {
+        "condition": "Juvenile myelomonocytic leukemia (JMML)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "somatic",
+        "lastEvaluated": "2014-08-28"
+      },
+      {
+        "condition": "Non-small cell lung carcinoma (NSCLC)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "somatic",
+        "lastEvaluated": "2014-08-28"
+      },
+      {
+        "condition": "Ovarian neoplasm",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "somatic",
+        "lastEvaluated": "2014-08-28"
+      },
+      {
+        "condition": "Nevus sebaceous",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "somatic",
+        "lastEvaluated": "2012-10-25"
+      },
+      {
+        "condition": "Epidermal nevus",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "somatic",
+        "lastEvaluated": "2012-06-10"
+      },
+      {
+        "condition": "Gastric cancer",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "somatic",
+        "lastEvaluated": "2012-06-10"
+      },
+      {
+        "condition": "Vascular Tumors Including Pyogenic Granuloma",
+        "significance": "Likely pathogenic",
+        "rawSignificance": "Likely pathogenic",
+        "significanceRank": 1,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "somatic",
+        "lastEvaluated": "2015-02-19"
+      },
+      {
+        "condition": "Encephalocraniocutaneous lipomatosis (ECCL)",
+        "significance": "not provided",
+        "rawSignificance": "not provided",
+        "significanceRank": 9,
+        "reviewStatus": "no assertion provided",
+        "reviewStars": 0,
+        "origin": "somatic",
+        "lastEvaluated": null
+      },
+      {
+        "condition": "Endometrial hyperplasia without atypia",
+        "significance": "association",
+        "rawSignificance": "association",
+        "significanceRank": 9,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "somatic",
+        "lastEvaluated": null
+      },
+      {
+        "condition": "Atypical endometrial hyperplasia",
+        "significance": "association",
+        "rawSignificance": "association",
+        "significanceRank": 9,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "somatic",
+        "lastEvaluated": null
+      },
+      {
+        "condition": "not provided",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "unknown",
+        "lastEvaluated": "2023-11-03"
+      }
+    ],
+    "distinctSignificances": [
+      "Pathogenic",
+      "Likely pathogenic",
+      "not provided",
+      "association"
+    ],
+    "hasSomatic": true,
+    "hasGermline": true,
+    "gnomadAf": null,
+    "hasClinvar": true,
+    "hgvsId": "chr12:g.25398284C>T",
+    "variantId": 12582,
+    "uniprot": "P01116",
+    "residue": 12,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs121913529"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/12582/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs121913529"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/12-25245350-C-T?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:07:19.530Z"
+  },
+  "claims": [
+    {
+      "text": "The KRAS gene variant rs121913529 is a missense variant with a protein change of p.Gly12Asp.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.consequence",
+        "var.protein"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The KRAS gene variant rs121913529 is classified as pathogenic for RASopathy in germline cases.",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.0.origin"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The KRAS gene variant rs121913529 is classified as pathogenic for Linear nevus sebaceous syndrome and KRAS-related overgrowth in somatic cases, but with varying review confidence.",
+      "supportingFactIds": [
+        "var.cond.1.significance",
+        "var.cond.2.significance"
+      ],
+      "claimType": "classification_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "1126ce247462471b",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:07:23.272Z",
+    "retrievedAt": "2026-07-27T10:07:19.530Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs121913529"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/12582/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs121913529"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/12-25245350-C-T?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "kind": "gene",
+  "id": "F9",
+  "facts": {
+    "kind": "gene",
+    "symbol": "F9",
+    "name": "coagulation factor IX",
+    "type": "protein-coding",
+    "summary": "This gene encodes vitamin K-dependent coagulation factor IX that circulates in the blood as an inactive zymogen. This factor is converted to an active form by factor XIa, which excises the activation peptide and thus generates a heavy chain and a light chain held together by one or more disulfide bonds. The role of this activated factor IX in the blood coagulation cascade is to activate factor X to its active form through interactions with Ca+2 ions, membrane phospholipids, and factor VIII. Alterations of this gene, including point mutations, insertions and deletions, cause factor IX deficiency, which is a recessive X-linked disorder, also called hemophilia B or Christmas disease. Alternative splicing results in multiple transcript variants encoding different isoforms that may undergo similar proteolytic processing. [provided by RefSeq, Sep 2015].",
+    "aliases": [
+      "F9 p22",
+      "FIX",
+      "HEMB",
+      "P19",
+      "PTC",
+      "THPH8"
+    ],
+    "location": "chrX:139,530,731–139,568,549 (+)",
+    "uniprot": "P00740",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/2158"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000101981"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P00740"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/300746"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=F9"
+      }
+    ],
+    "retrievedAt": "2026-07-27T09:48:11.135Z"
+  },
+  "claims": [
+    {
+      "text": "Coagulation factor IX is a vitamin K-dependent protein-coding gene located on chromosome X.",
+      "supportingFactIds": [
+        "gene.symbol",
+        "gene.type",
+        "gene.location"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "Coagulation factor IX deficiency is a recessive X-linked disorder also known as hemophilia B or Christmas disease.",
+      "supportingFactIds": [
+        "gene.name"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "Coagulation factor IX circulates in the blood as an inactive zymogen that is converted to an active form by factor XIa.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "function"
+    },
+    {
+      "text": "Alterations of the F9 gene, including point mutations, insertions and deletions, cause factor IX deficiency.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "condition_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "50f70b56046e2e5c",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T09:48:14.883Z",
+    "retrievedAt": "2026-07-27T09:48:11.135Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/2158"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000101981"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P00740"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/300746"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=F9"
+      }
+    ]
+  }
+}

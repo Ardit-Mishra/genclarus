@@ -1,0 +1,92 @@
+{
+  "kind": "variant",
+  "id": "rs12721627",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs12721627",
+    "gene": "CYP3A4",
+    "consequence": "missense variant",
+    "proteinChange": "p.Thr185Ser",
+    "alleleCount": 1,
+    "otherAlleles": [],
+    "variantType": "snv",
+    "preferredName": null,
+    "chrom": "7",
+    "position": 99366093,
+    "refAlt": "G>C",
+    "assembly": "GRCh37",
+    "conditionClassifications": [],
+    "distinctSignificances": [],
+    "hasSomatic": false,
+    "hasGermline": false,
+    "gnomadAf": 0.0000318431,
+    "hasClinvar": false,
+    "hgvsId": "chr7:g.99366093G>C",
+    "variantId": null,
+    "uniprot": "P08684",
+    "residue": 185,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs12721627"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs12721627"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:18:48.024Z"
+  },
+  "claims": [
+    {
+      "text": "The CYP3A4 gene variant rs12721627 is a missense variant.",
+      "supportingFactIds": [
+        "var.consequence",
+        "var.type"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The CYP3A4 gene variant rs12721627 is located in the CYP3A4 gene.",
+      "supportingFactIds": [
+        "var.gene"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The CYP3A4 gene variant rs12721627 results in the protein change p.Thr185Ser.",
+      "supportingFactIds": [
+        "var.protein"
+      ],
+      "claimType": "function"
+    },
+    {
+      "text": "The CYP3A4 gene variant rs12721627 has a frequency of 0.0032% in the general population.",
+      "supportingFactIds": [
+        "var.gnomadAf"
+      ],
+      "claimType": "frequency_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "e28ef041bd156a0b",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:18:51.066Z",
+    "retrievedAt": "2026-07-27T10:18:48.024Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs12721627"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs12721627"
+      }
+    ]
+  }
+}

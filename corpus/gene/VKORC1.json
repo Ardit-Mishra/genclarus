@@ -1,0 +1,109 @@
+{
+  "kind": "gene",
+  "id": "VKORC1",
+  "facts": {
+    "kind": "gene",
+    "symbol": "VKORC1",
+    "name": "vitamin K epoxide reductase complex subunit 1",
+    "type": "protein-coding",
+    "summary": "This gene encodes the catalytic subunit of the vitamin K epoxide reductase complex, which is responsible for the reduction of inactive vitamin K 2,3-epoxide to active vitamin K in the endoplasmic reticulum membrane. Vitamin K is a required co-factor for carboxylation of glutamic acid residues by vitamin K-dependent gamma-carboxylase in blood-clotting enzymes. Allelic variation in this gene is associated with vitamin k-dependent clotting factors combined deficiency of 2, and increased resistance or sensitivity to warfarin, an inhibitor of vitamin K epoxide reductase. Pseudogenes of this gene are located on chromosomes 1 and X. Alternative splicing results in multiple transcript variants. [provided by RefSeq, Aug 2015].",
+    "aliases": [
+      "EDTP308",
+      "MST134",
+      "MST576",
+      "VKCFD2",
+      "VKOR"
+    ],
+    "location": "chr16:31,090,260–31,095,980 (−)",
+    "uniprot": "Q9BQB6",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/79001"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000167397"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/Q9BQB6"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/608547"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=VKORC1"
+      }
+    ],
+    "retrievedAt": "2026-07-27T09:49:28.562Z"
+  },
+  "claims": [
+    {
+      "text": "The VKORC1 gene encodes the catalytic subunit of the vitamin K epoxide reductase complex.",
+      "supportingFactIds": [
+        "gene.symbol",
+        "gene.summary"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "Vitamin K epoxide reductase complex subunit 1 is a protein-coding gene located on chromosome 16.",
+      "supportingFactIds": [
+        "gene.type",
+        "gene.location"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The VKORC1 gene is associated with vitamin K-dependent clotting factors combined deficiency of 2.",
+      "supportingFactIds": [
+        "gene.alias.3",
+        "gene.summary"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "Alternative splicing results in multiple transcript variants of the VKORC1 gene.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "function"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "d74031f6f029b1c3",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T09:49:31.344Z",
+    "retrievedAt": "2026-07-27T09:49:28.562Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/79001"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000167397"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/Q9BQB6"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/608547"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=VKORC1"
+      }
+    ]
+  }
+}

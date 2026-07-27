@@ -1,0 +1,91 @@
+{
+  "kind": "gene",
+  "id": "RAD51C",
+  "facts": {
+    "kind": "gene",
+    "symbol": "RAD51C",
+    "name": "RAD51 paralog C",
+    "type": "protein-coding",
+    "summary": "This gene is a member of the RAD51 family. RAD51 family members are highly similar to bacterial RecA and Saccharomyces cerevisiae Rad51 and are known to be involved in the homologous recombination and repair of DNA. This protein can interact with other RAD51 paralogs and is reported to be important for Holliday junction resolution. Mutations in this gene are associated with Fanconi anemia-like syndrome. This gene is one of four localized to a region of chromosome 17q23 where amplification occurs frequently in breast tumors. Overexpression of the four genes during amplification has been observed and suggests a possible role in tumor progression. Alternative splicing results in multiple transcript variants. [provided by RefSeq, Jul 2013].",
+    "aliases": [
+      "BROVCA3",
+      "FANCO",
+      "R51H3",
+      "RAD51L2"
+    ],
+    "location": "chr17:58,692,569–58,735,611 (+)",
+    "uniprot": "O43502",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/5889"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000108384"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/O43502"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/602774"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=RAD51C"
+      }
+    ],
+    "retrievedAt": "2026-07-27T09:47:34.453Z"
+  },
+  "claims": [
+    {
+      "text": "The RAD51C gene is a member of the RAD51 family, which is involved in DNA repair and homologous recombination.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "function"
+    },
+    {
+      "text": "Mutations in the RAD51C gene are associated with Fanconi anemia-like syndrome.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "classification_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "b491aeae6ccfb74e",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T09:47:39.358Z",
+    "retrievedAt": "2026-07-27T09:47:34.453Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/5889"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000108384"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/O43502"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/602774"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=RAD51C"
+      }
+    ]
+  }
+}

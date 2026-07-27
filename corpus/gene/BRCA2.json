@@ -1,0 +1,110 @@
+{
+  "kind": "gene",
+  "id": "BRCA2",
+  "facts": {
+    "kind": "gene",
+    "symbol": "BRCA2",
+    "name": "BRCA2 DNA repair associated",
+    "type": "protein-coding",
+    "summary": "The product of this gene in involved in maintenance of genome stability. It is involved in double-strand break repair pathways during mitotic and meiotic homologous recombination and functions in protecting DNA replication forks. The encoded protein contains sites for interactions with PALB2 and EMSY and an N-terminal DNA binding domain. It also contains a RAD51 binding domain with multiple components. It has multiple BRC repeats, an alpha helix domain, oligonucleotide binding folds, and a tower-like domain. It has a nuclear localization signal and a phosphorylation site for cyclin-dependent kinase. The C-terminus of the protein can bind single-stranded and double-stranded DNA. The product of this gene interacts with multiple proteins, including RAD51. It is involved in recruiting RAD51 filaments to DNA double-strand break sites and also in cytoplasmic division. It also acts as a tumor suppressor. Mutations in this gene or decreased expression have been implicated in multiple tumor types, including breast, ovarian, pancreatic, prostate and other cancers. [provided by RefSeq, May 2026].",
+    "aliases": [
+      "BRCC2",
+      "BROVCA2",
+      "FACD",
+      "FAD",
+      "FAD1",
+      "FANCD",
+      "FANCD1",
+      "GLM3"
+    ],
+    "location": "chr13:32,315,086–32,400,268 (+)",
+    "uniprot": "P51587",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/675"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000139618"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P51587"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/600185"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=BRCA2"
+      }
+    ],
+    "retrievedAt": "2026-07-27T09:43:28.251Z"
+  },
+  "claims": [
+    {
+      "text": "The product of the BRCA2 gene is involved in maintenance of genome stability and double-strand break repair pathways during mitotic and meiotic homologous recombination.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "function"
+    },
+    {
+      "text": "The BRCA2 protein contains multiple BRC repeats, an alpha helix domain, oligonucleotide binding folds, and a tower-like domain.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "Mutations in the BRCA2 gene or decreased expression have been implicated in multiple tumor types, including breast, ovarian, pancreatic, prostate and other cancers.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The BRCA2 gene is a protein-coding gene located on chromosome 13.",
+      "supportingFactIds": [
+        "gene.type",
+        "gene.location"
+      ],
+      "claimType": "identity"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "acc640888c2b8766",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T09:43:32.272Z",
+    "retrievedAt": "2026-07-27T09:43:28.251Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/675"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000139618"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P51587"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/600185"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=BRCA2"
+      }
+    ]
+  }
+}

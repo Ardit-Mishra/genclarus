@@ -1,0 +1,105 @@
+{
+  "kind": "gene",
+  "id": "GBA1",
+  "facts": {
+    "kind": "gene",
+    "symbol": "GBA1",
+    "name": "glucosylceramidase beta 1",
+    "type": "protein-coding",
+    "summary": "This gene encodes a lysosomal membrane protein that cleaves the beta-glucosidic linkage of glycosylceramide, an intermediate in glycolipid metabolism. Mutations in this gene cause Gaucher disease, a lysosomal storage disease characterized by an accumulation of glucocerebrosides. A related pseudogene is approximately 12 kb downstream of this gene on chromosome 1. Alternative splicing results in multiple transcript variants. [provided by RefSeq, Jan 2010].",
+    "aliases": [
+      "GBA",
+      "GCB",
+      "GLUC"
+    ],
+    "location": "chr1:155,231,270–155,245,178 (−)",
+    "uniprot": "P04062",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/2629"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000262446"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P04062"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/606463"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=GBA1"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:28:52.890Z"
+  },
+  "claims": [
+    {
+      "text": "The GBA1 gene encodes a lysosomal membrane protein.",
+      "supportingFactIds": [
+        "gene.symbol",
+        "gene.summary"
+      ],
+      "claimType": "function"
+    },
+    {
+      "text": "GBA1 mutations cause Gaucher disease.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "GBA1 is a protein-coding gene.",
+      "supportingFactIds": [
+        "gene.type"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "GBA1 is located on chromosome 1.",
+      "supportingFactIds": [
+        "gene.location"
+      ],
+      "claimType": "identity"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "1746503480d0c42f",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:28:55.736Z",
+    "retrievedAt": "2026-07-27T10:28:52.890Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/2629"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000262446"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P04062"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/606463"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=GBA1"
+      }
+    ]
+  }
+}

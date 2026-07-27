@@ -1,0 +1,126 @@
+{
+  "kind": "variant",
+  "id": "rs1050152",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs1050152",
+    "gene": "MIR3936HG",
+    "consequence": "missense variant",
+    "proteinChange": "p.Leu503Phe",
+    "alleleCount": 1,
+    "otherAlleles": [],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NM_003059.3(SLC22A4):c.1507C>T (p.Leu503Phe)",
+    "chrom": "5",
+    "position": 132340627,
+    "refAlt": "C>T",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "SLC22A4 POLYMORPHISM",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2005-10-01"
+      },
+      {
+        "condition": "not provided",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2025-02-03"
+      }
+    ],
+    "distinctSignificances": [
+      "Benign"
+    ],
+    "hasSomatic": false,
+    "hasGermline": true,
+    "gnomadAf": 0.267414,
+    "hasClinvar": true,
+    "hgvsId": "chr5:g.131676320C>T",
+    "variantId": 5750,
+    "uniprot": null,
+    "residue": 503,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs1050152"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/5750/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1050152"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/5-132340627-C-T?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:16:43.177Z"
+  },
+  "claims": [
+    {
+      "text": "The MIR3936HG gene variant rs1050152 is a missense variant.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.consequence"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The MIR3936HG gene variant rs1050152 is a single nucleotide variant.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.type"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The MIR3936HG gene variant rs1050152 has a protein change of p.Leu503Phe.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.protein"
+      ],
+      "claimType": "identity"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "089cdefec5c77bab",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:16:46.644Z",
+    "retrievedAt": "2026-07-27T10:16:43.177Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs1050152"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/5750/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1050152"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/5-132340627-C-T?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

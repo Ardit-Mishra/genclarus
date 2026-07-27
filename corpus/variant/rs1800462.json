@@ -1,0 +1,124 @@
+{
+  "kind": "variant",
+  "id": "rs1800462",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs1800462",
+    "gene": "TPMT",
+    "consequence": "missense variant",
+    "proteinChange": "p.Ala80Pro",
+    "alleleCount": 1,
+    "otherAlleles": [],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NM_000367.2(TPMT):c.238G>C (p.Ala80Pro)",
+    "chrom": "6",
+    "position": 18143724,
+    "refAlt": "C>G",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "Thiopurine S-methyltransferase deficiency",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "1999-02-01"
+      }
+    ],
+    "distinctSignificances": [
+      "Drug response"
+    ],
+    "hasSomatic": false,
+    "hasGermline": true,
+    "gnomadAf": 0.00124172,
+    "hasClinvar": true,
+    "hgvsId": "chr6:g.18143955C>G",
+    "variantId": 12721,
+    "uniprot": "P51580",
+    "residue": 80,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs1800462"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/12721/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1800462"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/6-18143724-C-G?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:11:00.959Z"
+  },
+  "claims": [
+    {
+      "text": "The TPMT gene variant rs1800462 is a missense variant.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.consequence"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The TPMT gene variant rs1800462 is a single nucleotide variant.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.type"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The TPMT gene variant rs1800462 has a protein change of p.Ala80Pro.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.protein"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The TPMT gene variant rs1800462 is associated with Thiopurine S-methyltransferase deficiency, classified as a drug response.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.cond.0.significance"
+      ],
+      "claimType": "classification_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "7f6cc5b1cbf2c780",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:11:07.136Z",
+    "retrievedAt": "2026-07-27T10:11:00.959Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs1800462"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/12721/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1800462"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/6-18143724-C-G?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

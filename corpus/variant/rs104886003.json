@@ -1,0 +1,328 @@
+{
+  "kind": "variant",
+  "id": "rs104886003",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs104886003",
+    "gene": "PIK3CA",
+    "consequence": "missense variant",
+    "proteinChange": "p.Glu545Lys",
+    "alleleCount": 2,
+    "otherAlleles": [
+      {
+        "proteinChange": "p.Glu545Gln",
+        "refAlt": "G>C",
+        "variantId": 375896,
+        "significance": "Drug response"
+      }
+    ],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NM_006218.4(PIK3CA):c.1633G>A (p.Glu545Lys)",
+    "chrom": "3",
+    "position": 179218303,
+    "refAlt": "G>A",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "PIK3CA related overgrowth syndrome",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2023-11-01"
+      },
+      {
+        "condition": "CLOVES syndrome",
+        "significance": "Likely pathogenic",
+        "rawSignificance": "Pathogenic/Likely pathogenic",
+        "significanceRank": 1,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "somatic",
+        "lastEvaluated": "2019-01-01"
+      },
+      {
+        "condition": "Eccrine angiomatous hamartoma",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "somatic",
+        "lastEvaluated": "2021-10-21"
+      },
+      {
+        "condition": "Segmental undergrowth associated with lymphatic malformation",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "somatic",
+        "lastEvaluated": "2021-04-06"
+      },
+      {
+        "condition": "PIK3CA overgrowth syndrome",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "somatic",
+        "lastEvaluated": "2020-12-09"
+      },
+      {
+        "condition": "Cerebrofacial Vascular Metameric Syndrome (CVMS)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "somatic",
+        "lastEvaluated": "2021-09-30"
+      },
+      {
+        "condition": "Gallbladder cancer",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "somatic",
+        "lastEvaluated": "2020-10-30"
+      },
+      {
+        "condition": "Breast adenocarcinoma",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "somatic",
+        "lastEvaluated": "2012-06-24"
+      },
+      {
+        "condition": "OVARIAN CANCER, EPITHELIAL, SOMATIC",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "somatic",
+        "lastEvaluated": "2012-06-24"
+      },
+      {
+        "condition": "Carcinoma of colon (CRC)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "somatic",
+        "lastEvaluated": "2012-06-24"
+      },
+      {
+        "condition": "Seborrheic keratosis",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "somatic",
+        "lastEvaluated": "2012-06-24"
+      },
+      {
+        "condition": "Megalencephaly-capillary malformation-polymicrogyria syndrome (MCAP)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "somatic",
+        "lastEvaluated": "2012-06-24"
+      },
+      {
+        "condition": "Non-small cell lung carcinoma (NSCLC)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "somatic",
+        "lastEvaluated": "2012-06-24"
+      },
+      {
+        "condition": "Gastric cancer",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "somatic",
+        "lastEvaluated": "2012-06-24"
+      },
+      {
+        "condition": "HEMIFACIAL MYOHYPERPLASIA, SOMATIC",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "somatic",
+        "lastEvaluated": "2012-06-24"
+      },
+      {
+        "condition": "Abnormal cardiovascular system morphology",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "somatic",
+        "lastEvaluated": null
+      },
+      {
+        "condition": "Angioosteohypertrophic syndrome (KTS)",
+        "significance": "Likely pathogenic",
+        "rawSignificance": "Likely pathogenic",
+        "significanceRank": 1,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "somatic",
+        "lastEvaluated": "2024-03-19"
+      },
+      {
+        "condition": "Rare venous malformation",
+        "significance": "Likely pathogenic",
+        "rawSignificance": "Likely pathogenic",
+        "significanceRank": 1,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "somatic",
+        "lastEvaluated": "2024-03-19"
+      },
+      {
+        "condition": "Rare combined vascular malformation",
+        "significance": "Likely pathogenic",
+        "rawSignificance": "Likely pathogenic",
+        "significanceRank": 1,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "somatic",
+        "lastEvaluated": "2024-03-19"
+      },
+      {
+        "condition": "Ovarian neoplasm",
+        "significance": "Likely pathogenic",
+        "rawSignificance": "Likely pathogenic",
+        "significanceRank": 1,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "somatic",
+        "lastEvaluated": "2018-12-01"
+      },
+      {
+        "condition": "Sarcoma",
+        "significance": "not provided",
+        "rawSignificance": "not provided",
+        "significanceRank": 9,
+        "reviewStatus": "no assertion provided",
+        "reviewStars": 0,
+        "origin": "somatic",
+        "lastEvaluated": null
+      },
+      {
+        "condition": "not provided",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2024-01-01"
+      }
+    ],
+    "distinctSignificances": [
+      "Pathogenic",
+      "Likely pathogenic",
+      "not provided"
+    ],
+    "hasSomatic": true,
+    "hasGermline": true,
+    "gnomadAf": null,
+    "hasClinvar": true,
+    "hgvsId": "chr3:g.178936091G>A",
+    "variantId": 13655,
+    "uniprot": "P42336",
+    "residue": 545,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs104886003"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/13655/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs104886003"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/3-179218303-G-A?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:16:29.745Z"
+  },
+  "claims": [
+    {
+      "text": "The PIK3CA gene variant rs104886003 is a missense variant leading to a p.Glu545Lys protein change.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.consequence",
+        "var.protein"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The PIK3CA gene variant rs104886003 is classified as Pathogenic for PIK3CA related overgrowth syndrome in a germline context.",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.0.origin"
+      ],
+      "claimType": "classification_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "d925e1d07f75ed6f",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:16:33.541Z",
+    "retrievedAt": "2026-07-27T10:16:29.745Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs104886003"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/13655/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs104886003"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/3-179218303-G-A?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

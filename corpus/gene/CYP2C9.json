@@ -1,0 +1,101 @@
+{
+  "kind": "gene",
+  "id": "CYP2C9",
+  "facts": {
+    "kind": "gene",
+    "symbol": "CYP2C9",
+    "name": "cytochrome P450 family 2 subfamily C member 9",
+    "type": "protein-coding",
+    "summary": "This gene encodes a member of the cytochrome P450 superfamily of enzymes. The cytochrome P450 proteins are monooxygenases which catalyze many reactions involved in drug metabolism and synthesis of cholesterol, steroids and other lipids. This protein localizes to the endoplasmic reticulum and its expression is induced by rifampin. The enzyme is known to metabolize many xenobiotics, including phenytoin, tolbutamide, ibuprofen and S-warfarin. Studies identifying individuals who are poor metabolizers of phenytoin and tolbutamide suggest that this gene is polymorphic. The gene is located within a cluster of cytochrome P450 genes on chromosome 10q24. [provided by RefSeq, Jul 2008].",
+    "aliases": [
+      "CPC9",
+      "CYP2C",
+      "CYP2C10",
+      "CYPIIC9",
+      "P450-2C9",
+      "P450IIC9"
+    ],
+    "location": "chr10:94,938,544–94,990,149 (+)",
+    "uniprot": "P11712",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/1559"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000138109"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P11712"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/601130"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=CYP2C9"
+      }
+    ],
+    "retrievedAt": "2026-07-27T09:49:25.590Z"
+  },
+  "claims": [
+    {
+      "text": "CYP2C9 is a member of the cytochrome P450 superfamily of enzymes.",
+      "supportingFactIds": [
+        "gene.symbol",
+        "gene.summary"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "CYP2C9 is a protein-coding gene.",
+      "supportingFactIds": [
+        "gene.type"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "CYP2C9 is polymorphic.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "classification_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "4dc2f21b69d82747",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T09:49:28.255Z",
+    "retrievedAt": "2026-07-27T09:49:25.590Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/1559"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000138109"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P11712"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/601130"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=CYP2C9"
+      }
+    ]
+  }
+}

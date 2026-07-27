@@ -1,0 +1,106 @@
+{
+  "kind": "gene",
+  "id": "DPYD",
+  "facts": {
+    "kind": "gene",
+    "symbol": "DPYD",
+    "name": "dihydropyrimidine dehydrogenase",
+    "type": "protein-coding",
+    "summary": "The protein encoded by this gene is a pyrimidine catabolic enzyme and the initial and rate-limiting factor in the pathway of uracil and thymidine catabolism. Mutations in this gene result in dihydropyrimidine dehydrogenase deficiency, an error in pyrimidine metabolism associated with thymine-uraciluria and an increased risk of toxicity in cancer patients receiving 5-fluorouracil chemotherapy. Two transcript variants encoding different isoforms have been found for this gene. [provided by RefSeq, May 2009].",
+    "aliases": [
+      "DHP",
+      "DHPDHASE",
+      "DPD",
+      "DYPD"
+    ],
+    "location": "chr1:97,077,743–97,995,000 (−)",
+    "uniprot": "Q12882",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/1806"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000188641"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/Q12882"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/612779"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=DPYD"
+      }
+    ],
+    "retrievedAt": "2026-07-27T09:49:36.856Z"
+  },
+  "claims": [
+    {
+      "text": "The DPYD gene encodes the dihydropyrimidine dehydrogenase protein, a pyrimidine catabolic enzyme.",
+      "supportingFactIds": [
+        "gene.symbol",
+        "gene.summary"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "Dihydropyrimidine dehydrogenase is the initial and rate-limiting factor in the pathway of uracil and thymidine catabolism.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "function"
+    },
+    {
+      "text": "Mutations in the DPYD gene result in dihydropyrimidine dehydrogenase deficiency.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "Two transcript variants encoding different isoforms of the dihydropyrimidine dehydrogenase protein have been found for the DPYD gene.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "identity"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "c72919691d4d6d04",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T09:49:39.897Z",
+    "retrievedAt": "2026-07-27T09:49:36.856Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/1806"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000188641"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/Q12882"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/612779"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=DPYD"
+      }
+    ]
+  }
+}

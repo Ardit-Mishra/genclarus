@@ -1,0 +1,107 @@
+{
+  "kind": "gene",
+  "id": "LRRK2",
+  "facts": {
+    "kind": "gene",
+    "symbol": "LRRK2",
+    "name": "leucine rich repeat kinase 2",
+    "type": "protein-coding",
+    "summary": "This gene is a member of the leucine-rich repeat kinase family and encodes a protein with an ankryin repeat region, a leucine-rich repeat (LRR) domain, a kinase domain, a DFG-like motif, a RAS domain, a GTPase domain, a MLK-like domain, and a WD40 domain. The protein is present largely in the cytoplasm but also associates with the mitochondrial outer membrane. Mutations in this gene have been associated with Parkinson disease-8. [provided by RefSeq, Jul 2008].",
+    "aliases": [
+      "AURA17",
+      "DARDARIN",
+      "PARK8",
+      "RIPK7",
+      "ROCO2"
+    ],
+    "location": "chr12:40,196,744–40,369,285 (+)",
+    "uniprot": "Q5S007",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/120892"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000188906"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/Q5S007"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/609007"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=LRRK2"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:26:05.648Z"
+  },
+  "claims": [
+    {
+      "text": "The LRRK2 gene is a member of the leucine-rich repeat kinase family and encodes a protein with multiple domains.",
+      "supportingFactIds": [
+        "gene.symbol",
+        "gene.summary"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "Mutations in the LRRK2 gene have been associated with Parkinson disease-8.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The LRRK2 gene is located on chromosome 12 between positions 40,196,744 and 40,369,285.",
+      "supportingFactIds": [
+        "gene.location"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The LRRK2 protein is present largely in the cytoplasm but also associates with the mitochondrial outer membrane.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "function"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "4e3ab767f4e1aa6b",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:26:08.894Z",
+    "retrievedAt": "2026-07-27T10:26:05.648Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/120892"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000188906"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/Q5S007"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/609007"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=LRRK2"
+      }
+    ]
+  }
+}

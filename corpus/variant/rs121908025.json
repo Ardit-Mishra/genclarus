@@ -1,0 +1,185 @@
+{
+  "kind": "variant",
+  "id": "rs121908025",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs121908025",
+    "gene": "LDLR",
+    "consequence": "missense variant",
+    "proteinChange": "p.Trp87Gly",
+    "alleleCount": 2,
+    "otherAlleles": [
+      {
+        "proteinChange": "p.Trp87Arg",
+        "refAlt": "T>C",
+        "variantId": 440552,
+        "significance": "Uncertain significance"
+      }
+    ],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NM_000527.5(LDLR):c.259T>G (p.Trp87Gly)",
+    "chrom": "19",
+    "position": 11102732,
+    "refAlt": "T>G",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "Hypercholesterolemia, familial, 1",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "reviewed by expert panel",
+        "reviewStars": 3,
+        "origin": "germline",
+        "lastEvaluated": "2021-06-07"
+      },
+      {
+        "condition": "Familial hypercholesterolemia",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2025-01-29"
+      },
+      {
+        "condition": "Dyslipidemia",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2023-07-20"
+      },
+      {
+        "condition": "Cardiovascular phenotype",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2022-04-26"
+      },
+      {
+        "condition": "Homozygous familial hypercholesterolemia",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2019-03-29"
+      },
+      {
+        "condition": "not provided",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2025-03-04"
+      }
+    ],
+    "distinctSignificances": [
+      "Pathogenic"
+    ],
+    "hasSomatic": false,
+    "hasGermline": true,
+    "gnomadAf": 0.0000318552,
+    "hasClinvar": true,
+    "hgvsId": "chr19:g.11213408T>G",
+    "variantId": 3685,
+    "uniprot": "P01130",
+    "residue": 87,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs121908025"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3685/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs121908025"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/19-11102732-T-G?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:13:58.448Z"
+  },
+  "claims": [
+    {
+      "text": "The LDLR gene variant rs121908025 is a missense variant leading to a p.Trp87Gly protein change.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.consequence",
+        "var.protein"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The LDLR gene variant rs121908025 is classified as Pathogenic for Hypercholesterolemia, familial, 1, Familial hypercholesterolemia, and Dyslipidemia.",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.1.significance",
+        "var.cond.2.significance"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The LDLR gene variant rs121908025 has a review confidence of 3 of 4 review stars for Hypercholesterolemia, familial, 1, 2 of 4 review stars for Familial hypercholesterolemia, and 1 of 4 review stars for Dyslipidemia.",
+      "supportingFactIds": [
+        "var.cond.0.reviewStars",
+        "var.cond.1.reviewStars",
+        "var.cond.2.reviewStars"
+      ],
+      "claimType": "uncertainty"
+    },
+    {
+      "text": "The LDLR gene variant rs121908025 originates from the germline for Hypercholesterolemia, familial, 1, Familial hypercholesterolemia, and Dyslipidemia.",
+      "supportingFactIds": [
+        "var.cond.0.origin",
+        "var.cond.1.origin",
+        "var.cond.2.origin"
+      ],
+      "claimType": "classification_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "682bfcd84951a6d8",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:14:02.830Z",
+    "retrievedAt": "2026-07-27T10:13:58.448Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs121908025"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3685/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs121908025"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/19-11102732-T-G?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

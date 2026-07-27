@@ -1,0 +1,338 @@
+{
+  "kind": "variant",
+  "id": "rs1042522",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs1042522",
+    "gene": "TP53",
+    "consequence": "missense variant",
+    "proteinChange": "p.Pro72Arg",
+    "alleleCount": 4,
+    "otherAlleles": [
+      {
+        "proteinChange": "p.Pro72His",
+        "refAlt": "G>T",
+        "variantId": 185120,
+        "significance": "Conflicting interpretations"
+      },
+      {
+        "proteinChange": "p.Pro72Leu",
+        "refAlt": "G>A",
+        "variantId": 864652,
+        "significance": "Uncertain significance"
+      },
+      {
+        "proteinChange": "p.Arg72Pro",
+        "refAlt": "G>G",
+        "variantId": 165560,
+        "significance": "Benign"
+      }
+    ],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NM_000546.6(TP53):c.215C>G (p.Pro72Arg)",
+    "chrom": "17",
+    "position": 7676154,
+    "refAlt": "G>C",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "Li-Fraumeni syndrome (LFS)",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2025-02-04"
+      },
+      {
+        "condition": "Hereditary cancer-predisposing syndrome",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2022-06-18"
+      },
+      {
+        "condition": "Li-Fraumeni syndrome 1 (LFS)",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2022-06-18"
+      },
+      {
+        "condition": "Hereditary breast ovarian cancer syndrome",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2022-04-19"
+      },
+      {
+        "condition": "Adrenocortical carcinoma, hereditary (ADCC)",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2021-12-20"
+      },
+      {
+        "condition": "Familial cancer of breast",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2021-12-20"
+      },
+      {
+        "condition": "Glioma susceptibility 1 (GLM1)",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2021-12-20"
+      },
+      {
+        "condition": "Bone osteosarcoma",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2021-12-20"
+      },
+      {
+        "condition": "Li-Fraumeni syndrome 1 (LFS)",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2021-12-20"
+      },
+      {
+        "condition": "Nasopharyngeal carcinoma",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2021-12-20"
+      },
+      {
+        "condition": "Carcinoma of pancreas",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2021-12-20"
+      },
+      {
+        "condition": "Choroid plexus papilloma (CPP)",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2021-12-20"
+      },
+      {
+        "condition": "Basal cell carcinoma, susceptibility to, 7 (BCC7)",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2021-12-20"
+      },
+      {
+        "condition": "Hepatocellular carcinoma (HCC)",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2021-12-20"
+      },
+      {
+        "condition": "Colorectal cancer",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2021-12-20"
+      },
+      {
+        "condition": "Bone marrow failure syndrome 5",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2021-12-20"
+      },
+      {
+        "condition": "Lip and oral cavity carcinoma",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "somatic",
+        "lastEvaluated": "2019-04-30"
+      },
+      {
+        "condition": "TP53 POLYMORPHISM",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "unknown",
+        "lastEvaluated": "2009-10-01"
+      },
+      {
+        "condition": "Acute myeloid leukemia (AML)",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "somatic",
+        "lastEvaluated": null
+      },
+      {
+        "condition": "not provided",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2024-11-27"
+      },
+      {
+        "condition": "not specified",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2016-04-05"
+      }
+    ],
+    "distinctSignificances": [
+      "Pathogenic",
+      "Benign"
+    ],
+    "hasSomatic": true,
+    "hasGermline": true,
+    "gnomadAf": 0.620657,
+    "hasClinvar": true,
+    "hgvsId": "chr17:g.7579472G>C",
+    "variantId": 12351,
+    "uniprot": "P04637",
+    "residue": 72,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs1042522"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/12351/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1042522"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/17-7676154-G-C?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:09:24.105Z"
+  },
+  "claims": [
+    {
+      "text": "The TP53 gene variant rs1042522 is a missense variant with a p.Pro72Arg protein change.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.consequence",
+        "var.protein"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "This variant is a single nucleotide variant with a frequency of 62% in the general population.",
+      "supportingFactIds": [
+        "var.type",
+        "var.gnomadAf"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The review confidence for the Li-Fraumeni syndrome, Hereditary cancer-predisposing syndrome, and Li-Fraumeni syndrome 1 conditions is 2 of 4 review stars.",
+      "supportingFactIds": [
+        "var.cond.0.reviewStars",
+        "var.cond.1.reviewStars",
+        "var.cond.2.reviewStars"
+      ],
+      "claimType": "classification_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "6360953662d86802",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:09:28.611Z",
+    "retrievedAt": "2026-07-27T10:09:24.105Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs1042522"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/12351/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1042522"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/17-7676154-G-C?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

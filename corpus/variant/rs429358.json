@@ -1,0 +1,259 @@
+{
+  "kind": "variant",
+  "id": "rs429358",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs429358",
+    "gene": "APOE",
+    "consequence": "missense variant",
+    "proteinChange": "p.Cys130Arg",
+    "alleleCount": 2,
+    "otherAlleles": [
+      {
+        "proteinChange": "",
+        "refAlt": "T>T",
+        "variantId": 17863,
+        "significance": "Pathogenic"
+      }
+    ],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NM_000041.4(APOE):c.388T>C (p.Cys130Arg)",
+    "chrom": "19",
+    "position": 44908684,
+    "refAlt": "T>C",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "Alzheimer disease 4 (AD4)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2020-03-24"
+      },
+      {
+        "condition": "Alzheimer disease",
+        "significance": "Likely pathogenic",
+        "rawSignificance": "Likely pathogenic",
+        "significanceRank": 1,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2019-06-27"
+      },
+      {
+        "condition": "Primary degenerative dementia of the Alzheimer type, presenile onset",
+        "significance": "Risk factor",
+        "rawSignificance": "risk factor",
+        "significanceRank": 3,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2019-01-16"
+      },
+      {
+        "condition": "Lipoprotein glomerulopathy (LPG)",
+        "significance": "Uncertain significance",
+        "rawSignificance": "Uncertain significance",
+        "significanceRank": 6,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2019-01-01"
+      },
+      {
+        "condition": "Alzheimer disease 2 (AD2)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic/Established risk allele",
+        "significanceRank": 0,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2022-06-27"
+      },
+      {
+        "condition": "APOE4(-)-FREIBURG",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2017-02-15"
+      },
+      {
+        "condition": "Familial type 3 hyperlipoproteinemia",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "1993-05-01"
+      },
+      {
+        "condition": "Familial hypercholesterolemia",
+        "significance": "Likely pathogenic",
+        "rawSignificance": "Likely pathogenic",
+        "significanceRank": 1,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2020-05-27"
+      },
+      {
+        "condition": "Warfarin response",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "unknown",
+        "lastEvaluated": "2010-08-31"
+      },
+      {
+        "condition": "Familial type 3 hyperlipoproteinemia",
+        "significance": "not provided",
+        "rawSignificance": "not provided",
+        "significanceRank": 9,
+        "reviewStatus": "no assertion provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2023-06-08"
+      },
+      {
+        "condition": "APOE5 VARIANT",
+        "significance": "association",
+        "rawSignificance": "association",
+        "significanceRank": 9,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2019-11-22"
+      },
+      {
+        "condition": "not provided",
+        "significance": "Conflicting interpretations",
+        "rawSignificance": "Conflicting interpretations of pathogenicity; other; risk factor",
+        "significanceRank": 5,
+        "reviewStatus": "criteria provided, conflicting interpretations",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2024-10-15"
+      },
+      {
+        "condition": "not specified",
+        "significance": "Uncertain significance",
+        "rawSignificance": "Uncertain significance",
+        "significanceRank": 6,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2019-01-18"
+      }
+    ],
+    "distinctSignificances": [
+      "Pathogenic",
+      "Likely pathogenic",
+      "Risk factor",
+      "Drug response",
+      "Conflicting interpretations",
+      "Uncertain significance",
+      "not provided",
+      "association"
+    ],
+    "hasSomatic": false,
+    "hasGermline": true,
+    "gnomadAf": 0.164436,
+    "hasClinvar": true,
+    "hgvsId": "chr19:g.45411941T>C",
+    "variantId": 441269,
+    "uniprot": "P02649",
+    "residue": 130,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs429358"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/441269/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs429358"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/19-44908684-T-C?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:07:26.492Z"
+  },
+  "claims": [
+    {
+      "text": "The APOE gene variant rs429358 is a missense variant leading to the protein change p.Cys130Arg.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.consequence",
+        "var.protein"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The APOE gene variant rs429358 is a single nucleotide variant.",
+      "supportingFactIds": [
+        "var.type"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The APOE gene variant rs429358 is classified as pathogenic for Alzheimer disease 4 (AD4) with low review confidence.",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The APOE gene variant rs429358 is classified as likely pathogenic for Alzheimer disease with low review confidence and germline origin.",
+      "supportingFactIds": [
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars",
+        "var.cond.1.origin"
+      ],
+      "claimType": "classification_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "fd387f79594f3889",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:07:33.001Z",
+    "retrievedAt": "2026-07-27T10:07:26.492Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs429358"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/441269/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs429358"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/19-44908684-T-C?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

@@ -1,0 +1,377 @@
+{
+  "kind": "variant",
+  "id": "rs76763715",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs76763715",
+    "gene": "GBA",
+    "consequence": "missense variant",
+    "proteinChange": "p.Asn409Ser",
+    "alleleCount": 2,
+    "otherAlleles": [
+      {
+        "proteinChange": "p.Asn409Thr",
+        "refAlt": "T>G",
+        "variantId": 38301,
+        "significance": "not provided"
+      }
+    ],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NM_000157.4(GBA1):c.1226A>G (p.Asn409Ser)",
+    "chrom": "1",
+    "position": 155235843,
+    "refAlt": "T>C",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "Parkinson disease, late-onset (PD)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2024-08-27"
+      },
+      {
+        "condition": "Gaucher disease",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2023-08-17"
+      },
+      {
+        "condition": "Gaucher disease perinatal lethal",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "unknown",
+        "lastEvaluated": "2019-03-04"
+      },
+      {
+        "condition": "Gaucher disease type I (GD1)",
+        "significance": "Likely pathogenic",
+        "rawSignificance": "Pathogenic/Likely pathogenic",
+        "significanceRank": 1,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2024-10-11"
+      },
+      {
+        "condition": "Lewy body dementia (DLB)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2022-05-04"
+      },
+      {
+        "condition": "Lewy body dementia (DLB)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2022-02-20"
+      },
+      {
+        "condition": "Gaucher disease type I (GD1)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2022-02-20"
+      },
+      {
+        "condition": "Gaucher disease type II (GD2)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2022-02-20"
+      },
+      {
+        "condition": "Gaucher disease type III",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2022-02-20"
+      },
+      {
+        "condition": "Gaucher disease-ophthalmoplegia-cardiovascular calcification syndrome",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2022-02-20"
+      },
+      {
+        "condition": "Parkinson disease, late-onset (PD)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2022-02-20"
+      },
+      {
+        "condition": "Gaucher disease type I (GD1)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": null
+      },
+      {
+        "condition": "Gaucher disease type II (GD2)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": null
+      },
+      {
+        "condition": "Gaucher disease type III",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": null
+      },
+      {
+        "condition": "Gaucher disease-ophthalmoplegia-cardiovascular calcification syndrome",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": null
+      },
+      {
+        "condition": "Lewy body dementia (DLB)",
+        "significance": "Likely pathogenic",
+        "rawSignificance": "Likely pathogenic",
+        "significanceRank": 1,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2023-11-08"
+      },
+      {
+        "condition": "Parkinson disease, late-onset (PD)",
+        "significance": "Likely pathogenic",
+        "rawSignificance": "Likely pathogenic",
+        "significanceRank": 1,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2023-11-08"
+      },
+      {
+        "condition": "Rigidity",
+        "significance": "Likely pathogenic",
+        "rawSignificance": "Likely pathogenic",
+        "significanceRank": 1,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2014-02-19"
+      },
+      {
+        "condition": "Akinesia",
+        "significance": "Likely pathogenic",
+        "rawSignificance": "Likely pathogenic",
+        "significanceRank": 1,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2014-02-19"
+      },
+      {
+        "condition": "Parkinson disease (PD)",
+        "significance": "Risk factor",
+        "rawSignificance": "risk factor",
+        "significanceRank": 3,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2020-04-14"
+      },
+      {
+        "condition": "GBA1-related disorder",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2024-02-21"
+      },
+      {
+        "condition": "Dementia, Lewy body, susceptibility to",
+        "significance": "Risk factor",
+        "rawSignificance": "risk factor",
+        "significanceRank": 3,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2010-08-01"
+      },
+      {
+        "condition": "Abnormal bleeding",
+        "significance": "Uncertain significance",
+        "rawSignificance": "Uncertain significance",
+        "significanceRank": 6,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2020-05-01"
+      },
+      {
+        "condition": "Thrombocytopenia",
+        "significance": "Uncertain significance",
+        "rawSignificance": "Uncertain significance",
+        "significanceRank": 6,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2020-05-01"
+      },
+      {
+        "condition": "not provided",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2025-03-01"
+      },
+      {
+        "condition": "not specified",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2024-06-27"
+      }
+    ],
+    "distinctSignificances": [
+      "Pathogenic",
+      "Likely pathogenic",
+      "Risk factor",
+      "Uncertain significance"
+    ],
+    "hasSomatic": false,
+    "hasGermline": true,
+    "gnomadAf": 0.00162721,
+    "hasClinvar": true,
+    "hgvsId": "chr1:g.155205634T>C",
+    "variantId": 4290,
+    "uniprot": null,
+    "residue": 409,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs76763715"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4290/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs76763715"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/1-155235843-T-C?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:12:37.044Z"
+  },
+  "claims": [
+    {
+      "text": "The GBA gene variant rs76763715 is a missense variant with a protein change of p.Asn409Ser.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.consequence",
+        "var.protein"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The variant rs76763715 is classified as Pathogenic for Parkinson disease, late-onset (PD) with a review confidence of 2 of 4 stars.",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The variant rs76763715 is classified as Pathogenic for Gaucher disease with a review confidence of 2 of 4 stars.",
+      "supportingFactIds": [
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars"
+      ],
+      "claimType": "classification_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "d73e6e07884259c5",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:12:46.528Z",
+    "retrievedAt": "2026-07-27T10:12:37.044Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs76763715"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4290/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs76763715"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/1-155235843-T-C?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

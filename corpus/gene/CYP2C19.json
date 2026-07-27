@@ -1,0 +1,101 @@
+{
+  "kind": "gene",
+  "id": "CYP2C19",
+  "facts": {
+    "kind": "gene",
+    "symbol": "CYP2C19",
+    "name": "cytochrome P450 family 2 subfamily C member 19",
+    "type": "protein-coding",
+    "summary": "This gene encodes a member of the cytochrome P450 superfamily of enzymes. The cytochrome P450 proteins are monooxygenases which catalyze many reactions involved in drug metabolism and synthesis of cholesterol, steroids and other lipids. This protein localizes to the endoplasmic reticulum and is known to metabolize many xenobiotics, including the anticonvulsive drug mephenytoin, omeprazole, diazepam and some barbiturates. Polymorphism within this gene is associated with variable ability to metabolize mephenytoin, known as the poor metabolizer and extensive metabolizer phenotypes. The gene is located within a cluster of cytochrome P450 genes on chromosome 10q24. [provided by RefSeq, Jul 2008].",
+    "aliases": [
+      "CPCJ",
+      "CYP2C",
+      "CYPIIC17",
+      "CYPIIC19",
+      "P450C2C",
+      "P450IIC19"
+    ],
+    "location": "chr10:94,762,536–94,922,264 (+)",
+    "uniprot": "P33261",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/1557"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000165841"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P33261"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/124020"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=CYP2C19"
+      }
+    ],
+    "retrievedAt": "2026-07-27T09:49:14.223Z"
+  },
+  "claims": [
+    {
+      "text": "CYP2C19 encodes a member of the cytochrome P450 superfamily of enzymes.",
+      "supportingFactIds": [
+        "gene.symbol",
+        "gene.summary"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "CYP2C19 localizes to the endoplasmic reticulum and metabolizes many xenobiotics.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "function"
+    },
+    {
+      "text": "CYP2C19 polymorphism is associated with variable ability to metabolize mephenytoin.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "classification_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "613426950d0da226",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T09:49:17.295Z",
+    "retrievedAt": "2026-07-27T09:49:14.223Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/1557"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000165841"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P33261"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/124020"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=CYP2C19"
+      }
+    ]
+  }
+}

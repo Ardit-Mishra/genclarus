@@ -1,0 +1,198 @@
+{
+  "kind": "variant",
+  "id": "rs11591147",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs11591147",
+    "gene": "PCSK9",
+    "consequence": "missense variant",
+    "proteinChange": "p.Arg46Leu",
+    "alleleCount": 1,
+    "otherAlleles": [],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NM_174936.4(PCSK9):c.137G>T (p.Arg46Leu)",
+    "chrom": "1",
+    "position": 55039974,
+    "refAlt": "G>T",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "Hypercholesterolemia, autosomal dominant, 3 (FHCL3)",
+        "significance": "Likely benign",
+        "rawSignificance": "Benign/Likely benign",
+        "significanceRank": 7,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2025-02-02"
+      },
+      {
+        "condition": "Familial hypercholesterolemia",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2022-07-01"
+      },
+      {
+        "condition": "Hypercholesterolemia, familial, 1",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2019-08-22"
+      },
+      {
+        "condition": "Hypobetalipoproteinemia",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2018-03-06"
+      },
+      {
+        "condition": "Cardiovascular phenotype",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2017-03-16"
+      },
+      {
+        "condition": "Hypocholesterolemia",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": null
+      },
+      {
+        "condition": "Low density lipoprotein cholesterol level quantitative trait locus 1 (LDLCQ1)",
+        "significance": "association",
+        "rawSignificance": "association",
+        "significanceRank": 9,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2008-03-20"
+      },
+      {
+        "condition": "not provided",
+        "significance": "Likely benign",
+        "rawSignificance": "Benign/Likely benign",
+        "significanceRank": 7,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2024-11-22"
+      },
+      {
+        "condition": "not specified",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2017-05-08"
+      }
+    ],
+    "distinctSignificances": [
+      "Pathogenic",
+      "Likely benign",
+      "Benign",
+      "association"
+    ],
+    "hasSomatic": false,
+    "hasGermline": true,
+    "gnomadAf": 0.0140446,
+    "hasClinvar": false,
+    "hgvsId": "chr1:g.55505647G>T",
+    "variantId": 2878,
+    "uniprot": "Q8NBP7",
+    "residue": 46,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs11591147"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2878/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs11591147"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/1-55039974-G-T?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:12:56.134Z"
+  },
+  "claims": [
+    {
+      "text": "The PCSK9 gene variant rs11591147 is a missense variant with the protein change p.Arg46Leu.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.consequence",
+        "var.protein"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The PCSK9 gene variant rs11591147 is a single nucleotide variant.",
+      "supportingFactIds": [
+        "var.type"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The PCSK9 gene variant rs11591147 has a frequency of 1.4% in gnomAD.",
+      "supportingFactIds": [
+        "var.gnomadAf"
+      ],
+      "claimType": "frequency_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "6dffa21ff2bc44fb",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:13:00.844Z",
+    "retrievedAt": "2026-07-27T10:12:56.134Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs11591147"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/2878/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs11591147"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/1-55039974-G-T?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "kind": "gene",
+  "id": "F8",
+  "facts": {
+    "kind": "gene",
+    "symbol": "F8",
+    "name": "coagulation factor VIII",
+    "type": "protein-coding",
+    "summary": "This gene encodes coagulation factor VIII, which participates in the intrinsic pathway of blood coagulation; factor VIII is a cofactor for factor IXa which, in the presence of Ca+2 and phospholipids, converts factor X to the activated form Xa. This gene produces two alternatively spliced transcripts. Transcript variant 1 encodes a large glycoprotein, isoform a, which circulates in plasma and associates with von Willebrand factor in a noncovalent complex. This protein undergoes multiple cleavage events. Transcript variant 2 encodes a putative small protein, isoform b, which consists primarily of the phospholipid binding domain of factor VIIIc. This binding domain is essential for coagulant activity. Defects in this gene results in hemophilia A, a common recessive X-linked coagulation disorder. [provided by RefSeq, Jul 2008].",
+    "aliases": [
+      "AHF",
+      "DXS1253E",
+      "F8B",
+      "F8C",
+      "FVIII",
+      "HEMA",
+      "THPH13"
+    ],
+    "location": "chrX:154,835,788–155,026,940 (−)",
+    "uniprot": "P00451",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/2157"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000185010"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P00451"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/300841"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=F8"
+      }
+    ],
+    "retrievedAt": "2026-07-27T09:48:07.348Z"
+  },
+  "claims": [
+    {
+      "text": "Coagulation factor VIII is a protein-coding gene located on the X chromosome.",
+      "supportingFactIds": [
+        "gene.symbol",
+        "gene.type",
+        "gene.location"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "Coagulation factor VIII is a cofactor for factor IXa in the intrinsic pathway of blood coagulation.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "function"
+    },
+    {
+      "text": "Defects in the F8 gene result in hemophilia A, a common recessive X-linked coagulation disorder.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "Coagulation factor VIII undergoes multiple cleavage events.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "function"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "e06a3156d4c3c629",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T09:48:10.829Z",
+    "retrievedAt": "2026-07-27T09:48:07.348Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/2157"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000185010"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P00451"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/300841"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=F8"
+      }
+    ]
+  }
+}

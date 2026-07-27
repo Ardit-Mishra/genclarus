@@ -1,0 +1,161 @@
+{
+  "kind": "variant",
+  "id": "rs2228570",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs2228570",
+    "gene": "VDR",
+    "consequence": "missense variant",
+    "proteinChange": "p.Met1Thr",
+    "alleleCount": 2,
+    "otherAlleles": [
+      {
+        "proteinChange": "p.Met1Arg",
+        "refAlt": "A>C",
+        "variantId": 3235711,
+        "significance": "Uncertain significance"
+      }
+    ],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NM_000376.3(VDR):c.2T>C (p.Met1Thr)",
+    "chrom": "12",
+    "position": 47879112,
+    "refAlt": "A>G",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "Vitamin D-dependent rickets type II with alopecia (VDDR2A)",
+        "significance": "Conflicting interpretations",
+        "rawSignificance": "Conflicting interpretations of pathogenicity",
+        "significanceRank": 5,
+        "reviewStatus": "criteria provided, conflicting interpretations",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2023-04-17"
+      },
+      {
+        "condition": "Periodontitis",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2023-04-20"
+      },
+      {
+        "condition": "not provided",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2025-02-03"
+      },
+      {
+        "condition": "not specified",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2016-02-17"
+      }
+    ],
+    "distinctSignificances": [
+      "Conflicting interpretations",
+      "Benign"
+    ],
+    "hasSomatic": false,
+    "hasGermline": true,
+    "gnomadAf": 0.647792,
+    "hasClinvar": true,
+    "hgvsId": "chr12:g.48272895A>G",
+    "variantId": 308887,
+    "uniprot": "P11473",
+    "residue": 1,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs2228570"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/308887/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs2228570"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/12-47879112-A-G?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:13:28.590Z"
+  },
+  "claims": [
+    {
+      "text": "The VDR gene variant rs2228570 is a missense variant with a protein change of p.Met1Thr.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.consequence",
+        "var.protein"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The variant rs2228570 has a frequency of 65% in the gnomAD population.",
+      "supportingFactIds": [
+        "var.type",
+        "var.gnomadAf"
+      ],
+      "claimType": "frequency_context"
+    },
+    {
+      "text": "The significance of the variant rs2228570 for Vitamin D-dependent rickets type II with alopecia is conflicting.",
+      "supportingFactIds": [
+        "var.cond.0.significance"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The variant rs2228570 is classified as benign for Periodontitis.",
+      "supportingFactIds": [
+        "var.cond.1.significance"
+      ],
+      "claimType": "classification_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "a12e4b4adc5eb013",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:13:31.892Z",
+    "retrievedAt": "2026-07-27T10:13:28.590Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs2228570"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/308887/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs2228570"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/12-47879112-A-G?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

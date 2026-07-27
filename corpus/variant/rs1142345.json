@@ -1,0 +1,137 @@
+{
+  "kind": "variant",
+  "id": "rs1142345",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs1142345",
+    "gene": "TPMT",
+    "consequence": "missense variant",
+    "proteinChange": "p.Tyr240Cys",
+    "alleleCount": 1,
+    "otherAlleles": [],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NM_000367.5(TPMT):c.719A>G (p.Tyr240Cys)",
+    "chrom": "6",
+    "position": 18130687,
+    "refAlt": "T>C",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "Thiopurine S-methyltransferase deficiency",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2006-02-01"
+      },
+      {
+        "condition": "not provided",
+        "significance": "Likely benign",
+        "rawSignificance": "Likely benign; other",
+        "significanceRank": 7,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2024-07-01"
+      }
+    ],
+    "distinctSignificances": [
+      "Drug response",
+      "Likely benign"
+    ],
+    "hasSomatic": false,
+    "hasGermline": true,
+    "gnomadAf": 0.040791,
+    "hasClinvar": true,
+    "hgvsId": "chr6:g.18130918T>C",
+    "variantId": 12722,
+    "uniprot": "P51580",
+    "residue": 240,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs1142345"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/12722/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1142345"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/6-18130687-T-C?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:10:55.377Z"
+  },
+  "claims": [
+    {
+      "text": "The TPMT gene variant rs1142345 is a missense variant with a protein change of p.Tyr240Cys.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.consequence",
+        "var.protein"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The TPMT gene variant rs1142345 is a single nucleotide variant with a frequency of 4.1% in gnomAD.",
+      "supportingFactIds": [
+        "var.type",
+        "var.gnomadAf"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The significance of the TPMT gene variant rs1142345 for Thiopurine S-methyltransferase deficiency is classified as Drug response with low review confidence.",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The significance of the TPMT gene variant rs1142345 is classified as Likely benign with moderate review confidence.",
+      "supportingFactIds": [
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars"
+      ],
+      "claimType": "classification_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "a8da133734c8ba3b",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:10:59.201Z",
+    "retrievedAt": "2026-07-27T10:10:55.377Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs1142345"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/12722/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1142345"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/6-18130687-T-C?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

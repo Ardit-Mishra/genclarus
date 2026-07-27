@@ -1,0 +1,110 @@
+{
+  "kind": "gene",
+  "id": "GJB2",
+  "facts": {
+    "kind": "gene",
+    "symbol": "GJB2",
+    "name": "gap junction protein beta 2",
+    "type": "protein-coding",
+    "summary": "This gene encodes a member of the gap junction protein family (gap junction beta 2) but is more commonly known as connexin 26. The gap junctions were first characterized by electron microscopy as regionally specialized structures on plasma membranes of contacting adherent cells. These structures were shown to consist of cell-to-cell channels that facilitate the transfer of ions and small molecules between cells. Connexins form hexameric channels in the plasma membrane which regulate passage of ions and small molecules between the cell and its environment or, when joined with another cell, form a dodecameric intercellular gap junction channel. The connexin proteins are grouped into alpha, beta, and gamma subfamilies. Mutations in this gene are responsible for as much as 50% of pre-lingual, recessive deafness. [provided by RefSeq, Mar 2026].",
+    "aliases": [
+      "BAPS",
+      "CX26",
+      "DFNA3",
+      "DFNA3A",
+      "DFNB1",
+      "DFNB1A",
+      "HID",
+      "KID"
+    ],
+    "location": "chr13:20,187,463–20,192,980 (−)",
+    "uniprot": "P29033",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/2706"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000165474"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P29033"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/121011"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=GJB2"
+      }
+    ],
+    "retrievedAt": "2026-07-27T09:49:50.888Z"
+  },
+  "claims": [
+    {
+      "text": "The gap junction protein beta 2 is a member of the gap junction protein family, also known as connexin 26.",
+      "supportingFactIds": [
+        "gene.symbol",
+        "gene.summary"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "Mutations in the gap junction protein beta 2 gene are responsible for up to 50% of pre-lingual, recessive deafness.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The gap junction protein beta 2 gene is located on chromosome 13, between base pairs 20,187,463 and 20,192,980.",
+      "supportingFactIds": [
+        "gene.location"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The gap junction protein beta 2 gene is a protein-coding gene.",
+      "supportingFactIds": [
+        "gene.type"
+      ],
+      "claimType": "identity"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "b8ab9c2ff94d2c47",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T09:49:56.950Z",
+    "retrievedAt": "2026-07-27T09:49:50.888Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/2706"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000165474"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P29033"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/121011"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=GJB2"
+      }
+    ]
+  }
+}

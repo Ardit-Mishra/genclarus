@@ -1,0 +1,228 @@
+{
+  "kind": "variant",
+  "id": "rs28897696",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs28897696",
+    "gene": "BRCA1",
+    "consequence": "missense variant",
+    "proteinChange": "p.Ala1708Glu",
+    "alleleCount": 3,
+    "otherAlleles": [
+      {
+        "proteinChange": "p.Ala1708Gly",
+        "refAlt": "G>C",
+        "variantId": 867673,
+        "significance": "Likely pathogenic"
+      },
+      {
+        "proteinChange": "p.Ala1708Val",
+        "refAlt": "G>A",
+        "variantId": 37640,
+        "significance": "Conflicting interpretations"
+      }
+    ],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NM_007294.4(BRCA1):c.5123C>A (p.Ala1708Glu)",
+    "chrom": "17",
+    "position": 43063903,
+    "refAlt": "G>T",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "Breast-ovarian cancer, familial, susceptibility to, 1 (BROVCA1)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "reviewed by expert panel",
+        "reviewStars": 3,
+        "origin": "germline",
+        "lastEvaluated": "2015-08-10"
+      },
+      {
+        "condition": "Hereditary breast ovarian cancer syndrome",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "unknown",
+        "lastEvaluated": "2025-01-23"
+      },
+      {
+        "condition": "Hereditary cancer-predisposing syndrome",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2024-08-22"
+      },
+      {
+        "condition": "BRCA1-related cancer predisposition",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2024-08-13"
+      },
+      {
+        "condition": "Breast and/or ovarian cancer",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2022-05-02"
+      },
+      {
+        "condition": "Familial cancer of breast",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2017-02-23"
+      },
+      {
+        "condition": "Breast neoplasm",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": null
+      },
+      {
+        "condition": "BRCA1-related disorder",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2024-07-23"
+      },
+      {
+        "condition": "Breast carcinoma",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2021-08-21"
+      },
+      {
+        "condition": "not provided",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2023-12-06"
+      }
+    ],
+    "distinctSignificances": [
+      "Pathogenic"
+    ],
+    "hasSomatic": false,
+    "hasGermline": true,
+    "gnomadAf": null,
+    "hasClinvar": true,
+    "hgvsId": "chr17:g.41215920G>T",
+    "variantId": 55407,
+    "uniprot": "P38398",
+    "residue": 1708,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs28897696"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/55407/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs28897696"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/17-43063903-G-T?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:14:04.766Z"
+  },
+  "claims": [
+    {
+      "text": "The BRCA1 gene variant rs28897696 is a missense variant with a protein change of p.Ala1708Glu.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.consequence",
+        "var.protein"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "This variant is classified as Pathogenic for Breast-ovarian cancer, familial, susceptibility to, 1 (BROVCA1) and Hereditary breast ovarian cancer syndrome with moderate and low review confidence, respectively.",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.1.significance"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The variant is of germline origin for Breast-ovarian cancer, familial, susceptibility to, 1 (BROVCA1) and Hereditary cancer-predisposing syndrome.",
+      "supportingFactIds": [
+        "var.cond.0.origin",
+        "var.cond.2.origin"
+      ],
+      "claimType": "condition_context"
+    },
+    {
+      "text": "The variant is classified as Pathogenic for Hereditary cancer-predisposing syndrome with low review confidence.",
+      "supportingFactIds": [
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars"
+      ],
+      "claimType": "classification_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "379dba0dba15e765",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:14:11.042Z",
+    "retrievedAt": "2026-07-27T10:14:04.766Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs28897696"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/55407/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs28897696"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/17-43063903-G-T?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

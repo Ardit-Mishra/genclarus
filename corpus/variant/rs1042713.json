@@ -1,0 +1,131 @@
+{
+  "kind": "variant",
+  "id": "rs1042713",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs1042713",
+    "gene": "ADRB2",
+    "consequence": "missense variant",
+    "proteinChange": "p.Gly16Arg",
+    "alleleCount": 2,
+    "otherAlleles": [
+      {
+        "proteinChange": "p.Arg16Gly",
+        "refAlt": "G>G",
+        "variantId": 17742,
+        "significance": "Benign"
+      }
+    ],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NM_000024.6(ADRB2):c.46G>A (p.Gly16Arg)",
+    "chrom": "5",
+    "position": 148826877,
+    "refAlt": "G>A",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "salmeterol response - Efficacy",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "reviewed by expert panel",
+        "reviewStars": 3,
+        "origin": "germline",
+        "lastEvaluated": "2021-03-24"
+      }
+    ],
+    "distinctSignificances": [
+      "Drug response"
+    ],
+    "hasSomatic": false,
+    "hasGermline": true,
+    "gnomadAf": 0.426578,
+    "hasClinvar": true,
+    "hgvsId": "chr5:g.148206440G>A",
+    "variantId": 225937,
+    "uniprot": "P07550",
+    "residue": 16,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs1042713"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/225937/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1042713"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/5-148826877-G-A?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:07:41.002Z"
+  },
+  "claims": [
+    {
+      "text": "The ADRB2 gene variant rs1042713 is a missense variant that changes the protein to p.Gly16Arg.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.consequence",
+        "var.protein"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "This variant is a single nucleotide variant.",
+      "supportingFactIds": [
+        "var.type"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The ADRB2 gene variant rs1042713 is associated with a drug response to salmeterol, with a review confidence of 3 of 4 stars.",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "This variant is found in 43% of the African population in gnomAD.",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.gnomadAf"
+      ],
+      "claimType": "frequency_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "37e80e320f84f5c9",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:07:44.966Z",
+    "retrievedAt": "2026-07-27T10:07:41.002Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs1042713"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/225937/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1042713"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/5-148826877-G-A?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

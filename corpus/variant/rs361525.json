@@ -1,0 +1,134 @@
+{
+  "kind": "variant",
+  "id": "rs361525",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs361525",
+    "gene": "TNF",
+    "consequence": "",
+    "proteinChange": "",
+    "alleleCount": 1,
+    "otherAlleles": [],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NC_000006.12:g.31575324G>A",
+    "chrom": "6",
+    "position": 31575324,
+    "refAlt": "G>A",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "Susceptibility to severe coronavirus disease (COVID-19) due to high plasma levels of TNF, TNFR, and/or TNFR5",
+        "significance": "Uncertain significance",
+        "rawSignificance": "Uncertain significance",
+        "significanceRank": 6,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2021-08-07"
+      },
+      {
+        "condition": "Susceptibility to severe coronavirus disease (COVID-19)",
+        "significance": "Uncertain significance",
+        "rawSignificance": "Uncertain significance",
+        "significanceRank": 6,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2021-02-09"
+      }
+    ],
+    "distinctSignificances": [
+      "Uncertain significance"
+    ],
+    "hasSomatic": false,
+    "hasGermline": true,
+    "gnomadAf": 0.0386798,
+    "hasClinvar": true,
+    "hgvsId": "chr6:g.31543101G>A",
+    "variantId": 1048804,
+    "uniprot": "P01375",
+    "residue": null,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs361525"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1048804/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs361525"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/6-31575324-G-A?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:15:18.842Z"
+  },
+  "claims": [
+    {
+      "text": "The TNF gene variant rs361525 has uncertain significance for susceptibility to severe coronavirus disease (COVID-19) due to high plasma levels of TNF, TNFR, and/or TNFR5.",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.0.origin",
+        "var.cond.0.reviewStars"
+      ],
+      "claimType": "condition_context"
+    },
+    {
+      "text": "The TNF gene variant rs361525 has uncertain significance for susceptibility to severe coronavirus disease (COVID-19).",
+      "supportingFactIds": [
+        "var.cond.1.significance",
+        "var.cond.1.origin",
+        "var.cond.1.reviewStars"
+      ],
+      "claimType": "condition_context"
+    },
+    {
+      "text": "The TNF gene variant rs361525 is a single nucleotide variant in the TNF gene.",
+      "supportingFactIds": [
+        "var.type"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The TNF gene variant rs361525 is found in approximately 3.9% of the general population.",
+      "supportingFactIds": [
+        "var.gnomadAf"
+      ],
+      "claimType": "frequency_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "c54fb139a331ce1b",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:15:22.411Z",
+    "retrievedAt": "2026-07-27T10:15:18.842Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs361525"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1048804/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs361525"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/6-31575324-G-A?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

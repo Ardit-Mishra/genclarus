@@ -1,0 +1,209 @@
+{
+  "kind": "variant",
+  "id": "rs2066844",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs2066844",
+    "gene": "NOD2",
+    "consequence": "missense variant",
+    "proteinChange": "p.Arg675Trp",
+    "alleleCount": 1,
+    "otherAlleles": [],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NM_001370466.1(NOD2):c.2023C>T (p.Arg675Trp)",
+    "chrom": "16",
+    "position": 50712015,
+    "refAlt": "C>T",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "Autoinflammatory syndrome",
+        "significance": "Uncertain significance",
+        "rawSignificance": "Uncertain significance",
+        "significanceRank": 6,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2022-04-19"
+      },
+      {
+        "condition": "Yao syndrome",
+        "significance": "Uncertain significance",
+        "rawSignificance": "Uncertain significance",
+        "significanceRank": 6,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2020-08-18"
+      },
+      {
+        "condition": "Blau syndrome (BLAUS)",
+        "significance": "Likely benign",
+        "rawSignificance": "Likely benign",
+        "significanceRank": 7,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2023-01-31"
+      },
+      {
+        "condition": "Inflammatory bowel disease 1 (IBD1)",
+        "significance": "Likely benign",
+        "rawSignificance": "Likely benign",
+        "significanceRank": 7,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2023-01-31"
+      },
+      {
+        "condition": "Yao syndrome",
+        "significance": "Likely benign",
+        "rawSignificance": "Likely benign",
+        "significanceRank": 7,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2023-01-31"
+      },
+      {
+        "condition": "Blau syndrome (BLAUS)",
+        "significance": "association",
+        "rawSignificance": "association",
+        "significanceRank": 9,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2025-02-03"
+      },
+      {
+        "condition": "Regional enteritis",
+        "significance": "association",
+        "rawSignificance": "association",
+        "significanceRank": 9,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2025-02-03"
+      },
+      {
+        "condition": "Crohn disease",
+        "significance": "not provided",
+        "rawSignificance": "not provided",
+        "significanceRank": 9,
+        "reviewStatus": "no assertion provided",
+        "reviewStars": 0,
+        "origin": "unknown",
+        "lastEvaluated": null
+      },
+      {
+        "condition": "not provided",
+        "significance": "Likely benign",
+        "rawSignificance": "Benign/Likely benign",
+        "significanceRank": 7,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2024-10-29"
+      },
+      {
+        "condition": "not specified",
+        "significance": "Conflicting interpretations",
+        "rawSignificance": "Conflicting interpretations of pathogenicity",
+        "significanceRank": 5,
+        "reviewStatus": "criteria provided, conflicting interpretations",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2016-03-29"
+      }
+    ],
+    "distinctSignificances": [
+      "Conflicting interpretations",
+      "Uncertain significance",
+      "Likely benign",
+      "association",
+      "not provided"
+    ],
+    "hasSomatic": false,
+    "hasGermline": true,
+    "gnomadAf": 0.0244042,
+    "hasClinvar": true,
+    "hgvsId": "chr16:g.50745926C>T",
+    "variantId": 4693,
+    "uniprot": "Q9HC29",
+    "residue": 675,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs2066844"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4693/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs2066844"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/16-50712015-C-T?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:07:47.748Z"
+  },
+  "claims": [
+    {
+      "text": "The NOD2 gene variant rs2066844 is a missense variant leading to the protein change p.Arg675Trp.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.consequence",
+        "var.protein"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The NOD2 gene variant rs2066844 has an uncertain significance classification for Autoinflammatory syndrome.",
+      "supportingFactIds": [
+        "var.cond.0.significance"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The NOD2 gene variant rs2066844 has a likely benign classification for Blau syndrome (BLAUS).",
+      "supportingFactIds": [
+        "var.cond.2.significance"
+      ],
+      "claimType": "classification_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "9d0c7238677112c5",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:07:53.885Z",
+    "retrievedAt": "2026-07-27T10:07:47.748Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs2066844"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/4693/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs2066844"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/16-50712015-C-T?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

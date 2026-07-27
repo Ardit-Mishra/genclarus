@@ -1,0 +1,228 @@
+{
+  "kind": "variant",
+  "id": "rs1801131",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs1801131",
+    "gene": "MTHFR",
+    "consequence": "missense variant",
+    "proteinChange": "p.Glu429Ala",
+    "alleleCount": 1,
+    "otherAlleles": [],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NM_005957.5(MTHFR):c.1286A>C (p.Glu429Ala)",
+    "chrom": "1",
+    "position": 11794419,
+    "refAlt": "T>G",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "Homocystinuria due to methylene tetrahydrofolate reductase deficiency",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2025-02-03"
+      },
+      {
+        "condition": "Neural tube defects, folate-sensitive (NTDFS)",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2023-04-17"
+      },
+      {
+        "condition": "Schizophrenia (SCZD)",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2023-04-17"
+      },
+      {
+        "condition": "Thrombophilia due to thrombin defect (THPH1)",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2023-04-17"
+      },
+      {
+        "condition": "Neural tube defects, folate-sensitive (NTDFS)",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2019-05-28"
+      },
+      {
+        "condition": "Schizophrenia, susceptibility to",
+        "significance": "Risk factor",
+        "rawSignificance": "risk factor",
+        "significanceRank": 3,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2008-07-01"
+      },
+      {
+        "condition": "MTHFR-related disorder",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2023-12-01"
+      },
+      {
+        "condition": "MTHFR THERMOLABILE POLYMORPHISM",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2008-07-01"
+      },
+      {
+        "condition": "Gastrointestinal stromal tumor",
+        "significance": "no classifications from unflagged record",
+        "rawSignificance": "no classifications from unflagged records",
+        "significanceRank": 9,
+        "reviewStatus": "no classifications from unflagged records",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2023-10-30"
+      },
+      {
+        "condition": "not provided",
+        "significance": "Benign",
+        "rawSignificance": "Benign; other",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2024-11-21"
+      },
+      {
+        "condition": "not specified",
+        "significance": "Likely benign",
+        "rawSignificance": "Likely benign",
+        "significanceRank": 7,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2023-09-07"
+      }
+    ],
+    "distinctSignificances": [
+      "Risk factor",
+      "Likely benign",
+      "Benign",
+      "no classifications from unflagged record"
+    ],
+    "hasSomatic": false,
+    "hasGermline": true,
+    "gnomadAf": 0.260381,
+    "hasClinvar": true,
+    "hgvsId": "chr1:g.11854476T>G",
+    "variantId": 3521,
+    "uniprot": "P42898",
+    "residue": 429,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs1801131"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3521/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1801131"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/1-11794419-T-G?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:26:31.546Z"
+  },
+  "claims": [
+    {
+      "text": "The MTHFR gene variant rs1801131 is a missense variant leading to the p.Glu429Ala protein change.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.consequence",
+        "var.protein"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The MTHFR gene variant rs1801131 has a benign classification for Homocystinuria due to methylene tetrahydrofolate reductase deficiency, with a review confidence of 2 of 4 stars.",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The MTHFR gene variant rs1801131 has a benign classification for Neural tube defects, folate-sensitive (NTDFS), with a review confidence of 1 of 4 stars.",
+      "supportingFactIds": [
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The MTHFR gene variant rs1801131 has a benign classification for Schizophrenia (SCZD), with a review confidence of 1 of 4 stars.",
+      "supportingFactIds": [
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars"
+      ],
+      "claimType": "classification_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "c5376f6e36250060",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:26:35.951Z",
+    "retrievedAt": "2026-07-27T10:26:31.546Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs1801131"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3521/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1801131"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/1-11794419-T-G?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

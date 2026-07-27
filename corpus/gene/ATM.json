@@ -1,0 +1,110 @@
+{
+  "kind": "gene",
+  "id": "ATM",
+  "facts": {
+    "kind": "gene",
+    "symbol": "ATM",
+    "name": "ATM serine/threonine kinase",
+    "type": "protein-coding",
+    "summary": "The protein encoded by this gene belongs to the PI3/PI4-kinase family. This protein is an important cell cycle checkpoint kinase that phosphorylates; thus, it functions as a regulator of a wide variety of downstream proteins, including tumor suppressor proteins p53 and BRCA1, checkpoint kinase CHK2, checkpoint proteins RAD17 and RAD9, and DNA repair protein NBS1. This protein and the closely related kinase ATR are thought to be master controllers of cell cycle checkpoint signaling pathways that are required for cell response to DNA damage and for genome stability. Mutations in this gene are associated with ataxia telangiectasia, an autosomal recessive disorder. [provided by RefSeq, Aug 2010].",
+    "aliases": [
+      "AT1",
+      "ATA",
+      "ATC",
+      "ATD",
+      "ATDC",
+      "ATE",
+      "TEL1",
+      "TELO1"
+    ],
+    "location": "chr11:108,222,788–108,369,102 (+)",
+    "uniprot": "Q13315",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/472"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000149311"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/Q13315"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/607585"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=ATM"
+      }
+    ],
+    "retrievedAt": "2026-07-27T09:47:16.603Z"
+  },
+  "claims": [
+    {
+      "text": "The ATM gene is a protein-coding gene located on chromosome 11.",
+      "supportingFactIds": [
+        "gene.type",
+        "gene.location"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The ATM protein is a master controller of cell cycle checkpoint signaling pathways.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "function"
+    },
+    {
+      "text": "Mutations in the ATM gene are associated with ataxia telangiectasia.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "condition_context"
+    },
+    {
+      "text": "The ATM protein phosphorylates and regulates tumor suppressor proteins p53 and BRCA1.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "function"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "baa1aa2687d1e60f",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T09:47:21.686Z",
+    "retrievedAt": "2026-07-27T09:47:16.603Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/472"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000149311"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/Q13315"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/607585"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=ATM"
+      }
+    ]
+  }
+}

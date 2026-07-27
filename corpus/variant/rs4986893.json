@@ -1,0 +1,199 @@
+{
+  "kind": "variant",
+  "id": "rs4986893",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs4986893",
+    "gene": "CYP2C19",
+    "consequence": "stop gained",
+    "proteinChange": "p.Trp212Ter",
+    "alleleCount": 1,
+    "otherAlleles": [],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NM_000769.1(CYP2C19):c.636G>A (p.Trp212Ter)",
+    "chrom": "10",
+    "position": 94780653,
+    "refAlt": "G>A",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "Clopidogrel response",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "practice guideline",
+        "reviewStars": 4,
+        "origin": "germline",
+        "lastEvaluated": null
+      },
+      {
+        "condition": "Escitalopram response",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "practice guideline",
+        "reviewStars": 4,
+        "origin": "germline",
+        "lastEvaluated": null
+      },
+      {
+        "condition": "Citalopram response",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "practice guideline",
+        "reviewStars": 4,
+        "origin": "germline",
+        "lastEvaluated": null
+      },
+      {
+        "condition": "Sertraline response",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "practice guideline",
+        "reviewStars": 4,
+        "origin": "germline",
+        "lastEvaluated": null
+      },
+      {
+        "condition": "Voriconazole response",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "practice guideline",
+        "reviewStars": 4,
+        "origin": "germline",
+        "lastEvaluated": null
+      },
+      {
+        "condition": "CYP2C19: no function",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "practice guideline",
+        "reviewStars": 4,
+        "origin": "germline",
+        "lastEvaluated": null
+      },
+      {
+        "condition": "Mephenytoin, poor metabolism of",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2009-06-01"
+      },
+      {
+        "condition": "Proguanil, poor metabolism of",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2009-06-01"
+      },
+      {
+        "condition": "Acute coronary syndrome",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "biparental",
+        "lastEvaluated": null
+      },
+      {
+        "condition": "not provided",
+        "significance": "Benign",
+        "rawSignificance": "Benign; other",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2018-08-06"
+      }
+    ],
+    "distinctSignificances": [
+      "Drug response",
+      "Benign"
+    ],
+    "hasSomatic": false,
+    "hasGermline": true,
+    "gnomadAf": 0.00283783,
+    "hasClinvar": true,
+    "hgvsId": "chr10:g.96540410G>A",
+    "variantId": 16899,
+    "uniprot": "P33261",
+    "residue": 212,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs4986893"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/16899/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs4986893"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/10-94780653-G-A?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:10:06.834Z"
+  },
+  "claims": [
+    {
+      "text": "The CYP2C19 gene variant rs4986893 is a single nucleotide variant.",
+      "supportingFactIds": [
+        "var.type"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The CYP2C19 gene variant rs4986893 is associated with a drug response to Clopidogrel, Escitalopram, and Citalopram.",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.1.significance",
+        "var.cond.2.significance"
+      ],
+      "claimType": "condition_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "920714a4a90a1ec7",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:10:14.999Z",
+    "retrievedAt": "2026-07-27T10:10:06.834Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs4986893"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/16899/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs4986893"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/10-94780653-G-A?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

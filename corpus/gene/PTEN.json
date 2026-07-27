@@ -1,0 +1,109 @@
+{
+  "kind": "gene",
+  "id": "PTEN",
+  "facts": {
+    "kind": "gene",
+    "symbol": "PTEN",
+    "name": "phosphatase and tensin homolog",
+    "type": "protein-coding",
+    "summary": "This gene was identified as a tumor suppressor that is mutated in a large number of cancers at high frequency. The protein encoded by this gene is a phosphatidylinositol-3,4,5-trisphosphate 3-phosphatase. It contains a tensin like domain as well as a catalytic domain similar to that of the dual specificity protein tyrosine phosphatases. Unlike most of the protein tyrosine phosphatases, this protein preferentially dephosphorylates phosphoinositide substrates. It negatively regulates intracellular levels of phosphatidylinositol-3,4,5-trisphosphate in cells and functions as a tumor suppressor by negatively regulating AKT/PKB signaling pathway. The use of a non-canonical (CUG) upstream initiation site produces a longer isoform that initiates translation with a leucine, and is thought to be preferentially associated with the mitochondrial inner membrane. This longer isoform may help regulate energy metabolism in the mitochondria. A pseudogene of this gene is found on chromosome 9. Alternative splicing and the use of multiple translation start codons results in multiple transcript variants encoding different isoforms. [provided by RefSeq, Feb 2015].",
+    "aliases": [
+      "10q23del",
+      "BZS",
+      "CWS1",
+      "DEC",
+      "GLM2",
+      "MHAM",
+      "MMAC1",
+      "PTEN1"
+    ],
+    "location": "chr10:87,862,638–87,971,930 (+)",
+    "uniprot": "P60484",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/5728"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000171862"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P60484"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/601728"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=PTEN"
+      }
+    ],
+    "retrievedAt": "2026-07-27T09:44:30.095Z"
+  },
+  "claims": [
+    {
+      "text": "The PTEN gene is a tumor suppressor that is mutated in a large number of cancers at high frequency.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The PTEN protein is a phosphatidylinositol-3,4,5-trisphosphate 3-phosphatase that negatively regulates intracellular levels of phosphatidylinositol-3,4,5-trisphosphate in cells.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "function"
+    },
+    {
+      "text": "PTEN functions as a tumor suppressor by negatively regulating AKT/PKB signaling pathway.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "function"
+    },
+    {
+      "text": "Alternative splicing and the use of multiple translation start codons results in multiple transcript variants encoding different isoforms of the PTEN protein.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "identity"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "50a7c4783707b8b4",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T09:44:34.020Z",
+    "retrievedAt": "2026-07-27T09:44:30.095Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/5728"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000171862"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P60484"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/601728"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=PTEN"
+      }
+    ]
+  }
+}

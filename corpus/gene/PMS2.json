@@ -1,0 +1,101 @@
+{
+  "kind": "gene",
+  "id": "PMS2",
+  "facts": {
+    "kind": "gene",
+    "symbol": "PMS2",
+    "name": "PMS1 homolog 2, mismatch repair system component",
+    "type": "protein-coding",
+    "summary": "The protein encoded by this gene is a key component of the mismatch repair system that functions to correct DNA mismatches and small insertions and deletions that can occur during DNA replication and homologous recombination. This protein forms heterodimers with the gene product of the mutL homolog 1 (MLH1) gene to form the MutL-alpha heterodimer. The MutL-alpha heterodimer possesses an endonucleolytic activity that is activated following recognition of mismatches and insertion/deletion loops by the MutS-alpha and MutS-beta heterodimers, and is necessary for removal of the mismatched DNA. There is a DQHA(X)2E(X)4E motif found at the C-terminus of the protein encoded by this gene that forms part of the active site of the nuclease. Mutations in this gene have been associated with hereditary nonpolyposis colorectal cancer (HNPCC; also known as Lynch syndrome) and Turcot syndrome. [provided by RefSeq, Apr 2016].",
+    "aliases": [
+      "HNPCC4",
+      "LYNCH4",
+      "MLH4",
+      "MMRCS4",
+      "PMS-2",
+      "PMSL2"
+    ],
+    "location": "chr7:5,970,925–6,009,130 (−)",
+    "uniprot": "P54278",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/5395"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000122512"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P54278"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/600259"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=PMS2"
+      }
+    ],
+    "retrievedAt": "2026-07-27T09:44:23.745Z"
+  },
+  "claims": [
+    {
+      "text": "The PMS2 gene encodes a protein that forms heterodimers with MLH1 to correct DNA mismatches.",
+      "supportingFactIds": [
+        "gene.symbol",
+        "gene.summary"
+      ],
+      "claimType": "function"
+    },
+    {
+      "text": "Mutations in the PMS2 gene are associated with hereditary nonpolyposis colorectal cancer (HNPCC) and Turcot syndrome.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The PMS2 gene is located on chromosome 7 at position 5,970,925–6,009,130.",
+      "supportingFactIds": [
+        "gene.location"
+      ],
+      "claimType": "identity"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "9cf1def286f0e636",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T09:44:26.788Z",
+    "retrievedAt": "2026-07-27T09:44:23.745Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/5395"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000122512"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P54278"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/600259"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=PMS2"
+      }
+    ]
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "kind": "variant",
+  "id": "rs35599367",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs35599367",
+    "gene": "CYP3A4",
+    "consequence": "",
+    "proteinChange": "",
+    "alleleCount": 1,
+    "otherAlleles": [],
+    "variantType": "snv",
+    "preferredName": null,
+    "chrom": "7",
+    "position": 99366316,
+    "refAlt": "G>A",
+    "assembly": "GRCh37",
+    "conditionClassifications": [],
+    "distinctSignificances": [],
+    "hasSomatic": false,
+    "hasGermline": false,
+    "gnomadAf": 0.0308914,
+    "hasClinvar": false,
+    "hgvsId": "chr7:g.99366316G>A",
+    "variantId": null,
+    "uniprot": "P08684",
+    "residue": null,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs35599367"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs35599367"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:18:54.960Z"
+  },
+  "claims": [
+    {
+      "text": "The CYP3A4 gene variant rs35599367 is a single nucleotide variant.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.type"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The CYP3A4 gene variant rs35599367 has a frequency of 3.1% in gnomAD.",
+      "supportingFactIds": [
+        "var.gnomadAf"
+      ],
+      "claimType": "frequency_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "3c99b4bc99a0b0bc",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:18:57.266Z",
+    "retrievedAt": "2026-07-27T10:18:54.960Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs35599367"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs35599367"
+      }
+    ]
+  }
+}

@@ -1,0 +1,197 @@
+{
+  "kind": "variant",
+  "id": "rs12248560",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs12248560",
+    "gene": "CYP2C19",
+    "consequence": "",
+    "proteinChange": "",
+    "alleleCount": 1,
+    "otherAlleles": [],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NM_000769.1(CYP2C19):c.-806C>T",
+    "chrom": "10",
+    "position": 94761900,
+    "refAlt": "C>T",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "CYP2C19: increased function",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "practice guideline",
+        "reviewStars": 4,
+        "origin": "germline",
+        "lastEvaluated": null
+      },
+      {
+        "condition": "Clopidogrel response",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "practice guideline",
+        "reviewStars": 4,
+        "origin": "germline",
+        "lastEvaluated": null
+      },
+      {
+        "condition": "Citalopram response",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "practice guideline",
+        "reviewStars": 4,
+        "origin": "germline",
+        "lastEvaluated": null
+      },
+      {
+        "condition": "Escitalopram response",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "practice guideline",
+        "reviewStars": 4,
+        "origin": "germline",
+        "lastEvaluated": null
+      },
+      {
+        "condition": "Sertraline response",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "practice guideline",
+        "reviewStars": 4,
+        "origin": "germline",
+        "lastEvaluated": null
+      },
+      {
+        "condition": "Voriconazole response",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "practice guideline",
+        "reviewStars": 4,
+        "origin": "germline",
+        "lastEvaluated": null
+      },
+      {
+        "condition": "CYP2C19: no function",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "practice guideline",
+        "reviewStars": 4,
+        "origin": "germline",
+        "lastEvaluated": null
+      },
+      {
+        "condition": "not provided",
+        "significance": "Benign",
+        "rawSignificance": "Benign; other",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2018-03-14"
+      }
+    ],
+    "distinctSignificances": [
+      "Drug response",
+      "Benign"
+    ],
+    "hasSomatic": false,
+    "hasGermline": true,
+    "gnomadAf": 0.205184,
+    "hasClinvar": true,
+    "hgvsId": "chr10:g.96521657C>T",
+    "variantId": 39357,
+    "uniprot": "P33261",
+    "residue": null,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs12248560"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/39357/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs12248560"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/10-94761900-C-T?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:10:17.417Z"
+  },
+  "claims": [
+    {
+      "text": "The CYP2C19 gene variant rs12248560 is associated with increased function, as classified by ClinVar with 4 of 4 review stars.",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "This variant is classified as a germline variant, originating from the germline, according to ClinVar.",
+      "supportingFactIds": [
+        "var.cond.0.origin",
+        "var.cond.1.origin",
+        "var.cond.2.origin"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The variant rs12248560 affects the response to Clopidogrel, as classified by ClinVar with 4 of 4 review stars.",
+      "supportingFactIds": [
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars"
+      ],
+      "claimType": "condition_context"
+    },
+    {
+      "text": "The variant rs12248560 affects the response to Citalopram, as classified by ClinVar with 4 of 4 review stars.",
+      "supportingFactIds": [
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars"
+      ],
+      "claimType": "condition_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "242ff07ee7926c0a",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:10:21.238Z",
+    "retrievedAt": "2026-07-27T10:10:17.417Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs12248560"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/39357/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs12248560"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/10-94761900-C-T?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

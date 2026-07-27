@@ -1,0 +1,100 @@
+{
+  "kind": "gene",
+  "id": "APOB",
+  "facts": {
+    "kind": "gene",
+    "symbol": "APOB",
+    "name": "apolipoprotein B",
+    "type": "protein-coding",
+    "summary": "This gene product is the main apolipoprotein of chylomicrons and low density lipoproteins (LDL), and is the ligand for the LDL receptor. It occurs in plasma as two main isoforms, apoB-48 and apoB-100: the former is synthesized exclusively in the gut and the latter in the liver. The intestinal and the hepatic forms of apoB are encoded by a single gene from a single, very long mRNA. The two isoforms share a common N-terminal sequence. The shorter apoB-48 protein is produced after RNA editing of the apoB-100 transcript at residue 2180 (CAA->UAA), resulting in the creation of a stop codon, and early translation termination. Mutations in this gene or its regulatory region cause hypobetalipoproteinemia, normotriglyceridemic hypobetalipoproteinemia, and hypercholesterolemia due to ligand-defective apoB, diseases affecting plasma cholesterol and apoB levels. [provided by RefSeq, Dec 2019].",
+    "aliases": [
+      "FCHL2",
+      "FLDB",
+      "LDLCQ4",
+      "apoB-100",
+      "apoB-48"
+    ],
+    "location": "chr2:21,001,305–21,044,075 (−)",
+    "uniprot": "P04114",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/338"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000084674"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P04114"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/107730"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=APOB"
+      }
+    ],
+    "retrievedAt": "2026-07-27T09:48:35.609Z"
+  },
+  "claims": [
+    {
+      "text": "APOB is a protein-coding gene located on chromosome 2.",
+      "supportingFactIds": [
+        "gene.type",
+        "gene.location"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "APOB is the main apolipoprotein of chylomicrons and low-density lipoproteins (LDL).",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "function"
+    },
+    {
+      "text": "APOB is associated with hypobetalipoproteinemia, normotriglyceridemic hypobetalipoproteinemia, and hypercholesterolemia.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "condition_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "8d37e61efbe4e765",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T09:48:39.930Z",
+    "retrievedAt": "2026-07-27T09:48:35.609Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/338"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000084674"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P04114"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/107730"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=APOB"
+      }
+    ]
+  }
+}

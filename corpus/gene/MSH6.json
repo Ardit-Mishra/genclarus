@@ -1,0 +1,111 @@
+{
+  "kind": "gene",
+  "id": "MSH6",
+  "facts": {
+    "kind": "gene",
+    "symbol": "MSH6",
+    "name": "mutS homolog 6",
+    "type": "protein-coding",
+    "summary": "This gene encodes a member of the DNA mismatch repair MutS family. In E. coli, the MutS protein helps in the recognition of mismatched nucleotides prior to their repair. A highly conserved region of approximately 150 aa, called the Walker-A adenine nucleotide binding motif, exists in MutS homologs. The encoded protein heterodimerizes with MSH2 to form a mismatch recognition complex that functions as a bidirectional molecular switch that exchanges ADP and ATP as DNA mismatches are bound and dissociated. Mutations in this gene may be associated with hereditary nonpolyposis colon cancer, colorectal cancer, and endometrial cancer. Transcripts variants encoding different isoforms have been described. [provided by RefSeq, Jul 2013].",
+    "aliases": [
+      "GTBP",
+      "GTMBP",
+      "HNPCC5",
+      "HSAP",
+      "LYNCH5",
+      "MMRCS3",
+      "MSH-6",
+      "p160"
+    ],
+    "location": "chr2:47,695,530–47,810,109 (+)",
+    "uniprot": "P52701",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/2956"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000116062"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P52701"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/600678"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=MSH6"
+      }
+    ],
+    "retrievedAt": "2026-07-27T09:44:20.260Z"
+  },
+  "claims": [
+    {
+      "text": "The MSH6 gene encodes a member of the DNA mismatch repair MutS family.",
+      "supportingFactIds": [
+        "gene.symbol",
+        "gene.summary"
+      ],
+      "claimType": "function"
+    },
+    {
+      "text": "MSH6 heterodimerizes with MSH2 to form a mismatch recognition complex.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "function"
+    },
+    {
+      "text": "Mutations in the MSH6 gene are associated with hereditary nonpolyposis colon cancer, colorectal cancer, and endometrial cancer.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "condition_context"
+    },
+    {
+      "text": "MSH6 is a protein-coding gene located on chromosome 2.",
+      "supportingFactIds": [
+        "gene.type",
+        "gene.location"
+      ],
+      "claimType": "identity"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "f8b296671c19fa14",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T09:44:23.512Z",
+    "retrievedAt": "2026-07-27T09:44:20.260Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/2956"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000116062"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P52701"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/600678"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=MSH6"
+      }
+    ]
+  }
+}

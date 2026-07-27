@@ -1,0 +1,101 @@
+{
+  "kind": "gene",
+  "id": "APOE",
+  "facts": {
+    "kind": "gene",
+    "symbol": "APOE",
+    "name": "apolipoprotein E",
+    "type": "protein-coding",
+    "summary": "The protein encoded by this gene is a major apoprotein of the chylomicron. It binds to a specific liver and peripheral cell receptor, and is essential for the normal catabolism of triglyceride-rich lipoprotein constituents. This gene maps to chromosome 19 in a cluster with the related apolipoprotein C1 and C2 genes. Mutations in this gene result in familial dysbetalipoproteinemia, or type III hyperlipoproteinemia (HLP III), in which increased plasma cholesterol and triglycerides are the consequence of impaired clearance of chylomicron and VLDL remnants. [provided by RefSeq, Jun 2016].",
+    "aliases": [
+      "AD2",
+      "APO-E",
+      "ApoE4",
+      "LDLCQ5",
+      "LPG"
+    ],
+    "location": "chr19:44,903,787–44,909,396 (+)",
+    "uniprot": "P02649",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/348"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000130203"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P02649"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/107741"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=APOE"
+      }
+    ],
+    "retrievedAt": "2026-07-27T09:48:19.230Z"
+  },
+  "claims": [
+    {
+      "text": "The protein encoded by the APOE gene is a major apoprotein of the chylomicron.",
+      "supportingFactIds": [
+        "gene.symbol",
+        "gene.summary"
+      ],
+      "claimType": "function"
+    },
+    {
+      "text": "Mutations in the APOE gene result in familial dysbetalipoproteinemia, or type III hyperlipoproteinemia.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The APOE gene is located on chromosome 19 in a cluster with the related apolipoprotein C1 and C2 genes.",
+      "supportingFactIds": [
+        "gene.location",
+        "gene.summary"
+      ],
+      "claimType": "identity"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "e560e05a153dfa62",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T09:48:22.091Z",
+    "retrievedAt": "2026-07-27T09:48:19.230Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/348"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000130203"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P02649"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/107741"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=APOE"
+      }
+    ]
+  }
+}

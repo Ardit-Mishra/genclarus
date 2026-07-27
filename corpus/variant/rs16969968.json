@@ -1,0 +1,150 @@
+{
+  "kind": "variant",
+  "id": "rs16969968",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs16969968",
+    "gene": "CHRNA5",
+    "consequence": "missense variant",
+    "proteinChange": "p.Asp398Asn",
+    "alleleCount": 1,
+    "otherAlleles": [],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NM_000745.4(CHRNA5):c.1192G>A (p.Asp398Asn)",
+    "chrom": "15",
+    "position": 78590583,
+    "refAlt": "G>A",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "nicotine response - Toxicity",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "reviewed by expert panel",
+        "reviewStars": 3,
+        "origin": "germline",
+        "lastEvaluated": "2021-03-24"
+      },
+      {
+        "condition": "Lung cancer susceptibility 2 (LNCR2)",
+        "significance": "Risk factor",
+        "rawSignificance": "risk factor",
+        "significanceRank": 3,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2010-07-27"
+      },
+      {
+        "condition": "SMOKING AS A QUANTITATIVE TRAIT LOCUS 3 (SQTL3)",
+        "significance": "Risk factor",
+        "rawSignificance": "risk factor",
+        "significanceRank": 3,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2010-07-27"
+      },
+      {
+        "condition": "Susceptibility to severe coronavirus disease (COVID-19) due to high levels of fibrinogen and C-reactive protein",
+        "significance": "Uncertain significance",
+        "rawSignificance": "Uncertain significance",
+        "significanceRank": 6,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": null
+      }
+    ],
+    "distinctSignificances": [
+      "Risk factor",
+      "Drug response",
+      "Uncertain significance"
+    ],
+    "hasSomatic": false,
+    "hasGermline": true,
+    "gnomadAf": 0.240898,
+    "hasClinvar": true,
+    "hgvsId": "chr15:g.78882925G>A",
+    "variantId": 17497,
+    "uniprot": "P30532",
+    "residue": 398,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs16969968"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/17497/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs16969968"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/15-78590583-G-A?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:12:13.476Z"
+  },
+  "claims": [
+    {
+      "text": "The CHRNA5 gene variant rs16969968 is a missense variant leading to a p.Asp398Asn protein change.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.consequence",
+        "var.protein"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The CHRNA5 gene variant rs16969968 has a germline origin.",
+      "supportingFactIds": [
+        "var.cond.0.origin",
+        "var.cond.1.origin",
+        "var.cond.2.origin"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The CHRNA5 gene variant rs16969968 is associated with a drug response for nicotine response - Toxicity, with a moderate level of review confidence.",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars"
+      ],
+      "claimType": "condition_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "edbb73d9c2fdf605",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:12:18.281Z",
+    "retrievedAt": "2026-07-27T10:12:13.476Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs16969968"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/17497/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs16969968"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/15-78590583-G-A?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

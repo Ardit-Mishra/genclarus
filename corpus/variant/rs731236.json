@@ -1,0 +1,166 @@
+{
+  "kind": "variant",
+  "id": "rs731236",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs731236",
+    "gene": "VDR",
+    "consequence": "synonymous variant",
+    "proteinChange": "p.Ile352Ile",
+    "alleleCount": 1,
+    "otherAlleles": [],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NM_000376.3(VDR):c.1056T>C (p.Ile352=)",
+    "chrom": "12",
+    "position": 47844974,
+    "refAlt": "A>G",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "Vitamin D-dependent rickets type II with alopecia (VDDR2A)",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2021-12-05"
+      },
+      {
+        "condition": "Periodontitis",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2023-04-20"
+      },
+      {
+        "condition": "Hepatocellular carcinoma (HCC)",
+        "significance": "Likely risk allele",
+        "rawSignificance": "Likely risk allele",
+        "significanceRank": 9,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2022-07-14"
+      },
+      {
+        "condition": "not provided",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2025-02-03"
+      },
+      {
+        "condition": "not specified",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2016-03-21"
+      }
+    ],
+    "distinctSignificances": [
+      "Benign",
+      "Likely risk allele"
+    ],
+    "hasSomatic": false,
+    "hasGermline": true,
+    "gnomadAf": 0.330842,
+    "hasClinvar": true,
+    "hgvsId": "chr12:g.48238757A>G",
+    "variantId": 308877,
+    "uniprot": "P11473",
+    "residue": 352,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs731236"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/308877/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs731236"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/12-47844974-A-G?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:13:40.267Z"
+  },
+  "claims": [
+    {
+      "text": "The VDR gene variant rs731236 is a synonymous variant.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.consequence"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The VDR gene variant rs731236 has a protein change of p.Ile352Ile.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.protein"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The VDR gene variant rs731236 is classified as Benign for Vitamin D-dependent rickets type II with alopecia (VDDR2A) and Periodontitis, but as Likely risk allele for Hepatocellular carcinoma (HCC).",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.1.significance",
+        "var.cond.2.significance"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The VDR gene variant rs731236 has a frequency of 33% in gnomAD.",
+      "supportingFactIds": [
+        "var.type",
+        "var.gnomadAf"
+      ],
+      "claimType": "frequency_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "120c7043c838e498",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:13:44.098Z",
+    "retrievedAt": "2026-07-27T10:13:40.267Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs731236"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/308877/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs731236"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/12-47844974-A-G?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

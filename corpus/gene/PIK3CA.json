@@ -1,0 +1,80 @@
+{
+  "kind": "gene",
+  "id": "PIK3CA",
+  "facts": {
+    "kind": "gene",
+    "symbol": "PIK3CA",
+    "name": "phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha",
+    "type": "protein-coding",
+    "summary": "Phosphatidylinositol 3-kinase is composed of an 85 kDa regulatory subunit and a 110 kDa catalytic subunit. The protein encoded by this gene represents the catalytic subunit, which uses ATP to phosphorylate PtdIns, PtdIns4P and PtdIns(4,5)P2. This gene has been found to be oncogenic and has been implicated in cervical cancers. A pseudogene of this gene has been defined on chromosome 22. [provided by RefSeq, Apr 2016].",
+    "aliases": [
+      "CCM4",
+      "CLAPO",
+      "CLOVE",
+      "CWS5",
+      "HMH",
+      "MCAP",
+      "MCM",
+      "MCMTC"
+    ],
+    "location": "chr3:179,148,114–179,240,093 (+)",
+    "uniprot": "P42336",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/5290"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000121879"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P42336"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/171834"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=PIK3CA"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:25:35.068Z"
+  },
+  "claims": null,
+  "aiAvailable": true,
+  "fallbackReason": "failed_grounding",
+  "provenance": {
+    "factsHash": "077860e7da623440",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:25:44.920Z",
+    "retrievedAt": "2026-07-27T10:25:35.068Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/5290"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000121879"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P42336"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/171834"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=PIK3CA"
+      }
+    ]
+  }
+}

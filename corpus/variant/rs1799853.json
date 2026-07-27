@@ -1,0 +1,177 @@
+{
+  "kind": "variant",
+  "id": "rs1799853",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs1799853",
+    "gene": "CYP2C9",
+    "consequence": "missense variant",
+    "proteinChange": "p.Arg144Cys",
+    "alleleCount": 2,
+    "otherAlleles": [
+      {
+        "proteinChange": "",
+        "refAlt": "C>C",
+        "variantId": 163021,
+        "significance": "Drug response"
+      }
+    ],
+    "variantType": "single nucleotide variant",
+    "preferredName": "CYP2C9*2",
+    "chrom": "10",
+    "position": 94942290,
+    "refAlt": "C>T",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "Flurbiprofen response",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2019-02-11"
+      },
+      {
+        "condition": "Lesinurad response",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2019-02-11"
+      },
+      {
+        "condition": "Piroxicam response",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2019-02-11"
+      },
+      {
+        "condition": "Phenytoin response",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2020-09-24"
+      },
+      {
+        "condition": "Warfarin response",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2018-08-09"
+      },
+      {
+        "condition": "not specified",
+        "significance": "Likely benign",
+        "rawSignificance": "Likely benign",
+        "significanceRank": 7,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2018-03-09"
+      },
+      {
+        "condition": "not provided",
+        "significance": "other",
+        "rawSignificance": "other",
+        "significanceRank": 9,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2015-07-09"
+      }
+    ],
+    "distinctSignificances": [
+      "Drug response",
+      "Likely benign",
+      "other"
+    ],
+    "hasSomatic": false,
+    "hasGermline": true,
+    "gnomadAf": 0.0824673,
+    "hasClinvar": true,
+    "hgvsId": "chr10:g.96702047C>T",
+    "variantId": 8409,
+    "uniprot": "P11712",
+    "residue": 144,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs1799853"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/8409/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1799853"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/10-94942290-C-T?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:10:28.721Z"
+  },
+  "claims": [
+    {
+      "text": "The CYP2C9 gene variant rs1799853 is a missense variant with a p.Arg144Cys protein change.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.consequence",
+        "var.protein"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The CYP2C9 gene variant rs1799853 has a frequency of 8.2% in the general population.",
+      "supportingFactIds": [
+        "var.gnomadAf"
+      ],
+      "claimType": "frequency_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "9516a02b5c9f5959",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:10:34.802Z",
+    "retrievedAt": "2026-07-27T10:10:28.721Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs1799853"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/8409/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1799853"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/10-94942290-C-T?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

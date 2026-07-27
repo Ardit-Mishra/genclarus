@@ -1,0 +1,270 @@
+{
+  "kind": "variant",
+  "id": "rs1799945",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs1799945",
+    "gene": "HFE-AS1",
+    "consequence": "missense variant",
+    "proteinChange": "p.His63Asp",
+    "alleleCount": 1,
+    "otherAlleles": [],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NM_000410.4(HFE):c.187C>G (p.His63Asp)",
+    "chrom": "6",
+    "position": 26090951,
+    "refAlt": "C>G",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "Hereditary hemochromatosis (HFE)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic, low penetrance",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2025-02-03"
+      },
+      {
+        "condition": "Cardiomyopathy (CMYO)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2021-03-25"
+      },
+      {
+        "condition": "Variegate porphyria (VP)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2020-01-13"
+      },
+      {
+        "condition": "Alzheimer disease",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2018-10-31"
+      },
+      {
+        "condition": "Variegate porphyria (VP)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2018-10-31"
+      },
+      {
+        "condition": "Microvascular complications of diabetes, susceptibility to, 7",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2018-10-31"
+      },
+      {
+        "condition": "Hemochromatosis type 1 (HFE1)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2018-10-31"
+      },
+      {
+        "condition": "TRANSFERRIN SERUM LEVEL QUANTITATIVE TRAIT LOCUS 2 (TFQTL2)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2018-10-31"
+      },
+      {
+        "condition": "Familial porphyria cutanea tarda (PCT)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2018-10-31"
+      },
+      {
+        "condition": "Hemochromatosis type 1 (HFE1)",
+        "significance": "Conflicting interpretations",
+        "rawSignificance": "Conflicting interpretations of pathogenicity",
+        "significanceRank": 5,
+        "reviewStatus": "criteria provided, conflicting interpretations",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2024-04-02"
+      },
+      {
+        "condition": "Cystic fibrosis (CF)",
+        "significance": "Risk factor",
+        "rawSignificance": "risk factor",
+        "significanceRank": 3,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2019-04-01"
+      },
+      {
+        "condition": "Bronze diabetes",
+        "significance": "not provided",
+        "rawSignificance": "not provided",
+        "significanceRank": 9,
+        "reviewStatus": "no assertion provided",
+        "reviewStars": 0,
+        "origin": "unknown",
+        "lastEvaluated": null
+      },
+      {
+        "condition": "not provided",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic; other",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2025-03-04"
+      },
+      {
+        "condition": "See cases",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2021-12-10"
+      },
+      {
+        "condition": "not specified",
+        "significance": "no classifications from unflagged record",
+        "rawSignificance": "no classifications from unflagged records",
+        "significanceRank": 9,
+        "reviewStatus": "no classifications from unflagged records",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2022-11-29"
+      }
+    ],
+    "distinctSignificances": [
+      "Pathogenic",
+      "Risk factor",
+      "Conflicting interpretations",
+      "not provided",
+      "no classifications from unflagged record"
+    ],
+    "hasSomatic": false,
+    "hasGermline": true,
+    "gnomadAf": 0.0994898,
+    "hasClinvar": true,
+    "hgvsId": "chr6:g.26091179C>G",
+    "variantId": 10,
+    "uniprot": null,
+    "residue": 63,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs1799945"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/10/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1799945"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/6-26090951-C-G?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:09:06.011Z"
+  },
+  "claims": [
+    {
+      "text": "The HFE-AS1 gene variant rs1799945 is a missense variant with a protein change of p.His63Asp.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.consequence",
+        "var.protein"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The HFE-AS1 gene variant rs1799945 is a single nucleotide variant.",
+      "supportingFactIds": [
+        "var.type"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The HFE-AS1 gene variant rs1799945 has a germline origin.",
+      "supportingFactIds": [
+        "var.cond.0.origin",
+        "var.cond.1.origin",
+        "var.cond.2.origin"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The HFE-AS1 gene variant rs1799945 is classified as Pathogenic for Hereditary hemochromatosis, Cardiomyopathy, and Variegate porphyria.",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.1.significance",
+        "var.cond.2.significance"
+      ],
+      "claimType": "classification_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "b696ebaaa83b5d96",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:09:10.588Z",
+    "retrievedAt": "2026-07-27T10:09:06.011Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs1799945"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/10/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1799945"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/6-26090951-C-G?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

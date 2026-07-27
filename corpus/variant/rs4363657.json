@@ -1,0 +1,71 @@
+{
+  "kind": "variant",
+  "id": "rs4363657",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs4363657",
+    "gene": "SLCO1B1",
+    "consequence": "",
+    "proteinChange": "",
+    "alleleCount": 1,
+    "otherAlleles": [],
+    "variantType": "snv",
+    "preferredName": null,
+    "chrom": "12",
+    "position": 21368722,
+    "refAlt": "T>A",
+    "assembly": "GRCh37",
+    "conditionClassifications": [],
+    "distinctSignificances": [],
+    "hasSomatic": false,
+    "hasGermline": false,
+    "gnomadAf": null,
+    "hasClinvar": false,
+    "hgvsId": "chr12:g.21368722T>A",
+    "variantId": null,
+    "uniprot": "Q9Y6L6",
+    "residue": null,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs4363657"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs4363657"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:17:49.324Z"
+  },
+  "claims": [
+    {
+      "text": "The human variant rs4363657 is a single nucleotide variant in the SLCO1B1 gene.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.type"
+      ],
+      "claimType": "identity"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "bf371780dbb118ce",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:17:51.595Z",
+    "retrievedAt": "2026-07-27T10:17:49.324Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs4363657"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs4363657"
+      }
+    ]
+  }
+}

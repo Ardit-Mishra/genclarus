@@ -1,0 +1,144 @@
+{
+  "kind": "variant",
+  "id": "rs1138272",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs1138272",
+    "gene": "GSTP1",
+    "consequence": "missense variant",
+    "proteinChange": "p.Ala114Val",
+    "alleleCount": 2,
+    "otherAlleles": [
+      {
+        "proteinChange": "",
+        "refAlt": "C>C",
+        "variantId": 16492,
+        "significance": "Benign"
+      }
+    ],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NM_000852.4(GSTP1):c.341C>T (p.Ala114Val)",
+    "chrom": "11",
+    "position": 67586108,
+    "refAlt": "C>T",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "GLUTATHIONE S-TRANSFERASE PI POLYMORPHISM, TYPE C",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "1997-04-11"
+      },
+      {
+        "condition": "Pulmonary disease, chronic obstructive, susceptibility to",
+        "significance": "association",
+        "rawSignificance": "association",
+        "significanceRank": 9,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2022-07-05"
+      },
+      {
+        "condition": "not provided",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2021-06-09"
+      }
+    ],
+    "distinctSignificances": [
+      "Benign",
+      "association"
+    ],
+    "hasSomatic": false,
+    "hasGermline": true,
+    "gnomadAf": 0.060864,
+    "hasClinvar": true,
+    "hgvsId": "chr11:g.67353579C>T",
+    "variantId": 16493,
+    "uniprot": "P09211",
+    "residue": 114,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs1138272"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/16493/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1138272"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/11-67586108-C-T?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:17:58.258Z"
+  },
+  "claims": [
+    {
+      "text": "The GSTP1 gene variant rs1138272 is a missense variant with a p.Ala114Val protein change.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.consequence",
+        "var.protein"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The GSTP1 gene variant rs1138272 has a frequency of 6.1% in the African population.",
+      "supportingFactIds": [
+        "var.gnomadAf"
+      ],
+      "claimType": "frequency_context"
+    },
+    {
+      "text": "The GSTP1 gene variant rs1138272 is classified as benign for the condition not provided, but its review confidence is moderate.",
+      "supportingFactIds": [
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars"
+      ],
+      "claimType": "classification_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "bbdc53ee598d6f85",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:18:02.243Z",
+    "retrievedAt": "2026-07-27T10:17:58.258Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs1138272"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/16493/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1138272"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/11-67586108-C-T?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

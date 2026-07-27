@@ -1,0 +1,111 @@
+{
+  "kind": "gene",
+  "id": "FBN1",
+  "facts": {
+    "kind": "gene",
+    "symbol": "FBN1",
+    "name": "fibrillin 1",
+    "type": "protein-coding",
+    "summary": "This gene encodes a member of the fibrillin family of proteins. The encoded preproprotein is proteolytically processed to generate two proteins including the extracellular matrix component fibrillin-1 and the protein hormone asprosin. Fibrillin-1 is an extracellular matrix glycoprotein that serves as a structural component of calcium-binding microfibrils. These microfibrils provide force-bearing structural support in elastic and nonelastic connective tissue throughout the body. Asprosin, secreted by white adipose tissue, has been shown to regulate glucose homeostasis. Mutations in this gene are associated with Marfan syndrome and the related MASS phenotype, as well as ectopia lentis syndrome, Weill-Marchesani syndrome, Shprintzen-Goldberg syndrome and neonatal progeroid syndrome. [provided by RefSeq, Apr 2016].",
+    "aliases": [
+      "ACMICD",
+      "ECTOL1",
+      "FBN",
+      "GPHYSD2",
+      "MASS",
+      "MFLS",
+      "MFS1",
+      "OCTD"
+    ],
+    "location": "chr15:48,408,016–48,645,791 (−)",
+    "uniprot": "P35555",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/2200"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000166147"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P35555"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/134797"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=FBN1"
+      }
+    ],
+    "retrievedAt": "2026-07-27T09:48:41.200Z"
+  },
+  "claims": [
+    {
+      "text": "FBN1 encodes a member of the fibrillin family of proteins.",
+      "supportingFactIds": [
+        "gene.symbol",
+        "gene.summary"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "Mutations in FBN1 are associated with Marfan syndrome and the related MASS phenotype.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "FBN1 is a protein-coding gene located on chromosome 15.",
+      "supportingFactIds": [
+        "gene.type",
+        "gene.location"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "FBN1 is associated with ectopia lentis syndrome.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "condition_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "fd673274b7aa116a",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T09:48:44.111Z",
+    "retrievedAt": "2026-07-27T09:48:41.200Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/2200"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000166147"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P35555"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/134797"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=FBN1"
+      }
+    ]
+  }
+}

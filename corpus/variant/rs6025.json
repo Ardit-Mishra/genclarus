@@ -1,0 +1,268 @@
+{
+  "kind": "variant",
+  "id": "rs6025",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs6025",
+    "gene": "F5",
+    "consequence": "missense variant",
+    "proteinChange": "p.Arg534Gln",
+    "alleleCount": 2,
+    "otherAlleles": [
+      {
+        "proteinChange": "",
+        "refAlt": "C>C",
+        "variantId": 226007,
+        "significance": "Conflicting interpretations"
+      }
+    ],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NM_000130.4(F5):c.1601G>A (p.Arg534Gln)",
+    "chrom": "1",
+    "position": 169549811,
+    "refAlt": "C>T",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "hormonal contraceptives for systemic use response - Toxicity",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "reviewed by expert panel",
+        "reviewStars": 3,
+        "origin": "germline",
+        "lastEvaluated": "2021-03-24"
+      },
+      {
+        "condition": "Congenital factor V deficiency",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "unknown",
+        "lastEvaluated": "2025-02-03"
+      },
+      {
+        "condition": "Thrombophilia due to activated protein C resistance (THPH2)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic/Pathogenic, low penetrance",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2023-07-12"
+      },
+      {
+        "condition": "Factor V deficiency",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic; risk factor",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2020-03-04"
+      },
+      {
+        "condition": "Ischemic stroke",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2024-06-19"
+      },
+      {
+        "condition": "Budd-Chiari syndrome (BDCHS)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2024-06-19"
+      },
+      {
+        "condition": "Pregnancy loss, recurrent, susceptibility to, 1 (RPRGL1)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2024-06-19"
+      },
+      {
+        "condition": "Congenital factor V deficiency",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2024-06-19"
+      },
+      {
+        "condition": "Inborn genetic diseases",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2018-01-23"
+      },
+      {
+        "condition": "Ischemic stroke",
+        "significance": "Risk factor",
+        "rawSignificance": "risk factor",
+        "significanceRank": 3,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2006-06-15"
+      },
+      {
+        "condition": "Budd-Chiari syndrome, susceptibility to",
+        "significance": "Risk factor",
+        "rawSignificance": "risk factor",
+        "significanceRank": 3,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2006-06-15"
+      },
+      {
+        "condition": "Pregnancy loss, recurrent, susceptibility to, 1 (RPRGL1)",
+        "significance": "Risk factor",
+        "rawSignificance": "risk factor",
+        "significanceRank": 3,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2006-06-15"
+      },
+      {
+        "condition": "Susceptibility to severe coronavirus disease (COVID-19) due to an impaired coagulation process",
+        "significance": "Uncertain significance",
+        "rawSignificance": "Uncertain significance",
+        "significanceRank": 6,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2021-06-29"
+      },
+      {
+        "condition": "not provided",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2025-03-04"
+      },
+      {
+        "condition": "not specified",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2021-02-22"
+      }
+    ],
+    "distinctSignificances": [
+      "Pathogenic",
+      "Risk factor",
+      "Drug response",
+      "Uncertain significance"
+    ],
+    "hasSomatic": false,
+    "hasGermline": true,
+    "gnomadAf": null,
+    "hasClinvar": true,
+    "hgvsId": "chr1:g.169519049C>T",
+    "variantId": 642,
+    "uniprot": "P12259",
+    "residue": 534,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs6025"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/642/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs6025"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/1-169549811-C-T?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:06:44.052Z"
+  },
+  "claims": [
+    {
+      "text": "The F5 gene variant rs6025 is associated with a drug response to hormonal contraceptives for systemic use, with a review confidence of 3 of 4 review stars.",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The F5 gene variant rs6025 is classified as pathogenic for Congenital factor V deficiency, with a review confidence of 2 of 4 review stars.",
+      "supportingFactIds": [
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The F5 gene variant rs6025 is classified as pathogenic for Thrombophilia due to activated protein C resistance (THPH2), with a review confidence of 2 of 4 review stars.",
+      "supportingFactIds": [
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars",
+        "var.cond.2.origin"
+      ],
+      "claimType": "classification_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "524667ab04422a99",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:06:51.605Z",
+    "retrievedAt": "2026-07-27T10:06:44.052Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs6025"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/642/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs6025"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/1-169549811-C-T?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

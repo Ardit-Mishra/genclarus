@@ -1,0 +1,109 @@
+{
+  "kind": "gene",
+  "id": "PALB2",
+  "facts": {
+    "kind": "gene",
+    "symbol": "PALB2",
+    "name": "partner and localizer of BRCA2",
+    "type": "protein-coding",
+    "summary": "This gene encodes a protein that may function in tumor suppression. This protein binds to and colocalizes with the breast cancer 2 early onset protein (BRCA2) in nuclear foci and likely permits the stable intranuclear localization and accumulation of BRCA2. [provided by RefSeq, Jul 2008].",
+    "aliases": [
+      "BROVCA5",
+      "FANCN",
+      "PNCA3"
+    ],
+    "location": "chr16:23,603,158–23,641,342 (−)",
+    "uniprot": "Q86YC2",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/79728"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000083093"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/Q86YC2"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/610355"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=PALB2"
+      }
+    ],
+    "retrievedAt": "2026-07-27T09:47:13.191Z"
+  },
+  "claims": [
+    {
+      "text": "The PALB2 gene encodes a protein that may function in tumor suppression.",
+      "supportingFactIds": [
+        "gene.symbol",
+        "gene.summary",
+        "gene.type"
+      ],
+      "claimType": "function"
+    },
+    {
+      "text": "The PALB2 protein binds to and colocalizes with the breast cancer 2 early onset protein (BRCA2) in nuclear foci.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "function"
+    },
+    {
+      "text": "The PALB2 gene is a protein-coding gene located on chromosome 16.",
+      "supportingFactIds": [
+        "gene.type",
+        "gene.location"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The PALB2 gene has several aliases, including BROVCA5, FANCN, and PNCA3.",
+      "supportingFactIds": [
+        "gene.alias.0",
+        "gene.alias.1",
+        "gene.alias.2"
+      ],
+      "claimType": "identity"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "1cba660da85aee29",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T09:47:16.360Z",
+    "retrievedAt": "2026-07-27T09:47:13.191Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/79728"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000083093"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/Q86YC2"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/610355"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=PALB2"
+      }
+    ]
+  }
+}

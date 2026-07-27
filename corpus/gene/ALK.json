@@ -1,0 +1,105 @@
+{
+  "kind": "gene",
+  "id": "ALK",
+  "facts": {
+    "kind": "gene",
+    "symbol": "ALK",
+    "name": "ALK receptor tyrosine kinase",
+    "type": "protein-coding",
+    "summary": "This gene encodes a receptor tyrosine kinase, which belongs to the insulin receptor superfamily. This protein comprises an extracellular domain, an hydrophobic stretch corresponding to a single pass transmembrane region, and an intracellular kinase domain. It plays an important role in the development of the brain and exerts its effects on specific neurons in the nervous system. This gene has been found to be rearranged, mutated, or amplified in a series of tumours including anaplastic large cell lymphomas, neuroblastoma, and non-small cell lung cancer. The chromosomal rearrangements are the most common genetic alterations in this gene, which result in creation of multiple fusion genes in tumourigenesis, including ALK (chromosome 2)/EML4 (chromosome 2), ALK/RANBP2 (chromosome 2), ALK/ATIC (chromosome 2), ALK/TFG (chromosome 3), ALK/NPM1 (chromosome 5), ALK/SQSTM1 (chromosome 5), ALK/KIF5B (chromosome 10), ALK/CLTC (chromosome 17), ALK/TPM4 (chromosome 19), and ALK/MSN (chromosome X).[provided by RefSeq, Jan 2011].",
+    "aliases": [
+      "ALK1",
+      "CD246",
+      "NBLST3"
+    ],
+    "location": "chr2:29,190,995–29,921,586 (−)",
+    "uniprot": "Q9UM73",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/238"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000171094"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/Q9UM73"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/105590"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=ALK"
+      }
+    ],
+    "retrievedAt": "2026-07-27T09:47:09.445Z"
+  },
+  "claims": [
+    {
+      "text": "The ALK gene encodes a receptor tyrosine kinase that belongs to the insulin receptor superfamily.",
+      "supportingFactIds": [
+        "gene.symbol",
+        "gene.summary"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "ALK plays a crucial role in brain development and exerts effects on specific neurons in the nervous system.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "function"
+    },
+    {
+      "text": "ALK has been found to be rearranged, mutated, or amplified in various tumours, including anaplastic large cell lymphomas and non-small cell lung cancer.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "condition_context"
+    },
+    {
+      "text": "The most common genetic alterations in the ALK gene result in the creation of multiple fusion genes in tumourigenesis.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "classification_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "38750e17e4ad9d39",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T09:47:12.833Z",
+    "retrievedAt": "2026-07-27T09:47:09.445Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/238"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000171094"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/Q9UM73"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/105590"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=ALK"
+      }
+    ]
+  }
+}

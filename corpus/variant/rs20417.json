@@ -1,0 +1,71 @@
+{
+  "kind": "variant",
+  "id": "rs20417",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs20417",
+    "gene": "PTGS2",
+    "consequence": "",
+    "proteinChange": "",
+    "alleleCount": 1,
+    "otherAlleles": [],
+    "variantType": "snv",
+    "preferredName": null,
+    "chrom": "1",
+    "position": 186650321,
+    "refAlt": "C>T",
+    "assembly": "GRCh37",
+    "conditionClassifications": [],
+    "distinctSignificances": [],
+    "hasSomatic": false,
+    "hasGermline": false,
+    "gnomadAf": null,
+    "hasClinvar": false,
+    "hgvsId": "chr1:g.186650321C>T",
+    "variantId": null,
+    "uniprot": "P35354",
+    "residue": null,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs20417"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs20417"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:15:32.935Z"
+  },
+  "claims": [
+    {
+      "text": "The PTGS2 gene variant rs20417 is a single nucleotide variant.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.type"
+      ],
+      "claimType": "identity"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "38cda4b872c1b5bf",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:15:35.662Z",
+    "retrievedAt": "2026-07-27T10:15:32.935Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs20417"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs20417"
+      }
+    ]
+  }
+}

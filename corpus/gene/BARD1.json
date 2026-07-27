@@ -1,0 +1,100 @@
+{
+  "kind": "gene",
+  "id": "BARD1",
+  "facts": {
+    "kind": "gene",
+    "symbol": "BARD1",
+    "name": "BRCA1 associated RING domain 1",
+    "type": "protein-coding",
+    "summary": "This gene encodes a protein which interacts with the N-terminal region of BRCA1. In addition to its ability to bind BRCA1 in vivo and in vitro, it shares homology with the 2 most conserved regions of BRCA1: the N-terminal RING motif and the C-terminal BRCT domain. The RING motif is a cysteine-rich sequence found in a variety of proteins that regulate cell growth, including the products of tumor suppressor genes and dominant protooncogenes. This protein also contains 3 tandem ankyrin repeats. The BARD1/BRCA1 interaction is disrupted by tumorigenic amino acid substitutions in BRCA1, implying that the formation of a stable complex between these proteins may be an essential aspect of BRCA1 tumor suppression. This protein may be the target of oncogenic mutations in breast or ovarian cancer. Multiple alternatively spliced transcript variants encoding different isoforms have been found for this gene. [provided by RefSeq, Sep 2013].",
+    "aliases": [],
+    "location": "chr2:214,724,705–214,809,726 (−)",
+    "uniprot": "Q99728",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/580"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000138376"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/Q99728"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/601593"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=BARD1"
+      }
+    ],
+    "retrievedAt": "2026-07-27T09:47:26.498Z"
+  },
+  "claims": [
+    {
+      "text": "The BARD1 gene encodes a protein that interacts with the N-terminal region of BRCA1.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "function"
+    },
+    {
+      "text": "BARD1 contains a RING motif and a BRCT domain, which are conserved regions of BRCA1.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "function"
+    },
+    {
+      "text": "The BARD1/BRCA1 interaction is disrupted by tumorigenic amino acid substitutions in BRCA1.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "Multiple alternatively spliced transcript variants encoding different isoforms have been found for the BARD1 gene.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "identity"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "49cd3db1d4a45914",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T09:47:33.419Z",
+    "retrievedAt": "2026-07-27T09:47:26.498Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/580"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000138376"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/Q99728"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/601593"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=BARD1"
+      }
+    ]
+  }
+}

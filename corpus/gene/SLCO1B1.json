@@ -1,0 +1,102 @@
+{
+  "kind": "gene",
+  "id": "SLCO1B1",
+  "facts": {
+    "kind": "gene",
+    "symbol": "SLCO1B1",
+    "name": "solute carrier organic anion transporter family member 1B1",
+    "type": "protein-coding",
+    "summary": "This gene encodes a liver-specific member of the organic anion transporter family. The encoded protein is a transmembrane receptor that mediates the sodium-independent uptake of numerous endogenous compounds including bilirubin, 17-beta-glucuronosyl estradiol and leukotriene C4. This protein is also involved in the removal of drug compounds such as statins, bromosulfophthalein and rifampin from the blood into the hepatocytes. Polymorphisms in the gene encoding this protein are associated with impaired transporter function. [provided by RefSeq, Mar 2009].",
+    "aliases": [
+      "HBLRR",
+      "LST-1",
+      "OATP-C",
+      "OATP1B1",
+      "OATP2",
+      "OATPC",
+      "SLC21A6"
+    ],
+    "location": "chr12:21,127,862–21,298,065 (+)",
+    "uniprot": "Q9Y6L6",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/10599"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000134538"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/Q9Y6L6"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/604843"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=SLCO1B1"
+      }
+    ],
+    "retrievedAt": "2026-07-27T09:49:44.180Z"
+  },
+  "claims": [
+    {
+      "text": "The SLCO1B1 gene encodes a liver-specific member of the organic anion transporter family.",
+      "supportingFactIds": [
+        "gene.symbol",
+        "gene.summary"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The encoded protein is a transmembrane receptor that mediates the sodium-independent uptake of numerous endogenous compounds.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "function"
+    },
+    {
+      "text": "Polymorphisms in the SLCO1B1 gene are associated with impaired transporter function.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "classification_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "75ad045cad0bfe36",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T09:49:47.093Z",
+    "retrievedAt": "2026-07-27T09:49:44.180Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/10599"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000134538"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/Q9Y6L6"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/604843"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=SLCO1B1"
+      }
+    ]
+  }
+}

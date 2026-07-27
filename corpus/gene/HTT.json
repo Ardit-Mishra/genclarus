@@ -1,0 +1,106 @@
+{
+  "kind": "gene",
+  "id": "HTT",
+  "facts": {
+    "kind": "gene",
+    "symbol": "HTT",
+    "name": "huntingtin",
+    "type": "protein-coding",
+    "summary": "Huntingtin is a disease gene linked to Huntington's disease, a neurodegenerative disorder characterized by loss of striatal neurons. This is thought to be caused by an expanded, unstable trinucleotide repeat in the huntingtin gene, which translates as a polyglutamine repeat in the protein product. A fairly broad range of trinucleotide repeats (9-35) has been identified in normal controls, and repeat numbers in excess of 40 have been described as pathological. The huntingtin locus is large, spanning 180 kb and consisting of 67 exons. The huntingtin gene is widely expressed and is required for normal development. It is expressed as 2 alternatively polyadenylated forms displaying different relative abundance in various fetal and adult tissues. The larger transcript is approximately 13.7 kb and is expressed predominantly in adult and fetal brain whereas the smaller transcript of approximately 10.3 kb is more widely expressed. The genetic defect leading to Huntington's disease may not necessarily eliminate transcription, but may confer a new property on the mRNA or alter the function of the protein. One candidate is the huntingtin-associated protein-1, highly expressed in brain, which has increased affinity for huntingtin protein with expanded polyglutamine repeats. This gene contains an upstream open reading frame in the 5' UTR that inhibits expression of the huntingtin gene product through translational repression. [provided by RefSeq, Jul 2016].",
+    "aliases": [
+      "HD",
+      "IT15",
+      "LOMARS"
+    ],
+    "location": "chr4:3,041,363–3,243,957 (+)",
+    "uniprot": "P42858",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/3064"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000197386"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P42858"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/613004"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=HTT"
+      }
+    ],
+    "retrievedAt": "2026-07-27T09:48:54.971Z"
+  },
+  "claims": [
+    {
+      "text": "The HTT gene is a protein-coding gene located on chromosome 4.",
+      "supportingFactIds": [
+        "gene.symbol",
+        "gene.type",
+        "gene.location"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The HTT gene is associated with Huntington's disease.",
+      "supportingFactIds": [
+        "gene.alias.0"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The HTT gene has two alternatively polyadenylated forms.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "function"
+    },
+    {
+      "text": "The HTT gene is widely expressed and required for normal development.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "function"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "4e564f1dc8d6d44b",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T09:49:00.192Z",
+    "retrievedAt": "2026-07-27T09:48:54.971Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/3064"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000197386"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P42858"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/613004"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=HTT"
+      }
+    ]
+  }
+}

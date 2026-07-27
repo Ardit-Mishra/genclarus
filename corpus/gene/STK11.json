@@ -1,0 +1,97 @@
+{
+  "kind": "gene",
+  "id": "STK11",
+  "facts": {
+    "kind": "gene",
+    "symbol": "STK11",
+    "name": "serine/threonine kinase 11",
+    "type": "protein-coding",
+    "summary": "The protein encoded by this gene is a serine/threonine kinase that regulates cell polarity and energy metabolism and functions as a tumor suppressor. Mutations in this gene have been associated with the autosomal dominant Peutz-Jeghers syndrome, as well as with skin, pancreatic, and testicular cancers. [provided by RefSeq, May 2022].",
+    "aliases": [
+      "LKB1",
+      "PJS",
+      "hLKB1"
+    ],
+    "location": "chr19:1,177,558–1,228,431 (+)",
+    "uniprot": "Q15831",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/6794"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000118046"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/Q15831"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/602216"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=STK11"
+      }
+    ],
+    "retrievedAt": "2026-07-27T09:44:34.254Z"
+  },
+  "claims": [
+    {
+      "text": "The protein encoded by the STK11 gene is a serine/threonine kinase that regulates cell polarity and energy metabolism.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "function"
+    },
+    {
+      "text": "The STK11 gene functions as a tumor suppressor.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "Mutations in the STK11 gene have been associated with Peutz-Jeghers syndrome, skin, pancreatic, and testicular cancers.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "condition_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "22dffb84b36d2155",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T09:44:37.193Z",
+    "retrievedAt": "2026-07-27T09:44:34.254Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/6794"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000118046"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/Q15831"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/602216"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=STK11"
+      }
+    ]
+  }
+}

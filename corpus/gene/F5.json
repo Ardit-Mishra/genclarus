@@ -1,0 +1,101 @@
+{
+  "kind": "gene",
+  "id": "F5",
+  "facts": {
+    "kind": "gene",
+    "symbol": "F5",
+    "name": "coagulation factor V",
+    "type": "protein-coding",
+    "summary": "This gene encodes an essential cofactor of the blood coagulation cascade. This factor circulates in plasma, and is converted to the active form by the release of the activation peptide by thrombin during coagulation. This generates a heavy chain and a light chain which are held together by calcium ions. The activated protein is a cofactor that participates with activated coagulation factor X to activate prothrombin to thrombin. Defects in this gene result in either an autosomal recessive hemorrhagic diathesis or an autosomal dominant form of thrombophilia, which is known as activated protein C resistance. [provided by RefSeq, Oct 2008].",
+    "aliases": [
+      "FVL",
+      "PCCF",
+      "RPRGL1",
+      "THPH2",
+      "fV"
+    ],
+    "location": "chr1:169,511,951–169,586,699 (−)",
+    "uniprot": "P12259",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/2153"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000198734"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P12259"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/612309"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=F5"
+      }
+    ],
+    "retrievedAt": "2026-07-27T09:48:00.408Z"
+  },
+  "claims": [
+    {
+      "text": "The F5 gene encodes coagulation factor V, an essential cofactor of the blood coagulation cascade.",
+      "supportingFactIds": [
+        "gene.symbol",
+        "gene.summary"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "Defects in the F5 gene can result in either an autosomal recessive hemorrhagic diathesis or an autosomal dominant form of thrombophilia.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "Coagulation factor V is a protein-coding gene located on chromosome 1.",
+      "supportingFactIds": [
+        "gene.type",
+        "gene.location"
+      ],
+      "claimType": "identity"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "9fad890daa24d4c5",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T09:48:03.113Z",
+    "retrievedAt": "2026-07-27T09:48:00.408Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/2153"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000198734"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P12259"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/612309"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=F5"
+      }
+    ]
+  }
+}

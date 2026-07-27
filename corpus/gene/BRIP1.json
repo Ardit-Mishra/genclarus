@@ -1,0 +1,108 @@
+{
+  "kind": "gene",
+  "id": "BRIP1",
+  "facts": {
+    "kind": "gene",
+    "symbol": "BRIP1",
+    "name": "BRCA1 interacting DNA helicase 1",
+    "type": "protein-coding",
+    "summary": "The protein encoded by this gene is a member of the RecQ DEAH helicase family and interacts with the BRCT repeats of breast cancer, type 1 (BRCA1). The bound complex is important in the normal double-strand break repair function of breast cancer, type 1 (BRCA1). This gene may be a target of germline cancer-inducing mutations. [provided by RefSeq, Jul 2008].",
+    "aliases": [
+      "BACH1",
+      "FANCJ",
+      "OF"
+    ],
+    "location": "chr17:61,679,139–61,863,561 (−)",
+    "uniprot": "Q9BX63",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/83990"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000136492"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/Q9BX63"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/605882"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=BRIP1"
+      }
+    ],
+    "retrievedAt": "2026-07-27T09:47:49.020Z"
+  },
+  "claims": [
+    {
+      "text": "The protein encoded by the BRIP1 gene is a member of the RecQ DEAH helicase family.",
+      "supportingFactIds": [
+        "gene.symbol",
+        "gene.summary"
+      ],
+      "claimType": "function"
+    },
+    {
+      "text": "The BRIP1 gene interacts with the BRCT repeats of breast cancer, type 1 (BRCA1).",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "function"
+    },
+    {
+      "text": "The BRIP1 gene is a protein-coding gene located on chromosome 17.",
+      "supportingFactIds": [
+        "gene.type",
+        "gene.location"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The BRIP1 gene has aliases BACH1, FANCJ, and OF.",
+      "supportingFactIds": [
+        "gene.alias.0",
+        "gene.alias.1",
+        "gene.alias.2"
+      ],
+      "claimType": "identity"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "c4a43fbaff9253b9",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T09:47:52.526Z",
+    "retrievedAt": "2026-07-27T09:47:49.020Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/83990"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000136492"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/Q9BX63"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/605882"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=BRIP1"
+      }
+    ]
+  }
+}

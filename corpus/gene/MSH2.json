@@ -1,0 +1,80 @@
+{
+  "kind": "gene",
+  "id": "MSH2",
+  "facts": {
+    "kind": "gene",
+    "symbol": "MSH2",
+    "name": "mutS homolog 2",
+    "type": "protein-coding",
+    "summary": "This locus is frequently mutated in hereditary nonpolyposis colon cancer (HNPCC). When cloned, it was discovered to be a human homolog of the E. coli mismatch repair gene mutS, consistent with the characteristic alterations in microsatellite sequences (RER+ phenotype) found in HNPCC. Two transcript variants encoding different isoforms have been found for this gene. [provided by RefSeq, Apr 2012].",
+    "aliases": [
+      "COCA1",
+      "FCC1",
+      "HNPCC",
+      "HNPCC1",
+      "LCFS2",
+      "LYNCH1",
+      "MMRCS2",
+      "MSH-2"
+    ],
+    "location": "chr2:47,403,067–47,663,146 (+)",
+    "uniprot": "P43246",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/4436"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000095002"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P43246"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/609309"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=MSH2"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:25:10.318Z"
+  },
+  "claims": null,
+  "aiAvailable": true,
+  "fallbackReason": "failed_grounding",
+  "provenance": {
+    "factsHash": "a96619794a7ac5a4",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:25:19.242Z",
+    "retrievedAt": "2026-07-27T10:25:10.318Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/4436"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000095002"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P43246"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/609309"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=MSH2"
+      }
+    ]
+  }
+}

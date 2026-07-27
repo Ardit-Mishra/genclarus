@@ -1,0 +1,203 @@
+{
+  "kind": "variant",
+  "id": "rs121918472",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs121918472",
+    "gene": "PROS1",
+    "consequence": "missense variant",
+    "proteinChange": "p.Ser501Pro",
+    "alleleCount": 2,
+    "otherAlleles": [
+      {
+        "proteinChange": "p.Ser501Ala",
+        "refAlt": "A>C",
+        "variantId": 951427,
+        "significance": "Uncertain significance"
+      }
+    ],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NM_000313.4(PROS1):c.1501T>C (p.Ser501Pro)",
+    "chrom": "3",
+    "position": 93879306,
+    "refAlt": "A>G",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "Thrombophilia due to protein S deficiency, autosomal dominant (THPH5)",
+        "significance": "Conflicting interpretations",
+        "rawSignificance": "Conflicting interpretations of pathogenicity",
+        "significanceRank": 5,
+        "reviewStatus": "criteria provided, conflicting interpretations",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2018-11-21"
+      },
+      {
+        "condition": "Optic atrophy",
+        "significance": "Uncertain significance",
+        "rawSignificance": "Uncertain significance",
+        "significanceRank": 6,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2023-01-01"
+      },
+      {
+        "condition": "Retinal dystrophy",
+        "significance": "Uncertain significance",
+        "rawSignificance": "Uncertain significance",
+        "significanceRank": 6,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2023-01-01"
+      },
+      {
+        "condition": "Thrombophilia due to protein S deficiency, autosomal recessive (THPH6)",
+        "significance": "Uncertain significance",
+        "rawSignificance": "Uncertain significance",
+        "significanceRank": 6,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2022-10-27"
+      },
+      {
+        "condition": "Hereditary thrombophilia due to congenital protein S deficiency",
+        "significance": "Uncertain significance",
+        "rawSignificance": "Uncertain significance",
+        "significanceRank": 6,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2021-09-15"
+      },
+      {
+        "condition": "Protein S Heerlen",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2004-06-01"
+      },
+      {
+        "condition": "not provided",
+        "significance": "Conflicting interpretations",
+        "rawSignificance": "Conflicting interpretations of pathogenicity",
+        "significanceRank": 5,
+        "reviewStatus": "criteria provided, conflicting interpretations",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2024-09-18"
+      },
+      {
+        "condition": "not specified",
+        "significance": "Conflicting interpretations",
+        "rawSignificance": "Conflicting interpretations of pathogenicity",
+        "significanceRank": 5,
+        "reviewStatus": "criteria provided, conflicting interpretations",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2019-02-04"
+      }
+    ],
+    "distinctSignificances": [
+      "Pathogenic",
+      "Conflicting interpretations",
+      "Uncertain significance"
+    ],
+    "hasSomatic": false,
+    "hasGermline": true,
+    "gnomadAf": 0.00194243,
+    "hasClinvar": true,
+    "hgvsId": "chr3:g.93598150A>G",
+    "variantId": 13316,
+    "uniprot": "P07225",
+    "residue": 501,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs121918472"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/13316/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs121918472"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/3-93879306-A-G?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:08:29.769Z"
+  },
+  "claims": [
+    {
+      "text": "The PROS1 gene variant rs121918472 is a missense variant with a protein change of p.Ser501Pro.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.consequence",
+        "var.protein"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The PROS1 gene variant rs121918472 has a conflicting classification for Thrombophilia due to protein S deficiency, autosomal dominant.",
+      "supportingFactIds": [
+        "var.cond.0.significance"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The PROS1 gene variant rs121918472 is associated with Optic atrophy and has an uncertain significance classification.",
+      "supportingFactIds": [
+        "var.cond.1.significance"
+      ],
+      "claimType": "condition_context"
+    },
+    {
+      "text": "The PROS1 gene variant rs121918472 has a germline origin.",
+      "supportingFactIds": [
+        "var.cond.0.origin",
+        "var.cond.1.origin",
+        "var.cond.2.origin"
+      ],
+      "claimType": "classification_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "cc96efb73ff29b97",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:08:35.972Z",
+    "retrievedAt": "2026-07-27T10:08:29.769Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs121918472"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/13316/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs121918472"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/3-93879306-A-G?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

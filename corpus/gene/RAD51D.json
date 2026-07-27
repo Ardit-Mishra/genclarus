@@ -1,0 +1,106 @@
+{
+  "kind": "gene",
+  "id": "RAD51D",
+  "facts": {
+    "kind": "gene",
+    "symbol": "RAD51D",
+    "name": "RAD51 paralog D",
+    "type": "protein-coding",
+    "summary": "The protein encoded by this gene is a member of the RAD51 protein family. RAD51 family members are highly similar to bacterial RecA and Saccharomyces cerevisiae Rad51, which are known to be involved in the homologous recombination and repair of DNA. This protein forms a complex with several other members of the RAD51 family, including RAD51L1, RAD51L2, and XRCC2. The protein complex formed with this protein has been shown to catalyze homologous pairing between single- and double-stranded DNA, and is thought to play a role in the early stage of recombinational repair of DNA. Alternative splicing results in multiple transcript variants. Read-through transcription also exists between this gene and the downstream ring finger and FYVE-like domain containing 1 (RFFL) gene. [provided by RefSeq, Jan 2011].",
+    "aliases": [
+      "BROVCA4",
+      "R51H3",
+      "RAD51L3",
+      "TRAD"
+    ],
+    "location": "chr17:35,092,221–35,121,522 (−)",
+    "uniprot": "O75771",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/5892"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000185379"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/O75771"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/602954"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=RAD51D"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:25:47.712Z"
+  },
+  "claims": [
+    {
+      "text": "The protein encoded by the RAD51D gene is a member of the RAD51 protein family.",
+      "supportingFactIds": [
+        "gene.symbol",
+        "gene.summary"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "RAD51D forms a complex with other RAD51 family members, including RAD51L1, RAD51L2, and XRCC2.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "function"
+    },
+    {
+      "text": "RAD51D is located on chromosome 17, between positions 35,092,221 and 35,121,522.",
+      "supportingFactIds": [
+        "gene.location"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "RAD51D has alternative splicing and read-through transcription with the RFFL gene.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "function"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "225d2f716fb34a0f",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:25:52.401Z",
+    "retrievedAt": "2026-07-27T10:25:47.712Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/5892"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000185379"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/O75771"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/602954"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=RAD51D"
+      }
+    ]
+  }
+}

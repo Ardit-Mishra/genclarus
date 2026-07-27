@@ -1,0 +1,71 @@
+{
+  "kind": "variant",
+  "id": "rs1000000",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs1000000",
+    "gene": "LOC101927464-LOC100128554",
+    "consequence": "",
+    "proteinChange": "",
+    "alleleCount": 1,
+    "otherAlleles": [],
+    "variantType": "snv",
+    "preferredName": null,
+    "chrom": "12",
+    "position": 126890980,
+    "refAlt": "G>C",
+    "assembly": "GRCh37",
+    "conditionClassifications": [],
+    "distinctSignificances": [],
+    "hasSomatic": false,
+    "hasGermline": false,
+    "gnomadAf": null,
+    "hasClinvar": false,
+    "hgvsId": "chr12:g.126890980G>C",
+    "variantId": null,
+    "uniprot": null,
+    "residue": null,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs1000000"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1000000"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:08:16.265Z"
+  },
+  "claims": [
+    {
+      "text": "The variant rs1000000 is a single nucleotide variant.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.type"
+      ],
+      "claimType": "identity"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "7584525d72543b2d",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:08:18.747Z",
+    "retrievedAt": "2026-07-27T10:08:16.265Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs1000000"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1000000"
+      }
+    ]
+  }
+}

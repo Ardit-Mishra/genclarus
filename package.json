@@ -11,7 +11,8 @@
     "test": "vitest run",
     "validate": "vitest run --config scripts/validation/vitest.config.ts",
     "measure:grounding": "vitest run --config scripts/validation/grounding.config.ts",
-    "warm": "node scripts/warm-cache.mjs"
+    "warm": "node scripts/warm-cache.mjs",
+    "corpus:generate": "node --env-file=.env.local --import tsx scripts/corpus/generate.ts"
   },
   "dependencies": {
     "3dmol": "^2.5.5",
@@ -27,6 +28,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.2.10",
     "tailwindcss": "^4",
+    "tsx": "^4.23.1",
     "typescript": "^5",
     "vitest": "^4.1.10"
   }

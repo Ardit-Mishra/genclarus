@@ -1,0 +1,110 @@
+{
+  "kind": "gene",
+  "id": "EGFR",
+  "facts": {
+    "kind": "gene",
+    "symbol": "EGFR",
+    "name": "epidermal growth factor receptor",
+    "type": "protein-coding",
+    "summary": "The protein encoded by this gene is a transmembrane glycoprotein that is a member of the protein kinase superfamily. This protein is a receptor for members of the epidermal growth factor family. EGFR is a cell surface protein that binds to epidermal growth factor, thus inducing receptor dimerization and tyrosine autophosphorylation leading to cell proliferation. Mutations in this gene are associated with lung cancer. EGFR is a component of the cytokine storm which contributes to a severe form of Coronavirus Disease 2019 (COVID-19) resulting from infection with severe acute respiratory syndrome coronavirus-2 (SARS-CoV-2). [provided by RefSeq, Jul 2020].",
+    "aliases": [
+      "ERBB",
+      "ERBB1",
+      "ERRP",
+      "HER1",
+      "NISBD2",
+      "NNCIS",
+      "PIG61",
+      "mENA"
+    ],
+    "location": "chr7:55,018,820–55,211,628 (+)",
+    "uniprot": "P00533",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/1956"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000146648"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P00533"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/131550"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=EGFR"
+      }
+    ],
+    "retrievedAt": "2026-07-27T09:46:57.174Z"
+  },
+  "claims": [
+    {
+      "text": "The protein encoded by the EGFR gene is a transmembrane glycoprotein and a member of the protein kinase superfamily.",
+      "supportingFactIds": [
+        "gene.symbol",
+        "gene.summary"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "EGFR is a receptor for members of the epidermal growth factor family.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "function"
+    },
+    {
+      "text": "EGFR is associated with lung cancer due to mutations in the gene.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The EGFR gene is located on chromosome 7 at position 55,018,820–55,211,628.",
+      "supportingFactIds": [
+        "gene.location"
+      ],
+      "claimType": "identity"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "d08d610ff0190ecb",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T09:47:00.037Z",
+    "retrievedAt": "2026-07-27T09:46:57.174Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/1956"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000146648"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P00533"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/131550"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=EGFR"
+      }
+    ]
+  }
+}

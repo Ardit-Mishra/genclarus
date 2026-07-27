@@ -1,0 +1,158 @@
+{
+  "kind": "variant",
+  "id": "rs137852695",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs137852695",
+    "gene": "PPT1",
+    "consequence": "missense variant",
+    "proteinChange": "p.Arg122Trp",
+    "alleleCount": 1,
+    "otherAlleles": [],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NM_000310.4(PPT1):c.364A>T (p.Arg122Trp)",
+    "chrom": "1",
+    "position": 40091398,
+    "refAlt": "T>A",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "Neuronal ceroid lipofuscinosis 1 (CLN1)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2025-02-19"
+      },
+      {
+        "condition": "Inborn genetic diseases",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2016-05-02"
+      },
+      {
+        "condition": "Neuronal ceroid lipofuscinosis",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2011-07-06"
+      },
+      {
+        "condition": "not provided",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2022-07-07"
+      }
+    ],
+    "distinctSignificances": [
+      "Pathogenic"
+    ],
+    "hasSomatic": false,
+    "hasGermline": true,
+    "gnomadAf": 0.00117909,
+    "hasClinvar": true,
+    "hgvsId": "chr1:g.40557070T>A",
+    "variantId": 8899,
+    "uniprot": "P50897",
+    "residue": 122,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs137852695"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/8899/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs137852695"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/1-40091398-T-A?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:16:22.669Z"
+  },
+  "claims": [
+    {
+      "text": "The PPT1 gene variant rs137852695 is a missense variant with a protein change of p.Arg122Trp.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.consequence",
+        "var.protein"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The variant rs137852695 is classified as Pathogenic for Neuronal ceroid lipofuscinosis 1 (CLN1) with a review confidence of 2 of 4 review stars.",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The variant rs137852695 is classified as Pathogenic for Inborn genetic diseases with a review confidence of 1 of 4 review stars.",
+      "supportingFactIds": [
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars",
+        "var.cond.1.origin"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The variant rs137852695 is classified as Pathogenic for Neuronal ceroid lipofuscinosis with a review confidence of 0 of 4 review stars.",
+      "supportingFactIds": [
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars",
+        "var.cond.2.origin"
+      ],
+      "claimType": "classification_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "993f0dc9ec70725e",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:16:27.540Z",
+    "retrievedAt": "2026-07-27T10:16:22.669Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs137852695"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/8899/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs137852695"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/1-40091398-T-A?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

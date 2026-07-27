@@ -1,0 +1,321 @@
+{
+  "kind": "variant",
+  "id": "rs80359550",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs80359550",
+    "gene": "BRCA2",
+    "consequence": "frameshift variant",
+    "proteinChange": "p.Ser1982fs",
+    "alleleCount": 1,
+    "otherAlleles": [],
+    "variantType": "Deletion",
+    "preferredName": "NM_000059.4(BRCA2):c.5946del (p.Ser1982fs)",
+    "chrom": "13",
+    "position": 32340301,
+    "refAlt": "",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "BRCA2-related cancer predisposition",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "reviewed by expert panel",
+        "reviewStars": 3,
+        "origin": "germline",
+        "lastEvaluated": "2024-06-11"
+      },
+      {
+        "condition": "Hereditary cancer-predisposing syndrome",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2025-02-24"
+      },
+      {
+        "condition": "Hereditary breast ovarian cancer syndrome",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2025-02-03"
+      },
+      {
+        "condition": "Breast-ovarian cancer, familial, susceptibility to, 2 (BROVCA2)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2024-07-04"
+      },
+      {
+        "condition": "Familial cancer of breast",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2024-05-06"
+      },
+      {
+        "condition": "Fanconi anemia complementation group D1",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2024-05-21"
+      },
+      {
+        "condition": "Medulloblastoma (MDB)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2024-05-21"
+      },
+      {
+        "condition": "Wilms tumor 1 (WT1)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2024-05-21"
+      },
+      {
+        "condition": "Pancreatic cancer, susceptibility to, 2",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2024-05-21"
+      },
+      {
+        "condition": "Glioma susceptibility 3 (GLM3)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2024-05-21"
+      },
+      {
+        "condition": "Familial prostate cancer",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2024-05-21"
+      },
+      {
+        "condition": "Breast and/or ovarian cancer",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2022-03-06"
+      },
+      {
+        "condition": "BRCA2-related disorder",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2017-04-28"
+      },
+      {
+        "condition": "Breast neoplasm",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": null
+      },
+      {
+        "condition": "Endometrial carcinoma",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2023-02-21"
+      },
+      {
+        "condition": "Ovarian neoplasm",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2018-12-01"
+      },
+      {
+        "condition": "Fanconi anemia complementation group D1",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "not provided",
+        "lastEvaluated": "2016-09-12"
+      },
+      {
+        "condition": "Pancreatic cancer, susceptibility to, 2",
+        "significance": "Risk factor",
+        "rawSignificance": "risk factor",
+        "significanceRank": 3,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "not provided",
+        "lastEvaluated": "2016-09-12"
+      },
+      {
+        "condition": "Fanconi anemia complementation group D1",
+        "significance": "not provided",
+        "rawSignificance": "not provided",
+        "significanceRank": 9,
+        "reviewStatus": "no assertion provided",
+        "reviewStars": 0,
+        "origin": "unknown",
+        "lastEvaluated": null
+      },
+      {
+        "condition": "Hereditary breast ovarian cancer syndrome",
+        "significance": "not provided",
+        "rawSignificance": "not provided",
+        "significanceRank": 9,
+        "reviewStatus": "no assertion provided",
+        "reviewStars": 0,
+        "origin": "unknown",
+        "lastEvaluated": null
+      },
+      {
+        "condition": "not provided",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2025-03-04"
+      }
+    ],
+    "distinctSignificances": [
+      "Pathogenic",
+      "Risk factor",
+      "not provided"
+    ],
+    "hasSomatic": false,
+    "hasGermline": true,
+    "gnomadAf": 0.000159297,
+    "hasClinvar": true,
+    "hgvsId": "chr13:g.32914438del",
+    "variantId": 9325,
+    "uniprot": "P51587",
+    "residue": null,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs80359550"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/9325/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs80359550"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:14:12.942Z"
+  },
+  "claims": [
+    {
+      "text": "The BRCA2 gene variant rs80359550 is a frameshift variant leading to a p.Ser1982fs protein change.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.consequence",
+        "var.protein"
+      ],
+      "claimType": "function"
+    },
+    {
+      "text": "The BRCA2 gene variant rs80359550 is a Deletion with a frequency of 0.016% in gnomAD.",
+      "supportingFactIds": [
+        "var.type",
+        "var.gnomadAf"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The BRCA2 gene variant rs80359550 is classified as Pathogenic for BRCA2-related cancer predisposition, Hereditary cancer-predisposing syndrome, and Hereditary breast ovarian cancer syndrome.",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.1.significance",
+        "var.cond.2.significance"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The BRCA2 gene variant rs80359550 has a review confidence of 3 of 4 review stars for BRCA2-related cancer predisposition and 2 of 4 review stars for Hereditary cancer-predisposing syndrome and Hereditary breast ovarian cancer syndrome.",
+      "supportingFactIds": [
+        "var.cond.0.reviewStars",
+        "var.cond.1.reviewStars",
+        "var.cond.2.reviewStars"
+      ],
+      "claimType": "uncertainty"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "50755ad8820e078d",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:14:17.221Z",
+    "retrievedAt": "2026-07-27T10:14:12.942Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs80359550"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/9325/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs80359550"
+      }
+    ]
+  }
+}

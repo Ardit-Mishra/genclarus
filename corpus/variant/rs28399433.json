@@ -1,0 +1,78 @@
+{
+  "kind": "variant",
+  "id": "rs28399433",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs28399433",
+    "gene": "CYP2A6",
+    "consequence": "",
+    "proteinChange": "",
+    "alleleCount": 1,
+    "otherAlleles": [],
+    "variantType": "snv",
+    "preferredName": null,
+    "chrom": "19",
+    "position": 41356379,
+    "refAlt": "A>T",
+    "assembly": "GRCh37",
+    "conditionClassifications": [],
+    "distinctSignificances": [],
+    "hasSomatic": false,
+    "hasGermline": false,
+    "gnomadAf": 0.0000322664,
+    "hasClinvar": false,
+    "hgvsId": "chr19:g.41356379A>T",
+    "variantId": null,
+    "uniprot": "P11509",
+    "residue": null,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs28399433"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs28399433"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:18:44.624Z"
+  },
+  "claims": [
+    {
+      "text": "The CYP2A6 gene variant rs28399433 is a single nucleotide variant.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.type"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The frequency of the CYP2A6 gene variant rs28399433 in the general population is low.",
+      "supportingFactIds": [
+        "var.gnomadAf"
+      ],
+      "claimType": "frequency_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "0502eeb1aed028de",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:18:47.330Z",
+    "retrievedAt": "2026-07-27T10:18:44.624Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs28399433"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs28399433"
+      }
+    ]
+  }
+}

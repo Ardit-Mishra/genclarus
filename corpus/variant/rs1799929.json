@@ -1,0 +1,114 @@
+{
+  "kind": "variant",
+  "id": "rs1799929",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs1799929",
+    "gene": "NAT2",
+    "consequence": "",
+    "proteinChange": "",
+    "alleleCount": 1,
+    "otherAlleles": [],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NM_000015.3(NAT2):c.481C>T (p.Leu161=)",
+    "chrom": "8",
+    "position": 18400484,
+    "refAlt": "C>T",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "NAT2-related disorder",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2023-12-29"
+      }
+    ],
+    "distinctSignificances": [
+      "Benign"
+    ],
+    "hasSomatic": false,
+    "hasGermline": true,
+    "gnomadAf": 0.361228,
+    "hasClinvar": false,
+    "hgvsId": "chr8:g.18257994C>T",
+    "variantId": 3060382,
+    "uniprot": "P11245",
+    "residue": null,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs1799929"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3060382/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1799929"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/8-18400484-C-T?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:18:20.604Z"
+  },
+  "claims": [
+    {
+      "text": "The NAT2 gene variant rs1799929 is a single nucleotide variant.",
+      "supportingFactIds": [
+        "var.type",
+        "var.gene"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The NAT2 gene variant rs1799929 has a frequency of 36% in the general population.",
+      "supportingFactIds": [
+        "var.gnomadAf"
+      ],
+      "claimType": "frequency_context"
+    },
+    {
+      "text": "The NAT2 gene variant rs1799929 is classified as Benign for NAT2-related disorder.",
+      "supportingFactIds": [
+        "var.cond.0.significance"
+      ],
+      "claimType": "classification_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "6be678a7054b8159",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:18:23.310Z",
+    "retrievedAt": "2026-07-27T10:18:20.604Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs1799929"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3060382/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1799929"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/8-18400484-C-T?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "kind": "variant",
+  "id": "rs2231137",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs2231137",
+    "gene": "ABCG2",
+    "consequence": "missense variant",
+    "proteinChange": "p.Val12Met",
+    "alleleCount": 1,
+    "otherAlleles": [],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NM_004827.3(ABCG2):c.34G>A (p.Val12Met)",
+    "chrom": "4",
+    "position": 88139962,
+    "refAlt": "C>T",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "ABCG2-related disorder",
+        "significance": "Likely benign",
+        "rawSignificance": "Likely benign",
+        "significanceRank": 7,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2021-07-21"
+      },
+      {
+        "condition": "Uric acid concentration, serum, quantitative trait locus 1 (UAQTL1)",
+        "significance": "association",
+        "rawSignificance": "association",
+        "significanceRank": 9,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2012-01-15"
+      },
+      {
+        "condition": "BLOOD GROUP, JUNIOR SYSTEM (JR)",
+        "significance": "Affects",
+        "rawSignificance": "Affects",
+        "significanceRank": 9,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2012-01-15"
+      }
+    ],
+    "distinctSignificances": [
+      "Likely benign",
+      "association",
+      "Affects"
+    ],
+    "hasSomatic": false,
+    "hasGermline": true,
+    "gnomadAf": 0.0776922,
+    "hasClinvar": true,
+    "hgvsId": "chr4:g.89061114C>T",
+    "variantId": 30386,
+    "uniprot": "Q9UNQ0",
+    "residue": 12,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs2231137"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/30386/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs2231137"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/4-88139962-C-T?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:17:15.565Z"
+  },
+  "claims": [
+    {
+      "text": "The ABCG2 gene variant rs2231137 is a missense variant with a protein change of p.Val12Met.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.consequence",
+        "var.protein"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The ABCG2 gene variant rs2231137 is classified as likely benign for ABCG2-related disorder.",
+      "supportingFactIds": [
+        "var.cond.0.significance"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The ABCG2 gene variant rs2231137 affects BLOOD GROUP, JUNIOR SYSTEM (JR) and is classified as Affects.",
+      "supportingFactIds": [
+        "var.cond.2.significance"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The ABCG2 gene variant rs2231137 has a frequency of 7.8% in gnomAD.",
+      "supportingFactIds": [
+        "var.gnomadAf"
+      ],
+      "claimType": "frequency_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "42fb6e63b469592b",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:17:19.258Z",
+    "retrievedAt": "2026-07-27T10:17:15.565Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs2231137"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/30386/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs2231137"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/4-88139962-C-T?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

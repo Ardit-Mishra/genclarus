@@ -1,0 +1,103 @@
+{
+  "kind": "gene",
+  "id": "LMNA",
+  "facts": {
+    "kind": "gene",
+    "symbol": "LMNA",
+    "name": "lamin A/C",
+    "type": "protein-coding",
+    "summary": "The protein encoded by this gene is part of the nuclear lamina, a two-dimensional matrix of proteins located next to the inner nuclear membrane. The lamin family of proteins make up the matrix and are highly conserved in evolution. During mitosis, the lamina matrix is reversibly disassembled as the lamin proteins are phosphorylated. Lamin proteins are thought to be involved in nuclear stability, chromatin structure and gene expression. Vertebrate lamins consist of two types, A and B. Alternative splicing results in multiple transcript variants. Mutations in this gene lead to several diseases: Emery-Dreifuss muscular dystrophy, familial partial lipodystrophy, limb girdle muscular dystrophy, dilated cardiomyopathy, Charcot-Marie-Tooth disease, and Hutchinson-Gilford progeria syndrome. [provided by RefSeq, May 2022].",
+    "aliases": [
+      "CDCD1",
+      "CDDC",
+      "CMD1A",
+      "CMT2B1",
+      "EMD2",
+      "FPL",
+      "FPLD",
+      "FPLD2"
+    ],
+    "location": "chr1:156,082,572–156,140,085 (+)",
+    "uniprot": "P02545",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/4000"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000160789"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P02545"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/150330"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=LMNA"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:06:05.778Z"
+  },
+  "claims": [
+    {
+      "text": "The protein encoded by the LMNA gene is part of the nuclear lamina, a two-dimensional matrix of proteins located next to the inner nuclear membrane.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "function"
+    },
+    {
+      "text": "Mutations in the LMNA gene lead to several diseases, including Emery-Dreifuss muscular dystrophy and Hutchinson-Gilford progeria syndrome.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "condition_context"
+    },
+    {
+      "text": "The LMNA gene is a protein-coding gene located on chromosome 1.",
+      "supportingFactIds": [
+        "gene.type",
+        "gene.location"
+      ],
+      "claimType": "identity"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "b37f9450d89eb760",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:06:08.941Z",
+    "retrievedAt": "2026-07-27T10:06:05.778Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/4000"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000160789"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P02545"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/150330"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=LMNA"
+      }
+    ]
+  }
+}

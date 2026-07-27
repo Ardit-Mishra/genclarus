@@ -1,0 +1,122 @@
+{
+  "kind": "variant",
+  "id": "rs1799931",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs1799931",
+    "gene": "NAT2",
+    "consequence": "missense variant",
+    "proteinChange": "p.Gly286Glu",
+    "alleleCount": 1,
+    "otherAlleles": [],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NM_000015.2(NAT2):c.857G>A (p.Gly286Glu)",
+    "chrom": "8",
+    "position": 18400860,
+    "refAlt": "G>A",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "Slow acetylator due to N-acetyltransferase enzyme variant",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2012-10-28"
+      }
+    ],
+    "distinctSignificances": [
+      "Drug response"
+    ],
+    "hasSomatic": false,
+    "hasGermline": true,
+    "gnomadAf": 0.0413136,
+    "hasClinvar": true,
+    "hgvsId": "chr8:g.18258370G>A",
+    "variantId": 725,
+    "uniprot": "P11245",
+    "residue": 286,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs1799931"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/725/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1799931"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/8-18400860-G-A?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:18:09.207Z"
+  },
+  "claims": [
+    {
+      "text": "The NAT2 gene variant rs1799931 is a missense variant with a p.Gly286Glu protein change.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.consequence",
+        "var.protein"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The NAT2 gene variant rs1799931 is a single nucleotide variant.",
+      "supportingFactIds": [
+        "var.type"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The NAT2 gene variant rs1799931 is associated with a drug response, specifically a slow acetylator phenotype.",
+      "supportingFactIds": [
+        "var.cond.0.significance"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The NAT2 gene variant rs1799931 has a low review confidence of 0 of 4 review stars.",
+      "supportingFactIds": [
+        "var.cond.0.reviewStars"
+      ],
+      "claimType": "uncertainty"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "cb420537fa471a61",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:18:12.580Z",
+    "retrievedAt": "2026-07-27T10:18:09.207Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs1799931"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/725/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1799931"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/8-18400860-G-A?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

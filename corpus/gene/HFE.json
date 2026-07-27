@@ -1,0 +1,101 @@
+{
+  "kind": "gene",
+  "id": "HFE",
+  "facts": {
+    "kind": "gene",
+    "symbol": "HFE",
+    "name": "homeostatic iron regulator",
+    "type": "protein-coding",
+    "summary": "The protein encoded by this gene is a membrane protein that is similar to MHC class I-type proteins and associates with beta2-microglobulin (beta2M). It is thought that this protein functions to regulate iron absorption by regulating the interaction of the transferrin receptor with transferrin. The iron storage disorder, hereditary haemochromatosis, is a recessive genetic disorder that results from defects in this gene. [provided by RefSeq, May 2022].",
+    "aliases": [
+      "HFE1",
+      "HH",
+      "HLA-H",
+      "MVCD7",
+      "TFQTL2"
+    ],
+    "location": "chr6:26,087,226–26,098,343 (+)",
+    "uniprot": "Q30201",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/3077"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000010704"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/Q30201"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/613609"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=HFE"
+      }
+    ],
+    "retrievedAt": "2026-07-27T09:49:04.699Z"
+  },
+  "claims": [
+    {
+      "text": "The HFE gene encodes a membrane protein similar to MHC class I-type proteins.",
+      "supportingFactIds": [
+        "gene.symbol",
+        "gene.summary"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The HFE protein associates with beta2-microglobulin (beta2M).",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "function"
+    },
+    {
+      "text": "The HFE gene is associated with hereditary haemochromatosis, a recessive genetic disorder.",
+      "supportingFactIds": [
+        "gene.name",
+        "gene.summary"
+      ],
+      "claimType": "condition_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "ba2d1bdb9a86ae05",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T09:49:07.540Z",
+    "retrievedAt": "2026-07-27T09:49:04.699Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/3077"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000010704"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/Q30201"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/613609"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=HFE"
+      }
+    ]
+  }
+}

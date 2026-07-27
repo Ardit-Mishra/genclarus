@@ -1,0 +1,103 @@
+{
+  "kind": "gene",
+  "id": "MLH1",
+  "facts": {
+    "kind": "gene",
+    "symbol": "MLH1",
+    "name": "mutL homolog 1",
+    "type": "protein-coding",
+    "summary": "The protein encoded by this gene can heterodimerize with mismatch repair endonuclease PMS2 to form MutL alpha, part of the DNA mismatch repair system. When MutL alpha is bound by MutS beta and some accessory proteins, the PMS2 subunit of MutL alpha introduces a single-strand break near DNA mismatches, providing an entry point for exonuclease degradation. The encoded protein is also involved in DNA damage signaling and can heterodimerize with DNA mismatch repair protein MLH3 to form MutL gamma, which is involved in meiosis. This gene was identified as a locus frequently mutated in hereditary nonpolyposis colon cancer (HNPCC). [provided by RefSeq, Aug 2017].",
+    "aliases": [
+      "COCA2",
+      "FCC2",
+      "HNPCC",
+      "HNPCC2",
+      "LYNCH2",
+      "MLH-1",
+      "MMRCS1",
+      "hMLH1"
+    ],
+    "location": "chr3:36,992,834–37,051,505 (+)",
+    "uniprot": "P40692",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/4292"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000076242"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P40692"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/120436"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=MLH1"
+      }
+    ],
+    "retrievedAt": "2026-07-27T09:44:08.057Z"
+  },
+  "claims": [
+    {
+      "text": "The MLH1 gene is a protein-coding gene located on chromosome 3.",
+      "supportingFactIds": [
+        "gene.type",
+        "gene.location"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The MLH1 gene is associated with hereditary nonpolyposis colon cancer (HNPCC).",
+      "supportingFactIds": [
+        "gene.alias.2"
+      ],
+      "claimType": "condition_context"
+    },
+    {
+      "text": "The MLH1 gene was identified as a locus frequently mutated in hereditary nonpolyposis colon cancer (HNPCC).",
+      "supportingFactIds": [
+        "gene.alias.2"
+      ],
+      "claimType": "condition_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "fbb0b47672651f6c",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T09:44:11.150Z",
+    "retrievedAt": "2026-07-27T09:44:08.057Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/4292"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000076242"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P40692"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/120436"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=MLH1"
+      }
+    ]
+  }
+}
