@@ -1,0 +1,121 @@
+{
+  "kind": "variant",
+  "id": "rs59421388",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs59421388",
+    "gene": "CYP2D6",
+    "consequence": "missense variant",
+    "proteinChange": "p.Val338Met",
+    "alleleCount": 1,
+    "otherAlleles": [],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NM_000106.6(CYP2D6):c.1012G>A (p.Val338Met)",
+    "chrom": "22",
+    "position": 42127608,
+    "refAlt": "C>T",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "not provided",
+        "significance": "Likely benign",
+        "rawSignificance": "Likely benign; other",
+        "significanceRank": 7,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2018-08-06"
+      }
+    ],
+    "distinctSignificances": [
+      "Likely benign"
+    ],
+    "hasSomatic": false,
+    "hasGermline": true,
+    "gnomadAf": 0.0259052,
+    "hasClinvar": true,
+    "hgvsId": "chr22:g.42523610C>T",
+    "variantId": 598263,
+    "uniprot": "P10635",
+    "residue": 338,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs59421388"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/598263/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs59421388"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/22-42127608-C-T?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:18:51.534Z"
+  },
+  "claims": [
+    {
+      "text": "The CYP2D6 gene variant rs59421388 is a missense variant.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.consequence"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The CYP2D6 gene variant rs59421388 is a single nucleotide variant.",
+      "supportingFactIds": [
+        "var.type"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The CYP2D6 gene variant rs59421388 is associated with a protein change of p.Val338Met.",
+      "supportingFactIds": [
+        "var.protein"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The CYP2D6 gene variant rs59421388 is classified as likely benign.",
+      "supportingFactIds": [
+        "var.cond.0.significance"
+      ],
+      "claimType": "classification_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "ad9ecad757a63925",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:18:54.189Z",
+    "retrievedAt": "2026-07-27T10:18:51.534Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs59421388"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/598263/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs59421388"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/22-42127608-C-T?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

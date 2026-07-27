@@ -1,0 +1,104 @@
+{
+  "kind": "gene",
+  "id": "NUDT15",
+  "facts": {
+    "kind": "gene",
+    "symbol": "NUDT15",
+    "name": "nudix hydrolase 15",
+    "type": "protein-coding",
+    "summary": "This gene encodes an enzyme that belongs to the Nudix hydrolase superfamily. Members of this superfamily catalyze the hydrolysis of nucleoside diphosphates, including substrates like 8-oxo-dGTP, which are a result of oxidative damage, and can induce base mispairing during DNA replication, causing transversions. The encoded enzyme is a negative regulator of thiopurine activation and toxicity. Mutations in this gene result in poor metabolism of thiopurines, and are associated with thiopurine-induced early leukopenia. Multiple pseudogenes of this gene have been identified. [provided by RefSeq, Apr 2016].",
+    "aliases": [
+      "MTH2",
+      "NUDT15D"
+    ],
+    "location": "chr13:48,037,514–48,054,196 (+)",
+    "uniprot": "Q9NV35",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/55270"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000136159"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/Q9NV35"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/615792"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=NUDT15"
+      }
+    ],
+    "retrievedAt": "2026-07-27T09:49:47.335Z"
+  },
+  "claims": [
+    {
+      "text": "NUDT15 encodes a protein-coding enzyme that belongs to the Nudix hydrolase superfamily.",
+      "supportingFactIds": [
+        "gene.symbol",
+        "gene.summary"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The encoded NUDT15 enzyme is a negative regulator of thiopurine activation and toxicity.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "function"
+    },
+    {
+      "text": "NUDT15 is located on the plus strand of chromosome 13 between 48,037,514 and 48,054,196.",
+      "supportingFactIds": [
+        "gene.location"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "Mutations in NUDT15 result in poor metabolism of thiopurines.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "classification_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "7764eff06e1dd8d8",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T09:49:50.583Z",
+    "retrievedAt": "2026-07-27T09:49:47.335Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/55270"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000136159"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/Q9NV35"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/615792"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=NUDT15"
+      }
+    ]
+  }
+}

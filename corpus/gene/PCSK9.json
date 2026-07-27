@@ -1,0 +1,102 @@
+{
+  "kind": "gene",
+  "id": "PCSK9",
+  "facts": {
+    "kind": "gene",
+    "symbol": "PCSK9",
+    "name": "proprotein convertase subtilisin/kexin type 9",
+    "type": "protein-coding",
+    "summary": "This gene encodes a member of the subtilisin-like proprotein convertase family, which includes proteases that process protein and peptide precursors trafficking through regulated or constitutive branches of the secretory pathway. The encoded protein undergoes an autocatalytic processing event with its prosegment in the ER and is constitutively secreted as an inactive protease into the extracellular matrix and trans-Golgi network. It is expressed in liver, intestine and kidney tissues and escorts specific receptors for lysosomal degradation. It plays a role in cholesterol and fatty acid metabolism. Mutations in this gene have been associated with autosomal dominant familial hypercholesterolemia. Alternative splicing results in multiple transcript variants. [provided by RefSeq, Feb 2014].",
+    "aliases": [
+      "FH3",
+      "FHCL3",
+      "HCHOLA3",
+      "LDLCQ1",
+      "NARC-1",
+      "NARC1",
+      "PC9"
+    ],
+    "location": "chr1:55,039,445–55,064,852 (+)",
+    "uniprot": "Q8NBP7",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/255738"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000169174"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/Q8NBP7"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/607786"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=PCSK9"
+      }
+    ],
+    "retrievedAt": "2026-07-27T09:48:31.818Z"
+  },
+  "claims": [
+    {
+      "text": "The PCSK9 gene encodes a member of the subtilisin-like proprotein convertase family.",
+      "supportingFactIds": [
+        "gene.symbol",
+        "gene.summary"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The PCSK9 protein undergoes autocatalytic processing in the ER and is constitutively secreted into the extracellular matrix and trans-Golgi network.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "function"
+    },
+    {
+      "text": "Mutations in the PCSK9 gene have been associated with autosomal dominant familial hypercholesterolemia.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "classification_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "fdb70cd8e8cdb4c9",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T09:48:35.292Z",
+    "retrievedAt": "2026-07-27T09:48:31.818Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/255738"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000169174"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/Q8NBP7"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/607786"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=PCSK9"
+      }
+    ]
+  }
+}

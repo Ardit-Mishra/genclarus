@@ -1,0 +1,110 @@
+{
+  "kind": "gene",
+  "id": "CFTR",
+  "facts": {
+    "kind": "gene",
+    "symbol": "CFTR",
+    "name": "CF transmembrane conductance regulator",
+    "type": "protein-coding",
+    "summary": "This gene encodes a member of the ATP-binding cassette (ABC) transporter superfamily. The encoded protein functions as a chloride channel, making it unique among members of this protein family, and controls ion and water secretion and absorption in epithelial tissues. Channel activation is mediated by cycles of regulatory domain phosphorylation, ATP-binding by the nucleotide-binding domains, and ATP hydrolysis. Mutations in this gene cause cystic fibrosis, the most common lethal genetic disorder in populations of Northern European descent. The most frequently occurring mutation in cystic fibrosis, DeltaF508, results in impaired folding and trafficking of the encoded protein. Multiple pseudogenes have been identified in the human genome. [provided by RefSeq, Aug 2017].",
+    "aliases": [
+      "ABC35",
+      "ABCC7",
+      "CF",
+      "CFTR/MRP",
+      "MRP7",
+      "TNR-CFTR",
+      "dJ760C5.1"
+    ],
+    "location": "chr7:117,287,120–117,715,971 (+)",
+    "uniprot": "P13569",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/1080"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000001626"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P13569"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/602421"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=CFTR"
+      }
+    ],
+    "retrievedAt": "2026-07-27T09:44:04.317Z"
+  },
+  "claims": [
+    {
+      "text": "The CFTR gene encodes a protein that functions as a chloride channel.",
+      "supportingFactIds": [
+        "gene.symbol",
+        "gene.summary"
+      ],
+      "claimType": "function"
+    },
+    {
+      "text": "Mutations in the CFTR gene cause cystic fibrosis.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The CFTR gene is a protein-coding gene located on chromosome 7.",
+      "supportingFactIds": [
+        "gene.type",
+        "gene.location"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "Multiple pseudogenes have been identified for the CFTR gene.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "identity"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "07adbce629cdb58a",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T09:44:07.719Z",
+    "retrievedAt": "2026-07-27T09:44:04.317Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/1080"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000001626"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P13569"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/602421"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=CFTR"
+      }
+    ]
+  }
+}

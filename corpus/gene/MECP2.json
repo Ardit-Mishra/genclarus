@@ -1,0 +1,112 @@
+{
+  "kind": "gene",
+  "id": "MECP2",
+  "facts": {
+    "kind": "gene",
+    "symbol": "MECP2",
+    "name": "methyl-CpG binding protein 2",
+    "type": "protein-coding",
+    "summary": "DNA methylation is the major modification of eukaryotic genomes and plays an essential role in mammalian development. Human proteins MECP2, MBD1, MBD2, MBD3, and MBD4 comprise a family of nuclear proteins related by the presence in each of a methyl-CpG binding domain (MBD). Each of these proteins, with the exception of MBD3, is capable of binding specifically to methylated DNA. MECP2, MBD1 and MBD2 can also repress transcription from methylated gene promoters. In contrast to other MBD family members, MECP2 is X-linked and subject to X inactivation. MECP2 is dispensible in stem cells, but is essential for embryonic development. MECP2 gene mutations are the cause of most cases of Rett syndrome, a progressive neurologic developmental disorder and one of the most common causes of cognitive disability in females. Alternative splicing results in multiple transcript variants encoding different isoforms. [provided by RefSeq, Oct 2015].",
+    "aliases": [
+      "AUTSX3",
+      "MRX16",
+      "MRX79",
+      "MRXS13",
+      "MRXSL",
+      "PPMX",
+      "RS",
+      "RTS"
+    ],
+    "location": "chrX:154,021,573–154,137,103 (−)",
+    "uniprot": "P51608",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/4204"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000169057"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P51608"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/300005"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=MECP2"
+      }
+    ],
+    "retrievedAt": "2026-07-27T09:49:58.488Z"
+  },
+  "claims": [
+    {
+      "text": "MECP2 is a protein-coding gene located on the X chromosome.",
+      "supportingFactIds": [
+        "gene.type",
+        "gene.location"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "MECP2 is an X-linked gene subject to X inactivation.",
+      "supportingFactIds": [
+        "gene.type",
+        "gene.location"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "Mutations in MECP2 are the cause of most cases of Rett syndrome.",
+      "supportingFactIds": [
+        "gene.name",
+        "gene.symbol"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "MECP2 is essential for embryonic development.",
+      "supportingFactIds": [
+        "gene.symbol"
+      ],
+      "claimType": "condition_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "c16ce37d24934ce7",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T09:50:02.441Z",
+    "retrievedAt": "2026-07-27T09:49:58.488Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/4204"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000169057"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P51608"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/300005"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=MECP2"
+      }
+    ]
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "kind": "variant",
+  "id": "rs3745274",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs3745274",
+    "gene": "CYP2B6",
+    "consequence": "missense variant",
+    "proteinChange": "p.Gln172His",
+    "alleleCount": 1,
+    "otherAlleles": [],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NM_000767.5(CYP2B6):c.516G>T (p.Gln172His)",
+    "chrom": "19",
+    "position": 41006936,
+    "refAlt": "G>T",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "efavirenz response - Metabolism/PK",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "reviewed by expert panel",
+        "reviewStars": 3,
+        "origin": "germline",
+        "lastEvaluated": "2021-03-24"
+      },
+      {
+        "condition": "efavirenz response - Toxicity",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "reviewed by expert panel",
+        "reviewStars": 3,
+        "origin": "germline",
+        "lastEvaluated": "2021-03-24"
+      },
+      {
+        "condition": "nevirapine response - Metabolism/PK",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "reviewed by expert panel",
+        "reviewStars": 3,
+        "origin": "germline",
+        "lastEvaluated": "2021-03-24"
+      },
+      {
+        "condition": "Efavirenz response",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2015-05-18"
+      },
+      {
+        "condition": "CYP2B6-related disorder",
+        "significance": "Likely benign",
+        "rawSignificance": "Likely benign",
+        "significanceRank": 7,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2021-07-22"
+      }
+    ],
+    "distinctSignificances": [
+      "Drug response",
+      "Likely benign"
+    ],
+    "hasSomatic": false,
+    "hasGermline": true,
+    "gnomadAf": 0.263371,
+    "hasClinvar": true,
+    "hgvsId": "chr19:g.41512841G>T",
+    "variantId": 29671,
+    "uniprot": "P20813",
+    "residue": 172,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs3745274"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/29671/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs3745274"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/19-41006936-G-T?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:27:50.069Z"
+  },
+  "claims": [
+    {
+      "text": "The CYP2B6 gene variant rs3745274 is a missense variant causing the p.Gln172His protein change.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.consequence",
+        "var.protein"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The CYP2B6 gene variant rs3745274 is a single nucleotide variant.",
+      "supportingFactIds": [
+        "var.type"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The CYP2B6 gene variant rs3745274 is associated with drug response to efavirenz in terms of metabolism and toxicity, and nevirapine in terms of metabolism.",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.1.significance",
+        "var.cond.2.significance"
+      ],
+      "claimType": "condition_context"
+    },
+    {
+      "text": "The CYP2B6 gene variant rs3745274 has a frequency of 26% in the African population.",
+      "supportingFactIds": [
+        "var.gnomadAf"
+      ],
+      "claimType": "frequency_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "e9fe885d72956077",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:27:53.551Z",
+    "retrievedAt": "2026-07-27T10:27:50.069Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs3745274"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/29671/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs3745274"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/19-41006936-G-T?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "kind": "variant",
+  "id": "rs1799724",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs1799724",
+    "gene": "TNF",
+    "consequence": "",
+    "proteinChange": "",
+    "alleleCount": 1,
+    "otherAlleles": [],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NC_000006.12:g.31574705C>T",
+    "chrom": "6",
+    "position": 31574705,
+    "refAlt": "C>T",
+    "assembly": "GRCh38",
+    "conditionClassifications": [],
+    "distinctSignificances": [],
+    "hasSomatic": false,
+    "hasGermline": false,
+    "gnomadAf": 0.0784947,
+    "hasClinvar": true,
+    "hgvsId": "chr6:g.31542482C>T",
+    "variantId": 12389,
+    "uniprot": "P01375",
+    "residue": null,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs1799724"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/12389/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1799724"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/6-31574705-C-T?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:15:02.625Z"
+  },
+  "claims": [
+    {
+      "text": "The TNF gene variant is a single nucleotide variant.",
+      "supportingFactIds": [
+        "var.type"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The TNF gene variant is located in the TNF gene.",
+      "supportingFactIds": [
+        "var.gene"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The TNF gene variant has a frequency of 7.8% in the general population.",
+      "supportingFactIds": [
+        "var.gnomadAf"
+      ],
+      "claimType": "frequency_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "488cd7c5a2eb8319",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:15:06.960Z",
+    "retrievedAt": "2026-07-27T10:15:02.625Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs1799724"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/12389/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1799724"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/6-31574705-C-T?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

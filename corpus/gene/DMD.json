@@ -1,0 +1,104 @@
+{
+  "kind": "gene",
+  "id": "DMD",
+  "facts": {
+    "kind": "gene",
+    "symbol": "DMD",
+    "name": "dystrophin",
+    "type": "protein-coding",
+    "summary": "This gene spans a genomic range of greater than 2 Mb and encodes a large protein containing an N-terminal actin-binding domain and multiple spectrin repeats. The encoded protein forms a component of the dystrophin-glycoprotein complex (DGC), which bridges the inner cytoskeleton and the extracellular matrix. Deletions, duplications, and point mutations at this gene locus may cause Duchenne muscular dystrophy (DMD), Becker muscular dystrophy (BMD), or cardiomyopathy. Alternative promoter usage and alternative splicing result in numerous distinct transcript variants and protein isoforms for this gene. [provided by RefSeq, Dec 2016].",
+    "aliases": [
+      "BMD",
+      "CMD3B",
+      "DXS142",
+      "DXS164",
+      "DXS206",
+      "DXS230",
+      "DXS239",
+      "DXS268"
+    ],
+    "location": "chrX:31,097,677–33,339,609 (−)",
+    "uniprot": "P11532",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/1756"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000198947"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P11532"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/300377"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=DMD"
+      }
+    ],
+    "retrievedAt": "2026-07-27T09:48:47.674Z"
+  },
+  "claims": [
+    {
+      "text": "The DMD gene encodes a large protein containing an N-terminal actin-binding domain and multiple spectrin repeats.",
+      "supportingFactIds": [
+        "gene.symbol",
+        "gene.summary"
+      ],
+      "claimType": "function"
+    },
+    {
+      "text": "DMD gene deletions, duplications, and point mutations may cause Duchenne muscular dystrophy, Becker muscular dystrophy, or cardiomyopathy.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The DMD gene spans a genomic range of greater than 2 Mb on chromosome X.",
+      "supportingFactIds": [
+        "gene.location",
+        "gene.summary"
+      ],
+      "claimType": "identity"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "08eca702fc6f5e5c",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T09:48:50.976Z",
+    "retrievedAt": "2026-07-27T09:48:47.674Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/1756"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000198947"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P11532"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/300377"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=DMD"
+      }
+    ]
+  }
+}

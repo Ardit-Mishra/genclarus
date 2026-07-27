@@ -1,0 +1,194 @@
+{
+  "kind": "variant",
+  "id": "rs121908755",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs121908755",
+    "gene": "CFTR",
+    "consequence": "missense variant",
+    "proteinChange": "p.Ser549Asn",
+    "alleleCount": 2,
+    "otherAlleles": [
+      {
+        "proteinChange": "p.Ser549Ile",
+        "refAlt": "G>T",
+        "variantId": 7117,
+        "significance": "Pathogenic"
+      }
+    ],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NM_000492.4(CFTR):c.1646G>A (p.Ser549Asn)",
+    "chrom": "7",
+    "position": 117587800,
+    "refAlt": "G>A",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "Cystic fibrosis (CF)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "reviewed by expert panel",
+        "reviewStars": 3,
+        "origin": "germline",
+        "lastEvaluated": "2017-03-17"
+      },
+      {
+        "condition": "ivacaftor response - Efficacy",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "reviewed by expert panel",
+        "reviewStars": 3,
+        "origin": "germline",
+        "lastEvaluated": "2021-03-24"
+      },
+      {
+        "condition": "Bronchiectasis with or without elevated sweat chloride 1 (BESC1)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2024-02-27"
+      },
+      {
+        "condition": "Congenital bilateral aplasia of vas deferens from CFTR mutation (CBAVD)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2024-02-21"
+      },
+      {
+        "condition": "Hereditary pancreatitis (PCTT)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2024-02-21"
+      },
+      {
+        "condition": "Bronchiectasis with or without elevated sweat chloride 1 (BESC1)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2024-02-21"
+      },
+      {
+        "condition": "CFTR-related disorder (CFTR-RD)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2023-03-16"
+      },
+      {
+        "condition": "not provided",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2024-09-25"
+      }
+    ],
+    "distinctSignificances": [
+      "Pathogenic",
+      "Drug response"
+    ],
+    "hasSomatic": false,
+    "hasGermline": true,
+    "gnomadAf": 0.0000636943,
+    "hasClinvar": true,
+    "hgvsId": "chr7:g.117227854G>A",
+    "variantId": 7116,
+    "uniprot": "P13569",
+    "residue": 549,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs121908755"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/7116/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs121908755"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/7-117587800-G-A?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:13:45.890Z"
+  },
+  "claims": [
+    {
+      "text": "The CFTR gene variant rs121908755 is a missense variant with a protein change of p.Ser549Asn.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.consequence",
+        "var.protein"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The variant rs121908755 has a frequency of 0.0064% in gnomAD.",
+      "supportingFactIds": [
+        "var.gnomadAf"
+      ],
+      "claimType": "frequency_context"
+    },
+    {
+      "text": "The variant rs121908755 is classified as Drug response for ivacaftor response - Efficacy, with 3 of 4 review stars.",
+      "supportingFactIds": [
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars"
+      ],
+      "claimType": "classification_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "ea951bb960a4a433",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:13:50.010Z",
+    "retrievedAt": "2026-07-27T10:13:45.890Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs121908755"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/7116/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs121908755"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/7-117587800-G-A?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

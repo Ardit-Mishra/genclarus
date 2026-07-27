@@ -1,0 +1,229 @@
+{
+  "kind": "variant",
+  "id": "rs3918290",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs3918290",
+    "gene": "DPYD",
+    "consequence": "",
+    "proteinChange": "",
+    "alleleCount": 2,
+    "otherAlleles": [
+      {
+        "proteinChange": "",
+        "refAlt": "C>G",
+        "variantId": 2429124,
+        "significance": "Pathogenic"
+      }
+    ],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NM_000110.4(DPYD):c.1905+1G>A",
+    "chrom": "1",
+    "position": 97450058,
+    "refAlt": "C>T",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "fluorouracil response - Toxicity",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "reviewed by expert panel",
+        "reviewStars": 3,
+        "origin": "germline",
+        "lastEvaluated": "2021-05-24"
+      },
+      {
+        "condition": "fluorouracil response - Other",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "reviewed by expert panel",
+        "reviewStars": 3,
+        "origin": "germline",
+        "lastEvaluated": "2021-05-24"
+      },
+      {
+        "condition": "capecitabine response - Toxicity",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "reviewed by expert panel",
+        "reviewStars": 3,
+        "origin": "germline",
+        "lastEvaluated": "2021-05-24"
+      },
+      {
+        "condition": "tegafur response - Toxicity",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "reviewed by expert panel",
+        "reviewStars": 3,
+        "origin": "germline",
+        "lastEvaluated": "2021-05-24"
+      },
+      {
+        "condition": "Dihydropyrimidine dehydrogenase deficiency (DPYDD)",
+        "significance": "Likely pathogenic",
+        "rawSignificance": "Pathogenic/Likely pathogenic",
+        "significanceRank": 1,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2024-03-30"
+      },
+      {
+        "condition": "DPYD-related disorder",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "maternal",
+        "lastEvaluated": "2024-01-01"
+      },
+      {
+        "condition": "Inborn genetic diseases",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2021-03-09"
+      },
+      {
+        "condition": "Fluorouracil response",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2016-05-04"
+      },
+      {
+        "condition": "Hirschsprung disease, susceptibility to, 1",
+        "significance": "Uncertain significance",
+        "rawSignificance": "Uncertain significance",
+        "significanceRank": 6,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2015-04-01"
+      },
+      {
+        "condition": "not provided",
+        "significance": "Conflicting interpretations",
+        "rawSignificance": "Conflicting interpretations of pathogenicity",
+        "significanceRank": 5,
+        "reviewStatus": "criteria provided, conflicting interpretations",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2024-11-01"
+      }
+    ],
+    "distinctSignificances": [
+      "Pathogenic",
+      "Likely pathogenic",
+      "Drug response",
+      "Conflicting interpretations",
+      "Uncertain significance"
+    ],
+    "hasSomatic": false,
+    "hasGermline": true,
+    "gnomadAf": 0.00646497,
+    "hasClinvar": true,
+    "hgvsId": "chr1:g.97915614C>T",
+    "variantId": 432,
+    "uniprot": "Q12882",
+    "residue": null,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs3918290"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/432/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs3918290"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/1-97450058-C-T?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:11:09.223Z"
+  },
+  "claims": [
+    {
+      "text": "The DPYD gene variant rs3918290 is associated with a drug response to fluorouracil, specifically toxicity, with a review confidence of 3 of 4 stars.",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin"
+      ],
+      "claimType": "condition_context"
+    },
+    {
+      "text": "The DPYD gene variant rs3918290 is associated with a drug response to fluorouracil, specifically other effects, with a review confidence of 3 of 4 stars.",
+      "supportingFactIds": [
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars",
+        "var.cond.1.origin"
+      ],
+      "claimType": "condition_context"
+    },
+    {
+      "text": "The DPYD gene variant rs3918290 is associated with a drug response to capecitabine, specifically toxicity, with a review confidence of 3 of 4 stars.",
+      "supportingFactIds": [
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars",
+        "var.cond.2.origin"
+      ],
+      "claimType": "condition_context"
+    },
+    {
+      "text": "The DPYD gene variant rs3918290 has a germline origin.",
+      "supportingFactIds": [
+        "var.cond.0.origin",
+        "var.cond.1.origin",
+        "var.cond.2.origin"
+      ],
+      "claimType": "classification_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "a5dc8335bc475018",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:11:13.067Z",
+    "retrievedAt": "2026-07-27T10:11:09.223Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs3918290"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/432/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs3918290"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/1-97450058-C-T?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

@@ -1,0 +1,208 @@
+{
+  "kind": "variant",
+  "id": "rs1050828",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs1050828",
+    "gene": "G6PD",
+    "consequence": "missense variant",
+    "proteinChange": "p.Val98Met",
+    "alleleCount": 1,
+    "otherAlleles": [],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NM_000402.4(G6PD):c.292G>A (p.Val98Met)",
+    "chrom": "X",
+    "position": 154536002,
+    "refAlt": "C>T",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "G6PD deficiency",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2023-02-13"
+      },
+      {
+        "condition": "Anemia, nonspherocytic hemolytic, due to G6PD deficiency (CNSHA1)",
+        "significance": "Likely pathogenic",
+        "rawSignificance": "Pathogenic/Likely pathogenic",
+        "significanceRank": 1,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2024-04-04"
+      },
+      {
+        "condition": "Anemia, nonspherocytic hemolytic, due to G6PD deficiency (CNSHA1)",
+        "significance": "Likely pathogenic",
+        "rawSignificance": "Likely pathogenic/Established risk allele",
+        "significanceRank": 1,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "unknown",
+        "lastEvaluated": "2022-12-23"
+      },
+      {
+        "condition": "Malaria, susceptibility to",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2024-03-30"
+      },
+      {
+        "condition": "Inborn genetic diseases",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2023-11-20"
+      },
+      {
+        "condition": "Anemia, nonspherocytic hemolytic, due to G6PD deficiency (CNSHA1)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": null
+      },
+      {
+        "condition": "Anemia, nonspherocytic hemolytic, due to G6PD deficiency (CNSHA1)",
+        "significance": "Uncertain significance",
+        "rawSignificance": "Uncertain significance",
+        "significanceRank": 6,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2022-08-12"
+      },
+      {
+        "condition": "G6PD ASAHI",
+        "significance": "other",
+        "rawSignificance": "other",
+        "significanceRank": 9,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2013-10-24"
+      },
+      {
+        "condition": "not provided",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2025-03-04"
+      },
+      {
+        "condition": "not specified",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2018-07-02"
+      }
+    ],
+    "distinctSignificances": [
+      "Pathogenic",
+      "Likely pathogenic",
+      "Uncertain significance",
+      "other"
+    ],
+    "hasSomatic": false,
+    "hasGermline": true,
+    "gnomadAf": 0.032417,
+    "hasClinvar": true,
+    "hgvsId": "chrX:g.153764217C>T",
+    "variantId": 10361,
+    "uniprot": "P11413",
+    "residue": 98,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs1050828"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/10361/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1050828"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/X-154536002-C-T?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:12:21.324Z"
+  },
+  "claims": [
+    {
+      "text": "The G6PD gene variant rs1050828 is a missense variant leading to a p.Val98Met protein change.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.consequence",
+        "var.protein"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The G6PD gene variant rs1050828 is associated with G6PD deficiency, a condition classified as Pathogenic.",
+      "supportingFactIds": [
+        "var.cond.0.significance"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The G6PD gene variant rs1050828 is associated with Anemia, nonspherocytic hemolytic, due to G6PD deficiency (CNSHA1), a condition classified as Likely pathogenic.",
+      "supportingFactIds": [
+        "var.cond.1.significance"
+      ],
+      "claimType": "condition_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "fc47c19290268716",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:12:26.698Z",
+    "retrievedAt": "2026-07-27T10:12:21.324Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs1050828"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/10361/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1050828"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/X-154536002-C-T?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

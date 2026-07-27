@@ -1,0 +1,100 @@
+{
+  "kind": "gene",
+  "id": "NF1",
+  "facts": {
+    "kind": "gene",
+    "symbol": "NF1",
+    "name": "neurofibromin 1",
+    "type": "protein-coding",
+    "summary": "This gene product appears to function as a negative regulator of the ras signal transduction pathway. Mutations in this gene have been linked to neurofibromatosis type 1, juvenile myelomonocytic leukemia and Watson syndrome. The mRNA for this gene is subject to RNA editing (CGA>UGA->Arg1306Term) resulting in premature translation termination. Alternatively spliced transcript variants encoding different isoforms have also been described for this gene. [provided by RefSeq, Jul 2008].",
+    "aliases": [
+      "NFNS",
+      "VRNF",
+      "WSS"
+    ],
+    "location": "chr17:31,094,883–31,382,116 (+)",
+    "uniprot": "P21359",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/4763"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000196712"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P21359"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/613113"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=NF1"
+      }
+    ],
+    "retrievedAt": "2026-07-27T09:44:48.204Z"
+  },
+  "claims": [
+    {
+      "text": "The NF1 gene product functions as a negative regulator of the ras signal transduction pathway.",
+      "supportingFactIds": [
+        "gene.symbol",
+        "gene.summary"
+      ],
+      "claimType": "function"
+    },
+    {
+      "text": "Mutations in the NF1 gene have been linked to neurofibromatosis type 1, juvenile myelomonocytic leukemia and Watson syndrome.",
+      "supportingFactIds": [
+        "gene.symbol",
+        "gene.summary"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The NF1 gene is a protein-coding gene located on chromosome 17.",
+      "supportingFactIds": [
+        "gene.type",
+        "gene.location"
+      ],
+      "claimType": "identity"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "379d76239097927b",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T09:44:51.094Z",
+    "retrievedAt": "2026-07-27T09:44:48.204Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/4763"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000196712"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P21359"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/613113"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=NF1"
+      }
+    ]
+  }
+}

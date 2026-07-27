@@ -1,0 +1,100 @@
+{
+  "kind": "gene",
+  "id": "TP53",
+  "facts": {
+    "kind": "gene",
+    "symbol": "TP53",
+    "name": "tumor protein p53",
+    "type": "protein-coding",
+    "summary": "This gene encodes a tumor suppressor protein containing transcriptional activation, DNA binding, and oligomerization domains. The encoded protein responds to diverse cellular stresses to regulate expression of target genes, thereby inducing cell cycle arrest, apoptosis, senescence, DNA repair, or changes in metabolism. Mutations in this gene are associated with a variety of human cancers, including hereditary cancers such as Li-Fraumeni syndrome. Alternative splicing of this gene and the use of alternate promoters result in multiple transcript variants and isoforms. Additional isoforms have also been shown to result from the use of alternate translation initiation codons from identical transcript variants (PMIDs: 12032546, 20937277). [provided by RefSeq, Dec 2016].",
+    "aliases": [
+      "BCC7",
+      "BMFS5",
+      "LFS1",
+      "P53",
+      "TRP53"
+    ],
+    "location": "chr17:7,661,779–7,687,546 (−)",
+    "uniprot": "P04637",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/7157"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000141510"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P04637"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/191170"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=TP53"
+      }
+    ],
+    "retrievedAt": "2026-07-27T09:43:33.420Z"
+  },
+  "claims": [
+    {
+      "text": "The TP53 gene encodes a tumor suppressor protein with transcriptional activation, DNA binding, and oligomerization domains.",
+      "supportingFactIds": [
+        "gene.symbol",
+        "gene.summary"
+      ],
+      "claimType": "function"
+    },
+    {
+      "text": "Mutations in the TP53 gene are associated with various human cancers, including Li-Fraumeni syndrome.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The TP53 gene is located on chromosome 17, between base pairs 7,661,779 and 7,687,546.",
+      "supportingFactIds": [
+        "gene.location"
+      ],
+      "claimType": "identity"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "53eb47c4b44cffd3",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T09:43:36.508Z",
+    "retrievedAt": "2026-07-27T09:43:33.420Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/7157"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000141510"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P04637"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/191170"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=TP53"
+      }
+    ]
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "kind": "gene",
+  "id": "DDX11L1",
+  "facts": {
+    "kind": "gene",
+    "symbol": "DDX11L1",
+    "name": "DEAD/H-box helicase 11 like 1 (pseudogene)",
+    "type": "pseudo",
+    "summary": "",
+    "aliases": [],
+    "location": "chr1:11,121–24,894 (+)",
+    "uniprot": null,
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/100287102"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000290825"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=DDX11L1"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:06:31.148Z"
+  },
+  "claims": [
+    {
+      "text": "DDX11L1 is a pseudogene.",
+      "supportingFactIds": [
+        "gene.type"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "DDX11L1 is located on chromosome 1.",
+      "supportingFactIds": [
+        "gene.location"
+      ],
+      "claimType": "identity"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "e46f6ab30e854c10",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:06:35.924Z",
+    "retrievedAt": "2026-07-27T10:06:31.148Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/100287102"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000290825"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=DDX11L1"
+      }
+    ]
+  }
+}

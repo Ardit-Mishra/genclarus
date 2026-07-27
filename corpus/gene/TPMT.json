@@ -1,0 +1,96 @@
+{
+  "kind": "gene",
+  "id": "TPMT",
+  "facts": {
+    "kind": "gene",
+    "symbol": "TPMT",
+    "name": "thiopurine S-methyltransferase",
+    "type": "protein-coding",
+    "summary": "This gene encodes the enzyme that metabolizes thiopurine drugs via S-adenosyl-L-methionine as the S-methyl donor and S-adenosyl-L-homocysteine as a byproduct. Thiopurine drugs such as 6-mercaptopurine are used as chemotherapeutic agents. Genetic polymorphisms that affect this enzymatic activity are correlated with variations in sensitivity and toxicity to such drugs within individuals, causing thiopurine S-methyltransferase deficiency. Related pseudogenes have been identified on chromosomes 3, 18 and X. [provided by RefSeq, Aug 2014].",
+    "aliases": [
+      "TPMTD"
+    ],
+    "location": "chr6:18,128,311–18,155,348 (−)",
+    "uniprot": "P51580",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/7172"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000137364"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P51580"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/187680"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=TPMT"
+      }
+    ],
+    "retrievedAt": "2026-07-27T09:49:32.348Z"
+  },
+  "claims": [
+    {
+      "text": "The TPMT gene encodes the enzyme thiopurine S-methyltransferase.",
+      "supportingFactIds": [
+        "gene.symbol",
+        "gene.name"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "Thiopurine S-methyltransferase is a protein-coding gene.",
+      "supportingFactIds": [
+        "gene.type"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The TPMT gene is located on chromosome 6.",
+      "supportingFactIds": [
+        "gene.location"
+      ],
+      "claimType": "identity"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "7f9ee3027f19b9df",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T09:49:35.829Z",
+    "retrievedAt": "2026-07-27T09:49:32.348Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/7172"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000137364"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P51580"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/187680"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=TPMT"
+      }
+    ]
+  }
+}

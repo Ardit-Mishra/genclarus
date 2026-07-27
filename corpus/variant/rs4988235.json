@@ -1,0 +1,124 @@
+{
+  "kind": "variant",
+  "id": "rs4988235",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs4988235",
+    "gene": "MCM6",
+    "consequence": "",
+    "proteinChange": "",
+    "alleleCount": 1,
+    "otherAlleles": [],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NM_002299.2(LCT):c.-13907C>T",
+    "chrom": "2",
+    "position": 135851076,
+    "refAlt": "G>A",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "LACTASE PERSISTENCE",
+        "significance": "association",
+        "rawSignificance": "association",
+        "significanceRank": 9,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2021-01-26"
+      }
+    ],
+    "distinctSignificances": [
+      "association"
+    ],
+    "hasSomatic": false,
+    "hasGermline": true,
+    "gnomadAf": 0.415486,
+    "hasClinvar": true,
+    "hgvsId": "chr2:g.136608646G>A",
+    "variantId": 7685,
+    "uniprot": "Q14566",
+    "residue": null,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs4988235"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/7685/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs4988235"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/2-135851076-G-A?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:08:10.307Z"
+  },
+  "claims": [
+    {
+      "text": "The MCM6 gene variant rs4988235 is a single nucleotide variant.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.type"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The MCM6 gene variant rs4988235 has a germline origin.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.cond.0.origin"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The MCM6 gene variant rs4988235 is associated with lactase persistence.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.cond.0.significance"
+      ],
+      "claimType": "condition_context"
+    },
+    {
+      "text": "The MCM6 gene variant rs4988235 has a frequency of approximately 42% in the general population.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.gnomadAf"
+      ],
+      "claimType": "frequency_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "2eebfa78355fd628",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:08:13.859Z",
+    "retrievedAt": "2026-07-27T10:08:10.307Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs4988235"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/7685/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs4988235"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/2-135851076-G-A?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

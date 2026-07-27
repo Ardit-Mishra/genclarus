@@ -1,0 +1,96 @@
+{
+  "kind": "gene",
+  "id": "LDLR",
+  "facts": {
+    "kind": "gene",
+    "symbol": "LDLR",
+    "name": "low density lipoprotein receptor",
+    "type": "protein-coding",
+    "summary": "The low density lipoprotein receptor (LDLR) gene family consists of cell surface proteins involved in receptor-mediated endocytosis of specific ligands. The encoded protein is normally bound at the cell membrane, where it binds low density lipoprotein/cholesterol and is taken into the cell. Lysosomes release the cholesterol, which is made available for repression of microsomal enzyme 3-hydroxy-3-methylglutaryl coenzyme A (HMG CoA) reductase, the rate-limiting step in cholesterol synthesis. At the same time, a reciprocal stimulation of cholesterol ester synthesis takes place. Mutations in this gene cause the autosomal dominant disorder, familial hypercholesterolemia. Alternate splicing results in multiple transcript variants.[provided by RefSeq, May 2022].",
+    "aliases": [
+      "LDLCQ2"
+    ],
+    "location": "chr19:11,089,418–11,133,830 (+)",
+    "uniprot": "P01130",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/3949"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000130164"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P01130"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/606945"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=LDLR"
+      }
+    ],
+    "retrievedAt": "2026-07-27T09:48:22.399Z"
+  },
+  "claims": [
+    {
+      "text": "The LDLR gene encodes a protein that binds low density lipoprotein/cholesterol at the cell membrane.",
+      "supportingFactIds": [
+        "gene.symbol",
+        "gene.summary"
+      ],
+      "claimType": "function"
+    },
+    {
+      "text": "Mutations in the LDLR gene cause familial hypercholesterolemia.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The LDLR gene is located on chromosome 19.",
+      "supportingFactIds": [
+        "gene.location"
+      ],
+      "claimType": "identity"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "a7388e13307f214f",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T09:48:30.548Z",
+    "retrievedAt": "2026-07-27T09:48:22.399Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/3949"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000130164"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P01130"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/606945"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=LDLR"
+      }
+    ]
+  }
+}

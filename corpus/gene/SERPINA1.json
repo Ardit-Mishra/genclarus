@@ -1,0 +1,103 @@
+{
+  "kind": "gene",
+  "id": "SERPINA1",
+  "facts": {
+    "kind": "gene",
+    "symbol": "SERPINA1",
+    "name": "serpin family A member 1",
+    "type": "protein-coding",
+    "summary": "The protein encoded by this gene is a serine protease inhibitor belonging to the serpin superfamily whose targets include elastase, plasmin, thrombin, trypsin, chymotrypsin, and plasminogen activator. This protein is produced in the liver, the bone marrow, by lymphocytic and monocytic cells in lymphoid tissue, and by the Paneth cells of the gut. Defects in this gene are associated with chronic obstructive pulmonary disease, emphysema, and chronic liver disease. Several transcript variants encoding the same protein have been found for this gene. [provided by RefSeq, Aug 2020].",
+    "aliases": [
+      "A1A",
+      "A1AT",
+      "AAT",
+      "PI",
+      "PI1",
+      "PRO2275",
+      "alpha1AT",
+      "nNIF"
+    ],
+    "location": "chr14:94,376,745–94,391,024 (−)",
+    "uniprot": "P01009",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/5265"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000197249"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P01009"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/107400"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=SERPINA1"
+      }
+    ],
+    "retrievedAt": "2026-07-27T09:49:07.873Z"
+  },
+  "claims": [
+    {
+      "text": "The SERPINA1 gene encodes a serine protease inhibitor belonging to the serpin superfamily.",
+      "supportingFactIds": [
+        "gene.symbol",
+        "gene.summary"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The SERPINA1 protein is produced in the liver, bone marrow, and by lymphocytic and monocytic cells in lymphoid tissue.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "function"
+    },
+    {
+      "text": "Defects in the SERPINA1 gene are associated with chronic obstructive pulmonary disease and chronic liver disease.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "classification_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "a47b0c545e850e26",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T09:49:10.493Z",
+    "retrievedAt": "2026-07-27T09:49:07.873Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/5265"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000197249"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P01009"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/107400"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=SERPINA1"
+      }
+    ]
+  }
+}

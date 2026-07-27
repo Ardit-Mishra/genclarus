@@ -1,0 +1,157 @@
+{
+  "kind": "variant",
+  "id": "rs1695",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs1695",
+    "gene": "GSTP1",
+    "consequence": "missense variant",
+    "proteinChange": "p.Ile105Val",
+    "alleleCount": 1,
+    "otherAlleles": [],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NM_000852.4(GSTP1):c.313A>G (p.Ile105Val)",
+    "chrom": "11",
+    "position": 67585218,
+    "refAlt": "A>G",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "Abnormality of immune system physiology",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "unknown",
+        "lastEvaluated": "2021-09-06"
+      },
+      {
+        "condition": "GLUTATHIONE S-TRANSFERASE PI POLYMORPHISM, TYPE B",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "1997-04-11"
+      },
+      {
+        "condition": "GLUTATHIONE S-TRANSFERASE PI POLYMORPHISM, TYPE C",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "1997-04-11"
+      },
+      {
+        "condition": "not provided",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2021-06-09"
+      }
+    ],
+    "distinctSignificances": [
+      "Benign"
+    ],
+    "hasSomatic": false,
+    "hasGermline": true,
+    "gnomadAf": 0.353242,
+    "hasClinvar": true,
+    "hgvsId": "chr11:g.67352689A>G",
+    "variantId": 16492,
+    "uniprot": "P09211",
+    "residue": 105,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs1695"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/16492/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1695"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/11-67585218-A-G?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:17:52.170Z"
+  },
+  "claims": [
+    {
+      "text": "The GSTP1 gene variant rs1695 is a missense variant leading to the p.Ile105Val protein change.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.consequence",
+        "var.protein"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "This variant is a single nucleotide variant with a frequency of 35% in the gnomAD allele frequency dataset.",
+      "supportingFactIds": [
+        "var.type",
+        "var.gnomadAf"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The GSTP1 gene variant rs1695 is classified as Benign for Abnormality of immune system physiology and other conditions.",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.1.significance",
+        "var.cond.2.significance"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The review confidence for the classification of the GSTP1 gene variant rs1695 is low for all conditions.",
+      "supportingFactIds": [
+        "var.cond.0.reviewStars",
+        "var.cond.1.reviewStars",
+        "var.cond.2.reviewStars"
+      ],
+      "claimType": "uncertainty"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "50f7fc87fe1afbb3",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:17:56.481Z",
+    "retrievedAt": "2026-07-27T10:17:52.170Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs1695"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/16492/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1695"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/11-67585218-A-G?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

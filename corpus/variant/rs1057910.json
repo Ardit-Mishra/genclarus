@@ -1,0 +1,199 @@
+{
+  "kind": "variant",
+  "id": "rs1057910",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs1057910",
+    "gene": "CYP2C9",
+    "consequence": "missense variant",
+    "proteinChange": "p.Ile359Leu",
+    "alleleCount": 1,
+    "otherAlleles": [],
+    "variantType": "single nucleotide variant",
+    "preferredName": "CYP2C9*3",
+    "chrom": "10",
+    "position": 94981296,
+    "refAlt": "A>C",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "Flurbiprofen response",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2019-02-11"
+      },
+      {
+        "condition": "Lesinurad response",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2019-02-11"
+      },
+      {
+        "condition": "Piroxicam response",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2019-02-11"
+      },
+      {
+        "condition": "Phenytoin response",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2020-09-24"
+      },
+      {
+        "condition": "Glipizide response",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2012-06-15"
+      },
+      {
+        "condition": "Warfarin response",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2012-06-15"
+      },
+      {
+        "condition": "Tolbutamide response",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2010-12-30"
+      },
+      {
+        "condition": "not provided",
+        "significance": "other",
+        "rawSignificance": "other",
+        "significanceRank": 9,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2015-07-10"
+      }
+    ],
+    "distinctSignificances": [
+      "Drug response",
+      "other"
+    ],
+    "hasSomatic": false,
+    "hasGermline": true,
+    "gnomadAf": 0.0490021,
+    "hasClinvar": true,
+    "hgvsId": "chr10:g.96741053A>C",
+    "variantId": 8408,
+    "uniprot": "P11712",
+    "residue": 359,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs1057910"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/8408/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1057910"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/10-94981296-A-C?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:10:40.700Z"
+  },
+  "claims": [
+    {
+      "text": "The CYP2C9 gene variant rs1057910 is a missense variant with a p.Ile359Leu protein change.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.consequence",
+        "var.protein"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The CYP2C9 gene variant rs1057910 has a germline origin.",
+      "supportingFactIds": [
+        "var.cond.0.origin",
+        "var.cond.1.origin",
+        "var.cond.2.origin"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The CYP2C9 gene variant rs1057910 is associated with a drug response to Flurbiprofen, Lesinurad, and Piroxicam.",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.1.significance",
+        "var.cond.2.significance"
+      ],
+      "claimType": "condition_context"
+    },
+    {
+      "text": "The CYP2C9 gene variant rs1057910 has a low review confidence for its classifications.",
+      "supportingFactIds": [
+        "var.cond.0.reviewStars",
+        "var.cond.1.reviewStars",
+        "var.cond.2.reviewStars"
+      ],
+      "claimType": "uncertainty"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "7988739b76fbaf5f",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:10:45.358Z",
+    "retrievedAt": "2026-07-27T10:10:40.700Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs1057910"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/8408/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1057910"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/10-94981296-A-C?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

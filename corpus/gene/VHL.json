@@ -1,0 +1,106 @@
+{
+  "kind": "gene",
+  "id": "VHL",
+  "facts": {
+    "kind": "gene",
+    "symbol": "VHL",
+    "name": "von Hippel-Lindau tumor suppressor",
+    "type": "protein-coding",
+    "summary": "This gene encodes a component of a ubiquitination complex. The encoded protein is involved in the ubiquitination and degradation of hypoxia-inducible-factor (HIF), which is a transcription factor that plays a central role in the regulation of gene expression by oxygen. In addition to oxygen-related gene expression, this protein plays a role in many other cellular processes including cilia formation, cytokine signaling, regulation of senescence, and formation of the extracellular matrix. Variants of this gene are associated with von Hippel-Lindau syndrome, pheochromocytoma, erythrocytosis, renal cell carcinoma, and cerebellar hemangioblastoma. [provided by RefSeq, Jun 2022].",
+    "aliases": [
+      "HRCA1",
+      "RCA1",
+      "VHL1",
+      "pVHL"
+    ],
+    "location": "chr3:10,141,764–10,153,676 (+)",
+    "uniprot": "P40337",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/7428"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000134086"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P40337"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/608537"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=VHL"
+      }
+    ],
+    "retrievedAt": "2026-07-27T09:44:37.427Z"
+  },
+  "claims": [
+    {
+      "text": "The VHL gene encodes a component of a ubiquitination complex.",
+      "supportingFactIds": [
+        "gene.symbol",
+        "gene.summary"
+      ],
+      "claimType": "function"
+    },
+    {
+      "text": "The VHL protein plays a role in many cellular processes including cilia formation, cytokine signaling, and regulation of senescence.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "function"
+    },
+    {
+      "text": "The VHL gene is associated with von Hippel-Lindau syndrome, pheochromocytoma, erythrocytosis, renal cell carcinoma, and cerebellar hemangioblastoma.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "condition_context"
+    },
+    {
+      "text": "The VHL gene is located on the positive strand of chromosome 3 at position 10,141,764–10,153,676.",
+      "supportingFactIds": [
+        "gene.location"
+      ],
+      "claimType": "identity"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "0c1ede2df8e9b322",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T09:44:43.477Z",
+    "retrievedAt": "2026-07-27T09:44:37.427Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/7428"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000134086"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P40337"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/608537"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=VHL"
+      }
+    ]
+  }
+}

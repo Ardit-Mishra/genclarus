@@ -1,0 +1,1223 @@
+{
+  "corpusSchemaVersion": "1.0.0",
+  "generatedAt": "2026-07-27T10:28:55.736Z",
+  "counts": {
+    "genes": 67,
+    "variants": 106,
+    "withExplanation": 169,
+    "sourceOnly": 4
+  },
+  "records": [
+    {
+      "kind": "gene",
+      "id": "ALK",
+      "factsHash": "38750e17e4ad9d39",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T09:47:12.833Z"
+    },
+    {
+      "kind": "gene",
+      "id": "APC",
+      "factsHash": "e6a731415aab670d",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T09:44:29.861Z"
+    },
+    {
+      "kind": "gene",
+      "id": "APOB",
+      "factsHash": "8d37e61efbe4e765",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T09:48:39.930Z"
+    },
+    {
+      "kind": "gene",
+      "id": "APOE",
+      "factsHash": "e560e05a153dfa62",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T09:48:22.091Z"
+    },
+    {
+      "kind": "gene",
+      "id": "ATM",
+      "factsHash": "baa1aa2687d1e60f",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T09:47:21.686Z"
+    },
+    {
+      "kind": "gene",
+      "id": "BARD1",
+      "factsHash": "49cd3db1d4a45914",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T09:47:33.419Z"
+    },
+    {
+      "kind": "gene",
+      "id": "BRAF",
+      "factsHash": "c5b0ca88acc66175",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T09:46:56.937Z"
+    },
+    {
+      "kind": "gene",
+      "id": "BRCA1",
+      "factsHash": "6a8371111935ad16",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T09:43:28.016Z"
+    },
+    {
+      "kind": "gene",
+      "id": "BRCA2",
+      "factsHash": "acc640888c2b8766",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T09:43:32.272Z"
+    },
+    {
+      "kind": "gene",
+      "id": "BRIP1",
+      "factsHash": "c4a43fbaff9253b9",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T09:47:52.526Z"
+    },
+    {
+      "kind": "gene",
+      "id": "CFTR",
+      "factsHash": "07adbce629cdb58a",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T09:44:07.719Z"
+    },
+    {
+      "kind": "gene",
+      "id": "CHEK2",
+      "factsHash": "f57d7397d3f3a067",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T09:47:26.229Z"
+    },
+    {
+      "kind": "gene",
+      "id": "COL1A1",
+      "factsHash": "3b87f8e0b07bc5dc",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T09:48:47.437Z"
+    },
+    {
+      "kind": "gene",
+      "id": "CYP2C19",
+      "factsHash": "613426950d0da226",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T09:49:17.295Z"
+    },
+    {
+      "kind": "gene",
+      "id": "CYP2C9",
+      "factsHash": "4dc2f21b69d82747",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T09:49:28.255Z"
+    },
+    {
+      "kind": "gene",
+      "id": "CYP2D6",
+      "factsHash": "6362754cc6f31ab1",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T09:49:24.542Z"
+    },
+    {
+      "kind": "gene",
+      "id": "DDX11L1",
+      "factsHash": "e46f6ab30e854c10",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:06:35.924Z"
+    },
+    {
+      "kind": "gene",
+      "id": "DMD",
+      "factsHash": "08eca702fc6f5e5c",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T09:48:50.976Z"
+    },
+    {
+      "kind": "gene",
+      "id": "DPYD",
+      "factsHash": "c72919691d4d6d04",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T09:49:39.897Z"
+    },
+    {
+      "kind": "gene",
+      "id": "EGFR",
+      "factsHash": "d08d610ff0190ecb",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T09:47:00.037Z"
+    },
+    {
+      "kind": "gene",
+      "id": "F2",
+      "factsHash": "2e67dce1c5421afc",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T09:48:07.098Z"
+    },
+    {
+      "kind": "gene",
+      "id": "F5",
+      "factsHash": "9fad890daa24d4c5",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T09:48:03.113Z"
+    },
+    {
+      "kind": "gene",
+      "id": "F8",
+      "factsHash": "e06a3156d4c3c629",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T09:48:10.829Z"
+    },
+    {
+      "kind": "gene",
+      "id": "F9",
+      "factsHash": "50f70b56046e2e5c",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T09:48:14.883Z"
+    },
+    {
+      "kind": "gene",
+      "id": "FBN1",
+      "factsHash": "fd673274b7aa116a",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T09:48:44.111Z"
+    },
+    {
+      "kind": "gene",
+      "id": "FMR1",
+      "factsHash": "bf2a08b573e6dde3",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T09:49:04.445Z"
+    },
+    {
+      "kind": "gene",
+      "id": "G6PD",
+      "factsHash": "e2ec562624f23eaf",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T09:49:13.917Z"
+    },
+    {
+      "kind": "gene",
+      "id": "GBA1",
+      "factsHash": "1746503480d0c42f",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:28:55.736Z"
+    },
+    {
+      "kind": "gene",
+      "id": "GJB2",
+      "factsHash": "b8ab9c2ff94d2c47",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T09:49:56.950Z"
+    },
+    {
+      "kind": "gene",
+      "id": "HBA1",
+      "factsHash": "ed820a5e94aa2bc7",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T09:48:00.141Z"
+    },
+    {
+      "kind": "gene",
+      "id": "HBB",
+      "factsHash": "89192cda248bb738",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T09:47:56.043Z"
+    },
+    {
+      "kind": "gene",
+      "id": "HFE",
+      "factsHash": "ba2d1bdb9a86ae05",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T09:49:07.540Z"
+    },
+    {
+      "kind": "gene",
+      "id": "HTT",
+      "factsHash": "4e564f1dc8d6d44b",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T09:49:00.192Z"
+    },
+    {
+      "kind": "gene",
+      "id": "KRAS",
+      "factsHash": "53b9fb98b9b4af6f",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T09:46:52.909Z"
+    },
+    {
+      "kind": "gene",
+      "id": "LDLR",
+      "factsHash": "a7388e13307f214f",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T09:48:30.548Z"
+    },
+    {
+      "kind": "gene",
+      "id": "LINC02825",
+      "factsHash": "101339686b76a51c",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:06:41.662Z"
+    },
+    {
+      "kind": "gene",
+      "id": "LMNA",
+      "factsHash": "b37f9450d89eb760",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:06:08.941Z"
+    },
+    {
+      "kind": "gene",
+      "id": "LRRK2",
+      "factsHash": "4e3ab767f4e1aa6b",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:26:08.894Z"
+    },
+    {
+      "kind": "gene",
+      "id": "MALAT1",
+      "factsHash": "f69f5885a5dd2f22",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:06:30.056Z"
+    },
+    {
+      "kind": "gene",
+      "id": "MECP2",
+      "factsHash": "c16ce37d24934ce7",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T09:50:02.441Z"
+    },
+    {
+      "kind": "gene",
+      "id": "MLH1",
+      "factsHash": "fbb0b47672651f6c",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T09:44:11.150Z"
+    },
+    {
+      "kind": "gene",
+      "id": "MSH2",
+      "factsHash": "a96619794a7ac5a4",
+      "hasExplanation": false,
+      "generatedAt": "2026-07-27T10:25:19.242Z"
+    },
+    {
+      "kind": "gene",
+      "id": "MSH6",
+      "factsHash": "f8b296671c19fa14",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T09:44:23.512Z"
+    },
+    {
+      "kind": "gene",
+      "id": "MTHFR",
+      "factsHash": "f96fb2c320286325",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T09:48:18.924Z"
+    },
+    {
+      "kind": "gene",
+      "id": "MYBPC3",
+      "factsHash": "438e1b1ccd809ab9",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:06:16.605Z"
+    },
+    {
+      "kind": "gene",
+      "id": "MYH7",
+      "factsHash": "62e793e740e8d8fe",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:06:13.009Z"
+    },
+    {
+      "kind": "gene",
+      "id": "NF1",
+      "factsHash": "379d76239097927b",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T09:44:51.094Z"
+    },
+    {
+      "kind": "gene",
+      "id": "NUDT15",
+      "factsHash": "7764eff06e1dd8d8",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T09:49:50.583Z"
+    },
+    {
+      "kind": "gene",
+      "id": "PALB2",
+      "factsHash": "1cba660da85aee29",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T09:47:16.360Z"
+    },
+    {
+      "kind": "gene",
+      "id": "PCSK9",
+      "factsHash": "fdb70cd8e8cdb4c9",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T09:48:35.292Z"
+    },
+    {
+      "kind": "gene",
+      "id": "PIK3CA",
+      "factsHash": "077860e7da623440",
+      "hasExplanation": false,
+      "generatedAt": "2026-07-27T10:25:44.920Z"
+    },
+    {
+      "kind": "gene",
+      "id": "PMS2",
+      "factsHash": "9cf1def286f0e636",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T09:44:26.788Z"
+    },
+    {
+      "kind": "gene",
+      "id": "PTEN",
+      "factsHash": "50a7c4783707b8b4",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T09:44:34.020Z"
+    },
+    {
+      "kind": "gene",
+      "id": "RAD51C",
+      "factsHash": "b491aeae6ccfb74e",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T09:47:39.358Z"
+    },
+    {
+      "kind": "gene",
+      "id": "RAD51D",
+      "factsHash": "225d2f716fb34a0f",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:25:52.401Z"
+    },
+    {
+      "kind": "gene",
+      "id": "RB1",
+      "factsHash": "151a27db4fd96010",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T09:44:47.974Z"
+    },
+    {
+      "kind": "gene",
+      "id": "RET",
+      "factsHash": "d4435e80f1dc76cf",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:25:30.573Z"
+    },
+    {
+      "kind": "gene",
+      "id": "SCN1A",
+      "factsHash": "41c11237debffc95",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:26:04.727Z"
+    },
+    {
+      "kind": "gene",
+      "id": "SERPINA1",
+      "factsHash": "a47b0c545e850e26",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T09:49:10.493Z"
+    },
+    {
+      "kind": "gene",
+      "id": "SLCO1B1",
+      "factsHash": "75ad045cad0bfe36",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T09:49:47.093Z"
+    },
+    {
+      "kind": "gene",
+      "id": "SMN1",
+      "factsHash": "14a074e8b066ff3b",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T09:48:54.227Z"
+    },
+    {
+      "kind": "gene",
+      "id": "STK11",
+      "factsHash": "22dffb84b36d2155",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T09:44:37.193Z"
+    },
+    {
+      "kind": "gene",
+      "id": "TP53",
+      "factsHash": "53eb47c4b44cffd3",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T09:43:36.508Z"
+    },
+    {
+      "kind": "gene",
+      "id": "TPMT",
+      "factsHash": "7f9ee3027f19b9df",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T09:49:35.829Z"
+    },
+    {
+      "kind": "gene",
+      "id": "UGT1A1",
+      "factsHash": "c93acdcf98a232bd",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T09:49:43.919Z"
+    },
+    {
+      "kind": "gene",
+      "id": "VHL",
+      "factsHash": "0c1ede2df8e9b322",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T09:44:43.477Z"
+    },
+    {
+      "kind": "gene",
+      "id": "VKORC1",
+      "factsHash": "d74031f6f029b1c3",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T09:49:31.344Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs1000000",
+      "factsHash": "7584525d72543b2d",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:08:18.747Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs1042522",
+      "factsHash": "6360953662d86802",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:09:28.611Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs1042713",
+      "factsHash": "37e80e320f84f5c9",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:07:44.966Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs1042714",
+      "factsHash": "607b282f2de53aa3",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:15:00.751Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs1045642",
+      "factsHash": "fed3ec9efbf9c78c",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:16:57.461Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs104886003",
+      "factsHash": "d925e1d07f75ed6f",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:16:33.541Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs104894090",
+      "factsHash": "4c37fd2352ff037b",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:14:31.758Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs1050152",
+      "factsHash": "089cdefec5c77bab",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:16:46.644Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs1050828",
+      "factsHash": "fc47c19290268716",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:12:26.698Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs1050829",
+      "factsHash": "232d775913abe736",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:12:33.233Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs1051730",
+      "factsHash": "cce62d60837b722c",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:08:49.744Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs1056836",
+      "factsHash": "b426d2b6905e4572",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:18:07.419Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs1057910",
+      "factsHash": "7988739b76fbaf5f",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:10:45.358Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs10757278",
+      "factsHash": "19bb235bfff57b62",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:12:08.289Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs11045819",
+      "factsHash": "37093178d97f0c39",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:17:47.256Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs1128503",
+      "factsHash": "ef7382d35c5ac165",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:17:08.044Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs1138272",
+      "factsHash": "bbdc53ee598d6f85",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:18:02.243Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs113993960",
+      "factsHash": "516d7f516538ad37",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:08:07.886Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs1142345",
+      "factsHash": "a8da133734c8ba3b",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:10:59.201Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs11591147",
+      "factsHash": "6dffa21ff2bc44fb",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:13:00.844Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs116855232",
+      "factsHash": "65a09603bc5cbb30",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:11:36.768Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs121908025",
+      "factsHash": "682bfcd84951a6d8",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:14:02.830Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs121908755",
+      "factsHash": "ea951bb960a4a433",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:13:50.010Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs121913529",
+      "factsHash": "1126ce247462471b",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:07:23.272Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs121918472",
+      "factsHash": "cc96efb73ff29b97",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:08:35.972Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs12248560",
+      "factsHash": "242ff07ee7926c0a",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:10:21.238Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs12721627",
+      "factsHash": "e28ef041bd156a0b",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:18:51.066Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs1333049",
+      "factsHash": "d5f4e3bbdbebc98d",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:12:12.371Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs137852695",
+      "factsHash": "993f0dc9ec70725e",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:16:27.540Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs1495741",
+      "factsHash": "4f1ec51fb2564dd4",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:18:26.852Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs1544410",
+      "factsHash": "fd093b286fc9ff8d",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:13:37.947Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs1695",
+      "factsHash": "50f7fc87fe1afbb3",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:17:56.481Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs16969968",
+      "factsHash": "edbb73d9c2fdf605",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:12:18.281Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs17580",
+      "factsHash": "9dec2d7402a84ac6",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:15:59.160Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs1799724",
+      "factsHash": "488cd7c5a2eb8319",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:15:06.960Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs1799853",
+      "factsHash": "9516a02b5c9f5959",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:10:34.802Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs1799929",
+      "factsHash": "6be678a7054b8159",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:18:23.310Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs1799931",
+      "factsHash": "cb420537fa471a61",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:18:12.580Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs1799945",
+      "factsHash": "b696ebaaa83b5d96",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:09:10.588Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs1799963",
+      "factsHash": "f28001662d89a7e0",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:08:57.238Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs1799983",
+      "factsHash": "7ab416ee29a659f2",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:07:17.639Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs1799990",
+      "factsHash": "65558c022c46e3c5",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:13:26.790Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs1800462",
+      "factsHash": "7f6cc5b1cbf2c780",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:11:07.136Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs1800497",
+      "factsHash": "7a607d5a557718a9",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:09:34.967Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs1800562",
+      "factsHash": "466c6ecae70422bf",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:09:03.406Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs1800629",
+      "factsHash": "73186b6ebc69f287",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:15:16.817Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs1800896",
+      "factsHash": "66f8ce28e4ad33b1",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:15:30.183Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs1801131",
+      "factsHash": "c5376f6e36250060",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:26:35.951Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs1801133",
+      "factsHash": "50b8e8a1b4e9797e",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:07:11.752Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs1801252",
+      "factsHash": "dd8588741d856b1c",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:16:41.383Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs1801253",
+      "factsHash": "f7260d00f8cd25da",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:14:54.179Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs1801280",
+      "factsHash": "d4342e9a070dc6a2",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:18:18.536Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs1801282",
+      "factsHash": "69181cc4502cefe6",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:12:03.930Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs1815739",
+      "factsHash": "484206cbd3d7cc13",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:08:43.376Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs2032582",
+      "factsHash": "7e5f90b7bc9b2021",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:16:52.035Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs20417",
+      "factsHash": "38cda4b872c1b5bf",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:15:35.662Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs2066844",
+      "factsHash": "9d0c7238677112c5",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:07:53.885Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs2228570",
+      "factsHash": "a12e4b4adc5eb013",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:13:31.892Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs2231137",
+      "factsHash": "42fb6e63b469592b",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:17:19.258Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs2231142",
+      "factsHash": "e8fe1c9d0d48caee",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:11:51.432Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs2279343",
+      "factsHash": "aef5d70d3b180ba6",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:18:42.624Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs2306283",
+      "factsHash": "21da728a32a4e701",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:17:30.646Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs2740574",
+      "factsHash": "4e54114c6ed5c4d5",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:17:12.974Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs28399433",
+      "factsHash": "0502eeb1aed028de",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:18:47.330Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs28399504",
+      "factsHash": "fbbb6dd4f2a13382",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:15:50.794Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs28897696",
+      "factsHash": "379dba0dba15e765",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:14:11.042Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs28929474",
+      "factsHash": "043f3c559fe7e521",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:16:09.296Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs28934574",
+      "factsHash": "2615bd18941b9d21",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:14:26.070Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs28934578",
+      "factsHash": "2710f9a84bb6484f",
+      "hasExplanation": false,
+      "generatedAt": "2026-07-27T10:26:26.945Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs334",
+      "factsHash": "61eeeb60e3574088",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:07:00.856Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs33930165",
+      "factsHash": "4266c72ff48dd20e",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:14:48.305Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs34637584",
+      "factsHash": "d748c39d3f3f9807",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:12:54.151Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs35599367",
+      "factsHash": "3c99b4bc99a0b0bc",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:18:57.266Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs361525",
+      "factsHash": "c54fb139a331ce1b",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:15:22.411Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs3745274",
+      "factsHash": "e9fe885d72956077",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:27:53.551Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs3892097",
+      "factsHash": "a9eac3c7a686ea90",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:10:26.932Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs3918290",
+      "factsHash": "a5dc8335bc475018",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:11:13.067Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs4148323",
+      "factsHash": "f628c97c926407d8",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:17:25.540Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs4149056",
+      "factsHash": "5fd572e1618de291",
+      "hasExplanation": false,
+      "generatedAt": "2026-07-27T10:26:57.330Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs4149117",
+      "factsHash": "f913d6e255dab0b0",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:17:39.883Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs4244285",
+      "factsHash": "edecbe22b1f9bbbc",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:10:03.939Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs429358",
+      "factsHash": "fd387f79594f3889",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:07:33.001Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs4363657",
+      "factsHash": "bf371780dbb118ce",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:17:51.595Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs4680",
+      "factsHash": "9edd98313d8e6387",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:09:41.281Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs4986893",
+      "factsHash": "920714a4a90a1ec7",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:10:14.999Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs4988235",
+      "factsHash": "2eebfa78355fd628",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:08:13.859Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs5275",
+      "factsHash": "9a05035fd283a3a4",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:15:43.851Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs53576",
+      "factsHash": "22992d92386ec3fe",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:09:56.350Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs5882",
+      "factsHash": "994a19b74aa48e96",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:27:16.222Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs59421388",
+      "factsHash": "ad9ecad757a63925",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:18:54.189Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs6025",
+      "factsHash": "524667ab04422a99",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:06:51.605Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs6265",
+      "factsHash": "d0940e550c8cb791",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:09:51.232Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs662",
+      "factsHash": "b24237c3d11c7fa3",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:13:21.650Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs67376798",
+      "factsHash": "c32aaf521c54dceb",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:11:19.617Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs731236",
+      "factsHash": "120c7043c838e498",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:13:44.098Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs7412",
+      "factsHash": "cf56526aedd77ee3",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:07:38.700Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs74315329",
+      "factsHash": "f18da432f9528fbb",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:16:14.533Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs75527207",
+      "factsHash": "c5bda5a9cb95516c",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:13:55.865Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs76763715",
+      "factsHash": "d73e6e07884259c5",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:12:46.528Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs776746",
+      "factsHash": "dbd3949483db1965",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:17:02.448Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs7903146",
+      "factsHash": "584fd30263a0cd0c",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:11:56.550Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs80338939",
+      "factsHash": "f265fcfe32da6f8a",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:14:37.347Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs80357906",
+      "factsHash": "ae75ad224d490b01",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:07:59.947Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs80359550",
+      "factsHash": "50755ad8820e078d",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:14:17.221Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs887829",
+      "factsHash": "2237b08edb71656c",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:11:45.065Z"
+    },
+    {
+      "kind": "variant",
+      "id": "rs9923231",
+      "factsHash": "e86627cf85e90338",
+      "hasExplanation": true,
+      "generatedAt": "2026-07-27T10:10:53.460Z"
+    }
+  ]
+}

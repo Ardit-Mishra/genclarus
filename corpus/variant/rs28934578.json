@@ -1,0 +1,329 @@
+{
+  "kind": "variant",
+  "id": "rs28934578",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs28934578",
+    "gene": "TP53",
+    "consequence": "missense variant",
+    "proteinChange": "p.Arg175His",
+    "alleleCount": 2,
+    "otherAlleles": [
+      {
+        "proteinChange": "p.Arg175Leu",
+        "refAlt": "C>A",
+        "variantId": 182963,
+        "significance": "Likely pathogenic"
+      }
+    ],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NM_000546.6(TP53):c.524G>A (p.Arg175His)",
+    "chrom": "17",
+    "position": 7675088,
+    "refAlt": "C>T",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "Li-Fraumeni syndrome (LFS)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "reviewed by expert panel",
+        "reviewStars": 3,
+        "origin": "germline",
+        "lastEvaluated": "2024-09-06"
+      },
+      {
+        "condition": "Hereditary cancer-predisposing syndrome",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2024-12-09"
+      },
+      {
+        "condition": "Li-Fraumeni syndrome 1 (LFS)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2024-11-12"
+      },
+      {
+        "condition": "TP53-related disorder",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "somatic",
+        "lastEvaluated": "2024-05-01"
+      },
+      {
+        "condition": "Adrenocortical carcinoma, hereditary (ADCC)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2024-03-28"
+      },
+      {
+        "condition": "Familial cancer of breast",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2022-04-10"
+      },
+      {
+        "condition": "Glioma susceptibility 1 (GLM1)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2022-04-10"
+      },
+      {
+        "condition": "Bone osteosarcoma",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2022-04-10"
+      },
+      {
+        "condition": "Li-Fraumeni syndrome 1 (LFS)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2022-04-10"
+      },
+      {
+        "condition": "Nasopharyngeal carcinoma",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2022-04-10"
+      },
+      {
+        "condition": "Carcinoma of pancreas",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2022-04-10"
+      },
+      {
+        "condition": "Choroid plexus papilloma (CPP)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2022-04-10"
+      },
+      {
+        "condition": "Basal cell carcinoma, susceptibility to, 7 (BCC7)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2022-04-10"
+      },
+      {
+        "condition": "Hepatocellular carcinoma (HCC)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2022-04-10"
+      },
+      {
+        "condition": "Colorectal cancer",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2022-04-10"
+      },
+      {
+        "condition": "Bone marrow failure syndrome 5",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2022-04-10"
+      },
+      {
+        "condition": "Squamous cell carcinoma of the head and neck (HNSCC)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "somatic",
+        "lastEvaluated": null
+      },
+      {
+        "condition": "Colorectal cancer",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "somatic",
+        "lastEvaluated": null
+      },
+      {
+        "condition": "Gastric cancer",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2021-07-01"
+      },
+      {
+        "condition": "Familial cancer of breast",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "somatic",
+        "lastEvaluated": "2021-03-19"
+      },
+      {
+        "condition": "Lip and oral cavity carcinoma",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "somatic",
+        "lastEvaluated": "2019-04-30"
+      },
+      {
+        "condition": "Malignant tumor of esophagus",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "somatic",
+        "lastEvaluated": "2016-07-29"
+      },
+      {
+        "condition": "Ovarian neoplasm",
+        "significance": "Likely pathogenic",
+        "rawSignificance": "Likely pathogenic",
+        "significanceRank": 1,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "somatic",
+        "lastEvaluated": "2018-12-01"
+      },
+      {
+        "condition": "not provided",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2025-03-04"
+      }
+    ],
+    "distinctSignificances": [
+      "Pathogenic",
+      "Likely pathogenic"
+    ],
+    "hasSomatic": true,
+    "hasGermline": true,
+    "gnomadAf": null,
+    "hasClinvar": true,
+    "hgvsId": "chr17:g.7578406C>T",
+    "variantId": 12374,
+    "uniprot": "P04637",
+    "residue": 175,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs28934578"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/12374/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs28934578"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/17-7675088-C-T?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:26:18.109Z"
+  },
+  "claims": null,
+  "aiAvailable": true,
+  "fallbackReason": "failed_grounding",
+  "provenance": {
+    "factsHash": "2710f9a84bb6484f",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:26:26.945Z",
+    "retrievedAt": "2026-07-27T10:26:18.109Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs28934578"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/12374/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs28934578"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/17-7675088-C-T?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

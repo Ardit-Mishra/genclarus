@@ -1,0 +1,153 @@
+{
+  "kind": "variant",
+  "id": "rs2306283",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs2306283",
+    "gene": "SLCO1B1",
+    "consequence": "missense variant",
+    "proteinChange": "p.Asn130Asp",
+    "alleleCount": 1,
+    "otherAlleles": [],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NM_006446.5(SLCO1B1):c.388A>G (p.Asn130Asp)",
+    "chrom": "12",
+    "position": 21176804,
+    "refAlt": "A>G",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "Rotor syndrome (HBLRR)",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2024-11-29"
+      },
+      {
+        "condition": "Gilbert syndrome",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "inherited",
+        "lastEvaluated": "2019-05-01"
+      },
+      {
+        "condition": "not provided",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2018-03-13"
+      },
+      {
+        "condition": "not specified",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": null
+      }
+    ],
+    "distinctSignificances": [
+      "Benign"
+    ],
+    "hasSomatic": false,
+    "hasGermline": true,
+    "gnomadAf": 0.529677,
+    "hasClinvar": true,
+    "hgvsId": "chr12:g.21329738A>G",
+    "variantId": 259983,
+    "uniprot": "Q9Y6L6",
+    "residue": 130,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs2306283"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/259983/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs2306283"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/12-21176804-A-G?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:17:27.314Z"
+  },
+  "claims": [
+    {
+      "text": "The SLCO1B1 gene variant rs2306283 is a missense variant with a protein change of p.Asn130Asp.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.consequence",
+        "var.protein"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The SLCO1B1 gene variant rs2306283 is a single nucleotide variant.",
+      "supportingFactIds": [
+        "var.type"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The SLCO1B1 gene variant rs2306283 is found in 53% of the African population.",
+      "supportingFactIds": [
+        "var.gnomadAf"
+      ],
+      "claimType": "frequency_context"
+    },
+    {
+      "text": "The SLCO1B1 gene variant rs2306283 is classified as Benign for Rotor syndrome and Gilbert syndrome, but review confidence varies.",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.1.significance"
+      ],
+      "claimType": "classification_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "21da728a32a4e701",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:17:30.646Z",
+    "retrievedAt": "2026-07-27T10:17:27.314Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs2306283"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/259983/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs2306283"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/12-21176804-A-G?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

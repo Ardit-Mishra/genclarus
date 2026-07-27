@@ -1,0 +1,160 @@
+{
+  "kind": "variant",
+  "id": "rs1815739",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs1815739",
+    "gene": "ACTN3",
+    "consequence": "stop gained",
+    "proteinChange": "p.Arg577Ter",
+    "alleleCount": 1,
+    "otherAlleles": [],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NM_001104.4(ACTN3):c.1729C>T (p.Arg577Ter)",
+    "chrom": "11",
+    "position": 66560624,
+    "refAlt": "C>T",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "Sprinting performance",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2008-03-01"
+      },
+      {
+        "condition": "INCREASED COLD TOLERANCE",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2008-03-01"
+      },
+      {
+        "condition": "ACTININ, ALPHA-3 POLYMORPHISM",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2008-03-01"
+      },
+      {
+        "condition": "Actn3 deficiency",
+        "significance": "Affects",
+        "rawSignificance": "Affects",
+        "significanceRank": 9,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2008-03-01"
+      }
+    ],
+    "distinctSignificances": [
+      "Pathogenic",
+      "Benign",
+      "Affects"
+    ],
+    "hasSomatic": false,
+    "hasGermline": true,
+    "gnomadAf": null,
+    "hasClinvar": true,
+    "hgvsId": "chr11:g.66328095C>T",
+    "variantId": 18312,
+    "uniprot": "Q08043",
+    "residue": 577,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs1815739"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/18312/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1815739"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/11-66560624-C-T?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:08:38.229Z"
+  },
+  "claims": [
+    {
+      "text": "The ACTN3 gene variant rs1815739 is associated with pathogenic significance for sprinting performance.",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The ACTN3 gene variant rs1815739 is associated with pathogenic significance for increased cold tolerance.",
+      "supportingFactIds": [
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars",
+        "var.cond.1.origin"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The ACTN3 gene variant rs1815739 is associated with benign significance for ACTININ, ALPHA-3 POLYMORPHISM.",
+      "supportingFactIds": [
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars",
+        "var.cond.2.origin"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The ACTN3 gene variant rs1815739 results in a stop gained consequence and a p.Arg577Ter protein change.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.consequence",
+        "var.protein"
+      ],
+      "claimType": "identity"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "484206cbd3d7cc13",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:08:43.376Z",
+    "retrievedAt": "2026-07-27T10:08:38.229Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs1815739"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/18312/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1815739"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/11-66560624-C-T?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

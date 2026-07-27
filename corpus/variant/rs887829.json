@@ -1,0 +1,84 @@
+{
+  "kind": "variant",
+  "id": "rs887829",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs887829",
+    "gene": "LOC100286922",
+    "consequence": "",
+    "proteinChange": "",
+    "alleleCount": 1,
+    "otherAlleles": [],
+    "variantType": "snv",
+    "preferredName": null,
+    "chrom": "2",
+    "position": 234668570,
+    "refAlt": "C>T",
+    "assembly": "GRCh37",
+    "conditionClassifications": [],
+    "distinctSignificances": [],
+    "hasSomatic": false,
+    "hasGermline": false,
+    "gnomadAf": 0.363619,
+    "hasClinvar": false,
+    "hgvsId": "chr2:g.234668570C>T",
+    "variantId": null,
+    "uniprot": null,
+    "residue": null,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs887829"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs887829"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:11:40.500Z"
+  },
+  "claims": [
+    {
+      "text": "The variant rs887829 is located in the LOC100286922 gene.",
+      "supportingFactIds": [
+        "var.gene"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The variant rs887829 is a single nucleotide variant.",
+      "supportingFactIds": [
+        "var.type"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The variant rs887829 has a frequency of 36% in the gnomAD population.",
+      "supportingFactIds": [
+        "var.gnomadAf"
+      ],
+      "claimType": "frequency_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "2237b08edb71656c",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:11:45.065Z",
+    "retrievedAt": "2026-07-27T10:11:40.500Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs887829"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs887829"
+      }
+    ]
+  }
+}

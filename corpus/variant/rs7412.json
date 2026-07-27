@@ -1,0 +1,209 @@
+{
+  "kind": "variant",
+  "id": "rs7412",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs7412",
+    "gene": "APOE",
+    "consequence": "missense variant",
+    "proteinChange": "p.Arg176Cys",
+    "alleleCount": 1,
+    "otherAlleles": [],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NM_000041.2(APOE):c.526C>T (p.Arg176Cys)",
+    "chrom": "19",
+    "position": 44908822,
+    "refAlt": "C>T",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "atorvastatin response - Efficacy",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "reviewed by expert panel",
+        "reviewStars": 3,
+        "origin": "germline",
+        "lastEvaluated": "2021-03-24"
+      },
+      {
+        "condition": "Hypercholesterolemia",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2019-01-01"
+      },
+      {
+        "condition": "Familial type 3 hyperlipoproteinemia",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2017-02-21"
+      },
+      {
+        "condition": "Hyperlipoproteinemia due to APOE1",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "1984-04-01"
+      },
+      {
+        "condition": "Warfarin response",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "unknown",
+        "lastEvaluated": "2010-08-31"
+      },
+      {
+        "condition": "Familial type 3 hyperlipoproteinemia",
+        "significance": "no classifications from unflagged record",
+        "rawSignificance": "no classifications from unflagged records",
+        "significanceRank": 9,
+        "reviewStatus": "no classifications from unflagged records",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2025-01-06"
+      },
+      {
+        "condition": "not provided",
+        "significance": "Risk factor",
+        "rawSignificance": "Likely benign; other; risk factor",
+        "significanceRank": 3,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2023-08-01"
+      },
+      {
+        "condition": "not specified",
+        "significance": "Uncertain significance",
+        "rawSignificance": "Uncertain significance",
+        "significanceRank": 6,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2019-01-18"
+      },
+      {
+        "condition": "not specified",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": null
+      }
+    ],
+    "distinctSignificances": [
+      "Pathogenic",
+      "Risk factor",
+      "Drug response",
+      "Uncertain significance",
+      "Benign",
+      "no classifications from unflagged record"
+    ],
+    "hasSomatic": false,
+    "hasGermline": true,
+    "gnomadAf": 0.0826848,
+    "hasClinvar": true,
+    "hgvsId": "chr19:g.45412079C>T",
+    "variantId": 441265,
+    "uniprot": "P02649",
+    "residue": 176,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs7412"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/441265/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs7412"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/19-44908822-C-T?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:07:35.073Z"
+  },
+  "claims": [
+    {
+      "text": "The APOE gene variant rs7412 is a missense variant leading to the protein change p.Arg176Cys.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.consequence",
+        "var.protein"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The APOE gene variant rs7412 is associated with a drug response to atorvastatin, with a review confidence of 3 of 4 stars.",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The APOE gene variant rs7412 is classified as pathogenic for Familial type 3 hyperlipoproteinemia, but its classification for other conditions varies.",
+      "supportingFactIds": [
+        "var.cond.2.significance"
+      ],
+      "claimType": "uncertainty"
+    },
+    {
+      "text": "The APOE gene variant rs7412 has a frequency of 8.3% in the gnomAD population.",
+      "supportingFactIds": [
+        "var.gnomadAf"
+      ],
+      "claimType": "frequency_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "cf56526aedd77ee3",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:07:38.700Z",
+    "retrievedAt": "2026-07-27T10:07:35.073Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs7412"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/441265/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs7412"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/19-44908822-C-T?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

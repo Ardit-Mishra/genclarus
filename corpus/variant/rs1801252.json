@@ -1,0 +1,150 @@
+{
+  "kind": "variant",
+  "id": "rs1801252",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs1801252",
+    "gene": "ADRB1",
+    "consequence": "missense variant",
+    "proteinChange": "p.Ser49Gly",
+    "alleleCount": 1,
+    "otherAlleles": [],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NM_000684.3(ADRB1):c.145A>G (p.Ser49Gly)",
+    "chrom": "10",
+    "position": 114044277,
+    "refAlt": "A>G",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "ADRB1-related disorder",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2019-10-28"
+      },
+      {
+        "condition": "Resting heart rate (RHR)",
+        "significance": "association",
+        "rawSignificance": "association",
+        "significanceRank": 9,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2015-05-18"
+      },
+      {
+        "condition": "not specified",
+        "significance": "Likely benign",
+        "rawSignificance": "Likely benign",
+        "significanceRank": 7,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2018-03-09"
+      },
+      {
+        "condition": "not provided",
+        "significance": "Likely benign",
+        "rawSignificance": "Likely benign",
+        "significanceRank": 7,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": null
+      }
+    ],
+    "distinctSignificances": [
+      "Likely benign",
+      "Benign",
+      "association"
+    ],
+    "hasSomatic": false,
+    "hasGermline": true,
+    "gnomadAf": 0.168892,
+    "hasClinvar": true,
+    "hgvsId": "chr10:g.115804036A>G",
+    "variantId": 17747,
+    "uniprot": "P08588",
+    "residue": 49,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs1801252"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/17747/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1801252"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/10-114044277-A-G?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:16:35.288Z"
+  },
+  "claims": [
+    {
+      "text": "The ADRB1 gene variant rs1801252 is a missense variant with a p.Ser49Gly protein change.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.consequence",
+        "var.protein"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The ADRB1 gene variant rs1801252 has a frequency of 17% in the gnomAD population.",
+      "supportingFactIds": [
+        "var.type",
+        "var.gnomadAf"
+      ],
+      "claimType": "frequency_context"
+    },
+    {
+      "text": "The ADRB1 gene variant rs1801252 has a low review confidence of 0 of 4 review stars for ADRB1-related disorder and Resting heart rate (RHR), and 1 of 4 review stars for other conditions.",
+      "supportingFactIds": [
+        "var.cond.0.reviewStars",
+        "var.cond.1.reviewStars",
+        "var.cond.2.reviewStars"
+      ],
+      "claimType": "uncertainty"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "dd8588741d856b1c",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:16:41.383Z",
+    "retrievedAt": "2026-07-27T10:16:35.288Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs1801252"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/17747/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1801252"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/10-114044277-A-G?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

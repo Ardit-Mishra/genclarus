@@ -1,0 +1,110 @@
+{
+  "kind": "gene",
+  "id": "MYH7",
+  "facts": {
+    "kind": "gene",
+    "symbol": "MYH7",
+    "name": "myosin heavy chain 7",
+    "type": "protein-coding",
+    "summary": "Muscle myosin is a hexameric protein containing 2 heavy chain subunits, 2 alkali light chain subunits, and 2 regulatory light chain subunits. This gene encodes the beta (or slow) heavy chain subunit of cardiac myosin. It is expressed predominantly in normal human ventricle. It is also expressed in skeletal muscle tissues rich in slow-twitch type I muscle fibers. Changes in the relative abundance of this protein and the alpha (or fast) heavy subunit of cardiac myosin correlate with the contractile velocity of cardiac muscle. Its expression is also altered during thyroid hormone depletion and hemodynamic overloading. Mutations in this gene are associated with familial hypertrophic cardiomyopathy, myosin storage myopathy, dilated cardiomyopathy, and Laing distal myopathy. [provided by RefSeq, May 2022].",
+    "aliases": [
+      "CMD1S",
+      "CMH1",
+      "CMYO7A",
+      "CMYO7B",
+      "CMYP7A",
+      "CMYP7B",
+      "MPD1",
+      "MYHCB"
+    ],
+    "location": "chr14:23,412,732–23,436,137 (−)",
+    "uniprot": "P12883",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/4625"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000092054"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P12883"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/160760"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=MYH7"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:06:09.542Z"
+  },
+  "claims": [
+    {
+      "text": "The MYH7 gene encodes the beta (or slow) heavy chain subunit of cardiac myosin.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "function"
+    },
+    {
+      "text": "Mutations in the MYH7 gene are associated with familial hypertrophic cardiomyopathy.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The MYH7 gene is a protein-coding gene located on chromosome 14.",
+      "supportingFactIds": [
+        "gene.type",
+        "gene.location"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The classification of MYH7 gene variants varies, with some associated with familial hypertrophic cardiomyopathy and others with myosin storage myopathy.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "uncertainty"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "62e793e740e8d8fe",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:06:13.009Z",
+    "retrievedAt": "2026-07-27T10:06:09.542Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/4625"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000092054"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P12883"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/160760"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=MYH7"
+      }
+    ]
+  }
+}

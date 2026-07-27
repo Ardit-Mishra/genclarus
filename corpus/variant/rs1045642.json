@@ -1,0 +1,154 @@
+{
+  "kind": "variant",
+  "id": "rs1045642",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs1045642",
+    "gene": "ABCB1",
+    "consequence": "",
+    "proteinChange": "",
+    "alleleCount": 2,
+    "otherAlleles": [
+      {
+        "proteinChange": "",
+        "refAlt": "A>A",
+        "variantId": 515930,
+        "significance": "Benign"
+      }
+    ],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NM_001348946.2(ABCB1):c.3435T>C (p.Ile1145=)",
+    "chrom": "7",
+    "position": 87509329,
+    "refAlt": "A>G",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "Tramadol response",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "somatic",
+        "lastEvaluated": "2018-04-28"
+      },
+      {
+        "condition": "ABCB1-related disorder",
+        "significance": "Likely benign",
+        "rawSignificance": "Likely benign",
+        "significanceRank": 7,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2021-07-21"
+      },
+      {
+        "condition": "MDR1 POLYMORPHISM",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2007-01-26"
+      },
+      {
+        "condition": "not provided",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2018-03-13"
+      }
+    ],
+    "distinctSignificances": [
+      "Drug response",
+      "Likely benign",
+      "Benign"
+    ],
+    "hasSomatic": true,
+    "hasGermline": true,
+    "gnomadAf": 0.560177,
+    "hasClinvar": true,
+    "hgvsId": "chr7:g.87138645A>G",
+    "variantId": 225939,
+    "uniprot": "P08183",
+    "residue": null,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs1045642"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/225939/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1045642"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/7-87509329-A-G?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:16:53.816Z"
+  },
+  "claims": [
+    {
+      "text": "The ABCB1 gene variant rs1045642 is a single nucleotide variant.",
+      "supportingFactIds": [
+        "var.type"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The ABCB1 gene variant rs1045642 has a germline origin.",
+      "supportingFactIds": [
+        "var.cond.1.origin",
+        "var.cond.2.origin"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The ABCB1 gene variant rs1045642 is likely benign in ABCB1-related disorder and benign in MDR1 POLYMORPHISM.",
+      "supportingFactIds": [
+        "var.cond.1.significance",
+        "var.cond.2.significance"
+      ],
+      "claimType": "classification_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "fed3ec9efbf9c78c",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:16:57.461Z",
+    "retrievedAt": "2026-07-27T10:16:53.816Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs1045642"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/225939/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1045642"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/7-87509329-A-G?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

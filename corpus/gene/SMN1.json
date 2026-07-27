@@ -1,0 +1,102 @@
+{
+  "kind": "gene",
+  "id": "SMN1",
+  "facts": {
+    "kind": "gene",
+    "symbol": "SMN1",
+    "name": "survival of motor neuron 1, telomeric",
+    "type": "protein-coding",
+    "summary": "This gene is part of a 500 kb inverted duplication on chromosome 5q13. This duplicated region contains at least four genes and repetitive elements which make it prone to rearrangements and deletions. The repetitiveness and complexity of the sequence have also caused difficulty in determining the organization of this genomic region. The telomeric and centromeric copies of this gene are nearly identical and encode the same protein. However, mutations in this gene, the telomeric copy, are associated with spinal muscular atrophy; mutations in the centromeric copy do not lead to disease. The centromeric copy may be a modifier of disease caused by mutation in the telomeric copy. The critical sequence difference between the two genes is a single nucleotide in exon 7, which is thought to be an exon splice enhancer. Note that the nine exons of both the telomeric and centromeric copies are designated historically as exon 1, 2a, 2b, and 3-8. It is thought that gene conversion events may involve the two genes, leading to varying copy numbers of each gene. The protein encoded by this gene localizes to both the cytoplasm and the nucleus. Within the nucleus, the protein localizes to subnuclear bodies called gems which are found near coiled bodies containing high concentrations of small ribonucleoproteins (snRNPs). This protein forms heteromeric complexes with proteins such as SIP1 and GEMIN4, and also interacts with several proteins known to be involved in the biogenesis of snRNPs, such as hnRNP U protein and the small nucleolar RNA binding protein. Multiple transcript variants encoding distinct isoforms have been described. [provided by RefSeq, Jul 2014].",
+    "aliases": [
+      "BCD541",
+      "GEMIN1",
+      "SMA",
+      "SMA1",
+      "SMA2",
+      "SMA3",
+      "SMA4",
+      "SMA@"
+    ],
+    "location": "chr5:70,925,030–70,953,942 (+)",
+    "uniprot": "Q16637",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/6606"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000172062"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/Q16637"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/600354"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=SMN1"
+      }
+    ],
+    "retrievedAt": "2026-07-27T09:48:51.256Z"
+  },
+  "claims": [
+    {
+      "text": "The SMN1 gene is associated with spinal muscular atrophy when mutated.",
+      "supportingFactIds": [
+        "gene.name"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The SMN1 protein localizes to both the cytoplasm and the nucleus.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "function"
+    },
+    {
+      "text": "Multiple transcript variants encoding distinct isoforms of the SMN1 protein have been described.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "identity"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "14a074e8b066ff3b",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T09:48:54.227Z",
+    "retrievedAt": "2026-07-27T09:48:51.256Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/6606"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000172062"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/Q16637"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/600354"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=SMN1"
+      }
+    ]
+  }
+}

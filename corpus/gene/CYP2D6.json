@@ -1,0 +1,103 @@
+{
+  "kind": "gene",
+  "id": "CYP2D6",
+  "facts": {
+    "kind": "gene",
+    "symbol": "CYP2D6",
+    "name": "cytochrome P450 family 2 subfamily D member 6 (gene/pseudogene)",
+    "type": "protein-coding",
+    "summary": "This gene encodes a member of the cytochrome P450 superfamily of enzymes. The cytochrome P450 proteins are monooxygenases which catalyze many reactions involved in drug metabolism and synthesis of cholesterol, steroids and other lipids. This protein localizes to the endoplasmic reticulum and is known to metabolize as many as 25% of commonly prescribed drugs. Its substrates include antidepressants, antipsychotics, analgesics and antitussives, beta adrenergic blocking agents, antiarrythmics and antiemetics. The gene is highly polymorphic in the human population; certain alleles result in the poor metabolizer phenotype, characterized by a decreased ability to metabolize the enzyme's substrates. Some individuals with the poor metabolizer phenotype have no functional protein since they carry 2 null alleles whereas in other individuals the gene is absent. This gene can vary in copy number and individuals with the ultrarapid metabolizer phenotype can have 3 or more active copies of the gene. Alternatively spliced transcript variants encoding different isoforms have been found for this gene. [provided by RefSeq, Jul 2014].",
+    "aliases": [
+      "CPD6",
+      "CYP2D",
+      "CYP2D7AP",
+      "CYP2D7BP",
+      "CYP2D7P2",
+      "CYP2D8P2",
+      "CYP2DL1",
+      "CYPIID6"
+    ],
+    "location": "chr22:42,120,962–42,131,727 (−)",
+    "uniprot": "P10635",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/1565"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000280905"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P10635"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/124030"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=CYP2D6"
+      }
+    ],
+    "retrievedAt": "2026-07-27T09:49:20.473Z"
+  },
+  "claims": [
+    {
+      "text": "CYP2D6 is a member of the cytochrome P450 superfamily of enzymes.",
+      "supportingFactIds": [
+        "gene.symbol",
+        "gene.summary"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "CYP2D6 is highly polymorphic in the human population, with certain alleles resulting in the poor metabolizer phenotype.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "CYP2D6 can vary in copy number, with individuals having 3 or more active copies exhibiting the ultrarapid metabolizer phenotype.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "frequency_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "6362754cc6f31ab1",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T09:49:24.542Z",
+    "retrievedAt": "2026-07-27T09:49:20.473Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/1565"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000280905"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P10635"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/124030"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=CYP2D6"
+      }
+    ]
+  }
+}

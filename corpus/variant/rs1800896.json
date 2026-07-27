@@ -1,0 +1,120 @@
+{
+  "kind": "variant",
+  "id": "rs1800896",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs1800896",
+    "gene": "IL10",
+    "consequence": "",
+    "proteinChange": "",
+    "alleleCount": 1,
+    "otherAlleles": [],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NC_000001.11:g.206773552T>C",
+    "chrom": "1",
+    "position": 206773552,
+    "refAlt": "T>C",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "Leprosy, susceptibility to, 1",
+        "significance": "Uncertain significance",
+        "rawSignificance": "Uncertain risk allele",
+        "significanceRank": 6,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "inherited",
+        "lastEvaluated": "2022-06-10"
+      }
+    ],
+    "distinctSignificances": [
+      "Uncertain significance"
+    ],
+    "hasSomatic": false,
+    "hasGermline": false,
+    "gnomadAf": 0.404147,
+    "hasClinvar": false,
+    "hgvsId": "chr1:g.206946897T>C",
+    "variantId": 1710531,
+    "uniprot": "P22301",
+    "residue": null,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs1800896"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1710531/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1800896"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/1-206773552-T-C?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:15:24.454Z"
+  },
+  "claims": [
+    {
+      "text": "The IL10 gene variant rs1800896 is a single nucleotide variant.",
+      "supportingFactIds": [
+        "var.type"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The frequency of the IL10 gene variant rs1800896 in the general population is 4%.",
+      "supportingFactIds": [
+        "var.gnomadAf"
+      ],
+      "claimType": "frequency_context"
+    },
+    {
+      "text": "The significance of the IL10 gene variant rs1800896 in relation to leprosy susceptibility is uncertain.",
+      "supportingFactIds": [
+        "var.cond.0.significance"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The IL10 gene variant rs1800896 has been reviewed with low confidence.",
+      "supportingFactIds": [
+        "var.cond.0.reviewStars"
+      ],
+      "claimType": "uncertainty"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "66f8ce28e4ad33b1",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:15:30.183Z",
+    "retrievedAt": "2026-07-27T10:15:24.454Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs1800896"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1710531/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1800896"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/1-206773552-T-C?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

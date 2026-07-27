@@ -1,0 +1,218 @@
+{
+  "kind": "variant",
+  "id": "rs17580",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs17580",
+    "gene": "SERPINA1",
+    "consequence": "missense variant",
+    "proteinChange": "p.Glu288Val",
+    "alleleCount": 1,
+    "otherAlleles": [],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NM_001127701.1(SERPINA1):c.863A>T (p.Glu288Val)",
+    "chrom": "14",
+    "position": 94380925,
+    "refAlt": "T>A",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "Alpha-1-antitrypsin deficiency (A1ATD)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic/Pathogenic, low penetrance",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2025-02-02"
+      },
+      {
+        "condition": "Inborn genetic diseases",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2023-10-27"
+      },
+      {
+        "condition": "Chronic obstructive pulmonary disease",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2018-10-31"
+      },
+      {
+        "condition": "Alpha-1-antitrypsin deficiency (A1ATD)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2018-10-31"
+      },
+      {
+        "condition": "SERPINA1-related disorder",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2024-08-21"
+      },
+      {
+        "condition": "Cystic fibrosis (CF)",
+        "significance": "Risk factor",
+        "rawSignificance": "risk factor",
+        "significanceRank": 3,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2019-04-01"
+      },
+      {
+        "condition": "Susceptibility to severe coronavirus disease (COVID-19)",
+        "significance": "other",
+        "rawSignificance": "other",
+        "significanceRank": 9,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2022-05-13"
+      },
+      {
+        "condition": "PI S",
+        "significance": "other",
+        "rawSignificance": "other",
+        "significanceRank": 9,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "1989-06-25"
+      },
+      {
+        "condition": "not provided",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic; other",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2025-01-01"
+      },
+      {
+        "condition": "not specified",
+        "significance": "no classifications from unflagged record",
+        "rawSignificance": "no classifications from unflagged records",
+        "significanceRank": 9,
+        "reviewStatus": "no classifications from unflagged records",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2022-11-17"
+      }
+    ],
+    "distinctSignificances": [
+      "Pathogenic",
+      "Risk factor",
+      "other",
+      "no classifications from unflagged record"
+    ],
+    "hasSomatic": false,
+    "hasGermline": true,
+    "gnomadAf": 0.0237989,
+    "hasClinvar": true,
+    "hgvsId": "chr14:g.94847262T>A",
+    "variantId": 17969,
+    "uniprot": "P01009",
+    "residue": 288,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs17580"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/17969/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs17580"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/14-94380925-T-A?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:15:52.555Z"
+  },
+  "claims": [
+    {
+      "text": "The SERPINA1 gene variant rs17580 is a missense variant leading to the p.Glu288Val protein change.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.consequence",
+        "var.protein"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The SERPINA1 gene variant rs17580 has been classified as Pathogenic for Alpha-1-antitrypsin deficiency (A1ATD) with 2 of 4 review stars.",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The SERPINA1 gene variant rs17580 has been classified as Pathogenic for Inborn genetic diseases with 1 of 4 review stars.",
+      "supportingFactIds": [
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The SERPINA1 gene variant rs17580 has been classified as Pathogenic for Chronic obstructive pulmonary disease with 1 of 4 review stars.",
+      "supportingFactIds": [
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars"
+      ],
+      "claimType": "classification_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "9dec2d7402a84ac6",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:15:59.160Z",
+    "retrievedAt": "2026-07-27T10:15:52.555Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs17580"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/17969/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs17580"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/14-94380925-T-A?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

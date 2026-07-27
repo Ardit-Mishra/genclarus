@@ -1,0 +1,199 @@
+{
+  "kind": "variant",
+  "id": "rs28399504",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs28399504",
+    "gene": "CYP2C19",
+    "consequence": "missense variant",
+    "proteinChange": "p.Met1Val",
+    "alleleCount": 1,
+    "otherAlleles": [],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NM_000769.1(CYP2C19):c.1A>G (p.Met1Val)",
+    "chrom": "10",
+    "position": 94762706,
+    "refAlt": "A>G",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "CYP2C19: no function",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "practice guideline",
+        "reviewStars": 4,
+        "origin": "germline",
+        "lastEvaluated": null
+      },
+      {
+        "condition": "Clopidogrel response",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "practice guideline",
+        "reviewStars": 4,
+        "origin": "germline",
+        "lastEvaluated": null
+      },
+      {
+        "condition": "Citalopram response",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "practice guideline",
+        "reviewStars": 4,
+        "origin": "germline",
+        "lastEvaluated": null
+      },
+      {
+        "condition": "Escitalopram response",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "practice guideline",
+        "reviewStars": 4,
+        "origin": "germline",
+        "lastEvaluated": null
+      },
+      {
+        "condition": "Sertraline response",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "practice guideline",
+        "reviewStars": 4,
+        "origin": "germline",
+        "lastEvaluated": null
+      },
+      {
+        "condition": "Voriconazole response",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "practice guideline",
+        "reviewStars": 4,
+        "origin": "germline",
+        "lastEvaluated": null
+      },
+      {
+        "condition": "Mephenytoin, poor metabolism of",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "1998-01-01"
+      },
+      {
+        "condition": "not provided",
+        "significance": "Likely benign",
+        "rawSignificance": "Likely benign; other",
+        "significanceRank": 7,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2018-03-26"
+      }
+    ],
+    "distinctSignificances": [
+      "Drug response",
+      "Likely benign"
+    ],
+    "hasSomatic": false,
+    "hasGermline": true,
+    "gnomadAf": 0.0015619,
+    "hasClinvar": true,
+    "hgvsId": "chr10:g.96522463A>G",
+    "variantId": 16900,
+    "uniprot": "P33261",
+    "residue": 1,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs28399504"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/16900/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs28399504"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/10-94762706-A-G?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:15:46.566Z"
+  },
+  "claims": [
+    {
+      "text": "The CYP2C19 gene variant rs28399504 is a missense variant.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.consequence",
+        "var.type"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The CYP2C19 gene variant rs28399504 has a protein change of p.Met1Val.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.consequence",
+        "var.protein"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The CYP2C19 gene variant rs28399504 is associated with a drug response to clopidogrel.",
+      "supportingFactIds": [
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars",
+        "var.cond.1.origin"
+      ],
+      "claimType": "condition_context"
+    },
+    {
+      "text": "The CYP2C19 gene variant rs28399504 is associated with a drug response to citalopram.",
+      "supportingFactIds": [
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars",
+        "var.cond.2.origin"
+      ],
+      "claimType": "condition_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "fbbb6dd4f2a13382",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:15:50.794Z",
+    "retrievedAt": "2026-07-27T10:15:46.566Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs28399504"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/16900/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs28399504"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/10-94762706-A-G?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

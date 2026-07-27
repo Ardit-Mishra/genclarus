@@ -1,0 +1,200 @@
+{
+  "kind": "variant",
+  "id": "rs1801133",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs1801133",
+    "gene": "MTHFR",
+    "consequence": "missense variant",
+    "proteinChange": "p.Ala222Val",
+    "alleleCount": 1,
+    "otherAlleles": [],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NM_005957.5(MTHFR):c.665C>T (p.Ala222Val)",
+    "chrom": "1",
+    "position": 11796321,
+    "refAlt": "G>A",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "methotrexate response - Toxicity",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "reviewed by expert panel",
+        "reviewStars": 3,
+        "origin": "germline",
+        "lastEvaluated": "2021-03-24"
+      },
+      {
+        "condition": "Homocystinuria due to methylene tetrahydrofolate reductase deficiency",
+        "significance": "Conflicting interpretations",
+        "rawSignificance": "Conflicting interpretations of pathogenicity",
+        "significanceRank": 5,
+        "reviewStatus": "criteria provided, conflicting interpretations",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2025-02-03"
+      },
+      {
+        "condition": "Neural tube defects, folate-sensitive (NTDFS)",
+        "significance": "Likely benign",
+        "rawSignificance": "Likely benign",
+        "significanceRank": 7,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2019-05-28"
+      },
+      {
+        "condition": "MTHFR THERMOLABILE POLYMORPHISM",
+        "significance": "Conflicting interpretations",
+        "rawSignificance": "Conflicting interpretations of pathogenicity",
+        "significanceRank": 5,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2023-09-29"
+      },
+      {
+        "condition": "Thrombophilia due to thrombin defect (THPH1)",
+        "significance": "Uncertain significance",
+        "rawSignificance": "Uncertain significance",
+        "significanceRank": 6,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "unknown",
+        "lastEvaluated": "2017-12-30"
+      },
+      {
+        "condition": "Gastrointestinal stromal tumor",
+        "significance": "Uncertain significance",
+        "rawSignificance": "Uncertain significance",
+        "significanceRank": 6,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": null
+      },
+      {
+        "condition": "not provided",
+        "significance": "Uncertain significance",
+        "rawSignificance": "Uncertain significance; association; other",
+        "significanceRank": 6,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2024-11-22"
+      },
+      {
+        "condition": "See cases",
+        "significance": "Uncertain significance",
+        "rawSignificance": "Uncertain significance",
+        "significanceRank": 6,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2022-01-06"
+      },
+      {
+        "condition": "not specified",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2016-04-25"
+      }
+    ],
+    "distinctSignificances": [
+      "Drug response",
+      "Conflicting interpretations",
+      "Uncertain significance",
+      "Likely benign",
+      "Benign"
+    ],
+    "hasSomatic": false,
+    "hasGermline": true,
+    "gnomadAf": 0.257281,
+    "hasClinvar": true,
+    "hgvsId": "chr1:g.11856378G>A",
+    "variantId": 3520,
+    "uniprot": "P42898",
+    "residue": 222,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs1801133"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3520/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1801133"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/1-11796321-G-A?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:07:02.939Z"
+  },
+  "claims": [
+    {
+      "text": "The MTHFR gene variant rs1801133 is a missense variant causing the protein change p.Ala222Val.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.consequence",
+        "var.protein"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "This variant has a germline origin and is associated with drug response to methotrexate.",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.0.origin"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The variant is likely benign in relation to Neural tube defects, folate-sensitive (NTDFS).",
+      "supportingFactIds": [
+        "var.cond.2.significance"
+      ],
+      "claimType": "classification_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "50b8e8a1b4e9797e",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:07:11.752Z",
+    "retrievedAt": "2026-07-27T10:07:02.939Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs1801133"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/3520/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1801133"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/1-11796321-G-A?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

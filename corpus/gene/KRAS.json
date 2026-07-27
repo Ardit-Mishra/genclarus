@@ -1,0 +1,110 @@
+{
+  "kind": "gene",
+  "id": "KRAS",
+  "facts": {
+    "kind": "gene",
+    "symbol": "KRAS",
+    "name": "KRas proto-oncogene, GTPase",
+    "type": "protein-coding",
+    "summary": "This gene, a Kirsten ras oncogene homolog from the mammalian ras gene family, encodes a protein that is a member of the small GTPase superfamily. A single amino acid substitution is responsible for an activating mutation. The transforming protein that results is implicated in various malignancies, including lung adenocarcinoma, mucinous adenoma, ductal carcinoma of the pancreas and colorectal carcinoma. Alternative splicing leads to variants encoding two isoforms that differ in the C-terminal region. [provided by RefSeq, Jul 2008].",
+    "aliases": [
+      "'C-K-RAS",
+      "C-K-RAS",
+      "CFC2",
+      "K-RAS2A",
+      "K-RAS2B",
+      "K-RAS4A",
+      "K-RAS4B",
+      "K-Ras"
+    ],
+    "location": "chr12:25,205,246–25,326,473 (−)",
+    "uniprot": "P01116",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/3845"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000133703"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P01116"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/190070"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=KRAS"
+      }
+    ],
+    "retrievedAt": "2026-07-27T09:46:48.609Z"
+  },
+  "claims": [
+    {
+      "text": "KRAS is a protein-coding gene located on chromosome 12.",
+      "supportingFactIds": [
+        "gene.type",
+        "gene.location"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "KRAS encodes a protein that is a member of the small GTPase superfamily.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "function"
+    },
+    {
+      "text": "KRAS is implicated in various malignancies, including lung adenocarcinoma and colorectal carcinoma.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "Alternative splicing of KRAS leads to variants encoding two isoforms that differ in the C-terminal region.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "function"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "53b9fb98b9b4af6f",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T09:46:52.909Z",
+    "retrievedAt": "2026-07-27T09:46:48.609Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/3845"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000133703"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P01116"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/190070"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=KRAS"
+      }
+    ]
+  }
+}

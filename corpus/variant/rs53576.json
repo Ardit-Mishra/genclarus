@@ -1,0 +1,78 @@
+{
+  "kind": "variant",
+  "id": "rs53576",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs53576",
+    "gene": "OXTR",
+    "consequence": "",
+    "proteinChange": "",
+    "alleleCount": 1,
+    "otherAlleles": [],
+    "variantType": "snv",
+    "preferredName": null,
+    "chrom": "3",
+    "position": 8804371,
+    "refAlt": "A>G",
+    "assembly": "GRCh37",
+    "conditionClassifications": [],
+    "distinctSignificances": [],
+    "hasSomatic": false,
+    "hasGermline": false,
+    "gnomadAf": 0.665826,
+    "hasClinvar": false,
+    "hgvsId": "chr3:g.8804371A>G",
+    "variantId": null,
+    "uniprot": "P30559",
+    "residue": null,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs53576"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs53576"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:09:53.700Z"
+  },
+  "claims": [
+    {
+      "text": "The OXTR gene variant rs53576 is a single nucleotide variant.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.type"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The OXTR gene variant rs53576 has a high frequency in the general population.",
+      "supportingFactIds": [
+        "var.gnomadAf"
+      ],
+      "claimType": "frequency_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "22992d92386ec3fe",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:09:56.350Z",
+    "retrievedAt": "2026-07-27T10:09:53.700Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs53576"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs53576"
+      }
+    ]
+  }
+}

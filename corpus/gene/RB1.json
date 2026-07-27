@@ -1,0 +1,110 @@
+{
+  "kind": "gene",
+  "id": "RB1",
+  "facts": {
+    "kind": "gene",
+    "symbol": "RB1",
+    "name": "RB transcriptional corepressor 1",
+    "type": "protein-coding",
+    "summary": "The protein encoded by this gene is a negative regulator of the cell cycle and was the first tumor suppressor gene found. The encoded protein also stabilizes constitutive heterochromatin to maintain the overall chromatin structure. The active, hypophosphorylated form of the protein binds transcription factor E2F1. Defects in this gene are a cause of childhood cancer retinoblastoma (RB), bladder cancer, and osteogenic sarcoma. [provided by RefSeq, Jul 2008].",
+    "aliases": [
+      "OSRC",
+      "PPP1R130",
+      "RB",
+      "p105-Rb",
+      "p110-RB1",
+      "pRb",
+      "pp110"
+    ],
+    "location": "chr13:48,303,710–48,599,436 (+)",
+    "uniprot": "P06400",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/5925"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000139687"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P06400"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/614041"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=RB1"
+      }
+    ],
+    "retrievedAt": "2026-07-27T09:44:44.811Z"
+  },
+  "claims": [
+    {
+      "text": "The protein encoded by the RB1 gene is a negative regulator of the cell cycle.",
+      "supportingFactIds": [
+        "gene.symbol",
+        "gene.summary"
+      ],
+      "claimType": "function"
+    },
+    {
+      "text": "The RB1 gene is a protein-coding gene.",
+      "supportingFactIds": [
+        "gene.type"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The RB1 gene is associated with retinoblastoma, bladder cancer, and osteogenic sarcoma.",
+      "supportingFactIds": [
+        "gene.name",
+        "gene.summary"
+      ],
+      "claimType": "condition_context"
+    },
+    {
+      "text": "The RB1 gene is located on chromosome 13.",
+      "supportingFactIds": [
+        "gene.location"
+      ],
+      "claimType": "identity"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "151a27db4fd96010",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T09:44:47.974Z",
+    "retrievedAt": "2026-07-27T09:44:44.811Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/5925"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000139687"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P06400"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/614041"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=RB1"
+      }
+    ]
+  }
+}

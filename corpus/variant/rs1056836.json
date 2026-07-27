@@ -1,0 +1,175 @@
+{
+  "kind": "variant",
+  "id": "rs1056836",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs1056836",
+    "gene": "CYP1B1",
+    "consequence": "missense variant",
+    "proteinChange": "p.Val432Leu",
+    "alleleCount": 2,
+    "otherAlleles": [
+      {
+        "proteinChange": "p.Leu432Val",
+        "refAlt": "G>C",
+        "variantId": 456637,
+        "significance": "Benign"
+      }
+    ],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NM_000104.4(CYP1B1):c.1294= (p.Leu432=)",
+    "chrom": "2",
+    "position": 38071060,
+    "refAlt": "G>G",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "Congenital glaucoma",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2025-02-03"
+      },
+      {
+        "condition": "Anterior segment dysgenesis 6 (ASGD6)",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2021-07-30"
+      },
+      {
+        "condition": "Glaucoma 3A",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2021-07-30"
+      },
+      {
+        "condition": "not provided",
+        "significance": "Likely benign",
+        "rawSignificance": "Likely benign",
+        "significanceRank": 7,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2016-10-01"
+      },
+      {
+        "condition": "not specified",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2021-12-03"
+      }
+    ],
+    "distinctSignificances": [
+      "Likely benign",
+      "Benign"
+    ],
+    "hasSomatic": false,
+    "hasGermline": true,
+    "gnomadAf": null,
+    "hasClinvar": true,
+    "hgvsId": "chr2:g.38298203G>G",
+    "variantId": 166971,
+    "uniprot": "Q16678",
+    "residue": 432,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs1056836"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/166971/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1056836"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/2-38071060-G-G?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:18:04.046Z"
+  },
+  "claims": [
+    {
+      "text": "The CYP1B1 gene variant rs1056836 is a missense variant.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.consequence",
+        "var.type"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The CYP1B1 gene variant rs1056836 results in a p.Val432Leu protein change.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.protein"
+      ],
+      "claimType": "function"
+    },
+    {
+      "text": "The CYP1B1 gene variant rs1056836 is classified as Benign for Congenital glaucoma, Anterior segment dysgenesis 6 (ASGD6), and Glaucoma 3A.",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.1.significance",
+        "var.cond.2.significance"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The CYP1B1 gene variant rs1056836 has a low review confidence for its classifications.",
+      "supportingFactIds": [
+        "var.cond.0.reviewStars",
+        "var.cond.1.reviewStars",
+        "var.cond.2.reviewStars"
+      ],
+      "claimType": "uncertainty"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "b426d2b6905e4572",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:18:07.419Z",
+    "retrievedAt": "2026-07-27T10:18:04.046Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs1056836"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/166971/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1056836"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/2-38071060-G-G?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

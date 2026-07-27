@@ -1,0 +1,373 @@
+{
+  "kind": "variant",
+  "id": "rs80338939",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs80338939",
+    "gene": "GJB2",
+    "consequence": "frameshift variant",
+    "proteinChange": "p.Gly12fs",
+    "alleleCount": 2,
+    "otherAlleles": [
+      {
+        "proteinChange": "p.Val13fs",
+        "refAlt": "",
+        "variantId": 94392,
+        "significance": "Pathogenic"
+      }
+    ],
+    "variantType": "Deletion",
+    "preferredName": "NM_004004.6(GJB2):c.35del (p.Gly12fs)",
+    "chrom": "13",
+    "position": 20189547,
+    "refAlt": "",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "Nonsyndromic genetic hearing loss",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "reviewed by expert panel",
+        "reviewStars": 3,
+        "origin": "germline",
+        "lastEvaluated": "2018-09-20"
+      },
+      {
+        "condition": "Autosomal recessive nonsyndromic hearing loss 1A (DFNB1A)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "biparental",
+        "lastEvaluated": "2025-03-25"
+      },
+      {
+        "condition": "Hearing loss, autosomal recessive",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2024-11-08"
+      },
+      {
+        "condition": "GJB2-related disorder",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2024-09-04"
+      },
+      {
+        "condition": "Autosomal dominant nonsyndromic hearing loss 3A",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2024-06-06"
+      },
+      {
+        "condition": "Autosomal recessive nonsyndromic hearing loss 1A (DFNB1A)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2024-06-06"
+      },
+      {
+        "condition": "Mutilating keratoderma (VOWNKL)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2024-06-06"
+      },
+      {
+        "condition": "Ichthyosis, hystrix-like, with hearing loss",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2024-06-06"
+      },
+      {
+        "condition": "Autosomal dominant keratitis-ichthyosis-hearing loss syndrome",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2024-06-06"
+      },
+      {
+        "condition": "Palmoplantar keratoderma-deafness syndrome",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2024-06-06"
+      },
+      {
+        "condition": "Knuckle pads, deafness AND leukonychia syndrome",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2024-06-06"
+      },
+      {
+        "condition": "Hearing impairment",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "maternal",
+        "lastEvaluated": "2021-04-12"
+      },
+      {
+        "condition": "Hereditary palmoplantar keratoderma",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2024-10-04"
+      },
+      {
+        "condition": "Inborn genetic diseases",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2022-12-02"
+      },
+      {
+        "condition": "Rare genetic deafness",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2022-06-23"
+      },
+      {
+        "condition": "Deafness",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2021-09-02"
+      },
+      {
+        "condition": "Ear malformation",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2021-07-10"
+      },
+      {
+        "condition": "Hearing impairment",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2015-01-13"
+      },
+      {
+        "condition": "Bilateral conductive hearing impairment",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2015-01-13"
+      },
+      {
+        "condition": "Bilateral sensorineural hearing impairment",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2014-10-01"
+      },
+      {
+        "condition": "Autosomal recessive nonsyndromic hearing loss 1B",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": null
+      },
+      {
+        "condition": "Autosomal recessive nonsyndromic hearing loss 104",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": null
+      },
+      {
+        "condition": "Hearing loss",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2017-02-22"
+      },
+      {
+        "condition": "Severe sensorineural hearing impairment",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "unknown",
+        "lastEvaluated": "2016-01-04"
+      },
+      {
+        "condition": "Deafness, digenic, GJB2/GJB6",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2012-10-05"
+      },
+      {
+        "condition": "not provided",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2025-03-04"
+      }
+    ],
+    "distinctSignificances": [
+      "Pathogenic"
+    ],
+    "hasSomatic": false,
+    "hasGermline": true,
+    "gnomadAf": 0.00794664,
+    "hasClinvar": true,
+    "hgvsId": "chr13:g.20763686del",
+    "variantId": 17004,
+    "uniprot": "P29033",
+    "residue": null,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs80338939"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/17004/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs80338939"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:14:34.055Z"
+  },
+  "claims": [
+    {
+      "text": "The GJB2 gene variant rs80338939 is a frameshift variant leading to a p.Gly12fs protein change.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.consequence",
+        "var.protein"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "This variant is a deletion.",
+      "supportingFactIds": [
+        "var.type"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The variant rs80338939 is classified as Pathogenic for Nonsyndromic genetic hearing loss with a review confidence of 3 of 4 review stars.",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The variant rs80338939 is classified as Pathogenic for Hearing loss, autosomal recessive, with a review confidence of 2 of 4 review stars.",
+      "supportingFactIds": [
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars"
+      ],
+      "claimType": "classification_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "f265fcfe32da6f8a",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:14:37.347Z",
+    "retrievedAt": "2026-07-27T10:14:34.055Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs80338939"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/17004/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs80338939"
+      }
+    ]
+  }
+}

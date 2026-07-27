@@ -1,0 +1,155 @@
+{
+  "kind": "variant",
+  "id": "rs6265",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs6265",
+    "gene": "BDNF-AS",
+    "consequence": "missense variant",
+    "proteinChange": "p.Val66Met",
+    "alleleCount": 1,
+    "otherAlleles": [],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NM_001709.5(BDNF):c.196G>A (p.Val66Met)",
+    "chrom": "11",
+    "position": 27658369,
+    "refAlt": "C>T",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "Memory impairment, susceptibility to",
+        "significance": "not provided",
+        "rawSignificance": "not provided",
+        "significanceRank": 9,
+        "reviewStatus": "no assertion provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2025-04-03"
+      },
+      {
+        "condition": "Post-traumatic stress disorder (PTSD)",
+        "significance": "Likely risk allele",
+        "rawSignificance": "Likely risk allele",
+        "significanceRank": 9,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "inherited",
+        "lastEvaluated": "2023-12-11"
+      },
+      {
+        "condition": "not provided",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2025-02-03"
+      },
+      {
+        "condition": "not specified",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2013-06-18"
+      }
+    ],
+    "distinctSignificances": [
+      "Benign",
+      "not provided",
+      "Likely risk allele"
+    ],
+    "hasSomatic": false,
+    "hasGermline": true,
+    "gnomadAf": 0.151869,
+    "hasClinvar": true,
+    "hgvsId": "chr11:g.27679916C>T",
+    "variantId": 17697,
+    "uniprot": null,
+    "residue": 66,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs6265"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/17697/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs6265"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/11-27658369-C-T?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:09:43.987Z"
+  },
+  "claims": [
+    {
+      "text": "The BDNF-AS gene variant rs6265 is a missense variant with a p.Val66Met protein change.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.consequence",
+        "var.protein"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The BDNF-AS gene variant rs6265 has a germline origin.",
+      "supportingFactIds": [
+        "var.cond.0.origin",
+        "var.cond.2.origin"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The BDNF-AS gene variant rs6265 is associated with susceptibility to memory impairment.",
+      "supportingFactIds": [
+        "var.cond.0.significance"
+      ],
+      "claimType": "condition_context"
+    },
+    {
+      "text": "The BDNF-AS gene variant rs6265 is a likely risk allele for post-traumatic stress disorder (PTSD).",
+      "supportingFactIds": [
+        "var.cond.1.significance"
+      ],
+      "claimType": "condition_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "d0940e550c8cb791",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:09:51.232Z",
+    "retrievedAt": "2026-07-27T10:09:43.987Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs6265"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/17697/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs6265"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/11-27658369-C-T?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

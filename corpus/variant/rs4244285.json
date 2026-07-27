@@ -1,0 +1,218 @@
+{
+  "kind": "variant",
+  "id": "rs4244285",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs4244285",
+    "gene": "CYP2C19",
+    "consequence": "",
+    "proteinChange": "",
+    "alleleCount": 1,
+    "otherAlleles": [],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NM_000769.4(CYP2C19):c.681G>A (p.Pro227=)",
+    "chrom": "10",
+    "position": 94781859,
+    "refAlt": "G>A",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "Clopidogrel response",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "practice guideline",
+        "reviewStars": 4,
+        "origin": "germline",
+        "lastEvaluated": null
+      },
+      {
+        "condition": "Citalopram response",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "practice guideline",
+        "reviewStars": 4,
+        "origin": "germline",
+        "lastEvaluated": null
+      },
+      {
+        "condition": "Escitalopram response",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "practice guideline",
+        "reviewStars": 4,
+        "origin": "germline",
+        "lastEvaluated": null
+      },
+      {
+        "condition": "Sertraline response",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "practice guideline",
+        "reviewStars": 4,
+        "origin": "germline",
+        "lastEvaluated": null
+      },
+      {
+        "condition": "Voriconazole response",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "practice guideline",
+        "reviewStars": 4,
+        "origin": "germline",
+        "lastEvaluated": null
+      },
+      {
+        "condition": "CYP2C19: no function",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "practice guideline",
+        "reviewStars": 4,
+        "origin": "germline",
+        "lastEvaluated": null
+      },
+      {
+        "condition": "Mephenytoin, poor metabolism of",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2009-06-01"
+      },
+      {
+        "condition": "Proguanil, poor metabolism of",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2009-06-01"
+      },
+      {
+        "condition": "not provided",
+        "significance": "Likely benign",
+        "rawSignificance": "Likely benign; other",
+        "significanceRank": 7,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2018-08-07"
+      },
+      {
+        "condition": "not specified",
+        "significance": "Likely benign",
+        "rawSignificance": "Likely benign",
+        "significanceRank": 7,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2018-03-09"
+      }
+    ],
+    "distinctSignificances": [
+      "Drug response",
+      "Likely benign"
+    ],
+    "hasSomatic": false,
+    "hasGermline": true,
+    "gnomadAf": 0.167115,
+    "hasClinvar": true,
+    "hgvsId": "chr10:g.96541616G>A",
+    "variantId": 16897,
+    "uniprot": "P33261",
+    "residue": null,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs4244285"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/16897/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs4244285"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/10-94781859-G-A?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:09:57.061Z"
+  },
+  "claims": [
+    {
+      "text": "The CYP2C19 gene variant rs4244285 is a single nucleotide variant.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.type"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The CYP2C19 gene variant rs4244285 is of germline origin.",
+      "supportingFactIds": [
+        "var.cond.0.origin",
+        "var.cond.1.origin",
+        "var.cond.2.origin"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The CYP2C19 gene variant rs4244285 is associated with drug response to Clopidogrel, Citalopram, and Escitalopram.",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.1.significance",
+        "var.cond.2.significance"
+      ],
+      "claimType": "condition_context"
+    },
+    {
+      "text": "The CYP2C19 gene variant rs4244285 has a high review confidence of 4 of 4 review stars for its classifications.",
+      "supportingFactIds": [
+        "var.cond.0.reviewStars",
+        "var.cond.1.reviewStars",
+        "var.cond.2.reviewStars"
+      ],
+      "claimType": "uncertainty"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "edecbe22b1f9bbbc",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:10:03.939Z",
+    "retrievedAt": "2026-07-27T10:09:57.061Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs4244285"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/16897/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs4244285"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/10-94781859-G-A?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "kind": "variant",
+  "id": "rs116855232",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs116855232",
+    "gene": "NUDT15",
+    "consequence": "missense variant",
+    "proteinChange": "p.Arg139Cys",
+    "alleleCount": 1,
+    "otherAlleles": [],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NM_018283.4(NUDT15):c.415C>T (p.Arg139Cys)",
+    "chrom": "13",
+    "position": 48045719,
+    "refAlt": "C>T",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "azathioprine response - Toxicity",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "reviewed by expert panel",
+        "reviewStars": 3,
+        "origin": "germline",
+        "lastEvaluated": "2021-03-24"
+      },
+      {
+        "condition": "mercaptopurine response - Dosage",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "reviewed by expert panel",
+        "reviewStars": 3,
+        "origin": "germline",
+        "lastEvaluated": "2021-03-24"
+      },
+      {
+        "condition": "Thiopurines, poor metabolism of, 2 (THPM2)",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2016-10-25"
+      },
+      {
+        "condition": "NUDT15-related disorder",
+        "significance": "Likely benign",
+        "rawSignificance": "Likely benign",
+        "significanceRank": 7,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2021-07-22"
+      }
+    ],
+    "distinctSignificances": [
+      "Drug response",
+      "Likely benign"
+    ],
+    "hasSomatic": false,
+    "hasGermline": true,
+    "gnomadAf": 0.0109929,
+    "hasClinvar": true,
+    "hgvsId": "chr13:g.48619855C>T",
+    "variantId": 225201,
+    "uniprot": "Q9NV35",
+    "residue": 139,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs116855232"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/225201/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs116855232"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/13-48045719-C-T?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:11:32.457Z"
+  },
+  "claims": [
+    {
+      "text": "The NUDT15 gene variant rs116855232 is a missense variant with a p.Arg139Cys protein change.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.consequence",
+        "var.protein"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The rs116855232 variant in the NUDT15 gene is associated with a drug response to azathioprine, with a germline origin and 3 of 4 review stars.",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.0.origin",
+        "var.cond.0.reviewStars"
+      ],
+      "claimType": "condition_context"
+    },
+    {
+      "text": "The rs116855232 variant in the NUDT15 gene is associated with a drug response to mercaptopurine, with a germline origin and 3 of 4 review stars.",
+      "supportingFactIds": [
+        "var.cond.1.significance",
+        "var.cond.1.origin",
+        "var.cond.1.reviewStars"
+      ],
+      "claimType": "condition_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "65a09603bc5cbb30",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:11:36.768Z",
+    "retrievedAt": "2026-07-27T10:11:32.457Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs116855232"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/225201/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs116855232"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/13-48045719-C-T?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

@@ -15,6 +15,7 @@ const plexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://genclarus.com"),
   title: "Genclarus — AI Gene & Variant Explainer",
   description:
     "Look up a human gene or a genetic variant (rsID) and get a clear, cited, plain-language explanation grounded in real biology. Educational, not medical advice.",

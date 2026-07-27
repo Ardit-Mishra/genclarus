@@ -1,0 +1,70 @@
+{
+  "kind": "gene",
+  "id": "LINC02825",
+  "facts": {
+    "kind": "gene",
+    "symbol": "LINC02825",
+    "name": "long intergenic non-protein coding RNA 2825",
+    "type": "",
+    "summary": "",
+    "aliases": [],
+    "location": "chrHSCHR12_4_CTG2_1:179,637–184,319 (−)",
+    "uniprot": null,
+    "sources": [
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000276226"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=LINC02825"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:06:36.845Z"
+  },
+  "claims": [
+    {
+      "text": "LINC02825 is a long intergenic non-protein coding RNA.",
+      "supportingFactIds": [
+        "gene.symbol",
+        "gene.name"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "LINC02825 is located on chromosome 12 in the human genome.",
+      "supportingFactIds": [
+        "gene.location"
+      ],
+      "claimType": "function"
+    },
+    {
+      "text": "The name of the gene LINC02825 is long intergenic non-protein coding RNA 2825.",
+      "supportingFactIds": [
+        "gene.name"
+      ],
+      "claimType": "identity"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "101339686b76a51c",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:06:41.662Z",
+    "retrievedAt": "2026-07-27T10:06:36.845Z",
+    "sources": [
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000276226"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=LINC02825"
+      }
+    ]
+  }
+}

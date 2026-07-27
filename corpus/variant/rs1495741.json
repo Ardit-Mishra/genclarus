@@ -1,0 +1,89 @@
+{
+  "kind": "variant",
+  "id": "rs1495741",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs1495741",
+    "gene": "NAT2-PSD3",
+    "consequence": "",
+    "proteinChange": "",
+    "alleleCount": 1,
+    "otherAlleles": [],
+    "variantType": "snv",
+    "preferredName": null,
+    "chrom": "8",
+    "position": 18272881,
+    "refAlt": "G>A",
+    "assembly": "GRCh37",
+    "conditionClassifications": [],
+    "distinctSignificances": [],
+    "hasSomatic": false,
+    "hasGermline": false,
+    "gnomadAf": 0.708006,
+    "hasClinvar": false,
+    "hgvsId": "chr8:g.18272881G>A",
+    "variantId": null,
+    "uniprot": null,
+    "residue": null,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs1495741"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1495741"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:18:24.020Z"
+  },
+  "claims": [
+    {
+      "text": "The NAT2-PSD3 gene variant is a single nucleotide variant.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.type"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The NAT2-PSD3 gene variant is a single nucleotide variant with a high frequency in the general population.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.type",
+        "var.gnomadAf"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The NAT2-PSD3 gene variant has a frequency of 71% in the general population.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.type",
+        "var.gnomadAf"
+      ],
+      "claimType": "frequency_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "4f1ec51fb2564dd4",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:18:26.852Z",
+    "retrievedAt": "2026-07-27T10:18:24.020Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs1495741"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1495741"
+      }
+    ]
+  }
+}

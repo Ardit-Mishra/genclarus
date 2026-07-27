@@ -1,0 +1,102 @@
+{
+  "kind": "gene",
+  "id": "APC",
+  "facts": {
+    "kind": "gene",
+    "symbol": "APC",
+    "name": "APC regulator of Wnt signaling pathway",
+    "type": "protein-coding",
+    "summary": "This gene encodes a tumor suppressor protein that acts as an antagonist of the Wnt signaling pathway. It is also involved in other processes including cell migration and adhesion, transcriptional activation, and apoptosis. Defects in this gene cause familial adenomatous polyposis (FAP), an autosomal dominant pre-malignant disease that usually progresses to malignancy. Mutations in the APC gene have been found to occur in most colorectal cancers, where disease-associated mutations tend to be clustered in a small region designated the mutation cluster region (MCR) and result in a truncated protein product. [provided by RefSeq, Jun 2022].",
+    "aliases": [
+      "BTPS2",
+      "DESMD",
+      "DP2",
+      "DP2.5",
+      "DP3",
+      "GS",
+      "PPP1R46"
+    ],
+    "location": "chr5:112,707,452–112,846,239 (+)",
+    "uniprot": "P25054",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/324"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000134982"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P25054"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/611731"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=APC"
+      }
+    ],
+    "retrievedAt": "2026-07-27T09:44:27.029Z"
+  },
+  "claims": [
+    {
+      "text": "The APC gene encodes a tumor suppressor protein.",
+      "supportingFactIds": [
+        "gene.symbol",
+        "gene.summary"
+      ],
+      "claimType": "function"
+    },
+    {
+      "text": "Mutations in the APC gene can cause familial adenomatous polyposis (FAP).",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The APC gene is located on the plus strand of chromosome 5 at position 112,707,452–112,846,239.",
+      "supportingFactIds": [
+        "gene.location"
+      ],
+      "claimType": "identity"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "e6a731415aab670d",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T09:44:29.861Z",
+    "retrievedAt": "2026-07-27T09:44:27.029Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/324"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000134982"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P25054"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/611731"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=APC"
+      }
+    ]
+  }
+}

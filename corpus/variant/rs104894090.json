@@ -1,0 +1,133 @@
+{
+  "kind": "variant",
+  "id": "rs104894090",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs104894090",
+    "gene": "STAR",
+    "consequence": "missense variant",
+    "proteinChange": "p.Arg188Cys",
+    "alleleCount": 1,
+    "otherAlleles": [],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NM_000349.3(STAR):c.562C>T (p.Arg188Cys)",
+    "chrom": "8",
+    "position": 38146051,
+    "refAlt": "G>A",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "Congenital lipoid adrenal hyperplasia due to STAR deficency",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2024-04-25"
+      },
+      {
+        "condition": "not provided",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "unknown",
+        "lastEvaluated": "2024-07-10"
+      }
+    ],
+    "distinctSignificances": [
+      "Pathogenic"
+    ],
+    "hasSomatic": false,
+    "hasGermline": true,
+    "gnomadAf": null,
+    "hasClinvar": true,
+    "hgvsId": "chr8:g.38003569G>A",
+    "variantId": 8997,
+    "uniprot": "P49675",
+    "residue": 188,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs104894090"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/8997/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs104894090"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/8-38146051-G-A?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:14:27.898Z"
+  },
+  "claims": [
+    {
+      "text": "The STAR gene variant rs104894090 is a missense variant leading to the protein change p.Arg188Cys.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.consequence",
+        "var.protein"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The STAR gene variant rs104894090 is classified as Pathogenic for Congenital lipoid adrenal hyperplasia due to STAR deficiency.",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.0.origin"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The STAR gene variant rs104894090 has a review confidence of 2 of 4 review stars for Congenital lipoid adrenal hyperplasia due to STAR deficiency.",
+      "supportingFactIds": [
+        "var.cond.0.reviewStars"
+      ],
+      "claimType": "uncertainty"
+    },
+    {
+      "text": "The STAR gene variant rs104894090 is classified as Pathogenic for at least one condition.",
+      "supportingFactIds": [
+        "var.cond.1.significance"
+      ],
+      "claimType": "classification_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "4c37fd2352ff037b",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:14:31.758Z",
+    "retrievedAt": "2026-07-27T10:14:27.898Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs104894090"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/8997/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs104894090"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/8-38146051-G-A?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

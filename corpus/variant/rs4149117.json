@@ -1,0 +1,147 @@
+{
+  "kind": "variant",
+  "id": "rs4149117",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs4149117",
+    "gene": "SLCO1B3-SLCO1B7",
+    "consequence": "missense variant",
+    "proteinChange": "p.Ser84Ala",
+    "alleleCount": 1,
+    "otherAlleles": [],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NM_019844.4(SLCO1B3):c.334T>G (p.Ser112Ala)",
+    "chrom": "12",
+    "position": 20858546,
+    "refAlt": "T>G",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "Rotor syndrome (HBLRR)",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2024-11-29"
+      },
+      {
+        "condition": "SLCO1B3-related disorder",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2021-12-29"
+      },
+      {
+        "condition": "not provided",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2018-11-12"
+      }
+    ],
+    "distinctSignificances": [
+      "Benign"
+    ],
+    "hasSomatic": false,
+    "hasGermline": true,
+    "gnomadAf": 0.70446,
+    "hasClinvar": true,
+    "hgvsId": "chr12:g.21011480T>G",
+    "variantId": 261184,
+    "uniprot": null,
+    "residue": 84,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs4149117"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/261184/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs4149117"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/12-20858546-T-G?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:17:32.359Z"
+  },
+  "claims": [
+    {
+      "text": "The SLCO1B3-SLCO1B7 gene variant rs4149117 is a missense variant with a p.Ser84Ala protein change.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.consequence",
+        "var.protein"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The variant rs4149117 is a single nucleotide variant with a frequency of 7% in the general population.",
+      "supportingFactIds": [
+        "var.type",
+        "var.gnomadAf"
+      ],
+      "claimType": "function"
+    },
+    {
+      "text": "The variant rs4149117 is classified as Benign for Rotor syndrome, SLCO1B3-related disorder, and not provided, with varying review confidence.",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.1.significance",
+        "var.cond.2.significance"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The variant rs4149117 has a germline origin for Rotor syndrome, SLCO1B3-related disorder, and not provided.",
+      "supportingFactIds": [
+        "var.cond.0.origin",
+        "var.cond.1.origin",
+        "var.cond.2.origin"
+      ],
+      "claimType": "condition_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "f913d6e255dab0b0",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:17:39.883Z",
+    "retrievedAt": "2026-07-27T10:17:32.359Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs4149117"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/261184/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs4149117"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/12-20858546-T-G?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

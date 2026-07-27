@@ -1,0 +1,77 @@
+{
+  "kind": "variant",
+  "id": "rs10757278",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs10757278",
+    "gene": "CDKN2B-AS1",
+    "consequence": "",
+    "proteinChange": "",
+    "alleleCount": 1,
+    "otherAlleles": [],
+    "variantType": "snv",
+    "preferredName": null,
+    "chrom": "9",
+    "position": 22124477,
+    "refAlt": "A>T",
+    "assembly": "GRCh37",
+    "conditionClassifications": [],
+    "distinctSignificances": [],
+    "hasSomatic": false,
+    "hasGermline": false,
+    "gnomadAf": null,
+    "hasClinvar": false,
+    "hgvsId": "chr9:g.22124477A>T",
+    "variantId": null,
+    "uniprot": null,
+    "residue": null,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs10757278"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs10757278"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:12:05.919Z"
+  },
+  "claims": [
+    {
+      "text": "The variant rs10757278 is located in the CDKN2B-AS1 gene.",
+      "supportingFactIds": [
+        "var.gene"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The variant rs10757278 is a single nucleotide variant.",
+      "supportingFactIds": [
+        "var.type"
+      ],
+      "claimType": "identity"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "19bb235bfff57b62",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:12:08.289Z",
+    "retrievedAt": "2026-07-27T10:12:05.919Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs10757278"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs10757278"
+      }
+    ]
+  }
+}

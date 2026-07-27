@@ -1,0 +1,106 @@
+{
+  "kind": "gene",
+  "id": "HBA1",
+  "facts": {
+    "kind": "gene",
+    "symbol": "HBA1",
+    "name": "hemoglobin subunit alpha 1",
+    "type": "protein-coding",
+    "summary": "The human alpha globin gene cluster located on chromosome 16 spans about 30 kb and includes seven loci: 5'- zeta - pseudozeta - mu - pseudoalpha-1 - alpha-2 - alpha-1 - theta - 3'. The alpha-2 (HBA2) and alpha-1 (HBA1) coding sequences are identical. These genes differ slightly over the 5' untranslated regions and the introns, but they differ significantly over the 3' untranslated regions. Two alpha chains plus two beta chains constitute HbA, which in normal adult life comprises about 97% of the total hemoglobin; alpha chains combine with delta chains to constitute HbA-2, which with HbF (fetal hemoglobin) makes up the remaining 3% of adult hemoglobin. Alpha thalassemias result from deletions of each of the alpha genes as well as deletions of both HBA2 and HBA1; some nondeletion alpha thalassemias have also been reported. [provided by RefSeq, Jul 2008].",
+    "aliases": [
+      "ECYT7",
+      "HBA-T3",
+      "HBH",
+      "METHBA"
+    ],
+    "location": "chr16:176,660–177,527 (+)",
+    "uniprot": "P69905",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/3039"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000206172"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P69905"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/141800"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=HBA1"
+      }
+    ],
+    "retrievedAt": "2026-07-27T09:47:56.390Z"
+  },
+  "claims": [
+    {
+      "text": "The human alpha globin gene cluster includes the HBA1 gene.",
+      "supportingFactIds": [
+        "gene.symbol",
+        "gene.summary"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "HBA1 and HBA2 coding sequences are identical.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "HBA1 is located on chromosome 16 at position chr16:176,660–177,527.",
+      "supportingFactIds": [
+        "gene.location"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "Alpha thalassemias result from deletions of each of the alpha genes, including HBA1.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "condition_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "ed820a5e94aa2bc7",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T09:48:00.141Z",
+    "retrievedAt": "2026-07-27T09:47:56.390Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/3039"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000206172"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P69905"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/141800"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=HBA1"
+      }
+    ]
+  }
+}

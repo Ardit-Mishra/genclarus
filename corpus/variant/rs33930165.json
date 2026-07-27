@@ -1,0 +1,410 @@
+{
+  "kind": "variant",
+  "id": "rs33930165",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs33930165",
+    "gene": "HBB",
+    "consequence": "missense variant",
+    "proteinChange": "p.Glu7Lys",
+    "alleleCount": 3,
+    "otherAlleles": [
+      {
+        "proteinChange": "p.Glu7Ter",
+        "refAlt": "C>A",
+        "variantId": 869230,
+        "significance": "Pathogenic"
+      },
+      {
+        "proteinChange": "p.Glu7Gln",
+        "refAlt": "C>G",
+        "variantId": 15243,
+        "significance": "Uncertain significance"
+      }
+    ],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NM_000518.4(HBB):c.19G>A (p.Glu7Lys)",
+    "chrom": "11",
+    "position": 5227003,
+    "refAlt": "C>T",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "beta Thalassemia (BTHAL)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2019-11-15"
+      },
+      {
+        "condition": "Hb SS disease (SCD)",
+        "significance": "Likely pathogenic",
+        "rawSignificance": "Pathogenic/Likely pathogenic",
+        "significanceRank": 1,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2023-12-11"
+      },
+      {
+        "condition": "Heinz body anemia",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2024-04-04"
+      },
+      {
+        "condition": "Beta-thalassemia HBB/LCRB",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2024-04-04"
+      },
+      {
+        "condition": "Hereditary persistence of fetal hemoglobin",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2024-04-04"
+      },
+      {
+        "condition": "Dominant beta-thalassemia",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2024-04-04"
+      },
+      {
+        "condition": "Hb SS disease (SCD)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2024-04-04"
+      },
+      {
+        "condition": "Malaria, susceptibility to",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2024-04-04"
+      },
+      {
+        "condition": "METHEMOGLOBINEMIA, BETA TYPE",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2024-04-04"
+      },
+      {
+        "condition": "Erythrocytosis, familial, 6",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2024-04-04"
+      },
+      {
+        "condition": "Inherited hemoglobinopathy",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2023-11-10"
+      },
+      {
+        "condition": "Inborn genetic diseases",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2023-10-13"
+      },
+      {
+        "condition": "alpha Thalassemia",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2023-09-11"
+      },
+      {
+        "condition": "Sickle cell-hemoglobin C disease",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2022-09-14"
+      },
+      {
+        "condition": "Dominant beta-thalassemia",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2021-06-30"
+      },
+      {
+        "condition": "Fetal hemoglobin quantitative trait locus 1 (HBFQTL1)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2021-06-30"
+      },
+      {
+        "condition": "Heinz body anemia",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2021-06-30"
+      },
+      {
+        "condition": "Hb SS disease (SCD)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2021-06-30"
+      },
+      {
+        "condition": "alpha Thalassemia",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2021-06-30"
+      },
+      {
+        "condition": "Malaria, susceptibility to",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2021-06-30"
+      },
+      {
+        "condition": "beta Thalassemia (BTHAL)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2021-06-30"
+      },
+      {
+        "condition": "METHEMOGLOBINEMIA, BETA TYPE",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2021-06-30"
+      },
+      {
+        "condition": "Erythrocytosis, familial, 6",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2021-06-30"
+      },
+      {
+        "condition": "HBB-related disorder",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": null
+      },
+      {
+        "condition": "HEMOGLOBIN C",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2011-12-02"
+      },
+      {
+        "condition": "Malaria, resistance to",
+        "significance": "Protective",
+        "rawSignificance": "protective",
+        "significanceRank": 4,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2011-12-02"
+      },
+      {
+        "condition": "HEMOGLOBIN ARLINGTON PARK",
+        "significance": "other",
+        "rawSignificance": "other",
+        "significanceRank": 9,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2017-12-12"
+      },
+      {
+        "condition": "not provided",
+        "significance": "Likely pathogenic",
+        "rawSignificance": "Pathogenic/Likely pathogenic",
+        "significanceRank": 1,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2025-03-04"
+      }
+    ],
+    "distinctSignificances": [
+      "Pathogenic",
+      "Likely pathogenic",
+      "Protective",
+      "other"
+    ],
+    "hasSomatic": false,
+    "hasGermline": true,
+    "gnomadAf": 0.0037886,
+    "hasClinvar": true,
+    "hgvsId": "chr11:g.5248233C>T",
+    "variantId": 15126,
+    "uniprot": "P68871",
+    "residue": 7,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs33930165"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/15126/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs33930165"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/11-5227003-C-T?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:14:41.492Z"
+  },
+  "claims": [
+    {
+      "text": "The HBB gene variant rs33930165 is a missense variant causing the protein change p.Glu7Lys.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.consequence",
+        "var.protein"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "This variant is classified as Pathogenic for beta Thalassemia with moderate review confidence.",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The variant is also classified as Pathogenic for Heinz body anemia with low review confidence.",
+      "supportingFactIds": [
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The variant has a frequency of 0.38% in the general population.",
+      "supportingFactIds": [
+        "var.gnomadAf"
+      ],
+      "claimType": "frequency_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "4266c72ff48dd20e",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:14:48.305Z",
+    "retrievedAt": "2026-07-27T10:14:41.492Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs33930165"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/15126/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs33930165"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/11-5227003-C-T?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

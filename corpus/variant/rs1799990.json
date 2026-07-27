@@ -1,0 +1,267 @@
+{
+  "kind": "variant",
+  "id": "rs1799990",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs1799990",
+    "gene": "PRNP",
+    "consequence": "missense variant",
+    "proteinChange": "p.Met129Val",
+    "alleleCount": 1,
+    "otherAlleles": [],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NM_000311.5(PRNP):c.385A>G (p.Met129Val)",
+    "chrom": "20",
+    "position": 4699605,
+    "refAlt": "A>G",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "Huntington disease-like 1 (HDL1)",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2025-02-04"
+      },
+      {
+        "condition": "Inherited Creutzfeldt-Jakob disease",
+        "significance": "Likely benign",
+        "rawSignificance": "Likely benign",
+        "significanceRank": 7,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2019-01-01"
+      },
+      {
+        "condition": "Inherited Creutzfeldt-Jakob disease",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2021-07-22"
+      },
+      {
+        "condition": "Gerstmann-Straussler-Scheinker syndrome (GSD)",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2021-07-22"
+      },
+      {
+        "condition": "Fatal familial insomnia (FFI)",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2021-07-22"
+      },
+      {
+        "condition": "Huntington disease-like 1 (HDL1)",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2021-07-22"
+      },
+      {
+        "condition": "Kuru, susceptibility to",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2021-07-22"
+      },
+      {
+        "condition": "Spongiform encephalopathy with neuropsychiatric features",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "unknown",
+        "lastEvaluated": "2021-07-22"
+      },
+      {
+        "condition": "Inherited prion disease",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2017-04-27"
+      },
+      {
+        "condition": "Fatal familial insomnia (FFI)",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": null
+      },
+      {
+        "condition": "Inherited Creutzfeldt-Jakob disease",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2008-11-26"
+      },
+      {
+        "condition": "Fatal familial insomnia (FFI)",
+        "significance": "Pathogenic",
+        "rawSignificance": "Pathogenic",
+        "significanceRank": 0,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2008-11-26"
+      },
+      {
+        "condition": "Autism spectrum disorder",
+        "significance": "Uncertain significance",
+        "rawSignificance": "Uncertain significance",
+        "significanceRank": 6,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "unknown",
+        "lastEvaluated": "2023-07-28"
+      },
+      {
+        "condition": "not provided",
+        "significance": "Likely benign",
+        "rawSignificance": "Benign/Likely benign",
+        "significanceRank": 7,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2024-11-26"
+      },
+      {
+        "condition": "not specified",
+        "significance": "Likely benign",
+        "rawSignificance": "Benign/Likely benign",
+        "significanceRank": 7,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": null
+      }
+    ],
+    "distinctSignificances": [
+      "Pathogenic",
+      "Uncertain significance",
+      "Likely benign",
+      "Benign"
+    ],
+    "hasSomatic": false,
+    "hasGermline": true,
+    "gnomadAf": 0.315395,
+    "hasClinvar": true,
+    "hgvsId": "chr20:g.4680251A>G",
+    "variantId": 13397,
+    "uniprot": "P04156",
+    "residue": 129,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs1799990"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/13397/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1799990"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/20-4699605-A-G?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:13:23.441Z"
+  },
+  "claims": [
+    {
+      "text": "The PRNP gene variant rs1799990 is a missense variant leading to the p.Met129Val protein change.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.consequence",
+        "var.protein"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The frequency of the PRNP gene variant rs1799990 in the general population is approximately 32%.",
+      "supportingFactIds": [
+        "var.gnomadAf"
+      ],
+      "claimType": "frequency_context"
+    },
+    {
+      "text": "The PRNP gene variant rs1799990 is classified as Benign for Huntington disease-like 1 (HDL1) with a review confidence of 2 of 4 stars.",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The PRNP gene variant rs1799990 is classified as Likely benign for Inherited Creutzfeldt-Jakob disease with a review confidence of 1 of 4 stars.",
+      "supportingFactIds": [
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars"
+      ],
+      "claimType": "classification_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "65558c022c46e3c5",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:13:26.790Z",
+    "retrievedAt": "2026-07-27T10:13:23.441Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs1799990"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/13397/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1799990"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/20-4699605-A-G?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

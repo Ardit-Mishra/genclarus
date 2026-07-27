@@ -1,0 +1,93 @@
+{
+  "kind": "gene",
+  "id": "MALAT1",
+  "facts": {
+    "kind": "gene",
+    "symbol": "MALAT1",
+    "name": "metastasis associated lung adenocarcinoma transcript 1",
+    "type": "ncRNA",
+    "summary": "This gene produces a precursor transcript from which a long non-coding RNA is derived by RNase P cleavage of a tRNA-like small ncRNA (known as mascRNA) from its 3' end. The resultant mature transcript lacks a canonical poly(A) tail but is instead stabilized by a 3' triple helical structure. This transcript is retained in the nucleus where it is thought to form molecular scaffolds for ribonucleoprotein complexes. It may act as a transcriptional regulator for numerous genes, including some genes involved in cancer metastasis and cell migration, and it is involved in cell cycle regulation. Its upregulation in multiple cancerous tissues has been associated with the proliferation and metastasis of tumor cells. [provided by RefSeq, Mar 2015].",
+    "aliases": [
+      "HCN",
+      "LINC00047",
+      "NCRNA00047",
+      "NEAT2",
+      "PRO2853",
+      "miPEP-52"
+    ],
+    "location": "chr11:65,497,606–65,508,073 (+)",
+    "uniprot": null,
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/378938"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000251562"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/607924"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=MALAT1"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:06:26.028Z"
+  },
+  "claims": [
+    {
+      "text": "The MALAT1 gene produces a precursor transcript that is stabilized by a 3' triple helical structure.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "function"
+    },
+    {
+      "text": "The MALAT1 gene is a long non-coding RNA located on chromosome 11.",
+      "supportingFactIds": [
+        "gene.type",
+        "gene.location"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The MALAT1 gene is involved in cell cycle regulation and the proliferation of tumor cells.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "function"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "f69f5885a5dd2f22",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:06:30.056Z",
+    "retrievedAt": "2026-07-27T10:06:26.028Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/378938"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000251562"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/607924"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=MALAT1"
+      }
+    ]
+  }
+}

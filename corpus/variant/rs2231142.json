@@ -1,0 +1,170 @@
+{
+  "kind": "variant",
+  "id": "rs2231142",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs2231142",
+    "gene": "ABCG2",
+    "consequence": "missense variant",
+    "proteinChange": "p.Gln141Lys",
+    "alleleCount": 1,
+    "otherAlleles": [],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NM_004827.3(ABCG2):c.421C>A (p.Gln141Lys)",
+    "chrom": "4",
+    "position": 88131171,
+    "refAlt": "G>T",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "rosuvastatin response - Efficacy",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "reviewed by expert panel",
+        "reviewStars": 3,
+        "origin": "germline",
+        "lastEvaluated": "2021-03-24"
+      },
+      {
+        "condition": "rosuvastatin response - Metabolism/PK",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "reviewed by expert panel",
+        "reviewStars": 3,
+        "origin": "germline",
+        "lastEvaluated": "2021-03-24"
+      },
+      {
+        "condition": "Gemcitabine response",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2017-01-01"
+      },
+      {
+        "condition": "ABCG2-related disorder",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2019-11-18"
+      },
+      {
+        "condition": "BLOOD GROUP, JUNIOR SYSTEM (JR)",
+        "significance": "association",
+        "rawSignificance": "association",
+        "significanceRank": 9,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2013-03-18"
+      },
+      {
+        "condition": "Uric acid concentration, serum, quantitative trait locus 1 (UAQTL1)",
+        "significance": "association",
+        "rawSignificance": "association",
+        "significanceRank": 9,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2009-11-04"
+      }
+    ],
+    "distinctSignificances": [
+      "Drug response",
+      "Benign",
+      "association"
+    ],
+    "hasSomatic": false,
+    "hasGermline": true,
+    "gnomadAf": 0.0938376,
+    "hasClinvar": true,
+    "hgvsId": "chr4:g.89052323G>T",
+    "variantId": 30389,
+    "uniprot": "Q9UNQ0",
+    "residue": 141,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs2231142"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/30389/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs2231142"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/4-88131171-G-T?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:11:46.825Z"
+  },
+  "claims": [
+    {
+      "text": "The ABCG2 gene variant rs2231142 is a missense variant leading to a p.Gln141Lys protein change.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.consequence",
+        "var.protein"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The ABCG2 gene variant rs2231142 is a single nucleotide variant with a frequency of 9.4% in the gnomAD population.",
+      "supportingFactIds": [
+        "var.type",
+        "var.gnomadAf"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The ABCG2 gene variant rs2231142 is associated with a drug response to rosuvastatin, with a germline origin and 3 of 4 review stars.",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin"
+      ],
+      "claimType": "condition_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "e8fe1c9d0d48caee",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:11:51.432Z",
+    "retrievedAt": "2026-07-27T10:11:46.825Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs2231142"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/30389/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs2231142"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/4-88131171-G-T?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

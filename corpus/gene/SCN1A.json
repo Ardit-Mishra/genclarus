@@ -1,0 +1,110 @@
+{
+  "kind": "gene",
+  "id": "SCN1A",
+  "facts": {
+    "kind": "gene",
+    "symbol": "SCN1A",
+    "name": "sodium voltage-gated channel alpha subunit 1",
+    "type": "protein-coding",
+    "summary": "Voltage-dependent sodium channels are heteromeric complexes that regulate sodium exchange between intracellular and extracellular spaces and are essential for the generation and propagation of action potentials in muscle cells and neurons. Each sodium channel is composed of a large pore-forming, glycosylated alpha subunit and two smaller beta subunits. This gene encodes a sodium channel alpha subunit, which has four homologous domains, each of which contains six transmembrane regions. Allelic variants of this gene are associated with generalized epilepsy with febrile seizures and epileptic encephalopathy. Alternative splicing results in multiple transcript variants. The RefSeq Project has decided to create four representative RefSeq records. Three of the transcript variants are supported by experimental evidence and the fourth contains alternate 5' untranslated exons, the exact combination of which have not been experimentally confirmed for the full-length transcript. [provided by RefSeq, Oct 2015].",
+    "aliases": [
+      "DEE6",
+      "DEE6A",
+      "DEE6B",
+      "DRVT",
+      "EIEE6",
+      "FEB3",
+      "FEB3A",
+      "FHM3"
+    ],
+    "location": "chr2:165,984,641–166,182,806 (−)",
+    "uniprot": "P35498",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/6323"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000144285"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P35498"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/182389"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=SCN1A"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:26:01.206Z"
+  },
+  "claims": [
+    {
+      "text": "SCN1A is a protein-coding gene.",
+      "supportingFactIds": [
+        "gene.symbol",
+        "gene.type"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "SCN1A encodes a sodium channel alpha subunit.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "function"
+    },
+    {
+      "text": "SCN1A is associated with generalized epilepsy with febrile seizures and epileptic encephalopathy.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "SCN1A has multiple transcript variants.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "frequency_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "41c11237debffc95",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:26:04.727Z",
+    "retrievedAt": "2026-07-27T10:26:01.206Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/6323"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000144285"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P35498"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/182389"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=SCN1A"
+      }
+    ]
+  }
+}

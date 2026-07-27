@@ -1,0 +1,102 @@
+{
+  "kind": "gene",
+  "id": "MTHFR",
+  "facts": {
+    "kind": "gene",
+    "symbol": "MTHFR",
+    "name": "methylenetetrahydrofolate reductase",
+    "type": "protein-coding",
+    "summary": "The protein encoded by this gene catalyzes the conversion of 5,10-methylenetetrahydrofolate to 5-methyltetrahydrofolate, a co-substrate for homocysteine remethylation to methionine. Genetic variation in this gene influences susceptibility to occlusive vascular disease, neural tube defects, colon cancer and acute leukemia, and mutations in this gene are associated with methylenetetrahydrofolate reductase deficiency.[provided by RefSeq, Oct 2009].",
+    "aliases": [],
+    "location": "chr1:11,785,723–11,806,455 (−)",
+    "uniprot": "P42898",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/4524"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000177000"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P42898"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/607093"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=MTHFR"
+      }
+    ],
+    "retrievedAt": "2026-07-27T09:48:15.232Z"
+  },
+  "claims": [
+    {
+      "text": "The MTHFR gene encodes a protein that catalyzes the conversion of 5,10-methylenetetrahydrofolate to 5-methyltetrahydrofolate.",
+      "supportingFactIds": [
+        "gene.symbol",
+        "gene.summary"
+      ],
+      "claimType": "function"
+    },
+    {
+      "text": "The MTHFR gene is a protein-coding gene located on chromosome 1.",
+      "supportingFactIds": [
+        "gene.type",
+        "gene.location"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The MTHFR gene is associated with susceptibility to occlusive vascular disease, neural tube defects, colon cancer, and acute leukemia.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "condition_context"
+    },
+    {
+      "text": "The classification of MTHFR gene variants varies, with some associated with methylenetetrahydrofolate reductase deficiency.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "uncertainty"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "f96fb2c320286325",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T09:48:18.924Z",
+    "retrievedAt": "2026-07-27T09:48:15.232Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/4524"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000177000"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P42898"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/607093"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=MTHFR"
+      }
+    ]
+  }
+}

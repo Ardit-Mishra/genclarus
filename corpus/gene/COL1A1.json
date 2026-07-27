@@ -1,0 +1,109 @@
+{
+  "kind": "gene",
+  "id": "COL1A1",
+  "facts": {
+    "kind": "gene",
+    "symbol": "COL1A1",
+    "name": "collagen type I alpha 1 chain",
+    "type": "protein-coding",
+    "summary": "This gene encodes the pro-alpha1 chains of type I collagen whose triple helix comprises two alpha1 chains and one alpha2 chain. Type I is a fibril-forming collagen found in most connective tissues and is abundant in bone, cornea, dermis and tendon. Mutations in this gene are associated with osteogenesis imperfecta types I-IV, Ehlers-Danlos syndrome type VIIA, Ehlers-Danlos syndrome Classical type, Caffey Disease and idiopathic osteoporosis. Reciprocal translocations between chromosomes 17 and 22, where this gene and the gene for platelet-derived growth factor beta are located, are associated with a particular type of skin tumor called dermatofibrosarcoma protuberans, resulting from unregulated expression of the growth factor. Two transcripts, resulting from the use of alternate polyadenylation signals, have been identified for this gene. [provided by R. Dalgleish, Feb 2008].",
+    "aliases": [
+      "CAFYD",
+      "EDSARTH1",
+      "EDSC",
+      "OI1",
+      "OI2",
+      "OI3",
+      "OI4"
+    ],
+    "location": "chr17:50,184,101–50,201,704 (−)",
+    "uniprot": "P02452",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/1277"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000108821"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P02452"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/120150"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=COL1A1"
+      }
+    ],
+    "retrievedAt": "2026-07-27T09:48:44.358Z"
+  },
+  "claims": [
+    {
+      "text": "The COL1A1 gene encodes the pro-alpha1 chains of type I collagen.",
+      "supportingFactIds": [
+        "gene.symbol",
+        "gene.summary"
+      ],
+      "claimType": "function"
+    },
+    {
+      "text": "Mutations in the COL1A1 gene are associated with osteogenesis imperfecta types I-IV, Ehlers-Danlos syndrome type VIIA, Ehlers-Danlos syndrome Classical type, Caffey Disease and idiopathic osteoporosis.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The COL1A1 gene is located on chromosome 17.",
+      "supportingFactIds": [
+        "gene.location"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "Two transcripts have been identified for the COL1A1 gene.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "identity"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "3b87f8e0b07bc5dc",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T09:48:47.437Z",
+    "retrievedAt": "2026-07-27T09:48:44.358Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/1277"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000108821"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P02452"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/120150"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=COL1A1"
+      }
+    ]
+  }
+}

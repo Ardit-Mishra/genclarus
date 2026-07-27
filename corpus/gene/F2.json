@@ -1,0 +1,105 @@
+{
+  "kind": "gene",
+  "id": "F2",
+  "facts": {
+    "kind": "gene",
+    "symbol": "F2",
+    "name": "coagulation factor II, thrombin",
+    "type": "protein-coding",
+    "summary": "This gene encodes the prothrombin protein (also known as coagulation factor II). This protein is proteolytically cleaved in multiple steps to form the activated serine protease thrombin. The activated thrombin enzyme plays an important role in thrombosis and hemostasis by converting fibrinogen to fibrin during blood clot formation, by stimulating platelet aggregation, and by activating additional coagulation factors. Thrombin also plays a role in cell proliferation, tissue repair, and angiogenesis as well as maintaining vascular integrity during development and postnatal life. Peptides derived from the C-terminus of this protein have antimicrobial activity against E. coli and P. aeruginosa. Mutations in this gene lead to various forms of thrombosis and dysprothrombinemia. Rapid increases in cytokine levels following coronavirus infections can dysregulate the coagulation cascade and produce thrombosis, compromised blood supply, and organ failure. [provided by RefSeq, May 2020].",
+    "aliases": [
+      "PT",
+      "RPRGL2",
+      "THPH1"
+    ],
+    "location": "chr11:46,719,079–46,768,566 (+)",
+    "uniprot": "P00734",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/2147"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000180210"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P00734"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/176930"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=F2"
+      }
+    ],
+    "retrievedAt": "2026-07-27T09:48:03.352Z"
+  },
+  "claims": [
+    {
+      "text": "The gene F2 encodes the prothrombin protein, also known as coagulation factor II.",
+      "supportingFactIds": [
+        "gene.symbol",
+        "gene.summary"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "Thrombin, encoded by F2, plays a role in thrombosis and hemostasis by converting fibrinogen to fibrin during blood clot formation.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "function"
+    },
+    {
+      "text": "Mutations in the F2 gene lead to various forms of thrombosis and dysprothrombinemia.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The classification of F2 varies, with some mutations leading to thrombosis and others to dysprothrombinemia.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "uncertainty"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "2e67dce1c5421afc",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T09:48:07.098Z",
+    "retrievedAt": "2026-07-27T09:48:03.352Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/2147"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000180210"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P00734"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/176930"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=F2"
+      }
+    ]
+  }
+}

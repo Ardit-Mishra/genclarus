@@ -1,0 +1,101 @@
+{
+  "kind": "gene",
+  "id": "BRAF",
+  "facts": {
+    "kind": "gene",
+    "symbol": "BRAF",
+    "name": "B-Raf proto-oncogene, serine/threonine kinase",
+    "type": "protein-coding",
+    "summary": "This gene encodes a protein belonging to the RAF family of serine/threonine protein kinases. This protein plays a role in regulating the MAP kinase/ERK signaling pathway, which affects cell division, differentiation, and secretion. Mutations in this gene, most commonly the V600E mutation, are the most frequently identified cancer-causing mutations in melanoma, and have been identified in various other cancers as well, including non-Hodgkin lymphoma, colorectal cancer, thyroid carcinoma, non-small cell lung carcinoma, hairy cell leukemia and adenocarcinoma of lung. Mutations in this gene are also associated with cardiofaciocutaneous, Noonan, and Costello syndromes, which exhibit overlapping phenotypes. A pseudogene of this gene has been identified on the X chromosome. [provided by RefSeq, Aug 2017].",
+    "aliases": [
+      "B-RAF1",
+      "B-raf",
+      "BRAF-1",
+      "BRAF1",
+      "NS7",
+      "RAFB1"
+    ],
+    "location": "chr7:140,719,327–140,925,199 (−)",
+    "uniprot": "P15056",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/673"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000157764"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P15056"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/164757"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=BRAF"
+      }
+    ],
+    "retrievedAt": "2026-07-27T09:46:54.143Z"
+  },
+  "claims": [
+    {
+      "text": "The BRAF gene encodes a protein belonging to the RAF family of serine/threonine protein kinases.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "function"
+    },
+    {
+      "text": "Mutations in the BRAF gene are associated with cardiofaciocutaneous, Noonan, and Costello syndromes.",
+      "supportingFactIds": [
+        "gene.summary"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The BRAF gene is a protein-coding gene located on chromosome 7.",
+      "supportingFactIds": [
+        "gene.type",
+        "gene.location"
+      ],
+      "claimType": "identity"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "c5b0ca88acc66175",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T09:46:56.937Z",
+    "retrievedAt": "2026-07-27T09:46:54.143Z",
+    "sources": [
+      {
+        "label": "NCBI Gene",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/673"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000157764"
+      },
+      {
+        "label": "UniProt",
+        "url": "https://www.uniprot.org/uniprotkb/P15056"
+      },
+      {
+        "label": "OMIM",
+        "url": "https://www.omim.org/entry/164757"
+      },
+      {
+        "label": "GeneCards",
+        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=BRAF"
+      }
+    ]
+  }
+}

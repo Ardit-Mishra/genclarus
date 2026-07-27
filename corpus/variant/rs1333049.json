@@ -1,0 +1,113 @@
+{
+  "kind": "variant",
+  "id": "rs1333049",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs1333049",
+    "gene": "CDKN2B-AS1",
+    "consequence": "",
+    "proteinChange": "",
+    "alleleCount": 1,
+    "otherAlleles": [],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NC_000009.12:g.22125504G>C",
+    "chrom": "9",
+    "position": 22125504,
+    "refAlt": "G>C",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "Three Vessel Coronary Disease",
+        "significance": "Risk factor",
+        "rawSignificance": "risk factor",
+        "significanceRank": 3,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "somatic",
+        "lastEvaluated": null
+      }
+    ],
+    "distinctSignificances": [
+      "Risk factor"
+    ],
+    "hasSomatic": true,
+    "hasGermline": false,
+    "gnomadAf": 0.411825,
+    "hasClinvar": true,
+    "hgvsId": "chr9:g.22125503G>C",
+    "variantId": 812642,
+    "uniprot": null,
+    "residue": null,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs1333049"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/812642/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1333049"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/9-22125504-G-C?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:12:08.864Z"
+  },
+  "claims": [
+    {
+      "text": "The CDKN2B-AS1 gene variant rs1333049 is a single nucleotide variant.",
+      "supportingFactIds": [
+        "var.type"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "The CDKN2B-AS1 gene variant rs1333049 has a low review confidence for its association with Three Vessel Coronary Disease.",
+      "supportingFactIds": [
+        "var.cond.0.reviewStars"
+      ],
+      "claimType": "uncertainty"
+    },
+    {
+      "text": "The CDKN2B-AS1 gene variant rs1333049 has a frequency of 41% in the general population.",
+      "supportingFactIds": [
+        "var.gnomadAf"
+      ],
+      "claimType": "frequency_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "d5f4e3bbdbebc98d",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:12:12.371Z",
+    "retrievedAt": "2026-07-27T10:12:08.864Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs1333049"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/812642/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1333049"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/9-22125504-G-C?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

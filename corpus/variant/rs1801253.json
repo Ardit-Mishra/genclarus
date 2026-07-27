@@ -1,0 +1,143 @@
+{
+  "kind": "variant",
+  "id": "rs1801253",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs1801253",
+    "gene": "ADRB1",
+    "consequence": "missense variant",
+    "proteinChange": "p.Gly389Arg",
+    "alleleCount": 1,
+    "otherAlleles": [],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NM_000684.3(ADRB1):c.1165G>C (p.Gly389Arg)",
+    "chrom": "10",
+    "position": 114045297,
+    "refAlt": "G>C",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "ADRB1-related disorder",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2019-10-17"
+      },
+      {
+        "condition": "Pulmonary disease, chronic obstructive, susceptibility to",
+        "significance": "association",
+        "rawSignificance": "association",
+        "significanceRank": 9,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2022-07-05"
+      },
+      {
+        "condition": "not provided",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2007-04-01"
+      }
+    ],
+    "distinctSignificances": [
+      "Benign",
+      "association"
+    ],
+    "hasSomatic": false,
+    "hasGermline": true,
+    "gnomadAf": 0.698314,
+    "hasClinvar": true,
+    "hgvsId": "chr10:g.115805056G>C",
+    "variantId": 17746,
+    "uniprot": "P08588",
+    "residue": 389,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs1801253"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/17746/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1801253"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/10-114045297-G-C?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:14:50.041Z"
+  },
+  "claims": [
+    {
+      "text": "The ADRB1 gene variant rs1801253 is a missense variant causing a p.Gly389Arg protein change.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.consequence",
+        "var.protein"
+      ],
+      "claimType": "function"
+    },
+    {
+      "text": "The ADRB1 gene variant rs1801253 has a Benign classification for ADRB1-related disorder.",
+      "supportingFactIds": [
+        "var.cond.0.significance"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The ADRB1 gene variant rs1801253 has an association classification for Pulmonary disease, chronic obstructive, susceptibility to.",
+      "supportingFactIds": [
+        "var.cond.1.significance"
+      ],
+      "claimType": "condition_context"
+    },
+    {
+      "text": "The ADRB1 gene variant rs1801253 has a Benign classification for an unspecified condition.",
+      "supportingFactIds": [
+        "var.cond.2.significance"
+      ],
+      "claimType": "condition_context"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "f7260d00f8cd25da",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:14:54.179Z",
+    "retrievedAt": "2026-07-27T10:14:50.041Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs1801253"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/17746/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1801253"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/10-114045297-G-C?dataset=gnomad_r4"
+      }
+    ]
+  }
+}

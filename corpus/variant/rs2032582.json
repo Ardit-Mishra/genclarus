@@ -1,0 +1,158 @@
+{
+  "kind": "variant",
+  "id": "rs2032582",
+  "facts": {
+    "kind": "variant",
+    "rsid": "rs2032582",
+    "gene": "ABCB1",
+    "consequence": "missense variant",
+    "proteinChange": "p.Ser893Ala",
+    "alleleCount": 2,
+    "otherAlleles": [
+      {
+        "proteinChange": "p.Ser893Thr",
+        "refAlt": "A>T",
+        "variantId": 166619,
+        "significance": "Likely benign"
+      }
+    ],
+    "variantType": "single nucleotide variant",
+    "preferredName": "NM_001348946.2(ABCB1):c.2677T>G (p.Ser893Ala)",
+    "chrom": "7",
+    "position": 87531302,
+    "refAlt": "A>C",
+    "assembly": "GRCh38",
+    "conditionClassifications": [
+      {
+        "condition": "Inflammatory bowel disease 13 (IBD13)",
+        "significance": "Risk factor",
+        "rawSignificance": "risk factor",
+        "significanceRank": 3,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2003-12-01"
+      },
+      {
+        "condition": "Tramadol response",
+        "significance": "Drug response",
+        "rawSignificance": "drug response",
+        "significanceRank": 4,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "somatic",
+        "lastEvaluated": "2018-04-28"
+      },
+      {
+        "condition": "ABCB1-related disorder",
+        "significance": "Likely benign",
+        "rawSignificance": "Likely benign",
+        "significanceRank": 7,
+        "reviewStatus": "no assertion criteria provided",
+        "reviewStars": 0,
+        "origin": "germline",
+        "lastEvaluated": "2021-07-21"
+      },
+      {
+        "condition": "not provided",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, multiple submitters, no conflicts",
+        "reviewStars": 2,
+        "origin": "germline",
+        "lastEvaluated": "2018-03-13"
+      },
+      {
+        "condition": "not specified",
+        "significance": "Benign",
+        "rawSignificance": "Benign",
+        "significanceRank": 8,
+        "reviewStatus": "criteria provided, single submitter",
+        "reviewStars": 1,
+        "origin": "germline",
+        "lastEvaluated": "2014-01-27"
+      }
+    ],
+    "distinctSignificances": [
+      "Risk factor",
+      "Drug response",
+      "Likely benign",
+      "Benign"
+    ],
+    "hasSomatic": true,
+    "hasGermline": true,
+    "gnomadAf": 0.63661,
+    "hasClinvar": true,
+    "hgvsId": "chr7:g.87160618A>C",
+    "variantId": 166622,
+    "uniprot": "P08183",
+    "residue": 893,
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs2032582"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/166622/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs2032582"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/7-87531302-A-C?dataset=gnomad_r4"
+      }
+    ],
+    "retrievedAt": "2026-07-27T10:16:48.598Z"
+  },
+  "claims": [
+    {
+      "text": "The ABCB1 gene variant rs2032582 is a missense variant with a protein change of p.Ser893Ala.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.consequence",
+        "var.protein"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "This variant is a single nucleotide variant.",
+      "supportingFactIds": [
+        "var.type"
+      ],
+      "claimType": "identity"
+    }
+  ],
+  "aiAvailable": true,
+  "fallbackReason": null,
+  "provenance": {
+    "factsHash": "7e5f90b7bc9b2021",
+    "promptVersion": "2.0.0",
+    "modelId": "meta/llama-3.1-8b-instruct",
+    "schemaVersion": "2.0.0",
+    "corpusSchemaVersion": "1.0.0",
+    "generatedAt": "2026-07-27T10:16:52.035Z",
+    "retrievedAt": "2026-07-27T10:16:48.598Z",
+    "sources": [
+      {
+        "label": "dbSNP",
+        "url": "https://www.ncbi.nlm.nih.gov/snp/rs2032582"
+      },
+      {
+        "label": "ClinVar",
+        "url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/166622/"
+      },
+      {
+        "label": "Ensembl",
+        "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs2032582"
+      },
+      {
+        "label": "gnomAD",
+        "url": "https://gnomad.broadinstitute.org/variant/7-87531302-A-C?dataset=gnomad_r4"
+      }
+    ]
+  }
+}
