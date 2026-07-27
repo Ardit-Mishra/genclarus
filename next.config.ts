@@ -15,7 +15,7 @@ import type { NextConfig } from "next";
 // hydration scripts and inlines critical CSS; a nonce-based policy is the stricter future upgrade,
 // deliberately deferred to avoid breaking hydration for a marginal gain. object-src/base-uri/
 // frame-ancestors are the high-value clickjacking/injection locks and are fully enforced.
-const CSP = [
+const CSP_BASE = [
   "default-src 'self'",
   "script-src 'self' 'unsafe-inline'",
   "style-src 'self' 'unsafe-inline'",
@@ -24,8 +24,14 @@ const CSP = [
   "font-src 'self'",
   "object-src 'none'",
   "base-uri 'self'",
-  "frame-ancestors 'none'",
-].join("; ");
+];
+// Full clickjacking lock everywhere EXCEPT the embeddable widget.
+const CSP = [...CSP_BASE, "frame-ancestors 'none'"].join("; ");
+// The /embed/* widget pages exist to be iframed by customers, so they cannot carry
+// `frame-ancestors 'none'` or `X-Frame-Options: DENY`. Prototype policy: allow any embedder;
+// per pilot, tighten `frame-ancestors` to the customer's specific origin(s). Every other directive
+// is identical to CSP (still same-origin for scripts/styles/connect) — only framing is opened up.
+const EMBED_CSP = [...CSP_BASE, "frame-ancestors *"].join("; ");
 
 const nextConfig: NextConfig = {
   // /api/v1/batch resolves an arbitrary id list at REQUEST time (it can't use generateStaticParams
@@ -39,19 +45,31 @@ const nextConfig: NextConfig = {
     "/api/v1/batch": ["./corpus/**"],
   },
   async headers() {
+    const shared = [
+      { key: "X-Content-Type-Options", value: "nosniff" },
+      { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+      {
+        key: "Permissions-Policy",
+        value: "camera=(), microphone=(), geolocation=(), browsing-topics=()",
+      },
+    ];
     return [
       {
-        source: "/:path*",
+        // Everything EXCEPT the embeddable widget: full clickjacking lock. Negative-lookahead so a
+        // single X-Frame-Options / frame-ancestors value never collides with the /embed rule below.
+        source: "/((?!embed).*)",
         headers: [
-          { key: "X-Content-Type-Options", value: "nosniff" },
+          ...shared,
           { key: "X-Frame-Options", value: "DENY" },
-          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
-          {
-            key: "Permissions-Policy",
-            value: "camera=(), microphone=(), geolocation=(), browsing-topics=()",
-          },
           { key: "Content-Security-Policy", value: CSP },
         ],
+      },
+      {
+        // The widget is meant to be iframed by customers: no X-Frame-Options: DENY, and a CSP whose
+        // only difference from the strict one is `frame-ancestors *` (prototype). Same-origin
+        // otherwise.
+        source: "/embed/:path*",
+        headers: [...shared, { key: "Content-Security-Policy", value: EMBED_CSP }],
       },
     ];
   },
