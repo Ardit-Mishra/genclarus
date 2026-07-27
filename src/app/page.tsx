@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
+import Link from "next/link";
+import { hasCorpusGene, hasCorpusVariant } from "@/lib/corpus/corpus-ids";
 
 // Large WebGL library — only fetched once a user opens the toggle, never on initial page load.
 const StructureViewer = dynamic(() => import("@/components/StructureViewer"), { ssr: false });
@@ -283,6 +285,30 @@ function Explanation({ claims, sources }: { claims: DisplayClaim[]; sources: Sou
   );
 }
 
+// If the looked-up id already has a published Tier 0 corpus page, link to it — internal linking
+// from the dynamic lookup to the indexable static page it's cited from. Absent for non-corpus ids,
+// where the interactive result is unchanged.
+function corpusPageHref(result: Result | null): string | null {
+  if (!result) return null;
+  if (result.kind === "variant") {
+    return hasCorpusVariant(result.rsid) ? `/variant/${result.rsid}` : null;
+  }
+  return hasCorpusGene(result.symbol) ? `/gene/${result.symbol}` : null;
+}
+
+// Subtle, on-brand pointer to the cited static page — teal accent, mono label, matches the source
+// chip styling elsewhere on the card.
+function CorpusPageLink({ href }: { href: string }) {
+  return (
+    <Link
+      href={href}
+      className="shrink-0 whitespace-nowrap rounded-md border border-teal-600/30 px-2 py-1 font-mono text-[11px] text-teal-700 transition hover:bg-teal-50 dark:border-teal-400/30 dark:text-teal-400 dark:hover:bg-teal-500/10"
+    >
+      View the full cited page →
+    </Link>
+  );
+}
+
 export default function Home() {
   const [q, setQ] = useState("");
   const [loading, setLoading] = useState(false);
@@ -291,6 +317,7 @@ export default function Home() {
   const [narrative, setNarrative] = useState<NarrativeState>({ status: "idle" });
   const [am, setAm] = useState<{ score: number; class: string } | null>(null);
   const [show3d, setShow3d] = useState(false);
+  const corpusHref = corpusPageHref(result);
 
   async function lookup(term?: string) {
     const t = (term ?? q).trim();
@@ -442,12 +469,17 @@ export default function Home() {
 
       {result && result.kind === "variant" && (
         <article className="mt-8 rounded-xl border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-zinc-900 sm:p-8">
-          <h2 className="text-2xl font-bold text-zinc-900 dark:text-zinc-50">{result.rsid}</h2>
-          {result.preferredName && (
-            <p className="mt-1 break-words font-mono text-xs text-zinc-500 dark:text-zinc-400">
-              {result.preferredName}
-            </p>
-          )}
+          <div className="flex flex-wrap items-start justify-between gap-2">
+            <div>
+              <h2 className="text-2xl font-bold text-zinc-900 dark:text-zinc-50">{result.rsid}</h2>
+              {result.preferredName && (
+                <p className="mt-1 break-words font-mono text-xs text-zinc-500 dark:text-zinc-400">
+                  {result.preferredName}
+                </p>
+              )}
+            </div>
+            {corpusHref && <CorpusPageLink href={corpusHref} />}
+          </div>
 
           <div className="mt-3 flex flex-wrap gap-2">
             {result.gene && (
@@ -627,9 +659,12 @@ export default function Home() {
 
       {result && result.kind !== "variant" && (
         <article className="mt-8 rounded-xl border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-zinc-900 sm:p-8">
-          <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-            <h2 className="text-2xl font-bold text-zinc-900 dark:text-zinc-50">{result.symbol}</h2>
-            {result.name && <span className="text-zinc-500 dark:text-zinc-400">{result.name}</span>}
+          <div className="flex flex-wrap items-start justify-between gap-2">
+            <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+              <h2 className="text-2xl font-bold text-zinc-900 dark:text-zinc-50">{result.symbol}</h2>
+              {result.name && <span className="text-zinc-500 dark:text-zinc-400">{result.name}</span>}
+            </div>
+            {corpusHref && <CorpusPageLink href={corpusHref} />}
           </div>
 
           {(result.type || result.location) && (
