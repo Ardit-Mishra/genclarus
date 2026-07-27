@@ -82,7 +82,6 @@ type VariantResult = {
   variantId: number | string | null;
   uniprot: string | null;
   residue: number | null;
-  alphaMissense: { score: number; class: string } | null;
   sources: Source[];
   disclaimer: string;
   retrievedAt: string;
@@ -104,21 +103,19 @@ function sigBadgeClass(rank: number | null): string {
   return "bg-emerald-100 text-emerald-700 dark:bg-emerald-500/15 dark:text-emerald-300";
 }
 
-// AlphaMissense pathogenicity class -> chip copy and color. A computational prediction, never a
-// clinical classification — the chip's `title` says so explicitly, since it can (and for rs6025,
-// does) disagree with the ClinVar significance shown alongside it.
+// AlphaMissense pathogenicity class -> chip copy. Deliberately color-NEUTRAL: it's a computational
+// structural prediction, not a clinical classification, and it can (as for rs6025) disagree with
+// the ClinVar significance shown alongside it. A green/red chip beside the clinical badge would
+// read as a contradiction; a neutral chip reads as a distinct, secondary signal. The `title` says
+// so explicitly.
 const AM_LABEL: Record<string, string> = {
   likely_pathogenic: "AM: likely damaging",
   likely_benign: "AM: likely benign",
   ambiguous: "AM: ambiguous",
 };
 
-function amClass(c: string): string {
-  if (c === "likely_pathogenic") return "bg-red-100 text-red-700 dark:bg-red-500/15 dark:text-red-300";
-  if (c === "likely_benign")
-    return "bg-emerald-100 text-emerald-700 dark:bg-emerald-500/15 dark:text-emerald-300";
-  return "bg-zinc-100 text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400";
-}
+const AM_CHIP_CLASS =
+  "bg-zinc-100 text-zinc-600 ring-1 ring-inset ring-zinc-200 dark:bg-zinc-800 dark:text-zinc-400 dark:ring-zinc-700";
 
 function formatAf(af: number): string {
   const pct = af * 100;
@@ -292,6 +289,7 @@ export default function Home() {
   const [result, setResult] = useState<Result | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [narrative, setNarrative] = useState<NarrativeState>({ status: "idle" });
+  const [am, setAm] = useState<{ score: number; class: string } | null>(null);
   const [show3d, setShow3d] = useState(false);
 
   async function lookup(term?: string) {
@@ -302,6 +300,7 @@ export default function Home() {
     setError(null);
     setResult(null);
     setNarrative({ status: "idle" });
+    setAm(null);
     setShow3d(false);
 
     const variant = isRsId(t);
@@ -321,10 +320,30 @@ export default function Home() {
       // Stage 2 — the narrative, which may take many seconds on a free model tier. It arrives
       // when it arrives; the verified result above never waits for it.
       void loadNarrative(variant ? "variant" : "gene", t);
+      // Stage 2b — AlphaMissense pathogenicity for a missense variant. Also progressive: the
+      // ~megabyte annotation CSV is read server-side, so the verified facts never wait on it.
+      if (variant && data.uniprot && data.proteinChange) {
+        void loadAlphaMissense(data.uniprot, data.proteinChange);
+      }
     } catch {
       setError("Network error. Please try again.");
     } finally {
       setLoading(false);
+    }
+  }
+
+  async function loadAlphaMissense(uniprot: string, proteinChange: string) {
+    try {
+      const res = await fetch("/api/alphamissense", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ uniprot, proteinChange }),
+      });
+      if (!res.ok) return;
+      const data = await res.json();
+      if (data.alphaMissense) setAm(data.alphaMissense);
+    } catch {
+      // A missing prediction is a normal, silent outcome — the chip simply doesn't appear.
     }
   }
 
@@ -460,12 +479,12 @@ export default function Home() {
                 {formatAf(result.gnomadAf)} freq
               </span>
             )}
-            {result.alphaMissense && (
+            {am && (
               <span
-                className={`rounded-md px-2 py-0.5 font-mono text-xs ${amClass(result.alphaMissense.class)}`}
-                title="AlphaMissense — a computational prediction, not a clinical classification"
+                className={`rounded-md px-2 py-0.5 font-mono text-xs ${AM_CHIP_CLASS}`}
+                title="AlphaMissense — a computational structural prediction, not a clinical classification. It can differ from the ClinVar significance shown here."
               >
-                {AM_LABEL[result.alphaMissense.class]} ({result.alphaMissense.score.toFixed(2)})
+                {AM_LABEL[am.class]} ({am.score.toFixed(2)})
               </span>
             )}
           </div>
