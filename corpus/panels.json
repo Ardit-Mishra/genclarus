@@ -1,0 +1,93 @@
+{
+  "panels": [
+    {
+      "slug": "hereditary-breast-ovarian-cancer",
+      "title": "Hereditary Breast & Ovarian Cancer Panel",
+      "description": "Genes and variants most often included on clinical hereditary breast and ovarian cancer (HBOC) multi-gene panels, spanning BRCA1/BRCA2 and the other DNA-damage-repair genes tested alongside them.",
+      "geneIds": ["BRCA1", "BRCA2", "PALB2", "ATM", "CHEK2", "RAD51C", "RAD51D", "BRIP1"],
+      "variantIds": ["rs80357906", "rs28897696", "rs80359550"]
+    },
+    {
+      "slug": "lynch-syndrome",
+      "title": "Lynch Syndrome (Hereditary Colorectal & Endometrial Cancer) Panel",
+      "description": "The mismatch-repair genes screened for Lynch syndrome, the most common inherited cause of colorectal and endometrial cancer.",
+      "geneIds": ["MLH1", "MSH2", "MSH6", "PMS2"]
+    },
+    {
+      "slug": "hereditary-thrombophilia",
+      "title": "Hereditary Thrombophilia Panel",
+      "description": "The two variants most frequently tested in an inherited clotting-risk workup: Factor V Leiden and the prothrombin G20210A variant.",
+      "geneIds": ["F5", "F2"],
+      "variantIds": ["rs6025", "rs1799963"]
+    },
+    {
+      "slug": "pharmacogenomics-core",
+      "title": "Core Pharmacogenomics (Drug-Metabolism) Panel",
+      "description": "A core set of pharmacogenes that influence how common medications are metabolized and dosed, drawn from CPIC/PharmGKB-style clinical pharmacogenomic panels.",
+      "geneIds": [
+        "CYP2C19",
+        "CYP2D6",
+        "CYP2C9",
+        "VKORC1",
+        "TPMT",
+        "DPYD",
+        "SLCO1B1",
+        "NUDT15",
+        "UGT1A1",
+        "G6PD"
+      ],
+      "variantIds": [
+        "rs4244285",
+        "rs3892097",
+        "rs1057910",
+        "rs9923231",
+        "rs1142345",
+        "rs3918290",
+        "rs4149056",
+        "rs116855232",
+        "rs1050828"
+      ]
+    },
+    {
+      "slug": "familial-hypercholesterolemia",
+      "title": "Familial Hypercholesterolemia Panel",
+      "description": "The three genes most commonly implicated in familial hypercholesterolemia, an inherited cause of very high LDL cholesterol and early cardiovascular disease.",
+      "geneIds": ["LDLR", "APOB", "PCSK9"],
+      "variantIds": ["rs121908025", "rs11591147"]
+    },
+    {
+      "slug": "cystic-fibrosis",
+      "title": "Cystic Fibrosis (CFTR) Panel",
+      "description": "The CFTR gene and its best-known variants, including F508del, the most common cystic-fibrosis-causing variant.",
+      "geneIds": ["CFTR"],
+      "variantIds": ["rs113993960", "rs121908755", "rs75527207"]
+    },
+    {
+      "slug": "hereditary-hemochromatosis",
+      "title": "Hereditary Hemochromatosis (HFE) Panel",
+      "description": "The HFE gene and its two classic variants (C282Y and H63D) associated with hereditary iron-overload disease.",
+      "geneIds": ["HFE"],
+      "variantIds": ["rs1800562", "rs1799945"]
+    },
+    {
+      "slug": "inherited-cardiomyopathy",
+      "title": "Inherited Cardiomyopathy Panel",
+      "description": "Core genes screened for inherited cardiomyopathies, including hypertrophic cardiomyopathy (MYH7, MYBPC3) and the LMNA-related cardiomyopathies.",
+      "geneIds": ["MYH7", "MYBPC3", "LMNA"]
+    },
+    {
+      "slug": "parkinsons-disease-genetic-risk",
+      "title": "Parkinson's Disease Genetic Risk Panel",
+      "description": "The two genes with the strongest, best-replicated links to inherited Parkinson's disease risk, LRRK2 and GBA1, along with their most-studied risk variants.",
+      "geneIds": ["LRRK2", "GBA1"],
+      "variantIds": ["rs34637584", "rs76763715"]
+    },
+    {
+      "slug": "hemoglobinopathies",
+      "title": "Hemoglobinopathy Panel",
+      "description": "The hemoglobin genes and variants behind the most common inherited hemoglobin disorders, including the sickle cell variant (HbS) in HBB.",
+      "geneIds": ["HBB", "HBA1"],
+      "variantIds": ["rs334", "rs33930165"]
+    }
+  ]
+}
