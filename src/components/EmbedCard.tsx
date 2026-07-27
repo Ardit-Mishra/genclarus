@@ -133,6 +133,12 @@ export default function EmbedCard({ record }: { record: PublicRecord }) {
           >
             Powered by <span className="font-semibold text-zinc-500">Genclarus</span> ↗
           </a>
+          <span
+            className="font-mono text-[10px] text-zinc-400"
+            title={`facts ${record.provenance.factsHash}`}
+          >
+            corpus v{record.provenance.corpusSchemaVersion}
+          </span>
         </div>
       </article>
     </div>
