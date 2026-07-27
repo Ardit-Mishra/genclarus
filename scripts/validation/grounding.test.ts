@@ -24,6 +24,7 @@ type CaseMeasurement = {
   kind: MatrixCase["kind"];
   evidenceCount: number;
   outcome: Outcome;
+  aiAvailable: boolean;
   fallbackReason: string | null;
   claimCount: number;
   latencyMs: number;
@@ -43,12 +44,15 @@ async function measureCase(item: MatrixCase): Promise<CaseMeasurement> {
     const result = await explain(facts);
     const latencyMs = Date.now() - genStarted;
 
-    const grounded = result.claims != null && result.claims.length > 0;
+    // Grounded means: the AI path was actually available AND it produced at least one verified
+    // claim — not merely that the page would render (source-only fallback also renders fine).
+    const grounded = result.aiAvailable && result.claims != null && result.claims.length > 0;
     return {
       id: item.id,
       kind: item.kind,
       evidenceCount,
       outcome: grounded ? "grounded" : "fallback",
+      aiAvailable: result.aiAvailable,
       fallbackReason: result.fallbackReason,
       claimCount: result.claims?.length ?? 0,
       latencyMs,
@@ -60,6 +64,7 @@ async function measureCase(item: MatrixCase): Promise<CaseMeasurement> {
       kind: item.kind,
       evidenceCount: 0,
       outcome: "fallback",
+      aiAvailable: false,
       fallbackReason: "error",
       claimCount: 0,
       latencyMs: Date.now() - started,
@@ -155,4 +160,54 @@ describe("live grounding measurement matrix", () => {
     const results = await runGroundingMatrix();
     expect(results).toHaveLength(matrix.length);
   }, 1_800_000);
+});
+
+// Regression guard for the rs6025 (Factor V Leiden) class of bug: a variant offering many ClinVar
+// conditions once overran max_tokens and fell back to source-only output DETERMINISTICALLY (fixed
+// by capping conditions offered to the model — MAX_MODEL_CONDITIONS in src/lib/evidence.ts). The
+// measurement pass above only records outcomes; it deliberately never fails the run on a bad roll,
+// so a regression of that class would slip through unnoticed. These `mustGround` cases are
+// different: they are known-good variants (matrix.ts) that are expected to reliably produce
+// grounded AI claims, so this positive assertion actually fails when grounding stops working.
+//
+// Each case gets a few independent attempts to absorb the free NIM tier's occasional flakiness.
+// This does not mask the original bug: that failure was deterministic across every attempt (all 15
+// conditions were always sent, always overrunning max_tokens), so retries would not have hidden it
+// — they only protect this guard from unrelated one-off provider hiccups.
+const MUST_GROUND_ATTEMPTS = 3;
+const mustGroundCases = matrix.filter((item) => item.mustGround);
+
+async function attemptGrounding(item: MatrixCase): Promise<CaseMeasurement[]> {
+  const attempts: CaseMeasurement[] = [];
+  for (let attempt = 1; attempt <= MUST_GROUND_ATTEMPTS; attempt++) {
+    const measurement = await measureCase(item);
+    attempts.push(measurement);
+    if (measurement.outcome === "grounded") break;
+  }
+  return attempts;
+}
+
+// Skipped (not failed) without NVIDIA_API_KEY: every attempt would report `not_configured`, which
+// is a harness-smoke condition, not a grounding regression, and shouldn't be reported as one.
+describe.skipIf(!process.env.NVIDIA_API_KEY)("live grounding — must-ground regression guard", () => {
+  for (const item of mustGroundCases) {
+    it(
+      `${item.id} must produce grounded AI claims within ${MUST_GROUND_ATTEMPTS} attempt(s)`,
+      async () => {
+        const attempts = await attemptGrounding(item);
+        const grounded = attempts.some((a) => a.outcome === "grounded");
+        const trace = attempts
+          .map(
+            (a, i) =>
+              `#${i + 1} outcome=${a.outcome} aiAvailable=${a.aiAvailable} reason=${a.fallbackReason ?? "n/a"} claims=${a.claimCount}`,
+          )
+          .join("; ");
+        expect(
+          grounded,
+          `${item.id} (${item.why}) never grounded in ${attempts.length} attempt(s): ${trace}`,
+        ).toBe(true);
+      },
+      1_800_000,
+    );
+  }
 });
