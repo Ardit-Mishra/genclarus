@@ -28,6 +28,16 @@ const CSP = [
 ].join("; ");
 
 const nextConfig: NextConfig = {
+  // /api/v1/batch resolves an arbitrary id list at REQUEST time (it can't use generateStaticParams
+  // like the single-record /api/v1/{gene,variant}/[id] routes, which are prerendered from a build-
+  // time filesystem walk), so it reads `corpus/**` from disk on every call. Vercel's serverless
+  // bundler only auto-traces files it sees referenced through static imports or generateStaticParams
+  // — a dynamic `readFile(join(root, ...))` path is invisible to that trace, so without this the
+  // batch route's function would ship without the corpus directory and every lookup would 404 in
+  // production despite working locally. This pins corpus/** into that one route's bundle.
+  outputFileTracingIncludes: {
+    "/api/v1/batch": ["./corpus/**"],
+  },
   async headers() {
     return [
       {
