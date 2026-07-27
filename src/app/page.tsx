@@ -82,6 +82,7 @@ type VariantResult = {
   variantId: number | string | null;
   uniprot: string | null;
   residue: number | null;
+  alphaMissense: { score: number; class: string } | null;
   sources: Source[];
   disclaimer: string;
   retrievedAt: string;
@@ -101,6 +102,22 @@ function sigBadgeClass(rank: number | null): string {
   if (rank <= 4) return "bg-amber-100 text-amber-800 dark:bg-amber-500/15 dark:text-amber-300";
   if (rank <= 6) return "bg-zinc-100 text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400";
   return "bg-emerald-100 text-emerald-700 dark:bg-emerald-500/15 dark:text-emerald-300";
+}
+
+// AlphaMissense pathogenicity class -> chip copy and color. A computational prediction, never a
+// clinical classification — the chip's `title` says so explicitly, since it can (and for rs6025,
+// does) disagree with the ClinVar significance shown alongside it.
+const AM_LABEL: Record<string, string> = {
+  likely_pathogenic: "AM: likely damaging",
+  likely_benign: "AM: likely benign",
+  ambiguous: "AM: ambiguous",
+};
+
+function amClass(c: string): string {
+  if (c === "likely_pathogenic") return "bg-red-100 text-red-700 dark:bg-red-500/15 dark:text-red-300";
+  if (c === "likely_benign")
+    return "bg-emerald-100 text-emerald-700 dark:bg-emerald-500/15 dark:text-emerald-300";
+  return "bg-zinc-100 text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400";
 }
 
 function formatAf(af: number): string {
@@ -441,6 +458,14 @@ export default function Home() {
             {result.gnomadAf != null && (
               <span className="rounded-md bg-zinc-100 px-2 py-0.5 font-mono text-xs text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400">
                 {formatAf(result.gnomadAf)} freq
+              </span>
+            )}
+            {result.alphaMissense && (
+              <span
+                className={`rounded-md px-2 py-0.5 font-mono text-xs ${amClass(result.alphaMissense.class)}`}
+                title="AlphaMissense — a computational prediction, not a clinical classification"
+              >
+                {AM_LABEL[result.alphaMissense.class]} ({result.alphaMissense.score.toFixed(2)})
               </span>
             )}
           </div>
