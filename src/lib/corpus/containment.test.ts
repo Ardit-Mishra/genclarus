@@ -55,7 +55,8 @@ describe("corpus containment (incident 2026-07-28)", () => {
   it("passes non-contained records through untouched", () => {
     const rec = grounded("variant", "rs334");
     expect(applyContainment(rec)).toBe(rec);
-    expect(applyContainment(grounded("gene", "BRCA1"))!.claims?.length).toBe(1);
+    // TP53 was not rejected by the dry scan, so it stays grounded. (BRCA1 is now contained.)
+    expect(applyContainment(grounded("gene", "TP53"))!.claims?.length).toBe(1);
     expect(applyContainment(null)).toBeNull();
   });
 
