@@ -129,8 +129,8 @@ export default function DemoPlayground({
         <p className="mt-6 rounded-lg border border-zinc-100 bg-zinc-50 px-4 py-3 text-sm text-zinc-500 dark:border-zinc-900 dark:bg-zinc-900/40 dark:text-zinc-400">
           Type a gene symbol or rsID above, or pick an example. Only identifiers already published
           in the Tier 0 corpus resolve — this playground is a preview of exactly what a customer&apos;s
-          own embed or API call would return, so it deliberately doesn&apos;t fall back to a live,
-          ungrounded lookup.
+          own embed or API call would return, so it deliberately doesn&apos;t fall back to a live
+          lookup.
         </p>
       )}
 

@@ -120,30 +120,37 @@ describe("POST /api/explain — the model only ever sees server-derived facts", 
     expect(sent).toContain("BRCA1 DNA repair associated");
   });
 
-  it("hands variant classifications to the model per condition", async () => {
+  // CONTAINMENT (incident 2026-07-28): dynamic variant narratives are paused — a valid rsID returns
+  // source-only (claims withheld) and the model is never called. Restore the generation tests here
+  // once the validator is hardened and containment is lifted.
+  it("withholds the narrative for a valid variant without calling the model (containment)", async () => {
     const nim = stubAll(VARIANT_CLAIMS);
-    await POST(post({ type: "variant", identifier: "rs6025" }));
-    const sent = nim[0].messages.map((m) => m.content).join("\n");
-    expect(sent).toContain("F5");
-    expect(sent).toMatch(/classification/i);
-    expect(nim[0].messages[0].content).toMatch(/PER CONDITION/);
-    // Never a pre-collapsed verdict for the model to parrot back.
-    expect(sent).not.toContain("primarySignificance");
+    const body = await (await POST(post({ type: "variant", identifier: "rs6025" }))).json();
+    expect(body.claims).toBeNull();
+    expect(body.aiAvailable).toBe(false);
+    expect(body.fallbackReason).toBe("withheld_review");
+    // The model was never invoked for the withheld variant.
+    expect(nim).toHaveLength(0);
   });
 
-  it("withholds an ungrounded model answer — clinical claims never come from the LLM", async () => {
-    // The model tries to assert a classification for an invented condition, citing the gene fact.
+  it("still validates the rsID under containment — an invalid variant id 400s", async () => {
+    stubAll();
+    expect((await POST(post({ type: "variant", identifier: "BRCA1" }))).status).toBe(400);
+  });
+
+  it("withholds an ungrounded model answer — clinical claims never come from the LLM (gene path)", async () => {
+    // The model tries to assert a clinical classification citing only a gene identity/summary fact.
     const invented = JSON.stringify({
       claims: [
         {
-          text: "The F5 gene is pathogenic for Cystic Fibrosis.",
-          supportingFactIds: ["var.gene"],
+          text: "The BRCA1 gene is pathogenic for Cystic Fibrosis.",
+          supportingFactIds: ["gene.name", "gene.summary"],
           claimType: "classification_context",
         },
       ],
     });
     stubAll(invented);
-    const body = await (await POST(post({ type: "variant", identifier: "rs6025" }))).json();
+    const body = await (await POST(post({ type: "gene", identifier: "BRCA1" }))).json();
     expect(body.claims).toBeNull();
     expect(body.fallbackReason).toBe("failed_grounding");
   });

@@ -9,7 +9,6 @@
 import { readJsonBody, RequestValidationError, jsonError } from "@/lib/request";
 import {
   getGeneFacts,
-  getVariantFacts,
   normalizeGeneSymbol,
   normalizeRsid,
   FactsError,
@@ -53,10 +52,30 @@ export async function POST(request: Request) {
   }
 
   try {
-    const facts =
-      parsed.type === "gene"
-        ? await getGeneFacts(normalizeGeneSymbol(parsed.identifier))
-        : await getVariantFacts(normalizeRsid(parsed.identifier));
+    // CONTAINMENT (incident 2026-07-28 — grounding validator gap). Dynamic variant narratives are
+    // paused: QA Layer C found numeric/qualifier fidelity defects in generated variant explanations
+    // (e.g. a 10x frequency error; an uncurated LOC… gene identity), the same class the validator
+    // does not catch. Until the validator is hardened we withhold the AI sentence for live variant
+    // lookups and serve facts/classifications/sources only — matching the corpus-record containment.
+    // Genes, which passed Layer C, are unaffected. normalizeRsid still runs first so an invalid rsID
+    // 400s exactly as before. See docs/qa/INCIDENT-2026-07-28-grounding.md.
+    if (parsed.type === "variant") {
+      normalizeRsid(parsed.identifier);
+      return Response.json({
+        kind: "variant",
+        claims: null,
+        aiAvailable: false,
+        fallbackReason: "withheld_review",
+        cached: false,
+        meta: {
+          promptVersion: PROMPT_VERSION,
+          modelId: MODEL_ID,
+          schemaVersion: OUTPUT_SCHEMA_VERSION,
+        },
+      });
+    }
+
+    const facts = await getGeneFacts(normalizeGeneSymbol(parsed.identifier));
 
     const { claims, aiAvailable, fallbackReason, cached } = await cachedExplain(facts);
 

@@ -10,7 +10,7 @@ synthesized by an LLM, with source links you can verify.
 
 Gene databases are dense and jargon-heavy. Genclarus turns a gene symbol into an explanation a
 non-specialist can actually read — *what it does, why it matters, key facts* — while staying
-grounded in authoritative sources (so it doesn't hallucinate).
+grounded in authoritative sources, with every claim linked back to the record it came from.
 
 ## How it works
 
