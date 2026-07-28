@@ -34,14 +34,14 @@ beforeAll(async () => {
   root = await mkdtemp(join(tmpdir(), "corpus-test-"));
   await mkdir(join(root, "gene"), { recursive: true });
   await mkdir(join(root, "variant"), { recursive: true });
-  await writeFile(join(root, "gene", "BRCA1.json"), JSON.stringify(record("gene", "BRCA1")));
+  await writeFile(join(root, "gene", "TP53.json"), JSON.stringify(record("gene", "TP53")));
   await writeFile(join(root, "variant", "rs100200300.json"), JSON.stringify(record("variant", "rs100200300")));
   const manifest: CorpusManifest = {
     corpusSchemaVersion: CORPUS_SCHEMA_VERSION,
     generatedAt: "2026-07-27T00:00:00.000Z",
     counts: { genes: 1, variants: 1, withExplanation: 1, sourceOnly: 1 },
     records: [
-      { kind: "gene", id: "BRCA1", factsHash: "hash-BRCA1", hasExplanation: true, generatedAt: "2026-07-27T00:00:00.000Z" },
+      { kind: "gene", id: "TP53", factsHash: "hash-TP53", hasExplanation: true, generatedAt: "2026-07-27T00:00:00.000Z" },
       { kind: "variant", id: "rs100200300", factsHash: "hash-rs100200300", hasExplanation: false, generatedAt: "2026-07-27T00:00:00.000Z" },
     ],
   };
@@ -55,10 +55,10 @@ afterAll(async () => {
 
 describe("FileCorpusStore", () => {
   it("reads a gene record and normalizes the key (case-insensitive)", async () => {
-    const r = await store.getGene("brca1");
-    expect(r?.id).toBe("BRCA1");
+    const r = await store.getGene("tp53");
+    expect(r?.id).toBe("TP53");
     expect(r?.claims?.length).toBe(1);
-    expect(r?.provenance.factsHash).toBe("hash-BRCA1");
+    expect(r?.provenance.factsHash).toBe("hash-TP53");
   });
 
   it("reads a variant source-only record", async () => {
@@ -75,7 +75,7 @@ describe("FileCorpusStore", () => {
   });
 
   it("lists corpus ids by kind from the manifest", async () => {
-    expect(await store.listGenes()).toEqual(["BRCA1"]);
+    expect(await store.listGenes()).toEqual(["TP53"]);
     expect(await store.listVariants()).toEqual(["rs100200300"]);
   });
 
