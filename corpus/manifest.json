@@ -1,11 +1,11 @@
 {
   "corpusSchemaVersion": "1.0.0",
-  "generatedAt": "2026-07-27T10:28:55.736Z",
+  "generatedAt": "2026-07-28T03:46:35.724Z",
   "counts": {
     "genes": 67,
     "variants": 106,
-    "withExplanation": 169,
-    "sourceOnly": 4
+    "withExplanation": 172,
+    "sourceOnly": 1
   },
   "records": [
     {
@@ -300,7 +300,7 @@
       "id": "MSH2",
       "factsHash": "a96619794a7ac5a4",
       "hasExplanation": false,
-      "generatedAt": "2026-07-27T10:25:19.242Z"
+      "generatedAt": "2026-07-28T03:46:35.724Z"
     },
     {
       "kind": "gene",
@@ -362,8 +362,8 @@
       "kind": "gene",
       "id": "PIK3CA",
       "factsHash": "077860e7da623440",
-      "hasExplanation": false,
-      "generatedAt": "2026-07-27T10:25:44.920Z"
+      "hasExplanation": true,
+      "generatedAt": "2026-07-28T03:44:08.753Z"
     },
     {
       "kind": "gene",
@@ -957,8 +957,8 @@
       "kind": "variant",
       "id": "rs28934578",
       "factsHash": "2710f9a84bb6484f",
-      "hasExplanation": false,
-      "generatedAt": "2026-07-27T10:26:26.945Z"
+      "hasExplanation": true,
+      "generatedAt": "2026-07-28T03:44:17.525Z"
     },
     {
       "kind": "variant",
@@ -1027,8 +1027,8 @@
       "kind": "variant",
       "id": "rs4149056",
       "factsHash": "5fd572e1618de291",
-      "hasExplanation": false,
-      "generatedAt": "2026-07-27T10:26:57.330Z"
+      "hasExplanation": true,
+      "generatedAt": "2026-07-28T03:44:26.213Z"
     },
     {
       "kind": "variant",

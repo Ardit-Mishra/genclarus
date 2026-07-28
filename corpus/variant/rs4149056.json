@@ -249,19 +249,46 @@
         "url": "https://gnomad.broadinstitute.org/variant/12-21178615-T-C?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:26:49.061Z"
+    "retrievedAt": "2026-07-28T03:44:19.881Z"
   },
-  "claims": null,
+  "claims": [
+    {
+      "text": "The SLCO1B1 gene variant rs4149056 is a missense variant with a protein change of p.Val174Ala.",
+      "supportingFactIds": [
+        "var.gene",
+        "var.consequence",
+        "var.protein"
+      ],
+      "claimType": "identity"
+    },
+    {
+      "text": "This variant is a single nucleotide variant with a frequency of 14% in the African population.",
+      "supportingFactIds": [
+        "var.type",
+        "var.gnomadAf"
+      ],
+      "claimType": "frequency_context"
+    },
+    {
+      "text": "The variant rs4149056 is associated with a drug response to atorvastatin, lovastatin, and pitavastatin.",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.1.significance",
+        "var.cond.2.significance"
+      ],
+      "claimType": "condition_context"
+    }
+  ],
   "aiAvailable": true,
-  "fallbackReason": "failed_grounding",
+  "fallbackReason": null,
   "provenance": {
     "factsHash": "5fd572e1618de291",
     "promptVersion": "2.0.0",
     "modelId": "meta/llama-3.1-8b-instruct",
     "schemaVersion": "2.0.0",
     "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:26:57.330Z",
-    "retrievedAt": "2026-07-27T10:26:49.061Z",
+    "generatedAt": "2026-07-28T03:44:26.213Z",
+    "retrievedAt": "2026-07-28T03:44:19.881Z",
     "sources": [
       {
         "label": "dbSNP",

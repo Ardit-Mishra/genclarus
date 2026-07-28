@@ -294,19 +294,52 @@
         "url": "https://gnomad.broadinstitute.org/variant/17-7675088-C-T?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:26:18.109Z"
+    "retrievedAt": "2026-07-28T03:44:11.384Z"
   },
-  "claims": null,
+  "claims": [
+    {
+      "text": "The TP53 gene variant rs28934578 is classified as Pathogenic for Li-Fraumeni syndrome (LFS) and has 3 of 4 review stars.",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The TP53 gene variant rs28934578 is classified as Pathogenic for Hereditary cancer-predisposing syndrome with 2 of 4 review stars.",
+      "supportingFactIds": [
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The TP53 gene variant rs28934578 is classified as Pathogenic for Li-Fraumeni syndrome 1 (LFS) with 2 of 4 review stars.",
+      "supportingFactIds": [
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars"
+      ],
+      "claimType": "classification_context"
+    },
+    {
+      "text": "The TP53 gene variant rs28934578 is a germline variant.",
+      "supportingFactIds": [
+        "var.type",
+        "var.cond.0.origin"
+      ],
+      "claimType": "identity"
+    }
+  ],
   "aiAvailable": true,
-  "fallbackReason": "failed_grounding",
+  "fallbackReason": null,
   "provenance": {
     "factsHash": "2710f9a84bb6484f",
     "promptVersion": "2.0.0",
     "modelId": "meta/llama-3.1-8b-instruct",
     "schemaVersion": "2.0.0",
     "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:26:26.945Z",
-    "retrievedAt": "2026-07-27T10:26:18.109Z",
+    "generatedAt": "2026-07-28T03:44:17.525Z",
+    "retrievedAt": "2026-07-28T03:44:11.384Z",
     "sources": [
       {
         "label": "dbSNP",
