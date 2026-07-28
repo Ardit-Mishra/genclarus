@@ -41,7 +41,7 @@
         "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=MSH2"
       }
     ],
-    "retrievedAt": "2026-07-27T10:25:10.318Z"
+    "retrievedAt": "2026-07-28T03:45:38.165Z"
   },
   "claims": null,
   "aiAvailable": true,
@@ -52,8 +52,8 @@
     "modelId": "meta/llama-3.1-8b-instruct",
     "schemaVersion": "2.0.0",
     "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:25:19.242Z",
-    "retrievedAt": "2026-07-27T10:25:10.318Z",
+    "generatedAt": "2026-07-28T03:46:35.724Z",
+    "retrievedAt": "2026-07-28T03:45:38.165Z",
     "sources": [
       {
         "label": "NCBI Gene",

@@ -15,6 +15,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const panels = listPanelDefinitions();
   return [
     { url: SITE_URL, priority: 1 },
+    { url: `${SITE_URL}/developers`, priority: 0.6 },
     { url: `${SITE_URL}/panel`, priority: 0.6 },
     ...panels.map((p) => ({ url: `${SITE_URL}/panel/${p.slug}`, priority: 0.7 })),
     ...genes.map((symbol) => ({ url: `${SITE_URL}/gene/${symbol}`, priority: 0.7 })),
