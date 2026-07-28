@@ -16,7 +16,8 @@ type FallbackReason =
   | "not_configured"
   | "provider_unavailable"
   | "provider_no_content"
-  | "failed_grounding";
+  | "failed_grounding"
+  | "withheld_review";
 
 type EvidenceSource = "mygene" | "clinvar" | "dbsnp" | "gnomad";
 type Citation = { source: EvidenceSource; field: string };
@@ -170,6 +171,8 @@ const FALLBACK_COPY: Record<FallbackReason, string> = {
     "The model returned no explanation this time. Everything below comes straight from the source databases and is unaffected.",
   failed_grounding:
     "The AI summary was withheld because it could not be fully verified against the source records. Everything below comes straight from the source databases and is unaffected.",
+  withheld_review:
+    "AI explanations for variants are paused while we review their accuracy against the source records. Everything below comes straight from the source databases and is unaffected.",
 };
 
 // A claim's cited source maps to the canonical human-readable record among the sources the API

@@ -35,14 +35,14 @@ beforeAll(async () => {
   await mkdir(join(root, "gene"), { recursive: true });
   await mkdir(join(root, "variant"), { recursive: true });
   await writeFile(join(root, "gene", "BRCA1.json"), JSON.stringify(record("gene", "BRCA1")));
-  await writeFile(join(root, "variant", "rs6025.json"), JSON.stringify(record("variant", "rs6025")));
+  await writeFile(join(root, "variant", "rs100200300.json"), JSON.stringify(record("variant", "rs100200300")));
   const manifest: CorpusManifest = {
     corpusSchemaVersion: CORPUS_SCHEMA_VERSION,
     generatedAt: "2026-07-27T00:00:00.000Z",
     counts: { genes: 1, variants: 1, withExplanation: 1, sourceOnly: 1 },
     records: [
       { kind: "gene", id: "BRCA1", factsHash: "hash-BRCA1", hasExplanation: true, generatedAt: "2026-07-27T00:00:00.000Z" },
-      { kind: "variant", id: "rs6025", factsHash: "hash-rs6025", hasExplanation: false, generatedAt: "2026-07-27T00:00:00.000Z" },
+      { kind: "variant", id: "rs100200300", factsHash: "hash-rs100200300", hasExplanation: false, generatedAt: "2026-07-27T00:00:00.000Z" },
     ],
   };
   await writeFile(join(root, "manifest.json"), JSON.stringify(manifest));
@@ -62,8 +62,8 @@ describe("FileCorpusStore", () => {
   });
 
   it("reads a variant source-only record", async () => {
-    const r = await store.getVariant("RS6025");
-    expect(r?.id).toBe("rs6025");
+    const r = await store.getVariant("RS100200300");
+    expect(r?.id).toBe("rs100200300");
     expect(r?.claims).toBeNull();
     expect(r?.fallbackReason).toBe("failed_grounding");
   });
@@ -76,7 +76,7 @@ describe("FileCorpusStore", () => {
 
   it("lists corpus ids by kind from the manifest", async () => {
     expect(await store.listGenes()).toEqual(["BRCA1"]);
-    expect(await store.listVariants()).toEqual(["rs6025"]);
+    expect(await store.listVariants()).toEqual(["rs100200300"]);
   });
 
   it("degrades to empty lists when no manifest exists", async () => {

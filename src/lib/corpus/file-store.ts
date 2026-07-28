@@ -9,6 +9,7 @@
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { normalizeGeneSymbol, normalizeRsid } from "../facts";
+import { applyContainment } from "./containment";
 import type { CorpusStore, CorpusRecord, CorpusManifest, CorpusKind } from "./types";
 
 function corpusRoot(): string {
@@ -36,16 +37,18 @@ function safeNormalize(fn: (s: string) => string, raw: string): string | null {
 export class FileCorpusStore implements CorpusStore {
   constructor(private readonly root: string = corpusRoot()) {}
 
+  // applyContainment runs on every read so ALL surfaces (static pages, /api/v1, batch, embeds) that
+  // funnel through this store inherit the source-only withholding — see ./containment.ts.
   async getGene(symbol: string): Promise<CorpusRecord | null> {
     const id = safeNormalize(normalizeGeneSymbol, symbol);
     if (!id) return null;
-    return readJson<CorpusRecord>(join(this.root, "gene", `${id}.json`));
+    return applyContainment(await readJson<CorpusRecord>(join(this.root, "gene", `${id}.json`)));
   }
 
   async getVariant(rsid: string): Promise<CorpusRecord | null> {
     const id = safeNormalize(normalizeRsid, rsid);
     if (!id) return null;
-    return readJson<CorpusRecord>(join(this.root, "variant", `${id}.json`));
+    return applyContainment(await readJson<CorpusRecord>(join(this.root, "variant", `${id}.json`)));
   }
 
   async listGenes(): Promise<string[]> {

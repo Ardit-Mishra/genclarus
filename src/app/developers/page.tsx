@@ -176,8 +176,8 @@ export default async function DevelopersPage() {
           </li>
           <li>
             Only identifiers already in the corpus render — an id outside the corpus{" "}
-            <code className="font-mono text-xs">404</code>s rather than falling back to an
-            ungrounded or live-generated explanation.
+            <code className="font-mono text-xs">404</code>s rather than falling back to a
+            live-generated explanation.
           </li>
         </ul>
       </section>

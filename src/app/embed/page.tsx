@@ -96,7 +96,8 @@ export default async function EmbedIndexPage() {
           <li>
             Only identifiers already in the corpus render — {genes.length} genes and{" "}
             {variants.length} variants today. An unknown symbol or rsID 404s rather than falling
-            back to live lookup, so an embed never silently serves ungrounded content.
+            back to live lookup, so an embed only ever serves precomputed, source-cited corpus
+            content.
           </li>
           <li>
             Every explanation is Tier 0: precomputed, cited public-record content. Nothing here is
