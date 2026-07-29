@@ -141,12 +141,26 @@ const summary = {
 
 writeFileSync(join(CWD, "docs", "qa", "candidate-report.json"), JSON.stringify({ summary, rows }, null, 2));
 
+// Control 7: the overall candidate GATE FAILS if even one record has any violation.
+const gatePass =
+  summary.validationRejections === 0 &&
+  summary.stateDisagreements === 0 &&
+  summary.truncatedAssertions === 0 &&
+  manifestIssues.length === 0;
+
 console.log("===== STAGE 4 CANDIDATE REPORT =====");
 console.log(JSON.stringify(summary, null, 2));
 console.log(`\nvalidation failures (records): ${summary.validationRejections}`);
-for (const r of rows.filter((x) => x.validationFailures.length > 0)) console.log(`  [${r.kind}] ${r.id}: ${r.validationFailures.join(", ")}`);
+for (const r of rows.filter((x) => x.validationFailures.length > 0)) console.log(`  ✗ [${r.kind}] ${r.id}: ${r.validationFailures.join(", ")}`);
 console.log(`\nstate disagreements: ${summary.stateDisagreements}`);
+for (const r of rows.filter((x) => x.storedState !== x.computedState)) console.log(`  ✗ [${r.kind}] ${r.id}: stored=${r.storedState} computed=${r.computedState}`);
+console.log(`truncated deterministic assertions: ${summary.truncatedAssertions}`);
+for (const r of rows.filter((x) => x.kind === "variant" && x.renderedDetConditionCount < x.distinctSourceConditionCount)) console.log(`  ✗ [${r.kind}] ${r.id}: ${r.renderedDetConditionCount} rendered < ${r.distinctSourceConditionCount} distinct`);
 console.log(`manifest issues: ${manifestIssues.length ? manifestIssues.join(", ") : "none"}`);
 console.log(`\npreviously-contained records now passing candidate rules: ${summary.previouslyContainedNowPassing} / ${rows.filter((r) => r.productionContained).length}`);
 console.log(`records with >5 deterministic assertions: ${summary.moreThanFiveDetAssertions}`);
+console.log(`facts-hash changes vs production: ${summary.changedFactsHash}`);
+console.log(`clinical-output changes vs production: ${summary.changedClinicalOutput}`);
 console.log(`\nfull per-record report -> docs/qa/candidate-report.json`);
+console.log(`\n===== CANDIDATE GATE: ${gatePass ? "PASS" : "FAIL"} =====`);
+process.exitCode = gatePass ? 0 : 1;
