@@ -134,17 +134,18 @@ describe("buildEvidence — variant", () => {
   // claims, one of them the identity claim, so at most 3 condition claims are ever usable — the
   // evidence must not offer more than that. Conditions arrive pre-sorted by review confidence, so the
   // cap keeps the best-evidenced ones; the rest still appear in the deterministic facts UI.
-  it("caps condition facts at three regardless of how many ClinVar returns (rs6025 truncation fix)", () => {
+  it("builds a fact for EVERY condition — deterministic assertions are never truncated (correction C)", () => {
+    // The old 3-condition cap was removed: the deterministic renderer renders every condition, so
+    // every one needs a stable, resolvable fact id.
     const many = Array.from({ length: 15 }, (_, i) => ({
       ...variant.conditionClassifications[0],
       condition: `Condition ${i}`,
     }));
     const facts = buildEvidence({ ...variant, conditionClassifications: many });
     const sigIds = facts.filter((f) => /^var\.cond\.\d+\.significance$/.test(f.id));
-    expect(sigIds).toHaveLength(3);
-    // And it keeps the FIRST three (highest review confidence), not an arbitrary subset.
+    expect(sigIds).toHaveLength(15);
     expect(facts.find((f) => f.id === "var.cond.0.significance")?.qualifiers?.condition).toBe("Condition 0");
-    expect(facts.some((f) => f.id === "var.cond.3.significance")).toBe(false);
+    expect(facts.some((f) => f.id === "var.cond.14.significance")).toBe(true);
   });
 });
 

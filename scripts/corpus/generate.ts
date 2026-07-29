@@ -13,20 +13,24 @@
 //
 // Run: npm run corpus:generate   (loads .env.local for NVIDIA_API_KEY)
 
-import { readFile, writeFile, mkdir } from "node:fs/promises";
-import { join } from "node:path";
+import { readFile, writeFile, mkdir, readdir } from "node:fs/promises";
+import { basename, join, resolve } from "node:path";
 import { getGeneFacts, getVariantFacts, type Facts } from "../../src/lib/facts";
 import { explain, factsHash } from "../../src/lib/explain";
 import { PROMPT_VERSION, MODEL_ID, OUTPUT_SCHEMA_VERSION } from "../../src/lib/version";
 import {
   CORPUS_SCHEMA_VERSION,
-  type CorpusRecord,
+  type CorpusRecordV2,
   type CorpusManifest,
   type CorpusManifestEntry,
   type CorpusIdentifiers,
 } from "../../src/lib/corpus/types";
 
-const ROOT = join(process.cwd(), "corpus");
+// Output root. Production = corpus/. Stage-4 candidate regen = corpus-candidate/ (CORPUS_OUT). The
+// generator READS the approved-identifier list from the production corpus/ but WRITES only to ROOT.
+const ROOT = resolve(process.env.CORPUS_OUT || join(process.cwd(), "corpus"));
+const IDS_DIR = join(process.cwd(), "corpus"); // identifiers.json always comes from the live corpus
+const IS_CANDIDATE = basename(ROOT).toLowerCase() !== "corpus";
 const NIM_THROTTLE_MS = 1500; // gentle on the free tier; only applied when we actually call NIM
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
@@ -39,8 +43,9 @@ async function readJson<T>(path: string): Promise<T | null> {
 }
 
 // A stored artifact is reusable iff its facts hash AND every generation version match the current
-// world — exactly the refresh policy (ADR §5). Any mismatch means regenerate.
-function isFresh(prev: CorpusRecord | null, hash: string): boolean {
+// world — exactly the refresh policy (ADR §5). Any mismatch means regenerate. A candidate run starts
+// from an EMPTY dir, so prev is always null → every record is regenerated fresh.
+function isFresh(prev: CorpusRecordV2 | null, hash: string): boolean {
   return (
     !!prev &&
     prev.provenance.factsHash === hash &&
@@ -51,7 +56,7 @@ function isFresh(prev: CorpusRecord | null, hash: string): boolean {
   );
 }
 
-type Outcome = { record: CorpusRecord; regenerated: boolean } | { skipped: string };
+type Outcome = { record: CorpusRecordV2; regenerated: boolean } | { skipped: string };
 
 async function processOne(kind: "gene" | "variant", rawId: string): Promise<Outcome> {
   // 2–3: retrieve + normalize public-record facts. A retrieval failure = not publishable → skip.
@@ -63,21 +68,24 @@ async function processOne(kind: "gene" | "variant", rawId: string): Promise<Outc
   }
   const id = facts.kind === "gene" ? facts.symbol : facts.rsid;
 
-  // 4–5: stable hash, diff against the previous artifact.
+  // 4–5: stable hash, diff against the previous artifact IN THIS ROOT (candidate reads never touch
+  // production corpus/ — the candidate dir starts empty so prev is null and every record regenerates).
   const hash = factsHash(facts);
-  const prev = await readJson<CorpusRecord>(join(ROOT, kind, `${id}.json`));
+  const prev = await readJson<CorpusRecordV2>(join(ROOT, kind, `${id}.json`));
   if (isFresh(prev, hash)) return { record: prev!, regenerated: false }; // 6: no NIM call
 
   // 6–7: generate (NIM + grounding gate). explain() returns claims=null on any ungroundable outcome.
   await sleep(NIM_THROTTLE_MS);
   const ex = await explain(facts);
 
-  // 8–9: write validated explanation OR a valid source-only artifact; preserve provenance.
-  const record: CorpusRecord = {
+  // 8–9: write validated explanation OR a valid source-only artifact; preserve provenance. The
+  // explanation state is STORED as explain() computed it (from claim origins) — never re-derived.
+  const record: CorpusRecordV2 = {
     kind,
     id,
     facts,
     claims: ex.claims,
+    explanationState: ex.state,
     aiAvailable: ex.aiAvailable,
     fallbackReason: ex.claims ? null : ex.fallbackReason,
     provenance: {
@@ -94,9 +102,40 @@ async function processOne(kind: "gene" | "variant", rawId: string): Promise<Outc
   return { record, regenerated: true };
 }
 
+async function existingRecordCount(): Promise<number> {
+  let n = 0;
+  for (const kind of ["gene", "variant"] as const) {
+    try {
+      n += (await readdir(join(ROOT, kind))).filter((f) => f.endsWith(".json")).length;
+    } catch { /* dir absent → 0 */ }
+  }
+  return n;
+}
+
 async function main() {
-  const ids = await readJson<CorpusIdentifiers>(join(ROOT, "identifiers.json"));
-  if (!ids) throw new Error("corpus/identifiers.json not found");
+  // Identifiers ALWAYS come from the live corpus/, never from the (possibly empty) candidate ROOT.
+  const ids = await readJson<CorpusIdentifiers>(join(IDS_DIR, "identifiers.json"));
+  if (!ids) throw new Error(`identifiers.json not found under ${IDS_DIR}`);
+
+  console.log(`Output root: ${ROOT}${IS_CANDIDATE ? "  [CANDIDATE MODE]" : "  [PRODUCTION]"}`);
+  // Candidate safety: a candidate regen must start from an EMPTY dir. Fail on stale records unless
+  // explicitly cleared (CORPUS_FORCE_CLEAR=1 wipes prior candidate json first). Production is exempt
+  // (its idempotent reuse is the whole point of the refresh policy).
+  if (IS_CANDIDATE) {
+    const existing = await existingRecordCount();
+    if (existing > 0 && process.env.CORPUS_FORCE_CLEAR !== "1") {
+      throw new Error(
+        `${ROOT} already contains ${existing} record(s). Refusing to write over a non-empty candidate dir. ` +
+          `Clear it first, or re-run with CORPUS_FORCE_CLEAR=1.`,
+      );
+    }
+    if (existing > 0) {
+      const { rm } = await import("node:fs/promises");
+      await rm(join(ROOT, "gene"), { recursive: true, force: true });
+      await rm(join(ROOT, "variant"), { recursive: true, force: true });
+      console.log(`CORPUS_FORCE_CLEAR=1 → cleared ${existing} stale candidate record(s).`);
+    }
+  }
   await mkdir(join(ROOT, "gene"), { recursive: true });
   await mkdir(join(ROOT, "variant"), { recursive: true });
 
@@ -108,7 +147,7 @@ async function main() {
   const limit = Number(process.env.CORPUS_LIMIT || 0);
   if (limit > 0) jobs = jobs.slice(0, limit);
 
-  const records: CorpusRecord[] = [];
+  const records: CorpusRecordV2[] = [];
   let regen = 0;
   let reused = 0;
   const skipped: string[] = [];

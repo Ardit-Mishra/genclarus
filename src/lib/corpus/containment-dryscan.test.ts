@@ -36,7 +36,7 @@ function grounded(kind: "gene" | "variant", id: string): CorpusRecord {
     kind,
     id,
     facts: { kind, id, sources: [{ label: "dbSNP", url: "https://example.test" }] } as unknown as CorpusRecord["facts"],
-    claims: [{ text: "some published claim", supportingFactIds: ["f1"], claimType: "classification_context" }],
+    claims: [{ text: "some published claim", supportingFactIds: ["f1"], claimType: "classification_context", origin: "deterministic" }],
     aiAvailable: true,
     fallbackReason: null,
     provenance: {

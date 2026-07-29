@@ -139,12 +139,15 @@ describe("explain — escalation must never worsen the primary's outcome", () =>
     synthesizeMock.mockReset();
   });
 
+  // Tested via a GENE: genes have no deterministic clinical rendering, so the outcome is purely the
+  // LLM-context path — the exact binary this invariant is about. (The escalation orchestration is
+  // identical for variants; the variant-specific improvement is covered separately below.)
   it("keeps the primary's failed_grounding when the escalation fails to produce text", async () => {
     // Primary answers but the text can't be grounded; escalation is down.
     synthesizeMock.mockImplementation((_msgs: unknown, backend: { label: string }) =>
       Promise.resolve(backend.label === "openrouter" ? down() : ok(UNGROUNDABLE)),
     );
-    const r = await explain(variant);
+    const r = await explain(gene);
     expect(r.claims).toBeNull();
     // The honest report is that we could not GROUND the answer — not that the provider was down.
     expect(r.fallbackReason).toBe("failed_grounding");
@@ -152,32 +155,46 @@ describe("explain — escalation must never worsen the primary's outcome", () =>
   });
 
   it("adopts the escalation only when it actually grounds", async () => {
-    // Primary ungroundable, escalation returns text that DOES ground → claims are served.
+    // Primary ungroundable, escalation returns a NON-CLINICAL claim that DOES ground → served.
     synthesizeMock.mockImplementation((_msgs: unknown, backend: { label: string }) => {
       if (backend.label === "openrouter") {
         const good = JSON.stringify({
           claims: [{
-            text: `The variant ${variant.rsid} in the ${variant.gene} gene is a missense variant.`,
-            supportingFactIds: ["var.consequence"],
-            claimType: "classification_context",
+            text: `The ${gene.symbol} gene encodes a nuclear phosphoprotein.`,
+            supportingFactIds: ["gene.symbol", "gene.summary"],
+            claimType: "function",
           }],
         });
         return Promise.resolve(ok(good));
       }
       return Promise.resolve(ok(UNGROUNDABLE));
     });
-    const r = await explain(variant);
+    const r = await explain(gene);
     expect(r.fallbackReason).toBeNull();
     expect(r.claims).not.toBeNull();
     expect(r.claims!.length).toBeGreaterThan(0);
+    expect(r.state).toBe("grounded");
   });
 
   it("still reports a genuine primary outage honestly (no escalation rescue)", async () => {
     // Both backends down → the outage IS the truth; the fix must not mask it as failed_grounding.
     synthesizeMock.mockResolvedValue(down());
-    const r = await explain(variant);
+    const r = await explain(gene);
     expect(r.claims).toBeNull();
     expect(r.fallbackReason).toBe("provider_unavailable");
     expect(r.aiAvailable).toBe(false);
+  });
+
+  it("a variant still renders deterministic clinical statements when the LLM is down (deterministic_only)", async () => {
+    // The core incident improvement: clinical output no longer depends on the flaky LLM.
+    synthesizeMock.mockResolvedValue(down());
+    const r = await explain(variant);
+    expect(r.state).toBe("deterministic_only");
+    expect(r.claims).not.toBeNull();
+    expect(r.claims!.length).toBeGreaterThan(0);
+    // No unverified LLM prose; the honest reason for the missing narrative is surfaced.
+    expect(r.fallbackReason).toBe("provider_unavailable");
+    // Low-penetrance qualifier from the raw significance is preserved deterministically.
+    expect(r.claims!.map((c) => c.text).join(" ").toLowerCase()).toContain("low penetrance");
   });
 });

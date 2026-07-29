@@ -44,7 +44,10 @@ type Claim = {
 };
 
 const raw = (claims: Claim[]) => JSON.stringify({ claims });
-const v = (claims: Claim[]) => validateGrounding(evidence, raw(claims));
+// Clinical claims now originate from the deterministic renderer, so the substantive checks are
+// exercised via source "deterministic" (LLM-authored clinical claims are separately rejected by §2 —
+// see the "claim-type authority" describe below).
+const v = (claims: Claim[]) => validateGrounding(evidence, raw(claims), "", "deterministic");
 
 const identity: Claim = {
   text: "The F5 gene carries the p.Arg534Gln protein change.",
@@ -242,7 +245,28 @@ describe("validateGrounding — the looked-up subject is grounded by constructio
       supportingFactIds: ["var.cond.0.significance"],
       claimType: "classification_context",
     };
-    expect(validateGrounding(evidence, raw([claim]), "rs6025 F5")).not.toBeNull();
+    expect(validateGrounding(evidence, raw([claim]), "rs6025 F5", "deterministic")).not.toBeNull();
+  });
+});
+
+describe("validateGrounding — claim-type authority (§2, source=llm)", () => {
+  const clinical: Claim = {
+    text: "Classified as Pathogenic for Thrombophilia due to activated protein C resistance.",
+    supportingFactIds: ["var.cond.0.significance"],
+    claimType: "classification_context",
+  };
+  it("rejects an LLM-authored clinical claim outright, even when it is otherwise grounded", () => {
+    // The identical claim passes as a deterministic (renderer) claim, but the LLM may not author it.
+    expect(validateGrounding(evidence, raw([clinical]), "rs6025 F5", "deterministic")).not.toBeNull();
+    expect(validateGrounding(evidence, raw([clinical]), "rs6025 F5", "llm")).toBeNull();
+  });
+  it("still accepts LLM identity/function claims", () => {
+    const identityClaim: Claim = {
+      text: "The F5 gene carries the p.Arg534Gln protein change.",
+      supportingFactIds: ["var.gene", "var.protein"],
+      claimType: "identity",
+    };
+    expect(validateGrounding(evidence, raw([identityClaim]), "rs6025 F5", "llm")).not.toBeNull();
   });
 });
 

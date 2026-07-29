@@ -20,7 +20,7 @@ function grounded(kind: "gene" | "variant", id: string): CorpusRecord {
     kind,
     id,
     facts: { kind, id, sources: [{ label: "dbSNP", url: "https://example.test" }] } as unknown as CorpusRecord["facts"],
-    claims: [{ text: "an unverified claim", supportingFactIds: ["f1"], claimType: "function" }],
+    claims: [{ text: "an unverified claim", supportingFactIds: ["f1"], claimType: "function", origin: "llm" }],
     aiAvailable: true,
     fallbackReason: null,
     provenance: {

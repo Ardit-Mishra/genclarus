@@ -4,7 +4,9 @@
 
 // Bump when the synthesis prompts (system/user messages) change meaningfully.
 // 2.0.0 — Phase 3: prose synthesis replaced by claim-level structured generation (grounding).
-export const PROMPT_VERSION = "2.0.0";
+// 3.0.0 — 2026-07-28 incident: LLM restricted to non-clinical identity/function; clinical/numeric
+//         statements now rendered deterministically. Invalidates every cached/committed explanation.
+export const PROMPT_VERSION = "3.0.0";
 
 // The NIM model id actually called — mirrors src/lib/nim.ts, which imports this constant so the
 // two can never drift apart. Phase 3 uses a fast NON-reasoning instruct model: claim-level JSON
@@ -23,4 +25,6 @@ export const OPENROUTER_MODEL =
 
 // Bump when the shape of the JSON returned by /api/gene, /api/variant or /api/explain changes.
 // 2.0.0 — Phase 3: /api/explain returns grounded `claims` (with citations) instead of `explanation`.
-export const OUTPUT_SCHEMA_VERSION = "2.0.0";
+// 3.0.0 — 2026-07-28 incident: responses carry an explanation `state`
+//         (grounded | deterministic_only | source_only); clinical claims are rendered deterministically.
+export const OUTPUT_SCHEMA_VERSION = "3.0.0";

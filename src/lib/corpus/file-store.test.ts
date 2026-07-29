@@ -14,7 +14,7 @@ function record(kind: "gene" | "variant", id: string): CorpusRecord {
     id,
     // Minimal facts stub — the store does not interpret facts, it only serves the artifact.
     facts: { kind, id } as unknown as CorpusRecord["facts"],
-    claims: kind === "gene" ? [{ text: "x", supportingFactIds: ["f1"], claimType: "identity" }] : null,
+    claims: kind === "gene" ? [{ text: "x", supportingFactIds: ["f1"], claimType: "identity", origin: "llm" }] : null,
     aiAvailable: kind === "gene",
     fallbackReason: kind === "gene" ? null : "failed_grounding",
     provenance: {
