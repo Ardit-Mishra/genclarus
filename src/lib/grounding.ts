@@ -123,21 +123,31 @@ const CLASSIFICATION_LABELS = [
   "benign",
 ];
 
-const PROHIBITED: RegExp[] = [
+// PERSONAL / ADVICE language — prohibited on EVERY claim (LLM and deterministic). None of these can
+// legitimately appear in a ClinVar condition name or significance, so they always signal overreach.
+const PROHIBITED_ADVICE: RegExp[] = [
   /\byou(r|rs)?\b/i, // personal: you, your, yours
   /\byou'?re\b/i,
-  /\bi\s+(recommend|advise|suggest)\b/i,
+  /\b(recommend|advis|suggest)\w*/i, // recommend(ed) / advise(d)/advisable / suggest(ed) — active or passive
   /\bdiagnos(e|es|ed|is|tic|ing)\b/i,
   /\bprognos(is|es|tic)\b/i,
-  /\btreat(s|ed|ing|ment|ments)?\b/i,
-  /\btherap(y|ies|eutic)\b/i,
-  /\b(dose|doses|dosage|dosing)\b/i,
   /\bprescrib\w*/i,
-  /\bmedication?s?\b/i,
   /\b(should|must|need to|ought to)\b/i,
   /\bconsult\w*/i,
   /\bat risk\b/i,
   /\bcures?\b/i,
+];
+
+// CLINICAL-DOMAIN NOUNS — barred from LLM prose (the model must not drift into treatment/therapy
+// talk), but LEGITIMATELY present in grounded condition names the deterministic renderer quotes
+// verbatim (e.g. "Hypertension resistant to conventional therapy", "methotrexate response - Toxicity",
+// "warfarin dose"). So they are prohibited only for source==="llm"; a deterministic claim that
+// reproduces a cited condition is not giving advice.
+const PROHIBITED_CLINICAL_NOUN: RegExp[] = [
+  /\btreat(s|ed|ing|ment|ments)?\b/i,
+  /\btherap(y|ies|eutic)\b/i,
+  /\b(dose|doses|dosage|dosing)\b/i,
+  /\bmedication?s?\b/i,
 ];
 
 // Clinical claim types — the LLM may not author these (§2); only the deterministic renderer may.
@@ -308,8 +318,11 @@ function claimViolation(
   const citedOrigins = new Set(facts.map((f) => f.qualifiers?.classificationType).filter(Boolean));
   if (/\bsomatic\b/.test(lower) && !citedOrigins.has("somatic")) return "invented_origin";
 
-  // §9 prohibited personal / clinical-advice language.
-  if (PROHIBITED.some((re) => re.test(text))) return "prohibited_language";
+  // §9 prohibited language. Personal/advice language is barred on every claim; clinical-domain nouns
+  // (therapy/treatment/dose/medication) are barred only in LLM prose — a deterministic claim quoting a
+  // cited condition name that contains one is faithful data, not advice.
+  if (PROHIBITED_ADVICE.some((re) => re.test(text))) return "prohibited_language";
+  if (source === "llm" && PROHIBITED_CLINICAL_NOUN.some((re) => re.test(text))) return "prohibited_language";
 
   return null;
 }

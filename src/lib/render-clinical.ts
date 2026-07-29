@@ -17,20 +17,27 @@ function starsPhrase(n: number): string {
   return `${n} review star${n === 1 ? "" : "s"}`;
 }
 
-// One classification claim for one condition, reproducing every GENUINELY-PRESENT tuple field:
-// condition, classification, penetrance/uncertainty (via the significance label + parsed qualifiers),
-// origin (germline/somatic), review confidence (star count — the faithful encoding of reviewStatus),
-// and assertion date (lastEvaluated) when present. There is NO per-assertion source/accession id in
-// the normalized ClinVar record, so none is asserted — provenance is record-level (factsHash + sources).
-function conditionClaim(rsid: string, c: ConditionClassification, i: number): GroundedClaim {
+// The significance of one assertion WITH every qualifier that must survive per §8: low penetrance,
+// toxicity, and (since a conflict notice has no separate origin clause) somatic. Uncertainty is already
+// carried by the significance label itself ("Uncertain significance"/"Conflicting…").
+function sigWithQuals(c: ConditionClassification, includeOrigin: boolean): string {
   const sig = parseSignificance(c.rawSignificance || c.significance);
   const cond = parseCondition(c.condition);
-  const origin = normalizeOrigin(c.origin);
-
   const quals: string[] = [];
   if (sig.lowPenetrance) quals.push("low penetrance");
   if (cond.toxicity || sig.toxicity) quals.push("toxicity");
-  const qualStr = quals.length ? ` (${quals.join(", ")})` : "";
+  if (includeOrigin && normalizeOrigin(c.origin) === "somatic") quals.push("somatic");
+  return `${c.significance}${quals.length ? ` (${quals.join(", ")})` : ""}`;
+}
+
+// One classification claim for one condition, reproducing every GENUINELY-PRESENT tuple field:
+// condition, classification, penetrance/uncertainty/toxicity qualifiers, origin (germline/somatic),
+// review confidence (star count — the faithful encoding of reviewStatus), and assertion date
+// (lastEvaluated) when present. There is NO per-assertion source/accession id in the normalized
+// ClinVar record, so none is asserted — provenance is record-level (factsHash + sources).
+function conditionClaim(rsid: string, c: ConditionClassification, i: number): GroundedClaim {
+  const cond = parseCondition(c.condition);
+  const origin = normalizeOrigin(c.origin);
   const originStr = origin !== "unknown" ? `, ${origin}` : "";
   const dateStr = c.lastEvaluated ? `; last evaluated ${c.lastEvaluated}` : "";
 
@@ -41,20 +48,20 @@ function conditionClaim(rsid: string, c: ConditionClassification, i: number): Gr
   if (c.lastEvaluated) ids.push(`var.cond.${i}.lastEvaluated`);
 
   return {
-    text: `In ClinVar, ${rsid} is classified as ${c.significance}${qualStr} for ${cond.base} (${starsPhrase(c.reviewStars)}${originStr}${dateStr}).`,
+    text: `In ClinVar, ${rsid} is classified as ${sigWithQuals(c, false)} for ${cond.base} (${starsPhrase(c.reviewStars)}${originStr}${dateStr}).`,
     supportingFactIds: ids,
     claimType: "classification_context",
   };
 }
 
-// A deterministic conflict notice for a condition with divergent significances — lists them, never
-// chooses. Cites each assertion's classification fact (all share the one condition, so §7 passes).
+// A deterministic conflict notice for ONE condition (same full name) with divergent significances —
+// lists each WITH its qualifiers (so no penetrance/toxicity/somatic is lost), never chooses a winner.
 function conflictClaim(
   rsid: string,
   group: { c: ConditionClassification; i: number }[],
 ): GroundedClaim {
   const cond = parseCondition(group[0].c.condition).base;
-  const sigs = group.map((g) => g.c.significance).join(" and ");
+  const sigs = group.map((g) => sigWithQuals(g.c, true)).join(" and ");
   return {
     text: `In ClinVar, ${rsid} has differing classifications for ${cond} across submissions: ${sigs}.`,
     supportingFactIds: group.map((g) => `var.cond.${g.i}.significance`),
@@ -88,12 +95,14 @@ export function renderClinicalClaims(v: VariantFacts): GroundedClaim[] {
   }
 
   // Per-condition classifications — ALL of them (deterministic assertions are never truncated;
-  // Stage-3 correction C). Group same-condition assertions; a condition with >1 distinct significance
+  // Stage-3 correction C). Group by the FULL condition name so only assertions for the EXACT same
+  // condition can form a conflict notice — distinct PGx endpoints ("… - Toxicity" vs "… - Efficacy")
+  // stay separate, each keeping its own qualifiers. A grouped condition with >1 distinct significance
   // becomes a conflict notice, never a chosen winner.
   const considered = v.conditionClassifications.map((c, i) => ({ c, i }));
   const byCondition = new Map<string, { c: ConditionClassification; i: number }[]>();
   for (const entry of considered) {
-    const key = parseCondition(entry.c.condition).base.toLowerCase();
+    const key = entry.c.condition.trim().toLowerCase();
     const arr = byCondition.get(key);
     if (arr) arr.push(entry);
     else byCondition.set(key, [entry]);
