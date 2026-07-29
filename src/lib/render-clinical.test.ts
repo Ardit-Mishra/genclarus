@@ -56,6 +56,56 @@ describe("renderClinicalClaims — complete-tuple field preservation (only genui
   });
 });
 
+// Regressions for the two Stage-4 candidate-audit findings (silent truncation of a deterministic
+// assertion). Both must render AND survive the self-validation gate — no assertion dropped.
+describe("renderClinicalClaims — Stage-4 audit regressions", () => {
+  it("a condition NAME containing 'therapy'/'treatment' is not a prohibited-language false positive", () => {
+    // rs1799983 class: "Hypertension resistant to conventional therapy" was dropped as prohibited.
+    const v = F.variant({
+      rsid: "rs1799983c", gene: "AGT",
+      conditionClassifications: [
+        F.condition({ condition: "Hypertension resistant to conventional therapy", significance: "Pathogenic", rawSignificance: "Pathogenic", reviewStars: 0 }),
+        F.condition({ condition: "Salt-losing nephropathy", significance: "Benign", rawSignificance: "Benign", significanceRank: 8 }),
+      ],
+    });
+    const { claims, survived } = render(v);
+    expect(survived.length).toBe(claims.length); // nothing dropped
+    expect(claims.map((c) => c.text).join(" ")).toContain("Hypertension resistant to conventional therapy");
+  });
+
+  it("a PGx toxicity conflict keeps the toxicity qualifier and separates distinct endpoints", () => {
+    // rs3918290 class: base-grouping conflated "…- Toxicity" with the plain endpoint and dropped toxicity.
+    const v = F.variant({
+      rsid: "rs3918290c", gene: "DPYD",
+      conditionClassifications: [
+        F.condition({ condition: "fluorouracil response - Toxicity", significance: "Drug response", rawSignificance: "drug response", reviewStars: 2 }),
+        F.condition({ condition: "fluorouracil response - Efficacy", significance: "Pathogenic", rawSignificance: "Pathogenic", reviewStars: 1 }),
+      ],
+    });
+    const { claims, survived } = render(v);
+    expect(survived.length).toBe(claims.length); // nothing dropped
+    // Two DISTINCT endpoints → two separate claims, not one conflated conflict notice.
+    const condClaims = claims.filter((c) => c.claimType === "classification_context" || c.claimType === "condition_context");
+    expect(condClaims.length).toBe(2);
+    expect(claims.map((c) => c.text).join(" ").toLowerCase()).toContain("toxicity");
+  });
+
+  it("a genuine same-condition conflict notice preserves each member's qualifiers", () => {
+    const v = F.variant({
+      rsid: "rs1799963c", gene: "F2",
+      conditionClassifications: [
+        F.condition({ condition: "Ischemic stroke", significance: "Pathogenic", rawSignificance: "Pathogenic, low penetrance", reviewStars: 1 }),
+        F.condition({ condition: "Ischemic stroke", significance: "risk factor", rawSignificance: "risk factor", reviewStars: 0 }),
+      ],
+    });
+    const { claims, survived } = render(v);
+    expect(survived.length).toBe(claims.length);
+    const conflict = claims.find((c) => c.claimType === "condition_context");
+    expect(conflict).toBeTruthy();
+    expect(conflict!.text.toLowerCase()).toContain("low penetrance"); // qualifier not lost in the notice
+  });
+});
+
 describe("renderClinicalClaims — faithful, self-validating", () => {
   it("every rendered claim passes the hardened gate (deterministic source)", () => {
     for (const v of [F.rs4149056, F.rs2228145, F.rs6025, F.rs1799963, F.rs1801133, F.rs334]) {

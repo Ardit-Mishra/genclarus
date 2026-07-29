@@ -209,6 +209,30 @@ describe("validateGrounding — semantic rejection → fallback", () => {
       ]),
     ).toBeNull();
   });
+
+  it("still rejects personal/advice language for a DETERMINISTIC claim (advice subset is universal)", () => {
+    const advice = {
+      text: "You should consult a specialist about thrombophilia.",
+      supportingFactIds: ["var.cond.0.significance"],
+      claimType: "classification_context",
+    };
+    expect(validateGrounding(evidence, raw([advice]), "rs6025 F5", "deterministic")).toBeNull();
+  });
+
+  it("allows a clinical-domain NOUN (therapy) in a deterministic claim but not in LLM prose", () => {
+    // A grounded condition name containing "therapy" is faithful data for a deterministic claim, but
+    // the same word is prohibited in LLM-authored prose.
+    const ev2 = [
+      { id: "var.cond.0.significance", source: "clinvar" as const, field: "classification", value: "Pathogenic", qualifiers: { condition: "Hypertension resistant to conventional therapy" } },
+    ];
+    const claim = {
+      text: "Classified as Pathogenic for Hypertension resistant to conventional therapy.",
+      supportingFactIds: ["var.cond.0.significance"],
+      claimType: "classification_context",
+    };
+    expect(validateGrounding(ev2, raw([claim]), "rs1 GENE", "deterministic")).not.toBeNull();
+    expect(validateGrounding(ev2, raw([claim]), "rs1 GENE", "llm")).toBeNull();
+  });
 });
 
 describe("validateGrounding — the looked-up subject is grounded by construction", () => {
