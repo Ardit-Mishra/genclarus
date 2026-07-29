@@ -15,7 +15,7 @@
 
 import { readFile, writeFile, mkdir, readdir } from "node:fs/promises";
 import { basename, join, resolve } from "node:path";
-import { getGeneFacts, getVariantFacts, type Facts } from "../../src/lib/facts";
+import { getGeneFacts, getVariantFacts, normalizeGeneSymbol, normalizeRsid, type Facts } from "../../src/lib/facts";
 import { explain, factsHash } from "../../src/lib/explain";
 import { PROMPT_VERSION, MODEL_ID, OUTPUT_SCHEMA_VERSION } from "../../src/lib/version";
 import {
@@ -71,12 +71,33 @@ function isFresh(prev: CorpusRecordV2 | null, hash: string): boolean {
 
 type Outcome = { record: CorpusRecordV2; regenerated: boolean } | { skipped: string };
 
+// A prev record is "structurally fresh" if it was generated under the current versions and is not a
+// transient failure — used when we cannot recompute the facts hash (a transient fetch failure) but
+// must NOT drop an already-good record.
+function structurallyFresh(prev: CorpusRecordV2 | null): boolean {
+  return (
+    !!prev &&
+    prev.provenance.promptVersion === PROMPT_VERSION &&
+    prev.provenance.modelId === MODEL_ID &&
+    prev.provenance.schemaVersion === OUTPUT_SCHEMA_VERSION &&
+    prev.provenance.corpusSchemaVersion === CORPUS_SCHEMA_VERSION &&
+    !(prev.claims === null && !!prev.fallbackReason && TRANSIENT_FALLBACKS.has(prev.fallbackReason))
+  );
+}
+
 async function processOne(kind: "gene" | "variant", rawId: string): Promise<Outcome> {
-  // 2–3: retrieve + normalize public-record facts. A retrieval failure = not publishable → skip.
+  // 2–3: retrieve + normalize public-record facts. A retrieval failure is TRANSIENT (upstream down) —
+  // it must never DROP an already-good record: reuse a structurally-fresh prev instead of skipping,
+  // so a manifest rebuild can't silently lose a valid variant. Only skip when there is nothing to reuse.
   let facts: Facts;
   try {
     facts = kind === "gene" ? await getGeneFacts(rawId) : await getVariantFacts(rawId);
   } catch (err) {
+    try {
+      const nid = kind === "gene" ? normalizeGeneSymbol(rawId) : normalizeRsid(rawId);
+      const prev = await readJson<CorpusRecordV2>(join(ROOT, kind, `${nid}.json`));
+      if (structurallyFresh(prev)) return { record: prev!, regenerated: false };
+    } catch { /* fall through to skip */ }
     return { skipped: `${rawId}: facts unavailable (${(err as Error).message})` };
   }
   const id = facts.kind === "gene" ? facts.symbol : facts.rsid;
