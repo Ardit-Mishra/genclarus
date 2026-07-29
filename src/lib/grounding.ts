@@ -15,6 +15,17 @@
 // sounding invented clinical claim is not. Pure and synchronous except for ground()'s orchestration.
 
 import type { EvidenceFact } from "./evidence";
+import { frequencyRenderings } from "./format-frequency";
+import type { ClaimOrigin } from "./explanation-state";
+
+// Where a claim came from. Clinical/numeric claims may originate ONLY from the deterministic renderer;
+// the LLM is restricted to identity/function context, so an LLM-authored clinical claim is rejected.
+// Same domain as ClaimOrigin (the persisted per-claim origin), so the two never drift.
+export type ClaimSource = ClaimOrigin;
+
+// A claim tagged with its origin — persisted on corpus records and used to compute the explanation
+// state authoritatively (never from claimType). The base GroundedClaim is the LLM/wire shape.
+export type OriginatedClaim = GroundedClaim & { origin: ClaimOrigin };
 
 export type GroundedClaimType =
   | "identity"
@@ -129,6 +140,46 @@ const PROHIBITED: RegExp[] = [
   /\bcures?\b/i,
 ];
 
+// Clinical claim types — the LLM may not author these (§2); only the deterministic renderer may.
+const CLINICAL_CLAIM_TYPES = new Set<GroundedClaimType>([
+  "classification_context",
+  "condition_context",
+  "frequency_context",
+  "uncertainty",
+]);
+
+// POSITIVE population licensing (Stage-3 correction D). Correctness does NOT depend on enumerating
+// every ancestry: a frequency/allele claim may name a population ONLY IF a cited numeric fact carries
+// matching structured `population` metadata. We detect "the claim is making a population-scoped
+// frequency statement" via the shape "<N>% ... in [the] <Capitalized/known> population/ancestry" and
+// via the known-term list, then require positive licensing. The list below is DEFENCE IN DEPTH (catches
+// bare mentions), not the basis of correctness — an unknown ancestry with no licensing fact is still
+// rejected by the shape rule. Since no aggregate gnomAD fact carries a population today, every
+// population-scoped frequency claim is currently rejected — which is correct (F-01 class).
+const POPULATION_TERMS = [
+  "african", "european", "east asian", "south asian", "asian", "latino",
+  "admixed american", "ashkenazi", "finnish", "non-finnish", "amish",
+  "middle eastern", "oceanian", "native american", "hispanic", "caucasian",
+];
+
+// A SPECIFIC-SUBGROUP scope, independent of WHICH ancestry is named: a Title-cased descriptor
+// immediately before a population/ancestry/subgroup noun (e.g. "African population", "Yoruba
+// ancestry", "Ashkenazi subgroup"). This catches ancestries absent from the list above WITHOUT
+// enumerating them (correction D). It deliberately does NOT fire for AGGREGATE descriptors — "general
+// population", "the gnomAD population", "overall population" are the non-stratified aggregate, which an
+// aggregate AF fact legitimately licenses. The captured descriptor is checked against AGGREGATE_POP
+// (case-insensitively) so a sentence-initial "General population…" is still treated as aggregate.
+const POPULATION_SCOPE_RE = /\b([A-Z][a-z]+)\s+(?:population|populations|ancestry|ancestries|subgroup|subpopulation)\b/g;
+const AGGREGATE_POP = new Set([
+  "general", "overall", "total", "human", "global", "worldwide", "entire", "whole", "broad",
+  "study", "gnomad", "reference", "combined", "sampled", "background", "wider", "larger", "adult",
+]);
+
+// A number written as a percentage — must be a canonical rounding of a CITED allele-frequency fact.
+const PERCENT_RE = /(\d+(?:\.\d+)?)\s*%/g;
+// A bare dbSNP "LOC<digits>" locus placeholder must never be promoted into authoritative prose (F-06).
+const LOC_IDENTITY_RE = /\bLOC\d+\b/i;
+
 const NUMBER_RE = /\d+(?:\.\d+)?/g;
 const PROTEIN_RE = /p\.[A-Za-z0-9]+/gi;
 const GENE_CAPS_RE = /\b[A-Z][A-Z0-9]{1,9}\b/g;
@@ -152,99 +203,153 @@ function citedCorpus(cited: EvidenceFact[]): string {
 }
 
 // Returns a rejection reason string, or null if the claim is sound. (Reason is diagnostic only.)
-// `subject` is the looked-up identifier (gene symbol or rsID). It is grounded by construction —
-// the user asked about it and every fact describes it — so naming it is never an invented entity.
+// Applies the approved hardened order §2–§9 (§1 parse happens in parseGrounded). `subject` is the
+// looked-up identifier (grounded by construction — the user asked about it and every fact describes
+// it). `source` decides §2: an LLM-authored clinical claim is rejected outright; a deterministic
+// (renderer) claim is allowed to be clinical and must survive the substantive checks by construction.
 function claimViolation(
   claim: GroundedClaim,
   byId: Map<string, EvidenceFact>,
   subject: string,
+  source: ClaimSource,
 ): string | null {
-  // Citation: every id must resolve to a real fact.
+  const text = claim.text;
+  const lower = text.toLowerCase();
+
+  // §2 claim-type authority — clinical/numeric claims may originate ONLY from the renderer.
+  if (source === "llm" && CLINICAL_CLAIM_TYPES.has(claim.claimType)) return "llm_clinical_claim";
+
+  // §3 citation existence — every id must resolve to a real fact.
   const cited = claim.supportingFactIds.map((id) => byId.get(id));
   if (cited.some((f) => !f)) return "unknown_fact_id";
   const facts = cited as EvidenceFact[];
 
-  const text = claim.text;
-  const lower = text.toLowerCase();
-
-  // Prohibited personal / clinical language.
-  if (PROHIBITED.some((re) => re.test(text))) return "prohibited_language";
-
   const corpus = citedCorpus(facts);
-  // The subject identifier is grounded by construction, so its own tokens — including the digits
-  // inside an rsID like "rs6025" — count as grounded for entity and number checks. Classifications
-  // still never draw on the subject; those must always trace to a cited classification fact.
+  // The subject identifier is grounded by construction, so its own tokens count for entity/number
+  // checks. Classifications still never draw on the subject.
   const entityCorpus = `${corpus} ${subject.toLowerCase()}`;
-  const allowedNumbers = numbers(entityCorpus);
+  const corpusNumbers = numbers(entityCorpus);
 
-  // Numbers: every number in the claim must appear among the cited facts' (or subject's) numbers.
+  // §4 kind-bound numeric fidelity. A PERCENT number must be a canonical rounding of a CITED
+  // allele-frequency fact — never a review-star count, date, or another fact's number. Non-percent
+  // numbers keep the "present in a cited value / the subject" rule (protein positions, allele counts).
+  const afRenderings = new Set<string>();
+  for (const f of facts)
+    if (f.numeric?.kind === "af")
+      for (const r of frequencyRenderings(f.numeric.rawValue)) afRenderings.add(r);
+  const percentNumbers = new Set([...text.matchAll(PERCENT_RE)].map((m) => m[1]));
   for (const n of numbers(text)) {
-    if (!allowedNumbers.has(n)) return "unsupported_number";
+    if (percentNumbers.has(n)) {
+      if (!afRenderings.has(n)) return "unsupported_number";
+    } else if (!corpusNumbers.has(n)) {
+      return "unsupported_number";
+    }
   }
 
-  // Protein-change tokens (p.Xxx###Yyy): must appear verbatim in the cited corpus.
-  for (const p of text.match(PROTEIN_RE) ?? []) {
+  // §5 population anchoring — POSITIVE licensing (correction D). A population-scoped claim is allowed
+  // ONLY when a cited numeric fact carries matching structured `population` metadata. Two detectors,
+  // neither of which is the basis of correctness on its own:
+  //  (a) shape rule — any "…in/among/of … population/ancestry/subgroup" phrasing (ancestry-agnostic);
+  //  (b) known-term list — defence in depth for bare mentions ("common in Africans").
+  // A named population is licensed iff some cited fact's population metadata matches it; a scoped claim
+  // with NO population-bearing cited fact at all is rejected regardless of which ancestry is named.
+  const licensedPops = new Set(
+    facts.map((f) => f.numeric?.population?.toLowerCase()).filter((p): p is string => !!p),
+  );
+  const matchedTerms = POPULATION_TERMS.filter((pop) => new RegExp(`\\b${pop}\\b`).test(lower));
+  for (const pop of matchedTerms) {
+    if (!licensedPops.has(pop)) return "unsupported_population";
+  }
+  // Specific-subgroup phrasing (a Title-cased ancestry before a population noun) that is NOT an
+  // aggregate descriptor requires a licensing fact — regardless of which ancestry is named.
+  for (const m of text.matchAll(POPULATION_SCOPE_RE)) {
+    const descriptor = m[1].toLowerCase();
+    if (AGGREGATE_POP.has(descriptor)) continue; // "general/overall/gnomAD… population" = aggregate, fine
+    if (!licensedPops.has(descriptor)) return "unsupported_population";
+  }
+
+  // §6 entity + identity policy.
+  if (LOC_IDENTITY_RE.test(text)) return "uncurated_identity"; // never promote a LOC… placeholder
+  for (const p of text.match(PROTEIN_RE) ?? [])
     if (!corpus.includes(p.toLowerCase())) return "unsupported_protein";
-  }
-
-  // Gene-like ALL-CAPS tokens: must be grounded (cited facts or the subject) unless explicitly safe.
   for (const g of text.match(GENE_CAPS_RE) ?? []) {
     if (SAFE_CAPS.has(g.toUpperCase())) continue;
     if (!entityCorpus.includes(g.toLowerCase())) return "unsupported_entity";
   }
-
-  // Multi-word Title-Case runs (condition names): must be grounded in the cited corpus or subject.
-  for (const run of text.match(TITLECASE_RUN_RE) ?? []) {
+  for (const run of text.match(TITLECASE_RUN_RE) ?? [])
     if (!entityCorpus.includes(run.toLowerCase())) return "unsupported_condition";
-  }
 
-  // Classification labels: any classification word in the claim must be backed by a cited
-  // classification fact whose value carries it.
-  const classificationValues = facts
-    .filter((f) => f.field === "classification")
-    .map((f) => f.value.toLowerCase());
-  for (const label of CLASSIFICATION_LABELS) {
-    if (lower.includes(label) && !classificationValues.some((val) => val.includes(label))) {
+  // §7 per-condition assertion integrity — a classification label must trace to a cited classification
+  // fact, and a single claim may not collapse the verdicts of MORE THAN ONE condition.
+  const classFacts = facts.filter((f) => f.field === "classification");
+  const classValues = classFacts.map((f) => f.value.toLowerCase());
+  for (const label of CLASSIFICATION_LABELS)
+    if (lower.includes(label) && !classValues.some((v) => v.includes(label)))
       return "unsupported_classification";
-    }
-  }
+  const citedConditions = new Set(
+    classFacts.map((f) => f.qualifiers?.condition?.toLowerCase()).filter(Boolean),
+  );
+  if (citedConditions.size > 1) return "collapsed_condition";
+  // A single-verdict classification claim may not fold together divergent significances (even for the
+  // same condition). A deliberate conflict NOTICE uses claimType "condition_context" and is exempt —
+  // it names each significance rather than choosing one.
+  const distinctSigs = new Set(classFacts.map((f) => f.value.toLowerCase()));
+  if (claim.claimType === "classification_context" && distinctSigs.size > 1) return "collapsed_condition";
 
-  // Qualifier preservation: citing an uncertain/conflicting classification obliges saying so;
-  // citing a somatic classification obliges naming it (germline is the unmarked default).
+  // §8 qualifier preservation — every qualifier on a cited fact must survive; no invented origin.
   for (const f of facts) {
-    const u = f.qualifiers?.uncertainty;
-    if (u && !lower.includes(u)) return "dropped_uncertainty";
-    if (f.qualifiers?.classificationType === "somatic" && !lower.includes("somatic")) {
-      return "dropped_somatic";
-    }
+    const q = f.qualifiers;
+    if (!q) continue;
+    if (q.uncertainty && !lower.includes(q.uncertainty)) return "dropped_uncertainty";
+    if (q.lowPenetrance && !lower.includes("low penetrance")) return "dropped_penetrance";
+    if (q.toxicity && !lower.includes("toxicity")) return "dropped_toxicity";
+    if (q.classificationType === "somatic" && !lower.includes("somatic")) return "dropped_somatic";
   }
+  const citedOrigins = new Set(facts.map((f) => f.qualifiers?.classificationType).filter(Boolean));
+  if (/\bsomatic\b/.test(lower) && !citedOrigins.has("somatic")) return "invented_origin";
+
+  // §9 prohibited personal / clinical-advice language.
+  if (PROHIBITED.some((re) => re.test(text))) return "prohibited_language";
 
   return null;
 }
 
-// Keep only the claims that pass every check. Filtering, not all-or-nothing: one ungroundable
-// sentence must not suppress the sound ones (the guarantee is that what's DISPLAYED is grounded,
-// §1/§7). A claim that fails is simply not shown; the deterministic facts UI still stands alone.
-function keepValidClaims(
+// The rejection reason for a claim (or null if sound), for diagnostics/scans. Exposed for the
+// existing-corpus dry scan so each rejection can be attributed to its rule.
+export function claimRejectionReason(
   evidence: EvidenceFact[],
-  explanation: GroundedExplanation,
+  claim: GroundedClaim,
   subject: string,
+  source: ClaimSource,
+): string | null {
+  const byId = new Map(evidence.map((f) => [f.id, f]));
+  return claimViolation(claim, byId, subject, source);
+}
+
+// Keep only the claims that pass every check. Filtering, not all-or-nothing: one ungroundable
+// sentence must not suppress the sound ones. Exposed so the renderer + explain path can validate
+// deterministic and LLM claims through the identical gate.
+export function validateClaims(
+  evidence: EvidenceFact[],
+  claims: GroundedClaim[],
+  subject: string,
+  source: ClaimSource,
 ): GroundedClaim[] {
   const byId = new Map(evidence.map((f) => [f.id, f]));
-  return explanation.claims.filter((c) => claimViolation(c, byId, subject) === null);
+  return claims.filter((c) => claimViolation(c, byId, subject, source) === null);
 }
 
 // Single-shot pure validation: parse structurally, then drop ungrounded claims. Returns the
-// surviving claims, or null when NONE survive (→ source-only fallback). `subject` is the looked-up
-// identifier (grounded by construction). Exposed for tests.
+// surviving claims, or null when NONE survive (→ source-only fallback). `source` defaults to "llm".
 export function validateGrounding(
   evidence: EvidenceFact[],
   rawText: string,
   subject = "",
+  source: ClaimSource = "llm",
 ): GroundedExplanation | null {
   const parsed = parseGrounded(rawText);
   if (!parsed) return null;
-  const claims = keepValidClaims(evidence, parsed, subject);
+  const claims = validateClaims(evidence, parsed.claims, subject, source);
   return claims.length ? { claims } : null;
 }
 
@@ -262,6 +367,7 @@ export async function ground(
   evidence: EvidenceFact[],
   generate: (repair: boolean) => Promise<string | null>,
   subject = "",
+  source: ClaimSource = "llm",
 ): Promise<GroundResult> {
   const first = await generate(false);
   if (first === null) return { ok: false, reason: "no_output" };
@@ -273,7 +379,7 @@ export async function ground(
     if (!parsed) return { ok: false, reason: "parse" };
   }
 
-  const claims = keepValidClaims(evidence, parsed, subject);
+  const claims = validateClaims(evidence, parsed.claims, subject, source);
   if (claims.length === 0) return { ok: false, reason: "policy" };
   return { ok: true, explanation: { claims } };
 }

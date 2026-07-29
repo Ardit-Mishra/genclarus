@@ -23,23 +23,26 @@ function serializeEvidence(evidence: EvidenceFact[]): string {
 
 // Shared, compact rules. The schema is stated here AND enforced by the validator — the prompt is a
 // request, the validator is the guarantee.
+// The model writes NON-CLINICAL context only. Every clinical/numeric statement (classification,
+// condition verdict, frequency, drug-response, review status, penetrance, germline/somatic) is now
+// built deterministically from the facts by src/lib/render-clinical.ts and is NOT the model's job —
+// the validator rejects any clinical claim the model returns. This keeps the LLM to what it is good
+// at (plain-language identity + general biological function) and out of the numbers.
 const SYSTEM = [
-  "You turn verified biomedical facts into short, grounded claims for curious non-specialists.",
+  "You explain what a human gene or variant IS and what it broadly DOES, for curious non-specialists.",
   "Return ONLY a JSON object of this exact shape, with no markdown, no code fences and no text outside it:",
   '{"claims":[{"text":string,"supportingFactIds":string[],"claimType":string}]}',
   "Rules — follow every one:",
-  "- Write NO MORE THAN 4 claims total. This is a hard limit. Do NOT write one claim per condition.",
-  "- Classifications are PER CONDITION and must not be merged into a single overall verdict; but when a variant has many conditions, SUMMARIZE how the classifications vary in one or two claims (e.g. name the most severe classification and note that others differ) rather than listing every condition.",
+  "- Write NO MORE THAN 3 claims total. This is a hard limit.",
+  "- Write ONLY non-clinical context: gene identity and general biological function. claimType MUST be 'identity' or 'function' only.",
+  "- Do NOT state any clinical classification, condition verdict, pathogenicity, allele frequency, percentage, drug response, toxicity, review status, penetrance, or germline/somatic status — those are added separately and will be REJECTED if you write them.",
   "- Each claim is exactly ONE sentence of at most 35 words, citing 1 to 3 supportingFactIds, using ONLY ids from the facts given.",
-  "- State each condition's classification using the EXACT classification value given for it. Never upgrade a benign, risk-factor, uncertain, drug-response or protective classification to 'pathogenic'.",
-  "- Every number, gene symbol, protein change, classification label and condition name in a claim MUST appear verbatim in the facts it cites. Invent nothing.",
+  "- Every gene symbol, protein change and entity in a claim MUST appear verbatim in the facts it cites. Invent nothing.",
   "- Do not address the reader ('you'/'your'). No diagnosis, prognosis, treatment, dosage, personal risk, or causal/actionable claims.",
-  "- If a cited classification is uncertain or conflicting, the claim must say so.",
-  "- claimType is one of: identity, function, classification_context, condition_context, frequency_context, uncertainty.",
 ].join("\n");
 
 const REPAIR =
-  "Your previous reply did not match the schema. Return ONLY a JSON object {\"claims\":[...]} with AT MOST 4 claims, each exactly one sentence citing 1-3 of the given ids, and no text outside the JSON.";
+  "Your previous reply did not match the schema. Return ONLY a JSON object {\"claims\":[...]} with AT MOST 3 claims of claimType 'identity' or 'function' only, each exactly one sentence citing 1-3 of the given ids, and no text outside the JSON.";
 
 export function messagesFor(facts: Facts, evidence: EvidenceFact[], repair: boolean): NimMessage[] {
   const subject =

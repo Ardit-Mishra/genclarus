@@ -37,14 +37,15 @@ const variant = { kind: "variant", rsid: "rs6025" } as unknown as Facts;
 
 function grounded(): Explanation {
   return {
-    claims: [{ text: "A claim.", claimType: "function", supportingFactIds: ["gene.summary"] }],
+    claims: [{ text: "A claim.", claimType: "function", supportingFactIds: ["gene.summary"], origin: "llm" }],
     aiAvailable: true,
     fallbackReason: null,
     cached: false,
+    state: "grounded",
   };
 }
 function failed(reason: Explanation["fallbackReason"] = "failed_grounding"): Explanation {
-  return { claims: null, aiAvailable: true, fallbackReason: reason, cached: false };
+  return { claims: null, aiAvailable: true, fallbackReason: reason, cached: false, state: "source_only" };
 }
 
 describe("cachedExplain", () => {

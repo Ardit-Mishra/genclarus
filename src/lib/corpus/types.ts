@@ -6,10 +6,14 @@
 // regenerated only when the normalized facts or the generation versions change (never "once forever").
 
 import type { Facts } from "../facts";
-import type { GroundedClaim } from "../grounding";
+import type { GroundedClaim, OriginatedClaim } from "../grounding";
+import type { ClaimOrigin, ExplanationState } from "../explanation-state";
 
 // Bump when the CorpusRecord shape changes (invalidates every artifact via the refresh policy).
-export const CORPUS_SCHEMA_VERSION = "1.0.0";
+// 2.0.0 — 2026-07-28 incident: hardened validator + deterministic clinical rendering + explanation
+//         state. Requires a full corpus regeneration (Stage 4) before the new artifacts are served.
+export const CORPUS_SCHEMA_VERSION = "2.0.0";
+export const CORPUS_SCHEMA_VERSION_V1 = "1.0.0"; // the legacy production artifacts still on disk
 
 export type CorpusKind = "gene" | "variant";
 
@@ -26,16 +30,40 @@ export type CorpusProvenance = {
   sources: CorpusSource[]; // public source accessions / links (from facts)
 };
 
-export type CorpusRecord = {
+// Explicit versioned records (preflight item 2).
+//
+// V1 = LEGACY artifacts currently committed under corpus/ (generated before the 2026-07-28 incident):
+// claims may lack `origin`, `explanationState` may be absent, provenance corpusSchemaVersion "1.0.0".
+// Read TOLERANTLY by the production FileCorpusStore. Optional fields live ONLY here.
+export type CorpusClaimV1 = GroundedClaim & { origin?: ClaimOrigin };
+export type CorpusRecordV1 = {
   kind: CorpusKind;
-  id: string; // normalized symbol or rsid — the URL key
-  facts: Facts; // deterministic public-record facts
-  // Grounded explanation, OR null = a valid SOURCE-ONLY artifact (facts + provenance still complete).
-  claims: GroundedClaim[] | null;
+  id: string;
+  facts: Facts;
+  claims: CorpusClaimV1[] | null;
+  explanationState?: ExplanationState; // may be absent on legacy artifacts
   aiAvailable: boolean;
-  fallbackReason: string | null; // set when claims === null
+  fallbackReason: string | null;
   provenance: CorpusProvenance;
 };
+
+// V2 = STRICT candidate/future artifacts (Stage-4 regen). Every claim carries `origin`;
+// `explanationState` is REQUIRED and stored at generation time; provenance pins the v2 versions.
+// Candidate validation (candidate-validate.ts) rejects anything that does not satisfy this shape.
+export type CorpusRecordV2 = {
+  kind: CorpusKind;
+  id: string;
+  facts: Facts;
+  claims: OriginatedClaim[] | null; // each claim REQUIRES origin
+  explanationState: ExplanationState; // REQUIRED — never optional on a v2 record
+  aiAvailable: boolean;
+  fallbackReason: string | null;
+  provenance: CorpusProvenance;
+};
+
+// The production reader/consumer type is the tolerant V1 (a V2 record is assignable to it, so the
+// store serves both legacy and regenerated artifacts through one interface).
+export type CorpusRecord = CorpusRecordV1;
 
 export type CorpusManifestEntry = {
   kind: CorpusKind;

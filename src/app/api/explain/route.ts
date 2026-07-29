@@ -66,6 +66,7 @@ export async function POST(request: Request) {
         claims: null,
         aiAvailable: false,
         fallbackReason: "withheld_review",
+        state: "source_only",
         cached: false,
         meta: {
           promptVersion: PROMPT_VERSION,
@@ -77,7 +78,7 @@ export async function POST(request: Request) {
 
     const facts = await getGeneFacts(normalizeGeneSymbol(parsed.identifier));
 
-    const { claims, aiAvailable, fallbackReason, cached } = await cachedExplain(facts);
+    const { claims, aiAvailable, fallbackReason, cached, state } = await cachedExplain(facts);
 
     // Resolve each claim's cited ids to display chips (source · field). The evidence is re-derived
     // deterministically from the same facts, so this never depends on anything the browser sent.
@@ -94,6 +95,7 @@ export async function POST(request: Request) {
       claims: displayClaims,
       aiAvailable,
       fallbackReason,
+      state,
       cached,
       // Which prompt/model/schema produced these claims — so a narrative can always be traced back
       // to the exact configuration that generated it.

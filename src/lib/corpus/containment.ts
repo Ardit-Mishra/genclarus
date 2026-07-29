@@ -53,6 +53,7 @@ export function applyContainment(record: CorpusRecord | null): CorpusRecord | nu
   return {
     ...record,
     claims: null,
+    explanationState: "source_only",
     aiAvailable: false,
     fallbackReason: CONTAINMENT_FALLBACK_REASON,
   };

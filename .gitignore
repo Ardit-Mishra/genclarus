@@ -47,6 +47,9 @@ next-env.d.ts
 # internal planning/strategy docs — kept out of the public repo
 docs/
 
+# Stage-4 candidate corpus — a local audit scratch dir, never published (production is corpus/)
+corpus-candidate/
+
 # AI-agent instruction docs — kept local, not published in the public repo
 CLAUDE.md
 AGENTS.md
