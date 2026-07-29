@@ -42,18 +42,31 @@ async function readJson<T>(path: string): Promise<T | null> {
   }
 }
 
+// A TRANSIENT source-only outcome (the provider was down / returned nothing / was unconfigured) is an
+// ENVIRONMENTAL failure, not a final artifact — it must be retried on a fill run, never frozen in.
+// A terminal source-only (failed_grounding: the model produced ungroundable text; MSH2 is genuinely
+// source-only) is a real result and IS reusable.
+const TRANSIENT_FALLBACKS = new Set(["provider_unavailable", "provider_no_content", "not_configured"]);
+
 // A stored artifact is reusable iff its facts hash AND every generation version match the current
-// world — exactly the refresh policy (ADR §5). Any mismatch means regenerate. A candidate run starts
-// from an EMPTY dir, so prev is always null → every record is regenerated fresh.
+// world (the refresh policy, ADR §5) AND it is not a transient failure. A candidate run from an EMPTY
+// dir has prev=null → every record regenerates; a CORPUS_FILL run reuses good records and retries only
+// the transient failures + anything missing.
 function isFresh(prev: CorpusRecordV2 | null, hash: string): boolean {
-  return (
-    !!prev &&
-    prev.provenance.factsHash === hash &&
-    prev.provenance.promptVersion === PROMPT_VERSION &&
-    prev.provenance.modelId === MODEL_ID &&
-    prev.provenance.schemaVersion === OUTPUT_SCHEMA_VERSION &&
-    prev.provenance.corpusSchemaVersion === CORPUS_SCHEMA_VERSION
-  );
+  if (
+    !prev ||
+    prev.provenance.factsHash !== hash ||
+    prev.provenance.promptVersion !== PROMPT_VERSION ||
+    prev.provenance.modelId !== MODEL_ID ||
+    prev.provenance.schemaVersion !== OUTPUT_SCHEMA_VERSION ||
+    prev.provenance.corpusSchemaVersion !== CORPUS_SCHEMA_VERSION
+  ) {
+    return false;
+  }
+  if (prev.claims === null && prev.fallbackReason && TRANSIENT_FALLBACKS.has(prev.fallbackReason)) {
+    return false; // transient failure → retry
+  }
+  return true;
 }
 
 type Outcome = { record: CorpusRecordV2; regenerated: boolean } | { skipped: string };
@@ -117,16 +130,18 @@ async function main() {
   const ids = await readJson<CorpusIdentifiers>(join(IDS_DIR, "identifiers.json"));
   if (!ids) throw new Error(`identifiers.json not found under ${IDS_DIR}`);
 
-  console.log(`Output root: ${ROOT}${IS_CANDIDATE ? "  [CANDIDATE MODE]" : "  [PRODUCTION]"}`);
-  // Candidate safety: a candidate regen must start from an EMPTY dir. Fail on stale records unless
-  // explicitly cleared (CORPUS_FORCE_CLEAR=1 wipes prior candidate json first). Production is exempt
-  // (its idempotent reuse is the whole point of the refresh policy).
-  if (IS_CANDIDATE) {
+  const fill = process.env.CORPUS_FILL === "1";
+  console.log(`Output root: ${ROOT}${IS_CANDIDATE ? `  [CANDIDATE${fill ? " · FILL" : ""}]` : "  [PRODUCTION]"}`);
+  // Candidate safety: a FRESH candidate regen must start from an EMPTY dir (fail on stale unless
+  // CORPUS_FORCE_CLEAR=1 wipes it). CORPUS_FILL=1 is the TARGETED-RETRY mode: it runs over the existing
+  // candidate WITHOUT clearing — isFresh reuses every good record and regenerates only the transient
+  // failures + anything missing. Production is exempt (idempotent reuse is its whole point).
+  if (IS_CANDIDATE && !fill) {
     const existing = await existingRecordCount();
     if (existing > 0 && process.env.CORPUS_FORCE_CLEAR !== "1") {
       throw new Error(
         `${ROOT} already contains ${existing} record(s). Refusing to write over a non-empty candidate dir. ` +
-          `Clear it first, or re-run with CORPUS_FORCE_CLEAR=1.`,
+          `Clear it first, re-run with CORPUS_FORCE_CLEAR=1 for a fresh run, or CORPUS_FILL=1 to retry only failures.`,
       );
     }
     if (existing > 0) {
