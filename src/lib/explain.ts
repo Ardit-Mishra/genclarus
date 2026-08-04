@@ -7,19 +7,14 @@
 // the page renders the verified facts alone. Clinical data never comes from the LLM.
 
 import { createHash } from "node:crypto";
-import {
-  synthesize,
-  primaryBackend,
-  escalationBackend,
-  type Backend,
-  type FallbackReason,
-} from "./nim";
+import { type FallbackReason } from "./nim";
 import { PROMPT_VERSION, MODEL_ID, OUTPUT_SCHEMA_VERSION } from "./version";
 import { TtlCache } from "./cache";
-import { buildEvidence, isClinicalFact } from "./evidence";
-import { messagesFor, extractJson } from "./prompt";
-import { ground, validateClaims, type OriginatedClaim } from "./grounding";
+import { buildEvidence } from "./evidence";
+import { validateClaims, type GroundedClaim, type OriginatedClaim } from "./grounding";
 import { renderClinicalClaims } from "./render-clinical";
+import { renderGeneClaims } from "./render-gene";
+import { resolveVariantGene } from "./gene-identity";
 import { computeExplanationState, type ExplanationState } from "./explanation-state";
 import type { Facts, GeneFacts, VariantFacts } from "./facts";
 
@@ -33,11 +28,6 @@ export type Explanation = {
   cached: boolean;
   state: ExplanationState;
 };
-
-// Cap on OPTIONAL LLM context claims only. Deterministic clinical assertions are NEVER capped or
-// truncated (Stage-3 correction C) — every condition-specific assertion, conflict and qualifier is
-// preserved in the record and API; the UI may collapse a long list, the data never discards it.
-const MAX_LLM_CLAIMS = 2;
 
 function dedupeByText<T extends { text: string }>(claims: T[]): T[] {
   const seen = new Set<string>();
@@ -113,95 +103,43 @@ export async function explain(facts: Facts): Promise<Explanation> {
   if (hit)
     return {
       claims: hit,
-      aiAvailable: true,
+      aiAvailable: false,
       fallbackReason: null,
       cached: true,
       state: computeExplanationState(hit.map((c) => c.origin)),
     };
 
   const evidence = buildEvidence(facts);
-  // The grounded-by-construction identifiers for this lookup (rsID + its gene, or the gene symbol).
-  const subject = facts.kind === "gene" ? facts.symbol : `${facts.rsid} ${facts.gene}`;
+  // Grounded-by-construction subject. For a variant the gene is included ONLY when identity resolves —
+  // an unresolved/conflicting gene (e.g. an antisense "HFE-AS1" vs the curated "HFE") must NOT be
+  // licensed as a groundable entity through the subject (root cause D).
+  const subject =
+    facts.kind === "gene"
+      ? facts.symbol
+      : (() => {
+          const id = resolveVariantGene(facts.gene, facts.preferredName);
+          return `${facts.rsid}${id.status === "resolved" ? ` ${id.symbol}` : ""}`;
+        })();
 
-  // DETERMINISTIC clinical claims (variants only) — built from typed facts, run through the IDENTICAL
-  // gate as a self-check (a renderer bug fails closed, never open), then tagged origin "deterministic".
-  const clinical: OriginatedClaim[] =
-    facts.kind === "variant"
-      ? validateClaims(evidence, renderClinicalClaims(facts as VariantFacts), subject, "deterministic").map(
-          (c) => ({ ...c, origin: "deterministic" as const }),
-        )
-      : [];
-
-  // Nothing citable at all (e.g. a gene with only a bare symbol) and no clinical statements.
-  if (evidence.length === 0 && clinical.length === 0) {
-    return { claims: null, aiAvailable: true, fallbackReason: "provider_no_content", cached: false, state: "source_only" };
-  }
-
-  const primary = primaryBackend();
-  // No model configured → the deterministic clinical statements can still stand alone.
-  if (!primary) {
-    return clinical.length
-      ? { claims: clinical, aiAvailable: false, fallbackReason: "not_configured", cached: false, state: "deterministic_only" }
-      : { claims: null, aiAvailable: false, fallbackReason: "not_configured", cached: false, state: "source_only" };
-  }
-
-  // The LLM writes NON-CLINICAL context only, so it is shown (and validated against) a non-clinical
-  // view of the evidence — it is never even offered a classification/frequency it is forbidden to
-  // author. The "llm" source still rejects any clinical claim it manages to produce.
-  const llmEvidence = evidence.filter((f) => !isClinicalFact(f));
-  const runBackend = async (backend: Backend) => {
-    let providerReason: FallbackReason | null = null;
-    let providerAvailable = false;
-    const generate = async (repair: boolean): Promise<string | null> => {
-      const res = await synthesize(messagesFor(facts, llmEvidence, repair), backend);
-      providerAvailable = res.aiAvailable;
-      if (!res.explanation) {
-        providerReason = res.fallbackReason;
-        return null;
-      }
-      return extractJson(res.explanation);
-    };
-    const result = await ground(llmEvidence, generate, subject, "llm");
-    return { result, providerReason, providerAvailable };
-  };
-
-  let outcome = await runBackend(primary);
-  const escalation = escalationBackend();
-  if (!outcome.result.ok && escalation) {
-    const escalated = await runBackend(escalation);
-    if (escalated.result.ok) outcome = escalated;
-  }
-
-  const { result, providerReason, providerAvailable } = outcome;
-  // LLM context is OPTIONAL and capped; deterministic clinical assertions are ALL kept (correction C).
-  const llmClaims: OriginatedClaim[] = (result.ok ? result.explanation.claims : [])
-    .map((c) => ({ ...c, origin: "llm" as const }))
-    .slice(0, MAX_LLM_CLAIMS);
-  // Deterministic statements first (never truncated), then the capped LLM context; dedupe by text.
-  const final = dedupeByText<OriginatedClaim>([...clinical, ...llmClaims]);
+  // FULLY DETERMINISTIC claims for BOTH kinds — variant clinical/identity from render-clinical, gene
+  // identity from render-gene — each run through the IDENTICAL hardened gate as a self-check (a renderer
+  // bug fails closed, never open) and tagged origin "deterministic". The LLM is NO LONGER consulted for
+  // any claim (Stage-5 final, 2026-08-03): it repeatedly hallucinated ungrounded identity/function facts
+  // (wrong chromosome, a pseudogene stated as an enzyme, an intergenic label treated as one gene), so
+  // the explanation is now deterministic + sourced only. The authoritative NCBI gene summary/name and
+  // all facts are still served alongside the claims; `aiAvailable` is therefore always false.
+  const rendered: GroundedClaim[] =
+    facts.kind === "variant" ? renderClinicalClaims(facts as VariantFacts) : renderGeneClaims(facts as GeneFacts);
+  const final = dedupeByText<OriginatedClaim>(
+    validateClaims(evidence, rendered, subject, "deterministic").map((c) => ({ ...c, origin: "deterministic" as const })),
+  );
 
   if (final.length === 0) {
-    // Nothing groundable of either kind → source-only, with the honest provider reason.
-    if (!result.ok && result.reason === "no_output") {
-      return { claims: null, aiAvailable: providerAvailable, fallbackReason: providerReason ?? "provider_unavailable", cached: false, state: "source_only" };
-    }
-    return { claims: null, aiAvailable: true, fallbackReason: "failed_grounding", cached: false, state: "source_only" };
+    // Nothing groundable → source-only (facts + sources are still served by the caller).
+    return { claims: null, aiAvailable: false, fallbackReason: "provider_no_content", cached: false, state: "source_only" };
   }
 
-  // Authoritative state from explicit origins — never guessed from claimType (correction A).
-  const state = computeExplanationState(final.map((c) => c.origin));
-  const hasLlm = llmClaims.length > 0;
-
-  // Only cache a FULLY grounded result (LLM contributed). A deterministic_only outcome (LLM flaked)
-  // is left uncached so the LLM context can be added on a later request instead of being frozen out.
-  if (state === "grounded") explanationCache.set(key, final);
-
-  // When only deterministic clinical statements survived, surface WHY the LLM prose is absent.
-  const fallbackReason = hasLlm
-    ? null
-    : !result.ok && result.reason === "no_output"
-      ? providerReason ?? "provider_unavailable"
-      : "failed_grounding";
-
-  return { claims: final, aiAvailable: hasLlm || providerAvailable, fallbackReason, cached: false, state };
+  const state = computeExplanationState(final.map((c) => c.origin)); // deterministic_only, by construction
+  explanationCache.set(key, final);
+  return { claims: final, aiAvailable: false, fallbackReason: null, cached: false, state };
 }

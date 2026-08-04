@@ -66,7 +66,9 @@ export type ParsedCondition = {
   dosage: boolean; // "... - Dosage"
 };
 
-const CONDITION_TAIL = /\s*[-–]\s*(toxicity|efficacy|dosage|metabolism|response)\s*$/i;
+// Only the PGx outcome tags the renderer re-surfaces as qualifiers are stripped into `base`.
+// "- Metabolism/PK", "- Other", etc. are LEFT in `base` and rendered verbatim (never silently lost).
+const CONDITION_TAIL = /\s*[-–]\s*(toxicity|efficacy|dosage)\s*$/i;
 
 export function parseCondition(raw: string): ParsedCondition {
   const r = raw ?? "";
@@ -82,8 +84,22 @@ export function parseCondition(raw: string): ParsedCondition {
 
 export type OriginType = "germline" | "somatic" | "unknown";
 
-// germline is the unmarked default; only germline/somatic carry an obligation.
+// germline is the unmarked default; only germline/somatic carry the somatic-qualifier obligation.
 export function normalizeOrigin(origin: string): OriginType {
   const o = (origin || "").toLowerCase();
   return o === "germline" || o === "somatic" ? o : "unknown";
+}
+
+// ClinVar origin placeholders that carry NO parent-of-origin information — never rendered.
+const ORIGIN_PLACEHOLDERS = new Set([
+  "", "unknown", "not provided", "not-provided", "not applicable", "na", "n/a",
+  "not reported", "tested-inconclusive", "unknown/inconsistent",
+]);
+
+// The origin STRING as it should be surfaced: any specific value (germline, somatic, maternal,
+// paternal, inherited, de novo, …) is preserved verbatim; only true placeholders collapse to null.
+// This is what stops "maternal"/"inherited" being silently dropped (root cause C-2).
+export function displayOrigin(origin: string): string | null {
+  const o = (origin || "").trim().toLowerCase();
+  return o && !ORIGIN_PLACEHOLDERS.has(o) ? o : null;
 }

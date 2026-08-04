@@ -48,6 +48,9 @@ export function frequencyRenderings(af: number): Set<string> {
   const out = new Set<string>();
   if (d.canonicalPercent != null) {
     out.add(String(d.canonicalPercent)); // the canonical 1-/2-decimal value, e.g. "30.5"
+    out.add(d.display.replace("%", "")); // the EXACT token the display shows, e.g. "26.0" — keeps the
+    //   display string and the gate in lockstep so a whole-number percent ("26.0%") never fails its own
+    //   check (Number("26.0")→26 would otherwise render only "26" and drop the frequency claim).
     out.add(String(Math.round(af * 100))); // the integer rounding of the RAW %, e.g. "30" (not 31)
   }
   out.add(String(af)); // the raw fraction may always be quoted verbatim

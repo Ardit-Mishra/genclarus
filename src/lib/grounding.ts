@@ -293,8 +293,14 @@ function claimViolation(
   // fact, and a single claim may not collapse the verdicts of MORE THAN ONE condition.
   const classFacts = facts.filter((f) => f.field === "classification");
   const classValues = classFacts.map((f) => f.value.toLowerCase());
+  // A qualifier can license a label whose word is not in the normalized significance VALUE: ClinVar
+  // stores "Pathogenic; risk factor" as significance "Pathogenic" + a riskFactor qualifier, so a
+  // faithful "(risk factor)" render must be licensed by that qualifier (root cause C-1), not rejected.
+  const qualifierLabels = new Set<string>();
+  if (classFacts.some((f) => f.qualifiers?.riskFactor)) qualifierLabels.add("risk factor");
+  if (classFacts.some((f) => f.qualifiers?.drugResponse)) qualifierLabels.add("drug response");
   for (const label of CLASSIFICATION_LABELS)
-    if (lower.includes(label) && !classValues.some((v) => v.includes(label)))
+    if (lower.includes(label) && !classValues.some((v) => v.includes(label)) && !qualifierLabels.has(label))
       return "unsupported_classification";
   const citedConditions = new Set(
     classFacts.map((f) => f.qualifiers?.condition?.toLowerCase()).filter(Boolean),
@@ -312,7 +318,10 @@ function claimViolation(
     if (!q) continue;
     if (q.uncertainty && !lower.includes(q.uncertainty)) return "dropped_uncertainty";
     if (q.lowPenetrance && !lower.includes("low penetrance")) return "dropped_penetrance";
+    if (q.riskFactor && !lower.includes("risk factor")) return "dropped_riskfactor";
     if (q.toxicity && !lower.includes("toxicity")) return "dropped_toxicity";
+    if (q.efficacy && !lower.includes("efficacy")) return "dropped_efficacy";
+    if (q.dosage && !lower.includes("dosage")) return "dropped_dosage";
     if (q.classificationType === "somatic" && !lower.includes("somatic")) return "dropped_somatic";
   }
   const citedOrigins = new Set(facts.map((f) => f.qualifiers?.classificationType).filter(Boolean));

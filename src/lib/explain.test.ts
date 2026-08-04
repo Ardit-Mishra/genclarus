@@ -1,30 +1,12 @@
 // The cache key is a correctness feature, not a performance one: a cached narrative must never
 // outlive the facts, prompt, model or schema that produced it.
 
-import { describe, it, expect, beforeEach, vi } from "vitest";
+import { describe, it, expect, beforeEach } from "vitest";
 import { cacheKey, factsHash, explain, clearExplanationCache } from "./explain";
 import type { GeneFacts, VariantFacts } from "./facts";
-import type { NimResult } from "./nim";
 
-// The synthesis I/O boundary is mocked so explain()'s ORCHESTRATION can be tested with the real
-// grounding validator. primaryBackend = nim, escalationBackend = openrouter; synthesize answers per
-// backend so a test states "primary did X, escalation did Y" and asserts the combined outcome.
-const { synthesizeMock } = vi.hoisted(() => ({ synthesizeMock: vi.fn() }));
-vi.mock("./nim", () => ({
-  synthesize: synthesizeMock,
-  primaryBackend: () => ({ label: "nim", url: "n", model: "m", apiKey: "k" }),
-  escalationBackend: () => ({ label: "openrouter", url: "o", model: "m:free", apiKey: "k" }),
-}));
-
-function ok(explanation: string): NimResult {
-  return { explanation, aiAvailable: true, fallbackReason: null, failureCategory: null, attempts: 1 };
-}
-// The model answered but the text is unusable — ground() will fail to parse/validate it.
-const UNGROUNDABLE = "not json, just prose the validator cannot verify";
-// The provider never produced text (outage / rate-limit) — ground() reports no_output.
-function down(): NimResult {
-  return { explanation: null, aiAvailable: false, fallbackReason: "provider_unavailable", failureCategory: "rate_limited", attempts: 3 };
-}
+// Stage-5 FINAL: explain() no longer calls any LLM — it renders deterministic claims only, so there
+// is no synthesis boundary to mock. The tests below assert the deterministic-only orchestration.
 
 const gene: GeneFacts = {
   kind: "gene",
@@ -129,72 +111,44 @@ describe("cacheKey", () => {
   });
 });
 
-// The production regression that motivated this: adding a flaky free escalation made variant
-// lookups WORSE. When the primary produced ungroundable text (failed_grounding) and the escalation
-// call then errored, the escalation's provider_unavailable overwrote the primary's honest outcome.
-// Escalation must be a bonus, never a downgrade.
-describe("explain — escalation must never worsen the primary's outcome", () => {
-  beforeEach(() => {
-    clearExplanationCache();
-    synthesizeMock.mockReset();
-  });
+// Stage-5 FINAL: the explanation is fully deterministic + sourced. No LLM is consulted, so nothing can
+// hallucinate an ungrounded identity/function fact. Every claim is origin "deterministic"; aiAvailable
+// is always false; results are cached by construction (pure render, safe to reuse).
+describe("explain — fully deterministic (no LLM)", () => {
+  beforeEach(() => clearExplanationCache());
 
-  // Tested via a GENE: genes have no deterministic clinical rendering, so the outcome is purely the
-  // LLM-context path — the exact binary this invariant is about. (The escalation orchestration is
-  // identical for variants; the variant-specific improvement is covered separately below.)
-  it("keeps the primary's failed_grounding when the escalation fails to produce text", async () => {
-    // Primary answers but the text can't be grounded; escalation is down.
-    synthesizeMock.mockImplementation((_msgs: unknown, backend: { label: string }) =>
-      Promise.resolve(backend.label === "openrouter" ? down() : ok(UNGROUNDABLE)),
-    );
+  it("renders a deterministic identity claim for a gene, faithful to its type (deterministic_only)", async () => {
     const r = await explain(gene);
-    expect(r.claims).toBeNull();
-    // The honest report is that we could not GROUND the answer — not that the provider was down.
-    expect(r.fallbackReason).toBe("failed_grounding");
-    expect(r.aiAvailable).toBe(true);
-  });
-
-  it("adopts the escalation only when it actually grounds", async () => {
-    // Primary ungroundable, escalation returns a NON-CLINICAL claim that DOES ground → served.
-    synthesizeMock.mockImplementation((_msgs: unknown, backend: { label: string }) => {
-      if (backend.label === "openrouter") {
-        const good = JSON.stringify({
-          claims: [{
-            text: `The ${gene.symbol} gene encodes a nuclear phosphoprotein.`,
-            supportingFactIds: ["gene.symbol", "gene.summary"],
-            claimType: "function",
-          }],
-        });
-        return Promise.resolve(ok(good));
-      }
-      return Promise.resolve(ok(UNGROUNDABLE));
-    });
-    const r = await explain(gene);
+    expect(r.state).toBe("deterministic_only");
+    expect(r.aiAvailable).toBe(false);
     expect(r.fallbackReason).toBeNull();
     expect(r.claims).not.toBeNull();
-    expect(r.claims!.length).toBeGreaterThan(0);
-    expect(r.state).toBe("grounded");
+    expect(r.claims!.every((c) => c.origin === "deterministic")).toBe(true);
+    // BRCA1 is protein-coding → labelled as such, never an invented function/location.
+    expect(r.claims!.map((c) => c.text).join(" ")).toContain("BRCA1 is a human protein-coding gene");
   });
 
-  it("still reports a genuine primary outage honestly (no escalation rescue)", async () => {
-    // Both backends down → the outage IS the truth; the fix must not mask it as failed_grounding.
-    synthesizeMock.mockResolvedValue(down());
-    const r = await explain(gene);
-    expect(r.claims).toBeNull();
-    expect(r.fallbackReason).toBe("provider_unavailable");
-    expect(r.aiAvailable).toBe(false);
+  it("labels a pseudogene as a pseudogene, never as an active enzyme (DDX11L1 class)", async () => {
+    const pseudo: GeneFacts = { ...gene, symbol: "DDX11L1", type: "pseudo", summary: "" };
+    const r = await explain(pseudo);
+    const text = r.claims!.map((c) => c.text).join(" ");
+    expect(text).toContain("DDX11L1 is a human pseudogene");
+    expect(text.toLowerCase()).not.toContain("helicase"); // no fabricated enzymatic function
   });
 
-  it("a variant still renders deterministic clinical statements when the LLM is down (deterministic_only)", async () => {
-    // The core incident improvement: clinical output no longer depends on the flaky LLM.
-    synthesizeMock.mockResolvedValue(down());
+  it("renders deterministic clinical statements for a variant (deterministic_only)", async () => {
     const r = await explain(variant);
     expect(r.state).toBe("deterministic_only");
-    expect(r.claims).not.toBeNull();
+    expect(r.aiAvailable).toBe(false);
     expect(r.claims!.length).toBeGreaterThan(0);
-    // No unverified LLM prose; the honest reason for the missing narrative is surfaced.
-    expect(r.fallbackReason).toBe("provider_unavailable");
     // Low-penetrance qualifier from the raw significance is preserved deterministically.
     expect(r.claims!.map((c) => c.text).join(" ").toLowerCase()).toContain("low penetrance");
+  });
+
+  it("caches the deterministic result (second call served from cache)", async () => {
+    const first = await explain(gene);
+    const second = await explain(gene);
+    expect(second.cached).toBe(true);
+    expect(second.claims).toEqual(first.claims);
   });
 });

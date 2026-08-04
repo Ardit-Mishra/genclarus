@@ -4,6 +4,7 @@
 import { describe, it, expect } from "vitest";
 import { validateCandidateRecord, validateCandidateManifest } from "./candidate-validate";
 import { CORPUS_SCHEMA_VERSION, type CorpusRecordV2, type CorpusManifest } from "./types";
+import { PROMPT_VERSION, OUTPUT_SCHEMA_VERSION } from "../version";
 
 function clean(overrides: Partial<CorpusRecordV2> = {}): CorpusRecordV2 {
   return {
@@ -18,7 +19,7 @@ function clean(overrides: Partial<CorpusRecordV2> = {}): CorpusRecordV2 {
     aiAvailable: true,
     fallbackReason: null,
     provenance: {
-      factsHash: "h", promptVersion: "3.0.0", modelId: "m", schemaVersion: "3.0.0",
+      factsHash: "h", promptVersion: PROMPT_VERSION, modelId: "m", schemaVersion: OUTPUT_SCHEMA_VERSION,
       corpusSchemaVersion: CORPUS_SCHEMA_VERSION, generatedAt: "x", retrievedAt: "y",
       sources: [{ label: "dbSNP", url: "https://example.test" }],
     },

@@ -9,7 +9,7 @@
 import type { VariantFacts } from "./facts";
 import type { ConditionClassification } from "./clinvar";
 import type { GroundedClaim } from "./grounding";
-import { parseSignificance, parseCondition, normalizeOrigin } from "./clinvar-significance";
+import { parseSignificance, parseCondition, normalizeOrigin, displayOrigin } from "./clinvar-significance";
 import { afDisplay } from "./format-frequency";
 import { resolveVariantGene } from "./gene-identity";
 
@@ -18,15 +18,21 @@ function starsPhrase(n: number): string {
 }
 
 // The significance of one assertion WITH every qualifier that must survive per §8: low penetrance,
-// toxicity, and (since a conflict notice has no separate origin clause) somatic. Uncertainty is already
-// carried by the significance label itself ("Uncertain significance"/"Conflicting…").
+// risk factor, PGx outcome (toxicity/efficacy/dosage), and (since a conflict notice has no separate
+// origin clause) somatic. Uncertainty is already carried by the significance label itself
+// ("Uncertain significance"/"Conflicting…"). Every qualifier here is independently required by the gate.
 function sigWithQuals(c: ConditionClassification, includeOrigin: boolean): string {
   const sig = parseSignificance(c.rawSignificance || c.significance);
   const cond = parseCondition(c.condition);
+  const lc = (c.significance || "").toLowerCase();
   const quals: string[] = [];
-  if (sig.lowPenetrance) quals.push("low penetrance");
-  if (cond.toxicity || sig.toxicity) quals.push("toxicity");
-  if (includeOrigin && normalizeOrigin(c.origin) === "somatic") quals.push("somatic");
+  const add = (q: string) => { if (!lc.includes(q)) quals.push(q); }; // never duplicate a word already in the label
+  if (sig.lowPenetrance) add("low penetrance");
+  if (sig.riskFactor) add("risk factor");
+  if (cond.toxicity || sig.toxicity) add("toxicity");
+  if (cond.efficacy) add("efficacy");
+  if (cond.dosage) add("dosage");
+  if (includeOrigin && normalizeOrigin(c.origin) === "somatic") add("somatic");
   return `${c.significance}${quals.length ? ` (${quals.join(", ")})` : ""}`;
 }
 
@@ -37,35 +43,20 @@ function sigWithQuals(c: ConditionClassification, includeOrigin: boolean): strin
 // ClinVar record, so none is asserted — provenance is record-level (factsHash + sources).
 function conditionClaim(rsid: string, c: ConditionClassification, i: number): GroundedClaim {
   const cond = parseCondition(c.condition);
-  const origin = normalizeOrigin(c.origin);
-  const originStr = origin !== "unknown" ? `, ${origin}` : "";
+  const origin = displayOrigin(c.origin); // germline/somatic/maternal/inherited/… verbatim, or null
+  const originStr = origin ? `, ${origin}` : "";
   const dateStr = c.lastEvaluated ? `; last evaluated ${c.lastEvaluated}` : "";
 
   // Cite every fact the claim draws on (deterministic claims are not id-limited — the parse-layer
   // arity cap applies only to raw LLM output). This is what grounds the date's digits.
   const ids = [`var.cond.${i}.significance`, `var.cond.${i}.reviewStars`];
-  if (origin !== "unknown") ids.push(`var.cond.${i}.origin`);
+  if (origin) ids.push(`var.cond.${i}.origin`);
   if (c.lastEvaluated) ids.push(`var.cond.${i}.lastEvaluated`);
 
   return {
     text: `In ClinVar, ${rsid} is classified as ${sigWithQuals(c, false)} for ${cond.base} (${starsPhrase(c.reviewStars)}${originStr}${dateStr}).`,
     supportingFactIds: ids,
     claimType: "classification_context",
-  };
-}
-
-// A deterministic conflict notice for ONE condition (same full name) with divergent significances —
-// lists each WITH its qualifiers (so no penetrance/toxicity/somatic is lost), never chooses a winner.
-function conflictClaim(
-  rsid: string,
-  group: { c: ConditionClassification; i: number }[],
-): GroundedClaim {
-  const cond = parseCondition(group[0].c.condition).base;
-  const sigs = group.map((g) => sigWithQuals(g.c, true)).join(" and ");
-  return {
-    text: `In ClinVar, ${rsid} has differing classifications for ${cond} across submissions: ${sigs}.`,
-    supportingFactIds: group.map((g) => `var.cond.${g.i}.significance`),
-    claimType: "condition_context",
   };
 }
 
@@ -94,23 +85,17 @@ export function renderClinicalClaims(v: VariantFacts): GroundedClaim[] {
     claims.push({ text, supportingFactIds: ["var.gnomadAf"], claimType: "frequency_context" });
   }
 
-  // Per-condition classifications — ALL of them (deterministic assertions are never truncated;
-  // Stage-3 correction C). Group by the FULL condition name so only assertions for the EXACT same
-  // condition can form a conflict notice — distinct PGx endpoints ("… - Toxicity" vs "… - Efficacy")
-  // stay separate, each keeping its own qualifiers. A grouped condition with >1 distinct significance
-  // becomes a conflict notice, never a chosen winner.
-  const considered = v.conditionClassifications.map((c, i) => ({ c, i }));
-  const byCondition = new Map<string, { c: ConditionClassification; i: number }[]>();
-  for (const entry of considered) {
-    const key = entry.c.condition.trim().toLowerCase();
-    const arr = byCondition.get(key);
-    if (arr) arr.push(entry);
-    else byCondition.set(key, [entry]);
-  }
-  for (const group of byCondition.values()) {
-    const distinct = new Set(group.map((g) => g.c.significance.toLowerCase()));
-    claims.push(distinct.size <= 1 ? conditionClaim(v.rsid, group[0].c, group[0].i) : conflictClaim(v.rsid, group));
-  }
+  // Per-condition classifications — render EVERY entry as its own assertion (root cause A fix).
+  // ClinVar routinely holds several DISTINCT submissions for the same condition name that differ in
+  // origin, review stars, or evaluation date; the previous name-grouping rendered only the first of
+  // each same-significance group and silently dropped the rest (understating submissions, erasing the
+  // only somatic entry, dropping 10 of 36 on rs334). One claim per entry can never drop a submission:
+  // each carries its own full tuple (significance · qualifiers · origin · stars · date) and cites its
+  // own facts. Entries that are byte-identical across all rendered fields render identical text and are
+  // collapsed downstream by dedupeByText — so genuine duplicates don't double, distinct ones all survive.
+  // Deterministic assertions are never truncated (Stage-3 correction C); the parse-layer arity cap is
+  // LLM-only, and the MAX_CLAIMS gate applies only to parsed LLM output, not this deterministic list.
+  v.conditionClassifications.forEach((c, i) => claims.push(conditionClaim(v.rsid, c, i)));
 
   return claims;
 }
