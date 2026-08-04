@@ -36,41 +36,30 @@
         "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=STK11"
       }
     ],
-    "retrievedAt": "2026-07-27T09:44:34.254Z"
+    "retrievedAt": "2026-08-03T16:06:10.793Z"
   },
   "claims": [
     {
-      "text": "The protein encoded by the STK11 gene is a serine/threonine kinase that regulates cell polarity and energy metabolism.",
+      "text": "STK11 is a human protein-coding gene.",
       "supportingFactIds": [
-        "gene.summary"
+        "gene.symbol",
+        "gene.type"
       ],
-      "claimType": "function"
-    },
-    {
-      "text": "The STK11 gene functions as a tumor suppressor.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "classification_context"
-    },
-    {
-      "text": "Mutations in the STK11 gene have been associated with Peutz-Jeghers syndrome, skin, pancreatic, and testicular cancers.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "condition_context"
+      "claimType": "identity",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
     "factsHash": "22dffb84b36d2155",
-    "promptVersion": "2.0.0",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T09:44:37.193Z",
-    "retrievedAt": "2026-07-27T09:44:34.254Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:06:12.296Z",
+    "retrievedAt": "2026-08-03T16:06:10.793Z",
     "sources": [
       {
         "label": "NCBI Gene",

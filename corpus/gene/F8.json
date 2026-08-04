@@ -40,50 +40,30 @@
         "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=F8"
       }
     ],
-    "retrievedAt": "2026-07-27T09:48:07.348Z"
+    "retrievedAt": "2026-08-03T16:06:51.939Z"
   },
   "claims": [
     {
-      "text": "Coagulation factor VIII is a protein-coding gene located on the X chromosome.",
+      "text": "F8 is a human protein-coding gene.",
       "supportingFactIds": [
         "gene.symbol",
-        "gene.type",
-        "gene.location"
+        "gene.type"
       ],
-      "claimType": "identity"
-    },
-    {
-      "text": "Coagulation factor VIII is a cofactor for factor IXa in the intrinsic pathway of blood coagulation.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "function"
-    },
-    {
-      "text": "Defects in the F8 gene result in hemophilia A, a common recessive X-linked coagulation disorder.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "classification_context"
-    },
-    {
-      "text": "Coagulation factor VIII undergoes multiple cleavage events.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "function"
+      "claimType": "identity",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
     "factsHash": "e06a3156d4c3c629",
-    "promptVersion": "2.0.0",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T09:48:10.829Z",
-    "retrievedAt": "2026-07-27T09:48:07.348Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:06:53.454Z",
+    "retrievedAt": "2026-08-03T16:06:51.939Z",
     "sources": [
       {
         "label": "NCBI Gene",

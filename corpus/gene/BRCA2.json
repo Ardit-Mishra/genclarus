@@ -41,49 +41,30 @@
         "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=BRCA2"
       }
     ],
-    "retrievedAt": "2026-07-27T09:43:28.251Z"
+    "retrievedAt": "2026-08-03T16:05:53.873Z"
   },
   "claims": [
     {
-      "text": "The product of the BRCA2 gene is involved in maintenance of genome stability and double-strand break repair pathways during mitotic and meiotic homologous recombination.",
+      "text": "BRCA2 is a human protein-coding gene.",
       "supportingFactIds": [
-        "gene.summary"
+        "gene.symbol",
+        "gene.type"
       ],
-      "claimType": "function"
-    },
-    {
-      "text": "The BRCA2 protein contains multiple BRC repeats, an alpha helix domain, oligonucleotide binding folds, and a tower-like domain.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "identity"
-    },
-    {
-      "text": "Mutations in the BRCA2 gene or decreased expression have been implicated in multiple tumor types, including breast, ovarian, pancreatic, prostate and other cancers.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "classification_context"
-    },
-    {
-      "text": "The BRCA2 gene is a protein-coding gene located on chromosome 13.",
-      "supportingFactIds": [
-        "gene.type",
-        "gene.location"
-      ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
     "factsHash": "acc640888c2b8766",
-    "promptVersion": "2.0.0",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T09:43:32.272Z",
-    "retrievedAt": "2026-07-27T09:43:28.251Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:05:55.390Z",
+    "retrievedAt": "2026-08-03T16:05:53.873Z",
     "sources": [
       {
         "label": "NCBI Gene",

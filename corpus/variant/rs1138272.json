@@ -84,44 +84,70 @@
         "url": "https://gnomad.broadinstitute.org/variant/11-67586108-C-T?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:17:58.258Z"
+    "retrievedAt": "2026-08-03T16:12:10.842Z"
   },
   "claims": [
     {
-      "text": "The GSTP1 gene variant rs1138272 is a missense variant with a p.Ala114Val protein change.",
+      "text": "rs1138272 is a genetic variant located in the GSTP1 gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.consequence",
-        "var.protein"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The GSTP1 gene variant rs1138272 has a frequency of 6.1% in the African population.",
+      "text": "In gnomAD, rs1138272 has an overall allele frequency of 6.1%.",
       "supportingFactIds": [
         "var.gnomadAf"
       ],
-      "claimType": "frequency_context"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The GSTP1 gene variant rs1138272 is classified as benign for the condition not provided, but its review confidence is moderate.",
+      "text": "In ClinVar, rs1138272 is classified as Benign for GLUTATHIONE S-TRANSFERASE PI POLYMORPHISM, TYPE C (0 review stars, germline; last evaluated 1997-04-11).",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1138272 is classified as association for Pulmonary disease, chronic obstructive, susceptibility to (0 review stars, germline; last evaluated 2022-07-05).",
+      "supportingFactIds": [
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars",
+        "var.cond.1.origin",
+        "var.cond.1.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1138272 is classified as Benign for not provided (2 review stars, germline; last evaluated 2021-06-09).",
       "supportingFactIds": [
         "var.cond.2.significance",
-        "var.cond.2.reviewStars"
+        "var.cond.2.reviewStars",
+        "var.cond.2.origin",
+        "var.cond.2.lastEvaluated"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "bbdc53ee598d6f85",
-    "promptVersion": "2.0.0",
+    "factsHash": "7b737a1be3197858",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:18:02.243Z",
-    "retrievedAt": "2026-07-27T10:17:58.258Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:12:12.359Z",
+    "retrievedAt": "2026-08-03T16:12:10.842Z",
     "sources": [
       {
         "label": "dbSNP",

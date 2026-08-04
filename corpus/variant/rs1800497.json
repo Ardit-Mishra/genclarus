@@ -97,54 +97,90 @@
         "url": "https://gnomad.broadinstitute.org/variant/11-113400106-G-A?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:09:31.027Z"
+    "retrievedAt": "2026-08-03T16:09:00.702Z"
   },
   "claims": [
     {
-      "text": "The ANKK1 gene variant rs1800497 is a missense variant leading to a p.Glu713Lys protein change.",
+      "text": "rs1800497 is a genetic variant located in the ANKK1 gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.consequence",
-        "var.protein"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The ANKK1 gene variant rs1800497 has a frequency of 26% in the gnomAD population.",
+      "text": "In gnomAD, rs1800497 has an overall allele frequency of 25.7%.",
       "supportingFactIds": [
         "var.gnomadAf"
       ],
-      "claimType": "frequency_context"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The ANKK1 gene variant rs1800497 is classified as Benign for Schizophrenia, Likely benign for ANKK1-related disorder, and Benign for Taq1A POLYMORPHISM, with varying review confidence.",
+      "text": "In ClinVar, rs1800497 is classified as Benign for Schizophrenia (SCZD) (1 review star, germline).",
       "supportingFactIds": [
         "var.cond.0.significance",
-        "var.cond.1.significance",
-        "var.cond.2.significance"
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The ANKK1 gene variant rs1800497 is of germline origin for Schizophrenia, ANKK1-related disorder, and Taq1A POLYMORPHISM.",
+      "text": "In ClinVar, rs1800497 is classified as Likely benign for ANKK1-related disorder (0 review stars, germline; last evaluated 2021-07-22).",
       "supportingFactIds": [
-        "var.cond.0.origin",
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars",
         "var.cond.1.origin",
-        "var.cond.2.origin"
+        "var.cond.1.lastEvaluated"
       ],
-      "claimType": "condition_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1800497 is classified as Benign for Taq1A POLYMORPHISM (0 review stars, germline; last evaluated 2008-10-17).",
+      "supportingFactIds": [
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars",
+        "var.cond.2.origin",
+        "var.cond.2.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1800497 is classified as Benign for not specified (1 review star, germline; last evaluated 2013-04-16).",
+      "supportingFactIds": [
+        "var.cond.3.significance",
+        "var.cond.3.reviewStars",
+        "var.cond.3.origin",
+        "var.cond.3.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1800497 is classified as Benign for not provided (1 review star, germline).",
+      "supportingFactIds": [
+        "var.cond.4.significance",
+        "var.cond.4.reviewStars",
+        "var.cond.4.origin"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "7a607d5a557718a9",
-    "promptVersion": "2.0.0",
+    "factsHash": "5113da9afa9bdc67",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:09:34.967Z",
-    "retrievedAt": "2026-07-27T10:09:31.027Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:09:02.216Z",
+    "retrievedAt": "2026-08-03T16:09:00.702Z",
     "sources": [
       {
         "label": "dbSNP",

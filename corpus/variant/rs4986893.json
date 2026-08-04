@@ -147,36 +147,140 @@
         "url": "https://gnomad.broadinstitute.org/variant/10-94780653-G-A?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:10:06.834Z"
+    "retrievedAt": "2026-08-03T16:09:11.635Z"
   },
   "claims": [
     {
-      "text": "The CYP2C19 gene variant rs4986893 is a single nucleotide variant.",
+      "text": "rs4986893 is a genetic variant located in the CYP2C19 gene.",
       "supportingFactIds": [
-        "var.type"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The CYP2C19 gene variant rs4986893 is associated with a drug response to Clopidogrel, Escitalopram, and Citalopram.",
+      "text": "In gnomAD, rs4986893 has an overall allele frequency of 0.28%.",
+      "supportingFactIds": [
+        "var.gnomadAf"
+      ],
+      "claimType": "frequency_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs4986893 is classified as Drug response for Clopidogrel response (4 review stars, germline).",
       "supportingFactIds": [
         "var.cond.0.significance",
-        "var.cond.1.significance",
-        "var.cond.2.significance"
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin"
       ],
-      "claimType": "condition_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs4986893 is classified as Drug response for Escitalopram response (4 review stars, germline).",
+      "supportingFactIds": [
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars",
+        "var.cond.1.origin"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs4986893 is classified as Drug response for Citalopram response (4 review stars, germline).",
+      "supportingFactIds": [
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars",
+        "var.cond.2.origin"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs4986893 is classified as Drug response for Sertraline response (4 review stars, germline).",
+      "supportingFactIds": [
+        "var.cond.3.significance",
+        "var.cond.3.reviewStars",
+        "var.cond.3.origin"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs4986893 is classified as Drug response for Voriconazole response (4 review stars, germline).",
+      "supportingFactIds": [
+        "var.cond.4.significance",
+        "var.cond.4.reviewStars",
+        "var.cond.4.origin"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs4986893 is classified as Drug response for CYP2C19: no function (4 review stars, germline).",
+      "supportingFactIds": [
+        "var.cond.5.significance",
+        "var.cond.5.reviewStars",
+        "var.cond.5.origin"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs4986893 is classified as Drug response for Mephenytoin, poor metabolism of (0 review stars, germline; last evaluated 2009-06-01).",
+      "supportingFactIds": [
+        "var.cond.6.significance",
+        "var.cond.6.reviewStars",
+        "var.cond.6.origin",
+        "var.cond.6.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs4986893 is classified as Drug response for Proguanil, poor metabolism of (0 review stars, germline; last evaluated 2009-06-01).",
+      "supportingFactIds": [
+        "var.cond.7.significance",
+        "var.cond.7.reviewStars",
+        "var.cond.7.origin",
+        "var.cond.7.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs4986893 is classified as Drug response for Acute coronary syndrome (0 review stars, biparental).",
+      "supportingFactIds": [
+        "var.cond.8.significance",
+        "var.cond.8.reviewStars",
+        "var.cond.8.origin"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs4986893 is classified as Benign for not provided (2 review stars, germline; last evaluated 2018-08-06).",
+      "supportingFactIds": [
+        "var.cond.9.significance",
+        "var.cond.9.reviewStars",
+        "var.cond.9.origin",
+        "var.cond.9.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "920714a4a90a1ec7",
-    "promptVersion": "2.0.0",
+    "factsHash": "21032216674ae7fe",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:10:14.999Z",
-    "retrievedAt": "2026-07-27T10:10:06.834Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:09:13.151Z",
+    "retrievedAt": "2026-08-03T16:09:11.635Z",
     "sources": [
       {
         "label": "dbSNP",

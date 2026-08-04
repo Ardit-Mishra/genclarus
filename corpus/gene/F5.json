@@ -38,43 +38,30 @@
         "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=F5"
       }
     ],
-    "retrievedAt": "2026-07-27T09:48:00.408Z"
+    "retrievedAt": "2026-08-03T16:06:48.375Z"
   },
   "claims": [
     {
-      "text": "The F5 gene encodes coagulation factor V, an essential cofactor of the blood coagulation cascade.",
+      "text": "F5 is a human protein-coding gene.",
       "supportingFactIds": [
         "gene.symbol",
-        "gene.summary"
+        "gene.type"
       ],
-      "claimType": "identity"
-    },
-    {
-      "text": "Defects in the F5 gene can result in either an autosomal recessive hemorrhagic diathesis or an autosomal dominant form of thrombophilia.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "classification_context"
-    },
-    {
-      "text": "Coagulation factor V is a protein-coding gene located on chromosome 1.",
-      "supportingFactIds": [
-        "gene.type",
-        "gene.location"
-      ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
     "factsHash": "9fad890daa24d4c5",
-    "promptVersion": "2.0.0",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T09:48:03.113Z",
-    "retrievedAt": "2026-07-27T09:48:00.408Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:06:49.885Z",
+    "retrievedAt": "2026-08-03T16:06:48.375Z",
     "sources": [
       {
         "label": "NCBI Gene",

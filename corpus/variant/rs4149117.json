@@ -76,55 +76,62 @@
         "url": "https://gnomad.broadinstitute.org/variant/12-20858546-T-G?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:17:32.359Z"
+    "retrievedAt": "2026-08-03T16:11:58.037Z"
   },
   "claims": [
     {
-      "text": "The SLCO1B3-SLCO1B7 gene variant rs4149117 is a missense variant with a p.Ser84Ala protein change.",
+      "text": "In gnomAD, rs4149117 has an overall allele frequency of 70.4%.",
       "supportingFactIds": [
-        "var.gene",
-        "var.consequence",
-        "var.protein"
-      ],
-      "claimType": "identity"
-    },
-    {
-      "text": "The variant rs4149117 is a single nucleotide variant with a frequency of 7% in the general population.",
-      "supportingFactIds": [
-        "var.type",
         "var.gnomadAf"
       ],
-      "claimType": "function"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The variant rs4149117 is classified as Benign for Rotor syndrome, SLCO1B3-related disorder, and not provided, with varying review confidence.",
+      "text": "In ClinVar, rs4149117 is classified as Benign for Rotor syndrome (HBLRR) (2 review stars, germline; last evaluated 2024-11-29).",
       "supportingFactIds": [
         "var.cond.0.significance",
-        "var.cond.1.significance",
-        "var.cond.2.significance"
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The variant rs4149117 has a germline origin for Rotor syndrome, SLCO1B3-related disorder, and not provided.",
+      "text": "In ClinVar, rs4149117 is classified as Benign for SLCO1B3-related disorder (0 review stars, germline; last evaluated 2021-12-29).",
       "supportingFactIds": [
-        "var.cond.0.origin",
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars",
         "var.cond.1.origin",
-        "var.cond.2.origin"
+        "var.cond.1.lastEvaluated"
       ],
-      "claimType": "condition_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs4149117 is classified as Benign for not provided (2 review stars, germline; last evaluated 2018-11-12).",
+      "supportingFactIds": [
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars",
+        "var.cond.2.origin",
+        "var.cond.2.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "f913d6e255dab0b0",
-    "promptVersion": "2.0.0",
+    "factsHash": "e018022ebd56bc1d",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:17:39.883Z",
-    "retrievedAt": "2026-07-27T10:17:32.359Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:11:59.553Z",
+    "retrievedAt": "2026-08-03T16:11:58.037Z",
     "sources": [
       {
         "label": "dbSNP",

@@ -41,51 +41,30 @@
         "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=PIK3CA"
       }
     ],
-    "retrievedAt": "2026-07-28T03:43:58.895Z"
+    "retrievedAt": "2026-08-03T16:06:25.169Z"
   },
   "claims": [
     {
-      "text": "The PIK3CA gene is a protein-coding gene located on chromosome 3.",
+      "text": "PIK3CA is a human protein-coding gene.",
       "supportingFactIds": [
-        "gene.type",
-        "gene.location"
+        "gene.symbol",
+        "gene.type"
       ],
-      "claimType": "classification_context"
-    },
-    {
-      "text": "The PIK3CA gene is also known as phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha.",
-      "supportingFactIds": [
-        "gene.name"
-      ],
-      "claimType": "identity"
-    },
-    {
-      "text": "The PIK3CA gene has been found to be oncogenic and has been implicated in cervical cancers.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "condition_context"
-    },
-    {
-      "text": "The PIK3CA gene has several aliases, including CCM4, CLAPO, and CLOVE.",
-      "supportingFactIds": [
-        "gene.alias.0",
-        "gene.alias.1",
-        "gene.alias.2"
-      ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
     "factsHash": "077860e7da623440",
-    "promptVersion": "2.0.0",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-28T03:44:08.753Z",
-    "retrievedAt": "2026-07-28T03:43:58.895Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:06:26.671Z",
+    "retrievedAt": "2026-08-03T16:06:25.169Z",
     "sources": [
       {
         "label": "NCBI Gene",

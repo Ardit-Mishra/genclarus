@@ -86,7 +86,7 @@
     "hasClinvar": true,
     "hgvsId": "chr7:g.87160618A>C",
     "variantId": 166622,
-    "uniprot": "P08183",
+    "uniprot": null,
     "residue": 893,
     "sources": [
       {
@@ -106,36 +106,92 @@
         "url": "https://gnomad.broadinstitute.org/variant/7-87531302-A-C?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:16:48.598Z"
+    "retrievedAt": "2026-08-03T16:11:39.163Z"
   },
   "claims": [
     {
-      "text": "The ABCB1 gene variant rs2032582 is a missense variant with a protein change of p.Ser893Ala.",
+      "text": "rs2032582 is a genetic variant located in the ABCB1 gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.consequence",
-        "var.protein"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "This variant is a single nucleotide variant.",
+      "text": "In gnomAD, rs2032582 has an overall allele frequency of 63.7%.",
       "supportingFactIds": [
-        "var.type"
+        "var.gnomadAf"
       ],
-      "claimType": "identity"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs2032582 is classified as Risk factor for Inflammatory bowel disease 13 (IBD13) (0 review stars, germline; last evaluated 2003-12-01).",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs2032582 is classified as Drug response for Tramadol response (0 review stars, somatic; last evaluated 2018-04-28).",
+      "supportingFactIds": [
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars",
+        "var.cond.1.origin",
+        "var.cond.1.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs2032582 is classified as Likely benign for ABCB1-related disorder (0 review stars, germline; last evaluated 2021-07-21).",
+      "supportingFactIds": [
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars",
+        "var.cond.2.origin",
+        "var.cond.2.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs2032582 is classified as Benign for not provided (2 review stars, germline; last evaluated 2018-03-13).",
+      "supportingFactIds": [
+        "var.cond.3.significance",
+        "var.cond.3.reviewStars",
+        "var.cond.3.origin",
+        "var.cond.3.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs2032582 is classified as Benign for not specified (1 review star, germline; last evaluated 2014-01-27).",
+      "supportingFactIds": [
+        "var.cond.4.significance",
+        "var.cond.4.reviewStars",
+        "var.cond.4.origin",
+        "var.cond.4.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "7e5f90b7bc9b2021",
-    "promptVersion": "2.0.0",
+    "factsHash": "51c9536bc30ed1e1",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:16:52.035Z",
-    "retrievedAt": "2026-07-27T10:16:48.598Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:11:40.671Z",
+    "retrievedAt": "2026-08-03T16:11:39.163Z",
     "sources": [
       {
         "label": "dbSNP",

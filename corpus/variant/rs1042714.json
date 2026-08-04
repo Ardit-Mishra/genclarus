@@ -66,45 +66,51 @@
         "url": "https://gnomad.broadinstitute.org/variant/5-148826910-G-G?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:14:55.933Z"
+    "retrievedAt": "2026-08-03T16:10:47.102Z"
   },
   "claims": [
     {
-      "text": "The ADRB2 gene variant rs1042714 is a missense variant leading to the protein change p.Gln27Glu.",
+      "text": "rs1042714 is a genetic variant located in the ADRB2 gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.consequence",
-        "var.protein"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The ADRB2 gene variant rs1042714 is classified as Benign in ClinVar.",
+      "text": "In ClinVar, rs1042714 is classified as Benign for ADRB2 POLYMORPHISM (0 review stars, germline; last evaluated 2005-05-01).",
       "supportingFactIds": [
         "var.cond.0.significance",
-        "var.cond.1.significance"
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The ADRB2 gene variant rs1042714 has a germline origin.",
+      "text": "In ClinVar, rs1042714 is classified as Benign for not provided (1 review star, germline; last evaluated 2019-12-31).",
       "supportingFactIds": [
-        "var.cond.0.origin",
-        "var.cond.1.origin"
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars",
+        "var.cond.1.origin",
+        "var.cond.1.lastEvaluated"
       ],
-      "claimType": "condition_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "607b282f2de53aa3",
-    "promptVersion": "2.0.0",
+    "factsHash": "8df6c9a74fd15871",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:15:00.751Z",
-    "retrievedAt": "2026-07-27T10:14:55.933Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:10:48.614Z",
+    "retrievedAt": "2026-08-03T16:10:47.102Z",
     "sources": [
       {
         "label": "dbSNP",

@@ -43,41 +43,37 @@
         "url": "https://gnomad.broadinstitute.org/variant/6-31574705-C-T?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:15:02.625Z"
+    "retrievedAt": "2026-08-03T16:10:49.091Z"
   },
   "claims": [
     {
-      "text": "The TNF gene variant is a single nucleotide variant.",
-      "supportingFactIds": [
-        "var.type"
-      ],
-      "claimType": "classification_context"
-    },
-    {
-      "text": "The TNF gene variant is located in the TNF gene.",
+      "text": "rs1799724 is a genetic variant located in the TNF gene.",
       "supportingFactIds": [
         "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The TNF gene variant has a frequency of 7.8% in the general population.",
+      "text": "In gnomAD, rs1799724 has an overall allele frequency of 7.8%.",
       "supportingFactIds": [
         "var.gnomadAf"
       ],
-      "claimType": "frequency_context"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "488cd7c5a2eb8319",
-    "promptVersion": "2.0.0",
+    "factsHash": "4e0a3c8cf109421b",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:15:06.960Z",
-    "retrievedAt": "2026-07-27T10:15:02.625Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:10:50.600Z",
+    "retrievedAt": "2026-08-03T16:10:49.091Z",
     "sources": [
       {
         "label": "dbSNP",

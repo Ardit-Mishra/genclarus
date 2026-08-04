@@ -41,50 +41,30 @@
         "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=FBN1"
       }
     ],
-    "retrievedAt": "2026-07-27T09:48:41.200Z"
+    "retrievedAt": "2026-08-03T16:07:04.570Z"
   },
   "claims": [
     {
-      "text": "FBN1 encodes a member of the fibrillin family of proteins.",
+      "text": "FBN1 is a human protein-coding gene.",
       "supportingFactIds": [
         "gene.symbol",
-        "gene.summary"
+        "gene.type"
       ],
-      "claimType": "identity"
-    },
-    {
-      "text": "Mutations in FBN1 are associated with Marfan syndrome and the related MASS phenotype.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "classification_context"
-    },
-    {
-      "text": "FBN1 is a protein-coding gene located on chromosome 15.",
-      "supportingFactIds": [
-        "gene.type",
-        "gene.location"
-      ],
-      "claimType": "identity"
-    },
-    {
-      "text": "FBN1 is associated with ectopia lentis syndrome.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "condition_context"
+      "claimType": "identity",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
     "factsHash": "fd673274b7aa116a",
-    "promptVersion": "2.0.0",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T09:48:44.111Z",
-    "retrievedAt": "2026-07-27T09:48:41.200Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:07:06.077Z",
+    "retrievedAt": "2026-08-03T16:07:04.570Z",
     "sources": [
       {
         "label": "NCBI Gene",

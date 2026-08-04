@@ -41,49 +41,30 @@
         "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=KRAS"
       }
     ],
-    "retrievedAt": "2026-07-27T09:46:48.609Z"
+    "retrievedAt": "2026-08-03T16:06:19.832Z"
   },
   "claims": [
     {
-      "text": "KRAS is a protein-coding gene located on chromosome 12.",
+      "text": "KRAS is a human protein-coding gene.",
       "supportingFactIds": [
-        "gene.type",
-        "gene.location"
+        "gene.symbol",
+        "gene.type"
       ],
-      "claimType": "identity"
-    },
-    {
-      "text": "KRAS encodes a protein that is a member of the small GTPase superfamily.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "function"
-    },
-    {
-      "text": "KRAS is implicated in various malignancies, including lung adenocarcinoma and colorectal carcinoma.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "classification_context"
-    },
-    {
-      "text": "Alternative splicing of KRAS leads to variants encoding two isoforms that differ in the C-terminal region.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "function"
+      "claimType": "identity",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
     "factsHash": "53b9fb98b9b4af6f",
-    "promptVersion": "2.0.0",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T09:46:52.909Z",
-    "retrievedAt": "2026-07-27T09:46:48.609Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:06:21.339Z",
+    "retrievedAt": "2026-08-03T16:06:19.832Z",
     "sources": [
       {
         "label": "NCBI Gene",

@@ -41,50 +41,30 @@
         "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=MSH6"
       }
     ],
-    "retrievedAt": "2026-07-27T09:44:20.260Z"
+    "retrievedAt": "2026-08-03T16:06:03.530Z"
   },
   "claims": [
     {
-      "text": "The MSH6 gene encodes a member of the DNA mismatch repair MutS family.",
+      "text": "MSH6 is a human protein-coding gene.",
       "supportingFactIds": [
         "gene.symbol",
-        "gene.summary"
+        "gene.type"
       ],
-      "claimType": "function"
-    },
-    {
-      "text": "MSH6 heterodimerizes with MSH2 to form a mismatch recognition complex.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "function"
-    },
-    {
-      "text": "Mutations in the MSH6 gene are associated with hereditary nonpolyposis colon cancer, colorectal cancer, and endometrial cancer.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "condition_context"
-    },
-    {
-      "text": "MSH6 is a protein-coding gene located on chromosome 2.",
-      "supportingFactIds": [
-        "gene.type",
-        "gene.location"
-      ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
     "factsHash": "f8b296671c19fa14",
-    "promptVersion": "2.0.0",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T09:44:23.512Z",
-    "retrievedAt": "2026-07-27T09:44:20.260Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:06:05.039Z",
+    "retrievedAt": "2026-08-03T16:06:03.530Z",
     "sources": [
       {
         "label": "NCBI Gene",

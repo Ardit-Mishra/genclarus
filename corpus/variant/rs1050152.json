@@ -66,44 +66,51 @@
         "url": "https://gnomad.broadinstitute.org/variant/5-132340627-C-T?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:16:43.177Z"
+    "retrievedAt": "2026-08-03T16:11:29.384Z"
   },
   "claims": [
     {
-      "text": "The MIR3936HG gene variant rs1050152 is a missense variant.",
+      "text": "In gnomAD, rs1050152 has an overall allele frequency of 26.7%.",
       "supportingFactIds": [
-        "var.gene",
-        "var.consequence"
+        "var.gnomadAf"
       ],
-      "claimType": "identity"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The MIR3936HG gene variant rs1050152 is a single nucleotide variant.",
+      "text": "In ClinVar, rs1050152 is classified as Benign for SLC22A4 POLYMORPHISM (0 review stars, germline; last evaluated 2005-10-01).",
       "supportingFactIds": [
-        "var.gene",
-        "var.type"
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
       ],
-      "claimType": "identity"
+      "claimType": "classification_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The MIR3936HG gene variant rs1050152 has a protein change of p.Leu503Phe.",
+      "text": "In ClinVar, rs1050152 is classified as Benign for not provided (2 review stars, germline; last evaluated 2025-02-03).",
       "supportingFactIds": [
-        "var.gene",
-        "var.protein"
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars",
+        "var.cond.1.origin",
+        "var.cond.1.lastEvaluated"
       ],
-      "claimType": "identity"
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "089cdefec5c77bab",
-    "promptVersion": "2.0.0",
+    "factsHash": "c174d3720aac929a",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:16:46.644Z",
-    "retrievedAt": "2026-07-27T10:16:43.177Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:11:30.888Z",
+    "retrievedAt": "2026-08-03T16:11:29.384Z",
     "sources": [
       {
         "label": "dbSNP",

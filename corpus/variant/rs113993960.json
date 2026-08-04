@@ -185,53 +185,187 @@
         "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs113993960"
       }
     ],
-    "retrievedAt": "2026-07-27T10:08:02.517Z"
+    "retrievedAt": "2026-08-03T16:08:26.085Z"
   },
   "claims": [
     {
-      "text": "The CFTR gene variant rs113993960 is a missense variant with a p.Phe508del protein change.",
+      "text": "rs113993960 is a genetic variant located in the CFTR gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.consequence",
-        "var.protein"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The variant rs113993960 has a germline origin and is associated with Cystic fibrosis (CF).",
+      "text": "In gnomAD, rs113993960 has an overall allele frequency of 0.80%.",
       "supportingFactIds": [
-        "var.cond.0.origin",
-        "var.cond.0.significance"
-      ],
-      "claimType": "condition_context"
-    },
-    {
-      "text": "The variant rs113993960 is associated with a drug response to ivacaftor and lumacaftor, with a review confidence of 3 of 4 stars.",
-      "supportingFactIds": [
-        "var.cond.1.significance",
-        "var.cond.1.reviewStars"
-      ],
-      "claimType": "classification_context"
-    },
-    {
-      "text": "The variant rs113993960 is found in 0.8% of the population in gnomAD.",
-      "supportingFactIds": [
-        "var.type",
         "var.gnomadAf"
       ],
-      "claimType": "frequency_context"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs113993960 is classified as Pathogenic for Cystic fibrosis (CF) (4 review stars, germline; last evaluated 2004-03-03).",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs113993960 is classified as Drug response (efficacy) for ivacaftor / lumacaftor response (3 review stars, germline; last evaluated 2021-03-24).",
+      "supportingFactIds": [
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars",
+        "var.cond.1.origin",
+        "var.cond.1.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs113993960 is classified as Drug response (efficacy) for ivacaftor / tezacaftor response (3 review stars, germline; last evaluated 2021-03-24).",
+      "supportingFactIds": [
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars",
+        "var.cond.2.origin",
+        "var.cond.2.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs113993960 is classified as Pathogenic for Hereditary pancreatitis (PCTT) (2 review stars, germline; last evaluated 2024-06-10).",
+      "supportingFactIds": [
+        "var.cond.3.significance",
+        "var.cond.3.reviewStars",
+        "var.cond.3.origin",
+        "var.cond.3.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs113993960 is classified as Pathogenic for Congenital bilateral aplasia of vas deferens from CFTR mutation (CBAVD) (2 review stars, germline; last evaluated 2024-06-10).",
+      "supportingFactIds": [
+        "var.cond.4.significance",
+        "var.cond.4.reviewStars",
+        "var.cond.4.origin",
+        "var.cond.4.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs113993960 is classified as Pathogenic for Bronchiectasis with or without elevated sweat chloride 1 (BESC1) (2 review stars, germline; last evaluated 2024-06-10).",
+      "supportingFactIds": [
+        "var.cond.5.significance",
+        "var.cond.5.reviewStars",
+        "var.cond.5.origin",
+        "var.cond.5.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs113993960 is classified as Pathogenic for Bronchiectasis with or without elevated sweat chloride 1 (BESC1) (2 review stars; last evaluated 2024-03-30).",
+      "supportingFactIds": [
+        "var.cond.6.significance",
+        "var.cond.6.reviewStars",
+        "var.cond.6.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs113993960 is classified as Pathogenic for CFTR-related disorder (CFTR-RD) (1 review star, germline; last evaluated 2023-12-15).",
+      "supportingFactIds": [
+        "var.cond.7.significance",
+        "var.cond.7.reviewStars",
+        "var.cond.7.origin",
+        "var.cond.7.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs113993960 is classified as Pathogenic for Obstructive azoospermia (1 review star, germline; last evaluated 2021-08-23).",
+      "supportingFactIds": [
+        "var.cond.8.significance",
+        "var.cond.8.reviewStars",
+        "var.cond.8.origin",
+        "var.cond.8.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs113993960 is classified as Pathogenic for Recurrent pancreatitis (1 review star; last evaluated 2017-01-01).",
+      "supportingFactIds": [
+        "var.cond.9.significance",
+        "var.cond.9.reviewStars",
+        "var.cond.9.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs113993960 is classified as Likely pathogenic for Duodenal stenosis (1 review star; last evaluated 2017-01-01).",
+      "supportingFactIds": [
+        "var.cond.10.significance",
+        "var.cond.10.reviewStars",
+        "var.cond.10.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs113993960 is classified as Risk factor for Bronchiectasis with or without elevated sweat chloride 1, modifier of (0 review stars, germline; last evaluated 2015-05-17).",
+      "supportingFactIds": [
+        "var.cond.11.significance",
+        "var.cond.11.reviewStars",
+        "var.cond.11.origin",
+        "var.cond.11.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs113993960 is classified as Pathogenic for not provided (2 review stars; last evaluated 2025-03-04).",
+      "supportingFactIds": [
+        "var.cond.12.significance",
+        "var.cond.12.reviewStars",
+        "var.cond.12.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs113993960 is classified as Pathogenic for See cases (1 review star, germline; last evaluated 2019-05-03).",
+      "supportingFactIds": [
+        "var.cond.13.significance",
+        "var.cond.13.reviewStars",
+        "var.cond.13.origin",
+        "var.cond.13.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "516d7f516538ad37",
-    "promptVersion": "2.0.0",
+    "factsHash": "33f43b1baeb88e71",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:08:07.886Z",
-    "retrievedAt": "2026-07-27T10:08:02.517Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:08:27.588Z",
+    "retrievedAt": "2026-08-03T16:08:26.085Z",
     "sources": [
       {
         "label": "dbSNP",

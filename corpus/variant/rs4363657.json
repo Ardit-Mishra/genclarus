@@ -35,28 +35,29 @@
         "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs4363657"
       }
     ],
-    "retrievedAt": "2026-07-27T10:17:49.324Z"
+    "retrievedAt": "2026-08-03T16:12:05.514Z"
   },
   "claims": [
     {
-      "text": "The human variant rs4363657 is a single nucleotide variant in the SLCO1B1 gene.",
+      "text": "rs4363657 is a genetic variant located in the SLCO1B1 gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.type"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "bf371780dbb118ce",
-    "promptVersion": "2.0.0",
+    "factsHash": "62835f1d788313cc",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:17:51.595Z",
-    "retrievedAt": "2026-07-27T10:17:49.324Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:12:07.032Z",
+    "retrievedAt": "2026-08-03T16:12:05.514Z",
     "sources": [
       {
         "label": "dbSNP",

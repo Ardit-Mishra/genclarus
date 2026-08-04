@@ -40,50 +40,30 @@
         "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=CFTR"
       }
     ],
-    "retrievedAt": "2026-07-27T09:44:04.317Z"
+    "retrievedAt": "2026-08-03T16:05:57.586Z"
   },
   "claims": [
     {
-      "text": "The CFTR gene encodes a protein that functions as a chloride channel.",
+      "text": "CFTR is a human protein-coding gene.",
       "supportingFactIds": [
         "gene.symbol",
-        "gene.summary"
+        "gene.type"
       ],
-      "claimType": "function"
-    },
-    {
-      "text": "Mutations in the CFTR gene cause cystic fibrosis.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "classification_context"
-    },
-    {
-      "text": "The CFTR gene is a protein-coding gene located on chromosome 7.",
-      "supportingFactIds": [
-        "gene.type",
-        "gene.location"
-      ],
-      "claimType": "identity"
-    },
-    {
-      "text": "Multiple pseudogenes have been identified for the CFTR gene.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
     "factsHash": "07adbce629cdb58a",
-    "promptVersion": "2.0.0",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T09:44:07.719Z",
-    "retrievedAt": "2026-07-27T09:44:04.317Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:05:59.091Z",
+    "retrievedAt": "2026-08-03T16:05:57.586Z",
     "sources": [
       {
         "label": "NCBI Gene",

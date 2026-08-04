@@ -188,38 +188,177 @@
         "url": "https://gnomad.broadinstitute.org/variant/16-31096368-C-T?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:10:47.159Z"
+    "retrievedAt": "2026-08-03T16:09:22.189Z"
   },
   "claims": [
     {
-      "text": "The VKORC1 gene variant rs9923231 is associated with a drug response to phenprocoumon in terms of toxicity.",
+      "text": "rs9923231 is a genetic variant located in the VKORC1 gene.",
+      "supportingFactIds": [
+        "var.gene"
+      ],
+      "claimType": "identity",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In gnomAD, rs9923231 has an overall allele frequency of 32.6%.",
+      "supportingFactIds": [
+        "var.gnomadAf"
+      ],
+      "claimType": "frequency_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs9923231 is classified as Drug response (dosage) for warfarin response (3 review stars, germline; last evaluated 2021-11-19).",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs9923231 is classified as Drug response (dosage) for phenprocoumon response (3 review stars, germline; last evaluated 2021-03-24).",
+      "supportingFactIds": [
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars",
+        "var.cond.1.origin",
+        "var.cond.1.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs9923231 is classified as Drug response (toxicity) for phenprocoumon response (3 review stars, germline; last evaluated 2021-03-24).",
       "supportingFactIds": [
         "var.cond.2.significance",
         "var.cond.2.reviewStars",
-        "var.cond.2.origin"
+        "var.cond.2.origin",
+        "var.cond.2.lastEvaluated"
       ],
-      "claimType": "condition_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The VKORC1 gene variant rs9923231 has a germline origin.",
+      "text": "In ClinVar, rs9923231 is classified as Drug response (toxicity) for warfarin response (3 review stars, germline; last evaluated 2021-03-24).",
       "supportingFactIds": [
-        "var.cond.0.origin",
-        "var.cond.1.origin",
-        "var.cond.2.origin"
+        "var.cond.3.significance",
+        "var.cond.3.reviewStars",
+        "var.cond.3.origin",
+        "var.cond.3.lastEvaluated"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs9923231 is classified as Drug response (dosage) for acenocoumarol response (3 review stars, germline; last evaluated 2021-03-24).",
+      "supportingFactIds": [
+        "var.cond.4.significance",
+        "var.cond.4.reviewStars",
+        "var.cond.4.origin",
+        "var.cond.4.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs9923231 is classified as Drug response (efficacy) for warfarin response (3 review stars, germline; last evaluated 2021-03-24).",
+      "supportingFactIds": [
+        "var.cond.5.significance",
+        "var.cond.5.reviewStars",
+        "var.cond.5.origin",
+        "var.cond.5.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs9923231 is classified as Pathogenic for Warfarin response (0 review stars, germline; last evaluated 2010-09-01).",
+      "supportingFactIds": [
+        "var.cond.6.significance",
+        "var.cond.6.reviewStars",
+        "var.cond.6.origin",
+        "var.cond.6.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs9923231 is classified as Protective for Venous thromboembolism (0 review stars, biparental).",
+      "supportingFactIds": [
+        "var.cond.7.significance",
+        "var.cond.7.reviewStars",
+        "var.cond.7.origin"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs9923231 is classified as Uncertain significance for Thrombus (0 review stars, germline).",
+      "supportingFactIds": [
+        "var.cond.8.significance",
+        "var.cond.8.reviewStars",
+        "var.cond.8.origin"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs9923231 is classified as Likely benign for VKORC1-related disorder (0 review stars, germline; last evaluated 2021-07-20).",
+      "supportingFactIds": [
+        "var.cond.9.significance",
+        "var.cond.9.reviewStars",
+        "var.cond.9.origin",
+        "var.cond.9.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs9923231 is classified as Benign for not provided (2 review stars, germline; last evaluated 2024-03-25).",
+      "supportingFactIds": [
+        "var.cond.10.significance",
+        "var.cond.10.reviewStars",
+        "var.cond.10.origin",
+        "var.cond.10.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs9923231 is classified as Likely benign for not specified (1 review star, germline; last evaluated 2018-03-09).",
+      "supportingFactIds": [
+        "var.cond.11.significance",
+        "var.cond.11.reviewStars",
+        "var.cond.11.origin",
+        "var.cond.11.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs9923231 is classified as Uncertain significance for See cases (0 review stars, germline).",
+      "supportingFactIds": [
+        "var.cond.12.significance",
+        "var.cond.12.reviewStars",
+        "var.cond.12.origin"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "e86627cf85e90338",
-    "promptVersion": "2.0.0",
+    "factsHash": "ad13dffbb7270b3d",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:10:53.460Z",
-    "retrievedAt": "2026-07-27T10:10:47.159Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:09:23.696Z",
+    "retrievedAt": "2026-08-03T16:09:22.189Z",
     "sources": [
       {
         "label": "dbSNP",

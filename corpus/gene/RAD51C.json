@@ -37,34 +37,30 @@
         "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=RAD51C"
       }
     ],
-    "retrievedAt": "2026-07-27T09:47:34.453Z"
+    "retrievedAt": "2026-08-03T16:06:38.452Z"
   },
   "claims": [
     {
-      "text": "The RAD51C gene is a member of the RAD51 family, which is involved in DNA repair and homologous recombination.",
+      "text": "RAD51C is a human protein-coding gene.",
       "supportingFactIds": [
-        "gene.summary"
+        "gene.symbol",
+        "gene.type"
       ],
-      "claimType": "function"
-    },
-    {
-      "text": "Mutations in the RAD51C gene are associated with Fanconi anemia-like syndrome.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "classification_context"
+      "claimType": "identity",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
     "factsHash": "b491aeae6ccfb74e",
-    "promptVersion": "2.0.0",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T09:47:39.358Z",
-    "retrievedAt": "2026-07-27T09:47:34.453Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:06:39.978Z",
+    "retrievedAt": "2026-08-03T16:06:38.452Z",
     "sources": [
       {
         "label": "NCBI Gene",

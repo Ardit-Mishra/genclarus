@@ -41,49 +41,30 @@
         "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=ATM"
       }
     ],
-    "retrievedAt": "2026-07-27T09:47:16.603Z"
+    "retrievedAt": "2026-08-03T16:06:30.683Z"
   },
   "claims": [
     {
-      "text": "The ATM gene is a protein-coding gene located on chromosome 11.",
+      "text": "ATM is a human protein-coding gene.",
       "supportingFactIds": [
-        "gene.type",
-        "gene.location"
+        "gene.symbol",
+        "gene.type"
       ],
-      "claimType": "identity"
-    },
-    {
-      "text": "The ATM protein is a master controller of cell cycle checkpoint signaling pathways.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "function"
-    },
-    {
-      "text": "Mutations in the ATM gene are associated with ataxia telangiectasia.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "condition_context"
-    },
-    {
-      "text": "The ATM protein phosphorylates and regulates tumor suppressor proteins p53 and BRCA1.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "function"
+      "claimType": "identity",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
     "factsHash": "baa1aa2687d1e60f",
-    "promptVersion": "2.0.0",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T09:47:21.686Z",
-    "retrievedAt": "2026-07-27T09:47:16.603Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:06:32.195Z",
+    "retrievedAt": "2026-08-03T16:06:30.683Z",
     "sources": [
       {
         "label": "NCBI Gene",

@@ -309,52 +309,317 @@
         "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs80338939"
       }
     ],
-    "retrievedAt": "2026-07-27T10:14:34.055Z"
+    "retrievedAt": "2026-08-03T16:10:40.950Z"
   },
   "claims": [
     {
-      "text": "The GJB2 gene variant rs80338939 is a frameshift variant leading to a p.Gly12fs protein change.",
+      "text": "rs80338939 is a genetic variant located in the GJB2 gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.consequence",
-        "var.protein"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "This variant is a deletion.",
+      "text": "In gnomAD, rs80338939 has an overall allele frequency of 0.79%.",
       "supportingFactIds": [
-        "var.type"
+        "var.gnomadAf"
       ],
-      "claimType": "identity"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The variant rs80338939 is classified as Pathogenic for Nonsyndromic genetic hearing loss with a review confidence of 3 of 4 review stars.",
+      "text": "In ClinVar, rs80338939 is classified as Pathogenic for Nonsyndromic genetic hearing loss (3 review stars, germline; last evaluated 2018-09-20).",
       "supportingFactIds": [
         "var.cond.0.significance",
-        "var.cond.0.reviewStars"
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The variant rs80338939 is classified as Pathogenic for Hearing loss, autosomal recessive, with a review confidence of 2 of 4 review stars.",
+      "text": "In ClinVar, rs80338939 is classified as Pathogenic for Autosomal recessive nonsyndromic hearing loss 1A (DFNB1A) (2 review stars, biparental; last evaluated 2025-03-25).",
+      "supportingFactIds": [
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars",
+        "var.cond.1.origin",
+        "var.cond.1.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs80338939 is classified as Pathogenic for Hearing loss, autosomal recessive (2 review stars, germline; last evaluated 2024-11-08).",
       "supportingFactIds": [
         "var.cond.2.significance",
-        "var.cond.2.reviewStars"
+        "var.cond.2.reviewStars",
+        "var.cond.2.origin",
+        "var.cond.2.lastEvaluated"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs80338939 is classified as Pathogenic for GJB2-related disorder (2 review stars, germline; last evaluated 2024-09-04).",
+      "supportingFactIds": [
+        "var.cond.3.significance",
+        "var.cond.3.reviewStars",
+        "var.cond.3.origin",
+        "var.cond.3.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs80338939 is classified as Pathogenic for Autosomal dominant nonsyndromic hearing loss 3A (2 review stars, germline; last evaluated 2024-06-06).",
+      "supportingFactIds": [
+        "var.cond.4.significance",
+        "var.cond.4.reviewStars",
+        "var.cond.4.origin",
+        "var.cond.4.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs80338939 is classified as Pathogenic for Autosomal recessive nonsyndromic hearing loss 1A (DFNB1A) (2 review stars, germline; last evaluated 2024-06-06).",
+      "supportingFactIds": [
+        "var.cond.5.significance",
+        "var.cond.5.reviewStars",
+        "var.cond.5.origin",
+        "var.cond.5.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs80338939 is classified as Pathogenic for Mutilating keratoderma (VOWNKL) (2 review stars, germline; last evaluated 2024-06-06).",
+      "supportingFactIds": [
+        "var.cond.6.significance",
+        "var.cond.6.reviewStars",
+        "var.cond.6.origin",
+        "var.cond.6.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs80338939 is classified as Pathogenic for Ichthyosis, hystrix-like, with hearing loss (2 review stars, germline; last evaluated 2024-06-06).",
+      "supportingFactIds": [
+        "var.cond.7.significance",
+        "var.cond.7.reviewStars",
+        "var.cond.7.origin",
+        "var.cond.7.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs80338939 is classified as Pathogenic for Autosomal dominant keratitis-ichthyosis-hearing loss syndrome (2 review stars, germline; last evaluated 2024-06-06).",
+      "supportingFactIds": [
+        "var.cond.8.significance",
+        "var.cond.8.reviewStars",
+        "var.cond.8.origin",
+        "var.cond.8.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs80338939 is classified as Pathogenic for Palmoplantar keratoderma-deafness syndrome (2 review stars, germline; last evaluated 2024-06-06).",
+      "supportingFactIds": [
+        "var.cond.9.significance",
+        "var.cond.9.reviewStars",
+        "var.cond.9.origin",
+        "var.cond.9.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs80338939 is classified as Pathogenic for Knuckle pads, deafness AND leukonychia syndrome (2 review stars, germline; last evaluated 2024-06-06).",
+      "supportingFactIds": [
+        "var.cond.10.significance",
+        "var.cond.10.reviewStars",
+        "var.cond.10.origin",
+        "var.cond.10.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs80338939 is classified as Pathogenic for Hearing impairment (2 review stars, maternal; last evaluated 2021-04-12).",
+      "supportingFactIds": [
+        "var.cond.11.significance",
+        "var.cond.11.reviewStars",
+        "var.cond.11.origin",
+        "var.cond.11.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs80338939 is classified as Pathogenic for Hereditary palmoplantar keratoderma (1 review star, germline; last evaluated 2024-10-04).",
+      "supportingFactIds": [
+        "var.cond.12.significance",
+        "var.cond.12.reviewStars",
+        "var.cond.12.origin",
+        "var.cond.12.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs80338939 is classified as Pathogenic for Inborn genetic diseases (1 review star, germline; last evaluated 2022-12-02).",
+      "supportingFactIds": [
+        "var.cond.13.significance",
+        "var.cond.13.reviewStars",
+        "var.cond.13.origin",
+        "var.cond.13.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs80338939 is classified as Pathogenic for Rare genetic deafness (1 review star, germline; last evaluated 2022-06-23).",
+      "supportingFactIds": [
+        "var.cond.14.significance",
+        "var.cond.14.reviewStars",
+        "var.cond.14.origin",
+        "var.cond.14.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs80338939 is classified as Pathogenic for Deafness (1 review star, germline; last evaluated 2021-09-02).",
+      "supportingFactIds": [
+        "var.cond.15.significance",
+        "var.cond.15.reviewStars",
+        "var.cond.15.origin",
+        "var.cond.15.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs80338939 is classified as Pathogenic for Ear malformation (1 review star, germline; last evaluated 2021-07-10).",
+      "supportingFactIds": [
+        "var.cond.16.significance",
+        "var.cond.16.reviewStars",
+        "var.cond.16.origin",
+        "var.cond.16.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs80338939 is classified as Pathogenic for Hearing impairment (1 review star; last evaluated 2015-01-13).",
+      "supportingFactIds": [
+        "var.cond.17.significance",
+        "var.cond.17.reviewStars",
+        "var.cond.17.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs80338939 is classified as Pathogenic for Bilateral conductive hearing impairment (1 review star; last evaluated 2015-01-13).",
+      "supportingFactIds": [
+        "var.cond.18.significance",
+        "var.cond.18.reviewStars",
+        "var.cond.18.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs80338939 is classified as Pathogenic for Bilateral sensorineural hearing impairment (1 review star; last evaluated 2014-10-01).",
+      "supportingFactIds": [
+        "var.cond.19.significance",
+        "var.cond.19.reviewStars",
+        "var.cond.19.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs80338939 is classified as Pathogenic for Autosomal recessive nonsyndromic hearing loss 1B (1 review star, germline).",
+      "supportingFactIds": [
+        "var.cond.20.significance",
+        "var.cond.20.reviewStars",
+        "var.cond.20.origin"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs80338939 is classified as Pathogenic for Autosomal recessive nonsyndromic hearing loss 104 (1 review star, germline).",
+      "supportingFactIds": [
+        "var.cond.21.significance",
+        "var.cond.21.reviewStars",
+        "var.cond.21.origin"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs80338939 is classified as Pathogenic for Hearing loss (0 review stars, germline; last evaluated 2017-02-22).",
+      "supportingFactIds": [
+        "var.cond.22.significance",
+        "var.cond.22.reviewStars",
+        "var.cond.22.origin",
+        "var.cond.22.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs80338939 is classified as Pathogenic for Severe sensorineural hearing impairment (0 review stars; last evaluated 2016-01-04).",
+      "supportingFactIds": [
+        "var.cond.23.significance",
+        "var.cond.23.reviewStars",
+        "var.cond.23.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs80338939 is classified as Pathogenic for Deafness, digenic, GJB2/GJB6 (0 review stars, germline; last evaluated 2012-10-05).",
+      "supportingFactIds": [
+        "var.cond.24.significance",
+        "var.cond.24.reviewStars",
+        "var.cond.24.origin",
+        "var.cond.24.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs80338939 is classified as Pathogenic for not provided (2 review stars, germline; last evaluated 2025-03-04).",
+      "supportingFactIds": [
+        "var.cond.25.significance",
+        "var.cond.25.reviewStars",
+        "var.cond.25.origin",
+        "var.cond.25.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "f265fcfe32da6f8a",
-    "promptVersion": "2.0.0",
+    "factsHash": "26362be9cb65a84f",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:14:37.347Z",
-    "retrievedAt": "2026-07-27T10:14:34.055Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:10:42.467Z",
+    "retrievedAt": "2026-08-03T16:10:40.950Z",
     "sources": [
       {
         "label": "dbSNP",

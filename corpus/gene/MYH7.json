@@ -41,49 +41,30 @@
         "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=MYH7"
       }
     ],
-    "retrievedAt": "2026-07-27T10:06:09.542Z"
+    "retrievedAt": "2026-08-03T16:07:44.090Z"
   },
   "claims": [
     {
-      "text": "The MYH7 gene encodes the beta (or slow) heavy chain subunit of cardiac myosin.",
+      "text": "MYH7 is a human protein-coding gene.",
       "supportingFactIds": [
-        "gene.summary"
+        "gene.symbol",
+        "gene.type"
       ],
-      "claimType": "function"
-    },
-    {
-      "text": "Mutations in the MYH7 gene are associated with familial hypertrophic cardiomyopathy.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "classification_context"
-    },
-    {
-      "text": "The MYH7 gene is a protein-coding gene located on chromosome 14.",
-      "supportingFactIds": [
-        "gene.type",
-        "gene.location"
-      ],
-      "claimType": "identity"
-    },
-    {
-      "text": "The classification of MYH7 gene variants varies, with some associated with familial hypertrophic cardiomyopathy and others with myosin storage myopathy.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "uncertainty"
+      "claimType": "identity",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
     "factsHash": "62e793e740e8d8fe",
-    "promptVersion": "2.0.0",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:06:13.009Z",
-    "retrievedAt": "2026-07-27T10:06:09.542Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:07:45.605Z",
+    "retrievedAt": "2026-08-03T16:07:44.090Z",
     "sources": [
       {
         "label": "NCBI Gene",

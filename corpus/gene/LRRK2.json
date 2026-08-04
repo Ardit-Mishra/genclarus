@@ -38,49 +38,30 @@
         "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=LRRK2"
       }
     ],
-    "retrievedAt": "2026-07-27T10:26:05.648Z"
+    "retrievedAt": "2026-08-03T16:07:48.384Z"
   },
   "claims": [
     {
-      "text": "The LRRK2 gene is a member of the leucine-rich repeat kinase family and encodes a protein with multiple domains.",
+      "text": "LRRK2 is a human protein-coding gene.",
       "supportingFactIds": [
         "gene.symbol",
-        "gene.summary"
+        "gene.type"
       ],
-      "claimType": "identity"
-    },
-    {
-      "text": "Mutations in the LRRK2 gene have been associated with Parkinson disease-8.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "classification_context"
-    },
-    {
-      "text": "The LRRK2 gene is located on chromosome 12 between positions 40,196,744 and 40,369,285.",
-      "supportingFactIds": [
-        "gene.location"
-      ],
-      "claimType": "identity"
-    },
-    {
-      "text": "The LRRK2 protein is present largely in the cytoplasm but also associates with the mitochondrial outer membrane.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "function"
+      "claimType": "identity",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
     "factsHash": "4e3ab767f4e1aa6b",
-    "promptVersion": "2.0.0",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:26:08.894Z",
-    "retrievedAt": "2026-07-27T10:26:05.648Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:07:49.899Z",
+    "retrievedAt": "2026-08-03T16:07:48.384Z",
     "sources": [
       {
         "label": "NCBI Gene",

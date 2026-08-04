@@ -35,28 +35,29 @@
         "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs20417"
       }
     ],
-    "retrievedAt": "2026-07-27T10:15:32.935Z"
+    "retrievedAt": "2026-08-03T16:11:10.554Z"
   },
   "claims": [
     {
-      "text": "The PTGS2 gene variant rs20417 is a single nucleotide variant.",
+      "text": "rs20417 is a genetic variant located in the PTGS2 gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.type"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "38cda4b872c1b5bf",
-    "promptVersion": "2.0.0",
+    "factsHash": "059ca4b3ea239870",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:15:35.662Z",
-    "retrievedAt": "2026-07-27T10:15:32.935Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:11:12.064Z",
+    "retrievedAt": "2026-08-03T16:11:10.554Z",
     "sources": [
       {
         "label": "dbSNP",

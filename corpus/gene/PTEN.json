@@ -41,48 +41,30 @@
         "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=PTEN"
       }
     ],
-    "retrievedAt": "2026-07-27T09:44:30.095Z"
+    "retrievedAt": "2026-08-03T16:06:08.977Z"
   },
   "claims": [
     {
-      "text": "The PTEN gene is a tumor suppressor that is mutated in a large number of cancers at high frequency.",
+      "text": "PTEN is a human protein-coding gene.",
       "supportingFactIds": [
-        "gene.summary"
+        "gene.symbol",
+        "gene.type"
       ],
-      "claimType": "classification_context"
-    },
-    {
-      "text": "The PTEN protein is a phosphatidylinositol-3,4,5-trisphosphate 3-phosphatase that negatively regulates intracellular levels of phosphatidylinositol-3,4,5-trisphosphate in cells.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "function"
-    },
-    {
-      "text": "PTEN functions as a tumor suppressor by negatively regulating AKT/PKB signaling pathway.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "function"
-    },
-    {
-      "text": "Alternative splicing and the use of multiple translation start codons results in multiple transcript variants encoding different isoforms of the PTEN protein.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
     "factsHash": "50a7c4783707b8b4",
-    "promptVersion": "2.0.0",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T09:44:34.020Z",
-    "retrievedAt": "2026-07-27T09:44:30.095Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:06:10.491Z",
+    "retrievedAt": "2026-08-03T16:06:08.977Z",
     "sources": [
       {
         "label": "NCBI Gene",

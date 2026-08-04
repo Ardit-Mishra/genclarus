@@ -88,46 +88,80 @@
         "url": "https://gnomad.broadinstitute.org/variant/10-114044277-A-G?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:16:35.288Z"
+    "retrievedAt": "2026-08-03T16:11:27.319Z"
   },
   "claims": [
     {
-      "text": "The ADRB1 gene variant rs1801252 is a missense variant with a p.Ser49Gly protein change.",
+      "text": "rs1801252 is a genetic variant located in the ADRB1 gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.consequence",
-        "var.protein"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The ADRB1 gene variant rs1801252 has a frequency of 17% in the gnomAD population.",
+      "text": "In gnomAD, rs1801252 has an overall allele frequency of 16.9%.",
       "supportingFactIds": [
-        "var.type",
         "var.gnomadAf"
       ],
-      "claimType": "frequency_context"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The ADRB1 gene variant rs1801252 has a low review confidence of 0 of 4 review stars for ADRB1-related disorder and Resting heart rate (RHR), and 1 of 4 review stars for other conditions.",
+      "text": "In ClinVar, rs1801252 is classified as Benign for ADRB1-related disorder (0 review stars, germline; last evaluated 2019-10-28).",
       "supportingFactIds": [
+        "var.cond.0.significance",
         "var.cond.0.reviewStars",
-        "var.cond.1.reviewStars",
-        "var.cond.2.reviewStars"
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
       ],
-      "claimType": "uncertainty"
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1801252 is classified as association for Resting heart rate (RHR) (0 review stars, germline; last evaluated 2015-05-18).",
+      "supportingFactIds": [
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars",
+        "var.cond.1.origin",
+        "var.cond.1.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1801252 is classified as Likely benign for not specified (1 review star, germline; last evaluated 2018-03-09).",
+      "supportingFactIds": [
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars",
+        "var.cond.2.origin",
+        "var.cond.2.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1801252 is classified as Likely benign for not provided (1 review star, germline).",
+      "supportingFactIds": [
+        "var.cond.3.significance",
+        "var.cond.3.reviewStars",
+        "var.cond.3.origin"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "dd8588741d856b1c",
-    "promptVersion": "2.0.0",
+    "factsHash": "790fe451fdc04ceb",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:16:41.383Z",
-    "retrievedAt": "2026-07-27T10:16:35.288Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:11:28.822Z",
+    "retrievedAt": "2026-08-03T16:11:27.319Z",
     "sources": [
       {
         "label": "dbSNP",

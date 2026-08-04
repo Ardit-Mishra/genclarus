@@ -56,52 +56,48 @@
         "url": "https://gnomad.broadinstitute.org/variant/6-18143724-C-G?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:11:00.959Z"
+    "retrievedAt": "2026-08-03T16:09:26.337Z"
   },
   "claims": [
     {
-      "text": "The TPMT gene variant rs1800462 is a missense variant.",
+      "text": "rs1800462 is a genetic variant located in the TPMT gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.consequence"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The TPMT gene variant rs1800462 is a single nucleotide variant.",
+      "text": "In gnomAD, rs1800462 has an overall allele frequency of 0.12%.",
       "supportingFactIds": [
-        "var.gene",
-        "var.type"
+        "var.gnomadAf"
       ],
-      "claimType": "identity"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The TPMT gene variant rs1800462 has a protein change of p.Ala80Pro.",
+      "text": "In ClinVar, rs1800462 is classified as Drug response for Thiopurine S-methyltransferase deficiency (0 review stars, germline; last evaluated 1999-02-01).",
       "supportingFactIds": [
-        "var.gene",
-        "var.protein"
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
       ],
-      "claimType": "identity"
-    },
-    {
-      "text": "The TPMT gene variant rs1800462 is associated with Thiopurine S-methyltransferase deficiency, classified as a drug response.",
-      "supportingFactIds": [
-        "var.gene",
-        "var.cond.0.significance"
-      ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "7f6cc5b1cbf2c780",
-    "promptVersion": "2.0.0",
+    "factsHash": "20d906ddf67a13ff",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:11:07.136Z",
-    "retrievedAt": "2026-07-27T10:11:00.959Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:09:27.853Z",
+    "retrievedAt": "2026-08-03T16:09:26.337Z",
     "sources": [
       {
         "label": "dbSNP",

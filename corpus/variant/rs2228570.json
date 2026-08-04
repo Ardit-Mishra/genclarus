@@ -94,51 +94,81 @@
         "url": "https://gnomad.broadinstitute.org/variant/12-47879112-A-G?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:13:28.590Z"
+    "retrievedAt": "2026-08-03T16:10:09.493Z"
   },
   "claims": [
     {
-      "text": "The VDR gene variant rs2228570 is a missense variant with a protein change of p.Met1Thr.",
+      "text": "rs2228570 is a genetic variant located in the VDR gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.consequence",
-        "var.protein"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The variant rs2228570 has a frequency of 65% in the gnomAD population.",
+      "text": "In gnomAD, rs2228570 has an overall allele frequency of 64.8%.",
       "supportingFactIds": [
-        "var.type",
         "var.gnomadAf"
       ],
-      "claimType": "frequency_context"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The significance of the variant rs2228570 for Vitamin D-dependent rickets type II with alopecia is conflicting.",
+      "text": "In ClinVar, rs2228570 is classified as Conflicting interpretations for Vitamin D-dependent rickets type II with alopecia (VDDR2A) (1 review star, germline; last evaluated 2023-04-17).",
       "supportingFactIds": [
-        "var.cond.0.significance"
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The variant rs2228570 is classified as benign for Periodontitis.",
+      "text": "In ClinVar, rs2228570 is classified as Benign for Periodontitis (0 review stars, germline; last evaluated 2023-04-20).",
       "supportingFactIds": [
-        "var.cond.1.significance"
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars",
+        "var.cond.1.origin",
+        "var.cond.1.lastEvaluated"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs2228570 is classified as Benign for not provided (2 review stars, germline; last evaluated 2025-02-03).",
+      "supportingFactIds": [
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars",
+        "var.cond.2.origin",
+        "var.cond.2.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs2228570 is classified as Benign for not specified (1 review star, germline; last evaluated 2016-02-17).",
+      "supportingFactIds": [
+        "var.cond.3.significance",
+        "var.cond.3.reviewStars",
+        "var.cond.3.origin",
+        "var.cond.3.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "a12e4b4adc5eb013",
-    "promptVersion": "2.0.0",
+    "factsHash": "26cb66156f3fbb85",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:13:31.892Z",
-    "retrievedAt": "2026-07-27T10:13:28.590Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:10:10.995Z",
+    "retrievedAt": "2026-08-03T16:10:09.493Z",
     "sources": [
       {
         "label": "dbSNP",

@@ -214,52 +214,212 @@
         "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs80357906"
       }
     ],
-    "retrievedAt": "2026-07-27T10:07:56.234Z"
+    "retrievedAt": "2026-08-03T16:08:24.003Z"
   },
   "claims": [
     {
-      "text": "The BRCA1 gene variant rs80357906 is a duplication of the gene sequence.",
+      "text": "rs80357906 is a genetic variant located in the BRCA1 gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.type"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The BRCA1 gene variant rs80357906 leads to a p.Gln1756Profs protein change.",
-      "supportingFactIds": [
-        "var.gene",
-        "var.protein"
-      ],
-      "claimType": "identity"
-    },
-    {
-      "text": "The BRCA1 gene variant rs80357906 is classified as pathogenic for breast-ovarian cancer, familial, susceptibility to, 1 (BROVCA1) with a review confidence of 3 of 4 stars.",
+      "text": "In ClinVar, rs80357906 is classified as Pathogenic for Breast-ovarian cancer, familial, susceptibility to, 1 (BROVCA1) (3 review stars, germline; last evaluated 2016-04-22).",
       "supportingFactIds": [
         "var.cond.0.significance",
-        "var.cond.0.reviewStars"
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The BRCA1 gene variant rs80357906 is classified as pathogenic for familial cancer of breast with a review confidence of 2 of 4 stars.",
+      "text": "In ClinVar, rs80357906 is classified as Pathogenic for Hereditary breast ovarian cancer syndrome (2 review stars, germline; last evaluated 2025-02-03).",
+      "supportingFactIds": [
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars",
+        "var.cond.1.origin",
+        "var.cond.1.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs80357906 is classified as Pathogenic for Familial cancer of breast (2 review stars, germline; last evaluated 2024-11-25).",
       "supportingFactIds": [
         "var.cond.2.significance",
-        "var.cond.2.reviewStars"
+        "var.cond.2.reviewStars",
+        "var.cond.2.origin",
+        "var.cond.2.lastEvaluated"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs80357906 is classified as Pathogenic for Hereditary cancer-predisposing syndrome (2 review stars, germline; last evaluated 2024-07-10).",
+      "supportingFactIds": [
+        "var.cond.3.significance",
+        "var.cond.3.reviewStars",
+        "var.cond.3.origin",
+        "var.cond.3.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs80357906 is classified as Pathogenic for Inherited breast cancer and ovarian cancer (1 review star, germline; last evaluated 2024-10-23).",
+      "supportingFactIds": [
+        "var.cond.4.significance",
+        "var.cond.4.reviewStars",
+        "var.cond.4.origin",
+        "var.cond.4.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs80357906 is classified as Pathogenic for BRCA1-related cancer predisposition (1 review star, germline; last evaluated 2024-09-28).",
+      "supportingFactIds": [
+        "var.cond.5.significance",
+        "var.cond.5.reviewStars",
+        "var.cond.5.origin",
+        "var.cond.5.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs80357906 is classified as Pathogenic for Pancreatic cancer, susceptibility to, 4 (1 review star, germline; last evaluated 2024-03-14).",
+      "supportingFactIds": [
+        "var.cond.6.significance",
+        "var.cond.6.reviewStars",
+        "var.cond.6.origin",
+        "var.cond.6.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs80357906 is classified as Pathogenic for Fanconi anemia, complementation group S (FANCS) (1 review star, germline; last evaluated 2024-03-14).",
+      "supportingFactIds": [
+        "var.cond.7.significance",
+        "var.cond.7.reviewStars",
+        "var.cond.7.origin",
+        "var.cond.7.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs80357906 is classified as Pathogenic for Breast and/or ovarian cancer (1 review star, germline; last evaluated 2023-03-24).",
+      "supportingFactIds": [
+        "var.cond.8.significance",
+        "var.cond.8.reviewStars",
+        "var.cond.8.origin",
+        "var.cond.8.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs80357906 is classified as Pathogenic for Punctate palmoplantar keratoderma type 2 (PPKP2) (1 review star, germline; last evaluated 2017-07-21).",
+      "supportingFactIds": [
+        "var.cond.9.significance",
+        "var.cond.9.reviewStars",
+        "var.cond.9.origin",
+        "var.cond.9.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs80357906 is classified as Pathogenic for Ovarian neoplasm (1 review star, germline; last evaluated 2014-05-29).",
+      "supportingFactIds": [
+        "var.cond.10.significance",
+        "var.cond.10.reviewStars",
+        "var.cond.10.origin",
+        "var.cond.10.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs80357906 is classified as Pathogenic for Breast neoplasm (1 review star, germline).",
+      "supportingFactIds": [
+        "var.cond.11.significance",
+        "var.cond.11.reviewStars",
+        "var.cond.11.origin"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs80357906 is classified as Pathogenic for BRCA1-related disorder (0 review stars, germline; last evaluated 2024-06-26).",
+      "supportingFactIds": [
+        "var.cond.12.significance",
+        "var.cond.12.reviewStars",
+        "var.cond.12.origin",
+        "var.cond.12.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs80357906 is classified as Pathogenic for Endometrial carcinoma (0 review stars, germline; last evaluated 2023-02-21).",
+      "supportingFactIds": [
+        "var.cond.13.significance",
+        "var.cond.13.reviewStars",
+        "var.cond.13.origin",
+        "var.cond.13.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs80357906 is classified as Risk factor for Pancreatic cancer, susceptibility to (0 review stars; last evaluated 2008-10-15).",
+      "supportingFactIds": [
+        "var.cond.14.significance",
+        "var.cond.14.reviewStars",
+        "var.cond.14.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs80357906 is classified as Uncertain significance for Malignant tumor of breast (0 review stars).",
+      "supportingFactIds": [
+        "var.cond.15.significance",
+        "var.cond.15.reviewStars"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs80357906 is classified as Pathogenic for not provided (2 review stars, germline; last evaluated 2025-03-04).",
+      "supportingFactIds": [
+        "var.cond.16.significance",
+        "var.cond.16.reviewStars",
+        "var.cond.16.origin",
+        "var.cond.16.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "ae75ad224d490b01",
-    "promptVersion": "2.0.0",
+    "factsHash": "2ec5d2181317bf2f",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:07:59.947Z",
-    "retrievedAt": "2026-07-27T10:07:56.234Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:08:25.508Z",
+    "retrievedAt": "2026-08-03T16:08:24.003Z",
     "sources": [
       {
         "label": "dbSNP",

@@ -97,53 +97,92 @@
         "url": "https://gnomad.broadinstitute.org/variant/12-47844974-A-G?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:13:40.267Z"
+    "retrievedAt": "2026-08-03T16:10:24.445Z"
   },
   "claims": [
     {
-      "text": "The VDR gene variant rs731236 is a synonymous variant.",
+      "text": "rs731236 is a genetic variant located in the VDR gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.consequence"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The VDR gene variant rs731236 has a protein change of p.Ile352Ile.",
+      "text": "In gnomAD, rs731236 has an overall allele frequency of 33.1%.",
       "supportingFactIds": [
-        "var.gene",
-        "var.protein"
-      ],
-      "claimType": "identity"
-    },
-    {
-      "text": "The VDR gene variant rs731236 is classified as Benign for Vitamin D-dependent rickets type II with alopecia (VDDR2A) and Periodontitis, but as Likely risk allele for Hepatocellular carcinoma (HCC).",
-      "supportingFactIds": [
-        "var.cond.0.significance",
-        "var.cond.1.significance",
-        "var.cond.2.significance"
-      ],
-      "claimType": "classification_context"
-    },
-    {
-      "text": "The VDR gene variant rs731236 has a frequency of 33% in gnomAD.",
-      "supportingFactIds": [
-        "var.type",
         "var.gnomadAf"
       ],
-      "claimType": "frequency_context"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs731236 is classified as Benign for Vitamin D-dependent rickets type II with alopecia (VDDR2A) (2 review stars, germline; last evaluated 2021-12-05).",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs731236 is classified as Benign for Periodontitis (0 review stars, germline; last evaluated 2023-04-20).",
+      "supportingFactIds": [
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars",
+        "var.cond.1.origin",
+        "var.cond.1.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs731236 is classified as Likely risk allele (risk factor) for Hepatocellular carcinoma (HCC) (0 review stars, germline; last evaluated 2022-07-14).",
+      "supportingFactIds": [
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars",
+        "var.cond.2.origin",
+        "var.cond.2.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs731236 is classified as Benign for not provided (2 review stars, germline; last evaluated 2025-02-03).",
+      "supportingFactIds": [
+        "var.cond.3.significance",
+        "var.cond.3.reviewStars",
+        "var.cond.3.origin",
+        "var.cond.3.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs731236 is classified as Benign for not specified (1 review star, germline; last evaluated 2016-03-21).",
+      "supportingFactIds": [
+        "var.cond.4.significance",
+        "var.cond.4.reviewStars",
+        "var.cond.4.origin",
+        "var.cond.4.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "120c7043c838e498",
-    "promptVersion": "2.0.0",
+    "factsHash": "39ece982f45dd61c",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:13:44.098Z",
-    "retrievedAt": "2026-07-27T10:13:40.267Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:10:25.963Z",
+    "retrievedAt": "2026-08-03T16:10:24.445Z",
     "sources": [
       {
         "label": "dbSNP",

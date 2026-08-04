@@ -159,53 +159,157 @@
         "url": "https://gnomad.broadinstitute.org/variant/1-11794419-T-G?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:26:31.546Z"
+    "retrievedAt": "2026-08-03T16:08:56.638Z"
   },
   "claims": [
     {
-      "text": "The MTHFR gene variant rs1801131 is a missense variant leading to the p.Glu429Ala protein change.",
+      "text": "rs1801131 is a genetic variant located in the MTHFR gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.consequence",
-        "var.protein"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The MTHFR gene variant rs1801131 has a benign classification for Homocystinuria due to methylene tetrahydrofolate reductase deficiency, with a review confidence of 2 of 4 stars.",
+      "text": "In gnomAD, rs1801131 has an overall allele frequency of 26.0%.",
+      "supportingFactIds": [
+        "var.gnomadAf"
+      ],
+      "claimType": "frequency_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1801131 is classified as Benign for Homocystinuria due to methylene tetrahydrofolate reductase deficiency (2 review stars, germline; last evaluated 2025-02-03).",
       "supportingFactIds": [
         "var.cond.0.significance",
-        "var.cond.0.reviewStars"
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The MTHFR gene variant rs1801131 has a benign classification for Neural tube defects, folate-sensitive (NTDFS), with a review confidence of 1 of 4 stars.",
+      "text": "In ClinVar, rs1801131 is classified as Benign for Neural tube defects, folate-sensitive (NTDFS) (1 review star, germline; last evaluated 2023-04-17).",
       "supportingFactIds": [
         "var.cond.1.significance",
-        "var.cond.1.reviewStars"
+        "var.cond.1.reviewStars",
+        "var.cond.1.origin",
+        "var.cond.1.lastEvaluated"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The MTHFR gene variant rs1801131 has a benign classification for Schizophrenia (SCZD), with a review confidence of 1 of 4 stars.",
+      "text": "In ClinVar, rs1801131 is classified as Benign for Schizophrenia (SCZD) (1 review star, germline; last evaluated 2023-04-17).",
       "supportingFactIds": [
         "var.cond.2.significance",
-        "var.cond.2.reviewStars"
+        "var.cond.2.reviewStars",
+        "var.cond.2.origin",
+        "var.cond.2.lastEvaluated"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1801131 is classified as Benign for Thrombophilia due to thrombin defect (THPH1) (1 review star, germline; last evaluated 2023-04-17).",
+      "supportingFactIds": [
+        "var.cond.3.significance",
+        "var.cond.3.reviewStars",
+        "var.cond.3.origin",
+        "var.cond.3.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1801131 is classified as Benign for Neural tube defects, folate-sensitive (NTDFS) (1 review star; last evaluated 2019-05-28).",
+      "supportingFactIds": [
+        "var.cond.4.significance",
+        "var.cond.4.reviewStars",
+        "var.cond.4.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1801131 is classified as Risk factor for Schizophrenia, susceptibility to (0 review stars, germline; last evaluated 2008-07-01).",
+      "supportingFactIds": [
+        "var.cond.5.significance",
+        "var.cond.5.reviewStars",
+        "var.cond.5.origin",
+        "var.cond.5.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1801131 is classified as Benign for MTHFR-related disorder (0 review stars, germline; last evaluated 2023-12-01).",
+      "supportingFactIds": [
+        "var.cond.6.significance",
+        "var.cond.6.reviewStars",
+        "var.cond.6.origin",
+        "var.cond.6.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1801131 is classified as Benign for MTHFR THERMOLABILE POLYMORPHISM (0 review stars, germline; last evaluated 2008-07-01).",
+      "supportingFactIds": [
+        "var.cond.7.significance",
+        "var.cond.7.reviewStars",
+        "var.cond.7.origin",
+        "var.cond.7.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1801131 is classified as no classifications from unflagged record for Gastrointestinal stromal tumor (0 review stars, germline; last evaluated 2023-10-30).",
+      "supportingFactIds": [
+        "var.cond.8.significance",
+        "var.cond.8.reviewStars",
+        "var.cond.8.origin",
+        "var.cond.8.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1801131 is classified as Benign for not provided (2 review stars, germline; last evaluated 2024-11-21).",
+      "supportingFactIds": [
+        "var.cond.9.significance",
+        "var.cond.9.reviewStars",
+        "var.cond.9.origin",
+        "var.cond.9.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1801131 is classified as Likely benign for not specified (1 review star, germline; last evaluated 2023-09-07).",
+      "supportingFactIds": [
+        "var.cond.10.significance",
+        "var.cond.10.reviewStars",
+        "var.cond.10.origin",
+        "var.cond.10.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "c5376f6e36250060",
-    "promptVersion": "2.0.0",
+    "factsHash": "813797c79a135701",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:26:35.951Z",
-    "retrievedAt": "2026-07-27T10:26:31.546Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:08:58.147Z",
+    "retrievedAt": "2026-08-03T16:08:56.638Z",
     "sources": [
       {
         "label": "dbSNP",

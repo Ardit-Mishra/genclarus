@@ -141,52 +141,133 @@
         "url": "https://gnomad.broadinstitute.org/variant/19-44908822-C-T?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:07:35.073Z"
+    "retrievedAt": "2026-08-03T16:08:15.519Z"
   },
   "claims": [
     {
-      "text": "The APOE gene variant rs7412 is a missense variant leading to the protein change p.Arg176Cys.",
+      "text": "rs7412 is a genetic variant located in the APOE gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.consequence",
-        "var.protein"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The APOE gene variant rs7412 is associated with a drug response to atorvastatin, with a review confidence of 3 of 4 stars.",
-      "supportingFactIds": [
-        "var.cond.0.significance",
-        "var.cond.0.reviewStars",
-        "var.cond.0.origin"
-      ],
-      "claimType": "classification_context"
-    },
-    {
-      "text": "The APOE gene variant rs7412 is classified as pathogenic for Familial type 3 hyperlipoproteinemia, but its classification for other conditions varies.",
-      "supportingFactIds": [
-        "var.cond.2.significance"
-      ],
-      "claimType": "uncertainty"
-    },
-    {
-      "text": "The APOE gene variant rs7412 has a frequency of 8.3% in the gnomAD population.",
+      "text": "In gnomAD, rs7412 has an overall allele frequency of 8.3%.",
       "supportingFactIds": [
         "var.gnomadAf"
       ],
-      "claimType": "frequency_context"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs7412 is classified as Drug response (efficacy) for atorvastatin response (3 review stars, germline; last evaluated 2021-03-24).",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs7412 is classified as Benign for Hypercholesterolemia (1 review star; last evaluated 2019-01-01).",
+      "supportingFactIds": [
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars",
+        "var.cond.1.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs7412 is classified as Pathogenic for Familial type 3 hyperlipoproteinemia (0 review stars, germline; last evaluated 2017-02-21).",
+      "supportingFactIds": [
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars",
+        "var.cond.2.origin",
+        "var.cond.2.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs7412 is classified as Pathogenic for Hyperlipoproteinemia due to APOE1 (0 review stars, germline; last evaluated 1984-04-01).",
+      "supportingFactIds": [
+        "var.cond.3.significance",
+        "var.cond.3.reviewStars",
+        "var.cond.3.origin",
+        "var.cond.3.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs7412 is classified as Drug response for Warfarin response (0 review stars; last evaluated 2010-08-31).",
+      "supportingFactIds": [
+        "var.cond.4.significance",
+        "var.cond.4.reviewStars",
+        "var.cond.4.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs7412 is classified as no classifications from unflagged record for Familial type 3 hyperlipoproteinemia (0 review stars, germline; last evaluated 2025-01-06).",
+      "supportingFactIds": [
+        "var.cond.5.significance",
+        "var.cond.5.reviewStars",
+        "var.cond.5.origin",
+        "var.cond.5.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs7412 is classified as Risk factor for not provided (2 review stars, germline; last evaluated 2023-08-01).",
+      "supportingFactIds": [
+        "var.cond.6.significance",
+        "var.cond.6.reviewStars",
+        "var.cond.6.origin",
+        "var.cond.6.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs7412 is classified as Uncertain significance for not specified (1 review star, germline; last evaluated 2019-01-18).",
+      "supportingFactIds": [
+        "var.cond.7.significance",
+        "var.cond.7.reviewStars",
+        "var.cond.7.origin",
+        "var.cond.7.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs7412 is classified as Benign for not specified (0 review stars, germline).",
+      "supportingFactIds": [
+        "var.cond.8.significance",
+        "var.cond.8.reviewStars",
+        "var.cond.8.origin"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "cf56526aedd77ee3",
-    "promptVersion": "2.0.0",
+    "factsHash": "1138244658804bc3",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:07:38.700Z",
-    "retrievedAt": "2026-07-27T10:07:35.073Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:08:17.029Z",
+    "retrievedAt": "2026-08-03T16:08:15.519Z",
     "sources": [
       {
         "label": "dbSNP",

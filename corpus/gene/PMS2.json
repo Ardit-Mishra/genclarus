@@ -39,42 +39,30 @@
         "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=PMS2"
       }
     ],
-    "retrievedAt": "2026-07-27T09:44:23.745Z"
+    "retrievedAt": "2026-08-03T16:06:05.366Z"
   },
   "claims": [
     {
-      "text": "The PMS2 gene encodes a protein that forms heterodimers with MLH1 to correct DNA mismatches.",
+      "text": "PMS2 is a human protein-coding gene.",
       "supportingFactIds": [
         "gene.symbol",
-        "gene.summary"
+        "gene.type"
       ],
-      "claimType": "function"
-    },
-    {
-      "text": "Mutations in the PMS2 gene are associated with hereditary nonpolyposis colorectal cancer (HNPCC) and Turcot syndrome.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "classification_context"
-    },
-    {
-      "text": "The PMS2 gene is located on chromosome 7 at position 5,970,925–6,009,130.",
-      "supportingFactIds": [
-        "gene.location"
-      ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
     "factsHash": "9cf1def286f0e636",
-    "promptVersion": "2.0.0",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T09:44:26.788Z",
-    "retrievedAt": "2026-07-27T09:44:23.745Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:06:06.878Z",
+    "retrievedAt": "2026-08-03T16:06:05.366Z",
     "sources": [
       {
         "label": "NCBI Gene",

@@ -38,42 +38,30 @@
         "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=TP53"
       }
     ],
-    "retrievedAt": "2026-07-27T09:43:33.420Z"
+    "retrievedAt": "2026-08-03T16:05:55.751Z"
   },
   "claims": [
     {
-      "text": "The TP53 gene encodes a tumor suppressor protein with transcriptional activation, DNA binding, and oligomerization domains.",
+      "text": "TP53 is a human protein-coding gene.",
       "supportingFactIds": [
         "gene.symbol",
-        "gene.summary"
+        "gene.type"
       ],
-      "claimType": "function"
-    },
-    {
-      "text": "Mutations in the TP53 gene are associated with various human cancers, including Li-Fraumeni syndrome.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "classification_context"
-    },
-    {
-      "text": "The TP53 gene is located on chromosome 17, between base pairs 7,661,779 and 7,687,546.",
-      "supportingFactIds": [
-        "gene.location"
-      ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
     "factsHash": "53eb47c4b44cffd3",
-    "promptVersion": "2.0.0",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T09:43:36.508Z",
-    "retrievedAt": "2026-07-27T09:43:33.420Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:05:57.257Z",
+    "retrievedAt": "2026-08-03T16:05:55.751Z",
     "sources": [
       {
         "label": "NCBI Gene",

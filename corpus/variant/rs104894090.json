@@ -66,51 +66,50 @@
         "url": "https://gnomad.broadinstitute.org/variant/8-38146051-G-A?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:14:27.898Z"
+    "retrievedAt": "2026-08-03T16:10:38.911Z"
   },
   "claims": [
     {
-      "text": "The STAR gene variant rs104894090 is a missense variant leading to the protein change p.Arg188Cys.",
+      "text": "rs104894090 is a genetic variant located in the STAR gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.consequence",
-        "var.protein"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The STAR gene variant rs104894090 is classified as Pathogenic for Congenital lipoid adrenal hyperplasia due to STAR deficiency.",
+      "text": "In ClinVar, rs104894090 is classified as Pathogenic for Congenital lipoid adrenal hyperplasia due to STAR deficency (2 review stars, germline; last evaluated 2024-04-25).",
       "supportingFactIds": [
         "var.cond.0.significance",
-        "var.cond.0.origin"
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The STAR gene variant rs104894090 has a review confidence of 2 of 4 review stars for Congenital lipoid adrenal hyperplasia due to STAR deficiency.",
+      "text": "In ClinVar, rs104894090 is classified as Pathogenic for not provided (2 review stars; last evaluated 2024-07-10).",
       "supportingFactIds": [
-        "var.cond.0.reviewStars"
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars",
+        "var.cond.1.lastEvaluated"
       ],
-      "claimType": "uncertainty"
-    },
-    {
-      "text": "The STAR gene variant rs104894090 is classified as Pathogenic for at least one condition.",
-      "supportingFactIds": [
-        "var.cond.1.significance"
-      ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "4c37fd2352ff037b",
-    "promptVersion": "2.0.0",
+    "factsHash": "90ed0d6f768e0a7a",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:14:31.758Z",
-    "retrievedAt": "2026-07-27T10:14:27.898Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:10:40.420Z",
+    "retrievedAt": "2026-08-03T16:10:38.911Z",
     "sources": [
       {
         "label": "dbSNP",

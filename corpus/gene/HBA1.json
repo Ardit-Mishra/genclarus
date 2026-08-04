@@ -37,49 +37,30 @@
         "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=HBA1"
       }
     ],
-    "retrievedAt": "2026-07-27T09:47:56.390Z"
+    "retrievedAt": "2026-08-03T16:06:46.532Z"
   },
   "claims": [
     {
-      "text": "The human alpha globin gene cluster includes the HBA1 gene.",
+      "text": "HBA1 is a human protein-coding gene.",
       "supportingFactIds": [
         "gene.symbol",
-        "gene.summary"
+        "gene.type"
       ],
-      "claimType": "identity"
-    },
-    {
-      "text": "HBA1 and HBA2 coding sequences are identical.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "identity"
-    },
-    {
-      "text": "HBA1 is located on chromosome 16 at position chr16:176,660–177,527.",
-      "supportingFactIds": [
-        "gene.location"
-      ],
-      "claimType": "identity"
-    },
-    {
-      "text": "Alpha thalassemias result from deletions of each of the alpha genes, including HBA1.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "condition_context"
+      "claimType": "identity",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
     "factsHash": "ed820a5e94aa2bc7",
-    "promptVersion": "2.0.0",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T09:48:00.141Z",
-    "retrievedAt": "2026-07-27T09:47:56.390Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:06:48.034Z",
+    "retrievedAt": "2026-08-03T16:06:46.532Z",
     "sources": [
       {
         "label": "NCBI Gene",

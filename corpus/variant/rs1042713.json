@@ -63,52 +63,48 @@
         "url": "https://gnomad.broadinstitute.org/variant/5-148826877-G-A?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:07:41.002Z"
+    "retrievedAt": "2026-08-03T16:08:18.694Z"
   },
   "claims": [
     {
-      "text": "The ADRB2 gene variant rs1042713 is a missense variant that changes the protein to p.Gly16Arg.",
+      "text": "rs1042713 is a genetic variant located in the ADRB2 gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.consequence",
-        "var.protein"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "This variant is a single nucleotide variant.",
+      "text": "In gnomAD, rs1042713 has an overall allele frequency of 42.7%.",
       "supportingFactIds": [
-        "var.type"
-      ],
-      "claimType": "identity"
-    },
-    {
-      "text": "The ADRB2 gene variant rs1042713 is associated with a drug response to salmeterol, with a review confidence of 3 of 4 stars.",
-      "supportingFactIds": [
-        "var.cond.0.significance",
-        "var.cond.0.reviewStars"
-      ],
-      "claimType": "classification_context"
-    },
-    {
-      "text": "This variant is found in 43% of the African population in gnomAD.",
-      "supportingFactIds": [
-        "var.cond.0.significance",
         "var.gnomadAf"
       ],
-      "claimType": "frequency_context"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1042713 is classified as Drug response (efficacy) for salmeterol response (3 review stars, germline; last evaluated 2021-03-24).",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "37e80e320f84f5c9",
-    "promptVersion": "2.0.0",
+    "factsHash": "d51f07c090496786",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:07:44.966Z",
-    "retrievedAt": "2026-07-27T10:07:41.002Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:08:20.204Z",
+    "retrievedAt": "2026-08-03T16:08:18.694Z",
     "sources": [
       {
         "label": "dbSNP",

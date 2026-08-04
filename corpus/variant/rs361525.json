@@ -66,52 +66,59 @@
         "url": "https://gnomad.broadinstitute.org/variant/6-31575324-G-A?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:15:18.842Z"
+    "retrievedAt": "2026-08-03T16:11:04.695Z"
   },
   "claims": [
     {
-      "text": "The TNF gene variant rs361525 has uncertain significance for susceptibility to severe coronavirus disease (COVID-19) due to high plasma levels of TNF, TNFR, and/or TNFR5.",
+      "text": "rs361525 is a genetic variant located in the TNF gene.",
       "supportingFactIds": [
-        "var.cond.0.significance",
-        "var.cond.0.origin",
-        "var.cond.0.reviewStars"
+        "var.gene"
       ],
-      "claimType": "condition_context"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The TNF gene variant rs361525 has uncertain significance for susceptibility to severe coronavirus disease (COVID-19).",
-      "supportingFactIds": [
-        "var.cond.1.significance",
-        "var.cond.1.origin",
-        "var.cond.1.reviewStars"
-      ],
-      "claimType": "condition_context"
-    },
-    {
-      "text": "The TNF gene variant rs361525 is a single nucleotide variant in the TNF gene.",
-      "supportingFactIds": [
-        "var.type"
-      ],
-      "claimType": "identity"
-    },
-    {
-      "text": "The TNF gene variant rs361525 is found in approximately 3.9% of the general population.",
+      "text": "In gnomAD, rs361525 has an overall allele frequency of 3.9%.",
       "supportingFactIds": [
         "var.gnomadAf"
       ],
-      "claimType": "frequency_context"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs361525 is classified as Uncertain significance for Susceptibility to severe coronavirus disease (COVID-19) due to high plasma levels of TNF, TNFR, and/or TNFR5 (0 review stars, germline; last evaluated 2021-08-07).",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs361525 is classified as Uncertain significance for Susceptibility to severe coronavirus disease (COVID-19) (0 review stars, germline; last evaluated 2021-02-09).",
+      "supportingFactIds": [
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars",
+        "var.cond.1.origin",
+        "var.cond.1.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "c54fb139a331ce1b",
-    "promptVersion": "2.0.0",
+    "factsHash": "bfbbb0d98697c6f2",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:15:22.411Z",
-    "retrievedAt": "2026-07-27T10:15:18.842Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:11:06.204Z",
+    "retrievedAt": "2026-08-03T16:11:04.695Z",
     "sources": [
       {
         "label": "dbSNP",

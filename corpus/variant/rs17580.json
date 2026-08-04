@@ -149,53 +149,145 @@
         "url": "https://gnomad.broadinstitute.org/variant/14-94380925-T-A?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:15:52.555Z"
+    "retrievedAt": "2026-08-03T16:11:17.013Z"
   },
   "claims": [
     {
-      "text": "The SERPINA1 gene variant rs17580 is a missense variant leading to the p.Glu288Val protein change.",
+      "text": "rs17580 is a genetic variant located in the SERPINA1 gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.consequence",
-        "var.protein"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The SERPINA1 gene variant rs17580 has been classified as Pathogenic for Alpha-1-antitrypsin deficiency (A1ATD) with 2 of 4 review stars.",
+      "text": "In gnomAD, rs17580 has an overall allele frequency of 2.4%.",
+      "supportingFactIds": [
+        "var.gnomadAf"
+      ],
+      "claimType": "frequency_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs17580 is classified as Pathogenic (low penetrance) for Alpha-1-antitrypsin deficiency (A1ATD) (2 review stars, germline; last evaluated 2025-02-02).",
       "supportingFactIds": [
         "var.cond.0.significance",
-        "var.cond.0.reviewStars"
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The SERPINA1 gene variant rs17580 has been classified as Pathogenic for Inborn genetic diseases with 1 of 4 review stars.",
+      "text": "In ClinVar, rs17580 is classified as Pathogenic for Inborn genetic diseases (1 review star, germline; last evaluated 2023-10-27).",
       "supportingFactIds": [
         "var.cond.1.significance",
-        "var.cond.1.reviewStars"
+        "var.cond.1.reviewStars",
+        "var.cond.1.origin",
+        "var.cond.1.lastEvaluated"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The SERPINA1 gene variant rs17580 has been classified as Pathogenic for Chronic obstructive pulmonary disease with 1 of 4 review stars.",
+      "text": "In ClinVar, rs17580 is classified as Pathogenic for Chronic obstructive pulmonary disease (1 review star; last evaluated 2018-10-31).",
       "supportingFactIds": [
         "var.cond.2.significance",
-        "var.cond.2.reviewStars"
+        "var.cond.2.reviewStars",
+        "var.cond.2.lastEvaluated"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs17580 is classified as Pathogenic for Alpha-1-antitrypsin deficiency (A1ATD) (1 review star; last evaluated 2018-10-31).",
+      "supportingFactIds": [
+        "var.cond.3.significance",
+        "var.cond.3.reviewStars",
+        "var.cond.3.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs17580 is classified as Pathogenic for SERPINA1-related disorder (0 review stars, germline; last evaluated 2024-08-21).",
+      "supportingFactIds": [
+        "var.cond.4.significance",
+        "var.cond.4.reviewStars",
+        "var.cond.4.origin",
+        "var.cond.4.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs17580 is classified as Risk factor for Cystic fibrosis (CF) (0 review stars, germline; last evaluated 2019-04-01).",
+      "supportingFactIds": [
+        "var.cond.5.significance",
+        "var.cond.5.reviewStars",
+        "var.cond.5.origin",
+        "var.cond.5.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs17580 is classified as other for Susceptibility to severe coronavirus disease (COVID-19) (0 review stars, germline; last evaluated 2022-05-13).",
+      "supportingFactIds": [
+        "var.cond.6.significance",
+        "var.cond.6.reviewStars",
+        "var.cond.6.origin",
+        "var.cond.6.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs17580 is classified as other for PI S (0 review stars, germline; last evaluated 1989-06-25).",
+      "supportingFactIds": [
+        "var.cond.7.significance",
+        "var.cond.7.reviewStars",
+        "var.cond.7.origin",
+        "var.cond.7.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs17580 is classified as Pathogenic for not provided (2 review stars, germline; last evaluated 2025-01-01).",
+      "supportingFactIds": [
+        "var.cond.8.significance",
+        "var.cond.8.reviewStars",
+        "var.cond.8.origin",
+        "var.cond.8.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs17580 is classified as no classifications from unflagged record for not specified (0 review stars, germline; last evaluated 2022-11-17).",
+      "supportingFactIds": [
+        "var.cond.9.significance",
+        "var.cond.9.reviewStars",
+        "var.cond.9.origin",
+        "var.cond.9.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "9dec2d7402a84ac6",
-    "promptVersion": "2.0.0",
+    "factsHash": "4b757caf644e95c8",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:15:59.160Z",
-    "retrievedAt": "2026-07-27T10:15:52.555Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:11:18.524Z",
+    "retrievedAt": "2026-08-03T16:11:17.013Z",
     "sources": [
       {
         "label": "dbSNP",

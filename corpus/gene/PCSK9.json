@@ -40,42 +40,30 @@
         "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=PCSK9"
       }
     ],
-    "retrievedAt": "2026-07-27T09:48:31.818Z"
+    "retrievedAt": "2026-08-03T16:07:00.971Z"
   },
   "claims": [
     {
-      "text": "The PCSK9 gene encodes a member of the subtilisin-like proprotein convertase family.",
+      "text": "PCSK9 is a human protein-coding gene.",
       "supportingFactIds": [
         "gene.symbol",
-        "gene.summary"
+        "gene.type"
       ],
-      "claimType": "identity"
-    },
-    {
-      "text": "The PCSK9 protein undergoes autocatalytic processing in the ER and is constitutively secreted into the extracellular matrix and trans-Golgi network.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "function"
-    },
-    {
-      "text": "Mutations in the PCSK9 gene have been associated with autosomal dominant familial hypercholesterolemia.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "classification_context"
+      "claimType": "identity",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
     "factsHash": "fdb70cd8e8cdb4c9",
-    "promptVersion": "2.0.0",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T09:48:35.292Z",
-    "retrievedAt": "2026-07-27T09:48:31.818Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:07:02.480Z",
+    "retrievedAt": "2026-08-03T16:07:00.971Z",
     "sources": [
       {
         "label": "NCBI Gene",

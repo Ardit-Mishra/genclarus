@@ -199,52 +199,192 @@
         "url": "https://gnomad.broadinstitute.org/variant/20-4699605-A-G?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:13:23.441Z"
+    "retrievedAt": "2026-08-03T16:10:07.443Z"
   },
   "claims": [
     {
-      "text": "The PRNP gene variant rs1799990 is a missense variant leading to the p.Met129Val protein change.",
+      "text": "rs1799990 is a genetic variant located in the PRNP gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.consequence",
-        "var.protein"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The frequency of the PRNP gene variant rs1799990 in the general population is approximately 32%.",
+      "text": "In gnomAD, rs1799990 has an overall allele frequency of 31.5%.",
       "supportingFactIds": [
         "var.gnomadAf"
       ],
-      "claimType": "frequency_context"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The PRNP gene variant rs1799990 is classified as Benign for Huntington disease-like 1 (HDL1) with a review confidence of 2 of 4 stars.",
+      "text": "In ClinVar, rs1799990 is classified as Benign for Huntington disease-like 1 (HDL1) (2 review stars, germline; last evaluated 2025-02-04).",
       "supportingFactIds": [
         "var.cond.0.significance",
-        "var.cond.0.reviewStars"
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The PRNP gene variant rs1799990 is classified as Likely benign for Inherited Creutzfeldt-Jakob disease with a review confidence of 1 of 4 stars.",
+      "text": "In ClinVar, rs1799990 is classified as Likely benign for Inherited Creutzfeldt-Jakob disease (1 review star; last evaluated 2019-01-01).",
       "supportingFactIds": [
         "var.cond.1.significance",
-        "var.cond.1.reviewStars"
+        "var.cond.1.reviewStars",
+        "var.cond.1.lastEvaluated"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1799990 is classified as Benign for Inherited Creutzfeldt-Jakob disease (1 review star; last evaluated 2021-07-22).",
+      "supportingFactIds": [
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars",
+        "var.cond.2.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1799990 is classified as Benign for Gerstmann-Straussler-Scheinker syndrome (GSD) (1 review star; last evaluated 2021-07-22).",
+      "supportingFactIds": [
+        "var.cond.3.significance",
+        "var.cond.3.reviewStars",
+        "var.cond.3.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1799990 is classified as Benign for Fatal familial insomnia (FFI) (1 review star; last evaluated 2021-07-22).",
+      "supportingFactIds": [
+        "var.cond.4.significance",
+        "var.cond.4.reviewStars",
+        "var.cond.4.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1799990 is classified as Benign for Huntington disease-like 1 (HDL1) (1 review star; last evaluated 2021-07-22).",
+      "supportingFactIds": [
+        "var.cond.5.significance",
+        "var.cond.5.reviewStars",
+        "var.cond.5.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1799990 is classified as Benign for Kuru, susceptibility to (1 review star; last evaluated 2021-07-22).",
+      "supportingFactIds": [
+        "var.cond.6.significance",
+        "var.cond.6.reviewStars",
+        "var.cond.6.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1799990 is classified as Benign for Spongiform encephalopathy with neuropsychiatric features (1 review star; last evaluated 2021-07-22).",
+      "supportingFactIds": [
+        "var.cond.7.significance",
+        "var.cond.7.reviewStars",
+        "var.cond.7.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1799990 is classified as Benign for Inherited prion disease (1 review star, germline; last evaluated 2017-04-27).",
+      "supportingFactIds": [
+        "var.cond.8.significance",
+        "var.cond.8.reviewStars",
+        "var.cond.8.origin",
+        "var.cond.8.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1799990 is classified as Benign for Fatal familial insomnia (FFI) (1 review star, germline).",
+      "supportingFactIds": [
+        "var.cond.9.significance",
+        "var.cond.9.reviewStars",
+        "var.cond.9.origin"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1799990 is classified as Pathogenic for Inherited Creutzfeldt-Jakob disease (0 review stars, germline; last evaluated 2008-11-26).",
+      "supportingFactIds": [
+        "var.cond.10.significance",
+        "var.cond.10.reviewStars",
+        "var.cond.10.origin",
+        "var.cond.10.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1799990 is classified as Pathogenic for Fatal familial insomnia (FFI) (0 review stars, germline; last evaluated 2008-11-26).",
+      "supportingFactIds": [
+        "var.cond.11.significance",
+        "var.cond.11.reviewStars",
+        "var.cond.11.origin",
+        "var.cond.11.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1799990 is classified as Uncertain significance for Autism spectrum disorder (0 review stars; last evaluated 2023-07-28).",
+      "supportingFactIds": [
+        "var.cond.12.significance",
+        "var.cond.12.reviewStars",
+        "var.cond.12.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1799990 is classified as Likely benign for not provided (2 review stars, germline; last evaluated 2024-11-26).",
+      "supportingFactIds": [
+        "var.cond.13.significance",
+        "var.cond.13.reviewStars",
+        "var.cond.13.origin",
+        "var.cond.13.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1799990 is classified as Likely benign for not specified (0 review stars, germline).",
+      "supportingFactIds": [
+        "var.cond.14.significance",
+        "var.cond.14.reviewStars",
+        "var.cond.14.origin"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "65558c022c46e3c5",
-    "promptVersion": "2.0.0",
+    "factsHash": "230b2e4d2925d7fa",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:13:26.790Z",
-    "retrievedAt": "2026-07-27T10:13:23.441Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:10:08.953Z",
+    "retrievedAt": "2026-08-03T16:10:07.443Z",
     "sources": [
       {
         "label": "dbSNP",

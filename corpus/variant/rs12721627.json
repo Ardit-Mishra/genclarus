@@ -35,49 +35,37 @@
         "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs12721627"
       }
     ],
-    "retrievedAt": "2026-07-27T10:18:48.024Z"
+    "retrievedAt": "2026-08-03T16:12:39.816Z"
   },
   "claims": [
     {
-      "text": "The CYP3A4 gene variant rs12721627 is a missense variant.",
-      "supportingFactIds": [
-        "var.consequence",
-        "var.type"
-      ],
-      "claimType": "classification_context"
-    },
-    {
-      "text": "The CYP3A4 gene variant rs12721627 is located in the CYP3A4 gene.",
+      "text": "rs12721627 is a genetic variant located in the CYP3A4 gene.",
       "supportingFactIds": [
         "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The CYP3A4 gene variant rs12721627 results in the protein change p.Thr185Ser.",
-      "supportingFactIds": [
-        "var.protein"
-      ],
-      "claimType": "function"
-    },
-    {
-      "text": "The CYP3A4 gene variant rs12721627 has a frequency of 0.0032% in the general population.",
+      "text": "In gnomAD, rs12721627 has a very low overall allele fraction of 0.0000318431.",
       "supportingFactIds": [
         "var.gnomadAf"
       ],
-      "claimType": "frequency_context"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "e28ef041bd156a0b",
-    "promptVersion": "2.0.0",
+    "factsHash": "37d0bba6ae0b3ae9",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:18:51.066Z",
-    "retrievedAt": "2026-07-27T10:18:48.024Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:12:41.332Z",
+    "retrievedAt": "2026-08-03T16:12:39.816Z",
     "sources": [
       {
         "label": "dbSNP",

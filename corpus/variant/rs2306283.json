@@ -86,51 +86,80 @@
         "url": "https://gnomad.broadinstitute.org/variant/12-21176804-A-G?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:17:27.314Z"
+    "retrievedAt": "2026-08-03T16:11:55.924Z"
   },
   "claims": [
     {
-      "text": "The SLCO1B1 gene variant rs2306283 is a missense variant with a protein change of p.Asn130Asp.",
+      "text": "rs2306283 is a genetic variant located in the SLCO1B1 gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.consequence",
-        "var.protein"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The SLCO1B1 gene variant rs2306283 is a single nucleotide variant.",
-      "supportingFactIds": [
-        "var.type"
-      ],
-      "claimType": "identity"
-    },
-    {
-      "text": "The SLCO1B1 gene variant rs2306283 is found in 53% of the African population.",
+      "text": "In gnomAD, rs2306283 has an overall allele frequency of 53.0%.",
       "supportingFactIds": [
         "var.gnomadAf"
       ],
-      "claimType": "frequency_context"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The SLCO1B1 gene variant rs2306283 is classified as Benign for Rotor syndrome and Gilbert syndrome, but review confidence varies.",
+      "text": "In ClinVar, rs2306283 is classified as Benign for Rotor syndrome (HBLRR) (2 review stars, germline; last evaluated 2024-11-29).",
       "supportingFactIds": [
         "var.cond.0.significance",
-        "var.cond.1.significance"
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs2306283 is classified as Benign for Gilbert syndrome (0 review stars, inherited; last evaluated 2019-05-01).",
+      "supportingFactIds": [
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars",
+        "var.cond.1.origin",
+        "var.cond.1.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs2306283 is classified as Benign for not provided (2 review stars, germline; last evaluated 2018-03-13).",
+      "supportingFactIds": [
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars",
+        "var.cond.2.origin",
+        "var.cond.2.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs2306283 is classified as Benign for not specified (1 review star, germline).",
+      "supportingFactIds": [
+        "var.cond.3.significance",
+        "var.cond.3.reviewStars",
+        "var.cond.3.origin"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "21da728a32a4e701",
-    "promptVersion": "2.0.0",
+    "factsHash": "1fcdccfb7501dd53",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:17:30.646Z",
-    "retrievedAt": "2026-07-27T10:17:27.314Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:11:57.434Z",
+    "retrievedAt": "2026-08-03T16:11:55.924Z",
     "sources": [
       {
         "label": "dbSNP",

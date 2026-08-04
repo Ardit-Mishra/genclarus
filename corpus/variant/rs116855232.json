@@ -87,47 +87,81 @@
         "url": "https://gnomad.broadinstitute.org/variant/13-48045719-C-T?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:11:32.457Z"
+    "retrievedAt": "2026-08-03T16:09:34.496Z"
   },
   "claims": [
     {
-      "text": "The NUDT15 gene variant rs116855232 is a missense variant with a p.Arg139Cys protein change.",
+      "text": "rs116855232 is a genetic variant located in the NUDT15 gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.consequence",
-        "var.protein"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The rs116855232 variant in the NUDT15 gene is associated with a drug response to azathioprine, with a germline origin and 3 of 4 review stars.",
+      "text": "In gnomAD, rs116855232 has an overall allele frequency of 1.1%.",
+      "supportingFactIds": [
+        "var.gnomadAf"
+      ],
+      "claimType": "frequency_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs116855232 is classified as Drug response (toxicity) for azathioprine response (3 review stars, germline; last evaluated 2021-03-24).",
       "supportingFactIds": [
         "var.cond.0.significance",
+        "var.cond.0.reviewStars",
         "var.cond.0.origin",
-        "var.cond.0.reviewStars"
+        "var.cond.0.lastEvaluated"
       ],
-      "claimType": "condition_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The rs116855232 variant in the NUDT15 gene is associated with a drug response to mercaptopurine, with a germline origin and 3 of 4 review stars.",
+      "text": "In ClinVar, rs116855232 is classified as Drug response (dosage) for mercaptopurine response (3 review stars, germline; last evaluated 2021-03-24).",
       "supportingFactIds": [
         "var.cond.1.significance",
+        "var.cond.1.reviewStars",
         "var.cond.1.origin",
-        "var.cond.1.reviewStars"
+        "var.cond.1.lastEvaluated"
       ],
-      "claimType": "condition_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs116855232 is classified as Drug response for Thiopurines, poor metabolism of, 2 (THPM2) (0 review stars, germline; last evaluated 2016-10-25).",
+      "supportingFactIds": [
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars",
+        "var.cond.2.origin",
+        "var.cond.2.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs116855232 is classified as Likely benign for NUDT15-related disorder (0 review stars, germline; last evaluated 2021-07-22).",
+      "supportingFactIds": [
+        "var.cond.3.significance",
+        "var.cond.3.reviewStars",
+        "var.cond.3.origin",
+        "var.cond.3.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "65a09603bc5cbb30",
-    "promptVersion": "2.0.0",
+    "factsHash": "57335b4bb8dd8c85",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:11:36.768Z",
-    "retrievedAt": "2026-07-27T10:11:32.457Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:09:36.002Z",
+    "retrievedAt": "2026-08-03T16:09:34.496Z",
     "sources": [
       {
         "label": "dbSNP",

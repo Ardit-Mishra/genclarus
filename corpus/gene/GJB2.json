@@ -41,49 +41,30 @@
         "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=GJB2"
       }
     ],
-    "retrievedAt": "2026-07-27T09:49:50.888Z"
+    "retrievedAt": "2026-08-03T16:07:36.937Z"
   },
   "claims": [
     {
-      "text": "The gap junction protein beta 2 is a member of the gap junction protein family, also known as connexin 26.",
+      "text": "GJB2 is a human protein-coding gene.",
       "supportingFactIds": [
         "gene.symbol",
-        "gene.summary"
-      ],
-      "claimType": "identity"
-    },
-    {
-      "text": "Mutations in the gap junction protein beta 2 gene are responsible for up to 50% of pre-lingual, recessive deafness.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "classification_context"
-    },
-    {
-      "text": "The gap junction protein beta 2 gene is located on chromosome 13, between base pairs 20,187,463 and 20,192,980.",
-      "supportingFactIds": [
-        "gene.location"
-      ],
-      "claimType": "identity"
-    },
-    {
-      "text": "The gap junction protein beta 2 gene is a protein-coding gene.",
-      "supportingFactIds": [
         "gene.type"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
     "factsHash": "b8ab9c2ff94d2c47",
-    "promptVersion": "2.0.0",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T09:49:56.950Z",
-    "retrievedAt": "2026-07-27T09:49:50.888Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:07:38.451Z",
+    "retrievedAt": "2026-08-03T16:07:36.937Z",
     "sources": [
       {
         "label": "NCBI Gene",

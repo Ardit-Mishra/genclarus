@@ -41,19 +41,30 @@
         "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=MSH2"
       }
     ],
-    "retrievedAt": "2026-07-28T03:45:38.165Z"
+    "retrievedAt": "2026-08-03T16:06:01.694Z"
   },
-  "claims": null,
-  "aiAvailable": true,
-  "fallbackReason": "failed_grounding",
+  "claims": [
+    {
+      "text": "MSH2 is a human protein-coding gene.",
+      "supportingFactIds": [
+        "gene.symbol",
+        "gene.type"
+      ],
+      "claimType": "identity",
+      "origin": "deterministic"
+    }
+  ],
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
+  "fallbackReason": null,
   "provenance": {
     "factsHash": "a96619794a7ac5a4",
-    "promptVersion": "2.0.0",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-28T03:46:35.724Z",
-    "retrievedAt": "2026-07-28T03:45:38.165Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:06:03.198Z",
+    "retrievedAt": "2026-08-03T16:06:01.694Z",
     "sources": [
       {
         "label": "NCBI Gene",

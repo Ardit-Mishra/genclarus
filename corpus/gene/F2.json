@@ -36,49 +36,30 @@
         "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=F2"
       }
     ],
-    "retrievedAt": "2026-07-27T09:48:03.352Z"
+    "retrievedAt": "2026-08-03T16:06:50.122Z"
   },
   "claims": [
     {
-      "text": "The gene F2 encodes the prothrombin protein, also known as coagulation factor II.",
+      "text": "F2 is a human protein-coding gene.",
       "supportingFactIds": [
         "gene.symbol",
-        "gene.summary"
+        "gene.type"
       ],
-      "claimType": "identity"
-    },
-    {
-      "text": "Thrombin, encoded by F2, plays a role in thrombosis and hemostasis by converting fibrinogen to fibrin during blood clot formation.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "function"
-    },
-    {
-      "text": "Mutations in the F2 gene lead to various forms of thrombosis and dysprothrombinemia.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "classification_context"
-    },
-    {
-      "text": "The classification of F2 varies, with some mutations leading to thrombosis and others to dysprothrombinemia.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "uncertainty"
+      "claimType": "identity",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
     "factsHash": "2e67dce1c5421afc",
-    "promptVersion": "2.0.0",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T09:48:07.098Z",
-    "retrievedAt": "2026-07-27T09:48:03.352Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:06:51.632Z",
+    "retrievedAt": "2026-08-03T16:06:50.122Z",
     "sources": [
       {
         "label": "NCBI Gene",

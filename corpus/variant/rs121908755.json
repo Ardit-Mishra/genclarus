@@ -134,44 +134,124 @@
         "url": "https://gnomad.broadinstitute.org/variant/7-117587800-G-A?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:13:45.890Z"
+    "retrievedAt": "2026-08-03T16:10:26.594Z"
   },
   "claims": [
     {
-      "text": "The CFTR gene variant rs121908755 is a missense variant with a protein change of p.Ser549Asn.",
+      "text": "rs121908755 is a genetic variant located in the CFTR gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.consequence",
-        "var.protein"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The variant rs121908755 has a frequency of 0.0064% in gnomAD.",
+      "text": "In gnomAD, rs121908755 has a very low overall allele fraction of 0.0000636943.",
       "supportingFactIds": [
         "var.gnomadAf"
       ],
-      "claimType": "frequency_context"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The variant rs121908755 is classified as Drug response for ivacaftor response - Efficacy, with 3 of 4 review stars.",
+      "text": "In ClinVar, rs121908755 is classified as Pathogenic for Cystic fibrosis (CF) (3 review stars, germline; last evaluated 2017-03-17).",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs121908755 is classified as Drug response (efficacy) for ivacaftor response (3 review stars, germline; last evaluated 2021-03-24).",
       "supportingFactIds": [
         "var.cond.1.significance",
-        "var.cond.1.reviewStars"
+        "var.cond.1.reviewStars",
+        "var.cond.1.origin",
+        "var.cond.1.lastEvaluated"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs121908755 is classified as Pathogenic for Bronchiectasis with or without elevated sweat chloride 1 (BESC1) (1 review star; last evaluated 2024-02-27).",
+      "supportingFactIds": [
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars",
+        "var.cond.2.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs121908755 is classified as Pathogenic for Congenital bilateral aplasia of vas deferens from CFTR mutation (CBAVD) (1 review star, germline; last evaluated 2024-02-21).",
+      "supportingFactIds": [
+        "var.cond.3.significance",
+        "var.cond.3.reviewStars",
+        "var.cond.3.origin",
+        "var.cond.3.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs121908755 is classified as Pathogenic for Hereditary pancreatitis (PCTT) (1 review star, germline; last evaluated 2024-02-21).",
+      "supportingFactIds": [
+        "var.cond.4.significance",
+        "var.cond.4.reviewStars",
+        "var.cond.4.origin",
+        "var.cond.4.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs121908755 is classified as Pathogenic for Bronchiectasis with or without elevated sweat chloride 1 (BESC1) (1 review star, germline; last evaluated 2024-02-21).",
+      "supportingFactIds": [
+        "var.cond.5.significance",
+        "var.cond.5.reviewStars",
+        "var.cond.5.origin",
+        "var.cond.5.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs121908755 is classified as Pathogenic for CFTR-related disorder (CFTR-RD) (1 review star, germline; last evaluated 2023-03-16).",
+      "supportingFactIds": [
+        "var.cond.6.significance",
+        "var.cond.6.reviewStars",
+        "var.cond.6.origin",
+        "var.cond.6.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs121908755 is classified as Pathogenic for not provided (2 review stars, germline; last evaluated 2024-09-25).",
+      "supportingFactIds": [
+        "var.cond.7.significance",
+        "var.cond.7.reviewStars",
+        "var.cond.7.origin",
+        "var.cond.7.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "ea951bb960a4a433",
-    "promptVersion": "2.0.0",
+    "factsHash": "200b37bd7a0bf540",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:13:50.010Z",
-    "retrievedAt": "2026-07-27T10:13:45.890Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:10:28.103Z",
+    "retrievedAt": "2026-08-03T16:10:26.594Z",
     "sources": [
       {
         "label": "dbSNP",

@@ -38,43 +38,30 @@
         "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=APOE"
       }
     ],
-    "retrievedAt": "2026-07-27T09:48:19.230Z"
+    "retrievedAt": "2026-08-03T16:06:57.405Z"
   },
   "claims": [
     {
-      "text": "The protein encoded by the APOE gene is a major apoprotein of the chylomicron.",
+      "text": "APOE is a human protein-coding gene.",
       "supportingFactIds": [
         "gene.symbol",
-        "gene.summary"
+        "gene.type"
       ],
-      "claimType": "function"
-    },
-    {
-      "text": "Mutations in the APOE gene result in familial dysbetalipoproteinemia, or type III hyperlipoproteinemia.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "classification_context"
-    },
-    {
-      "text": "The APOE gene is located on chromosome 19 in a cluster with the related apolipoprotein C1 and C2 genes.",
-      "supportingFactIds": [
-        "gene.location",
-        "gene.summary"
-      ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
     "factsHash": "e560e05a153dfa62",
-    "promptVersion": "2.0.0",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T09:48:22.091Z",
-    "retrievedAt": "2026-07-27T09:48:19.230Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:06:58.913Z",
+    "retrievedAt": "2026-08-03T16:06:57.405Z",
     "sources": [
       {
         "label": "NCBI Gene",

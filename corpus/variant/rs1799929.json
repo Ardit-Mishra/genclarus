@@ -56,42 +56,48 @@
         "url": "https://gnomad.broadinstitute.org/variant/8-18400484-C-T?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:18:20.604Z"
+    "retrievedAt": "2026-08-03T16:12:19.543Z"
   },
   "claims": [
     {
-      "text": "The NAT2 gene variant rs1799929 is a single nucleotide variant.",
+      "text": "rs1799929 is a genetic variant located in the NAT2 gene.",
       "supportingFactIds": [
-        "var.type",
         "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The NAT2 gene variant rs1799929 has a frequency of 36% in the general population.",
+      "text": "In gnomAD, rs1799929 has an overall allele frequency of 36.1%.",
       "supportingFactIds": [
         "var.gnomadAf"
       ],
-      "claimType": "frequency_context"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The NAT2 gene variant rs1799929 is classified as Benign for NAT2-related disorder.",
+      "text": "In ClinVar, rs1799929 is classified as Benign for NAT2-related disorder (0 review stars, germline; last evaluated 2023-12-29).",
       "supportingFactIds": [
-        "var.cond.0.significance"
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "6be678a7054b8159",
-    "promptVersion": "2.0.0",
+    "factsHash": "62b3030d63ef095b",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:18:23.310Z",
-    "retrievedAt": "2026-07-27T10:18:20.604Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:12:21.056Z",
+    "retrievedAt": "2026-08-03T16:12:19.543Z",
     "sources": [
       {
         "label": "dbSNP",

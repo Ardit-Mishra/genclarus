@@ -39,42 +39,30 @@
         "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=CYP2C9"
       }
     ],
-    "retrievedAt": "2026-07-27T09:49:25.590Z"
+    "retrievedAt": "2026-08-03T16:07:24.429Z"
   },
   "claims": [
     {
-      "text": "CYP2C9 is a member of the cytochrome P450 superfamily of enzymes.",
+      "text": "CYP2C9 is a human protein-coding gene.",
       "supportingFactIds": [
         "gene.symbol",
-        "gene.summary"
-      ],
-      "claimType": "identity"
-    },
-    {
-      "text": "CYP2C9 is a protein-coding gene.",
-      "supportingFactIds": [
         "gene.type"
       ],
-      "claimType": "identity"
-    },
-    {
-      "text": "CYP2C9 is polymorphic.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "classification_context"
+      "claimType": "identity",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
     "factsHash": "4dc2f21b69d82747",
-    "promptVersion": "2.0.0",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T09:49:28.255Z",
-    "retrievedAt": "2026-07-27T09:49:25.590Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:07:25.939Z",
+    "retrievedAt": "2026-08-03T16:07:24.429Z",
     "sources": [
       {
         "label": "NCBI Gene",

@@ -77,43 +77,70 @@
         "url": "https://gnomad.broadinstitute.org/variant/15-78601997-G-A?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:08:45.654Z"
+    "retrievedAt": "2026-08-03T16:08:48.389Z"
   },
   "claims": [
     {
-      "text": "The CHRNA3 gene variant rs1051730 is a single nucleotide variant.",
+      "text": "rs1051730 is a genetic variant located in the CHRNA3 gene.",
       "supportingFactIds": [
-        "var.type"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The CHRNA3 gene variant rs1051730 has a frequency of 26% in the gnomAD population.",
+      "text": "In gnomAD, rs1051730 has an overall allele frequency of 25.8%.",
       "supportingFactIds": [
         "var.gnomadAf"
       ],
-      "claimType": "frequency_context"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The CHRNA3 gene variant rs1051730 is classified as a risk factor for lung cancer susceptibility 2 and SMOKING AS A QUANTITATIVE TRAIT LOCUS 3, but benign for an unspecified condition.",
+      "text": "In ClinVar, rs1051730 is classified as Risk factor for Lung cancer susceptibility 2 (LNCR2) (0 review stars, germline; last evaluated 2008-05-01).",
       "supportingFactIds": [
         "var.cond.0.significance",
-        "var.cond.1.significance",
-        "var.cond.2.significance"
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1051730 is classified as Risk factor for SMOKING AS A QUANTITATIVE TRAIT LOCUS 3 (SQTL3) (0 review stars, germline; last evaluated 2008-05-01).",
+      "supportingFactIds": [
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars",
+        "var.cond.1.origin",
+        "var.cond.1.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1051730 is classified as Benign for not provided (1 review star, germline; last evaluated 2025-02-03).",
+      "supportingFactIds": [
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars",
+        "var.cond.2.origin",
+        "var.cond.2.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "cce62d60837b722c",
-    "promptVersion": "2.0.0",
+    "factsHash": "9c393106217ffa78",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:08:49.744Z",
-    "retrievedAt": "2026-07-27T10:08:45.654Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:08:49.903Z",
+    "retrievedAt": "2026-08-03T16:08:48.389Z",
     "sources": [
       {
         "label": "dbSNP",

@@ -190,53 +190,177 @@
         "url": "https://gnomad.broadinstitute.org/variant/19-44908684-T-C?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:07:26.492Z"
+    "retrievedAt": "2026-08-03T16:08:10.091Z"
   },
   "claims": [
     {
-      "text": "The APOE gene variant rs429358 is a missense variant leading to the protein change p.Cys130Arg.",
+      "text": "rs429358 is a genetic variant located in the APOE gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.consequence",
-        "var.protein"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The APOE gene variant rs429358 is a single nucleotide variant.",
+      "text": "In gnomAD, rs429358 has an overall allele frequency of 16.4%.",
       "supportingFactIds": [
-        "var.type"
+        "var.gnomadAf"
       ],
-      "claimType": "identity"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The APOE gene variant rs429358 is classified as pathogenic for Alzheimer disease 4 (AD4) with low review confidence.",
+      "text": "In ClinVar, rs429358 is classified as Pathogenic for Alzheimer disease 4 (AD4) (1 review star; last evaluated 2020-03-24).",
       "supportingFactIds": [
         "var.cond.0.significance",
-        "var.cond.0.reviewStars"
+        "var.cond.0.reviewStars",
+        "var.cond.0.lastEvaluated"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The APOE gene variant rs429358 is classified as likely pathogenic for Alzheimer disease with low review confidence and germline origin.",
+      "text": "In ClinVar, rs429358 is classified as Likely pathogenic for Alzheimer disease (1 review star, germline; last evaluated 2019-06-27).",
       "supportingFactIds": [
         "var.cond.1.significance",
         "var.cond.1.reviewStars",
-        "var.cond.1.origin"
+        "var.cond.1.origin",
+        "var.cond.1.lastEvaluated"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs429358 is classified as Risk factor for Primary degenerative dementia of the Alzheimer type, presenile onset (1 review star, germline; last evaluated 2019-01-16).",
+      "supportingFactIds": [
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars",
+        "var.cond.2.origin",
+        "var.cond.2.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs429358 is classified as Uncertain significance for Lipoprotein glomerulopathy (LPG) (1 review star; last evaluated 2019-01-01).",
+      "supportingFactIds": [
+        "var.cond.3.significance",
+        "var.cond.3.reviewStars",
+        "var.cond.3.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs429358 is classified as Pathogenic (risk factor) for Alzheimer disease 2 (AD2) (0 review stars, germline; last evaluated 2022-06-27).",
+      "supportingFactIds": [
+        "var.cond.4.significance",
+        "var.cond.4.reviewStars",
+        "var.cond.4.origin",
+        "var.cond.4.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs429358 is classified as Pathogenic for APOE4(-)-FREIBURG (0 review stars, germline; last evaluated 2017-02-15).",
+      "supportingFactIds": [
+        "var.cond.5.significance",
+        "var.cond.5.reviewStars",
+        "var.cond.5.origin",
+        "var.cond.5.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs429358 is classified as Pathogenic for Familial type 3 hyperlipoproteinemia (0 review stars, germline; last evaluated 1993-05-01).",
+      "supportingFactIds": [
+        "var.cond.6.significance",
+        "var.cond.6.reviewStars",
+        "var.cond.6.origin",
+        "var.cond.6.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs429358 is classified as Likely pathogenic for Familial hypercholesterolemia (0 review stars, germline; last evaluated 2020-05-27).",
+      "supportingFactIds": [
+        "var.cond.7.significance",
+        "var.cond.7.reviewStars",
+        "var.cond.7.origin",
+        "var.cond.7.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs429358 is classified as Drug response for Warfarin response (0 review stars; last evaluated 2010-08-31).",
+      "supportingFactIds": [
+        "var.cond.8.significance",
+        "var.cond.8.reviewStars",
+        "var.cond.8.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs429358 is classified as not provided for Familial type 3 hyperlipoproteinemia (0 review stars, germline; last evaluated 2023-06-08).",
+      "supportingFactIds": [
+        "var.cond.9.significance",
+        "var.cond.9.reviewStars",
+        "var.cond.9.origin",
+        "var.cond.9.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs429358 is classified as association for APOE5 VARIANT (0 review stars, germline; last evaluated 2019-11-22).",
+      "supportingFactIds": [
+        "var.cond.10.significance",
+        "var.cond.10.reviewStars",
+        "var.cond.10.origin",
+        "var.cond.10.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs429358 is classified as Conflicting interpretations (risk factor) for not provided (1 review star, germline; last evaluated 2024-10-15).",
+      "supportingFactIds": [
+        "var.cond.11.significance",
+        "var.cond.11.reviewStars",
+        "var.cond.11.origin",
+        "var.cond.11.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs429358 is classified as Uncertain significance for not specified (1 review star, germline; last evaluated 2019-01-18).",
+      "supportingFactIds": [
+        "var.cond.12.significance",
+        "var.cond.12.reviewStars",
+        "var.cond.12.origin",
+        "var.cond.12.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "fd387f79594f3889",
-    "promptVersion": "2.0.0",
+    "factsHash": "552cf28386bab10f",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:07:33.001Z",
-    "retrievedAt": "2026-07-27T10:07:26.492Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:08:11.597Z",
+    "retrievedAt": "2026-08-03T16:08:10.091Z",
     "sources": [
       {
         "label": "dbSNP",

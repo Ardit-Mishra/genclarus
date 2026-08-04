@@ -67,54 +67,59 @@
         "url": "https://gnomad.broadinstitute.org/variant/6-18130687-T-C?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:10:55.377Z"
+    "retrievedAt": "2026-08-03T16:09:24.252Z"
   },
   "claims": [
     {
-      "text": "The TPMT gene variant rs1142345 is a missense variant with a protein change of p.Tyr240Cys.",
+      "text": "rs1142345 is a genetic variant located in the TPMT gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.consequence",
-        "var.protein"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The TPMT gene variant rs1142345 is a single nucleotide variant with a frequency of 4.1% in gnomAD.",
+      "text": "In gnomAD, rs1142345 has an overall allele frequency of 4.1%.",
       "supportingFactIds": [
-        "var.type",
         "var.gnomadAf"
       ],
-      "claimType": "identity"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The significance of the TPMT gene variant rs1142345 for Thiopurine S-methyltransferase deficiency is classified as Drug response with low review confidence.",
+      "text": "In ClinVar, rs1142345 is classified as Drug response for Thiopurine S-methyltransferase deficiency (0 review stars, germline; last evaluated 2006-02-01).",
       "supportingFactIds": [
         "var.cond.0.significance",
         "var.cond.0.reviewStars",
-        "var.cond.0.origin"
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The significance of the TPMT gene variant rs1142345 is classified as Likely benign with moderate review confidence.",
+      "text": "In ClinVar, rs1142345 is classified as Likely benign for not provided (2 review stars, germline; last evaluated 2024-07-01).",
       "supportingFactIds": [
         "var.cond.1.significance",
-        "var.cond.1.reviewStars"
+        "var.cond.1.reviewStars",
+        "var.cond.1.origin",
+        "var.cond.1.lastEvaluated"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "a8da133734c8ba3b",
-    "promptVersion": "2.0.0",
+    "factsHash": "7140d61b1ecf7dd1",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:10:59.201Z",
-    "retrievedAt": "2026-07-27T10:10:55.377Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:09:25.764Z",
+    "retrievedAt": "2026-08-03T16:09:24.252Z",
     "sources": [
       {
         "label": "dbSNP",

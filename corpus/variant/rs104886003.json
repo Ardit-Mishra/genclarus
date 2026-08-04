@@ -275,37 +275,269 @@
         "url": "https://gnomad.broadinstitute.org/variant/3-179218303-G-A?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:16:29.745Z"
+    "retrievedAt": "2026-08-03T16:11:25.284Z"
   },
   "claims": [
     {
-      "text": "The PIK3CA gene variant rs104886003 is a missense variant leading to a p.Glu545Lys protein change.",
+      "text": "rs104886003 is a genetic variant located in the PIK3CA gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.consequence",
-        "var.protein"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The PIK3CA gene variant rs104886003 is classified as Pathogenic for PIK3CA related overgrowth syndrome in a germline context.",
+      "text": "In ClinVar, rs104886003 is classified as Pathogenic for PIK3CA related overgrowth syndrome (2 review stars, germline; last evaluated 2023-11-01).",
       "supportingFactIds": [
         "var.cond.0.significance",
-        "var.cond.0.origin"
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs104886003 is classified as Likely pathogenic for CLOVES syndrome (2 review stars, somatic; last evaluated 2019-01-01).",
+      "supportingFactIds": [
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars",
+        "var.cond.1.origin",
+        "var.cond.1.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs104886003 is classified as Pathogenic for Eccrine angiomatous hamartoma (1 review star, somatic; last evaluated 2021-10-21).",
+      "supportingFactIds": [
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars",
+        "var.cond.2.origin",
+        "var.cond.2.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs104886003 is classified as Pathogenic for Segmental undergrowth associated with lymphatic malformation (1 review star, somatic; last evaluated 2021-04-06).",
+      "supportingFactIds": [
+        "var.cond.3.significance",
+        "var.cond.3.reviewStars",
+        "var.cond.3.origin",
+        "var.cond.3.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs104886003 is classified as Pathogenic for PIK3CA overgrowth syndrome (1 review star, somatic; last evaluated 2020-12-09).",
+      "supportingFactIds": [
+        "var.cond.4.significance",
+        "var.cond.4.reviewStars",
+        "var.cond.4.origin",
+        "var.cond.4.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs104886003 is classified as Pathogenic for Cerebrofacial Vascular Metameric Syndrome (CVMS) (0 review stars, somatic; last evaluated 2021-09-30).",
+      "supportingFactIds": [
+        "var.cond.5.significance",
+        "var.cond.5.reviewStars",
+        "var.cond.5.origin",
+        "var.cond.5.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs104886003 is classified as Pathogenic for Gallbladder cancer (0 review stars, somatic; last evaluated 2020-10-30).",
+      "supportingFactIds": [
+        "var.cond.6.significance",
+        "var.cond.6.reviewStars",
+        "var.cond.6.origin",
+        "var.cond.6.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs104886003 is classified as Pathogenic for Breast adenocarcinoma (0 review stars, somatic; last evaluated 2012-06-24).",
+      "supportingFactIds": [
+        "var.cond.7.significance",
+        "var.cond.7.reviewStars",
+        "var.cond.7.origin",
+        "var.cond.7.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs104886003 is classified as Pathogenic for OVARIAN CANCER, EPITHELIAL, SOMATIC (0 review stars, somatic; last evaluated 2012-06-24).",
+      "supportingFactIds": [
+        "var.cond.8.significance",
+        "var.cond.8.reviewStars",
+        "var.cond.8.origin",
+        "var.cond.8.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs104886003 is classified as Pathogenic for Carcinoma of colon (CRC) (0 review stars, somatic; last evaluated 2012-06-24).",
+      "supportingFactIds": [
+        "var.cond.9.significance",
+        "var.cond.9.reviewStars",
+        "var.cond.9.origin",
+        "var.cond.9.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs104886003 is classified as Pathogenic for Seborrheic keratosis (0 review stars, somatic; last evaluated 2012-06-24).",
+      "supportingFactIds": [
+        "var.cond.10.significance",
+        "var.cond.10.reviewStars",
+        "var.cond.10.origin",
+        "var.cond.10.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs104886003 is classified as Pathogenic for Megalencephaly-capillary malformation-polymicrogyria syndrome (MCAP) (0 review stars, somatic; last evaluated 2012-06-24).",
+      "supportingFactIds": [
+        "var.cond.11.significance",
+        "var.cond.11.reviewStars",
+        "var.cond.11.origin",
+        "var.cond.11.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs104886003 is classified as Pathogenic for Non-small cell lung carcinoma (NSCLC) (0 review stars, somatic; last evaluated 2012-06-24).",
+      "supportingFactIds": [
+        "var.cond.12.significance",
+        "var.cond.12.reviewStars",
+        "var.cond.12.origin",
+        "var.cond.12.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs104886003 is classified as Pathogenic for Gastric cancer (0 review stars, somatic; last evaluated 2012-06-24).",
+      "supportingFactIds": [
+        "var.cond.13.significance",
+        "var.cond.13.reviewStars",
+        "var.cond.13.origin",
+        "var.cond.13.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs104886003 is classified as Pathogenic for HEMIFACIAL MYOHYPERPLASIA, SOMATIC (0 review stars, somatic; last evaluated 2012-06-24).",
+      "supportingFactIds": [
+        "var.cond.14.significance",
+        "var.cond.14.reviewStars",
+        "var.cond.14.origin",
+        "var.cond.14.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs104886003 is classified as Pathogenic for Abnormal cardiovascular system morphology (0 review stars, somatic).",
+      "supportingFactIds": [
+        "var.cond.15.significance",
+        "var.cond.15.reviewStars",
+        "var.cond.15.origin"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs104886003 is classified as Likely pathogenic for Angioosteohypertrophic syndrome (KTS) (0 review stars, somatic; last evaluated 2024-03-19).",
+      "supportingFactIds": [
+        "var.cond.16.significance",
+        "var.cond.16.reviewStars",
+        "var.cond.16.origin",
+        "var.cond.16.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs104886003 is classified as Likely pathogenic for Rare venous malformation (0 review stars, somatic; last evaluated 2024-03-19).",
+      "supportingFactIds": [
+        "var.cond.17.significance",
+        "var.cond.17.reviewStars",
+        "var.cond.17.origin",
+        "var.cond.17.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs104886003 is classified as Likely pathogenic for Rare combined vascular malformation (0 review stars, somatic; last evaluated 2024-03-19).",
+      "supportingFactIds": [
+        "var.cond.18.significance",
+        "var.cond.18.reviewStars",
+        "var.cond.18.origin",
+        "var.cond.18.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs104886003 is classified as Likely pathogenic for Ovarian neoplasm (0 review stars, somatic; last evaluated 2018-12-01).",
+      "supportingFactIds": [
+        "var.cond.19.significance",
+        "var.cond.19.reviewStars",
+        "var.cond.19.origin",
+        "var.cond.19.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs104886003 is classified as not provided for Sarcoma (0 review stars, somatic).",
+      "supportingFactIds": [
+        "var.cond.20.significance",
+        "var.cond.20.reviewStars",
+        "var.cond.20.origin"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs104886003 is classified as Pathogenic for not provided (2 review stars, germline; last evaluated 2024-01-01).",
+      "supportingFactIds": [
+        "var.cond.21.significance",
+        "var.cond.21.reviewStars",
+        "var.cond.21.origin",
+        "var.cond.21.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "d925e1d07f75ed6f",
-    "promptVersion": "2.0.0",
+    "factsHash": "638f3df268853c45",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:16:33.541Z",
-    "retrievedAt": "2026-07-27T10:16:29.745Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:11:26.793Z",
+    "retrievedAt": "2026-08-03T16:11:25.284Z",
     "sources": [
       {
         "label": "dbSNP",

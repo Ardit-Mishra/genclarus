@@ -39,42 +39,30 @@
         "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=CYP2C19"
       }
     ],
-    "retrievedAt": "2026-07-27T09:49:14.223Z"
+    "retrievedAt": "2026-08-03T16:07:20.882Z"
   },
   "claims": [
     {
-      "text": "CYP2C19 encodes a member of the cytochrome P450 superfamily of enzymes.",
+      "text": "CYP2C19 is a human protein-coding gene.",
       "supportingFactIds": [
         "gene.symbol",
-        "gene.summary"
+        "gene.type"
       ],
-      "claimType": "identity"
-    },
-    {
-      "text": "CYP2C19 localizes to the endoplasmic reticulum and metabolizes many xenobiotics.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "function"
-    },
-    {
-      "text": "CYP2C19 polymorphism is associated with variable ability to metabolize mephenytoin.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "classification_context"
+      "claimType": "identity",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
     "factsHash": "613426950d0da226",
-    "promptVersion": "2.0.0",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T09:49:17.295Z",
-    "retrievedAt": "2026-07-27T09:49:14.223Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:07:22.383Z",
+    "retrievedAt": "2026-08-03T16:07:20.882Z",
     "sources": [
       {
         "label": "NCBI Gene",

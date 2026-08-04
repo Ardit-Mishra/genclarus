@@ -149,43 +149,143 @@
         "url": "https://gnomad.broadinstitute.org/variant/X-154536002-C-T?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:12:21.324Z"
+    "retrievedAt": "2026-08-03T16:09:52.296Z"
   },
   "claims": [
     {
-      "text": "The G6PD gene variant rs1050828 is a missense variant leading to a p.Val98Met protein change.",
+      "text": "rs1050828 is a genetic variant located in the G6PD gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.consequence",
-        "var.protein"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The G6PD gene variant rs1050828 is associated with G6PD deficiency, a condition classified as Pathogenic.",
+      "text": "In gnomAD, rs1050828 has an overall allele frequency of 3.2%.",
       "supportingFactIds": [
-        "var.cond.0.significance"
+        "var.gnomadAf"
       ],
-      "claimType": "classification_context"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The G6PD gene variant rs1050828 is associated with Anemia, nonspherocytic hemolytic, due to G6PD deficiency (CNSHA1), a condition classified as Likely pathogenic.",
+      "text": "In ClinVar, rs1050828 is classified as Pathogenic for G6PD deficiency (2 review stars, germline; last evaluated 2023-02-13).",
       "supportingFactIds": [
-        "var.cond.1.significance"
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
       ],
-      "claimType": "condition_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1050828 is classified as Likely pathogenic for Anemia, nonspherocytic hemolytic, due to G6PD deficiency (CNSHA1) (2 review stars, germline; last evaluated 2024-04-04).",
+      "supportingFactIds": [
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars",
+        "var.cond.1.origin",
+        "var.cond.1.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1050828 is classified as Likely pathogenic (risk factor) for Anemia, nonspherocytic hemolytic, due to G6PD deficiency (CNSHA1) (2 review stars; last evaluated 2022-12-23).",
+      "supportingFactIds": [
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars",
+        "var.cond.2.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1050828 is classified as Pathogenic for Malaria, susceptibility to (1 review star; last evaluated 2024-03-30).",
+      "supportingFactIds": [
+        "var.cond.3.significance",
+        "var.cond.3.reviewStars",
+        "var.cond.3.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1050828 is classified as Pathogenic for Inborn genetic diseases (1 review star, germline; last evaluated 2023-11-20).",
+      "supportingFactIds": [
+        "var.cond.4.significance",
+        "var.cond.4.reviewStars",
+        "var.cond.4.origin",
+        "var.cond.4.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1050828 is classified as Pathogenic for Anemia, nonspherocytic hemolytic, due to G6PD deficiency (CNSHA1) (1 review star, germline).",
+      "supportingFactIds": [
+        "var.cond.5.significance",
+        "var.cond.5.reviewStars",
+        "var.cond.5.origin"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1050828 is classified as Uncertain significance for Anemia, nonspherocytic hemolytic, due to G6PD deficiency (CNSHA1) (1 review star; last evaluated 2022-08-12).",
+      "supportingFactIds": [
+        "var.cond.6.significance",
+        "var.cond.6.reviewStars",
+        "var.cond.6.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1050828 is classified as other for G6PD ASAHI (0 review stars, germline; last evaluated 2013-10-24).",
+      "supportingFactIds": [
+        "var.cond.7.significance",
+        "var.cond.7.reviewStars",
+        "var.cond.7.origin",
+        "var.cond.7.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1050828 is classified as Pathogenic for not provided (2 review stars, germline; last evaluated 2025-03-04).",
+      "supportingFactIds": [
+        "var.cond.8.significance",
+        "var.cond.8.reviewStars",
+        "var.cond.8.origin",
+        "var.cond.8.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1050828 is classified as Pathogenic for not specified (1 review star, germline; last evaluated 2018-07-02).",
+      "supportingFactIds": [
+        "var.cond.9.significance",
+        "var.cond.9.reviewStars",
+        "var.cond.9.origin",
+        "var.cond.9.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "fc47c19290268716",
-    "promptVersion": "2.0.0",
+    "factsHash": "9163f03a4ed6e7e5",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:12:26.698Z",
-    "retrievedAt": "2026-07-27T10:12:21.324Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:09:53.812Z",
+    "retrievedAt": "2026-08-03T16:09:52.296Z",
     "sources": [
       {
         "label": "dbSNP",

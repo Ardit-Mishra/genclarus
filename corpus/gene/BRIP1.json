@@ -36,52 +36,30 @@
         "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=BRIP1"
       }
     ],
-    "retrievedAt": "2026-07-27T09:47:49.020Z"
+    "retrievedAt": "2026-08-03T16:06:42.238Z"
   },
   "claims": [
     {
-      "text": "The protein encoded by the BRIP1 gene is a member of the RecQ DEAH helicase family.",
+      "text": "BRIP1 is a human protein-coding gene.",
       "supportingFactIds": [
         "gene.symbol",
-        "gene.summary"
+        "gene.type"
       ],
-      "claimType": "function"
-    },
-    {
-      "text": "The BRIP1 gene interacts with the BRCT repeats of breast cancer, type 1 (BRCA1).",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "function"
-    },
-    {
-      "text": "The BRIP1 gene is a protein-coding gene located on chromosome 17.",
-      "supportingFactIds": [
-        "gene.type",
-        "gene.location"
-      ],
-      "claimType": "identity"
-    },
-    {
-      "text": "The BRIP1 gene has aliases BACH1, FANCJ, and OF.",
-      "supportingFactIds": [
-        "gene.alias.0",
-        "gene.alias.1",
-        "gene.alias.2"
-      ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
     "factsHash": "c4a43fbaff9253b9",
-    "promptVersion": "2.0.0",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T09:47:52.526Z",
-    "retrievedAt": "2026-07-27T09:47:49.020Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:06:43.746Z",
+    "retrievedAt": "2026-08-03T16:06:42.238Z",
     "sources": [
       {
         "label": "NCBI Gene",

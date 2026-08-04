@@ -97,52 +97,92 @@
         "url": "https://gnomad.broadinstitute.org/variant/19-41006936-G-T?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:27:50.069Z"
+    "retrievedAt": "2026-08-03T16:12:24.272Z"
   },
   "claims": [
     {
-      "text": "The CYP2B6 gene variant rs3745274 is a missense variant causing the p.Gln172His protein change.",
+      "text": "rs3745274 is a genetic variant located in the CYP2B6 gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.consequence",
-        "var.protein"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The CYP2B6 gene variant rs3745274 is a single nucleotide variant.",
-      "supportingFactIds": [
-        "var.type"
-      ],
-      "claimType": "identity"
-    },
-    {
-      "text": "The CYP2B6 gene variant rs3745274 is associated with drug response to efavirenz in terms of metabolism and toxicity, and nevirapine in terms of metabolism.",
-      "supportingFactIds": [
-        "var.cond.0.significance",
-        "var.cond.1.significance",
-        "var.cond.2.significance"
-      ],
-      "claimType": "condition_context"
-    },
-    {
-      "text": "The CYP2B6 gene variant rs3745274 has a frequency of 26% in the African population.",
+      "text": "In gnomAD, rs3745274 has an overall allele frequency of 26.3%.",
       "supportingFactIds": [
         "var.gnomadAf"
       ],
-      "claimType": "frequency_context"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs3745274 is classified as Drug response for efavirenz response - Metabolism/PK (3 review stars, germline; last evaluated 2021-03-24).",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs3745274 is classified as Drug response (toxicity) for efavirenz response (3 review stars, germline; last evaluated 2021-03-24).",
+      "supportingFactIds": [
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars",
+        "var.cond.1.origin",
+        "var.cond.1.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs3745274 is classified as Drug response for nevirapine response - Metabolism/PK (3 review stars, germline; last evaluated 2021-03-24).",
+      "supportingFactIds": [
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars",
+        "var.cond.2.origin",
+        "var.cond.2.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs3745274 is classified as Drug response for Efavirenz response (0 review stars, germline; last evaluated 2015-05-18).",
+      "supportingFactIds": [
+        "var.cond.3.significance",
+        "var.cond.3.reviewStars",
+        "var.cond.3.origin",
+        "var.cond.3.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs3745274 is classified as Likely benign for CYP2B6-related disorder (0 review stars, germline; last evaluated 2021-07-22).",
+      "supportingFactIds": [
+        "var.cond.4.significance",
+        "var.cond.4.reviewStars",
+        "var.cond.4.origin",
+        "var.cond.4.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "e9fe885d72956077",
-    "promptVersion": "2.0.0",
+    "factsHash": "28bbace56c8a630d",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:27:53.551Z",
-    "retrievedAt": "2026-07-27T10:27:50.069Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:12:25.775Z",
+    "retrievedAt": "2026-08-03T16:12:24.272Z",
     "sources": [
       {
         "label": "dbSNP",

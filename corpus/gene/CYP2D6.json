@@ -41,42 +41,30 @@
         "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=CYP2D6"
       }
     ],
-    "retrievedAt": "2026-07-27T09:49:20.473Z"
+    "retrievedAt": "2026-08-03T16:07:22.681Z"
   },
   "claims": [
     {
-      "text": "CYP2D6 is a member of the cytochrome P450 superfamily of enzymes.",
+      "text": "CYP2D6 is a human protein-coding gene.",
       "supportingFactIds": [
         "gene.symbol",
-        "gene.summary"
+        "gene.type"
       ],
-      "claimType": "identity"
-    },
-    {
-      "text": "CYP2D6 is highly polymorphic in the human population, with certain alleles resulting in the poor metabolizer phenotype.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "classification_context"
-    },
-    {
-      "text": "CYP2D6 can vary in copy number, with individuals having 3 or more active copies exhibiting the ultrarapid metabolizer phenotype.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "frequency_context"
+      "claimType": "identity",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
     "factsHash": "6362754cc6f31ab1",
-    "promptVersion": "2.0.0",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T09:49:24.542Z",
-    "retrievedAt": "2026-07-27T09:49:20.473Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:07:24.188Z",
+    "retrievedAt": "2026-08-03T16:07:22.681Z",
     "sources": [
       {
         "label": "NCBI Gene",

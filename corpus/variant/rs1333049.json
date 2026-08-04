@@ -56,41 +56,47 @@
         "url": "https://gnomad.broadinstitute.org/variant/9-22125504-G-C?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:12:08.864Z"
+    "retrievedAt": "2026-08-03T16:09:47.931Z"
   },
   "claims": [
     {
-      "text": "The CDKN2B-AS1 gene variant rs1333049 is a single nucleotide variant.",
+      "text": "rs1333049 is a genetic variant located in the CDKN2B-AS1 gene.",
       "supportingFactIds": [
-        "var.type"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The CDKN2B-AS1 gene variant rs1333049 has a low review confidence for its association with Three Vessel Coronary Disease.",
-      "supportingFactIds": [
-        "var.cond.0.reviewStars"
-      ],
-      "claimType": "uncertainty"
-    },
-    {
-      "text": "The CDKN2B-AS1 gene variant rs1333049 has a frequency of 41% in the general population.",
+      "text": "In gnomAD, rs1333049 has an overall allele frequency of 41.2%.",
       "supportingFactIds": [
         "var.gnomadAf"
       ],
-      "claimType": "frequency_context"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1333049 is classified as Risk factor for Three Vessel Coronary Disease (0 review stars, somatic).",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "d5f4e3bbdbebc98d",
-    "promptVersion": "2.0.0",
+    "factsHash": "483bbcf85d0c4590",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:12:12.371Z",
-    "retrievedAt": "2026-07-27T10:12:08.864Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:09:49.440Z",
+    "retrievedAt": "2026-08-03T16:09:47.931Z",
     "sources": [
       {
         "label": "dbSNP",

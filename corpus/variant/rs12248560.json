@@ -127,54 +127,118 @@
         "url": "https://gnomad.broadinstitute.org/variant/10-94761900-C-T?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:10:17.417Z"
+    "retrievedAt": "2026-08-03T16:09:13.785Z"
   },
   "claims": [
     {
-      "text": "The CYP2C19 gene variant rs12248560 is associated with increased function, as classified by ClinVar with 4 of 4 review stars.",
+      "text": "rs12248560 is a genetic variant located in the CYP2C19 gene.",
+      "supportingFactIds": [
+        "var.gene"
+      ],
+      "claimType": "identity",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In gnomAD, rs12248560 has an overall allele frequency of 20.5%.",
+      "supportingFactIds": [
+        "var.gnomadAf"
+      ],
+      "claimType": "frequency_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs12248560 is classified as Drug response for CYP2C19: increased function (4 review stars, germline).",
       "supportingFactIds": [
         "var.cond.0.significance",
         "var.cond.0.reviewStars",
         "var.cond.0.origin"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
     },
     {
-      "text": "This variant is classified as a germline variant, originating from the germline, according to ClinVar.",
-      "supportingFactIds": [
-        "var.cond.0.origin",
-        "var.cond.1.origin",
-        "var.cond.2.origin"
-      ],
-      "claimType": "identity"
-    },
-    {
-      "text": "The variant rs12248560 affects the response to Clopidogrel, as classified by ClinVar with 4 of 4 review stars.",
+      "text": "In ClinVar, rs12248560 is classified as Drug response for Clopidogrel response (4 review stars, germline).",
       "supportingFactIds": [
         "var.cond.1.significance",
-        "var.cond.1.reviewStars"
+        "var.cond.1.reviewStars",
+        "var.cond.1.origin"
       ],
-      "claimType": "condition_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The variant rs12248560 affects the response to Citalopram, as classified by ClinVar with 4 of 4 review stars.",
+      "text": "In ClinVar, rs12248560 is classified as Drug response for Citalopram response (4 review stars, germline).",
       "supportingFactIds": [
         "var.cond.2.significance",
-        "var.cond.2.reviewStars"
+        "var.cond.2.reviewStars",
+        "var.cond.2.origin"
       ],
-      "claimType": "condition_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs12248560 is classified as Drug response for Escitalopram response (4 review stars, germline).",
+      "supportingFactIds": [
+        "var.cond.3.significance",
+        "var.cond.3.reviewStars",
+        "var.cond.3.origin"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs12248560 is classified as Drug response for Sertraline response (4 review stars, germline).",
+      "supportingFactIds": [
+        "var.cond.4.significance",
+        "var.cond.4.reviewStars",
+        "var.cond.4.origin"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs12248560 is classified as Drug response for Voriconazole response (4 review stars, germline).",
+      "supportingFactIds": [
+        "var.cond.5.significance",
+        "var.cond.5.reviewStars",
+        "var.cond.5.origin"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs12248560 is classified as Drug response for CYP2C19: no function (4 review stars, germline).",
+      "supportingFactIds": [
+        "var.cond.6.significance",
+        "var.cond.6.reviewStars",
+        "var.cond.6.origin"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs12248560 is classified as Benign for not provided (2 review stars, germline; last evaluated 2018-03-14).",
+      "supportingFactIds": [
+        "var.cond.7.significance",
+        "var.cond.7.reviewStars",
+        "var.cond.7.origin",
+        "var.cond.7.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "242ff07ee7926c0a",
-    "promptVersion": "2.0.0",
+    "factsHash": "72448eb74f483db6",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:10:21.238Z",
-    "retrievedAt": "2026-07-27T10:10:17.417Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:09:15.299Z",
+    "retrievedAt": "2026-08-03T16:09:13.785Z",
     "sources": [
       {
         "label": "dbSNP",

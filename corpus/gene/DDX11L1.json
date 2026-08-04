@@ -24,34 +24,30 @@
         "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=DDX11L1"
       }
     ],
-    "retrievedAt": "2026-07-27T10:06:31.148Z"
+    "retrievedAt": "2026-08-03T16:07:54.229Z"
   },
   "claims": [
     {
-      "text": "DDX11L1 is a pseudogene.",
+      "text": "DDX11L1 is a human pseudogene.",
       "supportingFactIds": [
+        "gene.symbol",
         "gene.type"
       ],
-      "claimType": "classification_context"
-    },
-    {
-      "text": "DDX11L1 is located on chromosome 1.",
-      "supportingFactIds": [
-        "gene.location"
-      ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
     "factsHash": "e46f6ab30e854c10",
-    "promptVersion": "2.0.0",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:06:35.924Z",
-    "retrievedAt": "2026-07-27T10:06:31.148Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:07:55.733Z",
+    "retrievedAt": "2026-08-03T16:07:54.229Z",
     "sources": [
       {
         "label": "NCBI Gene",
