@@ -90,7 +90,9 @@ describe("renderClinicalClaims — Stage-4 audit regressions", () => {
     expect(claims.map((c) => c.text).join(" ").toLowerCase()).toContain("toxicity");
   });
 
-  it("a genuine same-condition conflict notice preserves each member's qualifiers", () => {
+  it("renders each divergent same-condition submission separately, preserving every qualifier (root A)", () => {
+    // Two DISTINCT submissions for one condition that disagree: rendered as two faithful claims, never
+    // merged into one that drops a submission or a qualifier, never a chosen winner.
     const v = F.variant({
       rsid: "rs1799963c", gene: "F2",
       conditionClassifications: [
@@ -99,10 +101,12 @@ describe("renderClinicalClaims — Stage-4 audit regressions", () => {
       ],
     });
     const { claims, survived } = render(v);
-    expect(survived.length).toBe(claims.length);
-    const conflict = claims.find((c) => c.claimType === "condition_context");
-    expect(conflict).toBeTruthy();
-    expect(conflict!.text.toLowerCase()).toContain("low penetrance"); // qualifier not lost in the notice
+    expect(survived.length).toBe(claims.length); // nothing dropped by the gate
+    const cond = claims.filter((c) => c.claimType === "classification_context");
+    expect(cond.length).toBe(2); // both distinct submissions rendered
+    const joined = claims.map((c) => c.text).join(" ").toLowerCase();
+    expect(joined).toContain("low penetrance"); // first submission's qualifier survives
+    expect(joined).toContain("risk factor"); // the divergent significance is shown, not dropped
   });
 });
 
@@ -136,13 +140,15 @@ describe("renderClinicalClaims — faithful, self-validating", () => {
     expect(t).not.toContain("african");
   });
 
-  it("emits a conflict notice, not a chosen winner, for divergent same-condition significances", () => {
-    const claims = renderClinicalClaims(F.synthCollapse);
-    const conflict = claims.find((c) => c.claimType === "condition_context");
-    expect(conflict).toBeTruthy();
-    expect(conflict!.text.toLowerCase()).toContain("differing classifications");
-    // Must not present a single "pathogenic for Cardiomyopathy" verdict.
-    expect(claims.some((c) => c.claimType === "classification_context" && /pathogenic for cardiomyopathy/i.test(c.text))).toBe(false);
+  it("renders every divergent significance for one condition as its own faithful claim (no winner, none dropped)", () => {
+    const { claims, survived } = render(F.synthCollapse); // Cardiomyopathy: Pathogenic + Benign
+    expect(survived.length).toBe(claims.length); // both survive the gate; nothing dropped
+    const cond = claims.filter((c) => c.claimType === "classification_context");
+    expect(cond.length).toBe(2);
+    const joined = claims.map((c) => c.text).join(" ").toLowerCase();
+    // BOTH verdicts are present — the divergence is shown, not resolved to a single chosen winner.
+    expect(joined).toContain("pathogenic for cardiomyopathy");
+    expect(joined).toContain("benign for cardiomyopathy");
   });
 
   it("preserves ALL deterministic assertions for a >5-condition variant (correction C, no truncation)", () => {

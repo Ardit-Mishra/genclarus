@@ -7,6 +7,7 @@
 import type { Facts } from "./facts";
 import type { EvidenceFact } from "./evidence";
 import type { NimMessage } from "./nim";
+import { resolveVariantGene } from "./gene-identity";
 
 // Serialize the evidence as terse numbered lines the model cites by id. The ids are the ONLY thing
 // a claim may reference, so they are the most prominent token on each line.
@@ -38,6 +39,7 @@ const SYSTEM = [
   "- Do NOT state any clinical classification, condition verdict, pathogenicity, allele frequency, percentage, drug response, toxicity, review status, penetrance, or germline/somatic status — those are added separately and will be REJECTED if you write them.",
   "- Each claim is exactly ONE sentence of at most 35 words, citing 1 to 3 supportingFactIds, using ONLY ids from the facts given.",
   "- Every gene symbol, protein change and entity in a claim MUST appear verbatim in the facts it cites. Invent nothing.",
+  "- A gene is NOT a variant: never write that a gene 'is a single nucleotide variant' (or any variant type). Describe the gene's identity/function, not the variant's category.",
   "- Do not address the reader ('you'/'your'). No diagnosis, prognosis, treatment, dosage, personal risk, or causal/actionable claims.",
 ].join("\n");
 
@@ -45,10 +47,17 @@ const REPAIR =
   "Your previous reply did not match the schema. Return ONLY a JSON object {\"claims\":[...]} with AT MOST 3 claims of claimType 'identity' or 'function' only, each exactly one sentence citing 1-3 of the given ids, and no text outside the JSON.";
 
 export function messagesFor(facts: Facts, evidence: EvidenceFact[], repair: boolean): NimMessage[] {
+  // Name the gene in the prompt ONLY when identity resolves (and use the resolved symbol) — otherwise
+  // the model is handed an unresolved/antisense gene name it would faithfully echo (root cause D).
+  let resolvedGene: string | null = null;
+  if (facts.kind === "variant") {
+    const id = resolveVariantGene(facts.gene, facts.preferredName);
+    if (id.status === "resolved") resolvedGene = id.symbol;
+  }
   const subject =
     facts.kind === "gene"
       ? `the human gene ${facts.symbol}${facts.name ? ` (${facts.name})` : ""}`
-      : `the human variant ${facts.rsid}${facts.gene ? ` in the ${facts.gene} gene` : ""}`;
+      : `the human variant ${facts.rsid}${resolvedGene ? ` in the ${resolvedGene} gene` : ""}`;
   const messages: NimMessage[] = [
     { role: "system", content: SYSTEM },
     {
