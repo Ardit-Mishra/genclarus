@@ -96,45 +96,91 @@
         "url": "https://gnomad.broadinstitute.org/variant/3-12351626-C-G?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:12:00.355Z"
+    "retrievedAt": "2026-08-03T16:09:43.574Z"
   },
   "claims": [
     {
-      "text": "The PPARG gene variant rs1801282 is a missense variant leading to a p.Pro12Ala protein change.",
+      "text": "rs1801282 is a genetic variant located in the PPARG gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.consequence",
-        "var.protein"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "This variant is a single nucleotide variant.",
+      "text": "In gnomAD, rs1801282 has an overall allele frequency of 10.0%.",
       "supportingFactIds": [
-        "var.type"
+        "var.gnomadAf"
       ],
-      "claimType": "identity"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The variant rs1801282 is classified as likely benign for conditions including insulin resistance, PPARG-related familial partial lipodystrophy, and obesity.",
+      "text": "In ClinVar, rs1801282 is classified as Likely benign for INSULIN RESISTANCE, DIGENIC (1 review star, germline; last evaluated 2017-04-27).",
       "supportingFactIds": [
         "var.cond.0.significance",
-        "var.cond.1.significance",
-        "var.cond.2.significance"
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1801282 is classified as Likely benign for PPARG-related familial partial lipodystrophy (1 review star, germline; last evaluated 2017-04-27).",
+      "supportingFactIds": [
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars",
+        "var.cond.1.origin",
+        "var.cond.1.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1801282 is classified as Likely benign for Obesity (1 review star, germline; last evaluated 2017-04-27).",
+      "supportingFactIds": [
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars",
+        "var.cond.2.origin",
+        "var.cond.2.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1801282 is classified as Likely benign for not provided (2 review stars, germline; last evaluated 2025-02-02).",
+      "supportingFactIds": [
+        "var.cond.3.significance",
+        "var.cond.3.reviewStars",
+        "var.cond.3.origin",
+        "var.cond.3.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1801282 is classified as Likely benign for not specified (0 review stars, germline).",
+      "supportingFactIds": [
+        "var.cond.4.significance",
+        "var.cond.4.reviewStars",
+        "var.cond.4.origin"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "69181cc4502cefe6",
-    "promptVersion": "2.0.0",
+    "factsHash": "ad9070977b6354e7",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:12:03.930Z",
-    "retrievedAt": "2026-07-27T10:12:00.355Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:09:45.087Z",
+    "retrievedAt": "2026-08-03T16:09:43.574Z",
     "sources": [
       {
         "label": "dbSNP",

@@ -206,53 +206,201 @@
         "url": "https://gnomad.broadinstitute.org/variant/14-94378610-C-T?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:16:01.267Z"
+    "retrievedAt": "2026-08-03T16:11:19.125Z"
   },
   "claims": [
     {
-      "text": "The SERPINA1 gene variant rs28929474 is a missense variant causing the protein change p.Glu366Lys.",
+      "text": "rs28929474 is a genetic variant located in the SERPINA1 gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.consequence",
-        "var.protein"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "This variant is classified as Pathogenic for Alpha-1-antitrypsin deficiency (A1ATD) with 2 of 4 review stars.",
+      "text": "In gnomAD, rs28929474 has an overall allele frequency of 1.2%.",
+      "supportingFactIds": [
+        "var.gnomadAf"
+      ],
+      "claimType": "frequency_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs28929474 is classified as Pathogenic for Alpha-1-antitrypsin deficiency (A1ATD) (2 review stars; last evaluated 2025-02-02).",
       "supportingFactIds": [
         "var.cond.0.significance",
-        "var.cond.0.reviewStars"
+        "var.cond.0.reviewStars",
+        "var.cond.0.lastEvaluated"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The variant rs28929474 has a germline origin for Alpha-1-antitrypsin deficiency (A1ATD) and Neurodevelopmental disorder.",
+      "text": "In ClinVar, rs28929474 is classified as Pathogenic for Neurodevelopmental disorder (1 review star, germline; last evaluated 2021-12-16).",
       "supportingFactIds": [
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars",
         "var.cond.1.origin",
-        "var.cond.2.origin"
+        "var.cond.1.lastEvaluated"
       ],
-      "claimType": "condition_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The variant rs28929474 is classified as Pathogenic for Alpha-1-antitrypsin deficiency (A1ATD) and Neurodevelopmental disorder, but review confidence varies.",
+      "text": "In ClinVar, rs28929474 is classified as Pathogenic for Alpha-1-antitrypsin deficiency (A1ATD) (1 review star, germline; last evaluated 2020-08-31).",
       "supportingFactIds": [
-        "var.cond.0.significance",
-        "var.cond.1.significance"
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars",
+        "var.cond.2.origin",
+        "var.cond.2.lastEvaluated"
       ],
-      "claimType": "uncertainty"
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs28929474 is classified as Pathogenic for COPD, severe early onset (1 review star, germline; last evaluated 2020-08-31).",
+      "supportingFactIds": [
+        "var.cond.3.significance",
+        "var.cond.3.reviewStars",
+        "var.cond.3.origin",
+        "var.cond.3.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs28929474 is classified as Pathogenic for Inborn genetic diseases (1 review star, germline; last evaluated 2017-04-05).",
+      "supportingFactIds": [
+        "var.cond.4.significance",
+        "var.cond.4.reviewStars",
+        "var.cond.4.origin",
+        "var.cond.4.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs28929474 is classified as Risk factor for Chronic obstructive pulmonary disease (1 review star, germline; last evaluated 2020-03-04).",
+      "supportingFactIds": [
+        "var.cond.5.significance",
+        "var.cond.5.reviewStars",
+        "var.cond.5.origin",
+        "var.cond.5.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs28929474 is classified as Pathogenic for SERPINA1-related disorder (0 review stars, germline; last evaluated 2024-09-06).",
+      "supportingFactIds": [
+        "var.cond.6.significance",
+        "var.cond.6.reviewStars",
+        "var.cond.6.origin",
+        "var.cond.6.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs28929474 is classified as Pathogenic for FRAXE (0 review stars, germline; last evaluated 2014-07-29).",
+      "supportingFactIds": [
+        "var.cond.7.significance",
+        "var.cond.7.reviewStars",
+        "var.cond.7.origin",
+        "var.cond.7.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs28929474 is classified as Uncertain significance for Susceptibility to severe coronavirus disease (COVID-19) (0 review stars, germline; last evaluated 2022-05-13).",
+      "supportingFactIds": [
+        "var.cond.8.significance",
+        "var.cond.8.reviewStars",
+        "var.cond.8.origin",
+        "var.cond.8.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs28929474 is classified as other for PI Z (0 review stars, germline; last evaluated 2016-07-15).",
+      "supportingFactIds": [
+        "var.cond.9.significance",
+        "var.cond.9.reviewStars",
+        "var.cond.9.origin",
+        "var.cond.9.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs28929474 is classified as other for PI Z(TUN) (0 review stars, germline; last evaluated 1994-12-01).",
+      "supportingFactIds": [
+        "var.cond.10.significance",
+        "var.cond.10.reviewStars",
+        "var.cond.10.origin",
+        "var.cond.10.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs28929474 is classified as other for PI Z(AUGSBURG) (0 review stars, germline; last evaluated 1994-12-01).",
+      "supportingFactIds": [
+        "var.cond.11.significance",
+        "var.cond.11.reviewStars",
+        "var.cond.11.origin",
+        "var.cond.11.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs28929474 is classified as Pathogenic for not provided (2 review stars, germline; last evaluated 2024-11-01).",
+      "supportingFactIds": [
+        "var.cond.12.significance",
+        "var.cond.12.reviewStars",
+        "var.cond.12.origin",
+        "var.cond.12.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs28929474 is classified as Pathogenic for See cases (1 review star, germline; last evaluated 2020-10-06).",
+      "supportingFactIds": [
+        "var.cond.13.significance",
+        "var.cond.13.reviewStars",
+        "var.cond.13.origin",
+        "var.cond.13.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs28929474 is classified as Uncertain significance for not specified (1 review star, germline; last evaluated 2025-03-04).",
+      "supportingFactIds": [
+        "var.cond.14.significance",
+        "var.cond.14.reviewStars",
+        "var.cond.14.origin",
+        "var.cond.14.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "043f3c559fe7e521",
-    "promptVersion": "2.0.0",
+    "factsHash": "bab5d2b63dbb5a8d",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:16:09.296Z",
-    "retrievedAt": "2026-07-27T10:16:01.267Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:11:20.635Z",
+    "retrievedAt": "2026-08-03T16:11:19.125Z",
     "sources": [
       {
         "label": "dbSNP",

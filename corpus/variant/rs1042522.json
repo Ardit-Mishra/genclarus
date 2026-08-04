@@ -276,46 +276,254 @@
         "url": "https://gnomad.broadinstitute.org/variant/17-7676154-G-C?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:09:24.105Z"
+    "retrievedAt": "2026-08-03T16:08:58.671Z"
   },
   "claims": [
     {
-      "text": "The TP53 gene variant rs1042522 is a missense variant with a p.Pro72Arg protein change.",
+      "text": "rs1042522 is a genetic variant located in the TP53 gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.consequence",
-        "var.protein"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "This variant is a single nucleotide variant with a frequency of 62% in the general population.",
+      "text": "In gnomAD, rs1042522 has an overall allele frequency of 62.1%.",
       "supportingFactIds": [
-        "var.type",
         "var.gnomadAf"
       ],
-      "claimType": "identity"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The review confidence for the Li-Fraumeni syndrome, Hereditary cancer-predisposing syndrome, and Li-Fraumeni syndrome 1 conditions is 2 of 4 review stars.",
+      "text": "In ClinVar, rs1042522 is classified as Benign for Li-Fraumeni syndrome (LFS) (2 review stars, germline; last evaluated 2025-02-04).",
       "supportingFactIds": [
+        "var.cond.0.significance",
         "var.cond.0.reviewStars",
-        "var.cond.1.reviewStars",
-        "var.cond.2.reviewStars"
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1042522 is classified as Benign for Hereditary cancer-predisposing syndrome (2 review stars, germline; last evaluated 2022-06-18).",
+      "supportingFactIds": [
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars",
+        "var.cond.1.origin",
+        "var.cond.1.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1042522 is classified as Benign for Li-Fraumeni syndrome 1 (LFS) (2 review stars, germline; last evaluated 2022-06-18).",
+      "supportingFactIds": [
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars",
+        "var.cond.2.origin",
+        "var.cond.2.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1042522 is classified as Benign for Hereditary breast ovarian cancer syndrome (2 review stars, germline; last evaluated 2022-04-19).",
+      "supportingFactIds": [
+        "var.cond.3.significance",
+        "var.cond.3.reviewStars",
+        "var.cond.3.origin",
+        "var.cond.3.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1042522 is classified as Benign for Adrenocortical carcinoma, hereditary (ADCC) (1 review star; last evaluated 2021-12-20).",
+      "supportingFactIds": [
+        "var.cond.4.significance",
+        "var.cond.4.reviewStars",
+        "var.cond.4.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1042522 is classified as Benign for Familial cancer of breast (1 review star; last evaluated 2021-12-20).",
+      "supportingFactIds": [
+        "var.cond.5.significance",
+        "var.cond.5.reviewStars",
+        "var.cond.5.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1042522 is classified as Benign for Glioma susceptibility 1 (GLM1) (1 review star; last evaluated 2021-12-20).",
+      "supportingFactIds": [
+        "var.cond.6.significance",
+        "var.cond.6.reviewStars",
+        "var.cond.6.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1042522 is classified as Benign for Bone osteosarcoma (1 review star; last evaluated 2021-12-20).",
+      "supportingFactIds": [
+        "var.cond.7.significance",
+        "var.cond.7.reviewStars",
+        "var.cond.7.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1042522 is classified as Benign for Li-Fraumeni syndrome 1 (LFS) (1 review star; last evaluated 2021-12-20).",
+      "supportingFactIds": [
+        "var.cond.8.significance",
+        "var.cond.8.reviewStars",
+        "var.cond.8.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1042522 is classified as Benign for Nasopharyngeal carcinoma (1 review star; last evaluated 2021-12-20).",
+      "supportingFactIds": [
+        "var.cond.9.significance",
+        "var.cond.9.reviewStars",
+        "var.cond.9.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1042522 is classified as Benign for Carcinoma of pancreas (1 review star; last evaluated 2021-12-20).",
+      "supportingFactIds": [
+        "var.cond.10.significance",
+        "var.cond.10.reviewStars",
+        "var.cond.10.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1042522 is classified as Benign for Choroid plexus papilloma (CPP) (1 review star; last evaluated 2021-12-20).",
+      "supportingFactIds": [
+        "var.cond.11.significance",
+        "var.cond.11.reviewStars",
+        "var.cond.11.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1042522 is classified as Benign for Basal cell carcinoma, susceptibility to, 7 (BCC7) (1 review star; last evaluated 2021-12-20).",
+      "supportingFactIds": [
+        "var.cond.12.significance",
+        "var.cond.12.reviewStars",
+        "var.cond.12.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1042522 is classified as Benign for Hepatocellular carcinoma (HCC) (1 review star; last evaluated 2021-12-20).",
+      "supportingFactIds": [
+        "var.cond.13.significance",
+        "var.cond.13.reviewStars",
+        "var.cond.13.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1042522 is classified as Benign for Colorectal cancer (1 review star; last evaluated 2021-12-20).",
+      "supportingFactIds": [
+        "var.cond.14.significance",
+        "var.cond.14.reviewStars",
+        "var.cond.14.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1042522 is classified as Benign for Bone marrow failure syndrome 5 (1 review star; last evaluated 2021-12-20).",
+      "supportingFactIds": [
+        "var.cond.15.significance",
+        "var.cond.15.reviewStars",
+        "var.cond.15.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1042522 is classified as Pathogenic for Lip and oral cavity carcinoma (0 review stars, somatic; last evaluated 2019-04-30).",
+      "supportingFactIds": [
+        "var.cond.16.significance",
+        "var.cond.16.reviewStars",
+        "var.cond.16.origin",
+        "var.cond.16.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1042522 is classified as Benign for TP53 POLYMORPHISM (0 review stars; last evaluated 2009-10-01).",
+      "supportingFactIds": [
+        "var.cond.17.significance",
+        "var.cond.17.reviewStars",
+        "var.cond.17.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1042522 is classified as Benign for Acute myeloid leukemia (AML) (0 review stars, somatic).",
+      "supportingFactIds": [
+        "var.cond.18.significance",
+        "var.cond.18.reviewStars",
+        "var.cond.18.origin"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1042522 is classified as Benign for not provided (2 review stars, germline; last evaluated 2024-11-27).",
+      "supportingFactIds": [
+        "var.cond.19.significance",
+        "var.cond.19.reviewStars",
+        "var.cond.19.origin",
+        "var.cond.19.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1042522 is classified as Benign for not specified (2 review stars, germline; last evaluated 2016-04-05).",
+      "supportingFactIds": [
+        "var.cond.20.significance",
+        "var.cond.20.reviewStars",
+        "var.cond.20.origin",
+        "var.cond.20.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "6360953662d86802",
-    "promptVersion": "2.0.0",
+    "factsHash": "c8dc881ed5a10176",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:09:28.611Z",
-    "retrievedAt": "2026-07-27T10:09:24.105Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:09:00.181Z",
+    "retrievedAt": "2026-08-03T16:08:58.671Z",
     "sources": [
       {
         "label": "dbSNP",

@@ -38,42 +38,30 @@
         "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=APOB"
       }
     ],
-    "retrievedAt": "2026-07-27T09:48:35.609Z"
+    "retrievedAt": "2026-08-03T16:07:02.815Z"
   },
   "claims": [
     {
-      "text": "APOB is a protein-coding gene located on chromosome 2.",
+      "text": "APOB is a human protein-coding gene.",
       "supportingFactIds": [
-        "gene.type",
-        "gene.location"
+        "gene.symbol",
+        "gene.type"
       ],
-      "claimType": "identity"
-    },
-    {
-      "text": "APOB is the main apolipoprotein of chylomicrons and low-density lipoproteins (LDL).",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "function"
-    },
-    {
-      "text": "APOB is associated with hypobetalipoproteinemia, normotriglyceridemic hypobetalipoproteinemia, and hypercholesterolemia.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "condition_context"
+      "claimType": "identity",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
     "factsHash": "8d37e61efbe4e765",
-    "promptVersion": "2.0.0",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T09:48:39.930Z",
-    "retrievedAt": "2026-07-27T09:48:35.609Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:07:04.329Z",
+    "retrievedAt": "2026-08-03T16:07:02.815Z",
     "sources": [
       {
         "label": "NCBI Gene",

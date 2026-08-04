@@ -118,53 +118,114 @@
         "url": "https://gnomad.broadinstitute.org/variant/12-40340400-G-A?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:12:48.328Z"
+    "retrievedAt": "2026-08-03T16:09:58.754Z"
   },
   "claims": [
     {
-      "text": "The LRRK2 gene variant rs34637584 is a missense variant leading to the protein change p.Gly2019Ser.",
+      "text": "rs34637584 is a genetic variant located in the LRRK2 gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.consequence",
-        "var.protein"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The variant rs34637584 is classified as Likely pathogenic for Autosomal dominant Parkinson disease 8 with moderate review confidence.",
+      "text": "In gnomAD, rs34637584 has an overall allele frequency of 0.02%.",
       "supportingFactIds": [
-        "var.cond.0.significance",
-        "var.cond.0.reviewStars"
-      ],
-      "claimType": "classification_context"
-    },
-    {
-      "text": "The variant rs34637584 is classified as Pathogenic for Parkinson disease (PD) and Inborn genetic diseases with low review confidence.",
-      "supportingFactIds": [
-        "var.cond.1.significance",
-        "var.cond.2.significance"
-      ],
-      "claimType": "classification_context"
-    },
-    {
-      "text": "The variant rs34637584 is a single nucleotide variant with a frequency of 0.019% in the gnomAD dataset.",
-      "supportingFactIds": [
-        "var.type",
         "var.gnomadAf"
       ],
-      "claimType": "frequency_context"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs34637584 is classified as Likely pathogenic for Autosomal dominant Parkinson disease 8 (2 review stars, germline; last evaluated 2025-01-17).",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs34637584 is classified as Pathogenic for Parkinson disease (PD) (1 review star, germline; last evaluated 2023-03-30).",
+      "supportingFactIds": [
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars",
+        "var.cond.1.origin",
+        "var.cond.1.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs34637584 is classified as Pathogenic for Inborn genetic diseases (1 review star, germline; last evaluated 2022-07-19).",
+      "supportingFactIds": [
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars",
+        "var.cond.2.origin",
+        "var.cond.2.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs34637584 is classified as Pathogenic for Parkinson disease, late-onset (PD) (1 review star, germline; last evaluated 2021-05-03).",
+      "supportingFactIds": [
+        "var.cond.3.significance",
+        "var.cond.3.reviewStars",
+        "var.cond.3.origin",
+        "var.cond.3.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs34637584 is classified as Risk factor for Young-onset Parkinson disease (1 review star, germline; last evaluated 2017-12-29).",
+      "supportingFactIds": [
+        "var.cond.4.significance",
+        "var.cond.4.reviewStars",
+        "var.cond.4.origin",
+        "var.cond.4.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs34637584 is classified as Pathogenic for LRRK2-related disorder (0 review stars, germline; last evaluated 2024-09-04).",
+      "supportingFactIds": [
+        "var.cond.5.significance",
+        "var.cond.5.reviewStars",
+        "var.cond.5.origin",
+        "var.cond.5.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs34637584 is classified as Pathogenic for not provided (2 review stars, germline; last evaluated 2024-10-01).",
+      "supportingFactIds": [
+        "var.cond.6.significance",
+        "var.cond.6.reviewStars",
+        "var.cond.6.origin",
+        "var.cond.6.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "d748c39d3f3f9807",
-    "promptVersion": "2.0.0",
+    "factsHash": "02b735f5d8eb0b6e",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:12:54.151Z",
-    "retrievedAt": "2026-07-27T10:12:48.328Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:10:00.260Z",
+    "retrievedAt": "2026-08-03T16:09:58.754Z",
     "sources": [
       {
         "label": "dbSNP",

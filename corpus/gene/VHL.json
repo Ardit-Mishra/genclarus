@@ -37,49 +37,30 @@
         "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=VHL"
       }
     ],
-    "retrievedAt": "2026-07-27T09:44:37.427Z"
+    "retrievedAt": "2026-08-03T16:06:12.539Z"
   },
   "claims": [
     {
-      "text": "The VHL gene encodes a component of a ubiquitination complex.",
+      "text": "VHL is a human protein-coding gene.",
       "supportingFactIds": [
         "gene.symbol",
-        "gene.summary"
+        "gene.type"
       ],
-      "claimType": "function"
-    },
-    {
-      "text": "The VHL protein plays a role in many cellular processes including cilia formation, cytokine signaling, and regulation of senescence.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "function"
-    },
-    {
-      "text": "The VHL gene is associated with von Hippel-Lindau syndrome, pheochromocytoma, erythrocytosis, renal cell carcinoma, and cerebellar hemangioblastoma.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "condition_context"
-    },
-    {
-      "text": "The VHL gene is located on the positive strand of chromosome 3 at position 10,141,764–10,153,676.",
-      "supportingFactIds": [
-        "gene.location"
-      ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
     "factsHash": "0c1ede2df8e9b322",
-    "promptVersion": "2.0.0",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T09:44:43.477Z",
-    "retrievedAt": "2026-07-27T09:44:37.427Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:06:14.051Z",
+    "retrievedAt": "2026-08-03T16:06:12.539Z",
     "sources": [
       {
         "label": "NCBI Gene",

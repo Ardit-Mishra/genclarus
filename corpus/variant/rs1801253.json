@@ -77,50 +77,70 @@
         "url": "https://gnomad.broadinstitute.org/variant/10-114045297-G-C?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:14:50.041Z"
+    "retrievedAt": "2026-08-03T16:10:45.042Z"
   },
   "claims": [
     {
-      "text": "The ADRB1 gene variant rs1801253 is a missense variant causing a p.Gly389Arg protein change.",
+      "text": "rs1801253 is a genetic variant located in the ADRB1 gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.consequence",
-        "var.protein"
+        "var.gene"
       ],
-      "claimType": "function"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The ADRB1 gene variant rs1801253 has a Benign classification for ADRB1-related disorder.",
+      "text": "In gnomAD, rs1801253 has an overall allele frequency of 69.8%.",
       "supportingFactIds": [
-        "var.cond.0.significance"
+        "var.gnomadAf"
       ],
-      "claimType": "classification_context"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The ADRB1 gene variant rs1801253 has an association classification for Pulmonary disease, chronic obstructive, susceptibility to.",
+      "text": "In ClinVar, rs1801253 is classified as Benign for ADRB1-related disorder (0 review stars, germline; last evaluated 2019-10-17).",
       "supportingFactIds": [
-        "var.cond.1.significance"
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
       ],
-      "claimType": "condition_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The ADRB1 gene variant rs1801253 has a Benign classification for an unspecified condition.",
+      "text": "In ClinVar, rs1801253 is classified as association for Pulmonary disease, chronic obstructive, susceptibility to (0 review stars, germline; last evaluated 2022-07-05).",
       "supportingFactIds": [
-        "var.cond.2.significance"
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars",
+        "var.cond.1.origin",
+        "var.cond.1.lastEvaluated"
       ],
-      "claimType": "condition_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1801253 is classified as Benign for not provided (0 review stars, germline; last evaluated 2007-04-01).",
+      "supportingFactIds": [
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars",
+        "var.cond.2.origin",
+        "var.cond.2.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "f7260d00f8cd25da",
-    "promptVersion": "2.0.0",
+    "factsHash": "9b7f50479ae0d1be",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:14:54.179Z",
-    "retrievedAt": "2026-07-27T10:14:50.041Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:10:46.551Z",
+    "retrievedAt": "2026-08-03T16:10:45.042Z",
     "sources": [
       {
         "label": "dbSNP",

@@ -41,49 +41,30 @@
         "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=EGFR"
       }
     ],
-    "retrievedAt": "2026-07-27T09:46:57.174Z"
+    "retrievedAt": "2026-08-03T16:06:23.402Z"
   },
   "claims": [
     {
-      "text": "The protein encoded by the EGFR gene is a transmembrane glycoprotein and a member of the protein kinase superfamily.",
+      "text": "EGFR is a human protein-coding gene.",
       "supportingFactIds": [
         "gene.symbol",
-        "gene.summary"
+        "gene.type"
       ],
-      "claimType": "identity"
-    },
-    {
-      "text": "EGFR is a receptor for members of the epidermal growth factor family.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "function"
-    },
-    {
-      "text": "EGFR is associated with lung cancer due to mutations in the gene.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "classification_context"
-    },
-    {
-      "text": "The EGFR gene is located on chromosome 7 at position 55,018,820–55,211,628.",
-      "supportingFactIds": [
-        "gene.location"
-      ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
     "factsHash": "d08d610ff0190ecb",
-    "promptVersion": "2.0.0",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T09:47:00.037Z",
-    "retrievedAt": "2026-07-27T09:46:57.174Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:06:24.912Z",
+    "retrievedAt": "2026-08-03T16:06:23.402Z",
     "sources": [
       {
         "label": "NCBI Gene",

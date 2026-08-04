@@ -35,49 +35,30 @@
         "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=NUDT15"
       }
     ],
-    "retrievedAt": "2026-07-27T09:49:47.335Z"
+    "retrievedAt": "2026-08-03T16:07:35.175Z"
   },
   "claims": [
     {
-      "text": "NUDT15 encodes a protein-coding enzyme that belongs to the Nudix hydrolase superfamily.",
+      "text": "NUDT15 is a human protein-coding gene.",
       "supportingFactIds": [
         "gene.symbol",
-        "gene.summary"
+        "gene.type"
       ],
-      "claimType": "identity"
-    },
-    {
-      "text": "The encoded NUDT15 enzyme is a negative regulator of thiopurine activation and toxicity.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "function"
-    },
-    {
-      "text": "NUDT15 is located on the plus strand of chromosome 13 between 48,037,514 and 48,054,196.",
-      "supportingFactIds": [
-        "gene.location"
-      ],
-      "claimType": "identity"
-    },
-    {
-      "text": "Mutations in NUDT15 result in poor metabolism of thiopurines.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "classification_context"
+      "claimType": "identity",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
     "factsHash": "7764eff06e1dd8d8",
-    "promptVersion": "2.0.0",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T09:49:50.583Z",
-    "retrievedAt": "2026-07-27T09:49:47.335Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:07:36.690Z",
+    "retrievedAt": "2026-08-03T16:07:35.175Z",
     "sources": [
       {
         "label": "NCBI Gene",

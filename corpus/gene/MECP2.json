@@ -41,51 +41,30 @@
         "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=MECP2"
       }
     ],
-    "retrievedAt": "2026-07-27T09:49:58.488Z"
+    "retrievedAt": "2026-08-03T16:07:38.709Z"
   },
   "claims": [
     {
-      "text": "MECP2 is a protein-coding gene located on the X chromosome.",
+      "text": "MECP2 is a human protein-coding gene.",
       "supportingFactIds": [
-        "gene.type",
-        "gene.location"
+        "gene.symbol",
+        "gene.type"
       ],
-      "claimType": "identity"
-    },
-    {
-      "text": "MECP2 is an X-linked gene subject to X inactivation.",
-      "supportingFactIds": [
-        "gene.type",
-        "gene.location"
-      ],
-      "claimType": "identity"
-    },
-    {
-      "text": "Mutations in MECP2 are the cause of most cases of Rett syndrome.",
-      "supportingFactIds": [
-        "gene.name",
-        "gene.symbol"
-      ],
-      "claimType": "classification_context"
-    },
-    {
-      "text": "MECP2 is essential for embryonic development.",
-      "supportingFactIds": [
-        "gene.symbol"
-      ],
-      "claimType": "condition_context"
+      "claimType": "identity",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
     "factsHash": "c16ce37d24934ce7",
-    "promptVersion": "2.0.0",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T09:50:02.441Z",
-    "retrievedAt": "2026-07-27T09:49:58.488Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:07:40.224Z",
+    "retrievedAt": "2026-08-03T16:07:38.709Z",
     "sources": [
       {
         "label": "NCBI Gene",

@@ -38,51 +38,30 @@
         "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=VKORC1"
       }
     ],
-    "retrievedAt": "2026-07-27T09:49:28.562Z"
+    "retrievedAt": "2026-08-03T16:07:26.273Z"
   },
   "claims": [
     {
-      "text": "The VKORC1 gene encodes the catalytic subunit of the vitamin K epoxide reductase complex.",
+      "text": "VKORC1 is a human protein-coding gene.",
       "supportingFactIds": [
         "gene.symbol",
-        "gene.summary"
+        "gene.type"
       ],
-      "claimType": "identity"
-    },
-    {
-      "text": "Vitamin K epoxide reductase complex subunit 1 is a protein-coding gene located on chromosome 16.",
-      "supportingFactIds": [
-        "gene.type",
-        "gene.location"
-      ],
-      "claimType": "identity"
-    },
-    {
-      "text": "The VKORC1 gene is associated with vitamin K-dependent clotting factors combined deficiency of 2.",
-      "supportingFactIds": [
-        "gene.alias.3",
-        "gene.summary"
-      ],
-      "claimType": "classification_context"
-    },
-    {
-      "text": "Alternative splicing results in multiple transcript variants of the VKORC1 gene.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "function"
+      "claimType": "identity",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
     "factsHash": "d74031f6f029b1c3",
-    "promptVersion": "2.0.0",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T09:49:31.344Z",
-    "retrievedAt": "2026-07-27T09:49:28.562Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:07:27.787Z",
+    "retrievedAt": "2026-08-03T16:07:26.273Z",
     "sources": [
       {
         "label": "NCBI Gene",

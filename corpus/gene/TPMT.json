@@ -34,42 +34,30 @@
         "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=TPMT"
       }
     ],
-    "retrievedAt": "2026-07-27T09:49:32.348Z"
+    "retrievedAt": "2026-08-03T16:07:28.032Z"
   },
   "claims": [
     {
-      "text": "The TPMT gene encodes the enzyme thiopurine S-methyltransferase.",
+      "text": "TPMT is a human protein-coding gene.",
       "supportingFactIds": [
         "gene.symbol",
-        "gene.name"
-      ],
-      "claimType": "identity"
-    },
-    {
-      "text": "Thiopurine S-methyltransferase is a protein-coding gene.",
-      "supportingFactIds": [
         "gene.type"
       ],
-      "claimType": "identity"
-    },
-    {
-      "text": "The TPMT gene is located on chromosome 6.",
-      "supportingFactIds": [
-        "gene.location"
-      ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
     "factsHash": "7f9ee3027f19b9df",
-    "promptVersion": "2.0.0",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T09:49:35.829Z",
-    "retrievedAt": "2026-07-27T09:49:32.348Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:07:29.545Z",
+    "retrievedAt": "2026-08-03T16:07:28.032Z",
     "sources": [
       {
         "label": "NCBI Gene",

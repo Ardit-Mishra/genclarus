@@ -41,42 +41,30 @@
         "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=SERPINA1"
       }
     ],
-    "retrievedAt": "2026-07-27T09:49:07.873Z"
+    "retrievedAt": "2026-08-03T16:07:17.368Z"
   },
   "claims": [
     {
-      "text": "The SERPINA1 gene encodes a serine protease inhibitor belonging to the serpin superfamily.",
+      "text": "SERPINA1 is a human protein-coding gene.",
       "supportingFactIds": [
         "gene.symbol",
-        "gene.summary"
+        "gene.type"
       ],
-      "claimType": "identity"
-    },
-    {
-      "text": "The SERPINA1 protein is produced in the liver, bone marrow, and by lymphocytic and monocytic cells in lymphoid tissue.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "function"
-    },
-    {
-      "text": "Defects in the SERPINA1 gene are associated with chronic obstructive pulmonary disease and chronic liver disease.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "classification_context"
+      "claimType": "identity",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
     "factsHash": "a47b0c545e850e26",
-    "promptVersion": "2.0.0",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T09:49:10.493Z",
-    "retrievedAt": "2026-07-27T09:49:07.873Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:07:18.883Z",
+    "retrievedAt": "2026-08-03T16:07:17.368Z",
     "sources": [
       {
         "label": "NCBI Gene",

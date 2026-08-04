@@ -159,53 +159,137 @@
         "url": "https://gnomad.broadinstitute.org/variant/17-43063903-G-T?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:14:04.766Z"
+    "retrievedAt": "2026-08-03T16:10:32.762Z"
   },
   "claims": [
     {
-      "text": "The BRCA1 gene variant rs28897696 is a missense variant with a protein change of p.Ala1708Glu.",
+      "text": "rs28897696 is a genetic variant located in the BRCA1 gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.consequence",
-        "var.protein"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "This variant is classified as Pathogenic for Breast-ovarian cancer, familial, susceptibility to, 1 (BROVCA1) and Hereditary breast ovarian cancer syndrome with moderate and low review confidence, respectively.",
+      "text": "In ClinVar, rs28897696 is classified as Pathogenic for Breast-ovarian cancer, familial, susceptibility to, 1 (BROVCA1) (3 review stars, germline; last evaluated 2015-08-10).",
       "supportingFactIds": [
         "var.cond.0.significance",
-        "var.cond.1.significance"
-      ],
-      "claimType": "classification_context"
-    },
-    {
-      "text": "The variant is of germline origin for Breast-ovarian cancer, familial, susceptibility to, 1 (BROVCA1) and Hereditary cancer-predisposing syndrome.",
-      "supportingFactIds": [
+        "var.cond.0.reviewStars",
         "var.cond.0.origin",
-        "var.cond.2.origin"
+        "var.cond.0.lastEvaluated"
       ],
-      "claimType": "condition_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The variant is classified as Pathogenic for Hereditary cancer-predisposing syndrome with low review confidence.",
+      "text": "In ClinVar, rs28897696 is classified as Pathogenic for Hereditary breast ovarian cancer syndrome (2 review stars; last evaluated 2025-01-23).",
+      "supportingFactIds": [
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars",
+        "var.cond.1.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs28897696 is classified as Pathogenic for Hereditary cancer-predisposing syndrome (2 review stars, germline; last evaluated 2024-08-22).",
       "supportingFactIds": [
         "var.cond.2.significance",
-        "var.cond.2.reviewStars"
+        "var.cond.2.reviewStars",
+        "var.cond.2.origin",
+        "var.cond.2.lastEvaluated"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs28897696 is classified as Pathogenic for BRCA1-related cancer predisposition (1 review star, germline; last evaluated 2024-08-13).",
+      "supportingFactIds": [
+        "var.cond.3.significance",
+        "var.cond.3.reviewStars",
+        "var.cond.3.origin",
+        "var.cond.3.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs28897696 is classified as Pathogenic for Breast and/or ovarian cancer (1 review star, germline; last evaluated 2022-05-02).",
+      "supportingFactIds": [
+        "var.cond.4.significance",
+        "var.cond.4.reviewStars",
+        "var.cond.4.origin",
+        "var.cond.4.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs28897696 is classified as Pathogenic for Familial cancer of breast (1 review star, germline; last evaluated 2017-02-23).",
+      "supportingFactIds": [
+        "var.cond.5.significance",
+        "var.cond.5.reviewStars",
+        "var.cond.5.origin",
+        "var.cond.5.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs28897696 is classified as Pathogenic for Breast neoplasm (1 review star, germline).",
+      "supportingFactIds": [
+        "var.cond.6.significance",
+        "var.cond.6.reviewStars",
+        "var.cond.6.origin"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs28897696 is classified as Pathogenic for BRCA1-related disorder (0 review stars, germline; last evaluated 2024-07-23).",
+      "supportingFactIds": [
+        "var.cond.7.significance",
+        "var.cond.7.reviewStars",
+        "var.cond.7.origin",
+        "var.cond.7.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs28897696 is classified as Pathogenic for Breast carcinoma (0 review stars, germline; last evaluated 2021-08-21).",
+      "supportingFactIds": [
+        "var.cond.8.significance",
+        "var.cond.8.reviewStars",
+        "var.cond.8.origin",
+        "var.cond.8.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs28897696 is classified as Pathogenic for not provided (2 review stars, germline; last evaluated 2023-12-06).",
+      "supportingFactIds": [
+        "var.cond.9.significance",
+        "var.cond.9.reviewStars",
+        "var.cond.9.origin",
+        "var.cond.9.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "379dba0dba15e765",
-    "promptVersion": "2.0.0",
+    "factsHash": "51a8187e7d14e1e7",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:14:11.042Z",
-    "retrievedAt": "2026-07-27T10:14:04.766Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:10:34.267Z",
+    "retrievedAt": "2026-08-03T16:10:32.762Z",
     "sources": [
       {
         "label": "dbSNP",

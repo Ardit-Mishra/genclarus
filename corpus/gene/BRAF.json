@@ -39,42 +39,30 @@
         "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=BRAF"
       }
     ],
-    "retrievedAt": "2026-07-27T09:46:54.143Z"
+    "retrievedAt": "2026-08-03T16:06:21.650Z"
   },
   "claims": [
     {
-      "text": "The BRAF gene encodes a protein belonging to the RAF family of serine/threonine protein kinases.",
+      "text": "BRAF is a human protein-coding gene.",
       "supportingFactIds": [
-        "gene.summary"
+        "gene.symbol",
+        "gene.type"
       ],
-      "claimType": "function"
-    },
-    {
-      "text": "Mutations in the BRAF gene are associated with cardiofaciocutaneous, Noonan, and Costello syndromes.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "classification_context"
-    },
-    {
-      "text": "The BRAF gene is a protein-coding gene located on chromosome 7.",
-      "supportingFactIds": [
-        "gene.type",
-        "gene.location"
-      ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
     "factsHash": "c5b0ca88acc66175",
-    "promptVersion": "2.0.0",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T09:46:56.937Z",
-    "retrievedAt": "2026-07-27T09:46:54.143Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:06:23.162Z",
+    "retrievedAt": "2026-08-03T16:06:21.650Z",
     "sources": [
       {
         "label": "NCBI Gene",

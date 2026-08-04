@@ -37,49 +37,30 @@
         "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=RAD51D"
       }
     ],
-    "retrievedAt": "2026-07-27T10:25:47.712Z"
+    "retrievedAt": "2026-08-03T16:06:40.387Z"
   },
   "claims": [
     {
-      "text": "The protein encoded by the RAD51D gene is a member of the RAD51 protein family.",
+      "text": "RAD51D is a human protein-coding gene.",
       "supportingFactIds": [
         "gene.symbol",
-        "gene.summary"
+        "gene.type"
       ],
-      "claimType": "identity"
-    },
-    {
-      "text": "RAD51D forms a complex with other RAD51 family members, including RAD51L1, RAD51L2, and XRCC2.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "function"
-    },
-    {
-      "text": "RAD51D is located on chromosome 17, between positions 35,092,221 and 35,121,522.",
-      "supportingFactIds": [
-        "gene.location"
-      ],
-      "claimType": "identity"
-    },
-    {
-      "text": "RAD51D has alternative splicing and read-through transcription with the RFFL gene.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "function"
+      "claimType": "identity",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
     "factsHash": "225d2f716fb34a0f",
-    "promptVersion": "2.0.0",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:25:52.401Z",
-    "retrievedAt": "2026-07-27T10:25:47.712Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:06:41.894Z",
+    "retrievedAt": "2026-08-03T16:06:40.387Z",
     "sources": [
       {
         "label": "NCBI Gene",

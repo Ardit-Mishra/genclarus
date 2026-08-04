@@ -88,36 +88,81 @@
         "url": "https://gnomad.broadinstitute.org/variant/1-171636338-G-A?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:16:11.263Z"
+    "retrievedAt": "2026-08-03T16:11:21.186Z"
   },
   "claims": [
     {
-      "text": "The MYOC gene variant rs74315329 is a single nucleotide variant.",
+      "text": "rs74315329 is a genetic variant located in the MYOC gene.",
       "supportingFactIds": [
-        "var.type"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The MYOC gene variant rs74315329 is classified as pathogenic for childhood glaucoma, likely pathogenic for primary open angle glaucoma, and has conflicting interpretations for glaucoma 1, open angle, A.",
+      "text": "In gnomAD, rs74315329 has an overall allele frequency of 0.11%.",
+      "supportingFactIds": [
+        "var.gnomadAf"
+      ],
+      "claimType": "frequency_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs74315329 is classified as Pathogenic for Glaucoma of childhood (3 review stars, germline; last evaluated 2022-03-05).",
       "supportingFactIds": [
         "var.cond.0.significance",
-        "var.cond.1.significance",
-        "var.cond.2.significance"
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs74315329 is classified as Likely pathogenic for Primary open angle glaucoma (POAG) (1 review star, germline; last evaluated 2016-06-14).",
+      "supportingFactIds": [
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars",
+        "var.cond.1.origin",
+        "var.cond.1.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs74315329 is classified as Conflicting interpretations for Glaucoma 1, open angle, A (GLC1A) (1 review star, germline; last evaluated 2023-09-21).",
+      "supportingFactIds": [
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars",
+        "var.cond.2.origin",
+        "var.cond.2.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs74315329 is classified as Likely pathogenic for not provided (2 review stars, germline; last evaluated 2025-03-05).",
+      "supportingFactIds": [
+        "var.cond.3.significance",
+        "var.cond.3.reviewStars",
+        "var.cond.3.origin",
+        "var.cond.3.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "f18da432f9528fbb",
-    "promptVersion": "2.0.0",
+    "factsHash": "0077f1fabb83eb78",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:16:14.533Z",
-    "retrievedAt": "2026-07-27T10:16:11.263Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:11:22.696Z",
+    "retrievedAt": "2026-08-03T16:11:21.186Z",
     "sources": [
       {
         "label": "dbSNP",

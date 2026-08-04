@@ -86,56 +86,81 @@
         "url": "https://gnomad.broadinstitute.org/variant/1-40091398-T-A?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:16:22.669Z"
+    "retrievedAt": "2026-08-03T16:11:23.169Z"
   },
   "claims": [
     {
-      "text": "The PPT1 gene variant rs137852695 is a missense variant with a protein change of p.Arg122Trp.",
+      "text": "rs137852695 is a genetic variant located in the PPT1 gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.consequence",
-        "var.protein"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The variant rs137852695 is classified as Pathogenic for Neuronal ceroid lipofuscinosis 1 (CLN1) with a review confidence of 2 of 4 review stars.",
+      "text": "In gnomAD, rs137852695 has an overall allele frequency of 0.12%.",
+      "supportingFactIds": [
+        "var.gnomadAf"
+      ],
+      "claimType": "frequency_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs137852695 is classified as Pathogenic for Neuronal ceroid lipofuscinosis 1 (CLN1) (2 review stars, germline; last evaluated 2025-02-19).",
       "supportingFactIds": [
         "var.cond.0.significance",
         "var.cond.0.reviewStars",
-        "var.cond.0.origin"
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The variant rs137852695 is classified as Pathogenic for Inborn genetic diseases with a review confidence of 1 of 4 review stars.",
+      "text": "In ClinVar, rs137852695 is classified as Pathogenic for Inborn genetic diseases (1 review star, germline; last evaluated 2016-05-02).",
       "supportingFactIds": [
         "var.cond.1.significance",
         "var.cond.1.reviewStars",
-        "var.cond.1.origin"
+        "var.cond.1.origin",
+        "var.cond.1.lastEvaluated"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The variant rs137852695 is classified as Pathogenic for Neuronal ceroid lipofuscinosis with a review confidence of 0 of 4 review stars.",
+      "text": "In ClinVar, rs137852695 is classified as Pathogenic for Neuronal ceroid lipofuscinosis (0 review stars, germline; last evaluated 2011-07-06).",
       "supportingFactIds": [
         "var.cond.2.significance",
         "var.cond.2.reviewStars",
-        "var.cond.2.origin"
+        "var.cond.2.origin",
+        "var.cond.2.lastEvaluated"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs137852695 is classified as Pathogenic for not provided (2 review stars, germline; last evaluated 2022-07-07).",
+      "supportingFactIds": [
+        "var.cond.3.significance",
+        "var.cond.3.reviewStars",
+        "var.cond.3.origin",
+        "var.cond.3.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "993f0dc9ec70725e",
-    "promptVersion": "2.0.0",
+    "factsHash": "26e8cc70e6c856dd",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:16:27.540Z",
-    "retrievedAt": "2026-07-27T10:16:22.669Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:11:24.674Z",
+    "retrievedAt": "2026-08-03T16:11:23.169Z",
     "sources": [
       {
         "label": "dbSNP",

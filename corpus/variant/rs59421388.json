@@ -56,49 +56,48 @@
         "url": "https://gnomad.broadinstitute.org/variant/22-42127608-C-T?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:18:51.534Z"
+    "retrievedAt": "2026-08-03T16:12:41.865Z"
   },
   "claims": [
     {
-      "text": "The CYP2D6 gene variant rs59421388 is a missense variant.",
+      "text": "rs59421388 is a genetic variant located in the CYP2D6 gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.consequence"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The CYP2D6 gene variant rs59421388 is a single nucleotide variant.",
+      "text": "In gnomAD, rs59421388 has an overall allele frequency of 2.6%.",
       "supportingFactIds": [
-        "var.type"
+        "var.gnomadAf"
       ],
-      "claimType": "identity"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The CYP2D6 gene variant rs59421388 is associated with a protein change of p.Val338Met.",
+      "text": "In ClinVar, rs59421388 is classified as Likely benign for not provided (2 review stars, germline; last evaluated 2018-08-06).",
       "supportingFactIds": [
-        "var.protein"
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
       ],
-      "claimType": "identity"
-    },
-    {
-      "text": "The CYP2D6 gene variant rs59421388 is classified as likely benign.",
-      "supportingFactIds": [
-        "var.cond.0.significance"
-      ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "ad9ecad757a63925",
-    "promptVersion": "2.0.0",
+    "factsHash": "eb3853eab30e5dca",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:18:54.189Z",
-    "retrievedAt": "2026-07-27T10:18:51.534Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:12:43.372Z",
+    "retrievedAt": "2026-08-03T16:12:41.865Z",
     "sources": [
       {
         "label": "dbSNP",

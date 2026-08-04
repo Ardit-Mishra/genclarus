@@ -66,50 +66,58 @@
         "url": "https://gnomad.broadinstitute.org/variant/7-99784473-C-T?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:17:09.776Z"
+    "retrievedAt": "2026-08-03T16:11:49.846Z"
   },
   "claims": [
     {
-      "text": "The CYP3A4 gene variant rs2740574 is a single nucleotide variant.",
+      "text": "rs2740574 is a genetic variant located in the CYP3A4 gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.type"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The CYP3A4 gene variant rs2740574 is found in 79% of the population in gnomAD.",
+      "text": "In gnomAD, rs2740574 has an overall allele frequency of 79.2%.",
       "supportingFactIds": [
         "var.gnomadAf"
       ],
-      "claimType": "frequency_context"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The CYP3A4 gene variant rs2740574 is classified as benign with low review confidence.",
+      "text": "In ClinVar, rs2740574 is classified as Benign for CYP3A4 PROMOTER POLYMORPHISM (0 review stars, germline; last evaluated 2002-06-01).",
       "supportingFactIds": [
         "var.cond.0.significance",
-        "var.cond.0.reviewStars"
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The CYP3A4 gene variant rs2740574 is of germline origin.",
+      "text": "In ClinVar, rs2740574 is classified as Benign for not provided (1 review star, germline).",
       "supportingFactIds": [
-        "var.cond.0.origin"
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars",
+        "var.cond.1.origin"
       ],
-      "claimType": "condition_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "4e54114c6ed5c4d5",
-    "promptVersion": "2.0.0",
+    "factsHash": "084faa727bbcc3b2",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:17:12.974Z",
-    "retrievedAt": "2026-07-27T10:17:09.776Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:11:51.352Z",
+    "retrievedAt": "2026-08-03T16:11:49.846Z",
     "sources": [
       {
         "label": "dbSNP",

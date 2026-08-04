@@ -40,42 +40,30 @@
         "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=SLCO1B1"
       }
     ],
-    "retrievedAt": "2026-07-27T09:49:44.180Z"
+    "retrievedAt": "2026-08-03T16:07:33.434Z"
   },
   "claims": [
     {
-      "text": "The SLCO1B1 gene encodes a liver-specific member of the organic anion transporter family.",
+      "text": "SLCO1B1 is a human protein-coding gene.",
       "supportingFactIds": [
         "gene.symbol",
-        "gene.summary"
+        "gene.type"
       ],
-      "claimType": "identity"
-    },
-    {
-      "text": "The encoded protein is a transmembrane receptor that mediates the sodium-independent uptake of numerous endogenous compounds.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "function"
-    },
-    {
-      "text": "Polymorphisms in the SLCO1B1 gene are associated with impaired transporter function.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "classification_context"
+      "claimType": "identity",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
     "factsHash": "75ad045cad0bfe36",
-    "promptVersion": "2.0.0",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T09:49:47.093Z",
-    "retrievedAt": "2026-07-27T09:49:44.180Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:07:34.935Z",
+    "retrievedAt": "2026-08-03T16:07:33.434Z",
     "sources": [
       {
         "label": "NCBI Gene",

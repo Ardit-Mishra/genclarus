@@ -200,54 +200,185 @@
         "url": "https://gnomad.broadinstitute.org/variant/6-26090951-C-G?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:09:06.011Z"
+    "retrievedAt": "2026-08-03T16:08:54.594Z"
   },
   "claims": [
     {
-      "text": "The HFE-AS1 gene variant rs1799945 is a missense variant with a protein change of p.His63Asp.",
+      "text": "In gnomAD, rs1799945 has an overall allele frequency of 9.9%.",
       "supportingFactIds": [
-        "var.gene",
-        "var.consequence",
-        "var.protein"
+        "var.gnomadAf"
       ],
-      "claimType": "identity"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The HFE-AS1 gene variant rs1799945 is a single nucleotide variant.",
-      "supportingFactIds": [
-        "var.type"
-      ],
-      "claimType": "identity"
-    },
-    {
-      "text": "The HFE-AS1 gene variant rs1799945 has a germline origin.",
-      "supportingFactIds": [
-        "var.cond.0.origin",
-        "var.cond.1.origin",
-        "var.cond.2.origin"
-      ],
-      "claimType": "classification_context"
-    },
-    {
-      "text": "The HFE-AS1 gene variant rs1799945 is classified as Pathogenic for Hereditary hemochromatosis, Cardiomyopathy, and Variegate porphyria.",
+      "text": "In ClinVar, rs1799945 is classified as Pathogenic (low penetrance) for Hereditary hemochromatosis (HFE) (1 review star, germline; last evaluated 2025-02-03).",
       "supportingFactIds": [
         "var.cond.0.significance",
-        "var.cond.1.significance",
-        "var.cond.2.significance"
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1799945 is classified as Pathogenic for Cardiomyopathy (CMYO) (1 review star, germline; last evaluated 2021-03-25).",
+      "supportingFactIds": [
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars",
+        "var.cond.1.origin",
+        "var.cond.1.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1799945 is classified as Pathogenic for Variegate porphyria (VP) (1 review star, germline; last evaluated 2020-01-13).",
+      "supportingFactIds": [
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars",
+        "var.cond.2.origin",
+        "var.cond.2.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1799945 is classified as Pathogenic for Alzheimer disease (1 review star; last evaluated 2018-10-31).",
+      "supportingFactIds": [
+        "var.cond.3.significance",
+        "var.cond.3.reviewStars",
+        "var.cond.3.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1799945 is classified as Pathogenic for Variegate porphyria (VP) (1 review star; last evaluated 2018-10-31).",
+      "supportingFactIds": [
+        "var.cond.4.significance",
+        "var.cond.4.reviewStars",
+        "var.cond.4.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1799945 is classified as Pathogenic for Microvascular complications of diabetes, susceptibility to, 7 (1 review star; last evaluated 2018-10-31).",
+      "supportingFactIds": [
+        "var.cond.5.significance",
+        "var.cond.5.reviewStars",
+        "var.cond.5.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1799945 is classified as Pathogenic for Hemochromatosis type 1 (HFE1) (1 review star; last evaluated 2018-10-31).",
+      "supportingFactIds": [
+        "var.cond.6.significance",
+        "var.cond.6.reviewStars",
+        "var.cond.6.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1799945 is classified as Pathogenic for TRANSFERRIN SERUM LEVEL QUANTITATIVE TRAIT LOCUS 2 (TFQTL2) (1 review star; last evaluated 2018-10-31).",
+      "supportingFactIds": [
+        "var.cond.7.significance",
+        "var.cond.7.reviewStars",
+        "var.cond.7.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1799945 is classified as Pathogenic for Familial porphyria cutanea tarda (PCT) (1 review star; last evaluated 2018-10-31).",
+      "supportingFactIds": [
+        "var.cond.8.significance",
+        "var.cond.8.reviewStars",
+        "var.cond.8.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1799945 is classified as Conflicting interpretations for Hemochromatosis type 1 (HFE1) (1 review star, germline; last evaluated 2024-04-02).",
+      "supportingFactIds": [
+        "var.cond.9.significance",
+        "var.cond.9.reviewStars",
+        "var.cond.9.origin",
+        "var.cond.9.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1799945 is classified as Risk factor for Cystic fibrosis (CF) (0 review stars, germline; last evaluated 2019-04-01).",
+      "supportingFactIds": [
+        "var.cond.10.significance",
+        "var.cond.10.reviewStars",
+        "var.cond.10.origin",
+        "var.cond.10.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1799945 is classified as not provided for Bronze diabetes (0 review stars).",
+      "supportingFactIds": [
+        "var.cond.11.significance",
+        "var.cond.11.reviewStars"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1799945 is classified as Pathogenic for not provided (2 review stars, germline; last evaluated 2025-03-04).",
+      "supportingFactIds": [
+        "var.cond.12.significance",
+        "var.cond.12.reviewStars",
+        "var.cond.12.origin",
+        "var.cond.12.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1799945 is classified as Pathogenic for See cases (1 review star; last evaluated 2021-12-10).",
+      "supportingFactIds": [
+        "var.cond.13.significance",
+        "var.cond.13.reviewStars",
+        "var.cond.13.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1799945 is classified as no classifications from unflagged record for not specified (0 review stars, germline; last evaluated 2022-11-29).",
+      "supportingFactIds": [
+        "var.cond.14.significance",
+        "var.cond.14.reviewStars",
+        "var.cond.14.origin",
+        "var.cond.14.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "b696ebaaa83b5d96",
-    "promptVersion": "2.0.0",
+    "factsHash": "11bbb223698e7715",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:09:10.588Z",
-    "retrievedAt": "2026-07-27T10:09:06.011Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:08:56.098Z",
+    "retrievedAt": "2026-08-03T16:08:54.594Z",
     "sources": [
       {
         "label": "dbSNP",

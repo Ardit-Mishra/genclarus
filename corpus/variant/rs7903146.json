@@ -63,48 +63,48 @@
         "url": "https://gnomad.broadinstitute.org/variant/10-112998590-C-T?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:11:53.196Z"
+    "retrievedAt": "2026-08-03T16:09:41.237Z"
   },
   "claims": [
     {
-      "text": "The TCF7L2 gene variant rs7903146 is a single nucleotide variant.",
+      "text": "rs7903146 is a genetic variant located in the TCF7L2 gene.",
       "supportingFactIds": [
-        "var.type"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The TCF7L2 gene variant rs7903146 is associated with a risk factor for Diabetes mellitus type 2 susceptibility.",
+      "text": "In gnomAD, rs7903146 has an overall allele frequency of 25.6%.",
       "supportingFactIds": [
-        "var.cond.0.significance"
+        "var.gnomadAf"
       ],
-      "claimType": "classification_context"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The TCF7L2 gene variant rs7903146 has a germline origin.",
+      "text": "In ClinVar, rs7903146 is classified as Risk factor for Diabetes mellitus type 2, susceptibility to (0 review stars, germline; last evaluated 2011-09-01).",
       "supportingFactIds": [
-        "var.cond.0.origin"
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
       ],
-      "claimType": "classification_context"
-    },
-    {
-      "text": "The TCF7L2 gene variant rs7903146 has a low review confidence for its association with Diabetes mellitus type 2 susceptibility.",
-      "supportingFactIds": [
-        "var.cond.0.reviewStars"
-      ],
-      "claimType": "uncertainty"
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "584fd30263a0cd0c",
-    "promptVersion": "2.0.0",
+    "factsHash": "830f05b87044656f",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:11:56.550Z",
-    "retrievedAt": "2026-07-27T10:11:53.196Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:09:42.746Z",
+    "retrievedAt": "2026-08-03T16:09:41.237Z",
     "sources": [
       {
         "label": "dbSNP",

@@ -56,52 +56,40 @@
         "url": "https://gnomad.broadinstitute.org/variant/2-135851076-G-A?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:08:10.307Z"
+    "retrievedAt": "2026-08-03T16:08:28.198Z"
   },
   "claims": [
     {
-      "text": "The MCM6 gene variant rs4988235 is a single nucleotide variant.",
+      "text": "In gnomAD, rs4988235 has an overall allele frequency of 41.5%.",
       "supportingFactIds": [
-        "var.gene",
-        "var.type"
-      ],
-      "claimType": "identity"
-    },
-    {
-      "text": "The MCM6 gene variant rs4988235 has a germline origin.",
-      "supportingFactIds": [
-        "var.gene",
-        "var.cond.0.origin"
-      ],
-      "claimType": "identity"
-    },
-    {
-      "text": "The MCM6 gene variant rs4988235 is associated with lactase persistence.",
-      "supportingFactIds": [
-        "var.gene",
-        "var.cond.0.significance"
-      ],
-      "claimType": "condition_context"
-    },
-    {
-      "text": "The MCM6 gene variant rs4988235 has a frequency of approximately 42% in the general population.",
-      "supportingFactIds": [
-        "var.gene",
         "var.gnomadAf"
       ],
-      "claimType": "frequency_context"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs4988235 is classified as association for LACTASE PERSISTENCE (0 review stars, germline; last evaluated 2021-01-26).",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "2eebfa78355fd628",
-    "promptVersion": "2.0.0",
+    "factsHash": "2c3d0d1d428fd02b",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:08:13.859Z",
-    "retrievedAt": "2026-07-27T10:08:10.307Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:08:29.703Z",
+    "retrievedAt": "2026-08-03T16:08:28.198Z",
     "sources": [
       {
         "label": "dbSNP",

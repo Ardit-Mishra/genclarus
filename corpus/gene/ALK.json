@@ -36,49 +36,30 @@
         "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=ALK"
       }
     ],
-    "retrievedAt": "2026-07-27T09:47:09.445Z"
+    "retrievedAt": "2026-08-03T16:06:26.986Z"
   },
   "claims": [
     {
-      "text": "The ALK gene encodes a receptor tyrosine kinase that belongs to the insulin receptor superfamily.",
+      "text": "ALK is a human protein-coding gene.",
       "supportingFactIds": [
         "gene.symbol",
-        "gene.summary"
+        "gene.type"
       ],
-      "claimType": "identity"
-    },
-    {
-      "text": "ALK plays a crucial role in brain development and exerts effects on specific neurons in the nervous system.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "function"
-    },
-    {
-      "text": "ALK has been found to be rearranged, mutated, or amplified in various tumours, including anaplastic large cell lymphomas and non-small cell lung cancer.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "condition_context"
-    },
-    {
-      "text": "The most common genetic alterations in the ALK gene result in the creation of multiple fusion genes in tumourigenesis.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "classification_context"
+      "claimType": "identity",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
     "factsHash": "38750e17e4ad9d39",
-    "promptVersion": "2.0.0",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T09:47:12.833Z",
-    "retrievedAt": "2026-07-27T09:47:09.445Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:06:28.502Z",
+    "retrievedAt": "2026-08-03T16:06:26.986Z",
     "sources": [
       {
         "label": "NCBI Gene",

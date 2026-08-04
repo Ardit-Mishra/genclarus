@@ -35,35 +35,37 @@
         "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs53576"
       }
     ],
-    "retrievedAt": "2026-07-27T10:09:53.700Z"
+    "retrievedAt": "2026-08-03T16:09:07.402Z"
   },
   "claims": [
     {
-      "text": "The OXTR gene variant rs53576 is a single nucleotide variant.",
+      "text": "rs53576 is a genetic variant located in the OXTR gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.type"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The OXTR gene variant rs53576 has a high frequency in the general population.",
+      "text": "In gnomAD, rs53576 has an overall allele frequency of 66.6%.",
       "supportingFactIds": [
         "var.gnomadAf"
       ],
-      "claimType": "frequency_context"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "22992d92386ec3fe",
-    "promptVersion": "2.0.0",
+    "factsHash": "e5261f644bda7ee7",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:09:56.350Z",
-    "retrievedAt": "2026-07-27T10:09:53.700Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:09:08.918Z",
+    "retrievedAt": "2026-08-03T16:09:07.402Z",
     "sources": [
       {
         "label": "dbSNP",

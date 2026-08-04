@@ -39,50 +39,30 @@
         "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=MYBPC3"
       }
     ],
-    "retrievedAt": "2026-07-27T10:06:13.336Z"
+    "retrievedAt": "2026-08-03T16:07:45.928Z"
   },
   "claims": [
     {
-      "text": "MYBPC3 encodes the cardiac isoform of myosin-binding protein C.",
+      "text": "MYBPC3 is a human protein-coding gene.",
       "supportingFactIds": [
         "gene.symbol",
-        "gene.summary"
+        "gene.type"
       ],
-      "claimType": "function"
-    },
-    {
-      "text": "Mutations in MYBPC3 are a frequent cause of familial hypertrophic cardiomyopathy.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "condition_context"
-    },
-    {
-      "text": "MYBPC3 is a protein-coding gene located on chromosome 11.",
-      "supportingFactIds": [
-        "gene.type",
-        "gene.location"
-      ],
-      "claimType": "identity"
-    },
-    {
-      "text": "MYBPC3 is expressed exclusively in heart muscle and is a key regulator of cardiac contraction.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "function"
+      "claimType": "identity",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
     "factsHash": "438e1b1ccd809ab9",
-    "promptVersion": "2.0.0",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:06:16.605Z",
-    "retrievedAt": "2026-07-27T10:06:13.336Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:07:47.436Z",
+    "retrievedAt": "2026-08-03T16:07:45.928Z",
     "sources": [
       {
         "label": "NCBI Gene",

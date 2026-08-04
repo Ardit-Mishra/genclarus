@@ -178,52 +178,180 @@
         "url": "https://gnomad.broadinstitute.org/variant/7-150999023-T-G?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:07:13.778Z"
+    "retrievedAt": "2026-08-03T16:08:05.577Z"
   },
   "claims": [
     {
-      "text": "The NOS3 gene variant rs1799983 is a missense variant with a p.Asp298Glu protein change.",
+      "text": "rs1799983 is a genetic variant located in the NOS3 gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.consequence",
-        "var.protein"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "This variant is a single nucleotide variant.",
-      "supportingFactIds": [
-        "var.type"
-      ],
-      "claimType": "identity"
-    },
-    {
-      "text": "The NOS3 gene variant rs1799983 is classified as Benign for Ischemic stroke, Alzheimer disease type 1 (AD1), and Preeclampsia/eclampsia 1 (PEE1).",
-      "supportingFactIds": [
-        "var.cond.0.significance",
-        "var.cond.1.significance",
-        "var.cond.2.significance"
-      ],
-      "claimType": "classification_context"
-    },
-    {
-      "text": "The NOS3 gene variant rs1799983 has a high frequency in the general population, with a gnomAD allele frequency of 76%.",
+      "text": "In gnomAD, rs1799983 has an overall allele frequency of 76.3%.",
       "supportingFactIds": [
         "var.gnomadAf"
       ],
-      "claimType": "frequency_context"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1799983 is classified as Benign for Ischemic stroke (2 review stars, germline; last evaluated 2023-04-17).",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1799983 is classified as Benign for Alzheimer disease type 1 (AD1) (2 review stars, germline; last evaluated 2023-04-17).",
+      "supportingFactIds": [
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars",
+        "var.cond.1.origin",
+        "var.cond.1.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1799983 is classified as Benign for Preeclampsia/eclampsia 1 (PEE1) (2 review stars, germline; last evaluated 2023-04-17).",
+      "supportingFactIds": [
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars",
+        "var.cond.2.origin",
+        "var.cond.2.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1799983 is classified as Benign for Essential hypertension, genetic (EHT) (2 review stars, germline; last evaluated 2023-04-17).",
+      "supportingFactIds": [
+        "var.cond.3.significance",
+        "var.cond.3.reviewStars",
+        "var.cond.3.origin",
+        "var.cond.3.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1799983 is classified as Risk factor for Metabolic syndrome, susceptibility to (1 review star, germline; last evaluated 2017-06-01).",
+      "supportingFactIds": [
+        "var.cond.4.significance",
+        "var.cond.4.reviewStars",
+        "var.cond.4.origin",
+        "var.cond.4.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1799983 is classified as Pathogenic for Hypertension resistant to conventional therapy (0 review stars, germline; last evaluated 2007-04-01).",
+      "supportingFactIds": [
+        "var.cond.5.significance",
+        "var.cond.5.reviewStars",
+        "var.cond.5.origin",
+        "var.cond.5.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1799983 is classified as Risk factor for Coronary artery spasm 1, susceptibility to (0 review stars, germline; last evaluated 2007-04-01).",
+      "supportingFactIds": [
+        "var.cond.6.significance",
+        "var.cond.6.reviewStars",
+        "var.cond.6.origin",
+        "var.cond.6.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1799983 is classified as Risk factor for Alzheimer disease, late-onset, susceptibility to (0 review stars, germline; last evaluated 2007-04-01).",
+      "supportingFactIds": [
+        "var.cond.7.significance",
+        "var.cond.7.reviewStars",
+        "var.cond.7.origin",
+        "var.cond.7.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1799983 is classified as Risk factor for Hypertension, pregnancy-induced, susceptibility to (0 review stars, germline; last evaluated 2007-04-01).",
+      "supportingFactIds": [
+        "var.cond.8.significance",
+        "var.cond.8.reviewStars",
+        "var.cond.8.origin",
+        "var.cond.8.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1799983 is classified as Risk factor for Ischemic heart disease, susceptibility to (0 review stars, germline; last evaluated 2007-04-01).",
+      "supportingFactIds": [
+        "var.cond.9.significance",
+        "var.cond.9.reviewStars",
+        "var.cond.9.origin",
+        "var.cond.9.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1799983 is classified as Risk factor for Ischemic stroke (0 review stars, germline; last evaluated 2007-04-01).",
+      "supportingFactIds": [
+        "var.cond.10.significance",
+        "var.cond.10.reviewStars",
+        "var.cond.10.origin",
+        "var.cond.10.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1799983 is classified as Benign for not provided (2 review stars, germline; last evaluated 2021-05-04).",
+      "supportingFactIds": [
+        "var.cond.11.significance",
+        "var.cond.11.reviewStars",
+        "var.cond.11.origin",
+        "var.cond.11.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1799983 is classified as Benign for not specified (1 review star, germline; last evaluated 2016-03-28).",
+      "supportingFactIds": [
+        "var.cond.12.significance",
+        "var.cond.12.reviewStars",
+        "var.cond.12.origin",
+        "var.cond.12.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "7ab416ee29a659f2",
-    "promptVersion": "2.0.0",
+    "factsHash": "880ddb89f0305b07",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:07:17.639Z",
-    "retrievedAt": "2026-07-27T10:07:13.778Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:08:07.087Z",
+    "retrievedAt": "2026-08-03T16:08:05.577Z",
     "sources": [
       {
         "label": "dbSNP",

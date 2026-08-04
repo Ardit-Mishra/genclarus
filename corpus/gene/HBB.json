@@ -36,49 +36,30 @@
         "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=HBB"
       }
     ],
-    "retrievedAt": "2026-07-27T09:47:52.807Z"
+    "retrievedAt": "2026-08-03T16:06:44.074Z"
   },
   "claims": [
     {
-      "text": "The HBB gene encodes the beta chain of adult hemoglobin.",
+      "text": "HBB is a human protein-coding gene.",
       "supportingFactIds": [
         "gene.symbol",
-        "gene.summary"
+        "gene.type"
       ],
-      "claimType": "identity"
-    },
-    {
-      "text": "The HBB gene is located on chromosome 11 at position 5,225,464–5,229,395.",
-      "supportingFactIds": [
-        "gene.location"
-      ],
-      "claimType": "identity"
-    },
-    {
-      "text": "Mutations in the HBB gene can cause sickle cell anemia.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "classification_context"
-    },
-    {
-      "text": "Mutations in the HBB gene can cause beta-zero-thalassemia, a condition characterized by the absence of beta chains.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "condition_context"
+      "claimType": "identity",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
     "factsHash": "89192cda248bb738",
-    "promptVersion": "2.0.0",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T09:47:56.043Z",
-    "retrievedAt": "2026-07-27T09:47:52.807Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:06:45.582Z",
+    "retrievedAt": "2026-08-03T16:06:44.074Z",
     "sources": [
       {
         "label": "NCBI Gene",

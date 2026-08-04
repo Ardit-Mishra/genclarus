@@ -342,52 +342,335 @@
         "url": "https://gnomad.broadinstitute.org/variant/11-5227003-C-T?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:14:41.492Z"
+    "retrievedAt": "2026-08-03T16:10:42.998Z"
   },
   "claims": [
     {
-      "text": "The HBB gene variant rs33930165 is a missense variant causing the protein change p.Glu7Lys.",
+      "text": "rs33930165 is a genetic variant located in the HBB gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.consequence",
-        "var.protein"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "This variant is classified as Pathogenic for beta Thalassemia with moderate review confidence.",
-      "supportingFactIds": [
-        "var.cond.0.significance",
-        "var.cond.0.reviewStars"
-      ],
-      "claimType": "classification_context"
-    },
-    {
-      "text": "The variant is also classified as Pathogenic for Heinz body anemia with low review confidence.",
-      "supportingFactIds": [
-        "var.cond.2.significance",
-        "var.cond.2.reviewStars"
-      ],
-      "claimType": "classification_context"
-    },
-    {
-      "text": "The variant has a frequency of 0.38% in the general population.",
+      "text": "In gnomAD, rs33930165 has an overall allele frequency of 0.38%.",
       "supportingFactIds": [
         "var.gnomadAf"
       ],
-      "claimType": "frequency_context"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs33930165 is classified as Pathogenic for beta Thalassemia (BTHAL) (2 review stars, germline; last evaluated 2019-11-15).",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs33930165 is classified as Likely pathogenic for Hb SS disease (SCD) (2 review stars, germline; last evaluated 2023-12-11).",
+      "supportingFactIds": [
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars",
+        "var.cond.1.origin",
+        "var.cond.1.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs33930165 is classified as Pathogenic for Heinz body anemia (1 review star, germline; last evaluated 2024-04-04).",
+      "supportingFactIds": [
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars",
+        "var.cond.2.origin",
+        "var.cond.2.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs33930165 is classified as Pathogenic for Beta-thalassemia HBB/LCRB (1 review star, germline; last evaluated 2024-04-04).",
+      "supportingFactIds": [
+        "var.cond.3.significance",
+        "var.cond.3.reviewStars",
+        "var.cond.3.origin",
+        "var.cond.3.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs33930165 is classified as Pathogenic for Hereditary persistence of fetal hemoglobin (1 review star, germline; last evaluated 2024-04-04).",
+      "supportingFactIds": [
+        "var.cond.4.significance",
+        "var.cond.4.reviewStars",
+        "var.cond.4.origin",
+        "var.cond.4.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs33930165 is classified as Pathogenic for Dominant beta-thalassemia (1 review star, germline; last evaluated 2024-04-04).",
+      "supportingFactIds": [
+        "var.cond.5.significance",
+        "var.cond.5.reviewStars",
+        "var.cond.5.origin",
+        "var.cond.5.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs33930165 is classified as Pathogenic for Hb SS disease (SCD) (1 review star, germline; last evaluated 2024-04-04).",
+      "supportingFactIds": [
+        "var.cond.6.significance",
+        "var.cond.6.reviewStars",
+        "var.cond.6.origin",
+        "var.cond.6.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs33930165 is classified as Pathogenic for Malaria, susceptibility to (1 review star, germline; last evaluated 2024-04-04).",
+      "supportingFactIds": [
+        "var.cond.7.significance",
+        "var.cond.7.reviewStars",
+        "var.cond.7.origin",
+        "var.cond.7.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs33930165 is classified as Pathogenic for METHEMOGLOBINEMIA, BETA TYPE (1 review star, germline; last evaluated 2024-04-04).",
+      "supportingFactIds": [
+        "var.cond.8.significance",
+        "var.cond.8.reviewStars",
+        "var.cond.8.origin",
+        "var.cond.8.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs33930165 is classified as Pathogenic for Erythrocytosis, familial, 6 (1 review star, germline; last evaluated 2024-04-04).",
+      "supportingFactIds": [
+        "var.cond.9.significance",
+        "var.cond.9.reviewStars",
+        "var.cond.9.origin",
+        "var.cond.9.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs33930165 is classified as Pathogenic for Inherited hemoglobinopathy (1 review star, germline; last evaluated 2023-11-10).",
+      "supportingFactIds": [
+        "var.cond.10.significance",
+        "var.cond.10.reviewStars",
+        "var.cond.10.origin",
+        "var.cond.10.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs33930165 is classified as Pathogenic for Inborn genetic diseases (1 review star, germline; last evaluated 2023-10-13).",
+      "supportingFactIds": [
+        "var.cond.11.significance",
+        "var.cond.11.reviewStars",
+        "var.cond.11.origin",
+        "var.cond.11.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs33930165 is classified as Pathogenic for alpha Thalassemia (1 review star, germline; last evaluated 2023-09-11).",
+      "supportingFactIds": [
+        "var.cond.12.significance",
+        "var.cond.12.reviewStars",
+        "var.cond.12.origin",
+        "var.cond.12.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs33930165 is classified as Pathogenic for Sickle cell-hemoglobin C disease (1 review star, germline; last evaluated 2022-09-14).",
+      "supportingFactIds": [
+        "var.cond.13.significance",
+        "var.cond.13.reviewStars",
+        "var.cond.13.origin",
+        "var.cond.13.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs33930165 is classified as Pathogenic for Dominant beta-thalassemia (1 review star; last evaluated 2021-06-30).",
+      "supportingFactIds": [
+        "var.cond.14.significance",
+        "var.cond.14.reviewStars",
+        "var.cond.14.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs33930165 is classified as Pathogenic for Fetal hemoglobin quantitative trait locus 1 (HBFQTL1) (1 review star; last evaluated 2021-06-30).",
+      "supportingFactIds": [
+        "var.cond.15.significance",
+        "var.cond.15.reviewStars",
+        "var.cond.15.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs33930165 is classified as Pathogenic for Heinz body anemia (1 review star; last evaluated 2021-06-30).",
+      "supportingFactIds": [
+        "var.cond.16.significance",
+        "var.cond.16.reviewStars",
+        "var.cond.16.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs33930165 is classified as Pathogenic for Hb SS disease (SCD) (1 review star; last evaluated 2021-06-30).",
+      "supportingFactIds": [
+        "var.cond.17.significance",
+        "var.cond.17.reviewStars",
+        "var.cond.17.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs33930165 is classified as Pathogenic for alpha Thalassemia (1 review star; last evaluated 2021-06-30).",
+      "supportingFactIds": [
+        "var.cond.18.significance",
+        "var.cond.18.reviewStars",
+        "var.cond.18.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs33930165 is classified as Pathogenic for Malaria, susceptibility to (1 review star; last evaluated 2021-06-30).",
+      "supportingFactIds": [
+        "var.cond.19.significance",
+        "var.cond.19.reviewStars",
+        "var.cond.19.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs33930165 is classified as Pathogenic for beta Thalassemia (BTHAL) (1 review star; last evaluated 2021-06-30).",
+      "supportingFactIds": [
+        "var.cond.20.significance",
+        "var.cond.20.reviewStars",
+        "var.cond.20.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs33930165 is classified as Pathogenic for METHEMOGLOBINEMIA, BETA TYPE (1 review star; last evaluated 2021-06-30).",
+      "supportingFactIds": [
+        "var.cond.21.significance",
+        "var.cond.21.reviewStars",
+        "var.cond.21.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs33930165 is classified as Pathogenic for Erythrocytosis, familial, 6 (1 review star; last evaluated 2021-06-30).",
+      "supportingFactIds": [
+        "var.cond.22.significance",
+        "var.cond.22.reviewStars",
+        "var.cond.22.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs33930165 is classified as Pathogenic for HBB-related disorder (1 review star, germline).",
+      "supportingFactIds": [
+        "var.cond.23.significance",
+        "var.cond.23.reviewStars",
+        "var.cond.23.origin"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs33930165 is classified as Pathogenic for HEMOGLOBIN C (0 review stars, germline; last evaluated 2011-12-02).",
+      "supportingFactIds": [
+        "var.cond.24.significance",
+        "var.cond.24.reviewStars",
+        "var.cond.24.origin",
+        "var.cond.24.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs33930165 is classified as Protective for Malaria, resistance to (0 review stars, germline; last evaluated 2011-12-02).",
+      "supportingFactIds": [
+        "var.cond.25.significance",
+        "var.cond.25.reviewStars",
+        "var.cond.25.origin",
+        "var.cond.25.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs33930165 is classified as other for HEMOGLOBIN ARLINGTON PARK (0 review stars, germline; last evaluated 2017-12-12).",
+      "supportingFactIds": [
+        "var.cond.26.significance",
+        "var.cond.26.reviewStars",
+        "var.cond.26.origin",
+        "var.cond.26.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs33930165 is classified as Likely pathogenic for not provided (2 review stars, germline; last evaluated 2025-03-04).",
+      "supportingFactIds": [
+        "var.cond.27.significance",
+        "var.cond.27.reviewStars",
+        "var.cond.27.origin",
+        "var.cond.27.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "4266c72ff48dd20e",
-    "promptVersion": "2.0.0",
+    "factsHash": "8e897d0be1b8e456",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:14:48.305Z",
-    "retrievedAt": "2026-07-27T10:14:41.492Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:10:44.512Z",
+    "retrievedAt": "2026-08-03T16:10:42.998Z",
     "sources": [
       {
         "label": "dbSNP",

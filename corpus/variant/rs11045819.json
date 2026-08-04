@@ -87,36 +87,79 @@
         "url": "https://gnomad.broadinstitute.org/variant/12-21176879-C-A?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:17:43.917Z"
+    "retrievedAt": "2026-08-03T16:12:00.773Z"
   },
   "claims": [
     {
-      "text": "The human variant rs11045819 in the SLCO1B1 gene is a missense variant resulting in the protein change p.Pro155Thr.",
+      "text": "rs11045819 is a genetic variant located in the SLCO1B1 gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.consequence",
-        "var.protein"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The frequency of the SLCO1B1 variant rs11045819 in the general population is approximately 11%.",
+      "text": "In gnomAD, rs11045819 has an overall allele frequency of 11.1%.",
       "supportingFactIds": [
         "var.gnomadAf"
       ],
-      "claimType": "frequency_context"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs11045819 is classified as Benign for Rotor syndrome (HBLRR) (2 review stars, germline; last evaluated 2024-11-29).",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs11045819 is classified as Likely benign for SLCO1B1-related disorder (0 review stars, germline; last evaluated 2021-07-21).",
+      "supportingFactIds": [
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars",
+        "var.cond.1.origin",
+        "var.cond.1.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs11045819 is classified as Benign for not provided (1 review star, germline).",
+      "supportingFactIds": [
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars",
+        "var.cond.2.origin"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs11045819 is classified as Benign for not specified (0 review stars, germline).",
+      "supportingFactIds": [
+        "var.cond.3.significance",
+        "var.cond.3.reviewStars",
+        "var.cond.3.origin"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "37093178d97f0c39",
-    "promptVersion": "2.0.0",
+    "factsHash": "e43b41da14bef50b",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:17:47.256Z",
-    "retrievedAt": "2026-07-27T10:17:43.917Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:12:02.289Z",
+    "retrievedAt": "2026-08-03T16:12:00.773Z",
     "sources": [
       {
         "label": "dbSNP",

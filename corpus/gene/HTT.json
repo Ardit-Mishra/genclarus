@@ -36,50 +36,30 @@
         "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=HTT"
       }
     ],
-    "retrievedAt": "2026-07-27T09:48:54.971Z"
+    "retrievedAt": "2026-08-03T16:07:11.836Z"
   },
   "claims": [
     {
-      "text": "The HTT gene is a protein-coding gene located on chromosome 4.",
+      "text": "HTT is a human protein-coding gene.",
       "supportingFactIds": [
         "gene.symbol",
-        "gene.type",
-        "gene.location"
+        "gene.type"
       ],
-      "claimType": "identity"
-    },
-    {
-      "text": "The HTT gene is associated with Huntington's disease.",
-      "supportingFactIds": [
-        "gene.alias.0"
-      ],
-      "claimType": "classification_context"
-    },
-    {
-      "text": "The HTT gene has two alternatively polyadenylated forms.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "function"
-    },
-    {
-      "text": "The HTT gene is widely expressed and required for normal development.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "function"
+      "claimType": "identity",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
     "factsHash": "4e564f1dc8d6d44b",
-    "promptVersion": "2.0.0",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T09:49:00.192Z",
-    "retrievedAt": "2026-07-27T09:48:54.971Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:07:13.349Z",
+    "retrievedAt": "2026-08-03T16:07:11.836Z",
     "sources": [
       {
         "label": "NCBI Gene",

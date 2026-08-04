@@ -39,50 +39,30 @@
         "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=F9"
       }
     ],
-    "retrievedAt": "2026-07-27T09:48:11.135Z"
+    "retrievedAt": "2026-08-03T16:06:53.806Z"
   },
   "claims": [
     {
-      "text": "Coagulation factor IX is a vitamin K-dependent protein-coding gene located on chromosome X.",
+      "text": "F9 is a human protein-coding gene.",
       "supportingFactIds": [
         "gene.symbol",
-        "gene.type",
-        "gene.location"
+        "gene.type"
       ],
-      "claimType": "identity"
-    },
-    {
-      "text": "Coagulation factor IX deficiency is a recessive X-linked disorder also known as hemophilia B or Christmas disease.",
-      "supportingFactIds": [
-        "gene.name"
-      ],
-      "claimType": "classification_context"
-    },
-    {
-      "text": "Coagulation factor IX circulates in the blood as an inactive zymogen that is converted to an active form by factor XIa.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "function"
-    },
-    {
-      "text": "Alterations of the F9 gene, including point mutations, insertions and deletions, cause factor IX deficiency.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "condition_context"
+      "claimType": "identity",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
     "factsHash": "50f70b56046e2e5c",
-    "promptVersion": "2.0.0",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T09:48:14.883Z",
-    "retrievedAt": "2026-07-27T09:48:11.135Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:06:55.312Z",
+    "retrievedAt": "2026-08-03T16:06:53.806Z",
     "sources": [
       {
         "label": "NCBI Gene",

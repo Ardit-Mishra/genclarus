@@ -279,43 +279,285 @@
         "url": "https://gnomad.broadinstitute.org/variant/6-26092913-G-A?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:08:59.431Z"
+    "retrievedAt": "2026-08-03T16:08:52.459Z"
   },
   "claims": [
     {
-      "text": "The HFE gene variant rs1800562 is a missense variant with a protein change of p.Cys282Tyr.",
+      "text": "rs1800562 is a genetic variant located in the HFE gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.consequence",
-        "var.protein"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The HFE gene variant rs1800562 is classified as Pathogenic for Hereditary hemochromatosis.",
+      "text": "In gnomAD, rs1800562 has an overall allele frequency of 3.8%.",
       "supportingFactIds": [
-        "var.cond.0.significance"
+        "var.gnomadAf"
       ],
-      "claimType": "classification_context"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The HFE gene variant rs1800562 has a germline origin.",
+      "text": "In ClinVar, rs1800562 is classified as Pathogenic (low penetrance) for Hereditary hemochromatosis (HFE) (2 review stars, germline; last evaluated 2025-02-03).",
       "supportingFactIds": [
-        "var.cond.0.origin"
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1800562 is classified as Pathogenic for Hemochromatosis type 1 (HFE1) (2 review stars, germline; last evaluated 2024-09-25).",
+      "supportingFactIds": [
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars",
+        "var.cond.1.origin",
+        "var.cond.1.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1800562 is classified as Pathogenic for Inborn genetic diseases (1 review star, germline; last evaluated 2025-01-31).",
+      "supportingFactIds": [
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars",
+        "var.cond.2.origin",
+        "var.cond.2.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1800562 is classified as Pathogenic for HFE-related disorder (1 review star, germline; last evaluated 2022-06-07).",
+      "supportingFactIds": [
+        "var.cond.3.significance",
+        "var.cond.3.reviewStars",
+        "var.cond.3.origin",
+        "var.cond.3.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1800562 is classified as Pathogenic for Cardiomyopathy (CMYO) (1 review star, germline; last evaluated 2021-04-15).",
+      "supportingFactIds": [
+        "var.cond.4.significance",
+        "var.cond.4.reviewStars",
+        "var.cond.4.origin",
+        "var.cond.4.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1800562 is classified as Pathogenic for Variegate porphyria (VP) (1 review star, germline; last evaluated 2021-03-30).",
+      "supportingFactIds": [
+        "var.cond.5.significance",
+        "var.cond.5.reviewStars",
+        "var.cond.5.origin",
+        "var.cond.5.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1800562 is classified as Pathogenic for Microvascular complications of diabetes, susceptibility to, 7 (1 review star, germline; last evaluated 2021-03-30).",
+      "supportingFactIds": [
+        "var.cond.6.significance",
+        "var.cond.6.reviewStars",
+        "var.cond.6.origin",
+        "var.cond.6.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1800562 is classified as Pathogenic for Alzheimer disease type 1 (AD1) (1 review star, germline; last evaluated 2021-03-30).",
+      "supportingFactIds": [
+        "var.cond.7.significance",
+        "var.cond.7.reviewStars",
+        "var.cond.7.origin",
+        "var.cond.7.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1800562 is classified as Pathogenic for TRANSFERRIN SERUM LEVEL QUANTITATIVE TRAIT LOCUS 2 (TFQTL2) (1 review star, germline; last evaluated 2021-03-30).",
+      "supportingFactIds": [
+        "var.cond.8.significance",
+        "var.cond.8.reviewStars",
+        "var.cond.8.origin",
+        "var.cond.8.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1800562 is classified as Pathogenic for Familial porphyria cutanea tarda (PCT) (1 review star, germline; last evaluated 2021-03-30).",
+      "supportingFactIds": [
+        "var.cond.9.significance",
+        "var.cond.9.reviewStars",
+        "var.cond.9.origin",
+        "var.cond.9.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1800562 is classified as Pathogenic for Abnormality of the nervous system (1 review star, germline; last evaluated 2018-05-11).",
+      "supportingFactIds": [
+        "var.cond.10.significance",
+        "var.cond.10.reviewStars",
+        "var.cond.10.origin",
+        "var.cond.10.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1800562 is classified as Pathogenic for Atypical behavior (1 review star, germline; last evaluated 2018-05-11).",
+      "supportingFactIds": [
+        "var.cond.11.significance",
+        "var.cond.11.reviewStars",
+        "var.cond.11.origin",
+        "var.cond.11.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1800562 is classified as Pathogenic for Abdominal pain (1 review star, germline; last evaluated 2018-05-11).",
+      "supportingFactIds": [
+        "var.cond.12.significance",
+        "var.cond.12.reviewStars",
+        "var.cond.12.origin",
+        "var.cond.12.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1800562 is classified as Pathogenic for Abnormal peripheral nervous system morphology (1 review star, germline; last evaluated 2018-05-11).",
+      "supportingFactIds": [
+        "var.cond.13.significance",
+        "var.cond.13.reviewStars",
+        "var.cond.13.origin",
+        "var.cond.13.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1800562 is classified as Pathogenic for Abnormality of the male genitalia (1 review star, germline; last evaluated 2018-05-11).",
+      "supportingFactIds": [
+        "var.cond.14.significance",
+        "var.cond.14.reviewStars",
+        "var.cond.14.origin",
+        "var.cond.14.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1800562 is classified as Pathogenic for Pain (1 review star, germline; last evaluated 2018-05-11).",
+      "supportingFactIds": [
+        "var.cond.15.significance",
+        "var.cond.15.reviewStars",
+        "var.cond.15.origin",
+        "var.cond.15.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1800562 is classified as Pathogenic for Peripheral neuropathy (1 review star, germline; last evaluated 2018-05-11).",
+      "supportingFactIds": [
+        "var.cond.16.significance",
+        "var.cond.16.reviewStars",
+        "var.cond.16.origin",
+        "var.cond.16.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1800562 is classified as Pathogenic for Hereditary cancer-predisposing syndrome (1 review star, germline; last evaluated 2015-12-01).",
+      "supportingFactIds": [
+        "var.cond.17.significance",
+        "var.cond.17.reviewStars",
+        "var.cond.17.origin",
+        "var.cond.17.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1800562 is classified as Risk factor for Juvenile hemochromatosis (1 review star, germline; last evaluated 2020-03-04).",
+      "supportingFactIds": [
+        "var.cond.18.significance",
+        "var.cond.18.reviewStars",
+        "var.cond.18.origin",
+        "var.cond.18.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1800562 is classified as no classifications from unflagged record for Cutaneous photosensitivity (0 review stars; last evaluated 2023-11-14).",
+      "supportingFactIds": [
+        "var.cond.19.significance",
+        "var.cond.19.reviewStars",
+        "var.cond.19.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1800562 is classified as no classifications from unflagged record for Porphyrinuria (0 review stars; last evaluated 2023-11-14).",
+      "supportingFactIds": [
+        "var.cond.20.significance",
+        "var.cond.20.reviewStars",
+        "var.cond.20.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1800562 is classified as not provided for Bronze diabetes (0 review stars).",
+      "supportingFactIds": [
+        "var.cond.21.significance",
+        "var.cond.21.reviewStars"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1800562 is classified as Pathogenic for not provided (2 review stars; last evaluated 2025-03-04).",
+      "supportingFactIds": [
+        "var.cond.22.significance",
+        "var.cond.22.reviewStars",
+        "var.cond.22.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "466c6ecae70422bf",
-    "promptVersion": "2.0.0",
+    "factsHash": "4d56a9c0dad421d0",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:09:03.406Z",
-    "retrievedAt": "2026-07-27T10:08:59.431Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:08:53.977Z",
+    "retrievedAt": "2026-08-03T16:08:52.459Z",
     "sources": [
       {
         "label": "dbSNP",

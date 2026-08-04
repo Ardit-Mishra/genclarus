@@ -127,56 +127,119 @@
         "url": "https://gnomad.broadinstitute.org/variant/10-94762706-A-G?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:15:46.566Z"
+    "retrievedAt": "2026-08-03T16:11:15.034Z"
   },
   "claims": [
     {
-      "text": "The CYP2C19 gene variant rs28399504 is a missense variant.",
+      "text": "rs28399504 is a genetic variant located in the CYP2C19 gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.consequence",
-        "var.type"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The CYP2C19 gene variant rs28399504 has a protein change of p.Met1Val.",
+      "text": "In gnomAD, rs28399504 has an overall allele frequency of 0.16%.",
       "supportingFactIds": [
-        "var.gene",
-        "var.consequence",
-        "var.protein"
+        "var.gnomadAf"
       ],
-      "claimType": "identity"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The CYP2C19 gene variant rs28399504 is associated with a drug response to clopidogrel.",
+      "text": "In ClinVar, rs28399504 is classified as Drug response for CYP2C19: no function (4 review stars, germline).",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs28399504 is classified as Drug response for Clopidogrel response (4 review stars, germline).",
       "supportingFactIds": [
         "var.cond.1.significance",
         "var.cond.1.reviewStars",
         "var.cond.1.origin"
       ],
-      "claimType": "condition_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The CYP2C19 gene variant rs28399504 is associated with a drug response to citalopram.",
+      "text": "In ClinVar, rs28399504 is classified as Drug response for Citalopram response (4 review stars, germline).",
       "supportingFactIds": [
         "var.cond.2.significance",
         "var.cond.2.reviewStars",
         "var.cond.2.origin"
       ],
-      "claimType": "condition_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs28399504 is classified as Drug response for Escitalopram response (4 review stars, germline).",
+      "supportingFactIds": [
+        "var.cond.3.significance",
+        "var.cond.3.reviewStars",
+        "var.cond.3.origin"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs28399504 is classified as Drug response for Sertraline response (4 review stars, germline).",
+      "supportingFactIds": [
+        "var.cond.4.significance",
+        "var.cond.4.reviewStars",
+        "var.cond.4.origin"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs28399504 is classified as Drug response for Voriconazole response (4 review stars, germline).",
+      "supportingFactIds": [
+        "var.cond.5.significance",
+        "var.cond.5.reviewStars",
+        "var.cond.5.origin"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs28399504 is classified as Drug response for Mephenytoin, poor metabolism of (0 review stars, germline; last evaluated 1998-01-01).",
+      "supportingFactIds": [
+        "var.cond.6.significance",
+        "var.cond.6.reviewStars",
+        "var.cond.6.origin",
+        "var.cond.6.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs28399504 is classified as Likely benign for not provided (2 review stars, germline; last evaluated 2018-03-26).",
+      "supportingFactIds": [
+        "var.cond.7.significance",
+        "var.cond.7.reviewStars",
+        "var.cond.7.origin",
+        "var.cond.7.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "fbbb6dd4f2a13382",
-    "promptVersion": "2.0.0",
+    "factsHash": "6c9b159bbe35da16",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:15:50.794Z",
-    "retrievedAt": "2026-07-27T10:15:46.566Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:11:16.544Z",
+    "retrievedAt": "2026-08-03T16:11:15.034Z",
     "sources": [
       {
         "label": "dbSNP",

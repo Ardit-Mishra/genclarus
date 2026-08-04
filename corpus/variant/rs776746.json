@@ -85,49 +85,62 @@
         "url": "https://gnomad.broadinstitute.org/variant/7-99672916-T-C?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:16:59.188Z"
+    "retrievedAt": "2026-08-03T16:11:45.750Z"
   },
   "claims": [
     {
-      "text": "The CYP3A5 gene variant rs776746 is a single nucleotide variant.",
+      "text": "rs776746 is a genetic variant located in the CYP3A5 gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.type"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The CYP3A5 gene variant rs776746 is associated with refractory myasthenia gravis.",
+      "text": "In ClinVar, rs776746 is classified as Risk factor for Hypertension, salt-sensitive essential, susceptibility to (0 review stars, germline; last evaluated 2004-12-01).",
       "supportingFactIds": [
-        "var.cond.2.significance"
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
       ],
-      "claimType": "condition_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The CYP3A5 gene variant rs776746 is a risk factor for salt-sensitive essential hypertension.",
+      "text": "In ClinVar, rs776746 is classified as Drug response for Tacrolimus response (0 review stars, germline; last evaluated 2022-04-15).",
       "supportingFactIds": [
-        "var.cond.0.significance"
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars",
+        "var.cond.1.origin",
+        "var.cond.1.lastEvaluated"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The CYP3A5 gene variant rs776746 is associated with a drug response to tacrolimus.",
+      "text": "In ClinVar, rs776746 is classified as association for refractory myasthenia gravis (0 review stars, inherited; last evaluated 2022-03-23).",
       "supportingFactIds": [
-        "var.cond.1.significance"
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars",
+        "var.cond.2.origin",
+        "var.cond.2.lastEvaluated"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "dbd3949483db1965",
-    "promptVersion": "2.0.0",
+    "factsHash": "e650860b4d4522d9",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:17:02.448Z",
-    "retrievedAt": "2026-07-27T10:16:59.188Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:11:47.256Z",
+    "retrievedAt": "2026-08-03T16:11:45.750Z",
     "sources": [
       {
         "label": "dbSNP",

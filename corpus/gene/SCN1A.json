@@ -41,49 +41,30 @@
         "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=SCN1A"
       }
     ],
-    "retrievedAt": "2026-07-27T10:26:01.206Z"
+    "retrievedAt": "2026-08-03T16:07:40.497Z"
   },
   "claims": [
     {
-      "text": "SCN1A is a protein-coding gene.",
+      "text": "SCN1A is a human protein-coding gene.",
       "supportingFactIds": [
         "gene.symbol",
         "gene.type"
       ],
-      "claimType": "identity"
-    },
-    {
-      "text": "SCN1A encodes a sodium channel alpha subunit.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "function"
-    },
-    {
-      "text": "SCN1A is associated with generalized epilepsy with febrile seizures and epileptic encephalopathy.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "classification_context"
-    },
-    {
-      "text": "SCN1A has multiple transcript variants.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "frequency_context"
+      "claimType": "identity",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
     "factsHash": "41c11237debffc95",
-    "promptVersion": "2.0.0",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:26:04.727Z",
-    "retrievedAt": "2026-07-27T10:26:01.206Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:07:42.013Z",
+    "retrievedAt": "2026-08-03T16:07:40.497Z",
     "sources": [
       {
         "label": "NCBI Gene",

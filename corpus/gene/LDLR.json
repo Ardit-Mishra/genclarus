@@ -34,42 +34,30 @@
         "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=LDLR"
       }
     ],
-    "retrievedAt": "2026-07-27T09:48:22.399Z"
+    "retrievedAt": "2026-08-03T16:06:59.153Z"
   },
   "claims": [
     {
-      "text": "The LDLR gene encodes a protein that binds low density lipoprotein/cholesterol at the cell membrane.",
+      "text": "LDLR is a human protein-coding gene.",
       "supportingFactIds": [
         "gene.symbol",
-        "gene.summary"
+        "gene.type"
       ],
-      "claimType": "function"
-    },
-    {
-      "text": "Mutations in the LDLR gene cause familial hypercholesterolemia.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "classification_context"
-    },
-    {
-      "text": "The LDLR gene is located on chromosome 19.",
-      "supportingFactIds": [
-        "gene.location"
-      ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
     "factsHash": "a7388e13307f214f",
-    "promptVersion": "2.0.0",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T09:48:30.548Z",
-    "retrievedAt": "2026-07-27T09:48:22.399Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:07:00.655Z",
+    "retrievedAt": "2026-08-03T16:06:59.153Z",
     "sources": [
       {
         "label": "NCBI Gene",

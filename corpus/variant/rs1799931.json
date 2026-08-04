@@ -56,50 +56,48 @@
         "url": "https://gnomad.broadinstitute.org/variant/8-18400860-G-A?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:18:09.207Z"
+    "retrievedAt": "2026-08-03T16:12:15.060Z"
   },
   "claims": [
     {
-      "text": "The NAT2 gene variant rs1799931 is a missense variant with a p.Gly286Glu protein change.",
+      "text": "rs1799931 is a genetic variant located in the NAT2 gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.consequence",
-        "var.protein"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The NAT2 gene variant rs1799931 is a single nucleotide variant.",
+      "text": "In gnomAD, rs1799931 has an overall allele frequency of 4.1%.",
       "supportingFactIds": [
-        "var.type"
+        "var.gnomadAf"
       ],
-      "claimType": "identity"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The NAT2 gene variant rs1799931 is associated with a drug response, specifically a slow acetylator phenotype.",
+      "text": "In ClinVar, rs1799931 is classified as Drug response for Slow acetylator due to N-acetyltransferase enzyme variant (0 review stars, germline; last evaluated 2012-10-28).",
       "supportingFactIds": [
-        "var.cond.0.significance"
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
       ],
-      "claimType": "classification_context"
-    },
-    {
-      "text": "The NAT2 gene variant rs1799931 has a low review confidence of 0 of 4 review stars.",
-      "supportingFactIds": [
-        "var.cond.0.reviewStars"
-      ],
-      "claimType": "uncertainty"
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "cb420537fa471a61",
-    "promptVersion": "2.0.0",
+    "factsHash": "776b02c2c485cd88",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:18:12.580Z",
-    "retrievedAt": "2026-07-27T10:18:09.207Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:12:16.562Z",
+    "retrievedAt": "2026-08-03T16:12:15.060Z",
     "sources": [
       {
         "label": "dbSNP",

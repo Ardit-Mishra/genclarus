@@ -35,35 +35,37 @@
         "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs35599367"
       }
     ],
-    "retrievedAt": "2026-07-27T10:18:54.960Z"
+    "retrievedAt": "2026-08-03T16:12:44.220Z"
   },
   "claims": [
     {
-      "text": "The CYP3A4 gene variant rs35599367 is a single nucleotide variant.",
+      "text": "rs35599367 is a genetic variant located in the CYP3A4 gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.type"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The CYP3A4 gene variant rs35599367 has a frequency of 3.1% in gnomAD.",
+      "text": "In gnomAD, rs35599367 has an overall allele frequency of 3.1%.",
       "supportingFactIds": [
         "var.gnomadAf"
       ],
-      "claimType": "frequency_context"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "3c99b4bc99a0b0bc",
-    "promptVersion": "2.0.0",
+    "factsHash": "399504293391c9de",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:18:57.266Z",
-    "retrievedAt": "2026-07-27T10:18:54.960Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:12:45.727Z",
+    "retrievedAt": "2026-08-03T16:12:44.220Z",
     "sources": [
       {
         "label": "dbSNP",

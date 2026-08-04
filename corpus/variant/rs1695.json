@@ -86,55 +86,80 @@
         "url": "https://gnomad.broadinstitute.org/variant/11-67585218-A-G?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:17:52.170Z"
+    "retrievedAt": "2026-08-03T16:12:08.688Z"
   },
   "claims": [
     {
-      "text": "The GSTP1 gene variant rs1695 is a missense variant leading to the p.Ile105Val protein change.",
+      "text": "rs1695 is a genetic variant located in the GSTP1 gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.consequence",
-        "var.protein"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "This variant is a single nucleotide variant with a frequency of 35% in the gnomAD allele frequency dataset.",
+      "text": "In gnomAD, rs1695 has an overall allele frequency of 35.3%.",
       "supportingFactIds": [
-        "var.type",
         "var.gnomadAf"
       ],
-      "claimType": "identity"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The GSTP1 gene variant rs1695 is classified as Benign for Abnormality of immune system physiology and other conditions.",
+      "text": "In ClinVar, rs1695 is classified as Benign for Abnormality of immune system physiology (0 review stars; last evaluated 2021-09-06).",
       "supportingFactIds": [
         "var.cond.0.significance",
-        "var.cond.1.significance",
-        "var.cond.2.significance"
+        "var.cond.0.reviewStars",
+        "var.cond.0.lastEvaluated"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The review confidence for the classification of the GSTP1 gene variant rs1695 is low for all conditions.",
+      "text": "In ClinVar, rs1695 is classified as Benign for GLUTATHIONE S-TRANSFERASE PI POLYMORPHISM, TYPE B (0 review stars, germline; last evaluated 1997-04-11).",
       "supportingFactIds": [
-        "var.cond.0.reviewStars",
+        "var.cond.1.significance",
         "var.cond.1.reviewStars",
-        "var.cond.2.reviewStars"
+        "var.cond.1.origin",
+        "var.cond.1.lastEvaluated"
       ],
-      "claimType": "uncertainty"
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1695 is classified as Benign for GLUTATHIONE S-TRANSFERASE PI POLYMORPHISM, TYPE C (0 review stars, germline; last evaluated 1997-04-11).",
+      "supportingFactIds": [
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars",
+        "var.cond.2.origin",
+        "var.cond.2.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1695 is classified as Benign for not provided (2 review stars, germline; last evaluated 2021-06-09).",
+      "supportingFactIds": [
+        "var.cond.3.significance",
+        "var.cond.3.reviewStars",
+        "var.cond.3.origin",
+        "var.cond.3.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "50f7fc87fe1afbb3",
-    "promptVersion": "2.0.0",
+    "factsHash": "e07df88d4a401d42",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:17:56.481Z",
-    "retrievedAt": "2026-07-27T10:17:52.170Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:12:10.197Z",
+    "retrievedAt": "2026-08-03T16:12:08.688Z",
     "sources": [
       {
         "label": "dbSNP",

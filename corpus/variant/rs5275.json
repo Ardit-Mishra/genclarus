@@ -56,34 +56,48 @@
         "url": "https://gnomad.broadinstitute.org/variant/1-186673926-A-G?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:15:40.338Z"
+    "retrievedAt": "2026-08-03T16:11:12.981Z"
   },
   "claims": [
     {
-      "text": "The PTGS2 gene variant rs5275 is a single nucleotide variant.",
+      "text": "rs5275 is a genetic variant located in the PTGS2 gene.",
       "supportingFactIds": [
-        "var.type"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The rs5275 variant in PTGS2 is found in approximately 4% of the population.",
+      "text": "In gnomAD, rs5275 has an overall allele frequency of 40.1%.",
       "supportingFactIds": [
         "var.gnomadAf"
       ],
-      "claimType": "frequency_context"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs5275 is classified as other for Cholangiocarcinoma (0 review stars, germline; last evaluated 2022-12-10).",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "9a05035fd283a3a4",
-    "promptVersion": "2.0.0",
+    "factsHash": "0cb088e41dd3e604",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:15:43.851Z",
-    "retrievedAt": "2026-07-27T10:15:40.338Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:11:14.484Z",
+    "retrievedAt": "2026-08-03T16:11:12.981Z",
     "sources": [
       {
         "label": "dbSNP",

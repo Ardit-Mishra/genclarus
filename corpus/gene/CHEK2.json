@@ -41,49 +41,30 @@
         "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=CHEK2"
       }
     ],
-    "retrievedAt": "2026-07-27T09:47:23.060Z"
+    "retrievedAt": "2026-08-03T16:06:32.440Z"
   },
   "claims": [
     {
-      "text": "The CHEK2 gene is a protein-coding gene located on chromosome 22.",
+      "text": "CHEK2 is a human protein-coding gene.",
       "supportingFactIds": [
-        "gene.type",
-        "gene.location"
+        "gene.symbol",
+        "gene.type"
       ],
-      "claimType": "identity"
-    },
-    {
-      "text": "The CHEK2 gene is a cell cycle checkpoint regulator and putative tumor suppressor.",
-      "supportingFactIds": [
-        "gene.symbol"
-      ],
-      "claimType": "function"
-    },
-    {
-      "text": "Mutations in the CHEK2 gene are linked with Li-Fraumeni syndrome and may confer a predisposition to sarcomas, breast cancer, and brain tumors.",
-      "supportingFactIds": [
-        "gene.symbol"
-      ],
-      "claimType": "condition_context"
-    },
-    {
-      "text": "The CHEK2 gene contains a forkhead-associated protein interaction domain essential for activation in response to DNA damage.",
-      "supportingFactIds": [
-        "gene.symbol"
-      ],
-      "claimType": "function"
+      "claimType": "identity",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
     "factsHash": "f57d7397d3f3a067",
-    "promptVersion": "2.0.0",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T09:47:26.229Z",
-    "retrievedAt": "2026-07-27T09:47:23.060Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:06:33.955Z",
+    "retrievedAt": "2026-08-03T16:06:32.440Z",
     "sources": [
       {
         "label": "NCBI Gene",

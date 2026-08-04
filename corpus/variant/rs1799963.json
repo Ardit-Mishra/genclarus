@@ -149,52 +149,144 @@
         "url": "https://gnomad.broadinstitute.org/variant/11-46739505-G-A?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:08:52.363Z"
+    "retrievedAt": "2026-08-03T16:08:50.464Z"
   },
   "claims": [
     {
-      "text": "The F2 gene variant rs1799963 is classified as Pathogenic for Congenital prothrombin deficiency, Thrombophilia due to thrombin defect (THPH1), and Ischemic stroke, with varying review confidence.",
+      "text": "rs1799963 is a genetic variant located in the F2 gene.",
       "supportingFactIds": [
-        "var.cond.0.significance",
-        "var.cond.1.significance",
-        "var.cond.2.significance"
+        "var.gene"
       ],
-      "claimType": "classification_context"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The F2 gene variant rs1799963 has a germline origin for Congenital prothrombin deficiency, Thrombophilia due to thrombin defect (THPH1), and Ischemic stroke.",
-      "supportingFactIds": [
-        "var.cond.0.origin",
-        "var.cond.1.origin",
-        "var.cond.2.origin"
-      ],
-      "claimType": "classification_context"
-    },
-    {
-      "text": "The F2 gene variant rs1799963 is a single nucleotide variant.",
-      "supportingFactIds": [
-        "var.type"
-      ],
-      "claimType": "identity"
-    },
-    {
-      "text": "The F2 gene variant rs1799963 has a frequency of 0.84% in gnomAD.",
+      "text": "In gnomAD, rs1799963 has an overall allele frequency of 0.84%.",
       "supportingFactIds": [
         "var.gnomadAf"
       ],
-      "claimType": "frequency_context"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1799963 is classified as Pathogenic (low penetrance) for Congenital prothrombin deficiency (2 review stars, germline; last evaluated 2025-02-02).",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1799963 is classified as Pathogenic for Thrombophilia due to thrombin defect (THPH1) (2 review stars, germline; last evaluated 2024-10-09).",
+      "supportingFactIds": [
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars",
+        "var.cond.1.origin",
+        "var.cond.1.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1799963 is classified as Pathogenic for Ischemic stroke (1 review star, germline; last evaluated 2024-04-09).",
+      "supportingFactIds": [
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars",
+        "var.cond.2.origin",
+        "var.cond.2.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1799963 is classified as Pathogenic for Pregnancy loss, recurrent, susceptibility to, 2 (RPRGL2) (1 review star, germline; last evaluated 2024-04-09).",
+      "supportingFactIds": [
+        "var.cond.3.significance",
+        "var.cond.3.reviewStars",
+        "var.cond.3.origin",
+        "var.cond.3.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1799963 is classified as Risk factor for Cerebral palsy (1 review star; last evaluated 2021-06-10).",
+      "supportingFactIds": [
+        "var.cond.4.significance",
+        "var.cond.4.reviewStars",
+        "var.cond.4.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1799963 is classified as Risk factor for Venous thromboembolism (1 review star, germline; last evaluated 2019-12-04).",
+      "supportingFactIds": [
+        "var.cond.5.significance",
+        "var.cond.5.reviewStars",
+        "var.cond.5.origin",
+        "var.cond.5.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1799963 is classified as Risk factor for Ischemic stroke (0 review stars, germline; last evaluated 2009-06-17).",
+      "supportingFactIds": [
+        "var.cond.6.significance",
+        "var.cond.6.reviewStars",
+        "var.cond.6.origin",
+        "var.cond.6.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1799963 is classified as Risk factor for Pregnancy loss, recurrent, susceptibility to, 2 (RPRGL2) (0 review stars, germline; last evaluated 2009-06-17).",
+      "supportingFactIds": [
+        "var.cond.7.significance",
+        "var.cond.7.reviewStars",
+        "var.cond.7.origin",
+        "var.cond.7.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1799963 is classified as Established risk allele (risk factor) for Thrombophilia caused by F2 prothrombin deficiency (0 review stars).",
+      "supportingFactIds": [
+        "var.cond.8.significance",
+        "var.cond.8.reviewStars"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1799963 is classified as Likely pathogenic for not provided (2 review stars, germline; last evaluated 2025-03-04).",
+      "supportingFactIds": [
+        "var.cond.9.significance",
+        "var.cond.9.reviewStars",
+        "var.cond.9.origin",
+        "var.cond.9.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "f28001662d89a7e0",
-    "promptVersion": "2.0.0",
+    "factsHash": "2542aaf373d1c3eb",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:08:57.238Z",
-    "retrievedAt": "2026-07-27T10:08:52.363Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:08:51.975Z",
+    "retrievedAt": "2026-08-03T16:08:50.464Z",
     "sources": [
       {
         "label": "dbSNP",

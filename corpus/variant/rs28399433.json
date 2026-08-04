@@ -35,35 +35,37 @@
         "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs28399433"
       }
     ],
-    "retrievedAt": "2026-07-27T10:18:44.624Z"
+    "retrievedAt": "2026-08-03T16:12:37.539Z"
   },
   "claims": [
     {
-      "text": "The CYP2A6 gene variant rs28399433 is a single nucleotide variant.",
+      "text": "rs28399433 is a genetic variant located in the CYP2A6 gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.type"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The frequency of the CYP2A6 gene variant rs28399433 in the general population is low.",
+      "text": "In gnomAD, rs28399433 has a very low overall allele fraction of 0.0000322664.",
       "supportingFactIds": [
         "var.gnomadAf"
       ],
-      "claimType": "frequency_context"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "0502eeb1aed028de",
-    "promptVersion": "2.0.0",
+    "factsHash": "e8e15d6bbedf0eaa",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:18:47.330Z",
-    "retrievedAt": "2026-07-27T10:18:44.624Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:12:39.054Z",
+    "retrievedAt": "2026-08-03T16:12:37.539Z",
     "sources": [
       {
         "label": "dbSNP",

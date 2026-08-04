@@ -37,49 +37,30 @@
         "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=FMR1"
       }
     ],
-    "retrievedAt": "2026-07-27T09:49:01.240Z"
+    "retrievedAt": "2026-08-03T16:07:13.668Z"
   },
   "claims": [
     {
-      "text": "The protein encoded by the FMR1 gene binds RNA and is associated with polysomes.",
+      "text": "FMR1 is a human protein-coding gene.",
       "supportingFactIds": [
-        "gene.summary"
+        "gene.symbol",
+        "gene.type"
       ],
-      "claimType": "function"
-    },
-    {
-      "text": "FMR1 is a protein-coding gene located on the X chromosome.",
-      "supportingFactIds": [
-        "gene.type",
-        "gene.location"
-      ],
-      "claimType": "identity"
-    },
-    {
-      "text": "The FMR1 gene has multiple alternatively spliced transcript variants that encode different protein isoforms.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "identity"
-    },
-    {
-      "text": "Fragile X syndrome is caused by an expansion of the CGG trinucleotide repeat in the 5' UTR of the FMR1 gene to 55-230 repeats.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "classification_context"
+      "claimType": "identity",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
     "factsHash": "bf2a08b573e6dde3",
-    "promptVersion": "2.0.0",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T09:49:04.445Z",
-    "retrievedAt": "2026-07-27T09:49:01.240Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:07:15.179Z",
+    "retrievedAt": "2026-08-03T16:07:13.668Z",
     "sources": [
       {
         "label": "NCBI Gene",

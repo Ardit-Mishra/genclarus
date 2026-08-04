@@ -140,44 +140,131 @@
         "url": "https://gnomad.broadinstitute.org/variant/1-11796321-G-A?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:07:02.939Z"
+    "retrievedAt": "2026-08-03T16:08:03.443Z"
   },
   "claims": [
     {
-      "text": "The MTHFR gene variant rs1801133 is a missense variant causing the protein change p.Ala222Val.",
+      "text": "rs1801133 is a genetic variant located in the MTHFR gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.consequence",
-        "var.protein"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "This variant has a germline origin and is associated with drug response to methotrexate.",
+      "text": "In gnomAD, rs1801133 has an overall allele frequency of 25.7%.",
+      "supportingFactIds": [
+        "var.gnomadAf"
+      ],
+      "claimType": "frequency_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1801133 is classified as Drug response (toxicity) for methotrexate response (3 review stars, germline; last evaluated 2021-03-24).",
       "supportingFactIds": [
         "var.cond.0.significance",
-        "var.cond.0.origin"
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The variant is likely benign in relation to Neural tube defects, folate-sensitive (NTDFS).",
+      "text": "In ClinVar, rs1801133 is classified as Conflicting interpretations for Homocystinuria due to methylene tetrahydrofolate reductase deficiency (1 review star; last evaluated 2025-02-03).",
       "supportingFactIds": [
-        "var.cond.2.significance"
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars",
+        "var.cond.1.lastEvaluated"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1801133 is classified as Likely benign for Neural tube defects, folate-sensitive (NTDFS) (1 review star; last evaluated 2019-05-28).",
+      "supportingFactIds": [
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars",
+        "var.cond.2.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1801133 is classified as Conflicting interpretations for MTHFR THERMOLABILE POLYMORPHISM (0 review stars, germline; last evaluated 2023-09-29).",
+      "supportingFactIds": [
+        "var.cond.3.significance",
+        "var.cond.3.reviewStars",
+        "var.cond.3.origin",
+        "var.cond.3.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1801133 is classified as Uncertain significance for Thrombophilia due to thrombin defect (THPH1) (0 review stars; last evaluated 2017-12-30).",
+      "supportingFactIds": [
+        "var.cond.4.significance",
+        "var.cond.4.reviewStars",
+        "var.cond.4.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1801133 is classified as Uncertain significance for Gastrointestinal stromal tumor (0 review stars, germline).",
+      "supportingFactIds": [
+        "var.cond.5.significance",
+        "var.cond.5.reviewStars",
+        "var.cond.5.origin"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1801133 is classified as Uncertain significance for not provided (2 review stars, germline; last evaluated 2024-11-22).",
+      "supportingFactIds": [
+        "var.cond.6.significance",
+        "var.cond.6.reviewStars",
+        "var.cond.6.origin",
+        "var.cond.6.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1801133 is classified as Uncertain significance for See cases (1 review star; last evaluated 2022-01-06).",
+      "supportingFactIds": [
+        "var.cond.7.significance",
+        "var.cond.7.reviewStars",
+        "var.cond.7.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1801133 is classified as Benign for not specified (1 review star, germline; last evaluated 2016-04-25).",
+      "supportingFactIds": [
+        "var.cond.8.significance",
+        "var.cond.8.reviewStars",
+        "var.cond.8.origin",
+        "var.cond.8.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "50b8e8a1b4e9797e",
-    "promptVersion": "2.0.0",
+    "factsHash": "a94457ccaa8cfafb",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:07:11.752Z",
-    "retrievedAt": "2026-07-27T10:07:02.939Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:08:04.959Z",
+    "retrievedAt": "2026-08-03T16:08:03.443Z",
     "sources": [
       {
         "label": "dbSNP",

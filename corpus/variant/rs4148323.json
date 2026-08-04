@@ -211,45 +211,206 @@
         "url": "https://gnomad.broadinstitute.org/variant/2-233760498-G-A?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:17:21.008Z"
+    "retrievedAt": "2026-08-03T16:11:53.943Z"
   },
   "claims": [
     {
-      "text": "The human variant rs4148323 in the UGT1A gene is a missense variant leading to the p.Gly71Arg protein change.",
+      "text": "rs4148323 is a genetic variant located in the UGT1A gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.consequence",
-        "var.protein"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The frequency of the rs4148323 variant in the general population is approximately 1.4%.",
+      "text": "In gnomAD, rs4148323 has an overall allele frequency of 1.4%.",
       "supportingFactIds": [
         "var.gnomadAf"
       ],
-      "claimType": "frequency_context"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The rs4148323 variant in the UGT1A gene originates from a germline source.",
+      "text": "In ClinVar, rs4148323 is classified as Pathogenic for UGT1A1-related disorder (1 review star, germline; last evaluated 2024-12-19).",
       "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars",
         "var.cond.0.origin",
-        "var.cond.1.origin",
-        "var.cond.2.origin"
+        "var.cond.0.lastEvaluated"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs4148323 is classified as Pathogenic for Lucey-Driscoll syndrome (HBLRTFN) (1 review star, germline; last evaluated 2024-12-10).",
+      "supportingFactIds": [
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars",
+        "var.cond.1.origin",
+        "var.cond.1.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs4148323 is classified as Pathogenic for Crigler-Najjar syndrome type 1 (1 review star, germline; last evaluated 2024-12-10).",
+      "supportingFactIds": [
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars",
+        "var.cond.2.origin",
+        "var.cond.2.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs4148323 is classified as Pathogenic for Crigler-Najjar syndrome, type II (1 review star, germline; last evaluated 2024-12-10).",
+      "supportingFactIds": [
+        "var.cond.3.significance",
+        "var.cond.3.reviewStars",
+        "var.cond.3.origin",
+        "var.cond.3.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs4148323 is classified as Pathogenic for Gilbert syndrome (1 review star, germline; last evaluated 2024-12-10).",
+      "supportingFactIds": [
+        "var.cond.4.significance",
+        "var.cond.4.reviewStars",
+        "var.cond.4.origin",
+        "var.cond.4.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs4148323 is classified as Likely pathogenic for Crigler-Najjar syndrome, type II (1 review star; last evaluated 2019-05-28).",
+      "supportingFactIds": [
+        "var.cond.5.significance",
+        "var.cond.5.reviewStars",
+        "var.cond.5.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs4148323 is classified as Drug response for Irinotecan response (1 review star, germline; last evaluated 2018-04-04).",
+      "supportingFactIds": [
+        "var.cond.6.significance",
+        "var.cond.6.reviewStars",
+        "var.cond.6.origin",
+        "var.cond.6.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs4148323 is classified as Conflicting interpretations for Gilbert syndrome (1 review star, germline; last evaluated 2017-04-27).",
+      "supportingFactIds": [
+        "var.cond.7.significance",
+        "var.cond.7.reviewStars",
+        "var.cond.7.origin",
+        "var.cond.7.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs4148323 is classified as Uncertain significance for Bilirubin, serum level of, quantitative trait locus 1 (BILIQTL1) (1 review star, germline).",
+      "supportingFactIds": [
+        "var.cond.8.significance",
+        "var.cond.8.reviewStars",
+        "var.cond.8.origin"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs4148323 is classified as Uncertain significance for Crigler-Najjar syndrome type 1 (1 review star, germline).",
+      "supportingFactIds": [
+        "var.cond.9.significance",
+        "var.cond.9.reviewStars",
+        "var.cond.9.origin"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs4148323 is classified as Uncertain significance for Lucey-Driscoll syndrome (HBLRTFN) (1 review star, germline).",
+      "supportingFactIds": [
+        "var.cond.10.significance",
+        "var.cond.10.reviewStars",
+        "var.cond.10.origin"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs4148323 is classified as Uncertain significance for Crigler-Najjar syndrome, type II (1 review star, germline).",
+      "supportingFactIds": [
+        "var.cond.11.significance",
+        "var.cond.11.reviewStars",
+        "var.cond.11.origin"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs4148323 is classified as Uncertain significance for Gilbert syndrome (1 review star, germline).",
+      "supportingFactIds": [
+        "var.cond.12.significance",
+        "var.cond.12.reviewStars",
+        "var.cond.12.origin"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs4148323 is classified as association for Bilirubin, serum level of, quantitative trait locus 1 (BILIQTL1) (0 review stars, germline; last evaluated 2013-01-01).",
+      "supportingFactIds": [
+        "var.cond.13.significance",
+        "var.cond.13.reviewStars",
+        "var.cond.13.origin",
+        "var.cond.13.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs4148323 is classified as Conflicting interpretations for not specified (1 review star, germline; last evaluated 2025-03-04).",
+      "supportingFactIds": [
+        "var.cond.14.significance",
+        "var.cond.14.reviewStars",
+        "var.cond.14.origin",
+        "var.cond.14.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs4148323 is classified as Conflicting interpretations for not provided (1 review star; last evaluated 2025-01-24).",
+      "supportingFactIds": [
+        "var.cond.15.significance",
+        "var.cond.15.reviewStars",
+        "var.cond.15.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "f628c97c926407d8",
-    "promptVersion": "2.0.0",
+    "factsHash": "1be91acdef9b6644",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:17:25.540Z",
-    "retrievedAt": "2026-07-27T10:17:21.008Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:11:55.451Z",
+    "retrievedAt": "2026-08-03T16:11:53.943Z",
     "sources": [
       {
         "label": "dbSNP",

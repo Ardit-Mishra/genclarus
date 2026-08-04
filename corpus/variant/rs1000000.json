@@ -35,28 +35,20 @@
         "url": "https://www.ensembl.org/Homo_sapiens/Variation/Explore?v=rs1000000"
       }
     ],
-    "retrievedAt": "2026-07-27T10:08:16.265Z"
+    "retrievedAt": "2026-08-03T16:08:30.470Z"
   },
-  "claims": [
-    {
-      "text": "The variant rs1000000 is a single nucleotide variant.",
-      "supportingFactIds": [
-        "var.gene",
-        "var.type"
-      ],
-      "claimType": "identity"
-    }
-  ],
-  "aiAvailable": true,
-  "fallbackReason": null,
+  "claims": null,
+  "explanationState": "source_only",
+  "aiAvailable": false,
+  "fallbackReason": "provider_no_content",
   "provenance": {
-    "factsHash": "7584525d72543b2d",
-    "promptVersion": "2.0.0",
+    "factsHash": "b903028fdfd35830",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:08:18.747Z",
-    "retrievedAt": "2026-07-27T10:08:16.265Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:08:31.988Z",
+    "retrievedAt": "2026-08-03T16:08:30.470Z",
     "sources": [
       {
         "label": "dbSNP",

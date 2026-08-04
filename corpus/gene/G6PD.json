@@ -35,50 +35,30 @@
         "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=G6PD"
       }
     ],
-    "retrievedAt": "2026-07-27T09:49:10.745Z"
+    "retrievedAt": "2026-08-03T16:07:19.126Z"
   },
   "claims": [
     {
-      "text": "The G6PD gene encodes glucose-6-phosphate dehydrogenase.",
+      "text": "G6PD is a human protein-coding gene.",
       "supportingFactIds": [
         "gene.symbol",
-        "gene.name",
         "gene.type"
       ],
-      "claimType": "identity"
-    },
-    {
-      "text": "Glucose-6-phosphate dehydrogenase is a cytosolic enzyme that produces NADPH.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "function"
-    },
-    {
-      "text": "G6PD deficiency may cause neonatal jaundice, acute hemolysis, or severe chronic non-spherocytic hemolytic anemia.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "condition_context"
-    },
-    {
-      "text": "Two transcript variants encoding different isoforms have been found for the G6PD gene.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "classification_context"
+      "claimType": "identity",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
     "factsHash": "e2ec562624f23eaf",
-    "promptVersion": "2.0.0",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T09:49:13.917Z",
-    "retrievedAt": "2026-07-27T09:49:10.745Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:07:20.635Z",
+    "retrievedAt": "2026-08-03T16:07:19.126Z",
     "sources": [
       {
         "label": "NCBI Gene",

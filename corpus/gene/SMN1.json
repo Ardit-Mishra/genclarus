@@ -41,41 +41,30 @@
         "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=SMN1"
       }
     ],
-    "retrievedAt": "2026-07-27T09:48:51.256Z"
+    "retrievedAt": "2026-08-03T16:07:10.084Z"
   },
   "claims": [
     {
-      "text": "The SMN1 gene is associated with spinal muscular atrophy when mutated.",
+      "text": "SMN1 is a human protein-coding gene.",
       "supportingFactIds": [
-        "gene.name"
+        "gene.symbol",
+        "gene.type"
       ],
-      "claimType": "classification_context"
-    },
-    {
-      "text": "The SMN1 protein localizes to both the cytoplasm and the nucleus.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "function"
-    },
-    {
-      "text": "Multiple transcript variants encoding distinct isoforms of the SMN1 protein have been described.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
     "factsHash": "14a074e8b066ff3b",
-    "promptVersion": "2.0.0",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T09:48:54.227Z",
-    "retrievedAt": "2026-07-27T09:48:51.256Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:07:11.593Z",
+    "retrievedAt": "2026-08-03T16:07:10.084Z",
     "sources": [
       {
         "label": "NCBI Gene",

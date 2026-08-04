@@ -56,48 +56,48 @@
         "url": "https://gnomad.broadinstitute.org/variant/1-206773552-T-C?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:15:24.454Z"
+    "retrievedAt": "2026-08-03T16:11:08.169Z"
   },
   "claims": [
     {
-      "text": "The IL10 gene variant rs1800896 is a single nucleotide variant.",
+      "text": "rs1800896 is a genetic variant located in the IL10 gene.",
       "supportingFactIds": [
-        "var.type"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The frequency of the IL10 gene variant rs1800896 in the general population is 4%.",
+      "text": "In gnomAD, rs1800896 has an overall allele frequency of 40.4%.",
       "supportingFactIds": [
         "var.gnomadAf"
       ],
-      "claimType": "frequency_context"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The significance of the IL10 gene variant rs1800896 in relation to leprosy susceptibility is uncertain.",
+      "text": "In ClinVar, rs1800896 is classified as Uncertain significance (risk factor) for Leprosy, susceptibility to, 1 (0 review stars, inherited; last evaluated 2022-06-10).",
       "supportingFactIds": [
-        "var.cond.0.significance"
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
       ],
-      "claimType": "classification_context"
-    },
-    {
-      "text": "The IL10 gene variant rs1800896 has been reviewed with low confidence.",
-      "supportingFactIds": [
-        "var.cond.0.reviewStars"
-      ],
-      "claimType": "uncertainty"
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "66f8ce28e4ad33b1",
-    "promptVersion": "2.0.0",
+    "factsHash": "5a9e4504081bffbe",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:15:30.183Z",
-    "retrievedAt": "2026-07-27T10:15:24.454Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:11:09.681Z",
+    "retrievedAt": "2026-08-03T16:11:08.169Z",
     "sources": [
       {
         "label": "dbSNP",

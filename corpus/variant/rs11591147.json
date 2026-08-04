@@ -139,43 +139,135 @@
         "url": "https://gnomad.broadinstitute.org/variant/1-55039974-G-T?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:12:56.134Z"
+    "retrievedAt": "2026-08-03T16:10:01.204Z"
   },
   "claims": [
     {
-      "text": "The PCSK9 gene variant rs11591147 is a missense variant with the protein change p.Arg46Leu.",
+      "text": "rs11591147 is a genetic variant located in the PCSK9 gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.consequence",
-        "var.protein"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The PCSK9 gene variant rs11591147 is a single nucleotide variant.",
-      "supportingFactIds": [
-        "var.type"
-      ],
-      "claimType": "identity"
-    },
-    {
-      "text": "The PCSK9 gene variant rs11591147 has a frequency of 1.4% in gnomAD.",
+      "text": "In gnomAD, rs11591147 has an overall allele frequency of 1.4%.",
       "supportingFactIds": [
         "var.gnomadAf"
       ],
-      "claimType": "frequency_context"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs11591147 is classified as Likely benign for Hypercholesterolemia, autosomal dominant, 3 (FHCL3) (2 review stars, germline; last evaluated 2025-02-02).",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs11591147 is classified as Benign for Familial hypercholesterolemia (2 review stars, germline; last evaluated 2022-07-01).",
+      "supportingFactIds": [
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars",
+        "var.cond.1.origin",
+        "var.cond.1.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs11591147 is classified as Benign for Hypercholesterolemia, familial, 1 (2 review stars, germline; last evaluated 2019-08-22).",
+      "supportingFactIds": [
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars",
+        "var.cond.2.origin",
+        "var.cond.2.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs11591147 is classified as Benign for Hypobetalipoproteinemia (1 review star, germline; last evaluated 2018-03-06).",
+      "supportingFactIds": [
+        "var.cond.3.significance",
+        "var.cond.3.reviewStars",
+        "var.cond.3.origin",
+        "var.cond.3.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs11591147 is classified as Benign for Cardiovascular phenotype (1 review star, germline; last evaluated 2017-03-16).",
+      "supportingFactIds": [
+        "var.cond.4.significance",
+        "var.cond.4.reviewStars",
+        "var.cond.4.origin",
+        "var.cond.4.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs11591147 is classified as Pathogenic for Hypocholesterolemia (0 review stars, germline).",
+      "supportingFactIds": [
+        "var.cond.5.significance",
+        "var.cond.5.reviewStars",
+        "var.cond.5.origin"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs11591147 is classified as association for Low density lipoprotein cholesterol level quantitative trait locus 1 (LDLCQ1) (0 review stars, germline; last evaluated 2008-03-20).",
+      "supportingFactIds": [
+        "var.cond.6.significance",
+        "var.cond.6.reviewStars",
+        "var.cond.6.origin",
+        "var.cond.6.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs11591147 is classified as Likely benign for not provided (2 review stars, germline; last evaluated 2024-11-22).",
+      "supportingFactIds": [
+        "var.cond.7.significance",
+        "var.cond.7.reviewStars",
+        "var.cond.7.origin",
+        "var.cond.7.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs11591147 is classified as Benign for not specified (1 review star, germline; last evaluated 2017-05-08).",
+      "supportingFactIds": [
+        "var.cond.8.significance",
+        "var.cond.8.reviewStars",
+        "var.cond.8.origin",
+        "var.cond.8.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "6dffa21ff2bc44fb",
-    "promptVersion": "2.0.0",
+    "factsHash": "f7d724765e99ad3f",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:13:00.844Z",
-    "retrievedAt": "2026-07-27T10:12:56.134Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:10:02.718Z",
+    "retrievedAt": "2026-08-03T16:10:01.204Z",
     "sources": [
       {
         "label": "dbSNP",

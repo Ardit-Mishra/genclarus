@@ -98,45 +98,92 @@
         "url": "https://gnomad.broadinstitute.org/variant/7-95308134-T-C?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:13:17.304Z"
+    "retrievedAt": "2026-08-03T16:10:05.395Z"
   },
   "claims": [
     {
-      "text": "The PON1 gene variant rs662 is a missense variant leading to the p.Gln192Arg protein change.",
+      "text": "rs662 is a genetic variant located in the PON1 gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.consequence",
-        "var.protein"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The PON1 gene variant rs662 is a single nucleotide variant with a frequency of 41% in the gnomAD population.",
+      "text": "In gnomAD, rs662 has an overall allele frequency of 40.7%.",
       "supportingFactIds": [
-        "var.type",
         "var.gnomadAf"
       ],
-      "claimType": "identity"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The PON1 gene variant rs662 is classified as a risk factor for susceptibility to coronary artery disease and coronary artery spasm 2.",
+      "text": "In ClinVar, rs662 is classified as Risk factor for Coronary artery disease, susceptibility to (0 review stars, germline; last evaluated 2011-01-01).",
       "supportingFactIds": [
         "var.cond.0.significance",
-        "var.cond.1.significance"
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs662 is classified as Risk factor for Coronary artery spasm 2, susceptibility to (0 review stars, germline; last evaluated 2011-01-01).",
+      "supportingFactIds": [
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars",
+        "var.cond.1.origin",
+        "var.cond.1.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs662 is classified as Benign for PON1-related disorder (0 review stars, germline; last evaluated 2019-10-18).",
+      "supportingFactIds": [
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars",
+        "var.cond.2.origin",
+        "var.cond.2.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs662 is classified as association for Enzyme activity finding (0 review stars, germline; last evaluated 2015-05-18).",
+      "supportingFactIds": [
+        "var.cond.3.significance",
+        "var.cond.3.reviewStars",
+        "var.cond.3.origin",
+        "var.cond.3.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs662 is classified as Benign for not provided (2 review stars, germline; last evaluated 2019-05-23).",
+      "supportingFactIds": [
+        "var.cond.4.significance",
+        "var.cond.4.reviewStars",
+        "var.cond.4.origin",
+        "var.cond.4.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "b24237c3d11c7fa3",
-    "promptVersion": "2.0.0",
+    "factsHash": "c1ad6388cf3f651d",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:13:21.650Z",
-    "retrievedAt": "2026-07-27T10:13:17.304Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:10:06.904Z",
+    "retrievedAt": "2026-08-03T16:10:05.395Z",
     "sources": [
       {
         "label": "dbSNP",

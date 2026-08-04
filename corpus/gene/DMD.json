@@ -41,43 +41,30 @@
         "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=DMD"
       }
     ],
-    "retrievedAt": "2026-07-27T09:48:47.674Z"
+    "retrievedAt": "2026-08-03T16:07:08.245Z"
   },
   "claims": [
     {
-      "text": "The DMD gene encodes a large protein containing an N-terminal actin-binding domain and multiple spectrin repeats.",
+      "text": "DMD is a human protein-coding gene.",
       "supportingFactIds": [
         "gene.symbol",
-        "gene.summary"
+        "gene.type"
       ],
-      "claimType": "function"
-    },
-    {
-      "text": "DMD gene deletions, duplications, and point mutations may cause Duchenne muscular dystrophy, Becker muscular dystrophy, or cardiomyopathy.",
-      "supportingFactIds": [
-        "gene.summary"
-      ],
-      "claimType": "classification_context"
-    },
-    {
-      "text": "The DMD gene spans a genomic range of greater than 2 Mb on chromosome X.",
-      "supportingFactIds": [
-        "gene.location",
-        "gene.summary"
-      ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
     "factsHash": "08eca702fc6f5e5c",
-    "promptVersion": "2.0.0",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T09:48:50.976Z",
-    "retrievedAt": "2026-07-27T09:48:47.674Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:07:09.749Z",
+    "retrievedAt": "2026-08-03T16:07:08.245Z",
     "sources": [
       {
         "label": "NCBI Gene",

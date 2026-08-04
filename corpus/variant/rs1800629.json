@@ -139,54 +139,136 @@
         "url": "https://gnomad.broadinstitute.org/variant/6-31575254-G-A?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:15:12.070Z"
+    "retrievedAt": "2026-08-03T16:11:02.534Z"
   },
   "claims": [
     {
-      "text": "The TNF gene variant rs1800629 is associated with drug response to etanercept, with a review confidence of 3 of 4 stars.",
+      "text": "rs1800629 is a genetic variant located in the TNF gene.",
       "supportingFactIds": [
-        "var.cond.0.significance",
-        "var.cond.0.reviewStars",
-        "var.cond.0.origin"
+        "var.gene"
       ],
-      "claimType": "classification_context"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The TNF gene variant rs1800629 is a risk factor for Systemic lupus erythematosus, with a review confidence of 0 of 4 stars.",
-      "supportingFactIds": [
-        "var.cond.1.significance",
-        "var.cond.1.reviewStars",
-        "var.cond.1.origin"
-      ],
-      "claimType": "classification_context"
-    },
-    {
-      "text": "The TNF gene variant rs1800629 is a risk factor for Inherited susceptibility to asthma, with a review confidence of 0 of 4 stars.",
-      "supportingFactIds": [
-        "var.cond.2.significance",
-        "var.cond.2.reviewStars",
-        "var.cond.2.origin"
-      ],
-      "claimType": "classification_context"
-    },
-    {
-      "text": "The TNF gene variant rs1800629 has a frequency of 15% in the gnomAD population.",
+      "text": "In gnomAD, rs1800629 has an overall allele frequency of 14.7%.",
       "supportingFactIds": [
         "var.gnomadAf"
       ],
-      "claimType": "frequency_context"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1800629 is classified as Drug response (efficacy) for etanercept response (3 review stars, germline; last evaluated 2021-03-24).",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1800629 is classified as Risk factor for Systemic lupus erythematosus, susceptibility to (0 review stars, germline; last evaluated 2006-03-01).",
+      "supportingFactIds": [
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars",
+        "var.cond.1.origin",
+        "var.cond.1.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1800629 is classified as Risk factor for Inherited susceptibility to asthma (0 review stars, germline; last evaluated 2006-03-01).",
+      "supportingFactIds": [
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars",
+        "var.cond.2.origin",
+        "var.cond.2.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1800629 is classified as Risk factor for Malaria, cerebral, susceptibility to (0 review stars, germline; last evaluated 2006-03-01).",
+      "supportingFactIds": [
+        "var.cond.3.significance",
+        "var.cond.3.reviewStars",
+        "var.cond.3.origin",
+        "var.cond.3.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1800629 is classified as Risk factor for HUMAN IMMUNODEFICIENCY VIRUS DEMENTIA, SUSCEPTIBILITY TO (0 review stars, germline; last evaluated 2006-03-01).",
+      "supportingFactIds": [
+        "var.cond.4.significance",
+        "var.cond.4.reviewStars",
+        "var.cond.4.origin",
+        "var.cond.4.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1800629 is classified as Risk factor for Psoriatic arthritis, susceptibility to (0 review stars, germline; last evaluated 2006-03-01).",
+      "supportingFactIds": [
+        "var.cond.5.significance",
+        "var.cond.5.reviewStars",
+        "var.cond.5.origin",
+        "var.cond.5.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1800629 is classified as Uncertain significance for Susceptibility to severe coronavirus disease (COVID-19) due to high plasma levels of TNF, TNFR, and/or TNFR4 (0 review stars, germline; last evaluated 2021-08-07).",
+      "supportingFactIds": [
+        "var.cond.6.significance",
+        "var.cond.6.reviewStars",
+        "var.cond.6.origin",
+        "var.cond.6.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1800629 is classified as Uncertain significance for Susceptibility to severe coronavirus disease (COVID-19) (0 review stars, germline; last evaluated 2021-02-09).",
+      "supportingFactIds": [
+        "var.cond.7.significance",
+        "var.cond.7.reviewStars",
+        "var.cond.7.origin",
+        "var.cond.7.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1800629 is classified as Affects for Endometriosis (0 review stars, somatic; last evaluated 2021-10-20).",
+      "supportingFactIds": [
+        "var.cond.8.significance",
+        "var.cond.8.reviewStars",
+        "var.cond.8.origin",
+        "var.cond.8.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "73186b6ebc69f287",
-    "promptVersion": "2.0.0",
+    "factsHash": "62eb3a9a857a62dc",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:15:16.817Z",
-    "retrievedAt": "2026-07-27T10:15:12.070Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:11:04.047Z",
+    "retrievedAt": "2026-08-03T16:11:02.534Z",
     "sources": [
       {
         "label": "dbSNP",

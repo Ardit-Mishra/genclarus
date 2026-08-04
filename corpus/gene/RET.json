@@ -41,53 +41,30 @@
         "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=RET"
       }
     ],
-    "retrievedAt": "2026-07-27T10:25:22.310Z"
+    "retrievedAt": "2026-08-03T16:06:18.073Z"
   },
   "claims": [
     {
-      "text": "The RET gene encodes a transmembrane receptor and member of the tyrosine protein kinase family of proteins.",
+      "text": "RET is a human protein-coding gene.",
       "supportingFactIds": [
         "gene.symbol",
-        "gene.summary"
+        "gene.type"
       ],
-      "claimType": "identity"
-    },
-    {
-      "text": "The RET proto-oncogene is a protein-coding gene located on chromosome 10.",
-      "supportingFactIds": [
-        "gene.name",
-        "gene.type",
-        "gene.location"
-      ],
-      "claimType": "identity"
-    },
-    {
-      "text": "Mutations in the RET proto-oncogene are associated with Hirschsprung disease and central hypoventilation syndrome.",
-      "supportingFactIds": [
-        "gene.name",
-        "gene.summary"
-      ],
-      "claimType": "classification_context"
-    },
-    {
-      "text": "The RET proto-oncogene can undergo oncogenic activation through both cytogenetic rearrangement and activating point mutations.",
-      "supportingFactIds": [
-        "gene.name",
-        "gene.summary"
-      ],
-      "claimType": "function"
+      "claimType": "identity",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
     "factsHash": "d4435e80f1dc76cf",
-    "promptVersion": "2.0.0",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:25:30.573Z",
-    "retrievedAt": "2026-07-27T10:25:22.310Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:06:19.579Z",
+    "retrievedAt": "2026-08-03T16:06:18.073Z",
     "sources": [
       {
         "label": "NCBI Gene",

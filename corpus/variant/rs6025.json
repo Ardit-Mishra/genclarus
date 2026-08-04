@@ -206,46 +206,193 @@
         "url": "https://gnomad.broadinstitute.org/variant/1-169549811-C-T?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:06:44.052Z"
+    "retrievedAt": "2026-08-03T16:07:59.144Z"
   },
   "claims": [
     {
-      "text": "The F5 gene variant rs6025 is associated with a drug response to hormonal contraceptives for systemic use, with a review confidence of 3 of 4 review stars.",
+      "text": "rs6025 is a genetic variant located in the F5 gene.",
+      "supportingFactIds": [
+        "var.gene"
+      ],
+      "claimType": "identity",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs6025 is classified as Drug response (toxicity) for hormonal contraceptives for systemic use response (3 review stars, germline; last evaluated 2021-03-24).",
       "supportingFactIds": [
         "var.cond.0.significance",
         "var.cond.0.reviewStars",
-        "var.cond.0.origin"
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The F5 gene variant rs6025 is classified as pathogenic for Congenital factor V deficiency, with a review confidence of 2 of 4 review stars.",
+      "text": "In ClinVar, rs6025 is classified as Pathogenic for Congenital factor V deficiency (2 review stars; last evaluated 2025-02-03).",
       "supportingFactIds": [
         "var.cond.1.significance",
-        "var.cond.1.reviewStars"
+        "var.cond.1.reviewStars",
+        "var.cond.1.lastEvaluated"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The F5 gene variant rs6025 is classified as pathogenic for Thrombophilia due to activated protein C resistance (THPH2), with a review confidence of 2 of 4 review stars.",
+      "text": "In ClinVar, rs6025 is classified as Pathogenic (low penetrance) for Thrombophilia due to activated protein C resistance (THPH2) (2 review stars, germline; last evaluated 2023-07-12).",
       "supportingFactIds": [
         "var.cond.2.significance",
         "var.cond.2.reviewStars",
-        "var.cond.2.origin"
+        "var.cond.2.origin",
+        "var.cond.2.lastEvaluated"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs6025 is classified as Pathogenic (risk factor) for Factor V deficiency (2 review stars, germline; last evaluated 2020-03-04).",
+      "supportingFactIds": [
+        "var.cond.3.significance",
+        "var.cond.3.reviewStars",
+        "var.cond.3.origin",
+        "var.cond.3.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs6025 is classified as Pathogenic for Ischemic stroke (1 review star, germline; last evaluated 2024-06-19).",
+      "supportingFactIds": [
+        "var.cond.4.significance",
+        "var.cond.4.reviewStars",
+        "var.cond.4.origin",
+        "var.cond.4.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs6025 is classified as Pathogenic for Budd-Chiari syndrome (BDCHS) (1 review star, germline; last evaluated 2024-06-19).",
+      "supportingFactIds": [
+        "var.cond.5.significance",
+        "var.cond.5.reviewStars",
+        "var.cond.5.origin",
+        "var.cond.5.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs6025 is classified as Pathogenic for Pregnancy loss, recurrent, susceptibility to, 1 (RPRGL1) (1 review star, germline; last evaluated 2024-06-19).",
+      "supportingFactIds": [
+        "var.cond.6.significance",
+        "var.cond.6.reviewStars",
+        "var.cond.6.origin",
+        "var.cond.6.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs6025 is classified as Pathogenic for Congenital factor V deficiency (1 review star, germline; last evaluated 2024-06-19).",
+      "supportingFactIds": [
+        "var.cond.7.significance",
+        "var.cond.7.reviewStars",
+        "var.cond.7.origin",
+        "var.cond.7.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs6025 is classified as Pathogenic for Inborn genetic diseases (1 review star, germline; last evaluated 2018-01-23).",
+      "supportingFactIds": [
+        "var.cond.8.significance",
+        "var.cond.8.reviewStars",
+        "var.cond.8.origin",
+        "var.cond.8.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs6025 is classified as Risk factor for Ischemic stroke (0 review stars, germline; last evaluated 2006-06-15).",
+      "supportingFactIds": [
+        "var.cond.9.significance",
+        "var.cond.9.reviewStars",
+        "var.cond.9.origin",
+        "var.cond.9.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs6025 is classified as Risk factor for Budd-Chiari syndrome, susceptibility to (0 review stars, germline; last evaluated 2006-06-15).",
+      "supportingFactIds": [
+        "var.cond.10.significance",
+        "var.cond.10.reviewStars",
+        "var.cond.10.origin",
+        "var.cond.10.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs6025 is classified as Risk factor for Pregnancy loss, recurrent, susceptibility to, 1 (RPRGL1) (0 review stars, germline; last evaluated 2006-06-15).",
+      "supportingFactIds": [
+        "var.cond.11.significance",
+        "var.cond.11.reviewStars",
+        "var.cond.11.origin",
+        "var.cond.11.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs6025 is classified as Uncertain significance for Susceptibility to severe coronavirus disease (COVID-19) due to an impaired coagulation process (0 review stars, germline; last evaluated 2021-06-29).",
+      "supportingFactIds": [
+        "var.cond.12.significance",
+        "var.cond.12.reviewStars",
+        "var.cond.12.origin",
+        "var.cond.12.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs6025 is classified as Pathogenic for not provided (2 review stars, germline; last evaluated 2025-03-04).",
+      "supportingFactIds": [
+        "var.cond.13.significance",
+        "var.cond.13.reviewStars",
+        "var.cond.13.origin",
+        "var.cond.13.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs6025 is classified as Pathogenic for not specified (1 review star, germline; last evaluated 2021-02-22).",
+      "supportingFactIds": [
+        "var.cond.14.significance",
+        "var.cond.14.reviewStars",
+        "var.cond.14.origin",
+        "var.cond.14.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "524667ab04422a99",
-    "promptVersion": "2.0.0",
+    "factsHash": "5f13eb02a589a06a",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:06:51.605Z",
-    "retrievedAt": "2026-07-27T10:06:44.052Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:08:00.655Z",
+    "retrievedAt": "2026-08-03T16:07:59.144Z",
     "sources": [
       {
         "label": "dbSNP",

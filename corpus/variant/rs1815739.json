@@ -88,56 +88,73 @@
         "url": "https://gnomad.broadinstitute.org/variant/11-66560624-C-T?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:08:38.229Z"
+    "retrievedAt": "2026-08-03T16:08:36.612Z"
   },
   "claims": [
     {
-      "text": "The ACTN3 gene variant rs1815739 is associated with pathogenic significance for sprinting performance.",
+      "text": "rs1815739 is a genetic variant located in the ACTN3 gene.",
+      "supportingFactIds": [
+        "var.gene"
+      ],
+      "claimType": "identity",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1815739 is classified as Pathogenic for Sprinting performance (0 review stars, germline; last evaluated 2008-03-01).",
       "supportingFactIds": [
         "var.cond.0.significance",
         "var.cond.0.reviewStars",
-        "var.cond.0.origin"
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The ACTN3 gene variant rs1815739 is associated with pathogenic significance for increased cold tolerance.",
+      "text": "In ClinVar, rs1815739 is classified as Pathogenic for INCREASED COLD TOLERANCE (0 review stars, germline; last evaluated 2008-03-01).",
       "supportingFactIds": [
         "var.cond.1.significance",
         "var.cond.1.reviewStars",
-        "var.cond.1.origin"
+        "var.cond.1.origin",
+        "var.cond.1.lastEvaluated"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The ACTN3 gene variant rs1815739 is associated with benign significance for ACTININ, ALPHA-3 POLYMORPHISM.",
+      "text": "In ClinVar, rs1815739 is classified as Benign for ACTININ, ALPHA-3 POLYMORPHISM (0 review stars, germline; last evaluated 2008-03-01).",
       "supportingFactIds": [
         "var.cond.2.significance",
         "var.cond.2.reviewStars",
-        "var.cond.2.origin"
+        "var.cond.2.origin",
+        "var.cond.2.lastEvaluated"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The ACTN3 gene variant rs1815739 results in a stop gained consequence and a p.Arg577Ter protein change.",
+      "text": "In ClinVar, rs1815739 is classified as Affects for Actn3 deficiency (0 review stars, germline; last evaluated 2008-03-01).",
       "supportingFactIds": [
-        "var.gene",
-        "var.consequence",
-        "var.protein"
+        "var.cond.3.significance",
+        "var.cond.3.reviewStars",
+        "var.cond.3.origin",
+        "var.cond.3.lastEvaluated"
       ],
-      "claimType": "identity"
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "484206cbd3d7cc13",
-    "promptVersion": "2.0.0",
+    "factsHash": "18daa6491fd5cd22",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:08:43.376Z",
-    "retrievedAt": "2026-07-27T10:08:38.229Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:08:38.128Z",
+    "retrievedAt": "2026-08-03T16:08:36.612Z",
     "sources": [
       {
         "label": "dbSNP",

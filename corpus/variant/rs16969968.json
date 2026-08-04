@@ -88,46 +88,80 @@
         "url": "https://gnomad.broadinstitute.org/variant/15-78590583-G-A?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:12:13.476Z"
+    "retrievedAt": "2026-08-03T16:09:50.036Z"
   },
   "claims": [
     {
-      "text": "The CHRNA5 gene variant rs16969968 is a missense variant leading to a p.Asp398Asn protein change.",
+      "text": "rs16969968 is a genetic variant located in the CHRNA5 gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.consequence",
-        "var.protein"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The CHRNA5 gene variant rs16969968 has a germline origin.",
+      "text": "In gnomAD, rs16969968 has an overall allele frequency of 24.1%.",
       "supportingFactIds": [
-        "var.cond.0.origin",
-        "var.cond.1.origin",
-        "var.cond.2.origin"
+        "var.gnomadAf"
       ],
-      "claimType": "classification_context"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The CHRNA5 gene variant rs16969968 is associated with a drug response for nicotine response - Toxicity, with a moderate level of review confidence.",
+      "text": "In ClinVar, rs16969968 is classified as Drug response (toxicity) for nicotine response (3 review stars, germline; last evaluated 2021-03-24).",
       "supportingFactIds": [
         "var.cond.0.significance",
-        "var.cond.0.reviewStars"
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
       ],
-      "claimType": "condition_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs16969968 is classified as Risk factor for Lung cancer susceptibility 2 (LNCR2) (0 review stars, germline; last evaluated 2010-07-27).",
+      "supportingFactIds": [
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars",
+        "var.cond.1.origin",
+        "var.cond.1.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs16969968 is classified as Risk factor for SMOKING AS A QUANTITATIVE TRAIT LOCUS 3 (SQTL3) (0 review stars, germline; last evaluated 2010-07-27).",
+      "supportingFactIds": [
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars",
+        "var.cond.2.origin",
+        "var.cond.2.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs16969968 is classified as Uncertain significance for Susceptibility to severe coronavirus disease (COVID-19) due to high levels of fibrinogen and C-reactive protein (0 review stars, germline).",
+      "supportingFactIds": [
+        "var.cond.3.significance",
+        "var.cond.3.reviewStars",
+        "var.cond.3.origin"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "edbb73d9c2fdf605",
-    "promptVersion": "2.0.0",
+    "factsHash": "db0d5b4967863177",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:12:18.281Z",
-    "retrievedAt": "2026-07-27T10:12:13.476Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:09:51.544Z",
+    "retrievedAt": "2026-08-03T16:09:50.036Z",
     "sources": [
       {
         "label": "dbSNP",

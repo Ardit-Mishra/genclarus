@@ -402,45 +402,398 @@
         "url": "https://gnomad.broadinstitute.org/variant/12-25245350-C-T?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:07:19.530Z"
+    "retrievedAt": "2026-08-03T16:08:07.711Z"
   },
   "claims": [
     {
-      "text": "The KRAS gene variant rs121913529 is a missense variant with a protein change of p.Gly12Asp.",
+      "text": "rs121913529 is a genetic variant located in the KRAS gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.consequence",
-        "var.protein"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The KRAS gene variant rs121913529 is classified as pathogenic for RASopathy in germline cases.",
+      "text": "In ClinVar, rs121913529 is classified as Pathogenic for RASopathy (2 review stars, germline; last evaluated 2024-10-07).",
       "supportingFactIds": [
         "var.cond.0.significance",
-        "var.cond.0.origin"
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The KRAS gene variant rs121913529 is classified as pathogenic for Linear nevus sebaceous syndrome and KRAS-related overgrowth in somatic cases, but with varying review confidence.",
+      "text": "In ClinVar, rs121913529 is classified as Pathogenic for Linear nevus sebaceous syndrome (2 review stars, somatic).",
       "supportingFactIds": [
         "var.cond.1.significance",
-        "var.cond.2.significance"
+        "var.cond.1.reviewStars",
+        "var.cond.1.origin"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs121913529 is classified as Pathogenic for KRAS-related overgrowth (1 review star, somatic; last evaluated 2024-12-27).",
+      "supportingFactIds": [
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars",
+        "var.cond.2.origin",
+        "var.cond.2.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs121913529 is classified as Pathogenic for Familial cancer of breast (1 review star, germline; last evaluated 2024-02-23).",
+      "supportingFactIds": [
+        "var.cond.3.significance",
+        "var.cond.3.reviewStars",
+        "var.cond.3.origin",
+        "var.cond.3.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs121913529 is classified as Pathogenic for Noonan syndrome 3 (NS3) (1 review star, germline; last evaluated 2024-02-23).",
+      "supportingFactIds": [
+        "var.cond.4.significance",
+        "var.cond.4.reviewStars",
+        "var.cond.4.origin",
+        "var.cond.4.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs121913529 is classified as Pathogenic for Linear nevus sebaceous syndrome (1 review star, germline; last evaluated 2024-02-23).",
+      "supportingFactIds": [
+        "var.cond.5.significance",
+        "var.cond.5.reviewStars",
+        "var.cond.5.origin",
+        "var.cond.5.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs121913529 is classified as Pathogenic for Toriello-Lacassie-Droste syndrome (1 review star, germline; last evaluated 2024-02-23).",
+      "supportingFactIds": [
+        "var.cond.6.significance",
+        "var.cond.6.reviewStars",
+        "var.cond.6.origin",
+        "var.cond.6.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs121913529 is classified as Pathogenic for Cerebral arteriovenous malformation (BAVM) (1 review star, germline; last evaluated 2024-02-23).",
+      "supportingFactIds": [
+        "var.cond.7.significance",
+        "var.cond.7.reviewStars",
+        "var.cond.7.origin",
+        "var.cond.7.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs121913529 is classified as Pathogenic for Malignant tumor of urinary bladder (1 review star, germline; last evaluated 2024-02-23).",
+      "supportingFactIds": [
+        "var.cond.8.significance",
+        "var.cond.8.reviewStars",
+        "var.cond.8.origin",
+        "var.cond.8.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs121913529 is classified as Pathogenic for Autoimmune lymphoproliferative syndrome type 4 (1 review star, germline; last evaluated 2024-02-23).",
+      "supportingFactIds": [
+        "var.cond.9.significance",
+        "var.cond.9.reviewStars",
+        "var.cond.9.origin",
+        "var.cond.9.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs121913529 is classified as Pathogenic for Acute myeloid leukemia (AML) (1 review star, germline; last evaluated 2024-02-23).",
+      "supportingFactIds": [
+        "var.cond.10.significance",
+        "var.cond.10.reviewStars",
+        "var.cond.10.origin",
+        "var.cond.10.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs121913529 is classified as Pathogenic for Cardiofaciocutaneous syndrome 2 (CFC2) (1 review star, germline; last evaluated 2024-02-23).",
+      "supportingFactIds": [
+        "var.cond.11.significance",
+        "var.cond.11.reviewStars",
+        "var.cond.11.origin",
+        "var.cond.11.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs121913529 is classified as Pathogenic for Familial pancreatic carcinoma (1 review star, germline; last evaluated 2024-02-23).",
+      "supportingFactIds": [
+        "var.cond.12.significance",
+        "var.cond.12.reviewStars",
+        "var.cond.12.origin",
+        "var.cond.12.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs121913529 is classified as Pathogenic for Gastric cancer (1 review star, germline; last evaluated 2024-02-23).",
+      "supportingFactIds": [
+        "var.cond.13.significance",
+        "var.cond.13.reviewStars",
+        "var.cond.13.origin",
+        "var.cond.13.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs121913529 is classified as Pathogenic for Lung cancer (1 review star, germline; last evaluated 2024-02-23).",
+      "supportingFactIds": [
+        "var.cond.14.significance",
+        "var.cond.14.reviewStars",
+        "var.cond.14.origin",
+        "var.cond.14.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs121913529 is classified as Pathogenic for Autoimmune lymphoproliferative syndrome type 4 (1 review star, somatic; last evaluated 2024-01-05).",
+      "supportingFactIds": [
+        "var.cond.15.significance",
+        "var.cond.15.reviewStars",
+        "var.cond.15.origin",
+        "var.cond.15.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs121913529 is classified as Pathogenic for Cerebral arteriovenous malformation (BAVM) (1 review star, somatic; last evaluated 2023-11-03).",
+      "supportingFactIds": [
+        "var.cond.16.significance",
+        "var.cond.16.reviewStars",
+        "var.cond.16.origin",
+        "var.cond.16.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs121913529 is classified as Pathogenic for Congenital Pulmonary Airway Malformations (1 review star, de novo; last evaluated 2022-07-19).",
+      "supportingFactIds": [
+        "var.cond.17.significance",
+        "var.cond.17.reviewStars",
+        "var.cond.17.origin",
+        "var.cond.17.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs121913529 is classified as Likely pathogenic for Cardiovascular phenotype (1 review star, germline; last evaluated 2022-08-22).",
+      "supportingFactIds": [
+        "var.cond.18.significance",
+        "var.cond.18.reviewStars",
+        "var.cond.18.origin",
+        "var.cond.18.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs121913529 is classified as Pathogenic for Capillary malformation-arteriovenous malformation 1 (CMAVM1) (0 review stars, somatic; last evaluated 2021-05-01).",
+      "supportingFactIds": [
+        "var.cond.19.significance",
+        "var.cond.19.reviewStars",
+        "var.cond.19.origin",
+        "var.cond.19.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs121913529 is classified as Pathogenic for Primary low grade serous adenocarcinoma of ovary (0 review stars, somatic; last evaluated 2019-11-04).",
+      "supportingFactIds": [
+        "var.cond.20.significance",
+        "var.cond.20.reviewStars",
+        "var.cond.20.origin",
+        "var.cond.20.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs121913529 is classified as Pathogenic for Carcinoma of pancreas (0 review stars, somatic; last evaluated 2019-02-07).",
+      "supportingFactIds": [
+        "var.cond.21.significance",
+        "var.cond.21.reviewStars",
+        "var.cond.21.origin",
+        "var.cond.21.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs121913529 is classified as Pathogenic for Acute myeloid leukemia (AML) (0 review stars, somatic; last evaluated 2018-03-30).",
+      "supportingFactIds": [
+        "var.cond.22.significance",
+        "var.cond.22.reviewStars",
+        "var.cond.22.origin",
+        "var.cond.22.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs121913529 is classified as Pathogenic for Juvenile myelomonocytic leukemia (JMML) (0 review stars, somatic; last evaluated 2014-08-28).",
+      "supportingFactIds": [
+        "var.cond.23.significance",
+        "var.cond.23.reviewStars",
+        "var.cond.23.origin",
+        "var.cond.23.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs121913529 is classified as Pathogenic for Non-small cell lung carcinoma (NSCLC) (0 review stars, somatic; last evaluated 2014-08-28).",
+      "supportingFactIds": [
+        "var.cond.24.significance",
+        "var.cond.24.reviewStars",
+        "var.cond.24.origin",
+        "var.cond.24.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs121913529 is classified as Pathogenic for Ovarian neoplasm (0 review stars, somatic; last evaluated 2014-08-28).",
+      "supportingFactIds": [
+        "var.cond.25.significance",
+        "var.cond.25.reviewStars",
+        "var.cond.25.origin",
+        "var.cond.25.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs121913529 is classified as Pathogenic for Nevus sebaceous (0 review stars, somatic; last evaluated 2012-10-25).",
+      "supportingFactIds": [
+        "var.cond.26.significance",
+        "var.cond.26.reviewStars",
+        "var.cond.26.origin",
+        "var.cond.26.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs121913529 is classified as Pathogenic for Epidermal nevus (0 review stars, somatic; last evaluated 2012-06-10).",
+      "supportingFactIds": [
+        "var.cond.27.significance",
+        "var.cond.27.reviewStars",
+        "var.cond.27.origin",
+        "var.cond.27.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs121913529 is classified as Pathogenic for Gastric cancer (0 review stars, somatic; last evaluated 2012-06-10).",
+      "supportingFactIds": [
+        "var.cond.28.significance",
+        "var.cond.28.reviewStars",
+        "var.cond.28.origin",
+        "var.cond.28.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs121913529 is classified as Likely pathogenic for Vascular Tumors Including Pyogenic Granuloma (0 review stars, somatic; last evaluated 2015-02-19).",
+      "supportingFactIds": [
+        "var.cond.29.significance",
+        "var.cond.29.reviewStars",
+        "var.cond.29.origin",
+        "var.cond.29.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs121913529 is classified as not provided for Encephalocraniocutaneous lipomatosis (ECCL) (0 review stars, somatic).",
+      "supportingFactIds": [
+        "var.cond.30.significance",
+        "var.cond.30.reviewStars",
+        "var.cond.30.origin"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs121913529 is classified as association for Endometrial hyperplasia without atypia (0 review stars, somatic).",
+      "supportingFactIds": [
+        "var.cond.31.significance",
+        "var.cond.31.reviewStars",
+        "var.cond.31.origin"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs121913529 is classified as association for Atypical endometrial hyperplasia (0 review stars, somatic).",
+      "supportingFactIds": [
+        "var.cond.32.significance",
+        "var.cond.32.reviewStars",
+        "var.cond.32.origin"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs121913529 is classified as Pathogenic for not provided (2 review stars; last evaluated 2023-11-03).",
+      "supportingFactIds": [
+        "var.cond.33.significance",
+        "var.cond.33.reviewStars",
+        "var.cond.33.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "1126ce247462471b",
-    "promptVersion": "2.0.0",
+    "factsHash": "6f1f958dfea981dd",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:07:23.272Z",
-    "retrievedAt": "2026-07-27T10:07:19.530Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:08:09.220Z",
+    "retrievedAt": "2026-08-03T16:08:07.711Z",
     "sources": [
       {
         "label": "dbSNP",

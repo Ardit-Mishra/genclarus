@@ -104,55 +104,84 @@
         "url": "https://gnomad.broadinstitute.org/variant/2-38071060-G-G?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:18:04.046Z"
+    "retrievedAt": "2026-08-03T16:12:12.981Z"
   },
   "claims": [
     {
-      "text": "The CYP1B1 gene variant rs1056836 is a missense variant.",
+      "text": "rs1056836 is a genetic variant located in the CYP1B1 gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.consequence",
-        "var.type"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The CYP1B1 gene variant rs1056836 results in a p.Val432Leu protein change.",
-      "supportingFactIds": [
-        "var.gene",
-        "var.protein"
-      ],
-      "claimType": "function"
-    },
-    {
-      "text": "The CYP1B1 gene variant rs1056836 is classified as Benign for Congenital glaucoma, Anterior segment dysgenesis 6 (ASGD6), and Glaucoma 3A.",
+      "text": "In ClinVar, rs1056836 is classified as Benign for Congenital glaucoma (1 review star, germline; last evaluated 2025-02-03).",
       "supportingFactIds": [
         "var.cond.0.significance",
-        "var.cond.1.significance",
-        "var.cond.2.significance"
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The CYP1B1 gene variant rs1056836 has a low review confidence for its classifications.",
+      "text": "In ClinVar, rs1056836 is classified as Benign for Anterior segment dysgenesis 6 (ASGD6) (1 review star, germline; last evaluated 2021-07-30).",
       "supportingFactIds": [
-        "var.cond.0.reviewStars",
+        "var.cond.1.significance",
         "var.cond.1.reviewStars",
-        "var.cond.2.reviewStars"
+        "var.cond.1.origin",
+        "var.cond.1.lastEvaluated"
       ],
-      "claimType": "uncertainty"
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1056836 is classified as Benign for Glaucoma 3A (1 review star, germline; last evaluated 2021-07-30).",
+      "supportingFactIds": [
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars",
+        "var.cond.2.origin",
+        "var.cond.2.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1056836 is classified as Likely benign for not provided (2 review stars, germline; last evaluated 2016-10-01).",
+      "supportingFactIds": [
+        "var.cond.3.significance",
+        "var.cond.3.reviewStars",
+        "var.cond.3.origin",
+        "var.cond.3.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1056836 is classified as Benign for not specified (2 review stars, germline; last evaluated 2021-12-03).",
+      "supportingFactIds": [
+        "var.cond.4.significance",
+        "var.cond.4.reviewStars",
+        "var.cond.4.origin",
+        "var.cond.4.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "b426d2b6905e4572",
-    "promptVersion": "2.0.0",
+    "factsHash": "fdb1f7e5681a3fd0",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:18:07.419Z",
-    "retrievedAt": "2026-07-27T10:18:04.046Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:12:14.486Z",
+    "retrievedAt": "2026-08-03T16:12:12.981Z",
     "sources": [
       {
         "label": "dbSNP",

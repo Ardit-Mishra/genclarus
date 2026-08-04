@@ -78,50 +78,70 @@
         "url": "https://gnomad.broadinstitute.org/variant/4-88139962-C-T?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:17:15.565Z"
+    "retrievedAt": "2026-08-03T16:11:51.893Z"
   },
   "claims": [
     {
-      "text": "The ABCG2 gene variant rs2231137 is a missense variant with a protein change of p.Val12Met.",
+      "text": "rs2231137 is a genetic variant located in the ABCG2 gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.consequence",
-        "var.protein"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The ABCG2 gene variant rs2231137 is classified as likely benign for ABCG2-related disorder.",
-      "supportingFactIds": [
-        "var.cond.0.significance"
-      ],
-      "claimType": "classification_context"
-    },
-    {
-      "text": "The ABCG2 gene variant rs2231137 affects BLOOD GROUP, JUNIOR SYSTEM (JR) and is classified as Affects.",
-      "supportingFactIds": [
-        "var.cond.2.significance"
-      ],
-      "claimType": "classification_context"
-    },
-    {
-      "text": "The ABCG2 gene variant rs2231137 has a frequency of 7.8% in gnomAD.",
+      "text": "In gnomAD, rs2231137 has an overall allele frequency of 7.8%.",
       "supportingFactIds": [
         "var.gnomadAf"
       ],
-      "claimType": "frequency_context"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs2231137 is classified as Likely benign for ABCG2-related disorder (0 review stars, germline; last evaluated 2021-07-21).",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs2231137 is classified as association for Uric acid concentration, serum, quantitative trait locus 1 (UAQTL1) (0 review stars, germline; last evaluated 2012-01-15).",
+      "supportingFactIds": [
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars",
+        "var.cond.1.origin",
+        "var.cond.1.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs2231137 is classified as Affects for BLOOD GROUP, JUNIOR SYSTEM (JR) (0 review stars, germline; last evaluated 2012-01-15).",
+      "supportingFactIds": [
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars",
+        "var.cond.2.origin",
+        "var.cond.2.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "42fb6e63b469592b",
-    "promptVersion": "2.0.0",
+    "factsHash": "43d5797befbb221f",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:17:19.258Z",
-    "retrievedAt": "2026-07-27T10:17:15.565Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:11:53.405Z",
+    "retrievedAt": "2026-08-03T16:11:51.893Z",
     "sources": [
       {
         "label": "dbSNP",

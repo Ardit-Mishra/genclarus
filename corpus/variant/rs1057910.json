@@ -127,56 +127,125 @@
         "url": "https://gnomad.broadinstitute.org/variant/10-94981296-A-C?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:10:40.700Z"
+    "retrievedAt": "2026-08-03T16:09:20.100Z"
   },
   "claims": [
     {
-      "text": "The CYP2C9 gene variant rs1057910 is a missense variant with a p.Ile359Leu protein change.",
+      "text": "rs1057910 is a genetic variant located in the CYP2C9 gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.consequence",
-        "var.protein"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The CYP2C9 gene variant rs1057910 has a germline origin.",
+      "text": "In gnomAD, rs1057910 has an overall allele frequency of 4.9%.",
       "supportingFactIds": [
-        "var.cond.0.origin",
-        "var.cond.1.origin",
-        "var.cond.2.origin"
+        "var.gnomadAf"
       ],
-      "claimType": "classification_context"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The CYP2C9 gene variant rs1057910 is associated with a drug response to Flurbiprofen, Lesinurad, and Piroxicam.",
+      "text": "In ClinVar, rs1057910 is classified as Drug response for Flurbiprofen response (1 review star, germline; last evaluated 2019-02-11).",
       "supportingFactIds": [
         "var.cond.0.significance",
-        "var.cond.1.significance",
-        "var.cond.2.significance"
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
       ],
-      "claimType": "condition_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The CYP2C9 gene variant rs1057910 has a low review confidence for its classifications.",
+      "text": "In ClinVar, rs1057910 is classified as Drug response for Lesinurad response (1 review star, germline; last evaluated 2019-02-11).",
       "supportingFactIds": [
-        "var.cond.0.reviewStars",
+        "var.cond.1.significance",
         "var.cond.1.reviewStars",
-        "var.cond.2.reviewStars"
+        "var.cond.1.origin",
+        "var.cond.1.lastEvaluated"
       ],
-      "claimType": "uncertainty"
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1057910 is classified as Drug response for Piroxicam response (1 review star, germline; last evaluated 2019-02-11).",
+      "supportingFactIds": [
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars",
+        "var.cond.2.origin",
+        "var.cond.2.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1057910 is classified as Drug response for Phenytoin response (0 review stars, germline; last evaluated 2020-09-24).",
+      "supportingFactIds": [
+        "var.cond.3.significance",
+        "var.cond.3.reviewStars",
+        "var.cond.3.origin",
+        "var.cond.3.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1057910 is classified as Drug response for Glipizide response (0 review stars, germline; last evaluated 2012-06-15).",
+      "supportingFactIds": [
+        "var.cond.4.significance",
+        "var.cond.4.reviewStars",
+        "var.cond.4.origin",
+        "var.cond.4.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1057910 is classified as Drug response for Warfarin response (0 review stars, germline; last evaluated 2012-06-15).",
+      "supportingFactIds": [
+        "var.cond.5.significance",
+        "var.cond.5.reviewStars",
+        "var.cond.5.origin",
+        "var.cond.5.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1057910 is classified as Drug response for Tolbutamide response (0 review stars, germline; last evaluated 2010-12-30).",
+      "supportingFactIds": [
+        "var.cond.6.significance",
+        "var.cond.6.reviewStars",
+        "var.cond.6.origin",
+        "var.cond.6.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1057910 is classified as other for not provided (1 review star, germline; last evaluated 2015-07-10).",
+      "supportingFactIds": [
+        "var.cond.7.significance",
+        "var.cond.7.reviewStars",
+        "var.cond.7.origin",
+        "var.cond.7.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "7988739b76fbaf5f",
-    "promptVersion": "2.0.0",
+    "factsHash": "616703cdae9ac7bc",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:10:45.358Z",
-    "retrievedAt": "2026-07-27T10:10:40.700Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:09:21.606Z",
+    "retrievedAt": "2026-08-03T16:09:20.100Z",
     "sources": [
       {
         "label": "dbSNP",

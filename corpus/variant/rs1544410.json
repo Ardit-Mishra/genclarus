@@ -77,34 +77,70 @@
         "url": "https://gnomad.broadinstitute.org/variant/12-47846052-C-T?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:13:34.380Z"
+    "retrievedAt": "2026-08-03T16:10:11.548Z"
   },
   "claims": [
     {
-      "text": "The VDR gene variant rs1544410 is a single nucleotide variant.",
+      "text": "rs1544410 is a genetic variant located in the VDR gene.",
       "supportingFactIds": [
-        "var.type"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The VDR gene variant rs1544410 has a frequency of 34% in the general population.",
+      "text": "In gnomAD, rs1544410 has an overall allele frequency of 33.9%.",
       "supportingFactIds": [
         "var.gnomadAf"
       ],
-      "claimType": "frequency_context"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1544410 is classified as Benign for Periodontitis (0 review stars, germline; last evaluated 2023-04-20).",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1544410 is classified as Likely risk allele (risk factor) for Hepatocellular carcinoma (HCC) (0 review stars, germline; last evaluated 2022-07-14).",
+      "supportingFactIds": [
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars",
+        "var.cond.1.origin",
+        "var.cond.1.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1544410 is classified as Benign for not provided (1 review star, germline; last evaluated 2019-03-29).",
+      "supportingFactIds": [
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars",
+        "var.cond.2.origin",
+        "var.cond.2.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "fd093b286fc9ff8d",
-    "promptVersion": "2.0.0",
+    "factsHash": "8f0f0d1ecc64e94b",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:13:37.947Z",
-    "retrievedAt": "2026-07-27T10:13:34.380Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:10:13.071Z",
+    "retrievedAt": "2026-08-03T16:10:11.548Z",
     "sources": [
       {
         "label": "dbSNP",

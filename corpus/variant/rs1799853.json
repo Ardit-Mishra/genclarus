@@ -125,36 +125,114 @@
         "url": "https://gnomad.broadinstitute.org/variant/10-94942290-C-T?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:10:28.721Z"
+    "retrievedAt": "2026-08-03T16:09:18.063Z"
   },
   "claims": [
     {
-      "text": "The CYP2C9 gene variant rs1799853 is a missense variant with a p.Arg144Cys protein change.",
+      "text": "rs1799853 is a genetic variant located in the CYP2C9 gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.consequence",
-        "var.protein"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The CYP2C9 gene variant rs1799853 has a frequency of 8.2% in the general population.",
+      "text": "In gnomAD, rs1799853 has an overall allele frequency of 8.2%.",
       "supportingFactIds": [
         "var.gnomadAf"
       ],
-      "claimType": "frequency_context"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1799853 is classified as Drug response for Flurbiprofen response (1 review star, germline; last evaluated 2019-02-11).",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1799853 is classified as Drug response for Lesinurad response (1 review star, germline; last evaluated 2019-02-11).",
+      "supportingFactIds": [
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars",
+        "var.cond.1.origin",
+        "var.cond.1.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1799853 is classified as Drug response for Piroxicam response (1 review star, germline; last evaluated 2019-02-11).",
+      "supportingFactIds": [
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars",
+        "var.cond.2.origin",
+        "var.cond.2.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1799853 is classified as Drug response for Phenytoin response (0 review stars, germline; last evaluated 2020-09-24).",
+      "supportingFactIds": [
+        "var.cond.3.significance",
+        "var.cond.3.reviewStars",
+        "var.cond.3.origin",
+        "var.cond.3.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1799853 is classified as Drug response for Warfarin response (0 review stars, germline; last evaluated 2018-08-09).",
+      "supportingFactIds": [
+        "var.cond.4.significance",
+        "var.cond.4.reviewStars",
+        "var.cond.4.origin",
+        "var.cond.4.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1799853 is classified as Likely benign for not specified (1 review star, germline; last evaluated 2018-03-09).",
+      "supportingFactIds": [
+        "var.cond.5.significance",
+        "var.cond.5.reviewStars",
+        "var.cond.5.origin",
+        "var.cond.5.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs1799853 is classified as other for not provided (1 review star, germline; last evaluated 2015-07-09).",
+      "supportingFactIds": [
+        "var.cond.6.significance",
+        "var.cond.6.reviewStars",
+        "var.cond.6.origin",
+        "var.cond.6.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "9516a02b5c9f5959",
-    "promptVersion": "2.0.0",
+    "factsHash": "397eae09edb2826a",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:10:34.802Z",
-    "retrievedAt": "2026-07-27T10:10:28.721Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:09:19.571Z",
+    "retrievedAt": "2026-08-03T16:09:18.063Z",
     "sources": [
       {
         "label": "dbSNP",

@@ -141,36 +141,134 @@
         "url": "https://gnomad.broadinstitute.org/variant/1-97082391-T-A?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:11:14.889Z"
+    "retrievedAt": "2026-08-03T16:09:30.393Z"
   },
   "claims": [
     {
-      "text": "The DPYD gene variant rs67376798 is a missense variant with the protein change p.Asp949Val.",
+      "text": "rs67376798 is a genetic variant located in the DPYD gene.",
       "supportingFactIds": [
-        "var.gene",
-        "var.consequence",
-        "var.protein"
+        "var.gene"
       ],
-      "claimType": "identity"
+      "claimType": "identity",
+      "origin": "deterministic"
     },
     {
-      "text": "The DPYD gene variant rs67376798 is a single nucleotide variant.",
+      "text": "In gnomAD, rs67376798 has an overall allele frequency of 0.32%.",
       "supportingFactIds": [
-        "var.type"
+        "var.gnomadAf"
       ],
-      "claimType": "identity"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs67376798 is classified as Drug response (toxicity) for fluorouracil response (3 review stars, germline; last evaluated 2021-05-24).",
+      "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars",
+        "var.cond.0.origin",
+        "var.cond.0.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs67376798 is classified as Drug response for fluorouracil response - Other (3 review stars, germline; last evaluated 2021-05-24).",
+      "supportingFactIds": [
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars",
+        "var.cond.1.origin",
+        "var.cond.1.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs67376798 is classified as Drug response (toxicity) for capecitabine response (3 review stars, germline; last evaluated 2021-05-24).",
+      "supportingFactIds": [
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars",
+        "var.cond.2.origin",
+        "var.cond.2.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs67376798 is classified as Drug response (toxicity) for tegafur response (3 review stars, germline; last evaluated 2021-05-24).",
+      "supportingFactIds": [
+        "var.cond.3.significance",
+        "var.cond.3.reviewStars",
+        "var.cond.3.origin",
+        "var.cond.3.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs67376798 is classified as Likely pathogenic for Dihydropyrimidine dehydrogenase deficiency (DPYDD) (2 review stars; last evaluated 2024-07-11).",
+      "supportingFactIds": [
+        "var.cond.4.significance",
+        "var.cond.4.reviewStars",
+        "var.cond.4.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs67376798 is classified as Pathogenic for DPYD-related disorder (1 review star, paternal; last evaluated 2024-01-01).",
+      "supportingFactIds": [
+        "var.cond.5.significance",
+        "var.cond.5.reviewStars",
+        "var.cond.5.origin",
+        "var.cond.5.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs67376798 is classified as Uncertain significance for Inborn genetic diseases (1 review star, germline; last evaluated 2016-11-08).",
+      "supportingFactIds": [
+        "var.cond.6.significance",
+        "var.cond.6.reviewStars",
+        "var.cond.6.origin",
+        "var.cond.6.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs67376798 is classified as other for Fluorouracil response (0 review stars, germline; last evaluated 2016-02-29).",
+      "supportingFactIds": [
+        "var.cond.7.significance",
+        "var.cond.7.reviewStars",
+        "var.cond.7.origin",
+        "var.cond.7.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs67376798 is classified as Conflicting interpretations for not provided (1 review star; last evaluated 2024-08-01).",
+      "supportingFactIds": [
+        "var.cond.8.significance",
+        "var.cond.8.reviewStars",
+        "var.cond.8.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "c32aaf521c54dceb",
-    "promptVersion": "2.0.0",
+    "factsHash": "088d8ba9dd0ae706",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:11:19.617Z",
-    "retrievedAt": "2026-07-27T10:11:14.889Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:09:31.905Z",
+    "retrievedAt": "2026-08-03T16:09:30.393Z",
     "sources": [
       {
         "label": "dbSNP",

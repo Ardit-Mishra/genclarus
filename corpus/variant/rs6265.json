@@ -88,51 +88,73 @@
         "url": "https://gnomad.broadinstitute.org/variant/11-27658369-C-T?dataset=gnomad_r4"
       }
     ],
-    "retrievedAt": "2026-07-27T10:09:43.987Z"
+    "retrievedAt": "2026-08-03T16:09:04.907Z"
   },
   "claims": [
     {
-      "text": "The BDNF-AS gene variant rs6265 is a missense variant with a p.Val66Met protein change.",
+      "text": "In gnomAD, rs6265 has an overall allele frequency of 15.2%.",
       "supportingFactIds": [
-        "var.gene",
-        "var.consequence",
-        "var.protein"
+        "var.gnomadAf"
       ],
-      "claimType": "identity"
+      "claimType": "frequency_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The BDNF-AS gene variant rs6265 has a germline origin.",
+      "text": "In ClinVar, rs6265 is classified as not provided for Memory impairment, susceptibility to (0 review stars, germline; last evaluated 2025-04-03).",
       "supportingFactIds": [
+        "var.cond.0.significance",
+        "var.cond.0.reviewStars",
         "var.cond.0.origin",
-        "var.cond.2.origin"
+        "var.cond.0.lastEvaluated"
       ],
-      "claimType": "classification_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The BDNF-AS gene variant rs6265 is associated with susceptibility to memory impairment.",
+      "text": "In ClinVar, rs6265 is classified as Likely risk allele (risk factor) for Post-traumatic stress disorder (PTSD) (0 review stars, inherited; last evaluated 2023-12-11).",
       "supportingFactIds": [
-        "var.cond.0.significance"
+        "var.cond.1.significance",
+        "var.cond.1.reviewStars",
+        "var.cond.1.origin",
+        "var.cond.1.lastEvaluated"
       ],
-      "claimType": "condition_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
     },
     {
-      "text": "The BDNF-AS gene variant rs6265 is a likely risk allele for post-traumatic stress disorder (PTSD).",
+      "text": "In ClinVar, rs6265 is classified as Benign for not provided (2 review stars, germline; last evaluated 2025-02-03).",
       "supportingFactIds": [
-        "var.cond.1.significance"
+        "var.cond.2.significance",
+        "var.cond.2.reviewStars",
+        "var.cond.2.origin",
+        "var.cond.2.lastEvaluated"
       ],
-      "claimType": "condition_context"
+      "claimType": "classification_context",
+      "origin": "deterministic"
+    },
+    {
+      "text": "In ClinVar, rs6265 is classified as Benign for not specified (2 review stars, germline; last evaluated 2013-06-18).",
+      "supportingFactIds": [
+        "var.cond.3.significance",
+        "var.cond.3.reviewStars",
+        "var.cond.3.origin",
+        "var.cond.3.lastEvaluated"
+      ],
+      "claimType": "classification_context",
+      "origin": "deterministic"
     }
   ],
-  "aiAvailable": true,
+  "explanationState": "deterministic_only",
+  "aiAvailable": false,
   "fallbackReason": null,
   "provenance": {
-    "factsHash": "d0940e550c8cb791",
-    "promptVersion": "2.0.0",
+    "factsHash": "cd56825d520771b4",
+    "promptVersion": "4.0.1",
     "modelId": "meta/llama-3.1-8b-instruct",
-    "schemaVersion": "2.0.0",
-    "corpusSchemaVersion": "1.0.0",
-    "generatedAt": "2026-07-27T10:09:51.232Z",
-    "retrievedAt": "2026-07-27T10:09:43.987Z",
+    "schemaVersion": "3.0.0",
+    "corpusSchemaVersion": "2.0.0",
+    "generatedAt": "2026-08-03T16:09:06.425Z",
+    "retrievedAt": "2026-08-03T16:09:04.907Z",
     "sources": [
       {
         "label": "dbSNP",
