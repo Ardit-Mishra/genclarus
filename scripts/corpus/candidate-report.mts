@@ -9,7 +9,6 @@ import { readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { CandidateCorpusStore } from "../../src/lib/corpus/candidate-store";
 import { validateCandidateRecord, validateCandidateManifest } from "../../src/lib/corpus/candidate-validate";
-import { CONTAINED_GENE_IDS, CONTAINED_VARIANT_IDS } from "../../src/lib/corpus/containment";
 import { buildEvidence } from "../../src/lib/evidence";
 import { claimRejectionReason } from "../../src/lib/grounding";
 import { computeExplanationState } from "../../src/lib/explanation-state";
@@ -24,8 +23,10 @@ const CAND = join(CWD, "corpus-candidate");
 const cand = new CandidateCorpusStore(CAND);
 
 function readJson<T>(p: string): T | null { try { return JSON.parse(readFileSync(p, "utf-8")) as T; } catch { return null; } }
-function isContained(kind: string, id: string): boolean {
-  return (kind === "gene" ? CONTAINED_GENE_IDS : CONTAINED_VARIANT_IDS).has(id);
+// Containment was lifted 2026-08-03 after the full re-audit, so production serves every committed
+// record as-is. Kept as a stable predicate in case a future incident re-introduces a contained set.
+function isContained(_kind: string, _id: string): boolean {
+  return false;
 }
 
 type Row = {
