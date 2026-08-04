@@ -7,11 +7,11 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { CandidateCorpusStore, CandidateRootError } from "./candidate-store";
 import { FileCorpusStore } from "./file-store";
-import { CONTAINMENT_FALLBACK_REASON } from "./containment";
 import { CORPUS_SCHEMA_VERSION, type CorpusRecordV2, type CorpusRecord } from "./types";
 
-// rs4149056 is a CURRENTLY-CONTAINED id (the F-01 Blocker). In the candidate store it must surface its
-// CORRECTED claims; in the production store it must still be withheld.
+// rs4149056 was the F-01 Blocker (the incident's fabricated-ancestry record). The candidate store
+// surfaces its corrected claims exactly as regenerated; the production store now serves them too
+// (containment lifted 2026-08-03 after the full re-audit).
 const CONTAINED_ID = "rs4149056";
 
 function v2(id: string): CorpusRecordV2 {
@@ -58,17 +58,17 @@ describe("CandidateCorpusStore — isolation guarantees", () => {
     await rm(prodRoot, { recursive: true, force: true });
   });
 
-  it("a contained id carries CORRECTED candidate claims in the raw candidate store (no containment)", async () => {
+  it("surfaces the corrected candidate claims from the raw candidate store", async () => {
     const r = await cand.getVariant(CONTAINED_ID);
     expect(r?.claims?.[0]?.text).toBe("corrected candidate claim");
     expect(r?.claims?.[0]?.origin).toBe("deterministic");
-    expect(r?.fallbackReason).not.toBe(CONTAINMENT_FALLBACK_REASON);
+    expect(r?.fallbackReason).toBeNull();
   });
 
-  it("the production FileCorpusStore still WITHHOLDS that same id", async () => {
+  it("the production FileCorpusStore serves that id's claims as committed (containment lifted)", async () => {
     const r = await prodStore.getVariant(CONTAINED_ID);
-    expect(r?.claims).toBeNull();
-    expect(r?.fallbackReason).toBe(CONTAINMENT_FALLBACK_REASON);
+    expect(r?.claims?.[0]?.text).toBe("corrected candidate claim");
+    expect(r?.fallbackReason).toBeNull();
   });
 
   it("candidate and production roots cannot be confused — a 'corpus' root is refused", () => {

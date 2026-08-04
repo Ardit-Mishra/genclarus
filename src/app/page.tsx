@@ -10,7 +10,7 @@ const StructureViewer = dynamic(() => import("@/components/StructureViewer"), { 
 
 type Source = { label: string; url: string };
 
-// Why the AI narrative is missing. The source data is always complete either way — the notice
+// Why the explanation is missing. The source data is always complete either way — the notice
 // exists so an absent explanation reads as a known, bounded condition rather than a broken page.
 type FallbackReason =
   | "not_configured"
@@ -164,15 +164,16 @@ function OriginTag({ origin }: { origin: string }) {
 }
 
 const FALLBACK_COPY: Record<FallbackReason, string> = {
-  not_configured: "AI synthesis activates once the model key is configured.",
+  not_configured:
+    "No plain-language explanation is available for this record. Everything below comes straight from the source databases and is unaffected.",
   provider_unavailable:
-    "The AI explanation is temporarily unavailable. Everything below comes straight from the source databases and is unaffected.",
+    "The explanation is temporarily unavailable. Everything below comes straight from the source databases and is unaffected.",
   provider_no_content:
-    "The model returned no explanation this time. Everything below comes straight from the source databases and is unaffected.",
+    "No plain-language explanation could be generated for this record. Everything below comes straight from the source databases and is unaffected.",
   failed_grounding:
-    "The AI summary was withheld because it could not be fully verified against the source records. Everything below comes straight from the source databases and is unaffected.",
+    "The explanation was withheld because it could not be fully verified against the source records. Everything below comes straight from the source databases and is unaffected.",
   withheld_review:
-    "AI explanations for variants are paused while we review their accuracy against the source records. Everything below comes straight from the source databases and is unaffected.",
+    "The explanation for this record is under review. Everything below comes straight from the source databases and is unaffected.",
 };
 
 // A claim's cited source maps to the canonical human-readable record among the sources the API
@@ -209,8 +210,8 @@ function FallbackNotice({ reason }: { reason: FallbackReason | null }) {
   );
 }
 
-// How long the narrative may take before we say so. A free-tier model regularly needs 15s+, and
-// silence that long reads as breakage.
+// How long the narrative request may take before we surface a "taking longer" note — a safety net
+// for a slow network on the separate explanation request; the deterministic explanation is fast.
 const SLOW_NARRATIVE_MS = 10_000;
 
 function NarrativePending() {
@@ -347,8 +348,8 @@ export default function Home() {
         return;
       }
       setResult(data as Result);
-      // Stage 2 — the narrative, which may take many seconds on a free model tier. It arrives
-      // when it arrives; the verified result above never waits for it.
+      // Stage 2 — the grounded explanation, fetched separately so the verified result above never
+      // waits on it. It arrives when it arrives.
       void loadNarrative(variant ? "variant" : "gene", t);
       // Stage 2b — AlphaMissense pathogenicity for a missense variant. Also progressive: the
       // ~megabyte annotation CSV is read server-side, so the verified facts never wait on it.
@@ -403,7 +404,7 @@ export default function Home() {
     <main className="mx-auto flex w-full max-w-2xl flex-1 flex-col px-6 py-16 sm:py-24">
       <header className="text-center">
         <span className="font-mono text-xs uppercase tracking-[0.2em] text-teal-700 dark:text-teal-400">
-          Bioinformatics · AI
+          Bioinformatics · Grounded
         </span>
         <h1 className="mt-3 text-4xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 sm:text-5xl">
           Genclarus

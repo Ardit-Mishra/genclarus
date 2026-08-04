@@ -104,55 +104,47 @@ describe("POST /api/explain — request validation", () => {
 });
 
 describe("POST /api/explain — the model only ever sees server-derived facts", () => {
-  it("builds the prompt from the upstream record and returns grounded, cited claims", async () => {
+  it("returns deterministic, cited identity claims for a gene — the model is never called", async () => {
     const nim = stubAll();
     const body = await (await POST(post({ type: "gene", identifier: "BRCA1" }))).json();
 
-    expect(body.aiAvailable).toBe(true);
+    expect(body.aiAvailable).toBe(false); // Stage-5 FINAL: no LLM in the factual path
+    expect(body.state).toBe("deterministic_only");
     expect(Array.isArray(body.claims)).toBe(true);
-    expect(body.claims[0].text).toContain("nuclear phosphoprotein");
-    // Each grounded claim carries its provenance chips.
-    expect(body.claims[0].citations).toContainEqual({ source: "mygene", field: "summary" });
-
-    const sent = nim[0].messages.map((m) => m.content).join("\n");
-    // Straight out of the MyGene fixture — proof the facts were re-derived server-side.
-    expect(sent).toContain("nuclear phosphoprotein");
-    expect(sent).toContain("BRCA1 DNA repair associated");
-  });
-
-  // CONTAINMENT (incident 2026-07-28): dynamic variant narratives are paused — a valid rsID returns
-  // source-only (claims withheld) and the model is never called. Restore the generation tests here
-  // once the validator is hardened and containment is lifted.
-  it("withholds the narrative for a valid variant without calling the model (containment)", async () => {
-    const nim = stubAll(VARIANT_CLAIMS);
-    const body = await (await POST(post({ type: "variant", identifier: "rs6025" }))).json();
-    expect(body.claims).toBeNull();
-    expect(body.aiAvailable).toBe(false);
-    expect(body.fallbackReason).toBe("withheld_review");
-    // The model was never invoked for the withheld variant.
+    // Deterministic identity built from the server-derived facts; no invented function/location.
+    expect(body.claims[0].text).toContain("BRCA1 is a human");
+    expect(body.claims[0].text).toContain("gene");
+    // Provenance chip resolves from a fact the claim cites (re-derived server-side, not from the browser).
+    expect(body.claims[0].citations).toContainEqual({ source: "mygene", field: "gene" });
+    // No LLM is consulted at all.
     expect(nim).toHaveLength(0);
   });
 
-  it("still validates the rsID under containment — an invalid variant id 400s", async () => {
+  it("returns deterministic, cited variant claims for a valid rsID — the model is never called", async () => {
+    // Dynamic variant narratives were restored once the explainer became fully deterministic
+    // (Stage-5 FINAL): a variant renders clinical/identity claims from typed facts, no LLM.
+    const nim = stubAll(VARIANT_CLAIMS);
+    const body = await (await POST(post({ type: "variant", identifier: "rs6025" }))).json();
+    expect(body.aiAvailable).toBe(false);
+    expect(body.state).toBe("deterministic_only");
+    expect(Array.isArray(body.claims)).toBe(true);
+    expect(body.claims.length).toBeGreaterThan(0);
+    // Deterministic — no LLM consulted for the variant narrative either.
+    expect(nim).toHaveLength(0);
+  });
+
+  it("still validates the rsID — an invalid variant id 400s", async () => {
     stubAll();
     expect((await POST(post({ type: "variant", identifier: "BRCA1" }))).status).toBe(400);
   });
 
-  it("withholds an ungrounded model answer — clinical claims never come from the LLM (gene path)", async () => {
-    // The model tries to assert a clinical classification citing only a gene identity/summary fact.
-    const invented = JSON.stringify({
-      claims: [
-        {
-          text: "The BRCA1 gene is pathogenic for Cystic Fibrosis.",
-          supportingFactIds: ["gene.name", "gene.summary"],
-          claimType: "classification_context",
-        },
-      ],
-    });
-    stubAll(invented);
+  it("a gene explanation carries only deterministic identity claims — never a clinical classification", async () => {
+    // Structurally impossible now: genes render one identity statement from render-gene; there is no
+    // LLM to inject a classification, and the deterministic gene renderer emits no clinical claim.
+    stubAll();
     const body = await (await POST(post({ type: "gene", identifier: "BRCA1" }))).json();
-    expect(body.claims).toBeNull();
-    expect(body.fallbackReason).toBe("failed_grounding");
+    expect(body.claims).not.toBeNull();
+    expect(body.claims.every((c: { claimType: string }) => c.claimType === "identity")).toBe(true);
   });
 
   it("propagates a lookup failure rather than explaining a gene that does not exist", async () => {
@@ -165,47 +157,22 @@ describe("POST /api/explain — the model only ever sees server-derived facts", 
 });
 
 describe("POST /api/explain — caching", () => {
-  it("serves a repeat explanation from cache without calling the model again", async () => {
+  it("serves a repeat gene explanation from cache; the model is never called either time", async () => {
     const nim = stubAll();
     const first = await (await POST(post({ type: "gene", identifier: "BRCA1" }))).json();
     const second = await (await POST(post({ type: "gene", identifier: "BRCA1" }))).json();
     expect(first.cached).toBe(false);
     expect(second.cached).toBe(true);
     expect(second.claims).toEqual(first.claims);
-    expect(nim).toHaveLength(1);
+    expect(nim).toHaveLength(0); // deterministic — no LLM call on either request
   });
 
-  it("never caches a failure", async () => {
-    let call = 0;
-    globalThis.fetch = vi.fn(async (input: RequestInfo | URL) => {
-      const url = String(input);
-      if (url.includes("mygene.info")) return jsonResponse({ hits: brca1MyGene });
-      call++;
-      // Fail first, succeed after — a cached failure would make this permanent.
-      return call === 1
-        ? jsonResponse({ error: "bad request" }, 400)
-        : jsonResponse({ choices: [{ message: { content: GENE_CLAIMS } }] });
-    }) as typeof fetch;
-
-    const first = await (await POST(post({ type: "gene", identifier: "BRCA1" }))).json();
-    expect(first.claims).toBeNull();
-    const second = await (await POST(post({ type: "gene", identifier: "BRCA1" }))).json();
-    expect(second.claims[0].text).toContain("nuclear phosphoprotein");
-  });
-
-  it("reports the fallback reason without exposing internals", async () => {
-    globalThis.fetch = vi.fn(async (input: RequestInfo | URL) => {
-      if (String(input).includes("mygene.info")) return jsonResponse({ hits: brca1MyGene });
-      return jsonResponse({ error: "rate limited" }, 429);
-    }) as typeof fetch;
+  it("does not leak provider/transport internals in a gene response", async () => {
+    stubAll();
     const body = await (await POST(post({ type: "gene", identifier: "BRCA1" }))).json();
-    expect(body.claims).toBeNull();
-    expect(body.fallbackReason).toBe("provider_unavailable");
-    // The client learns the narrative is missing — not that we were rate limited, nor anything
-    // else about how we talk to the provider. (meta.modelId is deliberate provenance: it says
-    // which model wrote a narrative, which is a credibility feature, not a leak.)
+    // meta.modelId is deliberate provenance; failureCategory/attempts/transport details are never exposed.
     expect(body).not.toHaveProperty("failureCategory");
     expect(body).not.toHaveProperty("attempts");
-    expect(JSON.stringify(body)).not.toMatch(/rate_limited|429|integrate\.api/i);
+    expect(JSON.stringify(body)).not.toMatch(/rate_limited|integrate\.api/i);
   });
 });

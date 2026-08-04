@@ -9,6 +9,7 @@
 import { readJsonBody, RequestValidationError, jsonError } from "@/lib/request";
 import {
   getGeneFacts,
+  getVariantFacts,
   normalizeGeneSymbol,
   normalizeRsid,
   FactsError,
@@ -52,31 +53,15 @@ export async function POST(request: Request) {
   }
 
   try {
-    // CONTAINMENT (incident 2026-07-28 — grounding validator gap). Dynamic variant narratives are
-    // paused: QA Layer C found numeric/qualifier fidelity defects in generated variant explanations
-    // (e.g. a 10x frequency error; an uncurated LOC… gene identity), the same class the validator
-    // does not catch. Until the validator is hardened we withhold the AI sentence for live variant
-    // lookups and serve facts/classifications/sources only — matching the corpus-record containment.
-    // Genes, which passed Layer C, are unaffected. normalizeRsid still runs first so an invalid rsID
-    // 400s exactly as before. See docs/qa/INCIDENT-2026-07-28-grounding.md.
-    if (parsed.type === "variant") {
-      normalizeRsid(parsed.identifier);
-      return Response.json({
-        kind: "variant",
-        claims: null,
-        aiAvailable: false,
-        fallbackReason: "withheld_review",
-        state: "source_only",
-        cached: false,
-        meta: {
-          promptVersion: PROMPT_VERSION,
-          modelId: MODEL_ID,
-          schemaVersion: OUTPUT_SCHEMA_VERSION,
-        },
-      });
-    }
-
-    const facts = await getGeneFacts(normalizeGeneSymbol(parsed.identifier));
+    // Both kinds run through the SAME deterministic explanation path. The 2026-07-28 grounding
+    // incident's variant-narrative pause was lifted once the explainer was made fully deterministic
+    // (clinical/identity claims are rendered from typed facts, never written by a model) and cleared
+    // re-audit — so a variant narrative can no longer carry a numeric/qualifier fidelity defect.
+    // normalizeRsid runs inside getVariantFacts, so an invalid rsID 400s exactly as before.
+    const facts =
+      parsed.type === "gene"
+        ? await getGeneFacts(normalizeGeneSymbol(parsed.identifier))
+        : await getVariantFacts(normalizeRsid(parsed.identifier));
 
     const { claims, aiAvailable, fallbackReason, cached, state } = await cachedExplain(facts);
 

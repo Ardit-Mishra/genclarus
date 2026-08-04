@@ -1,12 +1,10 @@
-// CandidateCorpusStore — reads RAW Stage-4 candidate artifacts for generation reports + re-audit ONLY
-// (preflight item 1). Three hard guarantees, all enforced structurally:
-//   1. It reads only from a candidate root (default `corpus-candidate/`).
-//   2. It NEVER applies applyContainment() — the audit must see the corrected candidate claims even
-//      for currently-contained ids (containment is a PRODUCTION-view concern, not a data concern).
-//   3. It CANNOT be pointed at the live `corpus/` directory — the constructor rejects a root whose
+// CandidateCorpusStore — reads RAW candidate artifacts for generation reports + re-audit ONLY.
+// Two hard guarantees, both enforced structurally:
+//   1. It reads only from a candidate root (default `corpus-candidate/`), exactly as written by the
+//      regen — the audit always sees the freshly generated claims, never a production projection.
+//   2. It CANNOT be pointed at the live `corpus/` directory — the constructor rejects a root whose
 //      basename is "corpus", so a candidate report can never silently read production artifacts.
-// The production FileCorpusStore is untouched and still withholds contained ids. This store is used
-// ONLY by candidate tooling; no production route imports it.
+// Used ONLY by candidate/re-audit tooling; no production route imports it.
 
 import { readFile } from "node:fs/promises";
 import { basename, join, resolve } from "node:path";
@@ -52,8 +50,7 @@ export class CandidateCorpusStore {
     this.root = resolve(root);
   }
 
-  // Raw candidate record — NO containment applied (deliberately: the audit sees corrected claims even
-  // for contained ids). Returns the strict v2 shape as written by the regen.
+  // Raw candidate record, exactly as written by the regen — the strict v2 shape the audit sees.
   async getGene(symbol: string): Promise<CorpusRecordV2 | null> {
     const id = safeNormalize(normalizeGeneSymbol, symbol);
     if (!id) return null;
