@@ -104,8 +104,9 @@ to an external index, and it keeps the project at $0 with no new service.
   by rank rather than raw score, since BM25 (unbounded) and cosine similarity (`[-1, 1]`) live on
   incomparable scales.
 - **Index build** — `npm run retrieval:build-index` reads the corpus manifest, embeds every record,
-  and writes the committed `corpus/retrieval-index.json` (reproducible: re-running over an unchanged
-  corpus with Ollama reachable regenerates the same document text and vectors).
+  and writes the committed `corpus/retrieval-index.json`. Reproducible in structure and document-text
+  coverage (same corpus in, same doc set and shape out) — embedding vectors can drift by float
+  precision between Ollama runs, so a rebuild is not expected to byte-match the committed file.
 
 **Retrieval evaluation is a separate measurement from generation quality** (`npm run
 measure:retrieval`): a 20-query hand-written golden set, each a natural-language paraphrase checked

@@ -48,8 +48,15 @@ async function load(): Promise<LoadedIndex> {
 }
 
 // Cached per process; test suites that swap RETRIEVAL_INDEX_PATH should call clearIndexCache().
+// Only a resolved load is cached — a rejected load (e.g. a transient fs hiccup) clears itself so
+// the next call retries instead of replaying the same failure forever.
 export function getRetrievalIndex(): Promise<LoadedIndex> {
-  if (!cached) cached = load();
+  if (!cached) {
+    cached = load().catch((err) => {
+      cached = null;
+      throw err;
+    });
+  }
   return cached;
 }
 
