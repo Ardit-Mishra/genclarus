@@ -8,6 +8,7 @@
 
 import { safeFetch } from "@/lib/http";
 import { jsonError } from "@/lib/request";
+import { rateLimited, RATE_LIMITS } from "@/lib/rate-limit";
 
 export const dynamic = "force-dynamic";
 
@@ -23,6 +24,9 @@ const ALLOWED_STRUCTURE_HOSTS = new Set([
 const MAX_STRUCTURE_BYTES = 8 * 1024 * 1024; // 8 MB — generous for a single predicted-model PDB file
 
 export async function GET(request: Request) {
+  const limited = rateLimited(request, RATE_LIMITS.proxy);
+  if (limited) return limited;
+
   const target = new URL(request.url).searchParams.get("url");
   if (!target) return jsonError(400, "Missing url parameter.");
 

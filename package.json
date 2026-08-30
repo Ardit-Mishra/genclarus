@@ -11,8 +11,10 @@
     "test": "vitest run",
     "validate": "vitest run --config scripts/validation/vitest.config.ts",
     "measure:grounding": "vitest run --config scripts/validation/grounding.config.ts",
+    "measure:retrieval": "vitest run --config scripts/validation/retrieval.config.ts",
     "warm": "node scripts/warm-cache.mjs",
-    "corpus:generate": "node --env-file=.env.local --import tsx scripts/corpus/generate.ts"
+    "corpus:generate": "node --env-file=.env.local --import tsx scripts/corpus/generate.ts",
+    "retrieval:build-index": "node --import tsx scripts/retrieval/build-index.ts"
   },
   "dependencies": {
     "3dmol": "^2.5.5",

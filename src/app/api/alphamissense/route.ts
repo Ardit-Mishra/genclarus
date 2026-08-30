@@ -5,10 +5,14 @@
 
 import { resolveAlphaMissense } from "@/lib/alphamissense";
 import { jsonError } from "@/lib/request";
+import { rateLimited, RATE_LIMITS } from "@/lib/rate-limit";
 
 export const dynamic = "force-dynamic";
 
 export async function POST(request: Request) {
+  const limited = rateLimited(request, RATE_LIMITS.lookup);
+  if (limited) return limited;
+
   let uniprot: unknown;
   let proteinChange: unknown;
   try {

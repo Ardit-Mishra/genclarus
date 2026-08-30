@@ -5,6 +5,7 @@
 import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
 import { POST } from "./route";
 import { clearFactCaches } from "@/lib/facts";
+import { clearRateLimitState } from "@/lib/rate-limit";
 import { rs6025Clinvar, rs1000000Dbsnp } from "@/test/fixtures/sources";
 
 const realFetch = globalThis.fetch;
@@ -38,6 +39,7 @@ beforeEach(() => {
   // This route is now facts-only; the model is never involved. Clear the fact cache so one
   // test's lookup cannot satisfy the next test's request.
   clearFactCaches();
+  clearRateLimitState(); // otherwise this suite's own request volume could self-trip the limiter
   delete process.env.NVIDIA_API_KEY;
 });
 

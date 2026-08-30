@@ -17,6 +17,7 @@ import {
 import { cachedExplain } from "@/lib/cached-explain";
 import { buildEvidence, claimCitations, type EvidenceFact } from "@/lib/evidence";
 import { PROMPT_VERSION, MODEL_ID, OUTPUT_SCHEMA_VERSION } from "@/lib/version";
+import { rateLimited, RATE_LIMITS } from "@/lib/rate-limit";
 
 export const dynamic = "force-dynamic";
 // Generation genuinely needs ~36s on this model, and the platform's default function ceiling is
@@ -44,6 +45,9 @@ function parseExplainBody(body: unknown): ExplainRequest {
 }
 
 export async function POST(request: Request) {
+  const limited = rateLimited(request, RATE_LIMITS.explain);
+  if (limited) return limited;
+
   let parsed: ExplainRequest;
   try {
     parsed = parseExplainBody(await readJsonBody(request));

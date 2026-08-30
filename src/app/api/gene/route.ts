@@ -5,6 +5,7 @@
 import { readJsonBody, extractSingleField, RequestValidationError, jsonError } from "@/lib/request";
 import { getGeneFacts, normalizeGeneSymbol, FactsError } from "@/lib/facts";
 import { PROMPT_VERSION, MODEL_ID, OUTPUT_SCHEMA_VERSION } from "@/lib/version";
+import { rateLimited, RATE_LIMITS } from "@/lib/rate-limit";
 
 export const dynamic = "force-dynamic";
 
@@ -12,6 +13,9 @@ const DISCLAIMER =
   "Educational information only — not medical advice, diagnosis, or a substitute for a healthcare professional or genetic counselor.";
 
 export async function POST(request: Request) {
+  const limited = rateLimited(request, RATE_LIMITS.lookup);
+  if (limited) return limited;
+
   let symbol: string;
   try {
     const body = await readJsonBody(request);

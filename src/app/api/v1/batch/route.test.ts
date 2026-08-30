@@ -3,10 +3,11 @@
 // PublicRecord shape the single-record /api/v1/{gene,variant}/[id] routes return, and malformed/
 // oversized bodies are rejected with 400 before any corpus read.
 
-import { describe, it, expect } from "vitest";
+import { describe, it, expect, beforeEach } from "vitest";
 import { POST } from "./route";
 import { GET as getGene } from "../gene/[symbol]/route";
 import { GET as getVariant } from "../variant/[rsid]/route";
+import { clearRateLimitState } from "@/lib/rate-limit";
 
 function post(body: unknown, contentType = "application/json"): Request {
   return new Request("https://genclarus.com/api/v1/batch", {
@@ -15,6 +16,10 @@ function post(body: unknown, contentType = "application/json"): Request {
     body: typeof body === "string" ? body : JSON.stringify(body),
   });
 }
+
+beforeEach(() => {
+  clearRateLimitState(); // otherwise this suite's own request volume could self-trip the limiter
+});
 
 describe("POST /api/v1/batch — request validation", () => {
   it("rejects a non-JSON content type with 415", async () => {

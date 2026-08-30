@@ -59,3 +59,8 @@ graphify-out/
 
 # local Claude Code state + agent worktrees — never published to the public repo
 .claude/
+
+# Tri-AI continuity: runtime is authoritative GLOBALLY (~/.claude/continuity/runtime/).
+# Never mirror runtime into the repo; this guards against an accidental local mirror.
+# NOTE: .ai/runtime/ only — the .ai/tri-ai.json onboarding marker stays tracked.
+.ai/runtime/

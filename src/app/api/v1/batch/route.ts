@@ -17,6 +17,7 @@
 import { corpusStore } from "@/lib/corpus";
 import { toPublicRecord, type PublicRecord } from "@/lib/corpus/view";
 import { readJsonBody, jsonError, RequestValidationError } from "@/lib/request";
+import { rateLimited, RATE_LIMITS } from "@/lib/rate-limit";
 
 export const dynamic = "force-dynamic";
 
@@ -67,6 +68,9 @@ async function lookup(id: string): Promise<BatchResult> {
 }
 
 export async function POST(request: Request) {
+  const limited = rateLimited(request, RATE_LIMITS.batch);
+  if (limited) return limited;
+
   let ids: string[];
   try {
     const body = await readJsonBody(request);

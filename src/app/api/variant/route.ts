@@ -5,6 +5,7 @@
 import { readJsonBody, extractSingleField, RequestValidationError, jsonError } from "@/lib/request";
 import { getVariantFacts, normalizeRsid, FactsError } from "@/lib/facts";
 import { PROMPT_VERSION, MODEL_ID, OUTPUT_SCHEMA_VERSION } from "@/lib/version";
+import { rateLimited, RATE_LIMITS } from "@/lib/rate-limit";
 
 export const dynamic = "force-dynamic";
 
@@ -13,6 +14,9 @@ const DISCLAIMER =
   "Educational information only — not medical advice, a diagnosis, or a clinical interpretation. A variant's significance can be uncertain, conflicting, or dependent on your full clinical and family context. Consult a qualified genetics professional or genetic counselor before drawing any conclusion.";
 
 export async function POST(request: Request) {
+  const limited = rateLimited(request, RATE_LIMITS.lookup);
+  if (limited) return limited;
+
   let rsid: string;
   try {
     const body = await readJsonBody(request);

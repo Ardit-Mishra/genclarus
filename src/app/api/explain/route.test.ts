@@ -7,6 +7,7 @@ import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
 import { POST } from "./route";
 import { clearFactCaches } from "@/lib/facts";
 import { clearExplanationCache } from "@/lib/explain";
+import { clearRateLimitState } from "@/lib/rate-limit";
 import { brca1MyGene, rs6025Clinvar } from "@/test/fixtures/sources";
 
 const realFetch = globalThis.fetch;
@@ -61,6 +62,7 @@ function stubAll(completion = GENE_CLAIMS) {
 beforeEach(() => {
   clearFactCaches();
   clearExplanationCache();
+  clearRateLimitState(); // otherwise this suite's own request volume could self-trip the limiter
   process.env.NVIDIA_API_KEY = "test-key";
 });
 

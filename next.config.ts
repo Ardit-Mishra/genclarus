@@ -43,6 +43,9 @@ const nextConfig: NextConfig = {
   // production despite working locally. This pins corpus/** into that one route's bundle.
   outputFileTracingIncludes: {
     "/api/v1/batch": ["./corpus/**"],
+    // /api/search reads the committed retrieval index (corpus/retrieval-index.json) from disk at
+    // request time via a dynamic path, same tracing gap as /api/v1/batch above.
+    "/api/search": ["./corpus/retrieval-index.json"],
   },
   async headers() {
     const shared = [
