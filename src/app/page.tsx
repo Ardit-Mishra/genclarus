@@ -741,6 +741,21 @@ export default function Home() {
       )}
 
       <footer className="mt-auto pt-16 text-center font-mono text-xs text-zinc-400">
+        <p className="mb-2">
+          <Link
+            href="/validation"
+            className="text-zinc-500 underline-offset-2 hover:text-teal-700 hover:underline dark:hover:text-teal-400"
+          >
+            How this is validated
+          </Link>
+          {" · "}
+          <Link
+            href="/developers"
+            className="text-zinc-500 underline-offset-2 hover:text-teal-700 hover:underline dark:hover:text-teal-400"
+          >
+            Developers
+          </Link>
+        </p>
         Data: MyGene.info · MyVariant.info · ClinVar · Built by{" "}
         <a
           href="https://github.com/Ardit-Mishra"

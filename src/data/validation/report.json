@@ -1,0 +1,383 @@
+{
+  "publishedAt": "2026-08-31T06:08:46.881Z",
+  "provenance": {
+    "generatedAt": "2026-08-31T06:08:11.285Z",
+    "cases": [
+      {
+        "id": "BRCA1",
+        "kind": "gene",
+        "evidenceCount": 13,
+        "renderedCount": 1,
+        "shippedCount": 1,
+        "droppedCount": 0
+      },
+      {
+        "id": "TP53",
+        "kind": "gene",
+        "evidenceCount": 10,
+        "renderedCount": 1,
+        "shippedCount": 1,
+        "droppedCount": 0
+      },
+      {
+        "id": "CFTR",
+        "kind": "gene",
+        "evidenceCount": 12,
+        "renderedCount": 1,
+        "shippedCount": 1,
+        "droppedCount": 0
+      },
+      {
+        "id": "MALAT1",
+        "kind": "gene",
+        "evidenceCount": 11,
+        "renderedCount": 1,
+        "shippedCount": 1,
+        "droppedCount": 0
+      },
+      {
+        "id": "DDX11L1",
+        "kind": "gene",
+        "evidenceCount": 4,
+        "renderedCount": 1,
+        "shippedCount": 1,
+        "droppedCount": 0
+      },
+      {
+        "id": "LINC02825",
+        "kind": "gene",
+        "evidenceCount": 3,
+        "renderedCount": 1,
+        "shippedCount": 1,
+        "droppedCount": 0
+      },
+      {
+        "id": "F5",
+        "kind": "gene",
+        "evidenceCount": 10,
+        "renderedCount": 1,
+        "shippedCount": 1,
+        "droppedCount": 0
+      },
+      {
+        "id": "rs6025",
+        "kind": "variant",
+        "evidenceCount": 63,
+        "renderedCount": 16,
+        "shippedCount": 16,
+        "droppedCount": 0
+      },
+      {
+        "id": "rs334",
+        "kind": "variant",
+        "evidenceCount": 139,
+        "renderedCount": 38,
+        "shippedCount": 38,
+        "droppedCount": 0
+      },
+      {
+        "id": "rs1801133",
+        "kind": "variant",
+        "evidenceCount": 36,
+        "renderedCount": 11,
+        "shippedCount": 11,
+        "droppedCount": 0
+      },
+      {
+        "id": "rs1799983",
+        "kind": "variant",
+        "evidenceCount": 57,
+        "renderedCount": 15,
+        "shippedCount": 15,
+        "droppedCount": 0
+      },
+      {
+        "id": "rs121913529",
+        "kind": "variant",
+        "evidenceCount": 135,
+        "renderedCount": 35,
+        "shippedCount": 35,
+        "droppedCount": 0
+      },
+      {
+        "id": "rs429358",
+        "kind": "variant",
+        "evidenceCount": 54,
+        "renderedCount": 15,
+        "shippedCount": 15,
+        "droppedCount": 0
+      },
+      {
+        "id": "rs7412",
+        "kind": "variant",
+        "evidenceCount": 38,
+        "renderedCount": 11,
+        "shippedCount": 11,
+        "droppedCount": 0
+      },
+      {
+        "id": "rs1042713",
+        "kind": "variant",
+        "evidenceCount": 9,
+        "renderedCount": 3,
+        "shippedCount": 3,
+        "droppedCount": 0
+      },
+      {
+        "id": "rs2066844",
+        "kind": "variant",
+        "evidenceCount": 43,
+        "renderedCount": 12,
+        "shippedCount": 12,
+        "droppedCount": 0
+      },
+      {
+        "id": "rs80357906",
+        "kind": "variant",
+        "evidenceCount": 67,
+        "renderedCount": 18,
+        "shippedCount": 18,
+        "droppedCount": 0
+      },
+      {
+        "id": "rs113993960",
+        "kind": "variant",
+        "evidenceCount": 57,
+        "renderedCount": 16,
+        "shippedCount": 16,
+        "droppedCount": 0
+      },
+      {
+        "id": "rs4988235",
+        "kind": "variant",
+        "evidenceCount": 7,
+        "renderedCount": 2,
+        "shippedCount": 2,
+        "droppedCount": 0
+      },
+      {
+        "id": "rs1000000",
+        "kind": "variant",
+        "evidenceCount": 2,
+        "renderedCount": 1,
+        "shippedCount": 0,
+        "droppedCount": 1
+      },
+      {
+        "id": "rs28934578",
+        "kind": "variant",
+        "evidenceCount": 86,
+        "renderedCount": 25,
+        "shippedCount": 25,
+        "droppedCount": 0
+      },
+      {
+        "id": "rs121918472",
+        "kind": "variant",
+        "evidenceCount": 37,
+        "renderedCount": 10,
+        "shippedCount": 10,
+        "droppedCount": 0
+      },
+      {
+        "id": "rs1815739",
+        "kind": "variant",
+        "evidenceCount": 20,
+        "renderedCount": 5,
+        "shippedCount": 5,
+        "droppedCount": 0
+      },
+      {
+        "id": "rs1051730",
+        "kind": "variant",
+        "evidenceCount": 15,
+        "renderedCount": 5,
+        "shippedCount": 5,
+        "droppedCount": 0
+      }
+    ],
+    "casesErrored": 0,
+    "evidenceFacts": 928,
+    "claimsRendered": 245,
+    "claimsShipped": 244,
+    "claimsDropped": 1,
+    "unboundShipped": 0,
+    "llmAuthored": 0,
+    "citationsResolved": 1,
+    "droppedByReason": {
+      "uncurated_identity": 1
+    }
+  },
+  "retrieval": {
+    "generatedAt": "2026-08-30T15:34:05.231Z",
+    "total": 20,
+    "recallAtK": 0.95,
+    "k": 10,
+    "mrr": 0.7750000000000001,
+    "retrievalFailureRate": 0.05,
+    "semanticUsedCount": 20,
+    "semanticUsedRate": 1,
+    "queries": [
+      {
+        "query": "the sickle cell mutation",
+        "relevantIds": [
+          "rs334"
+        ],
+        "rankOfFirstRelevant": 1,
+        "hit": true
+      },
+      {
+        "query": "variant that causes resistance to activated protein C",
+        "relevantIds": [
+          "rs6025"
+        ],
+        "rankOfFirstRelevant": 2,
+        "hit": true
+      },
+      {
+        "query": "why some adults can digest milk without discomfort",
+        "relevantIds": [
+          "rs4988235"
+        ],
+        "rankOfFirstRelevant": null,
+        "hit": false
+      },
+      {
+        "query": "breast cancer tumor suppressor gene",
+        "relevantIds": [
+          "BRCA1"
+        ],
+        "rankOfFirstRelevant": 6,
+        "hit": true
+      },
+      {
+        "query": "the p53 tumor suppressor gene",
+        "relevantIds": [
+          "TP53"
+        ],
+        "rankOfFirstRelevant": 1,
+        "hit": true
+      },
+      {
+        "query": "chloride channel gene defective in cystic fibrosis",
+        "relevantIds": [
+          "CFTR"
+        ],
+        "rankOfFirstRelevant": 1,
+        "hit": true
+      },
+      {
+        "query": "cholesterol-carrying apolipoprotein gene",
+        "relevantIds": [
+          "APOE"
+        ],
+        "rankOfFirstRelevant": 1,
+        "hit": true
+      },
+      {
+        "query": "MTHFR variant linked to folate metabolism and neural tube defects",
+        "relevantIds": [
+          "rs1801133"
+        ],
+        "rankOfFirstRelevant": 2,
+        "hit": true
+      },
+      {
+        "query": "the delta F508 deletion in the CFTR gene",
+        "relevantIds": [
+          "rs113993960"
+        ],
+        "rankOfFirstRelevant": 2,
+        "hit": true
+      },
+      {
+        "query": "KRAS variant seen in RASopathy syndromes",
+        "relevantIds": [
+          "rs121913529"
+        ],
+        "rankOfFirstRelevant": 1,
+        "hit": true
+      },
+      {
+        "query": "NOD2 variant associated with Blau syndrome",
+        "relevantIds": [
+          "rs2066844"
+        ],
+        "rankOfFirstRelevant": 1,
+        "hit": true
+      },
+      {
+        "query": "beta-2 adrenergic receptor variant affecting response to salmeterol",
+        "relevantIds": [
+          "rs1042713"
+        ],
+        "rankOfFirstRelevant": 1,
+        "hit": true
+      },
+      {
+        "query": "long non-coding RNA gene linked to lung cancer metastasis",
+        "relevantIds": [
+          "MALAT1"
+        ],
+        "rankOfFirstRelevant": 1,
+        "hit": true
+      },
+      {
+        "query": "the ALK receptor tyrosine kinase gene rearranged in lymphoma",
+        "relevantIds": [
+          "ALK"
+        ],
+        "rankOfFirstRelevant": 1,
+        "hit": true
+      },
+      {
+        "query": "enzyme gene involved in folate and homocysteine metabolism",
+        "relevantIds": [
+          "MTHFR"
+        ],
+        "rankOfFirstRelevant": 1,
+        "hit": true
+      },
+      {
+        "query": "APOE variant linked to Alzheimer's disease risk",
+        "relevantIds": [
+          "rs429358"
+        ],
+        "rankOfFirstRelevant": 1,
+        "hit": true
+      },
+      {
+        "query": "APOE variant affecting cholesterol and statin response",
+        "relevantIds": [
+          "rs7412"
+        ],
+        "rankOfFirstRelevant": 1,
+        "hit": true
+      },
+      {
+        "query": "BRCA1 frameshift variant causing hereditary breast and ovarian cancer",
+        "relevantIds": [
+          "rs80357906"
+        ],
+        "rankOfFirstRelevant": 2,
+        "hit": true
+      },
+      {
+        "query": "gene that transports oxygen and is mutated in sickle cell disease",
+        "relevantIds": [
+          "HBB"
+        ],
+        "rankOfFirstRelevant": 3,
+        "hit": true
+      },
+      {
+        "query": "variant used to guide methotrexate dosing",
+        "relevantIds": [
+          "rs1801133"
+        ],
+        "rankOfFirstRelevant": 1,
+        "hit": true
+      }
+    ]
+  }
+}
