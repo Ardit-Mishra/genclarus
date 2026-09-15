@@ -1,0 +1,42 @@
+{
+  "$schema_note": "Tri-AI continuity project onboarding marker. Runtime stays GLOBAL and authoritative under ~/.claude/continuity/runtime/. This file only attaches the existing project; it does not relocate runtime, plans, or decisions.",
+  "project": "genclarus",
+  "repo_folder": "genelens",
+  "attached_at": "2026-08-01",
+  "onboarding": "minimal (marker + gitignore guard only)",
+  "runtime": {
+    "location": "global",
+    "authoritative_path": "~/.claude/continuity/runtime/eadae3d606d1b295/",
+    "project_id": "eadae3d606d1b295",
+    "canonical_project_root": "c:/users/ardit/projects/genelens",
+    "mirror_runtime": false
+  },
+  "permissions": {
+    "auto_merge_green_write": false
+  },
+  "boundaries_locked": [
+    "Public gene and variant database records only",
+    "Non-personalized explanations",
+    "No personal DNA-file analysis",
+    "No individual clinical conclusions",
+    "No diagnosis or treatment recommendations"
+  ],
+  "existing_state_pointers": {
+    "note": "Pre-existing project tracking is authoritative and was NOT relocated or duplicated by onboarding.",
+    "roadmap": "docs/ROADMAP.md",
+    "direction": "docs/DIRECTION-AND-HARDENING.md",
+    "active_stage_plan": "docs/qa/STAGE5-PLAN.md",
+    "prior_stage_plan": "docs/qa/STAGE4-PLAN.md",
+    "decisions": [
+      "docs/NAMING-DECISION.md",
+      "docs/CORPUS-INCREMENT-1-ADR.md",
+      "docs/qa/STAGE3-CORRECTIONS.md",
+      "docs/qa/INCIDENT-2026-07-28-grounding.md"
+    ]
+  },
+  "resume_point": {
+    "unit": "Stage 5 — independent re-audit of corpus-candidate/ before Stage 6 promotion",
+    "candidate_status": "generated, Stage-4 gate passed (173 records, 0 validation rejections), gitignored pending promotion",
+    "classification": "YELLOW — consent-gated fan-out (do not auto-launch)"
+  }
+}

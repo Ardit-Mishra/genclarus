@@ -14,11 +14,13 @@
     "measure:retrieval": "vitest run --config scripts/validation/retrieval.config.ts",
     "warm": "node scripts/warm-cache.mjs",
     "corpus:generate": "node --env-file=.env.local --import tsx scripts/corpus/generate.ts",
-    "retrieval:build-index": "node --import tsx scripts/retrieval/build-index.ts"
+    "retrieval:build-index": "node --import tsx scripts/retrieval/build-index.ts",
+    "measure:provenance": "vitest run --config scripts/validation/provenance.config.ts",
+    "measure:publish": "node scripts/validation/publish.mjs"
   },
   "dependencies": {
     "3dmol": "^2.5.5",
-    "next": "16.2.10",
+    "next": "16.3.5",
     "react": "19.2.4",
     "react-dom": "19.2.4"
   },
