@@ -208,10 +208,14 @@ function Narrative({
   sources: Source[];
   children: React.ReactNode;
 }) {
-  if (state.status === "ready") return <Explanation claims={state.claims} sources={sources} />;
   return (
     <>
       {children}
+      {state.status === "ready" && (
+        <div className="mt-4 border-t border-zinc-100 pt-4 dark:border-zinc-800">
+          <Explanation claims={state.claims} sources={sources} />
+        </div>
+      )}
       {state.status === "loading" && <NarrativePending />}
       {state.status === "failed" && <FallbackNotice reason={state.reason} />}
     </>
