@@ -84,7 +84,7 @@ jobs:
       - run: npm ci
       - run: npm run measure:provenance
       - if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: provenance-report
           path: docs/validation/provenance.json
