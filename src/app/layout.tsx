@@ -19,6 +19,14 @@ export const metadata: Metadata = {
   title: "Genclarus — Grounded Gene & Variant Explainer",
   description:
     "Look up a human gene or a genetic variant (rsID) and get a clear, cited, plain-language explanation grounded in real biology. Educational, not medical advice.",
+  openGraph: {
+    type: "website",
+    url: "https://genclarus.com",
+    title: "Genclarus — Grounded Gene & Variant Explainer",
+    description: "Look up a gene or variant and get a plain-English explanation where every sentence cites its source.",
+    images: [{ url: "/og.png", width: 1200, height: 627, alt: "Genclarus gene and variant explainer" }],
+  },
+  twitter: { card: "summary_large_image", images: ["/og.png"] },
 };
 
 export default function RootLayout({
